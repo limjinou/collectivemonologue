@@ -4,9 +4,48 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   initMobileMenu();
+  initMobileMenu();
   initScrollAnimations();
   initHeaderScroll();
+  initTheme();
 });
+
+/* --- 테마 설정 및 토글 --- */
+function initTheme() {
+  const toggleBtn = document.getElementById('themeToggle');
+  if (!toggleBtn) return;
+
+  // 1. 저장된 테마 불러오기 (없으면 시스템 설정 따름)
+  const savedTheme = localStorage.getItem('theme');
+  const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+  if (savedTheme) {
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    updateToggleIcon(savedTheme);
+  } else {
+    // 기본은 다크 모드 (태그 없음)
+    // 만약 시스템이 라이트 모드라면 라이트 모드 적용? 
+    // 기획상 기본이 다크이므로, 사용자가 명시적으로 바꾸지 않는 한 다크 유지
+  }
+
+  // 2. 버튼 클릭 이벤트
+  toggleBtn.addEventListener('click', () => {
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+
+    document.documentElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+    updateToggleIcon(newTheme);
+  });
+}
+
+function updateToggleIcon(theme) {
+  const toggleBtn = document.getElementById('themeToggle');
+  if (!toggleBtn) return;
+  // 라이트 모드일 때 -> 달 아이콘 (다크로 갈 수 있음)
+  // 다크 모드일 때 -> 해 아이콘 (라이트로 갈 수 있음)
+  toggleBtn.textContent = theme === 'light' ? '🌙' : '☀️';
+}
 
 /* --- 모바일 메뉴 토글 --- */
 function initMobileMenu() {
