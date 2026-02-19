@@ -16,3 +16,15 @@
 - `category.html`: 카테고리 페이지
 - `about.html`: 소개 페이지
 - `subscribe.html`: 구독 페이지
+
+## 사용 방법
+- **다크/라이트 모드**: 화면 우측 상단(모바일은 메뉴 안)의 ☀️/🌙 아이콘을 클릭하여 테마를 변경할 수 있습니다.
+
+## 배포 방법 (GitHub Pages)
+이 프로젝트는 GitHub Pages를 통해 무료로 호스팅할 수 있습니다.
+
+1. GitHub 저장소의 **Settings (설정)** 탭으로 이동합니다.
+2. 좌측 메뉴에서 **Pages**를 클릭합니다.
+3. **Build and deployment** 섹션의 **Source**를 `Deploy from a branch`로 설정합니다.
+4. **Branch**를 `main` (또는 `master`) / `/ (root)`로 선택하고 **Save**를 클릭합니다.
+5. 잠시 후 상단에 생성된 사이트 주소가 표시됩니다.
