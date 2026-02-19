@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Collective Monologue 구독 — 미국 연극·영화 뉴스를 이메일로 받아보세요">
+    <title>구독하기 | Collective Monologue</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- ===== 헤더 ===== -->
+    <header class="header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo">
+                <div class="logo-main">Collective <span>Monologue</span></div>
+                <div class="logo-sub">US Theater & Film Magazine</div>
+            </a>
+            <nav class="nav-links" id="navLinks">
+                <a href="index.html">홈</a>
+                <a href="category.html?cat=theater">연극</a>
+                <a href="category.html?cat=film">영화</a>
+                <a href="about.html">소개</a>
+                <a href="subscribe.html" class="nav-subscribe active">구독하기</a>
+            </nav>
+            <button class="menu-toggle" id="menuToggle" aria-label="메뉴 열기">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- ===== 구독 히어로 ===== -->
+    <div class="subscribe-hero">
+        <h1>미국 무대의 이야기를<br><span class="text-accent">가장 먼저</span> 만나보세요</h1>
+        <p>브로드웨이와 할리우드의 핵심 뉴스를 매주 한국어로 정리해 보내드립니다.</p>
+    </div>
+
+    <!-- ===== 구독 플랜 ===== -->
+    <section class="section">
+        <div class="container">
+            <div class="subscribe-plans">
+                <!-- 무료 플랜 -->
+                <div class="plan-card animate-in">
+                    <h3 class="plan-name">무료 구독</h3>
+                    <div class="plan-price">₩0 <span>/ 월</span></div>
+                    <p class="plan-desc">핵심 뉴스를 놓치지 마세요</p>
+                    <ul class="plan-features">
+                        <li>주간 뉴스레터 (주 1회)</li>
+                        <li>최신 뉴스 기사 전체 열람</li>
+                        <li>카테고리별 뉴스 구독</li>
+                        <li>모바일 최적화 읽기</li>
+                    </ul>
+                    <form onsubmit="event.preventDefault(); alert('감사합니다! 무료 구독이 완료되었습니다. 📧');">
+                        <input type="email" placeholder="이메일 주소 입력" required
+                            style="width:100%;padding:0.75rem 1rem;background:var(--color-bg);border:1px solid var(--color-border);border-radius:var(--radius-md);color:var(--color-text);font-family:var(--font-body);font-size:var(--text-sm);margin-bottom:0.75rem;outline:none;">
+                        <button type="submit" class="btn btn-outline btn-full">무료로 시작하기</button>
+                    </form>
+                </div>
+
+                <!-- 프리미엄 플랜 (Coming Soon) -->
+                <div class="plan-card featured animate-in">
+                    <span class="plan-badge">Coming Soon</span>
+                    <h3 class="plan-name">프리미엄</h3>
+                    <div class="plan-price">₩4,900 <span>/ 월</span></div>
+                    <p class="plan-desc">더 깊은 인사이트를 원한다면</p>
+                    <ul class="plan-features">
+                        <li>무료 구독의 모든 혜택</li>
+                        <li>심층 분석 & 리뷰 (주 2회 추가)</li>
+                        <li>트렌드 큐레이션 리포트</li>
+                        <li>한국-미국 문화 비교 칼럼</li>
+                        <li>광고 없는 읽기 경험</li>
+                        <li>프리미엄 뉴스레터 (주 3회)</li>
+                    </ul>
+                    <button class="btn btn-primary btn-full"
+                        onclick="alert('프리미엄 구독은 준비 중입니다! 🚀\n무료 구독 후 출시 알림을 받아보세요.')">
+                        출시 알림 받기
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="section" style="background:var(--color-bg-card);">
+        <div class="container">
+            <div class="about-content">
+                <h2 style="text-align:center;">자주 묻는 질문</h2>
+
+                <div style="margin-top:var(--space-10);">
+                    <div style="padding:var(--space-6) 0;border-bottom:1px solid var(--color-border);">
+                        <h3
+                            style="font-family:var(--font-heading);font-size:var(--text-lg);color:var(--color-white);margin-bottom:var(--space-3);">
+                            어떤 뉴스를 다루나요?
+                        </h3>
+                        <p style="font-size:var(--text-base);color:var(--color-text-muted);line-height:1.8;">
+                            미국의 연극(브로드웨이, 오프브로드웨이)과 영화(할리우드, 독립영화, 영화제) 소식을 다룹니다.
+                            단순 속보뿐 아니라 한국 관객에게 의미 있는 맥락과 해석을 더합니다.
+                        </p>
+                    </div>
+
+                    <div style="padding:var(--space-6) 0;border-bottom:1px solid var(--color-border);">
+                        <h3
+                            style="font-family:var(--font-heading);font-size:var(--text-lg);color:var(--color-white);margin-bottom:var(--space-3);">
+                            뉴스레터는 어떻게 오나요?
+                        </h3>
+                        <p style="font-size:var(--text-base);color:var(--color-text-muted);line-height:1.8;">
+                            구독 시 입력한 이메일로 발송됩니다. 무료 구독자는 주 1회, 프리미엄 구독자는 주 3회
+                            핵심 뉴스와 분석을 받아보실 수 있습니다.
+                        </p>
+                    </div>
+
+                    <div style="padding:var(--space-6) 0;border-bottom:1px solid var(--color-border);">
+                        <h3
+                            style="font-family:var(--font-heading);font-size:var(--text-lg);color:var(--color-white);margin-bottom:var(--space-3);">
+                            프리미엄 구독은 언제 시작되나요?
+                        </h3>
+                        <p style="font-size:var(--text-base);color:var(--color-text-muted);line-height:1.8;">
+                            현재 준비 중이며, 무료 구독자에게 출시 알림을 먼저 보내드립니다.
+                            먼저 무료로 시작해보시고, 콘텐츠가 마음에 드시면 프리미엄을 기대해주세요!
+                        </p>
+                    </div>
+
+                    <div style="padding:var(--space-6) 0;">
+                        <h3
+                            style="font-family:var(--font-heading);font-size:var(--text-lg);color:var(--color-white);margin-bottom:var(--space-3);">
+                            구독을 취소할 수 있나요?
+                        </h3>
+                        <p style="font-size:var(--text-base);color:var(--color-text-muted);line-height:1.8;">
+                            물론입니다. 뉴스레터 하단의 '구독 취소' 링크를 통해 언제든지 취소할 수 있습니다.
+                            프리미엄 구독도 월 단위로 자유롭게 해지 가능합니다.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 푸터 ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <div class="logo-main">Collective <span>Monologue</span></div>
+                        <div class="logo-sub">US Theater & Film Magazine</div>
+                    </div>
+                    <p>미국 연극과 영화의 최신 트렌드, 뉴스, 심층 분석을 한국어로 전달하는 매거진입니다.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>카테고리</h4>
+                    <ul>
+                        <li><a href="category.html?cat=theater">연극 · Theater</a></li>
+                        <li><a href="category.html?cat=film">영화 · Film</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>매거진</h4>
+                    <ul>
+                        <li><a href="about.html">소개</a></li>
+                        <li><a href="subscribe.html">구독하기</a></li>
+                        <li><a href="#">문의하기</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>소셜</h4>
+                    <ul>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Twitter / X</a></li>
+                        <li><a href="#">YouTube</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2026 Collective Monologue. All rights reserved.</span>
+                <div class="footer-social">
+                    <a href="#" aria-label="Instagram">📷</a>
+                    <a href="#" aria-label="Twitter">🐦</a>
+                    <a href="#" aria-label="YouTube">▶</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
