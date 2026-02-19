@@ -18,8 +18,9 @@ async function loadArticles() {
   if (!grid) return;
 
   try {
-    const response = await fetch('data/articles.json');
-    if (!response.ok) throw new Error('데이터 로드 실패');
+    // 캐싱 방지를 위해 타임스탬프 추가
+    const response = await fetch(`data/articles.json?t=${new Date().getTime()}`);
+    if (!response.ok) throw new Error('데이터 로드 실패: ' + response.statusText);
 
     const articles = await response.json();
 
