@@ -8,7 +8,54 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollAnimations();
   initHeaderScroll();
   initTheme();
+  loadArticles(); // 기사 불러오기 시작
 });
+
+/* --- 기사 데이터 로드 및 렌더링 --- */
+async function loadArticles() {
+  const grid = document.querySelector('.article-grid');
+  // 홈 화면이 아니거나 그리드가 없으면 실행하지 않음 (기사 상세 페이지 등)
+  if (!grid) return;
+
+  try {
+    const response = await fetch('data/articles.json');
+    if (!response.ok) throw new Error('데이터 로드 실패');
+
+    const articles = await response.json();
+
+    // 기존 하드코딩된 기사들을 비우고 시작 (또는 로딩 스피너 대체)
+    grid.innerHTML = '';
+
+    articles.forEach(article => {
+      const card = document.createElement('article');
+      card.className = 'article-card animate-in';
+      card.innerHTML = `
+        <a href="article.html?id=${article.id}">
+          <div class="card-image">
+            <div class="card-image-inner ${article.image}"></div>
+            <span class="card-category ${article.category}">${article.category === 'theater' ? '연극' : '영화'}</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">${article.title}</h3>
+            <p class="card-excerpt">${article.summary}</p>
+            <div class="card-meta">
+              <span>${article.date}</span>
+              <span>${article.readTime} 읽기</span>
+            </div>
+          </div>
+        </a>
+      `;
+      grid.appendChild(card);
+    });
+
+    // 새로 추가된 카드들에 애니메이션 적용을 위해 옵저버 재호출
+    initScrollAnimations();
+
+  } catch (error) {
+    console.error('기사를 불러오는 중 오류 발생:', error);
+    grid.innerHTML = '<p style="color:var(--color-text-muted); padding:2rem;">최신 뉴스를 불러오지 못했습니다.</p>';
+  }
+}
 
 /* --- 테마 설정 및 토글 --- */
 function initTheme() {

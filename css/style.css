@@ -528,6 +528,10 @@ button {
   background: linear-gradient(135deg, #001a2d 0%, #003d5c 40%, #00b4d8 100%);
 }
 
+.placeholder-indie {
+  background: linear-gradient(135deg, #2c0a18 0%, #5e2a40 40%, #e056fd 100%);
+}
+
 .card-category {
   position: absolute;
   top: var(--space-3);
