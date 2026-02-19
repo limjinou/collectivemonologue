@@ -30,18 +30,27 @@ async function loadArticles() {
     articles.forEach(article => {
       const card = document.createElement('article');
       card.className = 'article-card animate-in';
+      // 크롤러 데이터 형식에 맞게 수정
+      // crawler.py output: { source, title, link, summary_kr, date }
+      // frontend expects: { title, summary, date, category (derived from source) }
+
+      const category = article.source === 'Variety' ? 'film' : 'theater'; // 간단한 매핑
+      const summary = article.summary_kr && !article.summary_kr.startsWith('[번역 실패]')
+        ? article.summary_kr
+        : (article.title + ' (번역 대기중)');
+
       card.innerHTML = `
-        <a href="article.html?id=${article.id}">
+        <a href="${article.link}" target="_blank">
           <div class="card-image">
-            <div class="card-image-inner ${article.image}"></div>
-            <span class="card-category ${article.category}">${article.category === 'theater' ? '연극' : '영화'}</span>
+            <div class="card-image-inner ${category === 'theater' ? 'placeholder-theater' : 'placeholder-film'}"></div>
+            <span class="card-category ${category}">${category === 'theater' ? '연극' : '영화'}</span>
           </div>
           <div class="card-body">
             <h3 class="card-title">${article.title}</h3>
-            <p class="card-excerpt">${article.summary}</p>
+            <p class="card-excerpt">${summary.substring(0, 100)}...</p>
             <div class="card-meta">
               <span>${article.date}</span>
-              <span>${article.readTime} 읽기</span>
+              <span>${article.source}</span>
             </div>
           </div>
         </a>

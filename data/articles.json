@@ -1,52 +1,51 @@
 [
     {
-        "id": "theater-1",
-        "category": "theater",
-        "title": "브로드웨이를 뒤흔든 'Stereophonic', 토니상 최다 노미네이트 기록 경신",
-        "summary": "70년대 록 밴드의 녹음실 풍경을 다룬 연극 'Stereophonic'이 평단과 관객 모두를 사로잡았다. 하이퍼 리얼리즘의 정수를 보여준 이 작품은 올해 토니상에서 역대급 경쟁을 예고하고 있다.",
-        "date": "2026.02.20",
-        "readTime": "4분",
-        "image": "placeholder-theater",
-        "content": "공연이 시작되는 순간, 관객은 1976년 캘리포니아의 어느 스튜디오에 갇힌다. 윌 버틀러(Will Butler)의 음악과 데이비드 어즈미(David Adjmi)의 날카로운 대본이 만나 탄생한 'Stereophonic'은 단순한 연극을 넘어선 체험이다..."
+        "source": "Variety",
+        "title": "Senate Democrats Demand Answers From David Ellison About Paramount Skydance’s Dealings With Trump in Warner Bros. Takeover Bid, Accuse CEO of ‘Pattern of Evasion’",
+        "link": "https://variety.com/2026/film/news/senate-democrats-david-ellison-letter-paramount-trump-warner-bros-1236667583/",
+        "summary_kr": "Title: Senate Democrats Demand Answers From David Ellison About Paramount Skydance’s Dealings With Trump in Warner Bros. Takeover Bid, Accuse CEO of ‘Pattern of Evasion’\nSummary: A group of eight Democratic U.S. senators sent a letter to David Ellison, chairman and CEO of Paramount Skydance, asking that he &#8220;preserve all records related to the proposed Paramount-Warner Bros. Discovery transaction&#8221; &#8212; and demanding answers about how his company has interacted with President Trump and the White House in its hostile takeover bid [&#8230;]",
+        "date": "2026-02-20"
     },
     {
-        "id": "film-1",
-        "category": "film",
-        "title": "크리스토퍼 놀란의 차기작, 맷 데이먼과 톰 홀랜드 합류 확정",
-        "summary": "유니버설 픽처스가 놀란 감독의 새로운 프로젝트에 대한 캐스팅을 공식 발표했다. 아직 베일에 싸인 이 영화는 2027년 여름 개봉을 목표로 하고 있다.",
-        "date": "2026.02.19",
-        "readTime": "3분",
-        "image": "placeholder-film",
-        "content": "오펜하이머의 성공 이후, 전 세계가 주목하는 크리스토퍼 놀란의 다음 행선지가 정해졌다. 구체적인 플롯은 극비에 부쳐졌으나, 소식통에 따르면 '미래를 배경으로 한 부성애와 첩보물의 결합'이 될 것이라고 한다..."
+        "source": "Variety",
+        "title": "‘Percy Jackson’ Casts Ming-Na Wen, Jennifer Beals and Hubert Smielecki as Hera, Demeter and Apollo in Season 3 (EXCLUSIVE)",
+        "link": "https://variety.com/2026/tv/news/percy-jackson-ming-na-wen-jennifer-beals-hera-demeter-1236666797/",
+        "summary_kr": "Title: ‘Percy Jackson’ Casts Ming-Na Wen, Jennifer Beals and Hubert Smielecki as Hera, Demeter and Apollo in Season 3 (EXCLUSIVE)\nSummary: Ming-Na Wen, Jennifer Beals and Hubert Smielecki have been cast as Greek gods in Season 3 of &#8220;Percy Jackson and the Olympians.&#8221; Wen will guest star as Hera, who is described as &#8220;queen of Olympus, and wife to Zeus. She is the goddess of marriage and family so the infidelity of Zeus (Courtney B. Vance) [&#8230;]",
+        "date": "2026-02-20"
     },
     {
-        "id": "theater-2",
-        "category": "theater",
-        "title": "런던에서 온 충격, 'Sunset Boulevard' 뉴욕 입성",
-        "summary": "제이미 로이드(Jamie Lloyd)의 파격적인 연출로 웨스트엔드를 평정한 '선셋 대로'가 드디어 브로드웨이 세인트 제임스 극장에 상륙했다. 니콜 셰르징거의 노마 데스몬드는 과연 뉴욕 관객을 설득할 수 있을까?",
-        "date": "2026.02.18",
-        "readTime": "5분",
-        "image": "placeholder-stage",
-        "content": "화려한 저택 세트도, 웅장한 계단도 없다. 오직 흑백 카메라와 배우들의 클로즈업만이 무대를 채운다. 뮤지컬이라기보다 누아르 영화 촬영 현장에 가까운 이 프로덕션은 고전에 대한 가장 도발적인 해석이다..."
+        "source": "Variety",
+        "title": "Audra McDonald and Joy Reid to Be Honored at NYWIFT’s Muse Awards (EXCLUSIVE)",
+        "link": "https://variety.com/2026/scene/news/audra-mcdonald-joy-reid-honored-nywift-muse-awards-1236666945/",
+        "summary_kr": "Title: Audra McDonald and Joy Reid to Be Honored at NYWIFT’s Muse Awards (EXCLUSIVE)\nSummary: Audra McDonald and Joy Reid are among the 2026 New York Women in Film &#38; Television Muse Award honorees. Dedicated to celebrating women in film, television, music, and media, the awards ceremony will be held on March 20 at Cipriani 42nd St. in New York City. A Tony, Emmy, and Grammy Award–winning actress and singer, [&#8230;]",
+        "date": "2026-02-20"
     },
     {
-        "id": "film-2",
-        "category": "film",
-        "title": "선댄스 심사위원 대상 수상작 'In The Summers', 올 하반기 개봉",
-        "summary": "두 자매와라틴계 아버지의 복잡미묘한 관계를 다룬 성장 영화가 올해 선댄스의 주인공이 되었다. 섬세한 연출과 배우들의 앙상블이 돋보이는 수작.",
-        "date": "2026.02.17",
-        "readTime": "4분",
-        "image": "placeholder-indie",
-        "content": "알레산드라 라코라차 감독의 데뷔작은 조용하지만 강력하다. 여름방학마다 아버지를 방문하는 자매의 시선을 통해, 결함 있는 부모를 사랑한다는 것의 의미를 묻는다. 배드 버니(Bad Bunny)의 연기 변신 또한 관전 포인트..."
+        "source": "Deadline",
+        "title": "Bill Hader To Make Feature Directorial Debut With MRC Horror Film ‘They Know’",
+        "link": "https://deadline.com/2026/02/bill-hader-to-direct-they-know-mrc-horror-film-1236729444/",
+        "summary_kr": "Title: Bill Hader To Make Feature Directorial Debut With MRC Horror Film ‘They Know’\nSummary: In his first outing behind the camera since Barry, his Emmy-winning dark comedy for HBO, Bill Hader has officially locked in plans to write, direct and star in They Know, a new horror film for MRC, which will begin production in Los Angeles this spring. They Know centers on a divorced dad (Hader) who grows [&#8230;]",
+        "date": "2026-02-20"
     },
     {
-        "id": "film-3",
-        "category": "film",
-        "title": "A24의 과감한 베팅, AI 감독 영화 배급권 획득 논란",
-        "summary": "인디 영화의 명가 A24가 생성형 AI로 제작된 장편 영화의 북미 배급권을 사들였다. 할리우드 작가 조합과 배우 조합의 반발이 거센 가운데, 이것이 영화 산업의 새로운 표준이 될지 귀추가 주목된다.",
-        "date": "2026.02.16",
-        "readTime": "6분",
-        "image": "placeholder-cinema",
-        "content": "예술인가, 데이터의 짜깁기인가. 'The Echo'라는 제목의 이 영화는 시나리오부터 영상 생성, 음성 합성까지 90% 이상이 AI 툴로 제작되었다. A24 측은 '실험적 가치'를 강조했지만, 업계의 시선은 싸늘하다..."
+        "source": "Deadline",
+        "title": "‘Bridgerton’s Yerin Ha Named Ambassador For SAG-AFTRA’s 32nd Annual Actor Awards",
+        "link": "https://deadline.com/2026/02/yerin-ha-bridgerton-ambassador-actor-awards-1236729509/",
+        "summary_kr": "Title: ‘Bridgerton’s Yerin Ha Named Ambassador For SAG-AFTRA’s 32nd Annual Actor Awards\nSummary: Yerin Ha, the Korean-Australian actor who stars as Sophie Baek in Season 4 of Netflix&#8217;s Bridgerton, has been named Ambassador for The 32nd Annual Actor Awards Presented by SAG-AFTRA, awards producers announced today. The Actor Awards, formerly known as the Screen Actors Guild Awards, will stream live on Netflix, on Sunday, March 1, at 8 [&#8230;]",
+        "date": "2026-02-20"
+    },
+    {
+        "source": "Deadline",
+        "title": "Joe Pantoliano Joins ‘Power Book III: Raising Kanan’s Fifth & Final Season As Head Of Manhattan Mafia",
+        "link": "https://deadline.com/2026/02/joe-pantoliano-cast-power-book-iii-raising-kanan-season-5-1236729427/",
+        "summary_kr": "Title: Joe Pantoliano Joins ‘Power Book III: Raising Kanan’s Fifth & Final Season As Head Of Manhattan Mafia\nSummary: EXCLUSIVE: Emmy Award-winning actor Joe Pantoliano (The Sopranos, The Last of Us) will be part of the cast of Starz&#8217;s Power Book III: Raising Kanan for its fifth and final season. Production concluded last year and is expected to air in 2026. In a major recurring role, Pantoliano will play Pino Bernardi, the head of [&#8230;]",
+        "date": "2026-02-20"
+    },
+    {
+        "source": "Variety",
+        "title": "‘Soumsoum, the Night of the Stars’ Review: Mahamat-Saleh Haroun’s Latest Is a Desert Parable That Loses Its Way",
+        "link": "https://variety.com/2026/film/reviews/soumsoum-the-night-of-the-stars-review-1236667070/",
+        "summary_kr": "[번역 실패] 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.",
+        "date": "2026-02-20"
     }
 ]

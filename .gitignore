@@ -1,0 +1,16 @@
+# Environment variables
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+env/
+
+# Data (optional, but usually we want articles.json tracked if used for static site)
+# data/articles.json
+
+# IDE
+.vscode/
+.idea/
