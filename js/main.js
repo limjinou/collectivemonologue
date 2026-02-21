@@ -219,8 +219,18 @@ async function renderSingleArticle() {
       .map(p => `<p>${p}</p>`)
       .join('');
 
-    const extraInfoHtml = `<p><em>이 기사는 <b>${article.source}</b>에서 스크랩 되었으며 AI에 의해 한국어로 요약되었습니다.</em></p>`;
-    document.querySelector('.single-article-content').innerHTML = contentHtml + extraInfoHtml;
+    let redditHtml = '';
+    if (article.reddit_reaction_kr && article.reddit_reaction_kr.trim() !== '') {
+      redditHtml = `
+        <div class="reddit-reaction-widget bway-item" style="margin: 2.5rem 0; padding: 1.5rem; background: #fff0f5; border: 3px solid #000; border-radius: 0;">
+          <h3 style="font-family: 'Bagel Fat One', cursive; margin-bottom: 0.8rem; font-size: 1.2rem; color: #ff1493; letter-spacing: -0.5px;">💬 현지 팬 반응 (Reddit)</h3>
+          <p style="margin: 0; font-size: 1rem; line-height: 1.6; font-weight: 500;">${article.reddit_reaction_kr}</p>
+        </div>
+      `;
+    }
+
+    const extraInfoHtml = `<p><em>이 기사는 <b>${article.source}</b>에서 스크랩 되었으며 AI에 의해 한국어로 요약/분석되었습니다.</em></p>`;
+    document.querySelector('.single-article-content').innerHTML = contentHtml + redditHtml + extraInfoHtml;
 
   } catch (error) {
     console.error('Error:', error);

@@ -67,22 +67,8 @@ def fetch_article_content(url):
     return None, ""
 
 def fetch_reddit_comments(article_url, title, keywords):
-    """Reddit 상위 반응 검색 (PRAW 대신 Keyless JSON 방식 사용 + 3단계 안전망)"""
+    """Reddit 서브레딧 Hot 게시물 기반으로 관련 반응 수집 (키워드 매칭 방식)"""
     headers = {"User-Agent": REDDIT_USER_AGENT}
-    
-    def search_reddit(query, time_filter="month"):
-        url = f"https://www.reddit.com/search.json?q={requests.utils.quote(query)}&sort=top&t={time_filter}&limit=3"
-        try:
-            resp = requests.get(url, headers=headers, timeout=10)
-            if resp.status_code == 200:
-                data = resp.json()
-                children = data.get('data', {}).get('children', [])
-                return [child['data'] for child in children]
-            else:
-                print(f"   ⚠️ Reddit Search API Error: {resp.status_code}")
-        except Exception as e:
-            print(f"   ⚠️ Reddit Search Exception: {e}")
-        return []
 
     def get_comments(post_id):
         url = f"https://www.reddit.com/comments/{post_id}.json?sort=confidence&limit=5"
@@ -94,66 +80,65 @@ def fetch_reddit_comments(article_url, title, keywords):
                 if len(data) > 1:
                     comment_children = data[1].get('data', {}).get('children', [])
                     for child in comment_children:
-                        if child['kind'] == 't1':  # t1 은 댓글을 의미
+                        if child['kind'] == 't1':
                             body = child['data'].get('body', '')
                             if len(body) > 10 and "[deleted]" not in body:
                                 comments.append(body.replace('\n', ' '))
-        except Exception as e:
+        except Exception:
             pass
         return comments
 
+    def fetch_subreddit_hot(subreddit, limit=15):
+        """서브레딧의 최신(Hot) 게시물 목록을 가져옵니다."""
+        url = f"https://www.reddit.com/r/{subreddit}/hot.json?limit={limit}"
+        try:
+            resp = requests.get(url, headers=headers, timeout=10)
+            if resp.status_code == 200:
+                children = resp.json().get('data', {}).get('children', [])
+                return [c['data'] for c in children]
+        except Exception:
+            pass
+        return []
+
+    import re
     try:
-        submissions = []
-        # 1단계: URL 기반 아주 정확한 검색
-        search_query = f'url:"{article_url}"'
-        submissions = search_reddit(search_query, time_filter="month")
-        time.sleep(1) # Rate limit 방지
-        
-        # 2단계: URL 검색 실패 시, 제목 기반 추정 검색
-        if not submissions:
-            import re
-            clean_title = re.sub(r'[^\w\s]', '', title).strip()
-            short_title = " ".join(clean_title.split()[:5])
-            
-            search_query = f'"{short_title}"'
-            submissions = search_reddit(search_query, time_filter="week")
-            time.sleep(1)
-            
-            # 3단계: LLM 교차 검증
-            if submissions:
-                candidate = submissions[0]
-                validation_prompt = f"""
-                뉴스 기사 원본 제목: "{title}"
-                레딧 게시물 제목: "{candidate.get('title', '')}"
-                두 제목이 정확하게 동일한 뉴스 내용에 대해 반응하고 있습니까?
-                유사한 과거 사건이 아니라, 정확히 같은 사건인가요?
-                오직 "True" 또는 "False" 로만 답변하세요.
-                """
-                try:
-                    val_res = model.generate_content(validation_prompt).text.strip().lower()
-                    if "true" not in val_res:
-                        print(f"   ⚠️ Reddit 토픽 불일치로 배제: {candidate.get('title', '')[:30]}")
-                        return ""
-                except Exception as eval_e:
-                    print(f"   ⚠️ Reddit 검증 단계 무시 (에러): {eval_e}")
-                    return ""
-                
-        # 최종 수집 로직
-        if submissions:
-            best_post = submissions[0]
+        # 기사 제목의 핵심 단어 추출 (짧은 단어 및 불용어 제거)
+        stopwords = {'the', 'a', 'an', 'in', 'on', 'at', 'to', 'for', 'of', 'and', 'or', 'is', 'are', 'was', 'will', 'with', 'that', 'this', 'from', 'by', 'as', 'it', 'new', 'its', 'into', 'has', 'have', 'set'}
+        title_words = set(w.lower() for w in re.findall(r'\b[A-Za-z]{4,}\b', title) if w.lower() not in stopwords)
+
+        subreddits_to_try = ['Broadway', 'theater', 'movies', 'boxoffice']
+        best_post = None
+        best_score = 0
+
+        for subreddit in subreddits_to_try:
+            posts = fetch_subreddit_hot(subreddit, limit=15)
+            time.sleep(0.5)
+            for post in posts:
+                post_title = post.get('title', '')
+                post_words = set(w.lower() for w in re.findall(r'\b[A-Za-z]{4,}\b', post_title))
+                overlap = len(title_words & post_words)
+                if overlap > best_score:
+                    best_score = overlap
+                    best_post = post
+                    best_post['_subreddit'] = subreddit
+
+        # 공통 키워드 1개 이상이면 관련 게시물로 인정 (엄격 기준보다 수집률 우선)
+        if best_post and best_score >= 1:
             post_id = best_post.get('id')
-            subreddit_name = best_post.get('subreddit')
-            
+            subreddit_name = best_post.get('_subreddit', best_post.get('subreddit', ''))
             top_comments = get_comments(post_id)
-            time.sleep(1)
-                    
+            time.sleep(0.5)
             if top_comments:
-                print(f"   💬 Reddit 반응 확보 (r/{subreddit_name}): 댓글 {len(top_comments)}개")
+                print(f"   💬 Reddit 반응 확보 (r/{subreddit_name}, overlap={best_score}): 댓글 {len(top_comments)}개")
                 return "\n".join([f"- {c}" for c in top_comments])
-                
+            else:
+                print(f"   ⚠️ Reddit 게시물 발견했지만 댓글 없음")
+        else:
+            print(f"   ℹ️ Reddit 관련 게시물 없음 (best overlap={best_score})")
+
     except Exception as e:
         print(f"   ⚠️ Reddit 파싱 실패: {e}")
-        
+
     return ""
 
 def fetch_wikipedia_image(keywords):
@@ -217,7 +202,8 @@ def translate_and_summarize(text, title, reddit_comments=""):
     {{
         "title_kr": "한국 독자의 흥미를 끌 수 있는 매력적인 기사 제목 (한국어)",
         "summary_kr": "메인 페이지 리스트에 표시될 1-2문장의 핵심 요약. 독자가 클릭하고 싶게 만들어라 (한국어)",
-        "content_kr": "기사 본문. 뉴스 요약 + 등장 인물/작품/공연장에 대한 배경 지식을 자연스럽게 녹인 풍부한 텍스트. 문단을 나누어 가독성 좋게 작성. (만약 Reddit 댓글 섹션이 주어졌다면 본문 내에 '해외 매니아 반응' 트렌드를 분석해서 반영할 것) 마지막엔 '편집자 주' 한 문단을 추가할 것 (한국어)",
+        "content_kr": "기사 본문. 뉴스 요약 + 등장 인물/작품/공연장에 대한 배경 지식을 자연스럽게 녹인 풍부한 텍스트. 문단을 나누어 가독성 좋게 작성. 마지막엔 '편집자 주' 한 문단을 추가할 것 (한국어)",
+        "reddit_reaction_kr": "만약 Reddit 댓글이 주어졌다면, 현지 팬들의 생생한 반응을 뉴스 포맷에 맞게 1문단으로 재미있게 요약 (한국어). 없다면 빈 문자열",
         "keywords": ["키워드1", "키워드2", "키워드3"]
     }}
 
@@ -413,6 +399,7 @@ def process_entry(entry, source, tier):
         "title_kr": ai_result.get('title_kr', title),
         "summary_kr": ai_result.get('summary_kr', '내용 없음'),
         "content_kr": ai_result.get('content_kr', '내용 없음'),
+        "reddit_reaction_kr": ai_result.get('reddit_reaction_kr', ''),
         "keywords": ai_result.get('keywords', []),
         "date": published,
         "scraped_at": datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S") # Changed to timezone.utc
