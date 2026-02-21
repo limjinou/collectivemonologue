@@ -380,15 +380,14 @@ def process_entry(entry, source, tier):
                 image_url = link_item.get('href', '') or html_image
                 break
 
-    # RSS나 HTML에서 이미지를 못 찾았으면 Wikipedia 이미지 검색
-    if not image_url and ai_result.get('keywords'):
-        # AI가 추출한 영문 키워드로 직접 검색 (원문 제목에서 로마자 찾기)
+    # RSS나 HTML에서 이미지를 못 찾았으면 Wikipedia 이미지 검색 (항상 시도)
+    if not image_url:
         import re
-        # 영문 단어가 포함된 키워드 우선 (ex. 배우 이름 등)
         original_title_words = entry.title
         en_keywords = re.findall(r'[A-Z][a-z]+(?:\s+[A-Z][a-z]+)+', original_title_words)
-        search_keywords = en_keywords + ai_result.get('keywords', [])
-        image_url = fetch_wikipedia_image(search_keywords)
+        search_keywords = en_keywords + [str(k) for k in ai_result.get('keywords', [])]
+        if search_keywords:
+            image_url = fetch_wikipedia_image(search_keywords)
 
     return {
         "source": source,
