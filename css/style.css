@@ -629,41 +629,8 @@ button {
   display: inline-block;
   padding: 0.5rem 1rem;
   border: var(--brutal-border);
-}
-
-.bway-theater {
-  font-size: 0.75rem;
-  color: var(--color-text);
-  opacity: 0.8;
-  font-weight: 700;
-  background-color: rgba(0, 0, 0, 0.05);
-  padding: 0.1rem 0.4rem;
-  border-radius: 4px;
-}
-
-.bway-desc {
-  font-size: 0.9rem;
-  color: var(--color-text);
-  margin-bottom: 0.6rem;
-  font-weight: 600;
-  line-height: 1.4;
-}
-
-.bway-stats-compact {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem 1rem;
-  font-size: 0.8rem;
-  font-family: monospace;
-  font-weight: 700;
-  color: var(--color-bg);
-  background-color: var(--color-text);
-  padding: 0.5rem 0.8rem;
-  box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.2);
-}
-
-.bway-stats-compact span {
-  white-space: nowrap;
+  box-shadow: 4px 4px 0px var(--color-border);
+  transform: rotate(-1deg);
 }
 
 .related-list {
@@ -923,4 +890,147 @@ button {
   .menu-toggle {
     display: block;
   }
+}
+
+/* =========================================================
+   Broadway Ranking Styles & Neo-Brutalism Animations 
+   ========================================================= */
+.bway-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border: 2px solid transparent;
+  border-bottom: 2px dashed var(--color-border);
+  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.2s, background-color 0.2s;
+  cursor: default;
+}
+
+.bway-item:last-child {
+  border-bottom: 2px solid transparent;
+  margin-bottom: 0;
+}
+
+/* Hover: Card pops out aggressively */
+.bway-item:hover {
+  background-color: var(--color-surface);
+  border: 2px solid var(--color-text);
+  box-shadow: 6px 6px 0px var(--color-text);
+  transform: translate(-4px, -4px);
+  border-bottom: 2px solid var(--color-text);
+}
+
+.bway-rank-box {
+  background: var(--color-bg);
+  border: 3px solid var(--color-text);
+  box-shadow: 4px 4px 0px var(--color-text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  margin-right: 1.5rem;
+  flex-shrink: 0;
+  transform: rotate(-3deg);
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-color 0.2s;
+}
+
+/* Hover: Rank Box scales up and spins */
+.bway-item:hover .bway-rank-box {
+  transform: rotate(15deg) scale(1.15);
+  background-color: var(--color-accent-pink);
+}
+
+.bway-rank-num {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  color: var(--color-text);
+  line-height: 1;
+}
+
+.bway-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.bway-header-row {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.4rem;
+}
+
+.bway-header-row h4 {
+  font-size: 1.25rem;
+  font-weight: 900;
+  color: var(--color-text);
+  margin: 0;
+  line-height: 1.2;
+}
+
+.bway-theater {
+  font-size: 0.75rem;
+  color: var(--color-text);
+  opacity: 0.8;
+  font-weight: 700;
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 0.1rem 0.4rem;
+  border-radius: 4px;
+}
+
+.bway-desc {
+  font-size: 0.9rem;
+  color: var(--color-text);
+  margin-bottom: 0.6rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.bway-stats-compact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  font-size: 0.8rem;
+  font-family: monospace;
+  font-weight: 700;
+  color: var(--color-bg);
+  background-color: var(--color-text);
+  padding: 0.5rem 0.8rem;
+  box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Hover: Stats row pops out too */
+.bway-item:hover .bway-stats-compact {
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.3);
+}
+
+/* =========================================================
+   Off-Broadway Indie Picks Styles & Animations 
+   ========================================================= */
+.rec-item {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 2px dashed var(--color-border);
+  transition: all 0.2s ease-out;
+}
+
+.rec-item h4 {
+  font-family: var(--font-main);
+  font-weight: 900;
+  margin-bottom: 0.4rem;
+}
+
+.rec-item p {
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+.rec-item:hover {
+  background-color: var(--color-accent-blue);
+  border: 2px solid var(--color-text);
+  box-shadow: 4px 4px 0px var(--color-text);
+  transform: translateX(4px);
 }
