@@ -2,8 +2,8 @@ name: Daily Magazine Scraper
 
 on:
   schedule:
-    # Run every day at 00:00 UTC (09:00 KST)
-    - cron: '0 0 * * *'
+    # 매일 한국 시간(KST) 오전 05:00 (UTC 20:00)에 실행
+    - cron: '0 20 * * *'
   workflow_dispatch:
     # Allow manual trigger from the GitHub Actions tab
 
