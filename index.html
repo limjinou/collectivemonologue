@@ -73,17 +73,42 @@
     </div>
   </section>
 
-  <!-- ===== 메인 리스트 (Main List) ===== -->
+  <!-- ===== 메인 리스트 & 위젯 (Main Layout) ===== -->
   <section class="section">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">Latest Updates</h2>
-        <span class="section-title">2026 Season</span>
+    <div class="container main-layout">
+      <!-- 중앙 뉴스 리스트 -->
+      <div class="main-content">
+        <div class="section-header">
+          <h2 class="section-title">Latest Updates</h2>
+          <span class="section-title">2026 Season</span>
+        </div>
+        <div class="article-list">
+          <!-- JS로 로드됨 -->
+        </div>
       </div>
 
-      <div class="article-list">
-        <!-- JS로 로드됨 -->
-      </div>
+      <!-- 우측 사이드바 (위젯) -->
+      <aside class="sidebar">
+        <!-- 브로드웨이 박스오피스 위젯 -->
+        <div class="widget widget-yellow">
+          <h3 class="widget-title">🎟️ HOT TICKETS <br><span style="font-family: var(--font-sans);">Broadway Top
+              5</span></h3>
+          <div id="broadway-widget-content">
+            <!-- JS로 로드됨 -->
+            <p style="font-size: 0.9rem;">데이터를 불러오는 중...</p>
+          </div>
+        </div>
+
+        <!-- 오프브로드웨이 추천작 위젯 -->
+        <div class="widget widget-pink">
+          <h3 class="widget-title">🔥 INDIE PICKS <br><span style="font-family: var(--font-sans);">Editor's
+              Choice</span></h3>
+          <div id="recommendation-widget-content">
+            <!-- JS로 로드됨 -->
+            <p style="font-size: 0.9rem;">데이터를 불러오는 중...</p>
+          </div>
+        </div>
+      </aside>
     </div>
   </section>
 

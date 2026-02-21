@@ -108,6 +108,19 @@ button {
   padding: 0 2rem;
 }
 
+.main-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .main-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* --- Header --- */
 .header {
   position: fixed;

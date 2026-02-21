@@ -1,0 +1,46 @@
+{
+    "updated_at": "2026-02-21 15:26:01",
+    "broadway": [
+        {
+            "show": "Harry Potter and the Cursed Child",
+            "gross_formatted": "$2,682,872.30",
+            "gross": 2682872.3,
+            "capacity": "98.70%",
+            "rank": 1
+        },
+        {
+            "show": "Hamilton",
+            "gross_formatted": "$2,198,059.50",
+            "gross": 2198059.5,
+            "capacity": "101.13%",
+            "rank": 2
+        },
+        {
+            "show": "Wicked",
+            "gross_formatted": "$2,024,328.50",
+            "gross": 2024328.5,
+            "capacity": "99.11%",
+            "rank": 3
+        },
+        {
+            "show": "The Lion King",
+            "gross_formatted": "$1,918,747.80",
+            "gross": 1918747.8,
+            "capacity": "98.02%",
+            "rank": 4
+        },
+        {
+            "show": "Chess",
+            "gross_formatted": "$1,588,041.80",
+            "gross": 1588041.8,
+            "capacity": "95.13%",
+            "rank": 5
+        }
+    ],
+    "recommendations": [
+        {
+            "title": "민중의 적 (An Enemy of the People)",
+            "reason": "제레미 스트롱의 명연기와 함께 환경 문제라는 시대적 화두를 던지는 필람 연극입니다."
+        }
+    ]
+}

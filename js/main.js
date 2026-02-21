@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
     renderCategoryArticles();
   } else {
     loadArticles();
+    loadBoxOffice(); // 새로운 박스오피스 & 추천작 위젯 로드
   }
 });
 
@@ -84,6 +85,60 @@ async function loadArticles() {
   } catch (error) {
     console.error('Error:', error);
     container.innerHTML = '<p style="padding:2rem;">최신 뉴스를 불러오는 중입니다...</p>';
+  }
+}
+
+/* --- 박스오피스 및 추천작 데이터 로드 --- */
+async function loadBoxOffice() {
+  const bwayContainer = document.getElementById('broadway-widget-content');
+  const recContainer = document.getElementById('recommendation-widget-content');
+
+  if (!bwayContainer || !recContainer) return;
+
+  try {
+    const response = await fetch(`data/boxoffice.json?t=${new Date().getTime()}`);
+    if (!response.ok) throw new Error('Box office data loaded failed');
+    const data = await response.json();
+
+    // 1. 브로드웨이 랭킹 렌더링
+    if (data.broadway && data.broadway.length > 0) {
+      bwayContainer.innerHTML = '';
+      data.broadway.forEach(item => {
+        const el = document.createElement('div');
+        el.className = 'bway-item';
+        el.innerHTML = `
+          <div class="bway-rank">${item.rank}</div>
+          <div class="bway-info">
+            <h4>${item.show}</h4>
+            <div class="bway-stats">Gross: ${item.gross_formatted} / Cap: ${item.capacity}</div>
+          </div>
+        `;
+        bwayContainer.appendChild(el);
+      });
+    } else {
+      bwayContainer.innerHTML = '<p class="bway-stats">이번 주 랭킹 데이터가 없습니다.</p>';
+    }
+
+    // 2. 오프브로드웨이 추천작 렌더링
+    if (data.recommendations && data.recommendations.length > 0) {
+      recContainer.innerHTML = '';
+      data.recommendations.forEach(item => {
+        const el = document.createElement('div');
+        el.className = 'rec-item';
+        el.innerHTML = `
+          <h4>${item.title}</h4>
+          <p>${item.reason}</p>
+        `;
+        recContainer.appendChild(el);
+      });
+    } else {
+      recContainer.innerHTML = '<p class="bway-stats">이번 주 추천작이 없습니다.</p>';
+    }
+
+  } catch (error) {
+    console.error('Box Office load error:', error);
+    bwayContainer.innerHTML = '<p class="bway-stats">데이터를 불러오지 못했습니다.</p>';
+    recContainer.innerHTML = '<p class="bway-stats">데이터를 불러오지 못했습니다.</p>';
   }
 }
 
