@@ -1,0 +1,56 @@
+name: Daily Magazine Scraper
+
+on:
+  schedule:
+    # Run every day at 00:00 UTC (09:00 KST)
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+    # Allow manual trigger from the GitHub Actions tab
+
+jobs:
+  scrape_and_update:
+    runs-on: ubuntu-latest
+    
+    # Needs permission to push back to the repo
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          # Cache pip dependencies
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run Crawler
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python crawler.py
+
+      - name: Commit and Push changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          
+          # Check if there are any changes (e.g. articles.json was updated)
+          if git diff --quiet data/articles.json; then
+            echo "No new articles found. Skipping commit."
+          else
+            git add data/articles.json
+            
+            # Use timestamp to force CSS cache busting on daily updates
+            NEW_VERSION=$(date +"%Y%m%d%H%M")
+            sed -i "s/?v=[0-9a-zA-Z]*/?v=$NEW_VERSION/g" index.html
+            sed -i "s/?v=[0-9a-zA-Z]*/?v=$NEW_VERSION/g" article.html
+            git add index.html article.html
+            
+            git commit -m "Automated update: crawler fetched new articles [skip ci]"
+            git push origin main
+          fi
