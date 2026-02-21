@@ -891,3 +891,20 @@ button {
     display: block;
   }
 }
+
+.bway-desc {
+  font-size: 0.85rem;
+  color: var(--color-text);
+  opacity: 0.75;
+  margin-bottom: 0.3rem;
+  font-style: italic;
+}
+
+.bway-theater {
+  display: inline-block;
+  font-size: 0.75rem;
+  color: var(--color-text);
+  opacity: 0.55;
+  margin-top: 0.2rem;
+  font-weight: 600;
+}

@@ -264,19 +264,29 @@ def fetch_broadway_grosses():
             for row in rows:
                 cols = row.find_all('td')
                 if len(cols) >= 8:
-                    # 제목 태그 안의 텍스트만 추출 (극장명 분리 위함)
+                    # 공연명과 극장명 분리
+                    full_text = cols[0].get_text(strip=True)
                     show_node = cols[0].find('a')
-                    show_name = show_node.get_text(strip=True) if show_node else cols[0].get_text(strip=True).split('Theatre')[0]
+                    show_name = show_node.get_text(strip=True) if show_node else full_text
+                    # 극장명: 전체 텍스트에서 공연명을 빼면 극장명만 남음
+                    theater_name = full_text.replace(show_name, '').strip()
                     
                     gross_str = cols[1].get_text(strip=True)
+                    diff_str = cols[2].get_text(strip=True)  # 전주 대비 변동
+                    avg_ticket_str = cols[3].get_text(strip=True)  # 평균 티켓 가격
+                    attendance_str = cols[4].get_text(strip=True)  # 관객 수
                     capacity_str = cols[6].get_text(strip=True)
                     
                     try:
                         parsed_gross = float(gross_str.replace('$', '').replace(',', ''))
                         grosses.append({
                             "show": show_name,
+                            "theater": theater_name,
                             "gross_formatted": gross_str,
                             "gross": parsed_gross,
+                            "diff": diff_str,
+                            "avg_ticket": avg_ticket_str,
+                            "attendance": attendance_str,
                             "capacity": capacity_str
                         })
                     except ValueError:
@@ -284,9 +294,34 @@ def fetch_broadway_grosses():
                         
             # 매출액(Gross) 기준 내림차순 정렬 후 상위 5개 추출
             grosses.sort(key=lambda x: x['gross'], reverse=True)
-            for i, item in enumerate(grosses[:5]):
+            top5 = grosses[:5]
+            for i, item in enumerate(top5):
                 item['rank'] = i + 1
-            return grosses[:5]
+            
+            # LLM으로 각 공연에 대한 한 줄 한국어 소개 추가
+            if GEMINI_API_KEY and top5:
+                try:
+                    show_list = ", ".join([s['show'] for s in top5])
+                    desc_prompt = f"""아래 5개 브로드웨이 공연에 대해 각각 한국어로 한 줄(15~25자) 소개를 작성해주세요.
+뮤지컬이면 장르와 분위기를, 연극이면 주제나 배우를 간단히 언급해주세요.
+반드시 JSON 객체 형태로만 응답하세요. 키는 공연명(영문), 값은 한국어 소개입니다.
+
+공연 목록: {show_list}
+
+예시: {{"Hamilton": "미국 건국의 역사를 힙합으로 풀어낸 뮤지컬"}}
+"""
+                    desc_resp = model.generate_content(desc_prompt).text.strip()
+                    if desc_resp.startswith("```json"):
+                        desc_resp = desc_resp[7:]
+                    if desc_resp.endswith("```"):
+                        desc_resp = desc_resp[:-3]
+                    descriptions = json.loads(desc_resp.strip())
+                    for item in top5:
+                        item['description_kr'] = descriptions.get(item['show'], '')
+                except Exception as e:
+                    print(f"   ⚠️ 공연 소개 생성 스킵: {e}")
+            
+            return top5
     except Exception as e:
         print(f"   ⚠️ 브로드웨이 박스오피스 파싱 실패: {e}")
     return []
