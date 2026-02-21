@@ -9,13 +9,33 @@ document.addEventListener('DOMContentLoaded', () => {
   initHeaderScroll();
   initTheme();
 
-  // 현재 페이지가 기사 상세 페이지인지 확인
+  // 현재 페이지 확인 후 적절한 함수 실행
   if (window.location.pathname.includes('article.html')) {
     renderSingleArticle();
+  } else if (window.location.pathname.includes('category.html')) {
+    renderCategoryArticles();
   } else {
     loadArticles();
   }
 });
+
+/* --- 공통 유틸리티 --- */
+function formatKoreanDate(dateString) {
+  try {
+    const date = new Date(dateString);
+    if (isNaN(date.getTime())) return dateString; // 파싱 실패시 원본 반환
+
+    const year = date.getFullYear();
+    const month = String(date.getMonth() + 1).padStart(2, '0');
+    const day = String(date.getDate()).padStart(2, '0');
+    const hours = String(date.getHours()).padStart(2, '0');
+    const minutes = String(date.getMinutes()).padStart(2, '0');
+
+    return `${year}. ${month}. ${day}. ${hours}:${minutes}`;
+  } catch (e) {
+    return dateString;
+  }
+}
 
 /* --- 기사 데이터 로드 및 렌더링 --- */
 async function loadArticles() {
@@ -51,7 +71,7 @@ async function loadArticles() {
           <div class="article-content">
             <h3 class="article-title">${article.title_kr || article.title}</h3>
             <div class="article-meta">
-              <span>${category}</span> · <span>${article.date}</span>
+              <span>${category}</span> · <span>${formatKoreanDate(article.date)}</span>
             </div>
           </div>
           <p class="article-summary">${summary}</p>
@@ -95,7 +115,7 @@ async function renderSingleArticle() {
     document.querySelector('.article-meta-bar').innerHTML = `
       <span>${article.source}</span>
       <span class="divider" style="display:inline-block;width:4px;height:4px;border-radius:50%;background:var(--color-text-dim);"></span>
-      <span>${article.date}</span>
+      <span>${formatKoreanDate(article.date)}</span>
       <span class="divider" style="display:inline-block;width:4px;height:4px;border-radius:50%;background:var(--color-text-dim);"></span>
       <a href="${article.link}" target="_blank" style="text-decoration:underline;">원본 기사 보기</a>
     `;
@@ -120,6 +140,80 @@ async function renderSingleArticle() {
   } catch (error) {
     console.error('Error:', error);
     document.querySelector('.single-article-content').innerHTML = '<p>기사를 불러오는 중 오류가 발생했습니다.</p>';
+  }
+}
+
+/* --- 카테고리 기사 리스트 렌더링 --- */
+async function renderCategoryArticles() {
+  const params = new URLSearchParams(window.location.search);
+  const currentCategory = params.get('cat') || 'theater'; // 기본값 연극
+
+  const containerId = currentCategory === 'theater' ? 'theaterArticles' : 'filmArticles';
+  const container = document.getElementById(containerId);
+  const isTheater = currentCategory === 'theater';
+
+  if (!container) return;
+
+  try {
+    const response = await fetch(`data/articles.json?t=${new Date().getTime()}`);
+    if (!response.ok) throw new Error('데이터 로드 실패');
+
+    const articles = await response.json();
+
+    // 카테고리 필터링 (Variety면 영화, 그 외엔 연극으로 분류)
+    const filteredArticles = articles.filter(article => {
+      const isArticleFilm = article.source === 'Variety';
+      return isTheater ? !isArticleFilm : isArticleFilm;
+    });
+
+    container.innerHTML = ''; // 빈 상태로 초기화 (기존 더미 삭제)
+
+    if (filteredArticles.length === 0) {
+      container.innerHTML = `<p style="grid-column: 1 / -1; padding: 2rem 0; color: var(--color-text-muted);">아직 등록된 기사가 없습니다.</p>`;
+      return;
+    }
+
+    filteredArticles.forEach(article => {
+      // 기사의 전체 배열 내 진짜 ID(인덱스)를 찾아야 article.html에서 제대로 읽을 수 있음.
+      const originalIndex = articles.findIndex(a => a.link === article.link);
+
+      const labelText = isTheater ? '연극' : '영화';
+      const cssClass = isTheater ? 'theater' : 'film';
+
+      const el = document.createElement('article');
+      el.className = 'article-card animate-in';
+
+      const imageHtml = article.image
+        ? `<div class="card-image-inner" style="background-image:url('${article.image}');"></div>`
+        : `<div class="card-image-inner placeholder-${cssClass}"></div>`;
+
+      // 카테고리에서는 요약을 짧게 보여주거나 글목록 형태
+      const snippet = article.summary_kr && !article.summary_kr.startsWith('[번역 실패]')
+        ? article.summary_kr.substring(0, 80) + '...'
+        : '내용 보기';
+
+      el.innerHTML = `
+        <a href="article.html?id=${originalIndex}">
+          <div class="card-image">
+            ${imageHtml}
+            <span class="card-category ${cssClass}">${labelText}</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">${article.title_kr || article.title}</h3>
+            <p class="card-excerpt">${snippet}</p>
+            <div class="card-meta">
+              <span>${formatKoreanDate(article.date).split(' ')[0] + ' ' + formatKoreanDate(article.date).split(' ')[1] + ' ' + formatKoreanDate(article.date).split(' ')[2]}</span>
+              <span>1분 읽기</span>
+            </div>
+          </div>
+        </a>
+      `;
+      container.appendChild(el);
+    });
+
+  } catch (err) {
+    console.error('카테고리 데이터 불러오기 에러:', err);
+    container.innerHTML = '<p style="grid-column: 1 / -1;">데이터를 불러오는 중 오류가 발생했습니다.</p>';
   }
 }
 
