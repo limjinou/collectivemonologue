@@ -450,6 +450,50 @@ def save_to_json(major_articles, indie_articles):
     with open(file_path, 'w', encoding='utf-8') as f:
         json.dump(final_data, f, ensure_ascii=False, indent=4)
     print(f"✅ 저장 완료: 메이저 {len(major_articles[:2])}건 + 인디 {len(indie_articles[:2])}건 = 총 {len(final_data)}건")
+    
+    # Sitemap 생성 로직 추가
+    generate_sitemap(final_data)
+
+def generate_sitemap(articles):
+    """
+    저장된 기사 데이터를 바탕으로 구글 검색용 sitemap.xml을 생성합니다.
+    """
+    import urllib.parse
+    base_url = "https://limjinou.github.io/collectivemonologue"
+    today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    
+    xml_content = '<?xml version="1.0" encoding="UTF-8"?>\n'
+    xml_content += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+    
+    # 기본 정적 페이지들
+    static_pages = ['index.html', 'category.html', 'about.html', 'contact.html', 'privacy.html']
+    for page in static_pages:
+        xml_content += '  <url>\n'
+        xml_content += f'    <loc>{base_url}/{page}</loc>\n'
+        xml_content += f'    <lastmod>{today}</lastmod>\n'
+        xml_content += '    <changefreq>daily</changefreq>\n'
+        xml_content += '    <priority>0.8</priority>\n'
+        xml_content += '  </url>\n'
+
+    # 동적 기사 페이지들 (article.html?id=...)
+    for article in articles:
+        # 영문 타이틀을 소문자로 바꾸고 공백을 언더스코어로 파싱하여 ID 생성 (frontend main.js와 동일 로직 예상)
+        safe_title = "".join(c if c.isalnum() or c.isspace() else "" for c in article['original_title']).strip()
+        article_id = safe_title.replace(' ', '_').lower()
+        encoded_id = urllib.parse.quote(article_id)
+        
+        xml_content += '  <url>\n'
+        xml_content += f'    <loc>{base_url}/article.html?id={encoded_id}</loc>\n'
+        xml_content += f'    <lastmod>{today}</lastmod>\n'
+        xml_content += '    <changefreq>weekly</changefreq>\n'
+        xml_content += '    <priority>0.6</priority>\n'
+        xml_content += '  </url>\n'
+
+    xml_content += '</urlset>'
+
+    with open('sitemap.xml', 'w', encoding='utf-8') as f:
+        f.write(xml_content)
+    print("✅ sitemap.xml 자동 생성 완료")
 
 def crawl_rss():
     print("🚀 크롤러(ver.2) 시작 — 메이저 2건 + 인디 2건 수집")

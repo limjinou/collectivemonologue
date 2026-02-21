@@ -178,6 +178,22 @@ async function renderSingleArticle() {
 
     const category = article.source === 'Variety' ? '영화' : '연극';
 
+    // SEO & OpenGraph 동적 업데이트
+    const articleTitle = article.title_kr || article.title;
+    const articleSummary = article.summary_kr || '미국 연극과 영화의 최신 트렌드를 한국어로 만나보세요.';
+    const articleImage = article.image || 'https://limjinou.github.io/collectivemonologue/assets/default_thumb.jpg';
+
+    document.title = `${articleTitle} | Collective Monologue`;
+
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) ogTitle.setAttribute('content', articleTitle);
+
+    const ogDesc = document.querySelector('meta[property="og:description"]');
+    if (ogDesc) ogDesc.setAttribute('content', articleSummary);
+
+    const ogImage = document.querySelector('meta[property="og:image"]');
+    if (ogImage) ogImage.setAttribute('content', articleImage);
+
     // 내용 채우기
     document.querySelector('.hero-category').textContent = `🎭 ${category}`;
     document.querySelector('.article-title').textContent = article.title_kr || article.title;
