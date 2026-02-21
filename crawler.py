@@ -25,11 +25,17 @@ if GEMINI_API_KEY:
     # Flash Latest 사용 (Stable version, quota friendly)
     model = genai.GenerativeModel('gemini-flash-latest')
 
-RSS_FEEDS = {
-    # 연극 특화 소스만 유지 (현재 Playbill RSS 등 일부 피드가 비어있을 수 있어 복수로 추가)
-    "Deadline Theater": "https://deadline.com/v/theater/feed/",
+# 메이저 소스 (브로드웨이 / 할리우드 메이저)
+MAJOR_FEEDS = {
     "Playbill": "https://www.playbill.com/rss",
-    "BroadwayWorld": "https://www.broadwayworld.com/rss/news.xml"
+    "BroadwayWorld": "https://www.broadwayworld.com/rss/news.xml",
+    "Deadline Theater": "https://deadline.com/v/theater/feed/",
+}
+
+# 인디 소스 (대학로 감성, 비영리, 소규모 극장)
+INDIE_FEEDS = {
+    "American Theatre": "https://www.americantheatre.org/feed/",
+    "TheaterMania": "https://www.theatermania.com/rss",
 }
 
 def fetch_article_content(url):
@@ -95,13 +101,13 @@ def translate_and_summarize(text, title):
         "keywords": []
     }
 
-def process_entry(entry, source):
+def process_entry(entry, source, tier):
     """Process individual article (for parallel execution)"""
     title = entry.title
     link = entry.link
     published = entry.get('published', datetime.now().strftime("%Y-%m-%d"))
     
-    print(f"   Analyzing: {title[:30]}...")
+    print(f"   Analyzing [{tier.upper()}]: {title[:30]}...")
 
     # 1. Extract full text
     full_text = fetch_article_content(link)
@@ -124,6 +130,7 @@ def process_entry(entry, source):
 
     return {
         "source": source,
+        "tier": tier,  # 'major' 또는 'indie'
         "original_title": title,
         "link": link,
         "image": image_url,
@@ -161,46 +168,63 @@ def send_email(articles):
     except Exception as e:
         print(f"❌ 이메일 발송 실패: {e}")
 
-def save_to_json(new_data):
+def save_to_json(major_articles, indie_articles):
     file_path = 'data/articles.json'
     
-    # 프로토타입 단계: 모든 기존 데이터 지우고 새로 가져온 딱 2개만 유지
-    final_data = new_data[:2]
+    # 메이저 2개 + 인디 2개 유지
+    final_data = major_articles[:2] + indie_articles[:2]
 
     with open(file_path, 'w', encoding='utf-8') as f:
         json.dump(final_data, f, ensure_ascii=False, indent=4)
-    print(f"✅ 데이터 덮어쓰기 완료 (총 {len(final_data)}건의 핫이슈 기사 유지)")
+    print(f"✅ 저장 완료: 메이저 {len(major_articles[:2])}건 + 인디 {len(indie_articles[:2])}건 = 총 {len(final_data)}건")
 
 def crawl_rss():
-    print("🚀 고성능 크롤러(ver.1) 시작...")
+    print("🚀 크롤러(ver.2) 시작 — 메이저 2건 + 인디 2건 수집")
     
-    all_entries = []
-    for source, url in RSS_FEEDS.items():
-        print(f"📡 {source} 검색 중...")
-        feed = feedparser.parse(url)
-        # 각 소스별 최신 2개만 수집
-        for entry in feed.entries[:2]:
-            all_entries.append((entry, source))
-    
-    print(f"총 {len(all_entries)}개의 기사 발견. 병렬 처리 시작...")
+    def fetch_from_feeds(feeds_dict, tier):
+        entries = []
+        for source, url in feeds_dict.items():
+            print(f"📡 [{tier.upper()}] {source} 검색 중...")
+            try:
+                feed = feedparser.parse(url)
+                # 각 소스별 최신 1개씩 수집
+                for entry in feed.entries[:1]:
+                    entries.append((entry, source, tier))
+            except Exception as e:
+                print(f"⚠️ {source} 피드 오류: {e}")
+        return entries
 
-    results = []
-    # 병렬 처리 (최대 2개 동시 작업 - Rate Limit 방지)
+    major_entries = fetch_from_feeds(MAJOR_FEEDS, 'major')
+    indie_entries = fetch_from_feeds(INDIE_FEEDS, 'indie')
+    all_entries = major_entries + indie_entries
+    
+    print(f"총 {len(all_entries)}개 기사 발견. 병렬 처리 시작...")
+
+    major_results = []
+    indie_results = []
+
     with concurrent.futures.ThreadPoolExecutor(max_workers=2) as executor:
-        future_to_entry = {executor.submit(process_entry, entry, source): (entry, source) for entry, source in all_entries}
+        future_to_entry = {
+            executor.submit(process_entry, entry, source, tier): (entry, source, tier)
+            for entry, source, tier in all_entries
+        }
         for future in concurrent.futures.as_completed(future_to_entry):
             try:
                 data = future.result()
-                results.append(data)
+                if data['tier'] == 'major':
+                    major_results.append(data)
+                else:
+                    indie_results.append(data)
             except Exception as exc:
                 print(f"❌ 처리 중 에러 발생: {exc}")
 
-    return results
+    return major_results, indie_results
 
 if __name__ == "__main__":
-    crawled_data = crawl_rss()
-    if crawled_data:
-        save_to_json(crawled_data)
-        send_email(crawled_data)
+    major_data, indie_data = crawl_rss()
+    if major_data or indie_data:
+        save_to_json(major_data, indie_data)
+        all_data = major_data + indie_data
+        send_email(all_data)
     else:
         print("새로운 기사가 없습니다.")
