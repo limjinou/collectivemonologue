@@ -349,40 +349,60 @@ function updateToggleIcon(theme) {
   toggleBtn.textContent = theme === 'light' ? '🌙' : '☀️';
 }
 
-/* --- 모바일 메뉴 토글 --- */
+/* --- 모바일 메뉴 토글 (Enhanced) --- */
 function initMobileMenu() {
   const toggle = document.querySelector('.menu-toggle');
   const navLinks = document.querySelector('.nav-links');
 
   if (!toggle || !navLinks) return;
 
-  toggle.addEventListener('click', () => {
-    toggle.classList.toggle('active');
-    navLinks.classList.toggle('open');
-    document.body.style.overflow = navLinks.classList.contains('open') ? 'hidden' : '';
-  });
+  // Create overlay if not exists
+  let overlay = document.querySelector('.menu-overlay');
+  if (!overlay) {
+    overlay = document.createElement('div');
+    overlay.className = 'menu-overlay';
+    document.body.appendChild(overlay);
+  }
+
+  const toggleMenu = (forceClose = false) => {
+    const isOpen = forceClose ? false : !navLinks.classList.contains('open');
+
+    toggle.classList.toggle('active', isOpen);
+    navLinks.classList.toggle('open', isOpen);
+    overlay.classList.toggle('active', isOpen);
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+  };
+
+  toggle.addEventListener('click', () => toggleMenu());
+  overlay.addEventListener('click', () => toggleMenu(true));
 
   // 메뉴 링크 클릭 시 자동 닫기
   navLinks.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      toggle.classList.remove('active');
-      navLinks.classList.remove('open');
-      document.body.style.overflow = '';
-    });
+    link.addEventListener('click', () => toggleMenu(true));
   });
 }
 
-/* --- 스크롤 시 헤더 배경 강화 --- */
+/* --- 스마트 헤더 (스크롤 방향 감지) --- */
 function initHeaderScroll() {
   const header = document.querySelector('.header');
   if (!header) return;
 
+  let lastScroll = 0;
+
   window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-      header.classList.add('header-scrolled');
+    const currentScroll = window.pageYOffset;
+
+    // 방향 감지
+    if (currentScroll > lastScroll && currentScroll > 100) {
+      // Downscroll
+      header.style.transform = 'translateY(-100%)';
     } else {
-      header.classList.remove('header-scrolled');
+      // Upscroll
+      header.style.transform = 'translateY(0)';
+      header.classList.toggle('header-scrolled', currentScroll > 50);
     }
+
+    lastScroll = currentScroll;
   });
 }
 

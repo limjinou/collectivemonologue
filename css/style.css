@@ -46,7 +46,36 @@
   --brutal-shadow: none;
   --brutal-shadow-hover: none;
 
-  --transition: all 0.18s ease;
+  --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* --- Fluid Type Scales --- */
+h1 {
+  font-size: clamp(2.2rem, 8vw, 6rem);
+}
+
+h2 {
+  font-size: clamp(1.6rem, 5vw, 2.8rem);
+}
+
+h3 {
+  font-size: clamp(1.1rem, 3vw, 1.5rem);
+}
+
+p {
+  font-size: clamp(0.95rem, 1vw + 0.5rem, 1.05rem);
+}
+
+/* Editorial Active State for Touch */
+a:active,
+button:active {
+  background-color: var(--color-text);
+  color: var(--color-bg) !important;
+}
+
+.hero-category:active {
+  background-color: var(--color-text);
+  color: var(--color-bg);
 }
 
 /* Dark mode — inverted paper */
@@ -1293,19 +1322,42 @@ img {
    ========================================================= */
 .menu-toggle {
   display: none;
-  border: 1px solid var(--color-border);
+  border: none;
   background-color: transparent;
-  padding: 0.4rem 0.5rem;
-  box-shadow: none;
+  padding: 0.5rem;
+  cursor: pointer;
   flex-direction: column;
-  gap: 4px;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  width: 44px;
+  height: 44px;
+  position: relative;
+  z-index: 1001;
 }
 
 .menu-toggle span {
   display: block;
-  width: 20px;
-  height: 1px;
+  width: 24px;
+  height: 1.5px;
   background-color: var(--color-text);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.2s ease;
+  transform-origin: center;
+}
+
+/* Hamburger Animation to X */
+.menu-toggle.active span:nth-child(1) {
+  transform: translateY(7.5px) rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+  transform: translateX(-10px);
+}
+
+.menu-toggle.active span:nth-child(3) {
+  transform: translateY(-7.5px) rotate(-45deg);
 }
 
 @media (max-width: 768px) {
@@ -1313,23 +1365,83 @@ img {
     display: flex;
   }
 
-  .nav-links.open {
-    display: flex;
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 320px;
+    height: 100vh;
+    background-color: #fff;
     flex-direction: column;
-    position: absolute;
-    top: var(--header-height);
-    left: 0;
+    padding: 7rem 2rem 2rem;
+    gap: 2rem;
+    transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.05);
+    border-left: 1px solid var(--color-border);
+    z-index: 1000;
+    display: flex;
+    /* Always display flex but hide off-screen */
+  }
+
+  .nav-links.open {
     right: 0;
-    background-color: var(--color-bg);
-    border-bottom: 1px solid var(--color-border);
-    padding: 1rem 0;
-    z-index: 999;
+  }
+
+  .nav-links a {
+    font-size: 1.5rem;
+    font-family: var(--font-display);
+    font-style: italic;
+    border: none;
+    padding: 0;
+    opacity: 0;
+    transform: translateX(20px);
+    transition: all 0.3s ease;
   }
 
   .nav-links.open a {
-    border-left: none;
-    padding: 0.75rem 2rem;
-    font-size: 0.85rem;
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .nav-links.open a:nth-child(1) {
+    transition-delay: 0.1s;
+  }
+
+  .nav-links.open a:nth-child(2) {
+    transition-delay: 0.15s;
+  }
+
+  .nav-links.open a:nth-child(3) {
+    transition-delay: 0.2s;
+  }
+
+  .nav-links.open a:nth-child(4) {
+    transition-delay: 0.25s;
+  }
+
+  .nav-links.open a:nth-child(5) {
+    transition-delay: 0.3s;
+  }
+
+  /* Overlay when menu is open */
+  .menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(2px);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 999;
+  }
+
+  .menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
   }
 }
 
