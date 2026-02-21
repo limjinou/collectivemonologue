@@ -109,14 +109,21 @@ async function loadBoxOffice() {
         const descLine = item.description_kr ? `<div class="bway-desc">${item.description_kr}</div>` : '';
         const theaterLine = item.theater ? `<span class="bway-theater">📍 ${item.theater}</span>` : '';
         el.innerHTML = `
-          <div class="bway-rank">${item.rank}</div>
+          <div class="bway-rank-box">
+            <span class="bway-rank-num">${item.rank}</span>
+          </div>
           <div class="bway-info">
-            <h4>${item.show}</h4>
-            ${descLine}
-            <div class="bway-stats">
-              💰 ${item.gross_formatted} · 🎫 ${item.avg_ticket || '—'} · 👥 ${item.attendance || '—'} · 📊 ${item.capacity}
+            <div class="bway-header-row">
+              <h4>${item.show}</h4>
+              ${theaterLine}
             </div>
-            ${theaterLine}
+            ${descLine}
+            <div class="bway-stats-compact">
+              <span>💰 ${item.gross_formatted}</span>
+              <span>🎫 ${item.avg_ticket || '-'}</span>
+              <span>👥 ${item.attendance || '-'}</span>
+              <span>📊 ${item.capacity}</span>
+            </div>
           </div>
         `;
         bwayContainer.appendChild(el);

@@ -629,8 +629,41 @@ button {
   display: inline-block;
   padding: 0.5rem 1rem;
   border: var(--brutal-border);
-  box-shadow: 4px 4px 0px var(--color-border);
-  transform: rotate(-1deg);
+}
+
+.bway-theater {
+  font-size: 0.75rem;
+  color: var(--color-text);
+  opacity: 0.8;
+  font-weight: 700;
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 0.1rem 0.4rem;
+  border-radius: 4px;
+}
+
+.bway-desc {
+  font-size: 0.9rem;
+  color: var(--color-text);
+  margin-bottom: 0.6rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.bway-stats-compact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  font-size: 0.8rem;
+  font-family: monospace;
+  font-weight: 700;
+  color: var(--color-bg);
+  background-color: var(--color-text);
+  padding: 0.5rem 0.8rem;
+  box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.2);
+}
+
+.bway-stats-compact span {
+  white-space: nowrap;
 }
 
 .related-list {
@@ -890,21 +923,4 @@ button {
   .menu-toggle {
     display: block;
   }
-}
-
-.bway-desc {
-  font-size: 0.85rem;
-  color: var(--color-text);
-  opacity: 0.75;
-  margin-bottom: 0.3rem;
-  font-style: italic;
-}
-
-.bway-theater {
-  display: inline-block;
-  font-size: 0.75rem;
-  color: var(--color-text);
-  opacity: 0.55;
-  margin-top: 0.2rem;
-  font-weight: 600;
 }
