@@ -35,19 +35,29 @@ MAJOR_FEEDS = {
 # 인디 소스 (대학로 감성, 비영리, 소규모 극장)
 INDIE_FEEDS = {
     "American Theatre": "https://www.americantheatre.org/feed/",
-    "TheaterMania": "https://www.theatermania.com/rss",
+    "HowlRound": "https://howlround.com/rss.xml",  # 온라인 비영리 연극 매즐스 HowlRound
+    "TheaterMania": "https://www.theatermania.com/feed/",
 }
 
 def fetch_article_content(url):
-    """Trafilatura를 사용하여 기사 본문 추출"""
+    """Trafilatura를 사용하여 기사 본문 및 첫 번째 이미지 URL 추출"""
     try:
         downloaded = trafilatura.fetch_url(url)
         if downloaded:
             text = trafilatura.extract(downloaded)
-            return text
+            # 본문 HTML에서 첫 번째 이미지 URL 추출
+            image_url = ""
+            import re
+            img_match = re.search(r'<img[^>]+src=["\']([^"\'>]+)["\']', downloaded)
+            if img_match:
+                candidate = img_match.group(1)
+                # 홈페이지 로고 등 작은 에셈셋 이미지 제외
+                if candidate.startswith('http') and not any(x in candidate for x in ['logo', 'icon', 'avatar', 'pixel', '1x1', 'thumb']):
+                    image_url = candidate
+            return text, image_url
     except Exception as e:
         print(f"⚠️ 본문 추출 실패 ({url}): {e}")
-    return None
+    return None, ""
 
 def translate_and_summarize(text, title):
     if not GEMINI_API_KEY:
@@ -118,23 +128,22 @@ def process_entry(entry, source, tier):
     
     print(f"   Analyzing [{tier.upper()}]: {title[:30]}...")
 
-    # 1. Extract full text
-    full_text = fetch_article_content(link)
+    # 1. Extract full text + image from article HTML
+    full_text, html_image = fetch_article_content(link)
     
     # 2. AI Summary
     ai_result = translate_and_summarize(full_text, title)
 
-    # Extract image from entry or feed
-    image_url = ""
-    # Try different common RSS image enclosures
+    # Extract image: RSS metadata 우선, 없으면 HTML 파싱 결과 사용
+    image_url = html_image  # 기본값: HTML에서 추출한 이미지
     if 'media_content' in entry and len(entry.media_content) > 0:
-        image_url = entry.media_content[0].get('url', '')
+        image_url = entry.media_content[0].get('url', '') or html_image
     elif 'media_thumbnail' in entry and len(entry.media_thumbnail) > 0:
-        image_url = entry.media_thumbnail[0].get('url', '')
+        image_url = entry.media_thumbnail[0].get('url', '') or html_image
     elif 'links' in entry:
         for link_item in entry.links:
             if link_item.get('type', '').startswith('image/'):
-                image_url = link_item.get('href', '')
+                image_url = link_item.get('href', '') or html_image
                 break
 
     return {
@@ -196,8 +205,8 @@ def crawl_rss():
             print(f"📡 [{tier.upper()}] {source} 검색 중...")
             try:
                 feed = feedparser.parse(url)
-                # 각 소스별 최신 1개씩 수집
-                for entry in feed.entries[:1]:
+                # 각 소스별 최신 2개씩 수집 (버퍼 확보: 1개 실패 시 다음 것으로 대체)
+                for entry in feed.entries[:2]:
                     entries.append((entry, source, tier))
             except Exception as e:
                 print(f"⚠️ {source} 피드 오류: {e}")
