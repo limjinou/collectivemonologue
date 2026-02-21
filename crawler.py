@@ -9,6 +9,7 @@ import json
 import trafilatura
 import concurrent.futures
 import time
+import requests
 
 # 1. 환경 변수 로드
 load_dotenv()
@@ -58,6 +59,28 @@ def fetch_article_content(url):
     except Exception as e:
         print(f"⚠️ 본문 추출 실패 ({url}): {e}")
     return None, ""
+
+def fetch_wikipedia_image(keywords):
+    """AI 추출 키워드를 Wikipedia API로 검색하여 이미지 URL 반환 (CC 라이선스)"""
+    for keyword in keywords[:4]:  # 최대 4개 키워드 순서대로 시도
+        try:
+            url = (
+                "https://en.wikipedia.org/w/api.php"
+                f"?action=query&titles={requests.utils.quote(str(keyword))}"
+                "&prop=pageimages&format=json&pithumbsize=800"
+            )
+            resp = requests.get(url, timeout=5,
+                                headers={"User-Agent": "CollectiveMonologue/1.0"})
+            data = resp.json()
+            pages = data.get("query", {}).get("pages", {})
+            for page in pages.values():
+                thumb = page.get("thumbnail", {}).get("source", "")
+                if thumb:
+                    print(f"   🖼️ Wikipedia 이미지 확보: [{keyword}]")
+                    return thumb
+        except Exception as e:
+            print(f"   ⚠️ Wikipedia 검색 실패 ({keyword}): {e}")
+    return ""
 
 def translate_and_summarize(text, title):
     if not GEMINI_API_KEY:
@@ -134,7 +157,7 @@ def process_entry(entry, source, tier):
     # 2. AI Summary
     ai_result = translate_and_summarize(full_text, title)
 
-    # Extract image: RSS metadata 우선, 없으면 HTML 파싱 결과 사용
+    # Extract image: RSS metadata 우선, 없으면 HTML 파싱, 그래도 없으면 Wikipedia 검색
     image_url = html_image  # 기본값: HTML에서 추출한 이미지
     if 'media_content' in entry and len(entry.media_content) > 0:
         image_url = entry.media_content[0].get('url', '') or html_image
@@ -145,6 +168,16 @@ def process_entry(entry, source, tier):
             if link_item.get('type', '').startswith('image/'):
                 image_url = link_item.get('href', '') or html_image
                 break
+
+    # RSS나 HTML에서 이미지를 못 찾았으면 Wikipedia 이미지 검색
+    if not image_url and ai_result.get('keywords'):
+        # AI가 추출한 영문 키워드로 직접 검색 (원문 제목에서 로마자 찾기)
+        import re
+        # 영문 단어가 포함된 키워드 우선 (ex. 배우 이름 등)
+        original_title_words = entry.title
+        en_keywords = re.findall(r'[A-Z][a-z]+(?:\s+[A-Z][a-z]+)+', original_title_words)
+        search_keywords = en_keywords + ai_result.get('keywords', [])
+        image_url = fetch_wikipedia_image(search_keywords)
 
     return {
         "source": source,
