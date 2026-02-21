@@ -8,62 +8,118 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollAnimations();
   initHeaderScroll();
   initTheme();
-  loadArticles(); // 기사 불러오기 시작
+
+  // 현재 페이지가 기사 상세 페이지인지 확인
+  if (window.location.pathname.includes('article.html')) {
+    renderSingleArticle();
+  } else {
+    loadArticles();
+  }
 });
 
 /* --- 기사 데이터 로드 및 렌더링 --- */
 async function loadArticles() {
-  const grid = document.querySelector('.article-grid');
-  // 홈 화면이 아니거나 그리드가 없으면 실행하지 않음 (기사 상세 페이지 등)
-  if (!grid) return;
+  const container = document.querySelector('.article-list');
+  if (!container) return;
 
   try {
-    // 캐싱 방지를 위해 타임스탬프 추가
     const response = await fetch(`data/articles.json?t=${new Date().getTime()}`);
-    if (!response.ok) throw new Error('데이터 로드 실패: ' + response.statusText);
-
+    if (!response.ok) throw new Error('데이터 로드 실패');
     const articles = await response.json();
 
-    // 기존 하드코딩된 기사들을 비우고 시작 (또는 로딩 스피너 대체)
-    grid.innerHTML = '';
+    container.innerHTML = '';
 
-    articles.forEach(article => {
-      const card = document.createElement('article');
-      card.className = 'article-card animate-in';
-      // 크롤러 데이터 형식에 맞게 수정
-      // crawler.py output: { source, title, link, summary_kr, date }
-      // frontend expects: { title, summary, date, category (derived from source) }
-
-      const category = article.source === 'Variety' ? 'film' : 'theater'; // 간단한 매핑
+    articles.forEach((article, index) => {
+      const category = article.source === 'Variety' ? 'FILM' : 'THEATER';
       const summary = article.summary_kr && !article.summary_kr.startsWith('[번역 실패]')
         ? article.summary_kr
-        : (article.title + ' (번역 대기중)');
+        : (article.title);
 
-      card.innerHTML = `
-        <a href="${article.link}" target="_blank">
-          <div class="card-image">
-            <div class="card-image-inner ${category === 'theater' ? 'placeholder-theater' : 'placeholder-film'}"></div>
-            <span class="card-category ${category}">${category === 'theater' ? '연극' : '영화'}</span>
-          </div>
-          <div class="card-body">
-            <h3 class="card-title">${article.title}</h3>
-            <p class="card-excerpt">${summary.substring(0, 100)}...</p>
-            <div class="card-meta">
-              <span>${article.date}</span>
-              <span>${article.source}</span>
+      // 썸네일 이미지 처리
+      const imageHtml = article.image
+        ? `<div class="article-thumbnail" style="background-image: url('${article.image}');"></div>`
+        : `<div class="article-thumbnail placeholder-mixed"></div>`;
+
+      const item = document.createElement('a');
+      // 링크를 내부 article.html 페이지로 연동 (기사 인덱스 파라미터 전달)
+      item.href = `article.html?id=${index}`;
+      item.className = 'article-item';
+
+      item.innerHTML = `
+        ${imageHtml}
+        <div class="article-info">
+          <div class="article-content">
+            <h3 class="article-title">${article.title_kr || article.title}</h3>
+            <div class="article-meta">
+              <span>${category}</span> · <span>${article.date}</span>
             </div>
           </div>
-        </a>
+          <p class="article-summary">${summary}</p>
+        </div>
       `;
-      grid.appendChild(card);
+      container.appendChild(item);
     });
 
-    // 새로 추가된 카드들에 애니메이션 적용을 위해 옵저버 재호출
-    initScrollAnimations();
+  } catch (error) {
+    console.error('Error:', error);
+    container.innerHTML = '<p style="padding:2rem;">최신 뉴스를 불러오는 중입니다...</p>';
+  }
+}
+
+/* --- 단일 기사 페이지 렌더링 --- */
+async function renderSingleArticle() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const articleId = urlParams.get('id');
+
+  if (articleId === null) {
+    document.querySelector('.article-content').innerHTML = '<p>기사를 찾을 수 없습니다.</p>';
+    return;
+  }
+
+  try {
+    const response = await fetch(`data/articles.json?t=${new Date().getTime()}`);
+    if (!response.ok) throw new Error('데이터 로드 실패');
+    const articles = await response.json();
+
+    const article = articles[articleId];
+    if (!article) {
+      document.querySelector('.article-content').innerHTML = '<p>해당 기사가 존재하지 않습니다.</p>';
+      return;
+    }
+
+    const category = article.source === 'Variety' ? '영화' : '연극';
+
+    // 내용 채우기
+    document.querySelector('.hero-category').textContent = `🎭 ${category}`;
+    document.querySelector('.article-title').textContent = article.title_kr || article.title;
+    document.querySelector('.article-meta-bar').innerHTML = `
+      <span>${article.source}</span>
+      <span class="divider" style="display:inline-block;width:4px;height:4px;border-radius:50%;background:var(--color-text-dim);"></span>
+      <span>${article.date}</span>
+      <span class="divider" style="display:inline-block;width:4px;height:4px;border-radius:50%;background:var(--color-text-dim);"></span>
+      <a href="${article.link}" target="_blank" style="text-decoration:underline;">원본 기사 보기</a>
+    `;
+
+    // 이미지 넣기
+    const featuredImageContainer = document.querySelector('.article-featured-image');
+    if (article.image) {
+      featuredImageContainer.innerHTML = `<img src="${article.image}" alt="Article Thumbnail" style="width:100%; border-radius:var(--radius); margin-bottom: 2rem;">`;
+    } else {
+      featuredImageContainer.style.display = 'none';
+    }
+
+    // 본문 내용 (개행 문자를 p태그로 분리)
+    const contentHtml = (article.content_kr || article.summary_kr || "본문 내용이 없습니다.")
+      .split('\n\n')
+      .map(p => `<p>${p}</p>`)
+      .join('');
+
+    const extraInfoHtml = `<p><em>이 기사는 <b>${article.source}</b>에서 스크랩 되었으며 AI에 의해 한국어로 요약되었습니다.</em></p>`;
+    document.querySelector('.article-content').innerHTML = contentHtml + extraInfoHtml;
 
   } catch (error) {
-    console.error('기사를 불러오는 중 오류 발생:', error);
-    grid.innerHTML = '<p style="color:var(--color-text-muted); padding:2rem;">최신 뉴스를 불러오지 못했습니다.</p>';
+    console.error('Error:', error);
+    document.querySelector('.article-content').innerHTML = '<p>기사를 불러오는 중 오류가 발생했습니다.</p>';
   }
 }
 
@@ -134,11 +190,9 @@ function initHeaderScroll() {
 
   window.addEventListener('scroll', () => {
     if (window.scrollY > 50) {
-      header.style.background = 'rgba(10, 10, 10, 0.98)';
-      header.style.borderBottomColor = 'rgba(200,164,90,0.2)';
+      header.classList.add('header-scrolled');
     } else {
-      header.style.background = 'rgba(10, 10, 10, 0.92)';
-      header.style.borderBottomColor = '';
+      header.classList.remove('header-scrolled');
     }
   });
 }
