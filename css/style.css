@@ -226,9 +226,23 @@ button {
 }
 
 .article-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
   font-size: 0.9rem;
   color: var(--color-text-dim);
   font-family: monospace;
+}
+
+.meta-category {
+  font-weight: 700;
+  color: var(--color-text);
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+}
+
+.meta-date {
+  color: var(--color-text-muted);
 }
 
 /* Hover Interaction */

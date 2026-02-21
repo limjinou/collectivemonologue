@@ -71,7 +71,8 @@ async function loadArticles() {
           <div class="article-content">
             <h3 class="article-title">${article.title_kr || article.title}</h3>
             <div class="article-meta">
-              <span>${category}</span> · <span>${formatKoreanDate(article.date)}</span>
+              <span class="meta-category">${category}</span>
+              <span class="meta-date">${formatKoreanDate(article.date)}</span>
             </div>
           </div>
           <p class="article-summary">${summary}</p>
@@ -169,7 +170,7 @@ async function renderCategoryArticles() {
     container.innerHTML = ''; // 빈 상태로 초기화 (기존 더미 삭제)
 
     if (filteredArticles.length === 0) {
-      container.innerHTML = `<p style="grid-column: 1 / -1; padding: 2rem 0; color: var(--color-text-muted);">아직 등록된 기사가 없습니다.</p>`;
+      container.innerHTML = `<p style="grid-column: 1 / -1; padding: 3rem 0; text-align: center; font-size: 1.1rem; color: var(--color-text-muted);">아직 등록된 기사가 없습니다.</p>`;
       return;
     }
 
