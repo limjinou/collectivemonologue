@@ -426,6 +426,14 @@ button {
   color: var(--color-text);
 }
 
+/* Tablet Responsiveness */
+@media (max-width: 900px) {
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+  }
+}
+
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
   .hero-title {
@@ -472,7 +480,21 @@ button {
 
   .footer-grid {
     grid-template-columns: 1fr;
-    gap: 2.5rem;
+    gap: 1.5rem;
+  }
+
+  .footer-col h4 {
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-col ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .footer-col ul li {
+    margin-bottom: 0;
   }
 
   .footer-bottom {
