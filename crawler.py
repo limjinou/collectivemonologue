@@ -33,6 +33,9 @@ MAJOR_FEEDS = {
     "Playbill": "https://www.playbill.com/rss",
     "BroadwayWorld": "https://www.broadwayworld.com/rss/news.xml",
     "Deadline Theater": "https://deadline.com/v/theater/feed/",
+    "The Hollywood Reporter": "https://www.hollywoodreporter.com/feed/",
+    "IndieWire": "https://www.indiewire.com/feed/",
+    "Variety Theater": "https://variety.com/v/legit/feed/",
 }
 
 # 인디 소스 (대학로 감성, 비영리, 소규모 극장)
@@ -40,6 +43,7 @@ INDIE_FEEDS = {
     "American Theatre": "https://www.americantheatre.org/feed/",
     "HowlRound": "https://howlround.com/rss.xml",  # 온라인 비영리 연극 매거진 HowlRound
     "TheaterMania": "https://www.theatermania.com/feed/",
+    "Backstage": "https://www.backstage.com/magazine/article/feed/",
 }
 
 def fetch_article_content(url):
@@ -443,13 +447,13 @@ def send_email(articles):
 def save_to_json(major_articles, indie_articles):
     file_path = 'data/articles.json'
     
-    # 메이저 2개 + 인디 2개 유지
-    final_data = major_articles[:2] + indie_articles[:2]
+    # 볼륨 확대: 메이저 5개 + 인디 4개 유지 (총 9개)
+    final_data = major_articles[:5] + indie_articles[:4]
 
     os.makedirs("data", exist_ok=True)
     with open(file_path, 'w', encoding='utf-8') as f:
         json.dump(final_data, f, ensure_ascii=False, indent=4)
-    print(f"✅ 저장 완료: 메이저 {len(major_articles[:2])}건 + 인디 {len(indie_articles[:2])}건 = 총 {len(final_data)}건")
+    print(f"✅ 저장 완료: 메이저 {len(major_articles[:5])}건 + 인디 {len(indie_articles[:4])}건 = 총 {len(final_data)}건")
     
     # Sitemap 생성 로직 추가
     generate_sitemap(final_data)
@@ -496,7 +500,7 @@ def generate_sitemap(articles):
     print("✅ sitemap.xml 자동 생성 완료")
 
 def crawl_rss():
-    print("🚀 크롤러(ver.2) 시작 — 메이저 2건 + 인디 2건 수집")
+    print("🚀 크롤러(ver.2) 시작 — 메이저 5건 + 인디 4건 수집")
     
     def fetch_from_feeds(feeds_dict, tier):
         entries = []
