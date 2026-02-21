@@ -72,7 +72,7 @@ async function renderSingleArticle() {
   const articleId = urlParams.get('id');
 
   if (articleId === null) {
-    document.querySelector('.article-content').innerHTML = '<p>기사를 찾을 수 없습니다.</p>';
+    document.querySelector('.single-article-content').innerHTML = '<p>기사를 찾을 수 없습니다.</p>';
     return;
   }
 
@@ -83,7 +83,7 @@ async function renderSingleArticle() {
 
     const article = articles[articleId];
     if (!article) {
-      document.querySelector('.article-content').innerHTML = '<p>해당 기사가 존재하지 않습니다.</p>';
+      document.querySelector('.single-article-content').innerHTML = '<p>해당 기사가 존재하지 않습니다.</p>';
       return;
     }
 
@@ -115,11 +115,11 @@ async function renderSingleArticle() {
       .join('');
 
     const extraInfoHtml = `<p><em>이 기사는 <b>${article.source}</b>에서 스크랩 되었으며 AI에 의해 한국어로 요약되었습니다.</em></p>`;
-    document.querySelector('.article-content').innerHTML = contentHtml + extraInfoHtml;
+    document.querySelector('.single-article-content').innerHTML = contentHtml + extraInfoHtml;
 
   } catch (error) {
     console.error('Error:', error);
-    document.querySelector('.article-content').innerHTML = '<p>기사를 불러오는 중 오류가 발생했습니다.</p>';
+    document.querySelector('.single-article-content').innerHTML = '<p>기사를 불러오는 중 오류가 발생했습니다.</p>';
   }
 }
 
