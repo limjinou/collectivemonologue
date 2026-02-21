@@ -6,7 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Collective Monologue — 미국 연극·영화 매거진 소개">
     <title>소개 | Collective Monologue</title>
-    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Neo-Brutalism Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@400;600;700&family=Noto+Sans+KR:wght@400;700;900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css?v=202602212315">
+
     <!-- Google Analytics GA4 -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-HYQZ9DQG0Z"></script>
     <script>
@@ -23,6 +32,152 @@
             y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
         })(window, document, "clarity", "script", "vkteot8g3h");
     </script>
+    <style>
+        /* About Page Specific Brutalist Styles */
+        .about-hero {
+            padding: 10rem 2rem 6rem;
+            text-align: center;
+            background-color: var(--color-accent-pink);
+            border-bottom: var(--brutal-border);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-hero h1 {
+            font-family: var(--font-display);
+            font-size: 5rem;
+            line-height: 1;
+            margin-bottom: 2rem;
+            color: var(--color-surface);
+            -webkit-text-stroke: 2px var(--color-border);
+            text-shadow: 6px 6px 0px var(--color-border);
+            position: relative;
+            z-index: 2;
+        }
+
+        .about-hero p {
+            font-family: var(--font-main);
+            font-size: 1.5rem;
+            font-weight: 700;
+            background-color: var(--color-surface);
+            display: inline-block;
+            padding: 1rem 2rem;
+            border: var(--brutal-border);
+            box-shadow: var(--brutal-shadow);
+            transform: rotate(-2deg);
+            position: relative;
+            z-index: 2;
+        }
+
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .about-content h2 {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+        }
+
+        .about-content p {
+            font-size: 1.25rem;
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+            background-color: var(--color-surface);
+            padding: 1.5rem;
+            border: var(--brutal-border);
+            box-shadow: 4px 4px 0px var(--color-border);
+        }
+
+        .about-values {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .value-card {
+            background-color: var(--color-surface);
+            border: var(--brutal-border);
+            box-shadow: var(--brutal-shadow);
+            padding: 2.5rem 2rem;
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .value-card:hover {
+            transform: translate(4px, 4px);
+            box-shadow: var(--brutal-shadow-hover);
+        }
+
+        .value-card:nth-child(1) {
+            background-color: var(--color-accent-yellow);
+        }
+
+        .value-card:nth-child(2) {
+            background-color: var(--color-accent-blue);
+            color: white;
+            -webkit-text-stroke: 1px black;
+        }
+
+        .value-card:nth-child(3) {
+            background-color: var(--color-accent-green);
+        }
+
+        .value-icon {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            filter: drop-shadow(4px 4px 0px var(--color-border));
+        }
+
+        .value-card h3 {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .value-card p {
+            font-weight: 600;
+            font-size: 1.1rem;
+            background: none;
+            border: none;
+            box-shadow: none;
+            padding: 0;
+            color: var(--color-text);
+            -webkit-text-stroke: 0;
+        }
+
+        .cta-section {
+            background-color: var(--color-accent-blue);
+            padding: 6rem 2rem;
+            text-align: center;
+            border-top: var(--brutal-border);
+            border-bottom: var(--brutal-border);
+        }
+
+        .cta-btn {
+            display: inline-block;
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            background-color: var(--color-accent-yellow);
+            color: var(--color-text);
+            padding: 1rem 3rem;
+            border: var(--brutal-border);
+            box-shadow: 6px 6px 0px var(--color-border);
+            text-transform: uppercase;
+            transition: var(--transition);
+            margin-top: 2rem;
+        }
+
+        .cta-btn:hover {
+            transform: translate(3px, 3px);
+            box-shadow: 3px 3px 0px var(--color-border);
+            background-color: var(--color-accent-pink);
+        }
+    </style>
 </head>
 
 <body>
@@ -52,8 +207,8 @@
 
     <!-- ===== About 히어로 ===== -->
     <div class="about-hero">
-        <h1>Collective <span class="text-accent">Monologue</span></h1>
-        <p>미국 무대와 스크린의 이야기를<br>한국어로 전합니다.</p>
+        <h1>Collective<br>Monologue</h1>
+        <p>미국 무대와 스크린의 이야기를 한국어로 전합니다.</p>
     </div>
 
     <!-- ===== 소개 섹션 ===== -->
@@ -68,23 +223,23 @@
             </p>
             <p>
                 <strong>Collective Monologue</strong>는 이 공백을 채우기 위해 탄생했습니다.
-                우리는 미국 연극과 영화의 최신 뉴스, 트렌드, 심층 분석을 한국어로 전달합니다.
-                단순한 번역이 아닌, 한국 관객의 눈높이에 맞는 맥락과 해석을 더합니다.
+                우리는 단순한 뉴스의 번역과 큐레이션을 넘어, 바다 건너 무대의 열기와 치열한 고민을 생생하게 전합니다.
             </p>
             <p>
-                '독백의 집합'이라는 이름처럼, 무대 위의 수많은 독백들이 모여 하나의 연극이 되듯,
-                각각의 기사와 분석이 모여 미국 공연·영화 예술의 전체적인 그림을 그립니다.
+                우리의 목표는 명확합니다. 연극과 영화를 사랑하는 전공자, 그리고 현업에서 매일 새로운 것을 창조해내는
+                창작자들이 이곳에서 <strong>'새로운 영감'</strong>을 얻어가는 <strong>성지(聖地)</strong>가 되는 것입니다.
+                독백들이 모여 완성된 연극이 되듯, 우리가 전하는 미국의 이야기들이 당신의 새로운 창작을 위한 무대가 되기를 바랍니다.
             </p>
         </div>
     </section>
 
     <!-- ===== 가치 카드 ===== -->
-    <section class="section" style="background:var(--color-bg-card);">
+    <section class="section" style="background-color: var(--color-bg); padding-bottom: 6rem;">
         <div class="container">
-            <div class="about-content">
-                <h2>우리의 가치</h2>
+            <div class="about-content" style="padding-bottom: 0;">
+                <h2 style="text-align: center; font-size: 3rem;">우리의 가치</h2>
             </div>
-            <div class="about-values" style="max-width:960px;margin:var(--space-10) auto 0;">
+            <div class="about-values">
                 <div class="value-card animate-in">
                     <div class="value-icon">🎭</div>
                     <h3>전문성</h3>
@@ -104,33 +259,21 @@
         </div>
     </section>
 
-    <!-- ===== 연락처 ===== -->
-    <section class="about-section">
-        <div class="container about-content" style="text-align:center;">
-            <h2>함께하기</h2>
-            <p>
-                기사 제보, 협업 제안, 또는 그냥 인사가 하고 싶다면 아래로 연락주세요.
-            </p>
-            <p style="margin-top:var(--space-6);">
-                <a href="mailto:iamououou95@gmail.com" class="btn btn-primary" style="font-size:var(--text-base);">
-                    ✉ iamououou95@gmail.com
-                </a>
-            </p>
-        </div>
-    </section>
-
-    <!-- ===== 구독 CTA ===== -->
-    <section class="section" style="background:linear-gradient(180deg, rgba(200,164,90,0.05) 0%, transparent 100%);">
-        <div class="container" style="text-align:center;">
+    <!-- ===== 연락처 & 구독 (Brutalist CTA) ===== -->
+    <section class="cta-section">
+        <div class="container">
             <h2
-                style="font-family:var(--font-heading);font-size:var(--text-3xl);color:var(--color-white);margin-bottom:var(--space-4);">
-                미국 연극·영화 소식을 놓치지 마세요</h2>
-            <p style="color:var(--color-text-muted);margin-bottom:var(--space-8);font-size:var(--text-lg);">매주 핵심 뉴스를
-                이메일로 받아보세요.</p>
-            <a href="subscribe.html" class="btn btn-primary"
-                style="font-size:var(--text-base);padding:var(--space-4) var(--space-10);">
-                무료 구독하기 →
-            </a>
+                style="font-family: var(--font-display); font-size: 3rem; color: var(--color-surface); -webkit-text-stroke: 1px var(--color-border); text-shadow: 4px 4px 0px var(--color-border); margin-bottom: 1rem;">
+                함께 영감을 나누세요
+            </h2>
+            <p style="font-size: 1.25rem; font-weight: 700; color: var(--color-surface); margin-bottom: 2rem;">
+                미국 연극·영화 최신 소식을 매주 이메일로 받아보시거나, 기사 제보/협업을 제안해주세요.
+            </p>
+            <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap;">
+                <a href="subscribe.html" class="cta-btn">무료 구독하기 →</a>
+                <a href="mailto:iamououou95@gmail.com" class="cta-btn" style="background-color: var(--color-surface);">✉
+                    이메일 보내기</a>
+            </div>
         </div>
     </section>
 
