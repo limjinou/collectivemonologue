@@ -60,16 +60,25 @@ def translate_and_summarize(text, title):
     truncated_text = text[:4000]
 
     prompt = f"""
-    Here is an article about '{title}'.
-    Please extract the core information and rewrite it in Korean.
-    The goal is to provide a professional summary of the hottest issues, highly anticipated shows, or upcoming works in the US theater scene.
+    You are the editor of "Collective Monologue", a Korean-language magazine dedicated to covering American theater and film with depth, nuance, and cultural context.
     
-    Format the output as the following JSON. 
-    Make sure to write 'title_kr', 'summary_kr', and 'content_kr' in KOREAN:
+    Below is an article titled '{title}'. Your task is NOT a simple translation.
+    Instead, produce a rich, original Korean editorial that:
+
+    1. Summarizes the core news from the article
+    2. Adds meaningful background knowledge YOU ALREADY KNOW about:
+       - Any ACTORS or DIRECTORS mentioned: their notable past works, career highlights, and what makes them significant
+       - Any PRODUCTIONS or PLAYS mentioned: the original playwright, a brief synopsis, the work's historical/cultural significance
+       - Any THEATERS or VENUES mentioned: their location, founding history, notable past productions, or their role in American theater
+       - Any AWARDS or EVENTS mentioned: the history and significance of the award or event
+    3. Includes a brief editorial perspective or "editor's note" that helps Korean readers understand WHY this news matters in the context of American theater/film culture
+
+    Write as a knowledgeable Korean cultural journalist — warm, insightful, and informative.
+    The output must be a JSON object with KOREAN text for title_kr, summary_kr, and content_kr:
     {{
-        "title_kr": "한국어로 번역/각색된 기사 제목",
-        "summary_kr": "리스트 메인 화면에 들어갈 1-2문장의 흥미로운 요약 (한국어)",
-        "content_kr": "기사 본문 내용. 문단을 나누어 가독성 좋게 작성 (한국어).",
+        "title_kr": "한국 독자의 흥미를 끌 수 있는 매력적인 기사 제목 (한국어)",
+        "summary_kr": "메인 페이지 리스트에 표시될 1-2문장의 핵심 요약. 독자가 클릭하고 싶게 만들어라 (한국어)",
+        "content_kr": "기사 본문. 뉴스 요약 + 등장 인물/작품/공연장에 대한 배경 지식을 자연스럽게 녹인 풍부한 텍스트. 문단을 나누어 가독성 좋게 작성. 마지막엔 '편집자 주' 또는 한국 독자를 위한 맥락 설명 한 문단을 추가할 것 (한국어)",
         "keywords": ["키워드1", "키워드2", "키워드3"]
     }}
 
