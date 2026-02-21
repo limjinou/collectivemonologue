@@ -3,7 +3,7 @@
    ============================================ */
 
 /* --- Google Fonts (Chunky Display + Sans for body) --- */
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@400;600;700&family=Noto+Sans+KR:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Space+Grotesk:wght@400;600;700&family=Noto+Sans+KR:wght@400;700;900&display=swap');
 
 /* --- CSS Variables --- */
 :root {
@@ -32,8 +32,8 @@
   --color-theater: #FF6B6B;
   --color-film: #3E8ED0;
 
-  /* 폰트: 제목은 매우 굵게, 본문은 기하학적인 산세리프 */
-  --font-display: 'Archivo Black', 'Noto Sans KR', sans-serif;
+  /* 폰트: 제목은 매우 굵고 귀여운 느낌, 본문은 기하학적인 산세리프 */
+  --font-display: 'Bagel Fat One', 'Noto Sans KR', cursive, sans-serif;
   --font-main: 'Space Grotesk', 'Noto Sans KR', -apple-system, BlinkMacSystemFont, sans-serif;
 
   /* 치수 및 네오 브루탈리즘 고유 스타일 */
