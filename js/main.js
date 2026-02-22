@@ -416,3 +416,27 @@ function initScrollAnimations() {
     observer.observe(el);
   });
 }
+
+/* --- Scroll to Top Button --- */
+function initScrollToTop() {
+  const btn = document.createElement('button');
+  btn.id = 'scrollToTopBtn';
+  btn.innerHTML = '↑';
+  btn.setAttribute('aria-label', '맨 위로 가기');
+  document.body.appendChild(btn);
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 500) {
+      btn.classList.add('show');
+    } else {
+      btn.classList.remove('show');
+    }
+  });
+
+  btn.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+}
