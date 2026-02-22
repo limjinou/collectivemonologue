@@ -25,8 +25,8 @@ REDDIT_USER_AGENT = os.getenv("REDDIT_USER_AGENT", "CollectiveMonologue_Crawler/
 # Gemini 설정
 if GEMINI_API_KEY:
     genai.configure(api_key=GEMINI_API_KEY)
-    # Flash Latest 사용 (Stable version, quota friendly)
-    model = genai.GenerativeModel('gemini-flash-latest')
+    # 안정적인 Quota를 제공할 것으로 예상되는 Gemini Pro Latest 모델 사용
+    model = genai.GenerativeModel('gemini-pro-latest')
 
 # 메이저 소스 (브로드웨이 / 할리우드 메이저)
 MAJOR_FEEDS = {
