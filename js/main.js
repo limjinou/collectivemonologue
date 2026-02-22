@@ -4,7 +4,6 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   initMobileMenu();
-  initMobileMenu();
   initScrollAnimations();
   initHeaderScroll();
   initTheme();
