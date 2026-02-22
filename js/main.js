@@ -3,12 +3,7 @@
    ============================================ */
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Set Current Date in Header
-  const dateEl = document.getElementById('header-date');
-  if (dateEl) {
-    const today = new Date();
-    dateEl.textContent = `${today.getMonth() + 1}.${today.getDate()}.${today.getFullYear()}`;
-  }
+  setupHeaderDate();
 
   // Routing
   if (document.getElementById('article-grid')) {
@@ -18,7 +13,27 @@ document.addEventListener('DOMContentLoaded', () => {
   } else if (document.body.classList.contains('category-page')) {
     renderCategoryArticles();
   }
+
+  if (typeof initCookieBanner === 'function') {
+    initCookieBanner();
+  }
 });
+
+/* --- Header Date Setup --- */
+function setupHeaderDate() {
+  const dateElements = document.querySelectorAll('#header-left-date');
+  if (!dateElements.length) return;
+
+  const today = new Date();
+  const year = today.getFullYear();
+  const month = String(today.getMonth() + 1).padStart(2, '0');
+  const day = String(today.getDate()).padStart(2, '0');
+  const formattedDate = `${year}.${month}.${day}`;
+
+  dateElements.forEach(el => {
+    el.innerHTML = `<a href="index.html" style="text-decoration:none; color:inherit;">${formattedDate}</a>`;
+  });
+}
 
 /* --- Data Loading & Rendering for Grid --- */
 async function loadArticles() {
@@ -51,11 +66,10 @@ async function loadArticles() {
       if (summary.length > 150) summary = summary.substring(0, 150) + '...';
 
       // Pure, unstyled text layout
+      // Title over Source as per user request
       item.innerHTML = `
-              <div class="grid-item-image-wrapper">
-                  ${imageHtml}
-              </div>
-              <div class="grid-item-title">${article.source}</div>
+              <div class="grid-item-image-wrapper">${imageHtml}</div>
+              <div class="grid-item-title">${article.title_kr || article.title}</div>
               <div class="grid-item-summary">${summary}</div>
           `;
       grid.appendChild(item);
