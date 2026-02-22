@@ -77,8 +77,8 @@ img {
   grid-template-columns: repeat(4, 1fr);
   /* Reference uses very tight vertical gap between images and text, 
        but standard horizontal gap between columns */
-  column-gap: 20px;
-  row-gap: 60px;
+  column-gap: 30px;
+  row-gap: 80px;
   align-items: start;
 }
 
@@ -157,9 +157,13 @@ img {
 .article-page {
   max-width: 1000px;
   /* Keep it relatively wide, not constrained to center like a blog */
-  margin: 0;
+  margin: 0 auto;
   /* Align left or center depending on grid. Reference leans left. */
   padding-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .article-header {
@@ -175,6 +179,7 @@ img {
   margin-bottom: 30px;
   letter-spacing: -0.03em;
   word-break: keep-all;
+  text-align: center;
 }
 
 .article-meta {
@@ -185,6 +190,7 @@ img {
   color: #000;
   margin-bottom: 50px;
   display: flex;
+  justify-content: center;
   gap: 20px;
 }
 
@@ -203,16 +209,19 @@ img {
 
 .article-body {
   max-width: 680px;
+  width: 100%;
   /* 가독성에 최적화된 너비 */
   font-family: 'Bookk Myungjo', serif;
   font-size: 14px;
   /* 본문 명조체 가독성을 위해 살짝 키움 */
   line-height: 1.9;
   letter-spacing: -0.01em;
+  text-align: center;
 }
 
 .article-body p {
   margin-bottom: 30px;
+  text-align: center;
 }
 
 /* AI Elements (Editor's Note, Dictionary, etc.) */
@@ -233,9 +242,10 @@ img {
   font-style: italic;
   line-height: 1.7;
   margin: 50px 0;
-  padding-left: 25px;
-  border-left: 1px solid #000;
+  padding: 0 25px;
+  /* 왼쪽 패딩과 라인을 없애고 중앙 정렬 강조 */
   color: #333;
+  text-align: center;
 }
 
 .article-body ul {

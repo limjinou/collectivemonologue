@@ -189,30 +189,28 @@ def translate_and_summarize(text, title, reddit_comments=""):
     reddit_section = ""
     if reddit_comments:
         reddit_section = f"""
-    Additional Context (Reddit Comments - Local Fan Reactions):
+    Additional Context (Community Comments - Local Fan Reactions):
     {reddit_comments}
     
-    IMPORTANT: You have local fan reactions from Reddit. Synthesize these authentic reactions into your editorial. Describe what the US fans are excited about, worried about, or debating regarding this news. This is crucial for adding cultural depth.
+    IMPORTANT: You have local fan reactions from a community. Synthesize these authentic reactions into your editorial. Describe what the US fans are excited about, worried about, or debating regarding this news. Do NOT mention specific names like 'Reddit' or 'Reddit community'. Just refer to them as '현지 커뮤니티' or '현지 반응'.
         """
 
     prompt = f"""
-    You are the Chief Editor of "Collective Monologue", a premium Korean-language magazine dedicated to covering American theater and film with unparalleled depth, nuance, and cultural context.
+    You are the Chief Editor of "Collective Monologue", a premium Korean-language magazine dedicated to covering American theater with unparalleled depth, nuance, and cultural context.
     
     Below is an article titled '{title}'. Your task is to produce a high-quality, rich HTML-formatted Korean editorial that incorporates the following 4 key elements:
 
-    1. **Magazine-Style Structuring**: Use appropriate HTML tags within the content. Use `<h3>` for logical subheadings, `<ul>` and `<li>` for key bullet points, and `<blockquote>` for pulling out powerful quotes or core messages to make the text visually engaging.
+    1. **Magazine-Style Structuring**: Use appropriate HTML tags within the content. Use `<h3>` for logical subheadings, `<ul>` and `<li>` for key bullet points, and `<blockquote>` for pulling out powerful quotes or core messages to make the text visually engaging. Center-align appropriate texts.
     2. **Editor's Note (에디터의 시선)**: At the end of the main news content, include a section titled `<h3>[에디터의 시선]</h3>` followed by your insightful analysis on what this news means for Korean readers, the industry context, or its broader cultural impact.
-    3. **Pro & Con Fandom Analysis (현지 팬들의 시선: Pro & Con)**: Analyze the local Reddit reactions to present a balanced view. Create an `<h3>[현지 팬들의 시선: Pro & Con]</h3>` section detailing what fans are excited about (Pro) and what they are worried about or debating (Con).
-    4. **Keyword Dictionary (용어 한 스푼)**: Select 1 or 2 specialized terms related to American theater/film mentioned in the article, and create an `<h3>[용어 한 스푼]</h3>` section to explain them deeply to beginners (e.g., explaining "Off-Broadway", "Limited Run", "Swing", etc.).
-    
-    {reddit_section}
+    3. **Positive & Negative Fandom Analysis (현지 팬들의 시선: POSITIVE & NEGATIVE)**: Analyze the local community reactions to present a balanced view. Create an `<h3>[현지 팬들의 시선: POSITIVE & NEGATIVE]</h3>` section detailing what fans are excited about (POSITIVE) and what they are worried about or debating (NEGATIVE). Do NOT reveal that the source is Reddit. Use general terms like "현지 커뮤니티에서는...".
+    4. **Keyword Dictionary (용어 한 스푼)**: Select 1 or 2 specialized terms related to American theater mentioned in the article, and create an `<h3>[용어 한 스푼]</h3>` section. Explain them deeply to beginners (e.g., explaining "Off-Broadway", "Limited Run", "Swing", etc.) as if you are the '제미나이플래시 편집자(Gemini Flash Editor)' summarizing multiple sources cleanly. Do NOT mention specific sources like 'Wikipedia' or 'Reddit'. Avoid making it controversial.
 
-    Write as a highly knowledgeable, warm, and insightful Korean cultural journalist.
+    Write as a highly knowledgeable, warm, and insightful Korean cultural journalist from the 'Collective Monologue' editorial board.
     The output MUST be a valid JSON object with the following structure. Pay special attention to escaping HTML quotes properly (use single quotes inside the HTML string to avoid invalidating JSON, e.g. `<div class='example'>`), but do not break the JSON format:
     {{
         "title_kr": "기사의 본질을 꿰뚫는 매력적인 제목 (한국어)",
         "summary_kr": "메인 페이지에 표시될 1-2문장의 핵심 요약 (한국어)",
-        "content_kr": "완전한 HTML 형태의 기사 본문. 뉴스 코어 내용 -> [에디터의 시선] -> [현지 팬들의 시선: Pro & Con] -> [용어 한 스푼] 순서로 풍부하게 구성. `<p>`, `<h3>`, `<blockquote>`, `<ul>`, `<li>` 등 태그 적극 활용",
+        "content_kr": "완전한 HTML 형태의 기사 본문. 뉴스 코어 내용 -> [에디터의 시선] -> [현지 팬들의 시선: POSITIVE & NEGATIVE] -> [용어 한 스푼] 순서로 풍부하게 구성. `<p>`, `<h3>`, `<blockquote>`, `<ul>`, `<li>` 등 태그 적극 활용.",
         "keywords": ["키워드1", "키워드2", "키워드3"]
     }}
 

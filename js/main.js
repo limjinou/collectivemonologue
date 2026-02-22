@@ -95,11 +95,15 @@ async function renderSingleArticle() {
     let formattedDate = article.date;
     try {
       const d = new Date(article.date);
-      formattedDate = `${d.getMonth() + 1}.${d.getDate()}.${d.getFullYear()}`;
+      const days = ['일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일'];
+      const year = d.getFullYear();
+      const month = String(d.getMonth() + 1).padStart(2, '0');
+      const day = String(d.getDate()).padStart(2, '0');
+      const dayName = days[d.getDay()];
+      formattedDate = `${year}.${month}.${day}.${dayName}`;
     } catch (e) { /* keep string as is */ }
 
     document.querySelector('.article-meta').innerHTML = `
-          <span>${article.source}</span>
           <span>${formattedDate}</span>
       `;
 
@@ -113,7 +117,7 @@ async function renderSingleArticle() {
 
     // Body Content
     const contentHtml = article.content_kr || article.summary_kr || "<p>본문 내용이 없습니다.</p>";
-    const attributionHtml = `<p style="margin-top: 80px; font-size: 10px; color: #999; text-transform: uppercase;">Translated and curated from <b>${article.source}</b></p>`;
+    const attributionHtml = `<p style="margin-top: 80px; font-size: 12px; font-weight: 500; color: #666; text-transform: none; text-align: center;">콜렉티브 모놀로그 편집부에 의해 작성된 글입니다.</p>`;
     document.querySelector('.article-body').innerHTML = contentHtml + attributionHtml;
 
   } catch (error) {
@@ -170,7 +174,6 @@ async function renderCategoryArticles() {
 
       item.innerHTML = `
               <div class="grid-item-image-wrapper">${imageHtml}</div>
-              <div class="grid-item-title">${article.source}</div>
               <div class="grid-item-summary">${summary}</div>
           `;
       grid.appendChild(item);
