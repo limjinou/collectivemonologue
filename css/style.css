@@ -246,3 +246,132 @@ img {
 .article-body li {
   margin-bottom: 8px;
 }
+
+/* =========================================================
+   FOOTER (Minimal)
+   ========================================================= */
+.minimal-footer {
+  margin-top: 150px;
+  padding: 40px 0;
+  border-top: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Bookk Gothic', sans-serif;
+  font-size: 11px;
+  color: #666;
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-links a {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #000;
+}
+
+@media (max-width: 600px) {
+  .minimal-footer {
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+  }
+}
+
+/* =========================================================
+   COOKIE BANNER & SEO HIDDEN
+   ========================================================= */
+.seo-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Bookk Gothic', sans-serif;
+  font-size: 12px;
+  z-index: 10000;
+  box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.cookie-banner p {
+  margin: 0;
+  line-height: 1.5;
+  max-width: 800px;
+}
+
+.cookie-banner a {
+  text-decoration: underline;
+  color: #ccc;
+}
+
+.cookie-buttons {
+  display: flex;
+  gap: 12px;
+  margin-left: 20px;
+}
+
+.btn-cookie {
+  background-color: #fff;
+  color: #000;
+  border: none;
+  padding: 8px 16px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-cookie:hover {
+  background-color: #ddd;
+}
+
+.btn-reject {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #555;
+}
+
+.btn-reject:hover {
+  background-color: #222;
+  border-color: #888;
+}
+
+@media (max-width: 600px) {
+  .cookie-banner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .cookie-buttons {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .btn-cookie {
+    flex: 1;
+    text-align: center;
+  }
+}

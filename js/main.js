@@ -179,3 +179,31 @@ async function renderCategoryArticles() {
     console.error('Error fetching data:', e);
   }
 }
+
+/* --- Cookie Banner --- */
+function initCookieBanner() {
+  const banner = document.getElementById('cookieBanner');
+  const btnAccept = document.getElementById('acceptCookies');
+  const btnReject = document.getElementById('rejectCookies');
+
+  if (!banner || !btnAccept || !btnReject) return;
+
+  if (!localStorage.getItem('cookieConsent')) {
+    banner.style.display = 'flex';
+  }
+
+  btnAccept.addEventListener('click', () => {
+    localStorage.setItem('cookieConsent', 'accepted');
+    banner.style.display = 'none';
+  });
+
+  btnReject.addEventListener('click', () => {
+    localStorage.setItem('cookieConsent', 'rejected');
+    banner.style.display = 'none';
+  });
+}
+
+// Add init function to DOMContentLoaded (needs to be patched at top usually, but we can just call it here)
+document.addEventListener('DOMContentLoaded', () => {
+  initCookieBanner();
+});

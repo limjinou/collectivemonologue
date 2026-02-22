@@ -4,289 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Collective Monologue — 우리가 이 매거진을 만드는 이유와 편집 철학">
-    <title>소개 | Collective Monologue</title>
+    <meta name="description" content="Collective Monologue — 미국 연극과 영화의 최신 뉴스, 트렌드, 심층 분석을 한국어로 전달하는 매거진">
+    <title>About | Collective Monologue</title>
 
-    <!-- Editorial Brutalism Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Noto+Serif+KR:wght@400;700;900&family=Noto+Sans+KR:wght@400;500;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/style.css?v=202602221707">
+    <link rel="stylesheet" href="css/style.css?v=202602222130">
 
-    <style>
-        /* ── About-page specific overrides ── */
-
-        /* HERO: full-bleed red stamp */
-        .about-hero {
-            margin-top: var(--header-height);
-            background-color: var(--color-accent);
-            color: #fff;
-            padding: 6rem 0 5rem;
-            border-bottom: 2px solid #000;
-        }
-
-        .about-hero-label {
-            font-family: var(--font-main);
-            font-size: 0.65rem;
-            letter-spacing: 0.14em;
-            text-transform: uppercase;
-            color: rgba(255, 255, 255, 0.6);
-            margin-bottom: 2rem;
-            display: block;
-        }
-
-        .about-hero-title {
-            font-family: 'Noto Serif KR', 'DM Serif Display', serif;
-            font-size: clamp(2.8rem, 7vw, 6.5rem);
-            font-weight: 900;
-            line-height: 1.0;
-            letter-spacing: -0.03em;
-            color: #fff;
-            margin-bottom: 2.5rem;
-            word-break: keep-all;
-        }
-
-        .about-hero-sub {
-            font-family: var(--font-main);
-            font-size: 0.88rem;
-            color: rgba(255, 255, 255, 0.75);
-            max-width: 520px;
-            line-height: 1.75;
-            letter-spacing: 0.01em;
-        }
-
-        /* ── MANIFESTO SECTION ── */
-        .manifesto {
-            padding: 7rem 0;
-            border-bottom: 1px solid var(--color-border);
-        }
-
-        .manifesto-grid {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 4rem;
-            align-items: start;
-        }
-
-        .manifesto-label {
-            font-family: var(--font-main);
-            font-size: 0.65rem;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            color: var(--color-text-dim);
-            padding-top: 0.4rem;
-            border-top: 1px solid var(--color-border);
-            position: sticky;
-            top: calc(var(--header-height) + 2rem);
-        }
-
-        .manifesto-body {
-            border-left: 1px solid var(--color-rule);
-            padding-left: 3rem;
-        }
-
-        .manifesto-block {
-            margin-bottom: 5rem;
-            padding-bottom: 5rem;
-            border-bottom: 1px solid var(--color-rule);
-        }
-
-        .manifesto-block:last-child {
-            margin-bottom: 0;
-            padding-bottom: 0;
-            border-bottom: none;
-        }
-
-        .manifesto-question {
-            font-family: 'Noto Serif KR', serif;
-            font-size: clamp(1.8rem, 3.5vw, 3rem);
-            font-weight: 900;
-            line-height: 1.15;
-            letter-spacing: -0.02em;
-            color: var(--color-text);
-            margin-bottom: 2rem;
-            word-break: keep-all;
-        }
-
-        .manifesto-answer {
-            font-family: 'Noto Serif KR', serif;
-            font-size: 1.05rem;
-            line-height: 1.95;
-            color: var(--color-text-muted);
-            font-weight: 400;
-            word-break: keep-all;
-        }
-
-        .manifesto-answer+.manifesto-answer {
-            margin-top: 1.5rem;
-        }
-
-        /* Pull-quote accent */
-        .manifesto-quote {
-            font-family: 'DM Serif Display', serif;
-            font-style: italic;
-            font-size: clamp(1.4rem, 2.5vw, 2rem);
-            color: var(--color-accent);
-            line-height: 1.3;
-            margin: 2.5rem 0;
-            padding-left: 1.5rem;
-            border-left: 2px solid var(--color-accent);
-        }
-
-        /* ── VALUES GRID ── */
-        .values {
-            padding: 6rem 0;
-            border-bottom: 1px solid var(--color-border);
-        }
-
-        .values-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
-            border-bottom: 1px solid var(--color-border);
-            padding-bottom: 1.5rem;
-            margin-bottom: 0;
-        }
-
-        .values-title {
-            font-family: var(--font-main);
-            font-size: 0.65rem;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            color: var(--color-text-dim);
-        }
-
-        .values-count {
-            font-family: 'DM Serif Display', serif;
-            font-style: italic;
-            font-size: 1.8rem;
-            color: var(--color-text-dim);
-        }
-
-        .values-list {
-            list-style: none;
-        }
-
-        .value-item {
-            display: grid;
-            grid-template-columns: 56px 1fr;
-            gap: 2rem;
-            align-items: start;
-            padding: 2.5rem 0;
-            border-bottom: 1px solid var(--color-rule);
-            transition: background-color 0.15s ease;
-        }
-
-        .value-item:last-child {
-            border-bottom: none;
-        }
-
-        .value-item:hover {
-            background-color: var(--color-surface);
-            padding-left: 1rem;
-        }
-
-        .value-num {
-            font-family: 'DM Serif Display', serif;
-            font-style: italic;
-            font-size: 2.5rem;
-            color: var(--color-rule);
-            line-height: 1;
-            padding-top: 4px;
-        }
-
-        .value-content {}
-
-        .value-name {
-            font-family: 'Noto Serif KR', serif;
-            font-size: 1.35rem;
-            font-weight: 700;
-            color: var(--color-text);
-            margin-bottom: 0.6rem;
-            letter-spacing: -0.01em;
-        }
-
-        .value-desc {
-            font-family: 'Noto Serif KR', serif;
-            font-size: 0.92rem;
-            color: var(--color-text-muted);
-            line-height: 1.8;
-            word-break: keep-all;
-        }
-
-        /* ── CONTACT CTA ── */
-        .about-cta {
-            padding: 6rem 0;
-            background-color: var(--color-text);
-        }
-
-        .about-cta-inner {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 3rem;
-            flex-wrap: wrap;
-        }
-
-        .about-cta-text {
-            font-family: 'Noto Serif KR', serif;
-            font-size: clamp(1.5rem, 3vw, 2.5rem);
-            font-weight: 700;
-            color: #fff;
-            line-height: 1.25;
-            word-break: keep-all;
-        }
-
-        .cta-btn {
-            display: inline-block;
-            font-family: var(--font-main);
-            font-size: 0.75rem;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            color: var(--color-text);
-            background-color: #fff;
-            padding: 0.85rem 2rem;
-            border: 1px solid #fff;
-            transition: all 0.15s ease;
-            white-space: nowrap;
-        }
-
-        .cta-btn:hover {
-            background-color: transparent;
-            color: #fff;
-        }
-
-        /* Mobile */
-        @media (max-width: 768px) {
-            .manifesto-grid {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-
-            .manifesto-body {
-                border-left: none;
-                padding-left: 0;
-                border-top: 1px solid var(--color-rule);
-                padding-top: 2rem;
-            }
-
-            .manifesto-label {
-                position: static;
-            }
-
-            .about-cta-inner {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-        }
-    </style>
-
-    <!-- Google AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7015444869634194"
-        crossorigin="anonymous"></script>
     <!-- Google Analytics GA4 -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-HYQZ9DQG0Z"></script>
     <script>
@@ -295,220 +21,60 @@
         gtag('js', new Date());
         gtag('config', 'G-HYQZ9DQG0Z');
     </script>
-    <!-- Microsoft Clarity -->
-    <script type="text/javascript">
-        (function (c, l, a, r, i, t, y) {
-            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
-            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
-            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
-        })(window, document, "clarity", "script", "vkteot8g3h");
-    </script>
 </head>
 
-<body>
-
-    <!-- ===== 헤더 ===== -->
+<body class="single-article">
+    <h1 class="seo-hidden">Collective Monologue 소개</h1>
     <header class="header">
-        <div class="container header-inner">
-            <a href="index.html" class="logo">
-                <div class="logo-main">Collective <span>Monologue</span></div>
-                <div class="logo-sub">US Theater &amp; Film Magazine</div>
-            </a>
-            <nav class="nav-links" id="navLinks">
-                <a href="index.html">홈</a>
-                <a href="category.html?cat=theater">연극</a>
-                <a href="category.html?cat=film">영화</a>
-                <a href="about.html" class="active">소개</a>
-                <a href="contact.html">문의</a>
-            </nav>
-            <button class="menu-toggle" id="menuToggle" aria-label="메뉴 열기">
-                <span></span><span></span><span></span>
-            </button>
-            <button class="theme-toggle" id="themeToggle" aria-label="테마 변경">☀️</button>
+        <div class="header-left"><a href="index.html">0</a></div>
+        <div class="header-center"><a href="index.html">RETURN HOME</a></div>
+        <div class="header-right">
+            <a href="category.html?cat=theater" style="margin-right: 20px;">THEATER</a>
+            <a href="category.html?cat=film" style="margin-right: 20px;">FILM</a>
+            <a href="about.html">ABOUT</a>
         </div>
     </header>
 
-    <!-- ===== HERO ===== -->
-    <section class="about-hero">
-        <div class="container">
-            <span class="about-hero-label">About — Collective Monologue</span>
-            <h1 class="about-hero-title">
-                왜 우리는<br>
-                이 매거진을<br>
-                만드는가
-            </h1>
-            <p class="about-hero-sub">
-                미국 연극과 영화의 현재를 한국어로 — 단순한 번역이 아닌,
-                문화적 맥락과 편집자의 시선으로.
-            </p>
+    <main class="article-page" style="max-width: 640px; margin: 0 auto; padding-top: 50px;">
+        <div class="article-header">
+            <div class="article-meta">ABOUT US</div>
+            <h2 class="article-title">Inspiring the modern spectator.</h2>
         </div>
-    </section>
 
-    <!-- ===== MANIFESTO ===== -->
-    <section class="manifesto">
-        <div class="container">
-            <div class="manifesto-grid">
-                <div class="manifesto-label">매거진 선언문<br>The Manifesto</div>
+        <div class="article-body">
+            <p><strong>Collective Monologue(콜렉티브 모놀로그)</strong>는 미국 브로드웨이 연극 산업과 할리우드 영화계의 최신 뉴스, 트렌드, 그리고 깊이 있는 인사이트를
+                한국어로 전달하는 전문 에디토리얼 매거진입니다.</p>
 
-                <div class="manifesto-body">
+            <p>우리는 단순히 소식을 번역하는 것에 그치지 않습니다. 뉴욕의 무대 뒤에서 벌어지는 창작자들의 치열한 고민부터, 전 세계 박스오피스를 뒤흔드는 영화 산업의 구조적 변화까지, 파편화된 정보들을
+                하나로 엮어 독특한 시각(Monologue)으로 큐레이션합니다.</p>
 
-                    <div class="manifesto-block">
-                        <h2 class="manifesto-question">
-                            한국어로 미국 연극을<br>읽어야 하는 이유가 있는가
-                        </h2>
-                        <p class="manifesto-answer">
-                            브로드웨이는 세계에서 가장 치열한 무대입니다. 수천만 달러의 제작비, 수십 년의 평판, 그리고 수백만 명의 기대가 매시즌 하나의 공연으로 압축됩니다.
-                            그러나 국내에서 이 이야기를 온전히 접할 수 있는 채널은 거의 없습니다.
-                        </p>
-                        <p class="manifesto-answer">
-                            우리는 이 공백을 채우기 위해 시작했습니다. 뉴스를 한국어로 옮기는 것이 아니라,
-                            미국 연극·영화 문화가 한국의 독자에게 어떤 의미를 갖는지를 함께 생각하기 위해.
-                        </p>
-                        <blockquote class="manifesto-quote">
-                            "공연은 사라지지만 기록은 남는다.<br>Collective Monologue는 그 기록의 편집자입니다."
-                        </blockquote>
-                    </div>
+            <p>예술적 영감과 산업적 통찰이 교차하는 지점, 그곳에 Collective Monologue가 있습니다.</p>
 
-                    <div class="manifesto-block">
-                        <h2 class="manifesto-question">
-                            우리는 무엇을<br>다르게 하는가
-                        </h2>
-                        <p class="manifesto-answer">
-                            대부분의 한국어 해외 문화 콘텐츠는 주요 시상식이나 흥행 작품에 집중됩니다.
-                            우리는 그 이면을 봅니다. 오프브로드웨이의 실험, 인디 영화제의 논쟁, 현장 평론가들의 온도.
-                        </p>
-                        <p class="manifesto-answer">
-                            AI 기반 요약과 큐레이션을 사용하지만, 매거진은 알고리즘이 아닌 편집 철학으로 운영됩니다.
-                            어떤 기사를 선택하고 어떻게 맥락을 제공할 것인가 — 이것이 편집자의 일입니다.
-                        </p>
-                    </div>
-
-                    <div class="manifesto-block">
-                        <h2 class="manifesto-question">
-                            독자에게<br>무엇을 약속하는가
-                        </h2>
-                        <p class="manifesto-answer">
-                            단순 번역이 아닌 재구성. 정보가 아닌 맥락. 속보가 아닌 깊이.
-                            Collective Monologue는 미국 연극·영화 씬의 흐름을 한국 독자의 감각으로 읽어내는 공간입니다.
-                        </p>
-                        <blockquote class="manifesto-quote">
-                            "우리는 매일 새로운 기사를 만든다.<br>그러나 우리의 목표는 빠름이 아니라 정확함이다."
-                        </blockquote>
-                    </div>
-
-                </div>
-            </div>
+            <h3 style="margin-top: 80px;">Contact</h3>
+            <p>제휴, 협력 및 기타 문의 사항은 아래 이메일로 연락 주시기 바랍니다.</p>
+            <p><a href="mailto:limjinou95@naver.com" style="text-decoration: underline;">limjinou95@naver.com</a></p>
         </div>
-    </section>
+    </main>
 
-    <!-- ===== VALUES ===== -->
-    <section class="values">
-        <div class="container">
-            <div class="values-header">
-                <span class="values-title">우리의 편집 가치 / Editorial Values</span>
-                <span class="values-count">05</span>
-            </div>
-            <ul class="values-list">
-                <li class="value-item">
-                    <span class="value-num">01</span>
-                    <div class="value-content">
-                        <div class="value-name">맥락 우선</div>
-                        <p class="value-desc">뉴스 사실보다 배경이 중요합니다. 어떤 극장인지, 어떤 연출가인지, 왜 지금 이 작품인지를 함께 전합니다.</p>
-                    </div>
-                </li>
-                <li class="value-item">
-                    <span class="value-num">02</span>
-                    <div class="value-content">
-                        <div class="value-name">인디 씬을 놓치지 않는다</div>
-                        <p class="value-desc">브로드웨이만이 연극이 아닙니다. 오프브로드웨이, 지역극장, 독립영화제를 같은 비중으로 다룹니다.</p>
-                    </div>
-                </li>
-                <li class="value-item">
-                    <span class="value-num">03</span>
-                    <div class="value-content">
-                        <div class="value-name">현지 목소리를 담는다</div>
-                        <p class="value-desc">Reddit 반응, 현지 평론가의 리뷰, 팬덤의 온도까지 — 기사 뒤에 살아있는 사람들의 이야기를 함께 전합니다.</p>
-                    </div>
-                </li>
-                <li class="value-item">
-                    <span class="value-num">04</span>
-                    <div class="value-content">
-                        <div class="value-name">한국어 독자를 위한 글쓰기</div>
-                        <p class="value-desc">번역이 아닌 재창작입니다. 한국 독자가 이해하기 쉽도록 문화적 맥락을 재구성하고, 고유명사와 배경을 풀어 설명합니다.</p>
-                    </div>
-                </li>
-                <li class="value-item">
-                    <span class="value-num">05</span>
-                    <div class="value-content">
-                        <div class="value-name">기술은 도구다</div>
-                        <p class="value-desc">AI 요약과 자동 크롤링을 사용하지만 편집 판단은 사람이 합니다. 기술은 방대한 정보를 처리하는 수단이지, 편집 철학을 대체하지
-                            않습니다.</p>
-                    </div>
-                </li>
-            </ul>
+    <footer class="minimal-footer">
+        <div class="footer-links">
+            <a href="about.html">소개</a>
+            <a href="contact.html">문의하기</a>
+            <a href="privacy.html">개인정보처리방침</a>
         </div>
-    </section>
-
-    <!-- ===== CTA ===== -->
-    <section class="about-cta">
-        <div class="container">
-            <div class="about-cta-inner">
-                <p class="about-cta-text">
-                    함께 만들어가는<br>
-                    매거진에 목소리를 더하세요
-                </p>
-                <a href="contact.html" class="cta-btn">문의 남기기 →</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== 푸터 ===== -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <div class="logo">
-                        <div class="logo-main">Collective <span>Monologue</span></div>
-                        <div class="logo-sub">US Theater &amp; Film Magazine</div>
-                    </div>
-                    <p>미국 연극과 영화의 최신 트렌드, 뉴스, 심층 분석을 한국어로 전달하는 매거진입니다.</p>
-                </div>
-                <div class="footer-col">
-                    <h4>카테고리</h4>
-                    <ul>
-                        <li><a href="category.html?cat=theater">연극 · Theater</a></li>
-                        <li><a href="category.html?cat=film">영화 · Film</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>매거진</h4>
-                    <ul>
-                        <li><a href="about.html">소개</a></li>
-                        <li><a href="contact.html">문의하기</a></li>
-                        <li><a href="privacy.html">개인정보처리방침</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>소셜</h4>
-                    <ul>
-                        <li><a href="#">Instagram</a></li>
-                        <li><a href="#">Twitter / X</a></li>
-                        <li><a href="#">YouTube</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <span>© 2026 Collective Monologue. All rights reserved.</span>
-                <div>
-                    <a href="privacy.html" style="font-size:0.8rem; color:var(--color-text-dim);">개인정보처리방침</a>
-                    &nbsp;·&nbsp;
-                    <a href="contact.html" style="font-size:0.8rem; color:var(--color-text-dim);">문의하기</a>
-                </div>
-            </div>
-        </div>
+        <div class="footer-copy">© 2026 Collective Monologue.</div>
     </footer>
 
-    <script src="js/main.js?v=202602221707"></script>
+    <div id="cookieBanner" class="cookie-banner" style="display: none;">
+        <p>본 사이트는 사용자 경험 향상 및 맞춤형 광고 제공을 위해 쿠키를 사용합니다. 계속 탐색하면 쿠키 사용에 동의하는 것으로 간주됩니다. <a href="privacy.html">자세히
+                알아보기</a></p>
+        <div class="cookie-buttons">
+            <button id="acceptCookies" class="btn-cookie">동의</button>
+            <button id="rejectCookies" class="btn-cookie btn-reject">거부</button>
+        </div>
+    </div>
+
+    <script src="js/main.js?v=202602222130"></script>
 </body>
 
 </html>
