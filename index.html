@@ -1,19 +1,17 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Collective Monologue — 미국 연극과 영화의 최신 뉴스, 트렌드, 심층 분석을 한국어로 전달하는 공간">
-  <title>Collective Monologue | 영감의 플레이그라운드</title>
+  <title>Collective Monologue</title>
 
-  <!-- Neo-Brutalism Fonts -->
+  <!-- Minimal Typography: Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Space+Grotesk:wght@400;600;700&family=Noto+Sans+KR:wght@400;700;900&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
+  <!-- Stylesheet -->
   <link rel="stylesheet" href="css/style.css?v=202602222000">
 
   <!-- Google AdSense -->
@@ -38,133 +36,22 @@
 </head>
 
 <body>
-
-  <!-- ===== 헤더 (Header) ===== -->
   <header class="header">
-    <div class="container header-inner">
-      <a href="index.html" class="logo">
-        <div class="logo-main">Collective <span>Monologue</span></div>
-        <div class="logo-sub">US Theater & Film Magazine</div>
-      </a>
-      <nav class="nav-links" id="navLinks">
-        <a href="index.html" class="active">홈</a>
-        <a href="category.html?cat=theater">연극</a>
-        <a href="category.html?cat=film">영화</a>
-        <a href="about.html">소개</a>
-        <a href="contact.html">문의</a>
-      </nav>
-      <button class="menu-toggle" id="menuToggle" aria-label="메뉴 열기">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <button class="theme-toggle" id="themeToggle" aria-label="테마 변경">☀️</button>
-    </div>
+    <div class="header-left"><a href="index.html">0</a></div>
+    <div class="header-center" id="header-date"></div>
+    <div class="header-right"><a href="about.html">ABOUT</a></div>
   </header>
 
-  <!-- ===== 히어로 (Hero Section) ===== -->
-  <section class="hero">
-    <div class="container">
-      <h1 class="hero-title">COLLECTIVE<br>MONOLOGUE</h1>
-      <p class="hero-excerpt">
-        단순한 소식을 넘어, 창작의 영감이 되는 공간.<br>
-        미국 연극과 영화의 현재를 한국어로 만납니다.
-      </p>
-    </div>
-  </section>
+  <main class="grid-container" id="article-grid">
+    <!-- Articles loaded via JS -->
+  </main>
 
-  <!-- ===== 메인 리스트 & 위젯 (Main Layout) ===== -->
-  <section class="section">
-    <div class="container main-layout">
-      <!-- 중앙 뉴스 리스트 -->
-      <div class="main-content">
-        <div class="section-header">
-          <h2 class="section-title">Latest Updates</h2>
-          <span class="section-title">2026 Season</span>
-        </div>
-        <div class="article-list">
-          <!-- JS로 로드됨 -->
-        </div>
-      </div>
-
-      <!-- 우측 사이드바 (위젯) -->
-      <aside class="sidebar">
-        <!-- 브로드웨이 박스오피스 위젯 -->
-        <div class="widget widget-yellow">
-          <h3 class="widget-title">🎟️ HOT TICKETS <br><span style="font-family: var(--font-sans);">Broadway Top
-              5</span></h3>
-          <div id="broadway-widget-content">
-            <!-- JS로 로드됨 -->
-            <p style="font-size: 0.9rem;">데이터를 불러오는 중...</p>
-          </div>
-        </div>
-
-        <!-- 오프브로드웨이 추천작 위젯 -->
-        <div class="widget widget-pink">
-          <h3 class="widget-title">🔥 INDIE PICKS <br><span style="font-family: var(--font-sans);">Editor's
-              Choice</span></h3>
-          <div id="recommendation-widget-content">
-            <!-- JS로 로드됨 -->
-            <p style="font-size: 0.9rem;">데이터를 불러오는 중...</p>
-          </div>
-        </div>
-      </aside>
-    </div>
-  </section>
-
-  <!-- ===== Google AdSense 배너 (하단) ===== -->
-  <div class="container">
-    <div class="ad-banner ad-banner-horizontal" style="margin: 6rem 0;">
-      광고 영역 — Google AdSense 승인 후 이 자리에 광고가 표시됩니다
-    </div>
+  <!-- AdSense Banner Placed Minimally at Bottom -->
+  <div style="margin-top: 100px; text-align: center; font-size: 10px; color: #999; text-transform: uppercase;">
+    Advertisement
   </div>
 
-  <!-- ===== 푸터 (Footer) ===== -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <div class="logo">
-            <div class="logo-main">Collective <span>Monologue</span></div>
-            <div class="logo-sub">US Theater & Film Magazine</div>
-          </div>
-          <p>미국 연극과 영화의 최신 트렌드, 뉴스, 심층 분석을 한국어로 전달하는 매거진입니다.</p>
-        </div>
-        <div class="footer-col">
-          <h4>카테고리</h4>
-          <ul>
-            <li><a href="category.html?cat=theater">연극 · Theater</a></li>
-            <li><a href="category.html?cat=film">영화 · Film</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>매거진</h4>
-          <ul>
-            <li><a href="about.html">소개</a></li>
-            <li><a href="contact.html">문의하기</a></li>
-            <li><a href="privacy.html">개인정보처리방침</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>소셜</h4>
-          <ul>
-            <li><a href="#">Instagram</a></li>
-            <li><a href="#">Twitter / X</a></li>
-            <li><a href="#">YouTube</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <span>© 2026 Collective Monologue. All rights reserved.</span>
-        <div>
-          <a href="privacy.html" style="font-size:0.8rem; color:var(--color-text-muted);">개인정보처리방침</a>
-          &nbsp;·&nbsp;
-          <a href="contact.html" style="font-size:0.8rem; color:var(--color-text-muted);">문의하기</a>
-        </div>
-      </div>
-    </div>
-  </footer>
-
+  <!-- Scripts -->
   <script src="js/main.js?v=202602222000"></script>
 </body>
 
