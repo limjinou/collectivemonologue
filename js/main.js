@@ -9,7 +9,10 @@ document.addEventListener('DOMContentLoaded', () => {
   if (document.getElementById('article-grid')) {
     loadArticles();
   } else if (document.body.classList.contains('single-article')) {
-    renderSingleArticle();
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.has('id')) {
+      renderSingleArticle();
+    }
   } else if (document.body.classList.contains('category-page')) {
     renderCategoryArticles();
   }
