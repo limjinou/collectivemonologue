@@ -7,6 +7,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollAnimations();
   initHeaderScroll();
   initTheme();
+  initCookieBanner();
+  initScrollToTop();
 
   // 현재 페이지 확인 후 적절한 함수 실행
   if (window.location.pathname.includes('article.html')) {
@@ -212,24 +214,11 @@ async function renderSingleArticle() {
       featuredImageContainer.style.display = 'none';
     }
 
-    // 본문 내용 (개행 문자를 p태그로 분리)
-    const contentHtml = (article.content_kr || article.summary_kr || "본문 내용이 없습니다.")
-      .split('\n\n')
-      .map(p => `<p>${p}</p>`)
-      .join('');
+    // 본문 내용 (AI가 HTML 태그를 포함하여 넘겨주도록 프롬프트 수정됨)
+    const contentHtml = article.content_kr || article.summary_kr || "<p>본문 내용이 없습니다.</p>";
 
-    let redditHtml = '';
-    if (article.reddit_reaction_kr && article.reddit_reaction_kr.trim() !== '') {
-      redditHtml = `
-        <div class="reddit-reaction-widget bway-item" style="margin: 2.5rem 0; padding: 1.5rem; background: #fff0f5; border: 3px solid #000; border-radius: 0;">
-          <h3 style="font-family: 'Bagel Fat One', cursive; margin-bottom: 0.8rem; font-size: 1.2rem; color: #ff1493; letter-spacing: -0.5px;">💬 현지 팬 반응 (Reddit)</h3>
-          <p style="margin: 0; font-size: 1rem; line-height: 1.6; font-weight: 500;">${article.reddit_reaction_kr}</p>
-        </div>
-      `;
-    }
-
-    const extraInfoHtml = `<p><em>이 기사는 <b>${article.source}</b>에서 스크랩 되었으며 AI에 의해 한국어로 요약/분석되었습니다.</em></p>`;
-    document.querySelector('.single-article-content').innerHTML = contentHtml + redditHtml + extraInfoHtml;
+    const extraInfoHtml = `<p style="margin-top:4rem; padding-top:2rem; border-top:1px solid var(--color-border); color:var(--color-text-dim); font-size:0.85rem;"><em>이 기사는 <b>${article.source}</b>에서 스크랩 되었으며 AI 에디터에 의해 재구성되었습니다.</em></p>`;
+    document.querySelector('.single-article-content').innerHTML = contentHtml + extraInfoHtml;
 
   } catch (error) {
     console.error('Error:', error);

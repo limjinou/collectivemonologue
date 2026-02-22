@@ -47,20 +47,33 @@ INDIE_FEEDS = {
 }
 
 def fetch_article_content(url):
-    """Trafilatura를 사용하여 기사 본문 및 첫 번째 이미지 URL 추출"""
+    """Trafilatura를 사용하여 기사 본문 및 고해상도 이미지 URL 추출 (og:image 우선)"""
     try:
+        image_url = ""
+        try:
+            resp = requests.get(url, timeout=10, headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"})
+            if resp.status_code == 200:
+                soup = bs4.BeautifulSoup(resp.content, 'html.parser')
+                og_img = soup.find('meta', property='og:image')
+                if og_img and og_img.get('content'):
+                    image_url = og_img['content']
+                elif soup.find('meta', attrs={'name': 'twitter:image'}):
+                    image_url = soup.find('meta', attrs={'name': 'twitter:image'})['content']
+        except Exception:
+            pass
+
         downloaded = trafilatura.fetch_url(url)
         if downloaded:
             text = trafilatura.extract(downloaded)
-            # 본문 HTML에서 첫 번째 이미지 URL 추출
-            image_url = ""
-            import re
-            img_match = re.search(r'<img[^>]+src=["\']([^"\'>]+)["\']', downloaded)
-            if img_match:
-                candidate = img_match.group(1)
-                # 홈페이지 로고 등 작은 에셋 이미지 제외
-                if candidate.startswith('http') and not any(x in candidate for x in ['logo', 'icon', 'avatar', 'pixel', '1x1', 'thumb']):
-                    image_url = candidate
+            # og:image를 못 찾았을 경우 본문에서 첫 번째 img 태그 추출 시도
+            if not image_url:
+                import re
+                img_match = re.search(r'<img[^>]+src=["\']([^"\'>]+)["\']', downloaded)
+                if img_match:
+                    candidate = img_match.group(1)
+                    # 명백한 더미 이미지, 빈 픽셀, 추적 픽셀 등 철저히 제외
+                    if candidate.startswith('http') and not any(x in candidate.lower() for x in ['logo', 'icon', 'avatar', 'pixel', '1x1', 'blank', 'scorecardresearch']):
+                        image_url = candidate
             return text, image_url
     except Exception as e:
         print(f"⚠️ 본문 추출 실패 ({url}): {e}")
@@ -183,27 +196,23 @@ def translate_and_summarize(text, title, reddit_comments=""):
         """
 
     prompt = f"""
-    You are the editor of "Collective Monologue", a Korean-language magazine dedicated to covering American theater and film with depth, nuance, and cultural context.
+    You are the Chief Editor of "Collective Monologue", a premium Korean-language magazine dedicated to covering American theater and film with unparalleled depth, nuance, and cultural context.
     
-    Below is an article titled '{title}'. Your task is NOT a simple translation.
-    Instead, produce a rich, original Korean editorial that:
+    Below is an article titled '{title}'. Your task is to produce a high-quality, rich HTML-formatted Korean editorial that incorporates the following 4 key elements:
 
-    1. Summarizes the core news from the article
-    2. Adds meaningful background knowledge YOU ALREADY KNOW about:
-       - Any ACTORS or DIRECTORS mentioned: their notable past works, career highlights, and what makes them significant
-       - Any PRODUCTIONS or PLAYS mentioned: the original playwright, a brief synopsis, the work's historical/cultural significance
-       - Any THEATERS or VENUES mentioned: their location, founding history, notable past productions, or their role in American theater
-       - Any AWARDS or EVENTS mentioned: the history and significance of the award or event
-    3. Includes a brief editorial perspective or "editor's note" that helps Korean readers understand WHY this news matters in the context of American theater/film culture
+    1. **Magazine-Style Structuring**: Use appropriate HTML tags within the content. Use `<h3>` for logical subheadings, `<ul>` and `<li>` for key bullet points, and `<blockquote>` for pulling out powerful quotes or core messages to make the text visually engaging.
+    2. **Editor's Note (에디터의 시선)**: At the end of the main news content, include a section titled `<h3>[에디터의 시선]</h3>` followed by your insightful analysis on what this news means for Korean readers, the industry context, or its broader cultural impact.
+    3. **Pro & Con Fandom Analysis (현지 팬들의 시선: Pro & Con)**: Analyze the local Reddit reactions to present a balanced view. Create an `<h3>[현지 팬들의 시선: Pro & Con]</h3>` section detailing what fans are excited about (Pro) and what they are worried about or debating (Con).
+    4. **Keyword Dictionary (용어 한 스푼)**: Select 1 or 2 specialized terms related to American theater/film mentioned in the article, and create an `<h3>[용어 한 스푼]</h3>` section to explain them deeply to beginners (e.g., explaining "Off-Broadway", "Limited Run", "Swing", etc.).
+    
     {reddit_section}
 
-    Write as a knowledgeable Korean cultural journalist — warm, insightful, and informative.
-    The output must be a JSON object with KOREAN text for title_kr, summary_kr, and content_kr:
+    Write as a highly knowledgeable, warm, and insightful Korean cultural journalist.
+    The output MUST be a valid JSON object with the following structure. Pay special attention to escaping HTML quotes properly (use single quotes inside the HTML string to avoid invalidating JSON, e.g. `<div class='example'>`), but do not break the JSON format:
     {{
-        "title_kr": "한국 독자의 흥미를 끌 수 있는 매력적인 기사 제목 (한국어)",
-        "summary_kr": "메인 페이지 리스트에 표시될 1-2문장의 핵심 요약. 독자가 클릭하고 싶게 만들어라 (한국어)",
-        "content_kr": "기사 본문. 뉴스 요약 + 등장 인물/작품/공연장에 대한 배경 지식을 자연스럽게 녹인 풍부한 텍스트. 문단을 나누어 가독성 좋게 작성. 마지막엔 '편집자 주' 한 문단을 추가할 것 (한국어)",
-        "reddit_reaction_kr": "만약 Reddit 댓글이 주어졌다면, 현지 팬들의 생생한 반응을 뉴스 포맷에 맞게 1문단으로 재미있게 요약 (한국어). 없다면 빈 문자열",
+        "title_kr": "기사의 본질을 꿰뚫는 매력적인 제목 (한국어)",
+        "summary_kr": "메인 페이지에 표시될 1-2문장의 핵심 요약 (한국어)",
+        "content_kr": "완전한 HTML 형태의 기사 본문. 뉴스 코어 내용 -> [에디터의 시선] -> [현지 팬들의 시선: Pro & Con] -> [용어 한 스푼] 순서로 풍부하게 구성. `<p>`, `<h3>`, `<blockquote>`, `<ul>`, `<li>` 등 태그 적극 활용",
         "keywords": ["키워드1", "키워드2", "키워드3"]
     }}
 
@@ -368,17 +377,24 @@ def process_entry(entry, source, tier):
     # 3. AI Summary with Reddit context
     ai_result = translate_and_summarize(full_text, title, reddit_comments)
 
-    # Extract image: RSS metadata 우선, 없으면 HTML 파싱, 그래도 없으면 Wikipedia 검색
-    image_url = html_image  # 기본값: HTML에서 추출한 이미지
+    # Extract image: RSS metadata 우선, 없으면 HTML 파싱 (og:image)
+    image_url = ""
     if 'media_content' in entry and len(entry.media_content) > 0:
-        image_url = entry.media_content[0].get('url', '') or html_image
+        image_url = entry.media_content[0].get('url', '')
     elif 'media_thumbnail' in entry and len(entry.media_thumbnail) > 0:
-        image_url = entry.media_thumbnail[0].get('url', '') or html_image
-    elif 'links' in entry:
-        for link_item in entry.links:
-            if link_item.get('type', '').startswith('image/'):
-                image_url = link_item.get('href', '') or html_image
+        image_url = entry.media_thumbnail[0].get('url', '')
+    elif 'enclosures' in entry and len(entry.enclosures) > 0:
+        for enc in entry.enclosures:
+            if enc.get('type', '').startswith('image/'):
+                image_url = enc.get('href', '')
                 break
+
+    if not image_url:
+        image_url = html_image
+        
+    # 최종 정크 이미지 방어선 (추적 픽셀 필터링)
+    if image_url and any(x in image_url.lower() for x in ['scorecardresearch', 'pixel', '1x1', 'avatar', 'icon', 'blank']):
+        image_url = ""
 
     # RSS나 HTML에서 이미지를 못 찾았으면 Wikipedia 이미지 검색 (항상 시도)
     if not image_url:
@@ -447,24 +463,45 @@ def send_email(articles):
 
 def save_to_json(major_articles, indie_articles):
     file_path = 'data/articles.json'
-    
-    # 볼륨 확대: 메이저 5개 + 인디 4개 유지 (총 9개)
-    final_data = major_articles[:5] + indie_articles[:4]
-
     os.makedirs("data", exist_ok=True)
+    
+    new_data = major_articles + indie_articles
+    
+    existing_data = []
+    if os.path.exists(file_path):
+        try:
+            with open(file_path, 'r', encoding='utf-8') as f:
+                existing_data = json.load(f)
+        except Exception as e:
+            print(f"기존 기사 로드 오류: {e}")
+            
+    # 누적: 우선 기존 데이터를 넣고, 새로운 데이터와 중복되지 않도록 링크 기준 머지
+    existing_links = {item['link']: item for item in existing_data}
+    
+    actually_new = []
+    for item in new_data:
+        if item['link'] not in existing_links:
+            existing_data.insert(0, item) # 맨 앞에 추가 (최신순)
+            existing_links[item['link']] = item
+            actually_new.append(item)
+            
+    # 전체 갯수 제한 (예: 60개 유지하여 사이트 품질 유지 및 기사 누적)
+    final_data = existing_data[:60]
+
     with open(file_path, 'w', encoding='utf-8') as f:
         json.dump(final_data, f, ensure_ascii=False, indent=4)
-    print(f"✅ 저장 완료: 메이저 {len(major_articles[:5])}건 + 인디 {len(indie_articles[:4])}건 = 총 {len(final_data)}건")
+    print(f"✅ 저장 완료: 신규 추가 {len(actually_new)}건, 총 유지 {len(final_data)}건")
     
-    # Sitemap 생성 로직 추가
+    # Sitemap 생성 (전체 데이터 기반)
     generate_sitemap(final_data)
+    return actually_new
 
 def generate_sitemap(articles):
     """
     저장된 기사 데이터를 바탕으로 구글 검색용 sitemap.xml을 생성합니다.
     """
     import urllib.parse
-    base_url = "https://limjinou.github.io/collectivemonologue"
+    base_url = "https://collectivemonologue.pages.dev"
     today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     
     xml_content = '<?xml version="1.0" encoding="UTF-8"?>\n'
@@ -546,8 +583,10 @@ def crawl_rss():
 if __name__ == "__main__":
     major_data, indie_data = crawl_rss()
     if major_data or indie_data:
-        save_to_json(major_data, indie_data)
-        all_data = major_data + indie_data
-        send_email(all_data)
+        new_added = save_to_json(major_data, indie_data)
+        if new_added:
+            send_email(new_added)
+        else:
+            print("새로 추가된 기사가 존재하지 않아 이메일을 발송하지 않습니다.")
     else:
-        print("새로운 기사가 없습니다.")
+        print("수집된 기사가 없습니다.")

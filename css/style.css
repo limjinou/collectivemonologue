@@ -1462,3 +1462,146 @@ img {
 .placeholder-film {
   background-color: #d8dce8;
 }
+
+/* =========================================================
+   COOKIE BANNER
+   ========================================================= */
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--color-surface);
+  border-top: 2px solid var(--color-rule);
+  padding: 1.5rem 2rem;
+  z-index: 9999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.5);
+  font-family: var(--font-main);
+  transform: translateY(100%);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cookie-banner.show {
+  transform: translateY(0);
+}
+
+.cookie-text {
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  max-width: 800px;
+  margin-right: 2rem;
+}
+
+.cookie-text strong {
+  color: var(--color-text);
+}
+
+.cookie-text a {
+  color: var(--color-text);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: 500;
+}
+
+.cookie-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-shrink: 0;
+}
+
+.cookie-btn {
+  padding: 0.75rem 1.5rem;
+  font-family: var(--font-main);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: 1px solid var(--color-text);
+  transition: background-color var(--transition), color var(--transition);
+}
+
+.cookie-btn.accept {
+  background-color: var(--color-accent);
+  color: var(--color-bg);
+  border-color: var(--color-accent);
+}
+
+.cookie-btn.accept:hover {
+  background-color: transparent;
+  color: var(--color-accent);
+}
+
+@media (max-width: 768px) {
+  .cookie-banner {
+    flex-direction: column;
+    padding: 1.5rem;
+  }
+
+  .cookie-text {
+    margin-right: 0;
+    margin-bottom: 1rem;
+    font-size: 0.75rem;
+  }
+
+  .cookie-buttons {
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  .cookie-btn {
+    width: 100%;
+  }
+}
+
+/* =========================================================
+   SCROLL TO TOP BUTTON
+   ========================================================= */
+#scrollToTopBtn {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 50px;
+  height: 50px;
+  background-color: var(--color-text);
+  color: var(--color-bg);
+  border: none;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 9998;
+}
+
+#scrollToTopBtn.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+#scrollToTopBtn:hover {
+  background-color: var(--color-accent);
+  transform: translateY(-5px);
+}
+
+@media (max-width: 768px) {
+  #scrollToTopBtn {
+    bottom: 5.5rem;
+    /* 쿠키 배너 위쪽으로 배치 */
+    right: 1.5rem;
+    width: 45px;
+    height: 45px;
+    font-size: 1.25rem;
+  }
+}
