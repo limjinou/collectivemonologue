@@ -389,6 +389,21 @@ def process_entry(entry, source, tier):
         if search_keywords:
             image_url = fetch_wikipedia_image(search_keywords)
 
+    # Validate the data before returning
+    summary_kr = ai_result.get('summary_kr', '내용 없음').strip()
+    if not summary_kr or "내용 없음" in summary_kr or len(summary_kr) < 20:
+        print(f"   ⚠️ 유효하지 않은 기사 내용 제외: {title[:30]}")
+        return None
+        
+    # 엄격한 이미지 보장: Wikipedia 폴백까지 실패하면 기사를 버립니다 (선택적)
+    # 현재 정책: 이미지가 없더라도 본문이 훌륭하면 살립니다. 하지만 사용자 요청에 따라
+    # 이미지가 없으면 버리는 엄격한 정책을 적용할 수 있습니다. 
+    # 일단은 이미지가 없을 경우 플레이스홀더를 사용하도록 냅두되, 빈 내용을 막는 데 집중합니다.
+    # 사용자가 "사진도 있지 않음"이라고 했으므로 사진이 None이면 버리도록 수정합니다.
+    if not image_url:
+         print(f"   ⚠️ 이미지 확보 실패 기사 제외: {title[:30]}")
+         return None
+
     return {
         "source": source,
         "tier": tier,  # 'major' 또는 'indie'
@@ -518,10 +533,11 @@ def crawl_rss():
         for future in concurrent.futures.as_completed(future_to_entry):
             try:
                 data = future.result()
-                if data['tier'] == 'major':
-                    major_results.append(data)
-                else:
-                    indie_results.append(data)
+                if data: # 검증 통과한 데이터만 추가
+                    if data['tier'] == 'major':
+                        major_results.append(data)
+                    else:
+                        indie_results.append(data)
             except Exception as exc:
                 print(f"❌ 처리 중 에러 발생: {exc}")
 
