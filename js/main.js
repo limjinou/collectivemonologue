@@ -143,8 +143,8 @@ async function renderCategoryArticles() {
     const articles = await response.json();
 
     const filtered = articles.filter(a => {
-      if (targetCategory === 'theater' && a.source !== 'Variety') return true;
-      if (targetCategory === 'film' && a.source === 'Variety') return true;
+      // 모든 기사는 기본적으로 연극 관련이라고 간주하고 노출 (또는 필요시 theater 파라미터 체크)
+      if (targetCategory === 'theater') return true;
       return false;
     });
 
