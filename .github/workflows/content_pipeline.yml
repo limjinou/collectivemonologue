@@ -37,7 +37,7 @@ jobs:
       run: |
         git config --global user.name 'GitHub Action Bot'
         git config --global user.email 'action@github.com'
-        git add data/articles.json
+        git add data/articles_list.json data/articles/*.json sitemap.xml
         # 변경 사항이 있을 때만 커밋
         git commit -m "Update articles [Auto]" || exit 0
         git push
