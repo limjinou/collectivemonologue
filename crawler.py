@@ -200,12 +200,12 @@ def translate_and_summarize(text, title, reddit_comments=""):
     
     Below is an article titled '{title}'. Your task is to produce a high-quality, rich HTML-formatted Korean editorial that incorporates the following 4 key elements:
 
-    1. **Magazine-Style Structuring**: Use appropriate HTML tags within the content. Use `<h3>` for logical subheadings, `<ul>` and `<li>` for key bullet points, and `<blockquote>` for pulling out powerful quotes or core messages to make the text visually engaging. Center-align appropriate texts.
-    2. **Editor's Note (에디터의 시선)**: At the end of the main news content, include a section titled `<h3>[에디터의 시선]</h3>` followed by your insightful analysis on what this news means for Korean readers, the industry context, or its broader cultural impact.
-    3. **Positive & Negative Fandom Analysis (현지 팬들의 시선: POSITIVE & NEGATIVE)**: Analyze the local community reactions to present a balanced view. Create an `<h3>[현지 팬들의 시선: POSITIVE & NEGATIVE]</h3>` section detailing what fans are excited about (POSITIVE) and what they are worried about or debating (NEGATIVE). Do NOT reveal that the source is Reddit. Use general terms like "현지 커뮤니티에서는...".
-    4. **Keyword Dictionary (용어 한 스푼)**: Select 1 or 2 specialized terms related to American theater mentioned in the article, and create an `<h3>[용어 한 스푼]</h3>` section. Explain them deeply to beginners (e.g., explaining "Off-Broadway", "Limited Run", "Swing", etc.) as if you are the '제미나이플래시 편집자(Gemini Flash Editor)' summarizing multiple sources cleanly. Do NOT mention specific sources like 'Wikipedia' or 'Reddit'. Avoid making it controversial.
+    1. **Magazine-Style Structuring**: Use appropriate HTML tags within the content. Use exactly `<p>` for regular text blocks, `<h3>` for logical subheadings, `<ul>` and `<li>` for key points, and `<blockquote>` for pulling out powerful quotes. DO NOT wrap the whole thing in a single div or return unstyled plain text.
+    2. **Editor's Note (에디터의 시선)**: At the end of the main news content, include a section titled `<h3>[에디터의 시선]</h3>` followed by `<p>...편집자 논평...</p>`.
+    3. **Positive & Negative Fandom Analysis (현지 팬들의 시선: POSITIVE & NEGATIVE)**: Analyze the local community reactions to present a balanced view. Create an `<h3>[현지 팬들의 시선: POSITIVE & NEGATIVE]</h3>` section and list them strictly using `<ul>` and `<li>` tags showing an overview of what fans are excited about (POSITIVE) and what they are worried about or debating (NEGATIVE). DO NOT use Pro/Con labels, use strictly POSITIVE/NEGATIVE.
+    4. **Keyword Dictionary (용어 한 스푼)**: Select 1 or 2 specialized terms related to American theater mentioned in the article, and create an `<h3>[용어 한 스푼]</h3>` section followed by `<p>...설명...</p>`. Explain deeply to beginners as if you are the 'STAGESIDE 에디터(STAGESIDE Editor)'. Avoid making it controversial.
 
-    Write as a highly knowledgeable, warm, and insightful Korean cultural journalist from the 'Stageside' editorial board.
+    Write as a highly knowledgeable, warm, and insightful Korean cultural journalist from the 'STAGESIDE' editorial board.
     The output MUST be a valid JSON object with the following structure. Pay special attention to escaping HTML quotes properly (use single quotes inside the HTML string to avoid invalidating JSON, e.g. `<div class='example'>`), but do not break the JSON format:
     {{
         "title_kr": "기사의 본질을 꿰뚫는 매력적인 제목 (한국어)",
