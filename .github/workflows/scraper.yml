@@ -39,11 +39,11 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
           
-          # Check if there are any changes (e.g. articles.json was updated)
-          if git diff --quiet data/articles.json; then
+          # Check if there are any changes (e.g. articles_list.json was updated)
+          if git diff --quiet data/articles_list.json; then
             echo "No new articles found. Skipping commit."
           else
-            git add data/articles.json
+            git add data/articles_list.json data/articles/*.json sitemap.xml
             
             # Use timestamp to force CSS cache busting on daily updates
             NEW_VERSION=$(date +"%Y%m%d%H%M")
