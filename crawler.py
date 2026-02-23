@@ -460,39 +460,79 @@ def send_email(articles):
     except Exception as e:
         print(f"❌ 이메일 발송 실패: {e}")
 
+def slugify(text):
+    """제목을 파일명 및 ID로 사용 가능한 형태로 변환"""
+    text = "".join(c if c.isalnum() or c.isspace() else "" for c in text).strip()
+    return text.replace(" ", "-").lower()
+
 def save_to_json(major_articles, indie_articles):
-    file_path = 'data/articles.json'
-    os.makedirs("data", exist_ok=True)
+    list_path = 'data/articles_list.json'
+    detail_dir = 'data/articles'
+    os.makedirs(detail_dir, exist_ok=True)
     
-    new_data = major_articles + indie_articles
-    
-    existing_data = []
-    if os.path.exists(file_path):
+    new_articles = major_articles + indie_articles
+    if not new_articles:
+        return []
+
+    # 1. 기존 목록 로드
+    existing_list = []
+    if os.path.exists(list_path):
         try:
-            with open(file_path, 'r', encoding='utf-8') as f:
-                existing_data = json.load(f)
+            with open(list_path, 'r', encoding='utf-8') as f:
+                existing_list = json.load(f)
         except Exception as e:
-            print(f"기존 기사 로드 오류: {e}")
-            
-    # 누적: 우선 기존 데이터를 넣고, 새로운 데이터와 중복되지 않도록 링크 기준 머지
-    existing_links = {item['link']: item for item in existing_data}
+            print(f"기존 목록 로드 오류: {e}")
+
+    # 기존 링크 집합 (중복 방지)
+    # articles_list.json에는 link가 없을 수도 있으므로 (있으면 좋음)
+    # 만약 없으면 ID로 체크하거나, 목록 추출 시 link도 포함하도록 수정 권장
+    # 현재 migrate_data.py에서는 link를 뺐으나, 중복 체크를 위해 포함하는 것이 좋음
+    # 기획 수정: articles_list.json에도 link를 포함시켜 중복 체크 용이하게 함
+    existing_links = {item.get('link'): item for item in existing_list if item.get('link')}
     
     actually_new = []
-    for item in new_data:
-        if item['link'] not in existing_links:
-            existing_data.insert(0, item) # 맨 앞에 추가 (최신순)
-            existing_links[item['link']] = item
-            actually_new.append(item)
+    for item in new_articles:
+        link = item.get('link')
+        if link and link not in existing_links:
+            # 고유 ID 생성
+            article_id = slugify(item['original_title'])
             
-    # 전체 갯수 제한 (예: 60개 유지하여 사이트 품질 유지 및 기사 누적)
-    final_data = existing_data[:60]
+            # 중복 ID 방지 (초정밀)
+            if any(x.get('id') == article_id for x in existing_list):
+                article_id = f"{article_id}-{int(time.time())}"
+            
+            item['id'] = article_id
+            
+            # 개별 상세 파일 저장 (Full Content)
+            detail_path = os.path.join(detail_dir, f"{article_id}.json")
+            with open(detail_path, 'w', encoding='utf-8') as f:
+                json.dump(item, f, ensure_ascii=False, indent=4)
+            
+            # 목록용 요약 데이터 생성
+            list_item = {
+                "id": article_id,
+                "title": item['original_title'],
+                "title_kr": item.get('title_kr', item['original_title']),
+                "summary_kr": item.get('summary_kr', ''),
+                "date": item.get('date', ''),
+                "image": item.get('image', ''),
+                "tier": item.get('tier', 'major'),
+                "source": item.get('source', ''),
+                "link": link # 중복 체크용
+            }
+            
+            existing_list.insert(0, list_item) # 최신순
+            actually_new.append(item)
 
-    with open(file_path, 'w', encoding='utf-8') as f:
-        json.dump(final_data, f, ensure_ascii=False, indent=4)
-    print(f"✅ 저장 완료: 신규 추가 {len(actually_new)}건, 총 유지 {len(final_data)}건")
+    # 전체 갯수 제한 (예: 100개까지 목록 유지)
+    final_list = existing_list[:100]
+
+    with open(list_path, 'w', encoding='utf-8') as f:
+        json.dump(final_list, f, ensure_ascii=False, indent=4)
+        
+    print(f"✅ 저장 완료: 신규 추가 {len(actually_new)}건, 목록 총 {len(final_list)}건")
     
-    # Sitemap 생성 (전체 데이터 기반)
-    generate_sitemap(final_data)
+    generate_sitemap(final_list)
     return actually_new
 
 def generate_sitemap(articles):
@@ -518,9 +558,9 @@ def generate_sitemap(articles):
 
     # 동적 기사 페이지들 (article.html?id=...)
     for article in articles:
-        # 영문 타이틀을 소문자로 바꾸고 공백을 언더스코어로 파싱하여 ID 생성 (frontend main.js와 동일 로직 예상)
-        safe_title = "".join(c if c.isalnum() or c.isspace() else "" for c in article['original_title']).strip()
-        article_id = safe_title.replace(' ', '_').lower()
+        article_id = article.get('id')
+        if not article_id: continue
+        
         encoded_id = urllib.parse.quote(article_id)
         
         xml_content += '  <url>\n'

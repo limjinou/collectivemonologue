@@ -39,37 +39,36 @@ function setupHeaderDate() {
 }
 
 /* --- Data Loading & Rendering for Grid --- */
+/**
+ * 홈 화면의 기사 그리드를 렌더링합니다.
+ * 본문 제외 목록 데이터(articles_list.json)만 로드하여 속도를 최적화합니다.
+ */
 async function loadArticles() {
   const grid = document.getElementById('article-grid');
   if (!grid) return;
 
   try {
-    // Robust Pathing: handle local vs GitHub Pages environments
     const basePath = window.location.pathname.includes('/collectivemonologue') ? '/collectivemonologue/' : '/';
-    const response = await fetch(`${basePath}data/articles.json?t=${new Date().getTime()}`);
-    if (!response.ok) throw new Error('Failed to load articles.json');
+    // 경량화된 목록 데이터 로드
+    const response = await fetch(`${basePath}data/articles_list.json?t=${new Date().getTime()}`);
+    if (!response.ok) throw new Error('Failed to load articles_list.json');
     const articles = await response.json();
 
-    grid.innerHTML = ''; // Clear loading state
+    grid.innerHTML = ''; // Loading 상태 제거
 
-    articles.forEach((article, index) => {
+    articles.forEach((article) => {
       const item = document.createElement('a');
-      item.href = `article.html?id=${index}`;
+      // 인덱스 대신 고유 ID(slug)를 사용한 링크 생성
+      item.href = `article.html?id=${article.id}`;
       item.className = 'grid-item';
 
-      // Clean, minimalist thumbnail wrapper
       const imageHtml = article.image
         ? `<img src="${article.image}" alt="${article.title}" class="grid-item-image">`
         : `<div class="grid-item-image" style="background:#f4f4f4;"></div>`;
 
-      // Clean summary snippet (remove AI failure notes or truncations gracefully)
-      let summary = article.summary_kr && !article.summary_kr.startsWith('[번역 실패]')
-        ? article.summary_kr
-        : article.title;
+      let summary = article.summary_kr || article.title;
       if (summary.length > 150) summary = summary.substring(0, 150) + '...';
 
-      // Pure, unstyled text layout
-      // Title over Source as per user request
       item.innerHTML = `
               <div class="grid-item-image-wrapper">${imageHtml}</div>
               <div class="grid-item-title">${article.title_kr || article.title}</div>
@@ -84,28 +83,33 @@ async function loadArticles() {
 }
 
 /* --- Render Single Article Detail Page --- */
+/**
+ * 기사 상세 페이지를 렌더링합니다.
+ * URL의 id(slug)를 기반으로 해당 기사의 전용 JSON 파일을 로드합니다.
+ */
 async function renderSingleArticle() {
   const urlParams = new URLSearchParams(window.location.search);
-  const articleId = urlParams.get('id');
+  const articleId = urlParams.get('id'); // 이제 숫자가 아닌 slug ID임
 
-  if (articleId === null) {
+  if (!articleId) {
     document.querySelector('.article-page').innerHTML = '<p>기사를 찾을 수 없습니다.</p>';
     return;
   }
 
   try {
     const basePath = window.location.pathname.includes('/collectivemonologue') ? '/collectivemonologue/' : '/';
-    const response = await fetch(`${basePath}data/articles.json?t=${new Date().getTime()}`);
-    if (!response.ok) throw new Error('Data fetch failed');
-    const articles = await response.json();
-    const article = articles[articleId];
+    // 개별 기사 본문 데이터만 타겟팅하여 로드 (가장 효율적임)
+    const response = await fetch(`${basePath}data/articles/${articleId}.json?t=${new Date().getTime()}`);
 
-    if (!article) {
-      document.querySelector('.article-page').innerHTML = '<p>해당 기사가 존재하지 않습니다.</p>';
-      return;
+    if (!response.ok) {
+      // 하위 호환성: 만약 slug 파일이 없으면 기존 인덱스 방식일 수도 있음 (전환기 대비)
+      // 하지만 여기서는 깔끔하게 새 방식만 처리하거나 에러 핸들링
+      throw new Error('Article data not found');
     }
 
-    // Title & Date formatting
+    const article = await response.json();
+
+    // Title & Meta 설정
     document.title = `${article.title_kr || article.title} | Stageside`;
     document.querySelector('.article-title').textContent = article.title_kr || article.title;
 
@@ -113,33 +117,28 @@ async function renderSingleArticle() {
     try {
       const d = new Date(article.date);
       const days = ['일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일'];
-      const year = d.getFullYear();
-      const month = String(d.getMonth() + 1).padStart(2, '0');
-      const day = String(d.getDate()).padStart(2, '0');
-      const dayName = days[d.getDay()];
-      formattedDate = `${year}.${month}.${day}.${dayName}`;
-    } catch (e) { /* keep string as is */ }
+      formattedDate = `${d.getFullYear()}.${String(d.getMonth() + 1).padStart(2, '0')}.${String(d.getDate()).padStart(2, '0')}.${days[d.getDay()]}`;
+    } catch (e) { /* keep string */ }
 
-    document.querySelector('.article-meta').innerHTML = `
-          <span>${formattedDate}</span>
-      `;
+    document.querySelector('.article-meta').innerHTML = `<span>${formattedDate}</span>`;
 
-    // Hero Image Layout
+    // 이미지 처리
     const heroContainer = document.querySelector('.article-hero-image-wrapper');
     if (article.image) {
       heroContainer.innerHTML = `<img src="${article.image}" alt="${article.title}">`;
+      heroContainer.style.display = 'block';
     } else {
       heroContainer.style.display = 'none';
     }
 
-    // Body Content
+    // 본문 렌더링
     const contentHtml = article.content_kr || article.summary_kr || "<p>본문 내용이 없습니다.</p>";
     const attributionHtml = `<p style="margin-top: 80px; font-size: 12px; font-weight: 500; color: #666; text-transform: none; text-align: center;">스테이지사이드 편집부에 의해 작성된 글입니다.</p>`;
     document.querySelector('.article-body').innerHTML = contentHtml + attributionHtml;
 
   } catch (error) {
     console.error('Error rendering article:', error);
-    document.querySelector('.article-page').innerHTML = '<p>기사를 불러오는 중 오류가 발생했습니다.</p>';
+    document.querySelector('.article-page').innerHTML = '<p>기사를 불러오는 중 오류가 발생했습니다. (데이터 형식이 변경되었거나 존재하지 않는 기사입니다)</p>';
   }
 }
 
