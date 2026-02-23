@@ -203,7 +203,8 @@ def translate_and_summarize(text, title, reddit_comments=""):
     1. **Magazine-Style Structuring**: Use appropriate HTML tags within the content. Use exactly `<p>` for regular text blocks, `<h3>` for logical subheadings, `<ul>` and `<li>` for key points, and `<blockquote>` for pulling out powerful quotes. DO NOT wrap the whole thing in a single div or return unstyled plain text.
     2. **Editor's Note (에디터의 시선)**: At the end of the main news content, include a section titled `<h3>[에디터의 시선]</h3>` followed by `<p>...편집자 논평...</p>`.
     3. **Positive & Negative Fandom Analysis (현지 팬들의 시선: POSITIVE & NEGATIVE)**: Analyze the local community reactions to present a balanced view. Create an `<h3>[현지 팬들의 시선: POSITIVE & NEGATIVE]</h3>` section and list them strictly using `<ul>` and `<li>` tags showing an overview of what fans are excited about (POSITIVE) and what they are worried about or debating (NEGATIVE). DO NOT use Pro/Con labels, use strictly POSITIVE/NEGATIVE.
-    4. **Keyword Dictionary (용어 한 스푼)**: Select 1 or 2 specialized terms related to American theater mentioned in the article, and create an `<h3>[용어 한 스푼]</h3>` section followed by `<p>...설명...</p>`. Explain deeply to beginners as if you are the 'STAGESIDE 에디터(STAGESIDE Editor)'. Avoid making it controversial.
+    4. **Keyword Dictionary (용어 한 스푼)**: Select 1 or 2 specialized terms related to American theater mentioned in the article, and create an `<h3>[용어 한 스푼]</h3>` section followed by `<p>...</p>`. This is mandatory.
+    [Mechanism]: Understand the official/Wikipedia definition first, but **rewrite and explain** it using the Chief Editor's warm and intuitive language so that beginner audiences and stage artists can easily grasp it. DO NOT copy and paste dictionary definitions.
 
     Write as a highly knowledgeable, warm, and insightful Korean cultural journalist from the 'STAGESIDE' editorial board.
     The output MUST be a valid JSON object with the following structure. Pay special attention to escaping HTML quotes properly (use single quotes inside the HTML string to avoid invalidating JSON, e.g. `<div class='example'>`), but do not break the JSON format:
@@ -553,12 +554,12 @@ def crawl_rss():
 
     major_entries = fetch_from_feeds(MAJOR_FEEDS, 'major')
     indie_entries = fetch_from_feeds(INDIE_FEEDS, 'indie')
-    all_entries = major_entries + indie_entries
-    
-    print(f"총 {len(all_entries)}개 기사 발견. 병렬 처리 시작...")
-
     major_results = []
     indie_results = []
+    
+    # 기사 퀄리티를 위해 전체 중 상위 2개만 처리 (메이저 우선순위 등 고려 가능하나 일단 각 1개씩 총 2개 권장)
+    # 여기서는 병렬 처리 전 리스트를 슬라이싱하여 제미나이 리소스 집중
+    all_entries = major_entries[:1] + indie_entries[:1] # 각각 가장 최신 1개씩 총 2개만 선별
 
     with concurrent.futures.ThreadPoolExecutor(max_workers=2) as executor:
         future_to_entry = {
