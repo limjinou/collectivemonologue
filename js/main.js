@@ -1,5 +1,5 @@
 /* ============================================
-   Collective Monologue — Minimalist Redesign JS
+   Stageside — Minimalist Redesign JS
    ============================================ */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -106,7 +106,7 @@ async function renderSingleArticle() {
     }
 
     // Title & Date formatting
-    document.title = `${article.title_kr || article.title} | Collective Monologue`;
+    document.title = `${article.title_kr || article.title} | Stageside`;
     document.querySelector('.article-title').textContent = article.title_kr || article.title;
 
     let formattedDate = article.date;
@@ -134,7 +134,7 @@ async function renderSingleArticle() {
 
     // Body Content
     const contentHtml = article.content_kr || article.summary_kr || "<p>본문 내용이 없습니다.</p>";
-    const attributionHtml = `<p style="margin-top: 80px; font-size: 12px; font-weight: 500; color: #666; text-transform: none; text-align: center;">콜렉티브 모놀로그 편집부에 의해 작성된 글입니다.</p>`;
+    const attributionHtml = `<p style="margin-top: 80px; font-size: 12px; font-weight: 500; color: #666; text-transform: none; text-align: center;">스테이지사이드 편집부에 의해 작성된 글입니다.</p>`;
     document.querySelector('.article-body').innerHTML = contentHtml + attributionHtml;
 
   } catch (error) {

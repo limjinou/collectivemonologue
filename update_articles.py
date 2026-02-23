@@ -19,7 +19,7 @@ def reformat_article(article):
         return article
 
     prompt = f"""
-    당신은 'Collective Monologue'의 수석 에디터입니다. 아래 제공된 기존 한국어 기사 본문을 읽고, 새로운 가이드라인에 맞게 '내용의 훼손 없이' 형식만 수정하여 JSON으로 반환해주세요.
+    당신은 'Stageside'의 수석 에디터입니다. 아래 제공된 기존 한국어 기사 본문을 읽고, 새로운 가이드라인에 맞게 '내용의 훼손 없이' 형식만 수정하여 JSON으로 반환해주세요.
 
     [수정 가이드라인]
     1. **소제목 변경**: 기존 `<h3>[현지 팬들의 시선: Pro & Con]</h3>` 부분을 찾아 `<h3>[현지 팬들의 시선: POSITIVE & NEGATIVE]</h3>`로 변경하세요 (내용의 기조는 유지).

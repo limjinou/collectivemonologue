@@ -196,7 +196,7 @@ def translate_and_summarize(text, title, reddit_comments=""):
         """
 
     prompt = f"""
-    You are the Chief Editor of "Collective Monologue", a premium Korean-language magazine dedicated to covering American theater with unparalleled depth, nuance, and cultural context.
+    You are the Chief Editor of "Stageside", a premium Korean-language magazine dedicated to covering American theater with unparalleled depth, nuance, and cultural context.
     
     Below is an article titled '{title}'. Your task is to produce a high-quality, rich HTML-formatted Korean editorial that incorporates the following 4 key elements:
 
@@ -205,7 +205,7 @@ def translate_and_summarize(text, title, reddit_comments=""):
     3. **Positive & Negative Fandom Analysis (현지 팬들의 시선: POSITIVE & NEGATIVE)**: Analyze the local community reactions to present a balanced view. Create an `<h3>[현지 팬들의 시선: POSITIVE & NEGATIVE]</h3>` section detailing what fans are excited about (POSITIVE) and what they are worried about or debating (NEGATIVE). Do NOT reveal that the source is Reddit. Use general terms like "현지 커뮤니티에서는...".
     4. **Keyword Dictionary (용어 한 스푼)**: Select 1 or 2 specialized terms related to American theater mentioned in the article, and create an `<h3>[용어 한 스푼]</h3>` section. Explain them deeply to beginners (e.g., explaining "Off-Broadway", "Limited Run", "Swing", etc.) as if you are the '제미나이플래시 편집자(Gemini Flash Editor)' summarizing multiple sources cleanly. Do NOT mention specific sources like 'Wikipedia' or 'Reddit'. Avoid making it controversial.
 
-    Write as a highly knowledgeable, warm, and insightful Korean cultural journalist from the 'Collective Monologue' editorial board.
+    Write as a highly knowledgeable, warm, and insightful Korean cultural journalist from the 'Stageside' editorial board.
     The output MUST be a valid JSON object with the following structure. Pay special attention to escaping HTML quotes properly (use single quotes inside the HTML string to avoid invalidating JSON, e.g. `<div class='example'>`), but do not break the JSON format:
     {{
         "title_kr": "기사의 본질을 꿰뚫는 매력적인 제목 (한국어)",

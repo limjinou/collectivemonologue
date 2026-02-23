@@ -1,4 +1,4 @@
-# Collective Monologue
+# Stageside
 
 미국 연극과 영화의 최신 트렌드, 뉴스, 심층 분석을 한국어로 전달하는 매거진 웹사이트입니다.
 

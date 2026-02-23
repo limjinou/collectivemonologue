@@ -28,7 +28,7 @@ def translate(text, title):
         return None
     truncated = text[:3000]
     prompt = f"""
-You are the editor of "Collective Monologue", a Korean-language magazine covering American theater and film.
+You are the editor of "Stageside", a Korean-language magazine covering American theater and film.
 
 Article title: '{title}'
 
