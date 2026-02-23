@@ -2,7 +2,7 @@ import feedparser
 import smtplib
 from email.mime.text import MIMEText
 import os
-import google.generativeai as genai
+from google import genai
 from datetime import datetime, timezone
 from dotenv import load_dotenv
 import json
@@ -22,11 +22,13 @@ EMAIL_PASSWORD = os.getenv("EMAIL_PASSWORD")
 EMAIL_RECEIVER = os.getenv("EMAIL_RECEIVER")
 REDDIT_USER_AGENT = os.getenv("REDDIT_USER_AGENT", "CollectiveMonologue_Crawler/1.0")
 
-# Gemini 설정
+# Gemini 설정 (최신 SDK 및 고지능 모델 적용)
+client = None
 if GEMINI_API_KEY:
-    genai.configure(api_key=GEMINI_API_KEY)
-    # 안정적인 Quota를 제공할 것으로 예상되는 Gemini Pro Latest 모델 사용
-    model = genai.GenerativeModel('gemini-pro-latest')
+    client = genai.Client(api_key=GEMINI_API_KEY)
+# 모델 이원화 전략: 핵심 분석(Pro) / 요약 및 추천(Flash)
+PRO_MODEL = 'gemini-1.5-pro'
+FLASH_MODEL = 'gemini-1.5-flash'
 
 # 메이저 소스 (브로드웨이 / 할리우드 메이저)
 MAJOR_FEEDS = {
@@ -177,14 +179,14 @@ def fetch_wikipedia_image(keywords):
     return ""
 
 def translate_and_summarize(text, title, reddit_comments=""):
-    if not GEMINI_API_KEY:
+    if not client:
         return {"title_en": title, "summary_en": "No API Key provided.", "keywords": []}
 
     if not text or len(text) < 50:
         return {"title_en": title, "summary_en": "Content too short or extraction failed.", "keywords": []}
     
-    # 너무 긴 텍스트는 잘라서 보냄 (토큰 제한 방지)
-    truncated_text = text[:4000]
+    # 1.5 Pro는 컨텍스트가 훨씬 넓으므로 더 많은 정보 전달 (8000자)
+    truncated_text = text[:8000]
 
     reddit_section = ""
     if reddit_comments:
@@ -192,53 +194,69 @@ def translate_and_summarize(text, title, reddit_comments=""):
     Additional Context (Community Comments - Local Fan Reactions):
     {reddit_comments}
     
-    IMPORTANT: You have local fan reactions from a community. Synthesize these authentic reactions into your editorial. Describe what the US fans are excited about, worried about, or debating regarding this news. Do NOT mention specific names like 'Reddit' or 'Reddit community'. Just refer to them as '현지 커뮤니티' or '현지 반응'.
+    IMPORTANT: Synthesize these authentic reactions into your editorial. 
+    Analyze the subtext of their excitement, worry, or debate. 
+    Do NOT mention 'Reddit'. Refer to them as '현지 커뮤니티' or '현지 반응'.
         """
 
     prompt = f"""
-    You are the Chief Editor of "Stageside", a premium Korean-language magazine dedicated to covering American theater with unparalleled depth, nuance, and cultural context.
-    
-    Below is an article titled '{title}'. Your task is to produce a high-quality, rich HTML-formatted Korean editorial that incorporates the following 4 key elements:
+    You are the Senior Chief Editor of "Stageside", a world-class premium magazine specializing in American theater and cinematic arts. 
+    Your expertise is comparable to the most respected cultural critics in South Korea.
 
-    1. **Magazine-Style Structuring**: Use appropriate HTML tags within the content. Use exactly `<p>` for regular text blocks, `<h3>` for logical subheadings, `<ul>` and `<li>` for key points, and `<blockquote>` for pulling out powerful quotes. DO NOT wrap the whole thing in a single div or return unstyled plain text.
-    2. **Editor's Note (에디터의 시선)**: At the end of the main news content, include a section titled `<h3>[에디터의 시선]</h3>` followed by `<p>...편집자 논평...</p>`.
-    3. **Positive & Negative Fandom Analysis (현지 팬들의 시선: POSITIVE & NEGATIVE)**: Analyze the local community reactions to present a balanced view. Create an `<h3>[현지 팬들의 시선: POSITIVE & NEGATIVE]</h3>` section and list them strictly using `<ul>` and `<li>` tags showing an overview of what fans are excited about (POSITIVE) and what they are worried about or debating (NEGATIVE). DO NOT use Pro/Con labels, use strictly POSITIVE/NEGATIVE.
-    4. **Keyword Dictionary (용어 한 스푼)**: Select 1 or 2 specialized terms related to American theater mentioned in the article, and create an `<h3>[용어 한 스푼]</h3>` section followed by `<p>...</p>`. This is mandatory.
-    [Mechanism]: Understand the official/Wikipedia definition first, but **rewrite and explain** it using the Chief Editor's warm and intuitive language so that beginner audiences and stage artists can easily grasp it. DO NOT copy and paste dictionary definitions.
+    Below is an article titled '{title}'. Your mission is to craft a profound, intellectually stimulating Korean editorial.
+    Leverage your advanced reasoning capabilities to provide deep cultural insights.
 
-    Write as a highly knowledgeable, warm, and insightful Korean cultural journalist from the 'STAGESIDE' editorial board.
-    The output MUST be a valid JSON object with the following structure. Pay special attention to escaping HTML quotes properly (use single quotes inside the HTML string to avoid invalidating JSON, e.g. `<div class='example'>`), but do not break the JSON format:
+    STRICT REQUIREMENTS:
+    1. **Masterful Storytelling**: Use sophisticated yet accessible Korean. Your tone should be warm, authoritative, and insightful.
+    2. **Deep Editorial Note (에디터의 시선)**: This section MUST be the highlight. Don't just summarize; provide a multi-layered analysis of how this news impacts the global stage and what lessons it might evoke for the Korean audience.
+    3. **Balanced Fandom Dialectic (현지 팬들의 시선: POSITIVE & NEGATIVE)**: 
+       - POSITIVE: Synthesize the core reasons for enthusiasm.
+       - NEGATIVE: Identify the underlying concerns or skepticism.
+       - List these using strictly `<ul>` and `<li>` tags.
+    4. **Enlightening Keyword Dictionary (용어 한 스푼)**: Choose 1-2 specialized terms. Rewrite the definition in a way that feels like a friendly master artist explaining a secret of the trade. 
+       - Explain the historical context or the 'vibe' of the term, not just the dictionary meaning.
+
+    JSON Structure:
     {{
-        "title_kr": "기사의 본질을 꿰뚫는 매력적인 제목 (한국어)",
-        "summary_kr": "메인 페이지에 표시될 1-2문장의 핵심 요약 (한국어)",
-        "content_kr": "완전한 HTML 형태의 기사 본문. 뉴스 코어 내용 -> [에디터의 시선] -> [현지 팬들의 시선: POSITIVE & NEGATIVE] -> [용어 한 스푼] 순서로 풍부하게 구성. `<p>`, `<h3>`, `<blockquote>`, `<ul>`, `<li>` 등 태그 적극 활용.",
+        "title_kr": "기사의 본질과 에디터의 미학이 담긴 매력적인 제목",
+        "summary_kr": "독자의 지적 호기심을 자극하는 1-2문장의 고품격 요약",
+        "content_kr": "HTML tags: 뉴스 코어 -> <h3>[에디터의 시선]</h3><p>...심층 분석...</p> -> <h3>[현지 팬들의 시선: POSITIVE & NEGATIVE]</h3><ul>...</ul> -> <h3>[용어 한 스푼]</h3><p>...친절한 설명...</p>",
         "keywords": ["키워드1", "키워드2", "키워드3"]
     }}
 
     Article Body:
     {truncated_text}
+    
+    {reddit_section}
     """
 
-    # 재시도 로직 (Exponential Backoff)
+    # 재시도 로직
     max_retries = 3
-    base_delay = 5  # 5초부터 시작
+    base_delay = 5
 
     for attempt in range(max_retries):
         try:
-            response = model.generate_content(prompt, generation_config={"response_mime_type": "application/json"})
+            response = client.models.generate_content(
+                model=PRO_MODEL,
+                contents=prompt,
+                config={
+                    "response_mime_type": "application/json"
+                }
+            )
+            # 요청 성공 후 RPM 준수를 위해 짧은 지연 (Free tier 2 RPM 대응)
+            print("   ✨ 고지능 분석 완료. 쿼터 준수를 위해 30초 대기 중...")
+            time.sleep(30)
             return json.loads(response.text)
         except Exception as e:
             if "429" in str(e) or "quota" in str(e).lower():
-                wait_time = base_delay * (2 ** attempt) + (attempt * 2) # Jitter 추가
-                print(f"⚠️ Quota exceeded. Retrying in {wait_time}s... (Attempt {attempt+1}/{max_retries})")
+                wait_time = base_delay * (2 ** attempt) + (attempt * 2)
+                print(f"⚠️ Quota check. Waiting {wait_time}s... ({attempt+1}/{max_retries})")
                 time.sleep(wait_time)
             else:
-                print(f"⚠️ Summary failed (API Error): {e}")
+                print(f"⚠️ Summary failed: {e}")
                 break
     
     return {
-        "title_en": title,
-        "summary_en": "Summarization failed.",
         "title_kr": title,
         "summary_kr": "정보를 불러오는 중 오류가 발생했습니다.",
         "content_kr": "본문을 처리하지 못했습니다.",
@@ -297,7 +315,7 @@ def fetch_broadway_grosses():
                 item['rank'] = i + 1
             
             # LLM으로 각 공연에 대한 한 줄 한국어 소개 추가
-            if GEMINI_API_KEY and top5:
+            if client and top5:
                 try:
                     show_list = ", ".join([s['show'] for s in top5])
                     desc_prompt = f"""아래 5개 브로드웨이 공연에 대해 각각 한국어로 한 줄(15~25자) 소개를 작성해주세요.
@@ -308,7 +326,8 @@ def fetch_broadway_grosses():
 
 예시: {{"Hamilton": "미국 건국의 역사를 힙합으로 풀어낸 뮤지컬"}}
 """
-                    desc_resp = model.generate_content(desc_prompt).text.strip()
+                    # 가벼운 작업은 고속 모델(Flash) 사용하여 쿼터 절약
+                    desc_resp = client.models.generate_content(model=FLASH_MODEL, contents=desc_prompt).text.strip()
                     if desc_resp.startswith("```json"):
                         desc_resp = desc_resp[7:]
                     if desc_resp.endswith("```"):
@@ -326,7 +345,7 @@ def fetch_broadway_grosses():
 
 def generate_weekly_recommendations(articles_data):
     """최근 인디 매체 중심 기사 데이터를 바탕으로 오프-브로드웨이/시카고 추천작 3개를 뽑습니다."""
-    if not GEMINI_API_KEY or not articles_data:
+    if not client or not articles_data:
         return []
 
     context = ""
@@ -349,7 +368,8 @@ def generate_weekly_recommendations(articles_data):
     답변은 오직 JSON 형식으로만 해주세요.
     """
     try:
-        response = model.generate_content(prompt).text.strip()
+        # 가벼운 작업은 고속 모델(Flash) 사용하여 쿼터 절약
+        response = client.models.generate_content(model=FLASH_MODEL, contents=prompt).text.strip()
         if response.startswith("```json"):
             response = response[7:]
         if response.endswith("```"):
@@ -601,7 +621,9 @@ def crawl_rss():
     # 여기서는 병렬 처리 전 리스트를 슬라이싱하여 제미나이 리소스 집중
     all_entries = major_entries[:1] + indie_entries[:1] # 각각 가장 최신 1개씩 총 2개만 선별
 
-    with concurrent.futures.ThreadPoolExecutor(max_workers=2) as executor:
+    # 기사 퀄리티 및 쿼터 준수를 위해 순차 처리 (max_workers=1)
+    # Pro 모델은 Free Tier에서 RPM 제한이 엄격하므로 병렬 처리를 피하는 것이 안전합니다.
+    with concurrent.futures.ThreadPoolExecutor(max_workers=1) as executor:
         future_to_entry = {
             executor.submit(process_entry, entry, source, tier): (entry, source, tier)
             for entry, source, tier in all_entries
