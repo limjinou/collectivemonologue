@@ -2,7 +2,7 @@ import feedparser
 import smtplib
 from email.mime.text import MIMEText
 import os
-import google.generativeai as genai
+from google import genai
 from datetime import datetime, timezone
 from dotenv import load_dotenv
 import json
@@ -25,16 +25,18 @@ EMAIL_PASSWORD = os.getenv("EMAIL_PASSWORD")
 EMAIL_RECEIVER = os.getenv("EMAIL_RECEIVER")
 REDDIT_USER_AGENT = os.getenv("REDDIT_USER_AGENT", "CollectiveMonologue_Crawler/1.0")
 
-# Gemini 설정 (가장 안정적인 레거시 SDK 사용)
+# Gemini 설정 (최신 SDK 사용)
+client = None
 if GEMINI_API_KEY:
     try:
-        genai.configure(api_key=GEMINI_API_KEY)
+        client = genai.Client(api_key=GEMINI_API_KEY)
+        print("✅ Gemini Client initialized.")
     except Exception as e:
-        print(f"❌ Gemini Configuration failed: {e}")
+        print(f"❌ Gemini Client initialization failed: {e}")
 
-# 모델 이원화 전략: 핵심 분석(Pro) / 요약 및 추천작(Flash)
-PRO_MODEL_ID = 'gemini-1.5-pro'
-FLASH_MODEL_ID = 'gemini-1.5-flash'
+# 모델 이원화 전략: 가용 리스트상 실재하는 2.0 Flash 엔진으로 고정 (404/429 회피)
+PRO_MODEL_ID = 'gemini-2.0-flash'
+FLASH_MODEL_ID = 'gemini-2.0-flash'
 
 # 메이저 소스 (브로드웨이 / 할리우드 메이저)
 MAJOR_FEEDS = {
@@ -191,8 +193,8 @@ def translate_and_summarize(text, title, reddit_comments=""):
     if not text or len(text) < 50:
         return {"title_en": title, "summary_en": "Content too short or extraction failed.", "keywords": []}
     
-    # 1.5 Pro는 컨텍스트가 훨씬 넓으므로 더 많은 정보 전달 (8000자)
-    truncated_text = text[:8000]
+    # TPM 초과 방지를 위해 텍스트 처리량을 4000자로 제한 (안정성 확보)
+    truncated_text = text[:4000]
 
     reddit_section = ""
     if reddit_comments:
@@ -236,17 +238,17 @@ def translate_and_summarize(text, title, reddit_comments=""):
     {reddit_section}
     """
 
-    # 재시도 로직
+    # 재시도 로직 (초기 쿼터 제한 대응을 위해 대폭 강화)
     max_retries = 3
-    base_delay = 10
+    base_delay = 30
 
     for attempt in range(max_retries):
         try:
             print(f"   🤖 [{attempt+1}/{max_retries}] {PRO_MODEL_ID} 분석 시도 중...")
-            model = genai.GenerativeModel(PRO_MODEL_ID)
-            response = model.generate_content(
-                prompt,
-                generation_config={"response_mime_type": "application/json"}
+            response = client.models.generate_content(
+                model=PRO_MODEL_ID,
+                contents=prompt,
+                config={"response_mime_type": "application/json"}
             )
             print("   ✨ 고지능 분석 완료.")
             return json.loads(response.text)
@@ -262,10 +264,10 @@ def translate_and_summarize(text, title, reddit_comments=""):
     # [Fallback] Pro 모델 실패 시 Flash 모델로 긴급 전환
     print(f"   🔄 Pro 모델 실패. {FLASH_MODEL_ID}로 긴급 전환하여 분석합니다...")
     try:
-        model = genai.GenerativeModel(FLASH_MODEL_ID)
-        response = model.generate_content(
-            prompt,
-            generation_config={"response_mime_type": "application/json"}
+        response = client.models.generate_content(
+            model=FLASH_MODEL_ID,
+            contents=prompt,
+            config={"response_mime_type": "application/json"}
         )
         print("   ✅ Flash 모델로 분석 대체 완료.")
         return json.loads(response.text)
@@ -342,8 +344,7 @@ def fetch_broadway_grosses():
 예시: {{"Hamilton": "미국 건국의 역사를 힙합으로 풀어낸 뮤지컬"}}
 """
                     # 가벼운 작업은 고속 모델(Flash) 사용하여 쿼터 절약
-                    model = genai.GenerativeModel(FLASH_MODEL_ID)
-                    desc_resp = model.generate_content(desc_prompt).text.strip()
+                    desc_resp = client.models.generate_content(model=FLASH_MODEL_ID, contents=desc_prompt).text.strip()
                     if desc_resp.startswith("```json"):
                         desc_resp = desc_resp[7:]
                     if desc_resp.endswith("```"):
@@ -385,8 +386,7 @@ def generate_weekly_recommendations(articles_data):
     """
     try:
         # 가벼운 작업은 고속 모델(Flash) 사용하여 쿼터 절약
-        model = genai.GenerativeModel(FLASH_MODEL_ID)
-        response = model.generate_content(prompt).text.strip()
+        response = client.models.generate_content(model=FLASH_MODEL_ID, contents=prompt).text.strip()
         if response.startswith("```json"):
             response = response[7:]
         if response.endswith("```"):
@@ -649,9 +649,9 @@ def crawl_rss():
                 else:
                     indie_results.append(data)
             
-            # 다음 기사 처리 전 글로벌 쿨다운 (30초)
-            print("   ⏳ 쿼터 안전 확보를 위해 30초간 기기 냉각 중...")
-            time.sleep(30)
+            # 다음 기사 처리 전 글로벌 쿨다운 (초기 쿼터 보호를 위해 60초로 상향)
+            print("   ⏳ 쿼터 안전 확보를 위해 60초간 기기 냉각 중...")
+            time.sleep(60)
         except Exception as exc:
             print(f"❌ 기사 처리 중 에러 발생: {exc}")
 
