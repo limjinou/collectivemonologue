@@ -8,7 +8,12 @@
         "image": "https://www.americantheatre.org/wp-content/uploads/julian-beck_living-theatre.jpg",
         "tier": "indie",
         "source": "American Theatre",
-        "link": "https://www.americantheatre.org/2026/02/24/when-beck-did-beckett-the-last-days-of-a-living-theater-cofounder/"
+        "link": "https://www.americantheatre.org/2026/02/24/when-beck-did-beckett-the-last-days-of-a-living-theater-cofounder/",
+        "keywords": [
+            "줄리언 벡",
+            "사무엘 베케트",
+            "리빙 씨어터"
+        ]
     },
     {
         "id": "snow-socks-stage-but-hells-kitchen-and-british-cast-of-operation-mincemeat-get-warm-goodbyes--broadway-box-office",
@@ -19,7 +24,12 @@
         "image": "https://deadline.com/wp-content/uploads/2026/02/Operation-Mincemeat-OG5-Finale_Emilio-Madrid_2553.jpg",
         "tier": "major",
         "source": "Deadline Theater",
-        "link": "https://deadline.com/2026/02/broadway-box-office-february-2026-blizzard-1236734447/"
+        "link": "https://deadline.com/2026/02/broadway-box-office-february-2026-blizzard-1236734447/",
+        "keywords": [
+            "브로드웨이 박스오피스",
+            "헬스 키친",
+            "오리지널 캐스트"
+        ]
     },
     {
         "id": "broadway-shows-cancel-sunday-evening-performances-amid-massive-winter-storm",
@@ -89,7 +99,14 @@
         "date": "Fri, 20 Feb 2026 03:12:54 +0000",
         "image": "https://variety.com/wp-content/uploads/2026/02/GettyImages-2163846741.jpg",
         "tier": "major",
-        "source": "Variety Theater"
+        "source": "Variety Theater",
+        "keywords": [
+            "멜리사 바레라",
+            "타이타니크",
+            "브로드웨이 뮤지컬",
+            "짐 파슨스",
+            "셀린 디온 패러디"
+        ]
     },
     {
         "id": "here-lies-love-david-byrne-and-director-snehai-desai-on-adapting-the-dance-musical-for-las-taper-and-why-imelda-marcos-story-nervously-parallels-contemporary-americas",
@@ -99,7 +116,14 @@
         "date": "Sat, 21 Feb 2026 03:37:55 +0000",
         "image": "https://variety.com/wp-content/uploads/2026/02/01.-HERE-LIES-LOVE.-Photo-by-Jeff-Lorch.-.jpg",
         "tier": "major",
-        "source": "Variety Theater"
+        "source": "Variety Theater",
+        "keywords": [
+            "히어 라이즈 러브",
+            "데이비드 번",
+            "이멜다 마르코스",
+            "마크 테이퍼 포럼",
+            "이머시브 뮤지컬"
+        ]
     },
     {
         "id": "berlinale-tried-to-avoid-politics-its-winners-made-that-impossible",
@@ -109,7 +133,13 @@
         "date": "Sat, 21 Feb 2026 19:48:06 +0000",
         "image": "https://www.indiewire.com/wp-content/uploads/2026/02/GettyImages-2262827147.jpg?w=650",
         "tier": "major",
-        "source": "IndieWire"
+        "source": "IndieWire",
+        "keywords": [
+            "베를린영화제",
+            "황금곰상",
+            "압달라알카팁",
+            "정치예술"
+        ]
     },
     {
         "id": "climate-activist-group-that-disrupted-jeremy-strongmichael-imperioli-broadway-play-says-its-under-escalating-trump-fbi-watch",
@@ -119,7 +149,16 @@
         "date": "Fri, 20 Feb 2026 15:49:19 +0000",
         "image": "https://deadline.com/wp-content/uploads/2024/03/Screenshot-2024-03-14-at-11.51.32 PM.png",
         "tier": "major",
-        "source": "Deadline Theater"
+        "source": "Deadline Theater",
+        "keywords": [
+            "제레미 스트롱",
+            "민중의 적",
+            "브로드웨이",
+            "FBI 감시",
+            "기후 위기",
+            "마이클 임페리올리",
+            "입센"
+        ]
     },
     {
         "id": "breaking-baz-clint-dyer-set-to-soar-in-the-west-end-with-allblack-casts-for-three-vital-american-plays-including-one-flew-over-the-cuckoos-nest",
@@ -129,7 +168,16 @@
         "date": "Fri, 20 Feb 2026 14:00:25 +0000",
         "image": "https://deadline.com/wp-content/uploads/2026/01/Clint-Dyer-.jpg",
         "tier": "major",
-        "source": "Deadline Theater"
+        "source": "Deadline Theater",
+        "keywords": [
+            "클린트 다이어",
+            "뻐꾸기 둥지 위로 날아간 새",
+            "올드 빅",
+            "에런 피어",
+            "웨스트엔드",
+            "미국 연극",
+            "식민주의"
+        ]
     },
     {
         "id": "willie-colón-trailblazing-salsa-musician-dies-at-75",
@@ -139,7 +187,15 @@
         "date": "Sun, 22 Feb 2026 02:55:48 +0000",
         "image": "https://sb.scorecardresearch.com/p?c1=2&c2=6035310&c4=&cv=3.9&cj=1",
         "tier": "major",
-        "source": "The Hollywood Reporter"
+        "source": "The Hollywood Reporter",
+        "keywords": [
+            "Willie Colon",
+            "Salsa Legend",
+            "Fania Records",
+            "Nuyorican Culture",
+            "Latin Grammy",
+            "David Byrne"
+        ]
     },
     {
         "id": "kpop-demon-hunters-sweeps-annie-awards",
@@ -149,7 +205,15 @@
         "date": "Sun, 22 Feb 2026 05:49:10 +0000",
         "image": "https://sb.scorecardresearch.com/p?c1=2&c2=6035310&c4=&cv=3.9&cj=1",
         "tier": "major",
-        "source": "The Hollywood Reporter"
+        "source": "The Hollywood Reporter",
+        "keywords": [
+            "KPop 데몬 헌터즈",
+            "애니어워즈",
+            "넷플릭스",
+            "매기 강",
+            "아덴 초",
+            "K-팝"
+        ]
     },
     {
         "id": "kpop-demon-hunters-leads-2026-annie-award-winners--full-list",
@@ -159,7 +223,15 @@
         "date": "Sun, 22 Feb 2026 05:35:00 +0000",
         "image": "https://sb.scorecardresearch.com/p?c1=2&c2=6035310&c4=&cv=3.9&cj=1",
         "tier": "major",
-        "source": "IndieWire"
+        "source": "IndieWire",
+        "keywords": [
+            "애니어워드",
+            "KPopDemonHunters",
+            "아덴초",
+            "넷플릭스",
+            "애니메이션",
+            "로이스홀"
+        ]
     },
     {
         "id": "whos-afraid-of-the-next-stage",
@@ -169,7 +241,15 @@
         "date": "Wed, 18 Feb 2026 13:17:12 +0000",
         "image": "https://www.americantheatre.org/wp-content/uploads/ATweb-masthead-2023-return.jpg",
         "tier": "indie",
-        "source": "American Theatre"
+        "source": "American Theatre",
+        "keywords": [
+            "미국연극",
+            "사우스코스트레퍼토리",
+            "UC어바인",
+            "누가버지니아울프를두려워하랴",
+            "연극교육",
+            "현장실습"
+        ]
     },
     {
         "id": "leadership-changes-at-milagro-everyman-here-arts-center-and-more",
@@ -179,6 +259,14 @@
         "date": "Thu, 19 Feb 2026 16:14:26 +0000",
         "image": "https://www.americantheatre.org/wp-content/uploads/ATweb-masthead-2023-return.jpg",
         "tier": "indie",
-        "source": "American Theatre"
+        "source": "American Theatre",
+        "keywords": [
+            "밀라그로",
+            "에브리맨시어터",
+            "미국연극",
+            "캐스린뉴튼",
+            "라티네문화",
+            "오프브로드웨이"
+        ]
     }
 ]
