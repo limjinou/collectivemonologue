@@ -2,7 +2,7 @@ import feedparser
 import smtplib
 from email.mime.text import MIMEText
 import os
-from google import genai
+import google.generativeai as genai
 from datetime import datetime, timezone
 from dotenv import load_dotenv
 import json
@@ -16,19 +16,25 @@ import bs4
 load_dotenv()
 
 # API 키 및 설정
-GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "").strip()
+if not GEMINI_API_KEY:
+    print("❌ CRITICAL: GEMINI_API_KEY is missing in environment!")
+
 EMAIL_SENDER = os.getenv("EMAIL_SENDER")
 EMAIL_PASSWORD = os.getenv("EMAIL_PASSWORD")
 EMAIL_RECEIVER = os.getenv("EMAIL_RECEIVER")
 REDDIT_USER_AGENT = os.getenv("REDDIT_USER_AGENT", "CollectiveMonologue_Crawler/1.0")
 
-# Gemini 설정 (최신 SDK 및 고지능 모델 적용)
-client = None
+# Gemini 설정 (가장 안정적인 레거시 SDK 사용)
 if GEMINI_API_KEY:
-    client = genai.Client(api_key=GEMINI_API_KEY)
-# 모델 이원화 전략: 핵심 분석(Pro) / 요약 및 추천(Flash)
-PRO_MODEL = 'gemini-1.5-pro'
-FLASH_MODEL = 'gemini-1.5-flash'
+    try:
+        genai.configure(api_key=GEMINI_API_KEY)
+    except Exception as e:
+        print(f"❌ Gemini Configuration failed: {e}")
+
+# 모델 이원화 전략: 핵심 분석(Pro) / 요약 및 추천작(Flash)
+PRO_MODEL_ID = 'gemini-1.5-pro'
+FLASH_MODEL_ID = 'gemini-1.5-flash'
 
 # 메이저 소스 (브로드웨이 / 할리우드 메이저)
 MAJOR_FEEDS = {
@@ -179,7 +185,7 @@ def fetch_wikipedia_image(keywords):
     return ""
 
 def translate_and_summarize(text, title, reddit_comments=""):
-    if not client:
+    if not GEMINI_API_KEY:
         return {"title_en": title, "summary_en": "No API Key provided.", "keywords": []}
 
     if not text or len(text) < 50:
@@ -232,15 +238,15 @@ def translate_and_summarize(text, title, reddit_comments=""):
 
     # 재시도 로직
     max_retries = 3
-    base_delay = 5
+    base_delay = 10
 
     for attempt in range(max_retries):
         try:
-            print(f"   🤖 [{attempt+1}/{max_retries}] {PRO_MODEL} 분석 시도 중...")
-            response = client.models.generate_content(
-                model=PRO_MODEL,
-                contents=prompt,
-                config={"response_mime_type": "application/json"}
+            print(f"   🤖 [{attempt+1}/{max_retries}] {PRO_MODEL_ID} 분석 시도 중...")
+            model = genai.GenerativeModel(PRO_MODEL_ID)
+            response = model.generate_content(
+                prompt,
+                generation_config={"response_mime_type": "application/json"}
             )
             print("   ✨ 고지능 분석 완료.")
             return json.loads(response.text)
@@ -254,12 +260,12 @@ def translate_and_summarize(text, title, reddit_comments=""):
                 break
     
     # [Fallback] Pro 모델 실패 시 Flash 모델로 긴급 전환
-    print(f"   🔄 Pro 모델 실패. {FLASH_MODEL}로 긴급 전환하여 분석합니다...")
+    print(f"   🔄 Pro 모델 실패. {FLASH_MODEL_ID}로 긴급 전환하여 분석합니다...")
     try:
-        response = client.models.generate_content(
-            model=FLASH_MODEL,
-            contents=prompt,
-            config={"response_mime_type": "application/json"}
+        model = genai.GenerativeModel(FLASH_MODEL_ID)
+        response = model.generate_content(
+            prompt,
+            generation_config={"response_mime_type": "application/json"}
         )
         print("   ✅ Flash 모델로 분석 대체 완료.")
         return json.loads(response.text)
@@ -324,7 +330,7 @@ def fetch_broadway_grosses():
                 item['rank'] = i + 1
             
             # LLM으로 각 공연에 대한 한 줄 한국어 소개 추가
-            if client and top5:
+            if GEMINI_API_KEY and top5:
                 try:
                     show_list = ", ".join([s['show'] for s in top5])
                     desc_prompt = f"""아래 5개 브로드웨이 공연에 대해 각각 한국어로 한 줄(15~25자) 소개를 작성해주세요.
@@ -336,7 +342,8 @@ def fetch_broadway_grosses():
 예시: {{"Hamilton": "미국 건국의 역사를 힙합으로 풀어낸 뮤지컬"}}
 """
                     # 가벼운 작업은 고속 모델(Flash) 사용하여 쿼터 절약
-                    desc_resp = client.models.generate_content(model=FLASH_MODEL, contents=desc_prompt).text.strip()
+                    model = genai.GenerativeModel(FLASH_MODEL_ID)
+                    desc_resp = model.generate_content(desc_prompt).text.strip()
                     if desc_resp.startswith("```json"):
                         desc_resp = desc_resp[7:]
                     if desc_resp.endswith("```"):
@@ -354,7 +361,7 @@ def fetch_broadway_grosses():
 
 def generate_weekly_recommendations(articles_data):
     """최근 인디 매체 중심 기사 데이터를 바탕으로 오프-브로드웨이/시카고 추천작 3개를 뽑습니다."""
-    if not client or not articles_data:
+    if not GEMINI_API_KEY or not articles_data:
         return []
 
     context = ""
@@ -378,7 +385,8 @@ def generate_weekly_recommendations(articles_data):
     """
     try:
         # 가벼운 작업은 고속 모델(Flash) 사용하여 쿼터 절약
-        response = client.models.generate_content(model=FLASH_MODEL, contents=prompt).text.strip()
+        model = genai.GenerativeModel(FLASH_MODEL_ID)
+        response = model.generate_content(prompt).text.strip()
         if response.startswith("```json"):
             response = response[7:]
         if response.endswith("```"):
