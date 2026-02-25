@@ -236,32 +236,41 @@ def translate_and_summarize(text, title, reddit_comments=""):
 
     for attempt in range(max_retries):
         try:
+            print(f"   🤖 [{attempt+1}/{max_retries}] {PRO_MODEL} 분석 시도 중...")
             response = client.models.generate_content(
                 model=PRO_MODEL,
                 contents=prompt,
-                config={
-                    "response_mime_type": "application/json"
-                }
+                config={"response_mime_type": "application/json"}
             )
-            # 요청 성공 후 RPM 준수를 위해 짧은 지연 (Free tier 2 RPM 대응)
-            print("   ✨ 고지능 분석 완료. 쿼터 준수를 위해 30초 대기 중...")
-            time.sleep(30)
+            print("   ✨ 고지능 분석 완료.")
             return json.loads(response.text)
         except Exception as e:
             if "429" in str(e) or "quota" in str(e).lower():
                 wait_time = base_delay * (2 ** attempt) + (attempt * 2)
-                print(f"⚠️ Quota check. Waiting {wait_time}s... ({attempt+1}/{max_retries})")
+                print(f"   ⚠️ Pro 쿼터 초과. {wait_time}초 대기 후 재시도...")
                 time.sleep(wait_time)
             else:
-                print(f"⚠️ Summary failed: {e}")
+                print(f"   ⚠️ Pro 분석 중 에러: {e}")
                 break
     
-    return {
-        "title_kr": title,
-        "summary_kr": "정보를 불러오는 중 오류가 발생했습니다.",
-        "content_kr": "본문을 처리하지 못했습니다.",
-        "keywords": []
-    }
+    # [Fallback] Pro 모델 실패 시 Flash 모델로 긴급 전환
+    print(f"   🔄 Pro 모델 실패. {FLASH_MODEL}로 긴급 전환하여 분석합니다...")
+    try:
+        response = client.models.generate_content(
+            model=FLASH_MODEL,
+            contents=prompt,
+            config={"response_mime_type": "application/json"}
+        )
+        print("   ✅ Flash 모델로 분석 대체 완료.")
+        return json.loads(response.text)
+    except Exception as e:
+        print(f"   ❌ 긴급 Flash 분석도 실패: {e}")
+        return {
+            "title_kr": title,
+            "summary_kr": "AI 모델 일시적 과부하로 정보를 불러오지 못했습니다.",
+            "content_kr": "본문 처리 중 오류가 발생했습니다. 잠시 후 다시 시도해 주세요.",
+            "keywords": []
+        }
 
 def fetch_broadway_grosses():
     """Playbill.com에서 이번 주 브로드웨이 박스오피스 데이터를 가져옵니다."""
@@ -621,23 +630,22 @@ def crawl_rss():
     # 여기서는 병렬 처리 전 리스트를 슬라이싱하여 제미나이 리소스 집중
     all_entries = major_entries[:1] + indie_entries[:1] # 각각 가장 최신 1개씩 총 2개만 선별
 
-    # 기사 퀄리티 및 쿼터 준수를 위해 순차 처리 (max_workers=1)
-    # Pro 모델은 Free Tier에서 RPM 제한이 엄격하므로 병렬 처리를 피하는 것이 안전합니다.
-    with concurrent.futures.ThreadPoolExecutor(max_workers=1) as executor:
-        future_to_entry = {
-            executor.submit(process_entry, entry, source, tier): (entry, source, tier)
-            for entry, source, tier in all_entries
-        }
-        for future in concurrent.futures.as_completed(future_to_entry):
-            try:
-                data = future.result()
-                if data: # 검증 통과한 데이터만 추가
-                    if data['tier'] == 'major':
-                        major_results.append(data)
-                    else:
-                        indie_results.append(data)
-            except Exception as exc:
-                print(f"❌ 처리 중 에러 발생: {exc}")
+    # 기사 퀄리티 및 쿼터 준수를 위해 1개씩 순차 처리 (Zero-Failure)
+    # 한 기사 처리가 끝날 때마다 충분한 휴식 시간을 둡니다.
+    for entry, source, tier in all_entries:
+        try:
+            data = process_entry(entry, source, tier)
+            if data:
+                if data['tier'] == 'major':
+                    major_results.append(data)
+                else:
+                    indie_results.append(data)
+            
+            # 다음 기사 처리 전 글로벌 쿨다운 (30초)
+            print("   ⏳ 쿼터 안전 확보를 위해 30초간 기기 냉각 중...")
+            time.sleep(30)
+        except Exception as exc:
+            print(f"❌ 기사 처리 중 에러 발생: {exc}")
 
     return major_results, indie_results
 
