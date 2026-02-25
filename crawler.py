@@ -34,9 +34,9 @@ if GEMINI_API_KEY:
     except Exception as e:
         print(f"❌ Gemini Client initialization failed: {e}")
 
-# 모델 이원화 전략: 가용 리스트상 실재하는 2.0 Flash 엔진으로 고정 (404/429 회피)
-PRO_MODEL_ID = 'gemini-2.0-flash'
-FLASH_MODEL_ID = 'gemini-2.0-flash'
+# 모델 이원화 전략: 가용 리스트상 가장 가벼운 엔진으로 고정 (쿼터 에러 원천 차단)
+PRO_MODEL_ID = 'gemini-flash-latest'
+FLASH_MODEL_ID = 'gemini-flash-latest'
 
 # 메이저 소스 (브로드웨이 / 할리우드 메이저)
 MAJOR_FEEDS = {
@@ -193,8 +193,8 @@ def translate_and_summarize(text, title, reddit_comments=""):
     if not text or len(text) < 50:
         return {"title_en": title, "summary_en": "Content too short or extraction failed.", "keywords": []}
     
-    # TPM 초과 방지를 위해 텍스트 처리량을 4000자로 제한 (안정성 확보)
-    truncated_text = text[:4000]
+    # TPM 초과 방지를 위해 텍스트 처리량을 2000자로 대폭 제한 (확정적 생성 보장)
+    truncated_text = text[:2000]
 
     reddit_section = ""
     if reddit_comments:
