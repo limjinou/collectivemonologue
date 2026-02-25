@@ -110,8 +110,32 @@ async function renderSingleArticle() {
     const article = await response.json();
 
     // Title & Meta 설정
-    document.title = `${article.title_kr || article.title} | Stageside`;
-    document.querySelector('.article-title').textContent = article.title_kr || article.title;
+    const titleText = article.title_kr || article.title;
+    document.title = `${titleText} | Stageside`;
+    document.querySelector('.article-title').textContent = titleText;
+
+    // --- Dynamic SEO Meta Update ---
+    const description = article.summary_kr || "Stageside의 고품격 연극/영화 분석 리포트";
+    const imageUrl = article.image || "";
+    const canonicalUrl = window.location.href;
+
+    // Meta Description & Canonical
+    updateMeta('name', 'description', description);
+    updateLink('canonical', canonicalUrl);
+
+    // Open Graph
+    updateMeta('property', 'og:title', titleText);
+    updateMeta('property', 'og:description', description);
+    updateMeta('property', 'og:image', imageUrl);
+    updateMeta('property', 'og:url', canonicalUrl);
+
+    // X (Twitter) Card
+    updateMeta('name', 'twitter:title', titleText);
+    updateMeta('name', 'twitter:description', description);
+    updateMeta('name', 'twitter:image', imageUrl);
+
+    // JSON-LD Update
+    updateStructuredData(article);
 
     let formattedDate = article.date;
     try {
@@ -125,7 +149,7 @@ async function renderSingleArticle() {
     // 이미지 처리
     const heroContainer = document.querySelector('.article-hero-image-wrapper');
     if (article.image) {
-      heroContainer.innerHTML = `<img src="${article.image}" alt="${article.title}">`;
+      heroContainer.innerHTML = `<img src="${article.image}" alt="${titleText} - Stageside의 분석 리포트 이미지" class="fade-in">`;
       heroContainer.style.display = 'block';
     } else {
       heroContainer.style.display = 'none';
@@ -226,3 +250,63 @@ function initCookieBanner() {
 document.addEventListener('DOMContentLoaded', () => {
   initCookieBanner();
 });
+
+/* --- SEO Helpers --- */
+function updateMeta(attr, value, content) {
+  let meta = document.querySelector(`meta[${attr}="${value}"]`);
+  if (!meta) {
+    meta = document.createElement('meta');
+    meta.setAttribute(attr, value);
+    document.head.appendChild(meta);
+  }
+  meta.setAttribute('content', content);
+}
+
+function updateLink(rel, href) {
+  let link = document.querySelector(`link[rel="${rel}"]`);
+  if (!link) {
+    link = document.createElement('link');
+    link.setAttribute('rel', rel);
+    document.head.appendChild(link);
+  }
+  link.setAttribute('href', href);
+}
+
+function updateStructuredData(article) {
+  const scriptTag = document.getElementById('structured-data');
+  if (!scriptTag) return;
+
+  const title = article.title_kr || article.title;
+  const description = article.summary_kr || "";
+  const imageUrl = article.image || "";
+  const datePublished = article.date ? new Date(article.date).toISOString() : new Date().toISOString();
+
+  const data = {
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    "headline": title,
+    "description": description,
+    "image": [imageUrl],
+    "datePublished": datePublished,
+    "dateModified": datePublished,
+    "author": {
+      "@type": "Organization",
+      "name": "Stageside",
+      "url": "https://limjinou.github.io/collectivemonologue/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Stageside",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://limjinou.github.io/collectivemonologue/assets/logo.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": window.location.href
+    }
+  };
+
+  scriptTag.text = JSON.stringify(data);
+}

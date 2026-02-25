@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://collectivemonologue.pages.dev/sitemap.xml
+Sitemap: https://limjinou.github.io/collectivemonologue/sitemap.xml

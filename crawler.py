@@ -228,7 +228,7 @@ def translate_and_summarize(text, title, reddit_comments=""):
     {{
         "title_kr": "기사의 본질과 에디터의 미학이 담긴 매력적인 제목",
         "summary_kr": "독자의 지적 호기심을 자극하는 1-2문장의 고품격 요약",
-        "content_kr": "HTML tags: 뉴스 코어 -> <h3>[에디터의 시선]</h3><p>...심층 분석...</p> -> <h3>[현지 팬들의 시선: POSITIVE & NEGATIVE]</h3><ul>...</ul> -> <h3>[용어 한 스푼]</h3><p>...친절한 설명...</p>",
+        "content_kr": "HTML tags 활용 의무: 1단계: <h3>기사 핵심 요약</h3><p>...사실 관계 본문...</p> -> 2단계: <h3>[에디터의 시선]</h3><p>...심층 분석...</p> -> 3단계: <h3>[현지 팬들의 시선: POSITIVE & NEGATIVE]</h3><ul>...</ul> -> 4단계: <h3>[용어 한 스푼]</h3><p>...친절한 설명...</p>",
         "keywords": ["키워드1", "키워드2", "키워드3"]
     }}
 
