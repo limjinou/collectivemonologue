@@ -23,7 +23,7 @@ if not GEMINI_API_KEY:
 EMAIL_SENDER = os.getenv("EMAIL_SENDER")
 EMAIL_PASSWORD = os.getenv("EMAIL_PASSWORD")
 EMAIL_RECEIVER = os.getenv("EMAIL_RECEIVER")
-REDDIT_USER_AGENT = os.getenv("REDDIT_USER_AGENT", "CollectiveMonologue_Crawler/1.0")
+REDDIT_USER_AGENT = os.getenv("REDDIT_USER_AGENT", "Stageside_Crawler/1.0")
 
 # Gemini 설정 (최신 SDK 사용)
 client = None
@@ -174,7 +174,7 @@ def fetch_wikipedia_image(keywords):
                 "&prop=pageimages&format=json&pithumbsize=800"
             )
             resp = requests.get(url, timeout=5,
-                                headers={"User-Agent": "CollectiveMonologue/1.0"})
+                                headers={"User-Agent": "Stageside/1.0"})
             data = resp.json()
             pages = data.get("query", {}).get("pages", {})
             for page in pages.values():
@@ -208,11 +208,11 @@ def translate_and_summarize(text, title, reddit_comments=""):
         """
 
     prompt = f"""
-    You are the Senior Chief Editor of "Stageside", a world-class premium magazine specializing in American theater and cinematic arts. 
-    Your expertise is comparable to the most respected cultural critics in South Korea.
+    You are the Senior Chief Editor of "Stageside", a world-class premium magazine specializing in American theater arts. 
+    Your expertise is comparable to the most respected theater critics and dramaturgs in South Korea.
 
-    Below is an article titled '{title}'. Your mission is to craft a profound, intellectually stimulating Korean editorial.
-    Leverage your advanced reasoning capabilities to provide deep cultural insights.
+    Below is an article titled '{title}'. Your mission is to craft a profound, intellectually stimulating Korean editorial focusing on performing arts.
+    Leverage your advanced reasoning capabilities to provide deep theatrical and cultural insights.
 
     STRICT REQUIREMENTS:
     1. **Masterful Storytelling**: Use sophisticated yet accessible Korean. Your tone should be warm, authoritative, and deeply insightful, like a veteran cultural critic for a premium print magazine.
