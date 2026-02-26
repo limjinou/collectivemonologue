@@ -215,20 +215,19 @@ def translate_and_summarize(text, title, reddit_comments=""):
     Leverage your advanced reasoning capabilities to provide deep cultural insights.
 
     STRICT REQUIREMENTS:
-    1. **Masterful Storytelling**: Use sophisticated yet accessible Korean. Your tone should be warm, authoritative, and insightful.
-    2. **Deep Editorial Note (에디터의 시선)**: This section MUST be the highlight. Don't just summarize; provide a multi-layered analysis of how this news impacts the global stage and what lessons it might evoke for the Korean audience.
-    3. **Balanced Fandom Dialectic (현지 팬들의 시선: POSITIVE & NEGATIVE)**: 
-       - POSITIVE: Synthesize the core reasons for enthusiasm.
-       - NEGATIVE: Identify the underlying concerns or skepticism.
-       - List these using strictly `<ul>` and `<li>` tags.
+    1. **Masterful Storytelling**: Use sophisticated yet accessible Korean. Your tone should be warm, authoritative, and deeply insightful, like a veteran cultural critic for a premium print magazine.
+    2. **Dynamic Structure (Avoid Generic Headers)**: Do NOT use generic headers like '기사 핵심 요약'. Instead, create **Creative Subheadings** (`<h3>`) that capture the poetic or intellectual essence of each section.
+    3. **Visual & Narrative Depth**:
+       - Use `<blockquote>` to highlight powerful quotes from the article or to present your most striking editorial insights.
+       - Ensure paragraphs (`<p>`) are well-separated and offer a progressive narrative flow.
+       - At least 3-4 distinct sections including a deep 'Editor's Perspective' and a 'Local Fan/Critic Dialectic'.
     4. **Enlightening Keyword Dictionary (용어 한 스푼)**: Choose 1-2 specialized terms. Rewrite the definition in a way that feels like a friendly master artist explaining a secret of the trade. 
-       - Explain the historical context or the 'vibe' of the term, not just the dictionary meaning.
 
     JSON Structure:
     {{
         "title_kr": "기사의 본질과 에디터의 미학이 담긴 매력적인 제목",
         "summary_kr": "독자의 지적 호기심을 자극하는 1-2문장의 고품격 요약",
-        "content_kr": "HTML tags 활용 의무: 1단계: <h3>기사 핵심 요약</h3><p>...사실 관계 본문...</p> -> 2단계: <h3>[에디터의 시선]</h3><p>...심층 분석...</p> -> 3단계: <h3>[현지 팬들의 시선: POSITIVE & NEGATIVE]</h3><ul>...</ul> -> 4단계: <h3>[용어 한 스푼]</h3><p>...친절한 설명...</p>",
+        "content_kr": "HTML tags 활용: 기사 인트로 -> <h3>[동적 소제목]</h3><p>...심층 분석...</p> -> <blockquote>...핵심 통찰 또는 인용...</blockquote> -> <h3>[동적 소제목]</h3><p>...현지 반응 분석...</p> -> <h3>[용어 한 스푼]</h3><p>...아름다운 용어 설명...</p>",
         "keywords": ["키워드1", "키워드2", "키워드3"]
     }}
 
