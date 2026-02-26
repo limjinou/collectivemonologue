@@ -8,6 +8,19 @@
   --body-text-size: clamp(14px, 1.1vw, 16px);
 }
 
+/* SEO Hidden */
+.seo-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
 body {
   font-family: 'Bookk Gothic', 'Inter', -apple-system, sans-serif;
   font-size: var(--base-font-size);
@@ -345,6 +358,59 @@ img {
     justify-content: center;
     flex-wrap: wrap;
   }
+}
+
+/* Cookie Banner Base Styles */
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: inherit;
+  font-size: 11px;
+  z-index: 10000;
+  box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.cookie-banner p {
+  margin: 0;
+  line-height: 1.5;
+  max-width: 800px;
+}
+
+.cookie-buttons {
+  display: flex;
+  gap: 12px;
+  margin-left: 20px;
+}
+
+.btn-cookie {
+  background-color: #fff;
+  color: #000;
+  border: none;
+  padding: 8px 16px;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-cookie:hover {
+  background-color: #ddd;
+}
+
+.btn-reject {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #555;
 }
 
 /* Cookie Banner Customization */
