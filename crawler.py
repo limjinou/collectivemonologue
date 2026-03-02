@@ -40,20 +40,20 @@ FLASH_MODEL_ID = 'gemini-flash-latest'
 
 # 메이저 소스 (브로드웨이 / 할리우드 메이저)
 MAJOR_FEEDS = {
-    "Playbill": "https://www.playbill.com/rss",
-    "BroadwayWorld": "https://www.broadwayworld.com/rss/news.xml",
-    "Deadline Theater": "https://deadline.com/v/theater/feed/",
-    "The Hollywood Reporter": "https://www.hollywoodreporter.com/feed/",
     "IndieWire": "https://www.indiewire.com/feed/",
+    "Deadline Theater": "https://deadline.com/v/theater/feed/",
+    "Broadway.com": "https://www.broadway.com/feeds/buzz/latest/",
+    "The Hollywood Reporter": "https://www.hollywoodreporter.com/feed/",
     "Variety Theater": "https://variety.com/v/legit/feed/",
+    "BroadwayWorld": "https://www.broadwayworld.com/rss/newsroom", # URL 업데이트
 }
 
 # 인디 소스 (대학로 감성, 비영리, 소규모 극장)
 INDIE_FEEDS = {
     "American Theatre": "https://www.americantheatre.org/feed/",
-    "HowlRound": "https://howlround.com/rss.xml",  # 온라인 비영리 연극 매거진 HowlRound
+    "HowlRound": "https://howlround.com/rss.xml",
     "TheaterMania": "https://www.theatermania.com/feed/",
-    "Backstage": "https://www.backstage.com/magazine/article/feed/",
+    # Backstage는 현재 RSS 미비로 제외
 }
 
 def fetch_article_content(url):
