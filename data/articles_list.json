@@ -1,5 +1,27 @@
 [
     {
+        "id": "jonathan-nortons-moments-of-change",
+        "title": "Jonathan Norton’s Moments of Change",
+        "title_kr": "조나단 노튼의 변주곡: 댈러스의 골목에서 역사의 무대로 흐르는 선율",
+        "summary_kr": "댈러스의 정체성을 연극적 미학으로 승화시켜 온 극작가 조나단 노튼. 그가 낡은 연극 팜플렛에서 꺼내 올린 추억과 역사의 빈틈을 메우는 지적 상상력을 탐구합니다.",
+        "date": "Fri, 27 Feb 2026 22:15:27 +0000",
+        "image": "https://www.americantheatre.org/wp-content/uploads/jonathan-norton_higher-res_photo-by-Kent-Barker-989x1024.jpg",
+        "tier": "indie",
+        "source": "American Theatre",
+        "link": "https://www.americantheatre.org/2026/02/27/jonathan-nortons-moments-of-change/"
+    },
+    {
+        "id": "oscar-nominees-clint-bentley-and-adolpho-veloso-narrate-a-train-dreams-visual-journey",
+        "title": "Oscar Nominees Clint Bentley and Adolpho Veloso Narrate a ‘Train Dreams’ Visual Journey",
+        "title_kr": "빛과 침묵으로 엮어낸 기억의 앙상블: '트레인 드림즈'가 머문 찰나의 기록",
+        "summary_kr": "영화적 서사를 정지된 이미지의 미학으로 치환한 '트레인 드림즈'. 클린트 벤틀리와 아돌포 벨로소가 빛의 층위로 재구성한 삶의 고고학을 스테이지사이드의 시선으로 분석합니다.",
+        "date": "Tue, 03 Mar 2026 01:00:00 +0000",
+        "image": "https://www.indiewire.com/wp-content/uploads/2026/03/GettyImages-2263694806.jpg?w=650",
+        "tier": "major",
+        "source": "IndieWire",
+        "link": "https://www.indiewire.com/news/events/clint-bentley-adolpho-veloso-interview-train-dreams-images-1235182193/"
+    },
+    {
         "id": "sinners-scores-big-actor-awards-wins-will-oscar-votes-follow",
         "title": "‘Sinners’ Scores Big Actor Awards Wins. Will Oscar Votes Follow?",
         "title_kr": "페르소나의 향연, '시너스(Sinners)'가 던진 오스카의 마지막 승부수",
