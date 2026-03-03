@@ -1,5 +1,5 @@
 /* ============================================
-   Stageside — Minimalist Redesign JS
+   Stage-Is — Minimalist Redesign JS
    ============================================ */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -111,11 +111,11 @@ async function renderSingleArticle() {
 
     // Title & Meta 설정
     const titleText = article.title_kr || article.title;
-    document.title = `${titleText} | Stageside`;
+    document.title = `${titleText} | Stage-Is`;
     document.querySelector('.article-title').textContent = titleText;
 
     // --- Dynamic SEO Meta Update ---
-    const description = article.summary_kr || "Stageside의 고품격 연극/영화 분석 리포트";
+    const description = article.summary_kr || "Stage-Is의 고품격 연극/영화 분석 리포트";
     const imageUrl = article.image || "";
     const canonicalUrl = window.location.href;
 
@@ -149,7 +149,7 @@ async function renderSingleArticle() {
     // 이미지 처리
     const heroContainer = document.querySelector('.article-hero-image-wrapper');
     if (article.image) {
-      heroContainer.innerHTML = `<img src="${article.image}" alt="${titleText} - Stageside의 분석 리포트 이미지" class="fade-in">`;
+      heroContainer.innerHTML = `<img src="${article.image}" alt="${titleText} - Stage-Is의 분석 리포트 이미지" class="fade-in">`;
       heroContainer.style.display = 'block';
     } else {
       heroContainer.style.display = 'none';
@@ -157,7 +157,7 @@ async function renderSingleArticle() {
 
     // 본문 렌더링
     const contentHtml = article.content_kr || article.summary_kr || "<p>본문 내용이 없습니다.</p>";
-    const attributionHtml = `<p style="margin-top: 80px; font-size: 12px; font-weight: 500; color: #666; text-transform: none; text-align: center;">스테이지사이드 편집부에 의해 작성된 글입니다.</p>`;
+    const attributionHtml = `<p style="margin-top: 80px; font-size: 12px; font-weight: 500; color: #666; text-transform: none; text-align: center;">스테이지이즈 편집부에 의해 작성된 글입니다.</p>`;
     document.querySelector('.article-body').innerHTML = contentHtml + attributionHtml;
 
   } catch (error) {
@@ -291,15 +291,15 @@ function updateStructuredData(article) {
     "dateModified": datePublished,
     "author": {
       "@type": "Organization",
-      "name": "Stageside",
-      "url": "https://limjinou.github.io/collectivemonologue/"
+      "name": "Stage-Is",
+      "url": "https://stage-is.com/"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "Stageside",
+      "name": "Stage-Is",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://limjinou.github.io/collectivemonologue/assets/logo.png"
+        "url": "https://stage-is.com/assets/logo.png"
       }
     },
     "mainEntityOfPage": {

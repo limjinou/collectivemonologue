@@ -1,12 +1,12 @@
 import os
 
 replacements = {
-    "STAGESIDE": "STAGESIDE",
-    "Stageside": "Stageside",
+    "STAGE-IS": "STAGE-IS",
+    "Stage-Is": "Stage-Is",
     "stageside": "stageside",
-    "스테이지사이드": "스테이지사이드",
-    "스테이지사이드": "스테이지사이드",
-    "스테이지사이드": "스테이지사이드"
+    "스테이지이즈": "스테이지이즈",
+    "스테이지이즈": "스테이지이즈",
+    "스테이지이즈": "스테이지이즈"
 }
 
 def process_file(filepath):

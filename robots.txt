@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://limjinou.github.io/collectivemonologue/sitemap.xml
+Sitemap: https://stage-is.com/sitemap.xml

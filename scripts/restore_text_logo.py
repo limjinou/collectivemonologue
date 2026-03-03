@@ -2,7 +2,7 @@ import os
 import re
 
 files = ['index.html', 'article.html', 'category.html', 'about.html', 'contact.html', 'privacy.html']
-logo_text_html = '<a href="index.html" style="text-decoration: none; color: inherit; font-size: 1.2rem; font-weight: 600; letter-spacing: 0.1em;">STAGESIDE</a>'
+logo_text_html = '<a href="index.html" style="text-decoration: none; color: inherit; font-size: 1.2rem; font-weight: 600; letter-spacing: 0.1em;">STAGE-IS</a>'
 
 for file in files:
     if os.path.exists(file):

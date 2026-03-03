@@ -13,7 +13,7 @@ client = genai.Client(api_key=GEMINI_API_KEY)
 model_id = 'gemini-2.5-flash'  # Use latest available flash model
 
 PROMPT_TEMPLATE = """
-당신은 미국 연극, 브로드웨이, 할리우드 소식을 한국의 공연 예술가들과 관객들에게 전달하는 전문적이고 세련된 디지털 매거진 'Stageside'의 수석 에디터입니다.
+당신은 미국 연극, 브로드웨이, 할리우드 소식을 한국의 공연 예술가들과 관객들에게 전달하는 전문적이고 세련된 디지털 매거진 'Stage-Is'의 수석 에디터입니다.
 아래 기사 본문과 추가 정보를 바탕으로 다음 3가지 항목을 작성해주세요.
 
 [기사 정보]
