@@ -1,5 +1,27 @@
 [
     {
+        "id": "this-month-in-theatre-history",
+        "title": "This Month in Theatre History",
+        "title_kr": "3월의 무대, 평범한 삶이 거장이 되는 숭고한 순간들",
+        "summary_kr": "호튼 푸트의 고요한 관조부터 퓰리처상의 치열한 예술적 정체성 논쟁까지, 미국 연극의 뿌리를 이루는 결정적 순간들을 'Stage-Is'의 시선으로 조명합니다.",
+        "date": "Tue, 03 Mar 2026 17:42:39 +0000",
+        "image": "https://www.americantheatre.org/wp-content/uploads/2666_10-2.jpg",
+        "tier": "indie",
+        "source": "American Theatre",
+        "link": "https://www.americantheatre.org/2026/03/03/this-month-in-theatre-history-133/"
+    },
+    {
+        "id": "why-did-dropout-a-progressive-proqueer-indie-streaming-service-risk-a-cameo-on-the-rookie",
+        "title": "Why Did Dropout (a Progressive, Pro-Queer Indie Streaming Service) Risk a Cameo on ‘The Rookie’?",
+        "title_kr": "경계를 허무는 실험인가, 신념의 훼손인가: Dropout이 '더 루키'라는 거대 서사에 던진 승부수",
+        "summary_kr": "진보적 인디 스트리밍의 상징 Dropout이 보수적 색채의 지상파 드라마와 조우하며 발생한 불협화음을 통해, 현대 관객이 스트리밍 플랫폼에 투사하는 '이데올로기적 피난처'로서의 열망을 심층 분석합니다.",
+        "date": "Tue, 03 Mar 2026 23:30:00 +0000",
+        "image": "https://www.indiewire.com/wp-content/uploads/2026/03/Screenshot-2026-03-03-at-2.11.29-PM.png?w=650",
+        "tier": "major",
+        "source": "IndieWire",
+        "link": "https://www.indiewire.com/features/commentary/dropout-the-rookie-crossover-controversy-explained-1235182321/"
+    },
+    {
         "id": "jonathan-nortons-moments-of-change",
         "title": "Jonathan Norton’s Moments of Change",
         "title_kr": "조나단 노튼의 변주곡: 댈러스의 골목에서 역사의 무대로 흐르는 선율",
