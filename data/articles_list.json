@@ -1,5 +1,27 @@
 [
     {
+        "id": "bernard-weiner-san-francisco-theatres-chronicler",
+        "title": "Bernard Weiner: San Francisco Theatre’s Chronicler",
+        "title_kr": "시대의 파동을 활자로 새기다: 샌프란시스코의 영원한 연대기 작가, 버나드 와이너",
+        "summary_kr": "전통의 격식을 벗어던지고 반문화의 격랑 속으로 뛰어든 비평가, 버나드 와이너가 남긴 샌프란시스코 연극의 찬란한 유산과 그 지적 통찰을 조명합니다.",
+        "date": "Wed, 04 Mar 2026 15:54:43 +0000",
+        "image": "https://www.americantheatre.org/wp-includes/images/media/default.svg",
+        "tier": "indie",
+        "source": "American Theatre",
+        "link": "https://www.americantheatre.org/2026/03/04/bernard-weiner-san-francisco-theatres-chronicler/"
+    },
+    {
+        "id": "young-sherlock-stars-hero-fiennes-tiffin-and-joseph-fiennes-crack-the-case-on-big-spoilers-and-real-chemistry",
+        "title": "‘Young Sherlock’ Stars Hero Fiennes Tiffin and Joseph Fiennes Crack the Case on Big Spoilers and Real Chemistry",
+        "title_kr": "혈육이라는 이름의 거울: '영 셜록'이 그려낸 피네스 가문의 예술적 조우",
+        "summary_kr": "배우 히어로 피네스 티핀과 그의 실제 삼촌 조셉 피네스가 빚어내는 연기적 앙상블, 그 뜨거운 혈통의 서사가 전설적인 탐정의 기원을 어떻게 완성했는지 심층 분석합니다.",
+        "date": "Wed, 04 Mar 2026 22:00:00 +0000",
+        "image": "https://www.indiewire.com/wp-content/uploads/2026/03/GettyImages-2263382304.jpg?w=650",
+        "tier": "major",
+        "source": "IndieWire",
+        "link": "https://www.indiewire.com/features/interviews/young-sherlock-hero-fiennes-tiffin-joseph-fiennes-spoilers-1235182460/"
+    },
+    {
         "id": "this-month-in-theatre-history",
         "title": "This Month in Theatre History",
         "title_kr": "3월의 무대, 평범한 삶이 거장이 되는 숭고한 순간들",
