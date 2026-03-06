@@ -1,5 +1,71 @@
 [
     {
+        "id": "a-curtain-call-for-the-life-and-legacy-of-othell-j-miller",
+        "title": "A Curtain Call for the Life and Legacy of Othell J. Miller",
+        "title_kr": "무대 위의 인문학자, 오델 J. 밀러가 남긴 생애 가장 아름다운 ‘미장센’",
+        "summary_kr": "예술가이자 스승으로서 시대를 호흡하며 현대 미국의 시대정신을 무대로 옮겼던 ‘미스터 시어터’, 오델 J. 밀러의 고결한 예술적 궤적을 추모하다.",
+        "date": "Thu, 05 Mar 2026 21:40:34 +0000",
+        "image": "https://www.americantheatre.org/wp-content/uploads/Tylie-Shider_Othell-Miller_Premiere-Stages.jpg",
+        "tier": "indie",
+        "source": "American Theatre",
+        "link": "https://www.americantheatre.org/2026/03/05/a-curtain-call-for-the-life-and-legacy-of-othell-j-miller/"
+    },
+    {
+        "id": "the-stars-of-deli-boys-explain-the-different-types-of-excitement-they-felt-before-filming-seasons-1-and-2",
+        "title": "The Stars of ‘Deli Boys’ Explain the Different Types of Excitement They Felt Before Filming Seasons 1 and 2",
+        "title_kr": "미지의 설렘에서 예술적 안식으로: ‘델리 보이즈’가 증명한 관계의 미학",
+        "summary_kr": "불확실한 기대를 안고 출발했던 시즌 1을 지나, 집과 같은 편안한 유대감으로 회귀하는 배우들의 고백을 통해 공연 예술이 선사하는 진정한 연대의 가치를 조명합니다.",
+        "date": "Fri, 06 Mar 2026 00:30:00 +0000",
+        "image": "https://www.indiewire.com/wp-content/uploads/2026/02/P10441VE.jpg?w=650",
+        "tier": "major",
+        "source": "IndieWire",
+        "link": "https://www.indiewire.com/news/events/deli-boys-independent-spirit-awards-lavazza-coffee-break-1235180832/"
+    },
+    {
+        "id": "bernard-weiner-san-francisco-theatres-chronicler",
+        "title": "Bernard Weiner: San Francisco Theatre’s Chronicler",
+        "title_kr": "시대의 파동을 활자로 새기다: 샌프란시스코의 영원한 연대기 작가, 버나드 와이너",
+        "summary_kr": "전통의 격식을 벗어던지고 반문화의 격랑 속으로 뛰어든 비평가, 버나드 와이너가 남긴 샌프란시스코 연극의 찬란한 유산과 그 지적 통찰을 조명합니다.",
+        "date": "Wed, 04 Mar 2026 15:54:43 +0000",
+        "image": "https://www.americantheatre.org/wp-includes/images/media/default.svg",
+        "tier": "indie",
+        "source": "American Theatre",
+        "link": "https://www.americantheatre.org/2026/03/04/bernard-weiner-san-francisco-theatres-chronicler/"
+    },
+    {
+        "id": "young-sherlock-stars-hero-fiennes-tiffin-and-joseph-fiennes-crack-the-case-on-big-spoilers-and-real-chemistry",
+        "title": "‘Young Sherlock’ Stars Hero Fiennes Tiffin and Joseph Fiennes Crack the Case on Big Spoilers and Real Chemistry",
+        "title_kr": "혈육이라는 이름의 거울: '영 셜록'이 그려낸 피네스 가문의 예술적 조우",
+        "summary_kr": "배우 히어로 피네스 티핀과 그의 실제 삼촌 조셉 피네스가 빚어내는 연기적 앙상블, 그 뜨거운 혈통의 서사가 전설적인 탐정의 기원을 어떻게 완성했는지 심층 분석합니다.",
+        "date": "Wed, 04 Mar 2026 22:00:00 +0000",
+        "image": "https://www.indiewire.com/wp-content/uploads/2026/03/GettyImages-2263382304.jpg?w=650",
+        "tier": "major",
+        "source": "IndieWire",
+        "link": "https://www.indiewire.com/features/interviews/young-sherlock-hero-fiennes-tiffin-joseph-fiennes-spoilers-1235182460/"
+    },
+    {
+        "id": "this-month-in-theatre-history",
+        "title": "This Month in Theatre History",
+        "title_kr": "3월의 무대, 평범한 삶이 거장이 되는 숭고한 순간들",
+        "summary_kr": "호튼 푸트의 고요한 관조부터 퓰리처상의 치열한 예술적 정체성 논쟁까지, 미국 연극의 뿌리를 이루는 결정적 순간들을 'Stage-Is'의 시선으로 조명합니다.",
+        "date": "Tue, 03 Mar 2026 17:42:39 +0000",
+        "image": "https://www.americantheatre.org/wp-content/uploads/2666_10-2.jpg",
+        "tier": "indie",
+        "source": "American Theatre",
+        "link": "https://www.americantheatre.org/2026/03/03/this-month-in-theatre-history-133/"
+    },
+    {
+        "id": "why-did-dropout-a-progressive-proqueer-indie-streaming-service-risk-a-cameo-on-the-rookie",
+        "title": "Why Did Dropout (a Progressive, Pro-Queer Indie Streaming Service) Risk a Cameo on ‘The Rookie’?",
+        "title_kr": "경계를 허무는 실험인가, 신념의 훼손인가: Dropout이 '더 루키'라는 거대 서사에 던진 승부수",
+        "summary_kr": "진보적 인디 스트리밍의 상징 Dropout이 보수적 색채의 지상파 드라마와 조우하며 발생한 불협화음을 통해, 현대 관객이 스트리밍 플랫폼에 투사하는 '이데올로기적 피난처'로서의 열망을 심층 분석합니다.",
+        "date": "Tue, 03 Mar 2026 23:30:00 +0000",
+        "image": "https://www.indiewire.com/wp-content/uploads/2026/03/Screenshot-2026-03-03-at-2.11.29-PM.png?w=650",
+        "tier": "major",
+        "source": "IndieWire",
+        "link": "https://www.indiewire.com/features/commentary/dropout-the-rookie-crossover-controversy-explained-1235182321/"
+    },
+    {
         "id": "jonathan-nortons-moments-of-change",
         "title": "Jonathan Norton’s Moments of Change",
         "title_kr": "조나단 노튼의 변주곡: 댈러스의 골목에서 역사의 무대로 흐르는 선율",
