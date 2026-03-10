@@ -1,5 +1,27 @@
 [
     {
+        "id": "theatre-leaders-in-milwaukee-what-we-do-counts",
+        "title": "Theatre Leaders in Milwaukee: ‘What We Do Counts’",
+        "title_kr": "벼랑 끝에서 부르는 무대의 노래: 밀워키가 증명한 지역 극장의 존재 가치",
+        "summary_kr": "도시의 혼란과 위기 속에서도 공연을 멈추지 않았던 거장들의 목소리를 통해, 현대 연극이 지닌 치유와 저항의 생명력을 고찰합니다.",
+        "date": "Mon, 09 Mar 2026 20:48:04 +0000",
+        "image": "https://www.americantheatre.org/wp-content/uploads/milwaukee-rep-convening1-1024x682.jpg",
+        "tier": "indie",
+        "source": "American Theatre",
+        "link": "https://www.americantheatre.org/2026/03/09/theatre-leaders-in-milwaukee-what-we-do-counts/"
+    },
+    {
+        "id": "all-30-pixar-movies-ranked-from-toy-story-to-elio",
+        "title": "All 30 Pixar Movies Ranked, from ‘Toy Story’ to ‘Elio’",
+        "title_kr": "픽사라는 거대한 무대: 장난감의 속삭임에서 영혼의 울림까지",
+        "summary_kr": "단순한 애니메이션의 경계를 넘어, 인간 존재의 근원적 진실을 무대 위에 올리는 픽사의 30년 궤적을 심층적인 연극적 관점으로 조명합니다.",
+        "date": "Mon, 09 Mar 2026 23:00:00 +0000",
+        "image": "https://www.indiewire.com/wp-content/uploads/2023/06/Pixar-Ranking.png?w=650",
+        "tier": "major",
+        "source": "IndieWire",
+        "link": "https://www.indiewire.com/features/best-of/pixar-movies-ranked-best-worst-96815/"
+    },
+    {
         "id": "one-battle-after-another-and-sinners-win-top-prizes-at-2026-wga-awards-full-winners-list",
         "title": "‘One Battle After Another’ and ‘Sinners’ Win Top Prizes at 2026 WGA Awards (Full Winners List)",
         "title_kr": "펜의 궤적이 그리는 시대의 초상: 2026 WGA 어워즈가 남긴 예술적 기록",
