@@ -1,5 +1,27 @@
 [
     {
+        "id": "soho-rep-announces-ambitious-3play-hunger-cycle",
+        "title": "Soho Rep Announces Ambitious 3-Play Hunger Cycle",
+        "title_kr": "[에디토리얼] 무대 위에 차려진 실존의 성찬: 소호 렙(Soho Rep)이 던지는 '허기'라는 화두",
+        "summary_kr": "오프-브로드웨이의 혁신을 상징하는 소호 렙이 현대인의 다층적 결핍을 탐구하는 3부작 '허기 사이클'을 통해 위축된 공연계에 경종을 울리는 거대한 예술적 모험을 시작합니다.",
+        "date": "Mon, 09 Mar 2026 19:00:00 +0000",
+        "image": "https://www.americantheatre.org/wp-content/uploads/Cesar-Alvarez-by-Maria-Baranova-Baranova-1024x683.jpg",
+        "tier": "indie",
+        "source": "American Theatre",
+        "link": "https://www.americantheatre.org/2026/03/09/soho-rep-announces-hunger-cycle/"
+    },
+    {
+        "id": "the-brief-history-of-pixar-lgbtq-characters-and-controversy-explained",
+        "title": "The (Brief) History of Pixar LGBTQ Characters and Controversy, Explained",
+        "title_kr": "픽사라는 거울: '보편성'의 가면 뒤에 숨은 예술적 딜레마",
+        "summary_kr": "개인적인 고백이 상업적 논리에 밀려날 때, 우리는 무엇을 잃게 되는가. 픽사의 수장 피트 닥터의 발언을 통해 본 애니메이션과 공연 예술의 교차점을 고찰합니다.",
+        "date": "Tue, 10 Mar 2026 19:00:00 +0000",
+        "image": "https://www.indiewire.com/wp-content/uploads/2025/05/Elio-ONLINE-USE-e330_523a_tk121_000409.pub16.jpeg?w=650",
+        "tier": "major",
+        "source": "IndieWire",
+        "link": "https://www.indiewire.com/features/commentary/pixar-lgbtq-character-controversy-explained-1235183350/"
+    },
+    {
         "id": "theatre-leaders-in-milwaukee-what-we-do-counts",
         "title": "Theatre Leaders in Milwaukee: ‘What We Do Counts’",
         "title_kr": "벼랑 끝에서 부르는 무대의 노래: 밀워키가 증명한 지역 극장의 존재 가치",
