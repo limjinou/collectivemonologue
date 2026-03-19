@@ -1,5 +1,27 @@
 [
     {
+        "id": "2-pittsburgh-theatres-formalize-merger",
+        "title": "2 Pittsburgh Theatres Formalize Merger",
+        "title_kr": "피츠버그, 두 거물급 극단의 조우: 전통이라는 토양 위에 피어날 '새로운 무대'",
+        "summary_kr": "피츠버그를 대표하는 두 연극적 기둥인 CLO와 퍼블릭 시어터가 단일 조직으로의 통합을 선언하며, 북미 공연 예술계에 새로운 공생의 모델을 제시합니다.",
+        "date": "Wed, 18 Mar 2026 17:05:18 +0000",
+        "image": "https://www.americantheatre.org/wp-content/uploads/Cast-of-PPTs-An-Enemy-of-the-People-2-1024x682.webp",
+        "tier": "indie",
+        "source": "American Theatre",
+        "link": "https://www.americantheatre.org/2026/03/18/2-pittsburgh-theatres-formalize-merger/"
+    },
+    {
+        "id": "prediction-markets-claimed-an-oscar-victory-the-reality-was-messier",
+        "title": "Prediction Markets Claimed an Oscar Victory. The Reality Was Messier.",
+        "title_kr": "예술의 영혼을 숫자로 저울질하는 시대: 오스카와 예측 시장의 기묘한 동거",
+        "summary_kr": "데이터와 알고리즘이 예술적 성취의 '가격'을 매기는 시대, 핀테크가 침공한 오스카 무대 이면의 서늘한 통찰과 인간적 진실을 탐구합니다.",
+        "date": "Wed, 18 Mar 2026 23:54:38 +0000",
+        "image": "https://www.indiewire.com/wp-content/uploads/2026/03/GettyImages-2264301577.jpg?w=650",
+        "tier": "major",
+        "source": "IndieWire",
+        "link": "https://www.indiewire.com/features/commentary/oscars-prediction-markets-kalshi-accurate-1235184957/"
+    },
+    {
         "id": "don-nigros-prolific-imagination",
         "title": "Don Nigro’s Prolific Imagination",
         "title_kr": "다작(多作)의 숲에서 길어 올린 거대한 우주: 돈 니그로의 멈추지 않는 상상력",
