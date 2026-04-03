@@ -1,5 +1,27 @@
 [
     {
+        "id": "synchronicity-theatre-to-seek-new-home",
+        "title": "Synchronicity Theatre to Seek New Home",
+        "title_kr": "무대의 뿌리를 옮기는 용기: 싱크로니시티 시어터가 그리는 새로운 지평",
+        "summary_kr": "12년의 미드타운 시대를 뒤로하고 새로운 예술적 도약을 준비하는 싱크로니시티 시어터, 공간의 상실을 공동체의 확장으로 전환하려는 그들의 용기 있는 여정을 조명합니다.",
+        "date": "Thu, 02 Apr 2026 19:26:40 +0000",
+        "image": "https://www.americantheatre.org/wp-content/uploads/peachtree-pointe.jpg",
+        "tier": "indie",
+        "source": "American Theatre",
+        "link": "https://www.americantheatre.org/2026/04/02/synchronicity-theatre-seeks-new-home/"
+    },
+    {
+        "id": "let-jon-hamm-steal-your-friends-and-neighbors-for-you",
+        "title": "Let Jon Hamm Steal ‘Your Friends and Neighbors’ for You",
+        "title_kr": "존 햄이 설계한 ‘가면 무도회’: 상류사회의 증기 속에서 발견한 타자성의 미학",
+        "summary_kr": "드라마 ‘Your Friends and Neighbors’ 속 존 햄의 연기를 통해, 부유한 위선자들 사이에서 ‘당신의 사람’이라는 단 한 마디로 도덕적 경계선을 긋는 고도의 캐릭터 연출과 현대적 피카레스크의 정수를 분석합니다.",
+        "date": "Fri, 03 Apr 2026 01:00:00 +0000",
+        "image": "https://www.indiewire.com/wp-content/uploads/2026/04/Your-Friends-and-Neighbors-Season-2-Jon-Hamm-Apple-show.jpg?w=650",
+        "tier": "major",
+        "source": "IndieWire",
+        "link": "https://www.indiewire.com/criticism/shows/jon-hamm-your-friends-and-neighbors-season-2-review-1235187059/"
+    },
+    {
         "id": "terrence-mcnallys-name-to-grace-nycs-rattlestick-theater",
         "title": "Terrence McNally’s Name to Grace NYC’s Rattlestick Theater",
         "title_kr": "웨스트 빌리지의 낡은 계단 위, 거장의 이름이 피어나다: 테렌스 맥널리와 래틀스틱의 새로운 조우",
