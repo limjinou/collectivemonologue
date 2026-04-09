@@ -1,5 +1,27 @@
 [
     {
+        "id": "can-victory-gardens-bloom-again",
+        "title": "Can Victory Gardens Bloom Again?",
+        "title_kr": "멈춰버린 시계태엽을 다시 감는 법: 빅토리 가든스의 부활을 향한 서곡",
+        "summary_kr": "내홍의 상처로 침묵에 잠겼던 시카고 연극계의 심장, 빅토리 가든스가 새로운 리더십과 함께 지역 공동체를 향한 치유의 첫걸음을 뗐습니다.",
+        "date": "Wed, 08 Apr 2026 16:15:27 +0000",
+        "image": "https://www.americantheatre.org/wp-content/uploads/Victory-Gardens-Theater-Venue.jpg",
+        "tier": "indie",
+        "source": "American Theatre",
+        "link": "https://www.americantheatre.org/2026/04/08/can-victory-gardens-bloom-again/"
+    },
+    {
+        "id": "steal-this-story-please-review-journalist-amy-goodman-is-the-subject-of-a-glowing-doc-that-should-rally-the-converted",
+        "title": "‘Steal This Story, Please!’ Review: Journalist Amy Goodman Is the Subject of a Glowing Doc That Should Rally the Converted",
+        "title_kr": "침묵을 찢는 목소리의 무대화: 에이미 굿맨이라는 독보적인 저널리즘 페르소나",
+        "summary_kr": "권력의 견고한 무대 뒤편을 비추어온 저널리스트 에이미 굿맨의 생애를 다룬 다큐멘터리, 신념의 관객들을 결집시키는 웅장한 연대의 기록을 탐구하다.",
+        "date": "Wed, 08 Apr 2026 21:00:00 +0000",
+        "image": "https://www.indiewire.com/wp-content/uploads/2026/04/SSP2_AG-Reporting-from-Standing-Rock-1.jpg?w=650",
+        "tier": "major",
+        "source": "IndieWire",
+        "link": "https://www.indiewire.com/criticism/movies/steal-this-story-please-review-amy-goodman-documentary-1235188032/"
+    },
+    {
         "id": "bad-bunny-and-latinx-theatre-commons-start-storytelling-from-the-beginning",
         "title": "Bad Bunny and Latinx Theatre Commons Start Storytelling From the Beginning",
         "title_kr": "Bad Bunny and Latinx Theatre Commons Start Storytelling From the Beginning",
