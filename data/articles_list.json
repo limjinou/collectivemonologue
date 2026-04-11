@@ -1,5 +1,27 @@
 [
     {
+        "id": "patrick-gabridge-plays-in-place",
+        "title": "Patrick Gabridge Plays in Place",
+        "title_kr": "[Special] 공간의 영혼을 깨우는 소환술사, 패트릭 개브리지가 그리는 ‘장소의 연극’",
+        "summary_kr": "역사적 현장과 박물관을 살아있는 무대로 탈바꿈시키며, 극작가의 고립된 창작 활동을 연대의 공동체로 확장한 혁신적 예술가 패트릭 개브리지의 미학적 여정을 탐구합니다.",
+        "date": "Fri, 10 Apr 2026 13:41:48 +0000",
+        "image": "https://www.americantheatre.org/wp-content/uploads/Screenshot-2026-04-09-at-5.14.57-PM.png",
+        "tier": "indie",
+        "source": "American Theatre",
+        "link": "https://www.americantheatre.org/2026/04/10/patrick-gabridge-plays-in-place/"
+    },
+    {
+        "id": "inside-the-new-film-stock-kodak-created-for-euphoria-season-3",
+        "title": "Inside the New Film Stock Kodak Created for ‘Euphoria’ Season 3",
+        "title_kr": "찰나의 진실을 새기는 빛의 질감: '유포리아' 시즌 3와 코닥이 빚어낸 고전의 귀환",
+        "summary_kr": "디지털의 매끈한 해상도가 놓쳐버린 인간적 온기를 복원하기 위해, 드라마 '유포리아'는 새로운 필름 'VERITA 200D'를 통해 다시 한번 아날로그적 숭고미를 탐닉합니다.",
+        "date": "Fri, 10 Apr 2026 20:30:00 +0000",
+        "image": "https://www.indiewire.com/wp-content/uploads/2026/04/sydney-sweeney.jpg?w=640",
+        "tier": "major",
+        "source": "IndieWire",
+        "link": "https://www.indiewire.com/news/breaking-news/euphoria-season-3-kodak-new-film-stock-1235188424/"
+    },
+    {
         "id": "la-drama-critics-circle-awards-bechdel-project-residency-and-more",
         "title": "L.A. Drama Critics Circle Awards, Bechdel Project Residency, and More",
         "title_kr": "L.A.의 찬란한 무대, 그 찰나의 영원성을 기록하다: 2025 LADCC 어워즈가 남긴 여운",
