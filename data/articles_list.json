@@ -1,5 +1,27 @@
 [
     {
+        "id": "spring-school-musicals-and-educator-impact",
+        "title": "Spring School Musicals and Educator Impact",
+        "title_kr": "브롱크스의 봄, 조명 아래 피어난 찬란한 ‘성장의 서사’",
+        "summary_kr": "고등학교 무대라는 작은 우주 속에서 발견한 사제간의 깊은 유대와, 단순한 공연을 넘어 삶의 용기를 일깨우는 예술 교육의 진정한 가치를 조명합니다.",
+        "date": "Tue, 21 Apr 2026 14:46:23 +0000",
+        "image": "https://www.americantheatre.org/wp-content/uploads/at_jan17_Brent_Wagner_AugustWilsonTheatre.jpg",
+        "tier": "indie",
+        "source": "American Theatre",
+        "link": "https://www.americantheatre.org/2026/04/21/spring-school-musicals-and-educator-impact/"
+    },
+    {
+        "id": "fuze-review-david-mackenzies-literal-ticking-time-bomb-thriller-isnt-sure-what-to-do-after-detonating",
+        "title": "‘Fuze’ Review: David Mackenzie’s Literal Ticking Time Bomb Thriller Isn’t Sure What to Do After Detonating",
+        "title_kr": "찰나의 정적, 폭발하는 긴장: '퓨즈(Fuze)'가 펼쳐놓은 은유의 실체화",
+        "summary_kr": "'시한폭탄'이라는 고전적 서스펜스를 문자 그대로의 리얼리티로 치환하여, 통제된 공간 속 인간의 내면을 현미경처럼 들여다보는 데이비드 매켄지식 스릴러의 정수.",
+        "date": "Tue, 21 Apr 2026 21:26:33 +0000",
+        "image": "https://www.indiewire.com/wp-content/uploads/2025/09/Screen-Shot-2025-09-04-at-9.28.31-PM.png?w=650",
+        "tier": "major",
+        "source": "IndieWire",
+        "link": "https://www.indiewire.com/criticism/movies/fuze-review-david-mackenzie-aaron-taylor-johnson-1235149275/"
+    },
+    {
         "id": "why-magnolia-took-its-biggest-swing-yet-on-bob-odenkirks-normal",
         "title": "Why Magnolia Took Its Biggest Swing Yet on Bob Odenkirk’s ‘Normal’",
         "title_kr": "평범(Normal)이라는 이름의 비범한 도약: 밥 오덴커크와 마그놀리아가 던진 장르적 승부수",
