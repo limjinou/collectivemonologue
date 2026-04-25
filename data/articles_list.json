@@ -1,5 +1,27 @@
 [
     {
+        "id": "vineyard-theatre-and-iatse-workers-reach-bargaining-agreement",
+        "title": "Vineyard Theatre and IATSE Workers Reach Bargaining Agreement",
+        "title_kr": "무대 뒤의 보이지 않는 손, 비니어드 시어터가 쏘아 올린 연대의 화음",
+        "summary_kr": "오프-브로드웨이의 예술적 자존심 비니어드 시어터와 IATSE의 역사적 합의는, 무대 뒤 노동의 가치를 예술의 정점으로 끌어올린 고귀한 선언입니다.",
+        "date": "Fri, 24 Apr 2026 17:01:58 +0000",
+        "image": "https://www.americantheatre.org/wp-content/uploads/Off-Broadway-workers_IATSE.jpg",
+        "tier": "indie",
+        "source": "American Theatre",
+        "link": "https://www.americantheatre.org/2026/04/24/vineyard-theatre-and-iatse-workers-reach-bargaining-agreement/"
+    },
+    {
+        "id": "pete-ohs-wants-filmmaking-to-be-fun--and-for-you-to-edit-his-movies",
+        "title": "Pete Ohs Wants Filmmaking to Be Fun — and for You to Edit His Movies",
+        "title_kr": "스크린의 성벽을 허무는 유쾌한 반란: 피트 오스가 제안하는 ‘함께 만드는 미학’",
+        "summary_kr": "영화의 권위를 해체하고 관객을 창작의 파트너로 초대한 피트 오스의 파격적 실험, 그 속에 담긴 해방의 서사를 깊이 있게 들여다봅니다.",
+        "date": "Fri, 24 Apr 2026 22:00:00 +0000",
+        "image": "https://www.indiewire.com/wp-content/uploads/2026/04/Erupcja.jpeg?w=650",
+        "tier": "major",
+        "source": "IndieWire",
+        "link": "https://www.indiewire.com/features/interviews/pete-ohs-director-interview-erupcja-charli-xcx-1235189495/"
+    },
+    {
         "id": "ak-payne-on-furloughs-paradise-rupture-and-ritual",
         "title": "a.k. payne on ‘Furlough’s Paradise’: Rupture and Ritual",
         "title_kr": "단절의 틈새에서 피어난 애도의 예식: a.k. 페인의 ‘퍼로우즈 파라다이스’가 던지는 질문",
@@ -1096,44 +1118,6 @@
             "황금곰상",
             "압달라알카팁",
             "정치예술"
-        ]
-    },
-    {
-        "id": "climate-activist-group-that-disrupted-jeremy-strongmichael-imperioli-broadway-play-says-its-under-escalating-trump-fbi-watch",
-        "title": "Climate Activist Group That Disrupted Jeremy Strong-Michael Imperioli Broadway Play Says It’s Under Escalating Trump FBI Watch",
-        "title_kr": "무대 위의 외침이 감시의 표적이 되다: 제레미 스트롱의 '민중의 적'과 FBI의 그림자",
-        "summary_kr": "브로드웨이 연극 도중 기후 위기 시위를 벌였던 활동가들이 최근 FBI의 집중 감시를 받고 있다는 사실이 밝혀지며, 예술과 정치적 저항 사이의 긴장감이 고조되고 있습니다.",
-        "date": "Fri, 20 Feb 2026 15:49:19 +0000",
-        "image": "https://deadline.com/wp-content/uploads/2024/03/Screenshot-2024-03-14-at-11.51.32 PM.png",
-        "tier": "major",
-        "source": "Deadline Theater",
-        "keywords": [
-            "제레미 스트롱",
-            "민중의 적",
-            "브로드웨이",
-            "FBI 감시",
-            "기후 위기",
-            "마이클 임페리올리",
-            "입센"
-        ]
-    },
-    {
-        "id": "breaking-baz-clint-dyer-set-to-soar-in-the-west-end-with-allblack-casts-for-three-vital-american-plays-including-one-flew-over-the-cuckoos-nest",
-        "title": "Breaking Baz: Clint Dyer Set To Soar In The West End With All-Black Casts For Three Vital American Plays, Including ‘One Flew Over The Cuckoo’s Nest’",
-        "title_kr": "[에디토리얼] 클린트 다이어가 쏘아 올린 '미국적 거짓말'에 대한 경종: 올블랙 캐스트로 재탄생하는 '뻐꾸기 둥지 위로 날아간 새'",
-        "summary_kr": "영국 국립극장의 혁신가 클린트 다이어가 올블랙 캐스팅과 함께 웨스트엔드를 뒤흔듭니다. '뻐꾸기 둥지 위로 날아간 새'를 통해 식민주의와 미국의 망각을 정조준하는 그의 파격적인 행보를 분석합니다.",
-        "date": "Fri, 20 Feb 2026 14:00:25 +0000",
-        "image": "https://deadline.com/wp-content/uploads/2026/01/Clint-Dyer-.jpg",
-        "tier": "major",
-        "source": "Deadline Theater",
-        "keywords": [
-            "클린트 다이어",
-            "뻐꾸기 둥지 위로 날아간 새",
-            "올드 빅",
-            "에런 피어",
-            "웨스트엔드",
-            "미국 연극",
-            "식민주의"
         ]
     }
 ]
