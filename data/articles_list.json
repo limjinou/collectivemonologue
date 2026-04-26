@@ -1,5 +1,16 @@
 [
     {
+        "id": "silent-friend-director-ildikó-enyedi-leads-sloan-science-awards-at-sffilm",
+        "title": "‘Silent Friend’ Director Ildikó Enyedi Leads Sloan Science Awards at SFFILM",
+        "title_kr": "침묵하는 은행나무 아래, 과학과 예술이 맺은 억겁의 인연: 일디코 엔예디의 '사일런트 프렌드'",
+        "summary_kr": "한 세기를 가로지르는 영혼들의 교감을 과학적 통찰과 미학적 서사로 엮어낸 일디코 엔예디의 수상을 기념하며, 우리 시대 예술이 과학이라는 차가운 진실을 어떻게 따뜻한 위로로 승화시키는지 고찰합니다.",
+        "date": "Sat, 25 Apr 2026 17:00:00 +0000",
+        "image": "https://www.indiewire.com/wp-content/uploads/2025/12/silent-friend-1.webp?w=650",
+        "tier": "major",
+        "source": "IndieWire",
+        "link": "https://www.indiewire.com/news/festivals/silent-friend-sffilm-sloan-science-award-1235190710/"
+    },
+    {
         "id": "vineyard-theatre-and-iatse-workers-reach-bargaining-agreement",
         "title": "Vineyard Theatre and IATSE Workers Reach Bargaining Agreement",
         "title_kr": "무대 뒤의 보이지 않는 손, 비니어드 시어터가 쏘아 올린 연대의 화음",
@@ -1102,22 +1113,6 @@
             "이멜다 마르코스",
             "마크 테이퍼 포럼",
             "이머시브 뮤지컬"
-        ]
-    },
-    {
-        "id": "berlinale-tried-to-avoid-politics-its-winners-made-that-impossible",
-        "title": "Berlinale Tried to Avoid Politics. Its Winners Made That Impossible.",
-        "title_kr": "침묵을 거부한 베를린의 목소리: 예술과 정치 사이의 위태롭고도 찬란한 줄타기",
-        "summary_kr": "제76회 베를린 국제영화제 사무국은 정치적 논쟁을 피하려 했으나, 수상자들은 무대 위에서 가자 지구와 민주주의를 향한 강력한 메시지를 던지며 영화제의 본질을 일깨웠습니다.",
-        "date": "Sat, 21 Feb 2026 19:48:06 +0000",
-        "image": "https://www.indiewire.com/wp-content/uploads/2026/02/GettyImages-2262827147.jpg?w=650",
-        "tier": "major",
-        "source": "IndieWire",
-        "keywords": [
-            "베를린영화제",
-            "황금곰상",
-            "압달라알카팁",
-            "정치예술"
         ]
     }
 ]
