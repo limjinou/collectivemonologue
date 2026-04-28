@@ -1,5 +1,27 @@
 [
     {
+        "id": "aguardiente-a-sensory-experience",
+        "title": "AGUARDIENTE, a Sensory Experience",
+        "title_kr": "아구아르디엔테: 독주 한 잔에 담긴 마술적 리얼리즘의 감각적 변주",
+        "summary_kr": "15년의 우정과 라틴의 영혼이 빚어낸 이 다국어 뮤지컬은 언어의 국경을 넘어 오감을 자극하는 마법 같은 연극적 체험을 선사합니다.",
+        "date": "Mon, 27 Apr 2026 17:12:47 +0000",
+        "image": "https://www.americantheatre.org/wp-content/uploads/image-3-1.png",
+        "tier": "indie",
+        "source": "American Theatre",
+        "link": "https://www.americantheatre.org/2026/04/27/aguardiente-a-sensory-experience/"
+    },
+    {
+        "id": "verity-trailer-anne-hathaway-bites-dakota-johnson-until-she-bleeds-in-surreal-colleen-hoover-adaptation",
+        "title": "‘Verity’ Trailer: Anne Hathaway Bites Dakota Johnson Until She Bleeds in Surreal Colleen Hoover Adaptation",
+        "title_kr": "선혈로 빚어낸 무의식의 무대: 앤 해서웨이와 다코타 존슨이 그리는 잔혹한 서스펜스",
+        "summary_kr": "콜린 후버의 멜로적 문법을 전복시키며, 앤 해서웨이의 서늘한 변신과 다코타 존슨의 미묘한 불안이 교차하는 초현실적 심리극의 정수를 분석합니다.",
+        "date": "Tue, 28 Apr 2026 00:00:00 +0000",
+        "image": "https://www.indiewire.com/wp-content/uploads/2026/04/V_05529_R.jpg?w=650",
+        "tier": "major",
+        "source": "IndieWire",
+        "link": "https://www.indiewire.com/news/trailers/verity-trailer-anne-hathaway-colleen-hoover-1235190912/"
+    },
+    {
         "id": "silent-friend-director-ildikó-enyedi-leads-sloan-science-awards-at-sffilm",
         "title": "‘Silent Friend’ Director Ildikó Enyedi Leads Sloan Science Awards at SFFILM",
         "title_kr": "침묵하는 은행나무 아래, 과학과 예술이 맺은 억겁의 인연: 일디코 엔예디의 '사일런트 프렌드'",
@@ -1080,39 +1102,5 @@
         "image": "https://deadline.com/wp-content/uploads/2026/01/GettyImages-2257648561.jpg",
         "tier": "major",
         "source": "Deadline Theater"
-    },
-    {
-        "id": "melissa-barrera-to-make-broadway-debut-in-parody-musical-titanique-exclusive",
-        "title": "Melissa Barrera to Make Broadway Debut in Parody Musical ‘Titanique’ (EXCLUSIVE)",
-        "title_kr": "멜리사 바레라, 브로드웨이 전격 데뷔! 셀린 디온의 선율로 재해석된 코믹 잔혹극 ‘타이타니크’ 합류",
-        "summary_kr": "'스크림'과 '인 더 하이츠'의 스타 멜리사 바레라가 뉴욕 세인트 제임스 극장에서 막을 올리는 뮤지컬 '타이타니크'의 로즈 역으로 브로드웨이 무대에 첫발을 내딛습니다.",
-        "date": "Fri, 20 Feb 2026 03:12:54 +0000",
-        "image": "https://variety.com/wp-content/uploads/2026/02/GettyImages-2163846741.jpg",
-        "tier": "major",
-        "source": "Variety Theater",
-        "keywords": [
-            "멜리사 바레라",
-            "타이타니크",
-            "브로드웨이 뮤지컬",
-            "짐 파슨스",
-            "셀린 디온 패러디"
-        ]
-    },
-    {
-        "id": "here-lies-love-david-byrne-and-director-snehai-desai-on-adapting-the-dance-musical-for-las-taper-and-why-imelda-marcos-story-nervously-parallels-contemporary-americas",
-        "title": "‘Here Lies Love’: David Byrne and Director Snehai Desai on Adapting the Dance Musical for L.A.’s Taper, and Why Imelda Marcos’ Story Nervously Parallels Contemporary America’s",
-        "title_kr": "‘히어 라이즈 러브’: 디스코 비트 위에 피어난 독재의 초상, L.A. 무대에서 재해석되다",
-        "summary_kr": "데이비드 번의 파격적인 뮤지컬 ‘히어 라이즈 러브’가 L.A. 마크 테이퍼 포럼에 상륙했습니다. 몰입형 스탠딩 공연에서 좌석형으로 변모한 이번 무대가 현대 미국 사회에 던지는 묵직한 메시지를 짚어봅니다.",
-        "date": "Sat, 21 Feb 2026 03:37:55 +0000",
-        "image": "https://variety.com/wp-content/uploads/2026/02/01.-HERE-LIES-LOVE.-Photo-by-Jeff-Lorch.-.jpg",
-        "tier": "major",
-        "source": "Variety Theater",
-        "keywords": [
-            "히어 라이즈 러브",
-            "데이비드 번",
-            "이멜다 마르코스",
-            "마크 테이퍼 포럼",
-            "이머시브 뮤지컬"
-        ]
     }
 ]
