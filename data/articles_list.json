@@ -1,5 +1,27 @@
 [
     {
+        "id": "theres-some-new-work-out-here",
+        "title": "There’s Some New Work ‘Out Here’",
+        "title_kr": "시카고 레드라인 너머, 무대의 '내일'을 잉태하는 가장 뜨거운 대화: America@250",
+        "summary_kr": "위기의 시대 속에서 새로운 예술적 서사가 어떻게 잉태되고 지지받아야 하는가. 시카고 코트 씨어터가 주최한 'America@250' 컨비닝을 통해 공연예술의 지속가능한 미래를 위한 연대의 힘을 고찰합니다.",
+        "date": "Tue, 28 Apr 2026 14:25:49 +0000",
+        "image": "https://www.americantheatre.org/wp-content/uploads/Photo-of-Amanda-Pulcini-Z-Mowry-and-Ellie-Duffey-by-Michael-BrosilowAT.jpg",
+        "tier": "indie",
+        "source": "American Theatre",
+        "link": "https://www.americantheatre.org/2026/04/28/theres-some-new-work-out-here/"
+    },
+    {
+        "id": "join-indiewire-and-national-geographic-to-celebrate-ocean-with-david-attenborough-at-vidiots",
+        "title": "Join IndieWire and National Geographic to Celebrate ‘Ocean with David Attenborough’ at Vidiots",
+        "title_kr": "심연의 무대, 침묵의 독백이 울려 퍼질 때: ‘오션 위드 데이비드 애튼버러’가 건네는 예술적 성찰",
+        "summary_kr": "스크린을 넘어 대자연이라는 거대한 극장으로 우리를 초대하는 데이비드 애튼버러의 심연 탐사, 그 미학적 조우와 로컬 커뮤니티가 빚어낸 찬란한 밤을 기록합니다.",
+        "date": "Tue, 28 Apr 2026 22:30:00 +0000",
+        "image": "https://www.indiewire.com/wp-content/uploads/2026/04/Screen-Shot-2026-04-28-at-1.48.03-PM.png?w=650",
+        "tier": "major",
+        "source": "IndieWire",
+        "link": "https://www.indiewire.com/news/events/indiewire-pass-the-remote-ocean-david-attenborough-1235191147/"
+    },
+    {
         "id": "aguardiente-a-sensory-experience",
         "title": "AGUARDIENTE, a Sensory Experience",
         "title_kr": "아구아르디엔테: 독주 한 잔에 담긴 마술적 리얼리즘의 감각적 변주",
@@ -1082,25 +1104,5 @@
         "image": "https://www.hollywoodreporter.com/wp-content/uploads/2026/02/Dove-Cameron-NBT-temp-getty-H-2026.png?w=1440&h=810&crop=1",
         "tier": "major",
         "source": "The Hollywood Reporter"
-    },
-    {
-        "id": "decency-is-a-superpower-donna-langley-receives-bafta-fellowship-touting-cinemas-power-to-help-us-see-each-other-more-clearly",
-        "title": "“Decency Is a Superpower”: Donna Langley Receives BAFTA Fellowship, Touting Cinema’s Power to Help Us “See Each Other More Clearly”",
-        "title_kr": "미래를 엮는 필름의 언어: 데임 도나 랭글리, BAFTA 펠로우십이 비춘 리더십",
-        "summary_kr": "NBC유니버설 엔터테인먼트 회장 데임 도나 랭글리가 BAFTA 펠로우십을 수상하며 할리우드 스튜디오를 이끄는 최초의 영국 여성으로서의 독보적인 위상을 공고히 했습니다. 그녀는 영화의 통합적 힘과 새로운 목소리를 위한 비전을 강조했으며, 스티븐 스필버그와 크리스토퍼 놀란 등 거장들의 찬사 속에서 문화와 상업적 성공을 아우르는 리더십을 재확인했습니다.",
-        "date": "Sun, 22 Feb 2026 20:00:50 +0000",
-        "image": "https://www.hollywoodreporter.com/wp-content/uploads/2026/02/GettyImages-2263010801-H-2026.jpg?w=1296&h=730&crop=1",
-        "tier": "major",
-        "source": "The Hollywood Reporter"
-    },
-    {
-        "id": "broadway-shows-cancel-sunday-evening-performances-ahead-of-expected-blizzard",
-        "title": "Broadway Shows Cancel Sunday Evening Performances Ahead Of Expected Blizzard",
-        "title_kr": "눈보라 속 브로드웨이, 운명적 마지막 막이 내리다",
-        "summary_kr": "뉴욕을 덮친 기록적인 눈보라로 인해 브로드웨이 뮤지컬 '오퍼레이션 민스미트'의 마지막 저녁 공연이 전격 취소되었습니다. 오리지널 영국 캐스트의 마지막 무대는 낮 공연으로 앞당겨졌으나, 아쉬움을 달래기 위해 이들은 특별한 라이브 스트림 콘서트로 팬들에게 작별을 고했습니다.",
-        "date": "Sun, 22 Feb 2026 16:58:29 +0000",
-        "image": "https://deadline.com/wp-content/uploads/2026/01/GettyImages-2257648561.jpg",
-        "tier": "major",
-        "source": "Deadline Theater"
     }
 ]
