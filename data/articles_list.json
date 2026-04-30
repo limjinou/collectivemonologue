@@ -1,5 +1,27 @@
 [
     {
+        "id": "lou-tyrrell-trusted-playwrights-and-got-audiences-to-do-the-same",
+        "title": "Lou Tyrrell Trusted Playwrights, and Got Audiences to Do the Same",
+        "title_kr": "미완의 문장에 생명을 불어넣는 연금술, 루 티렐이 남긴 '믿음'의 유산",
+        "summary_kr": "단 한 줄의 대본에서 무대의 마법을 발견했던 거장 루 티렐. 신작 희곡만을 고집하며 관객과 창작자 사이의 견고한 신뢰를 구축했던 그의 예술적 헌신을 조명합니다.",
+        "date": "Wed, 29 Apr 2026 19:00:41 +0000",
+        "image": "https://www.americantheatre.org/wp-content/uploads/lou-tyrrell.jpg",
+        "tier": "indie",
+        "source": "American Theatre",
+        "link": "https://www.americantheatre.org/2026/04/29/lou-tyrrell-trusted-playwrights-and-got-audiences-to-do-the-same/"
+    },
+    {
+        "id": "entire-tv-genres-can-live-and-die-by-their-emmys-potential",
+        "title": "Entire TV Genres Can Live and Die by Their Emmys Potential",
+        "title_kr": "에미의 저울: 장르의 생존과 죽음을 가르는 시상식의 보이지 않는 손",
+        "summary_kr": "시상식의 영광은 단순한 트로피의 무게를 넘어, 한 장르의 생태계를 살리기도 하고 서서히 고사시키기도 하는 결정적인 동력이 됩니다. 에미상이 지닌 이 거대한 영향력의 메커니즘을 심층 분석합니다.",
+        "date": "Wed, 29 Apr 2026 21:00:00 +0000",
+        "image": "https://www.indiewire.com/wp-content/uploads/2026/04/3202256_0275_d4a374.jpg?w=650",
+        "tier": "major",
+        "source": "IndieWire",
+        "link": "https://www.indiewire.com/awards/predictions/tv-genres-live-die-by-emmys-potential-1235191407/"
+    },
+    {
         "id": "theres-some-new-work-out-here",
         "title": "There’s Some New Work ‘Out Here’",
         "title_kr": "시카고 레드라인 너머, 무대의 '내일'을 잉태하는 가장 뜨거운 대화: America@250",
@@ -1084,25 +1106,5 @@
         "image": "https://www.indiewire.com/wp-content/uploads/2025/12/One-Battle-After-Another.png?w=650",
         "tier": "major",
         "source": "IndieWire"
-    },
-    {
-        "id": "baz-luhrmann-on-telling-elvis-presleys-story-in-the-kings-own-words",
-        "title": "Baz Luhrmann on Telling Elvis Presley’s Story in the King’s Own Words",
-        "title_kr": "시간을 초월한 왕의 노래: 엘비스 프레슬리의 꿈결 같은 부활",
-        "summary_kr": "영화 '엘비스'를 제작하던 바즈 루어만 감독은 우연히 엘비스 프레슬리의 유실된 필름을 발견했습니다. 피터 잭슨 팀과의 협력을 통해 이 손상된 자료는 AI 없이 정교하게 복원되었고, 엘비스 본인의 목소리로 그의 이야기를 전하는 전례 없는 몰입형 콘서트 영화 'EPiC: Elvis Presley Live in Concert'로 재탄생했습니다.",
-        "date": "Sun, 22 Feb 2026 15:00:00 +0000",
-        "image": "https://www.indiewire.com/wp-content/uploads/2025/10/EPiC-Still-Photo-credit-EPiC_-Elvis-Presley-in-Concert-e1765318004933.jpg?w=650",
-        "tier": "major",
-        "source": "IndieWire"
-    },
-    {
-        "id": "how-one-audition-at-14-helped-dove-cameron-land-56-days-and-when-fans-can-expect-new-music",
-        "title": "How One Audition at 14 Helped Dove Cameron Land ‘56 Days’ and When Fans Can Expect New Music",
-        "title_kr": "14세의 기억, '56 Days'로 피어나다: 도브 카메론, 전환점 그리고 새로운 음악의 멜로디",
-        "summary_kr": "배우 도브 카메론의 새 시리즈 ‘56 Days’는 14세의 어린 시절 오디션에서 시작된 운명적인 인연으로 탄생했습니다. 이 작품을 통해 그녀는 아역 스타 이미지를 벗고 복잡한 성인 역할에 도전하며 진정한 배우로 거듭나고 있습니다. 팬들은 그녀의 연기 변신과 더불어 오랜만에 발표될 새로운 음악에도 큰 기대를 보내고 있습니다.",
-        "date": "Sun, 22 Feb 2026 19:18:10 +0000",
-        "image": "https://www.hollywoodreporter.com/wp-content/uploads/2026/02/Dove-Cameron-NBT-temp-getty-H-2026.png?w=1440&h=810&crop=1",
-        "tier": "major",
-        "source": "The Hollywood Reporter"
     }
 ]
