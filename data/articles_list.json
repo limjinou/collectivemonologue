@@ -1,5 +1,16 @@
 [
     {
+        "id": "animal-farm-review-his-serkis-his-monkeys",
+        "title": "‘Animal Farm’ Review: His Serkis, His Monkeys",
+        "title_kr": "혁명이라는 이름의 환상, 그 기괴한 몰락의 풍경: 앤디 서키스의 ‘동물농장’이 남긴 질문",
+        "summary_kr": "조지 오웰의 날카로운 풍자와 앤디 서키스의 집착에 가까운 열망이 빚어낸 낯선 불협화음, 그 속에 숨겨진 예술적 딜레마를 심층 분석합니다.",
+        "date": "Thu, 30 Apr 2026 22:30:00 +0000",
+        "image": "https://www.indiewire.com/wp-content/uploads/2026/04/MCDANFA_EC017_d403c3.jpg?w=650",
+        "tier": "major",
+        "source": "IndieWire",
+        "link": "https://www.indiewire.com/criticism/movies/animal-farm-review-andy-serkis-1235190927/"
+    },
+    {
         "id": "lou-tyrrell-trusted-playwrights-and-got-audiences-to-do-the-same",
         "title": "Lou Tyrrell Trusted Playwrights, and Got Audiences to Do the Same",
         "title_kr": "미완의 문장에 생명을 불어넣는 연금술, 루 티렐이 남긴 '믿음'의 유산",
@@ -1096,15 +1107,5 @@
         "image": "https://variety.com/wp-content/uploads/2025/11/3_CHESS_BROADWAY_S_0357_PJZEDIT_v001-1.jpg",
         "tier": "major",
         "source": "Variety Theater"
-    },
-    {
-        "id": "one-battle-after-another-wins-best-film-at-2026-bafta-awards-complete-winners-list",
-        "title": "‘One Battle After Another’ Wins Best Film at 2026 BAFTA Awards (Complete Winners List)",
-        "title_kr": "런던의 심장, 영광의 밤: 2026 바프타가 쏘아 올린 오스카의 전조",
-        "summary_kr": "지난 일요일 런던에서 성황리에 막을 내린 2026 바프타 필름 어워즈는 'One Battle After Another'가 최우수 작품상을 비롯한 주요 부문을 휩쓸며 올해 영화계의 강력한 존재감을 각인시켰습니다. 오스카의 중요한 전초전으로 여겨지는 이번 시상식은 폴 토마스 앤더슨과 라이언 쿠글러의 작품들이 고루 빛나며 전 세계 영화 팬들의 시선을 사로잡았습니다.",
-        "date": "Sun, 22 Feb 2026 17:46:12 +0000",
-        "image": "https://www.indiewire.com/wp-content/uploads/2025/12/One-Battle-After-Another.png?w=650",
-        "tier": "major",
-        "source": "IndieWire"
     }
 ]
