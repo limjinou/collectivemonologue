@@ -1,5 +1,27 @@
 [
     {
+        "id": "cedric-the-entertainer-finds-his-song-lost-boys-raises-the-stakes",
+        "title": "Cedric the Entertainer Finds His Song, ‘Lost Boys’ Raises the Stakes",
+        "title_kr": "시대의 선율을 찾는 여정: 오거스트 윌슨의 영혼과 브로드웨이의 새로운 야심",
+        "summary_kr": "고전의 운율을 체화한 세드릭 더 엔터테이너의 통찰부터, 80년대 컬트 영화를 화려한 스펙터클로 재탄생시킨 제작진의 도전까지, 현대 연극의 역동적인 조류를 짚어봅니다.",
+        "date": "Fri, 01 May 2026 14:33:33 +0000",
+        "image": "https://www.americantheatre.org/wp-content/uploads/offscript-may-2026_cedric-the-entertainer_dane-laffrey-michael-arden.jpg",
+        "tier": "indie",
+        "source": "American Theatre",
+        "link": "https://www.americantheatre.org/2026/05/01/cedric-the-entertainer-finds-his-song-lost-boys-raises-the-stakes/"
+    },
+    {
+        "id": "greta-gerwigs-narnia-is-aiming-for-more-than-awards-glory",
+        "title": "Greta Gerwig’s ‘Narnia’ Is Aiming for More Than Awards Glory",
+        "title_kr": "나니아의 향기: 황금빛 트로피 너머, 그레타 거윅이 응시하는 영원의 시간",
+        "summary_kr": "아카데미의 계절을 뒤로하고 2월의 IMAX로 향하는 그레타 거윅의 선택, 이는 단순한 개봉 연기가 아닌 예술적 완성을 향한 거장의 숭고한 기다림입니다.",
+        "date": "Fri, 01 May 2026 22:56:12 +0000",
+        "image": "https://www.indiewire.com/wp-content/uploads/2026/05/P115W9O9.jpg?w=650",
+        "tier": "major",
+        "source": "IndieWire",
+        "link": "https://www.indiewire.com/news/analysis/greta-gerwig-narnia-imax-success-awards-1235191937/"
+    },
+    {
         "id": "animal-farm-review-his-serkis-his-monkeys",
         "title": "‘Animal Farm’ Review: His Serkis, His Monkeys",
         "title_kr": "혁명이라는 이름의 환상, 그 기괴한 몰락의 풍경: 앤디 서키스의 ‘동물농장’이 남긴 질문",
@@ -1081,31 +1103,5 @@
             "사무엘 베케트",
             "리빙 씨어터"
         ]
-    },
-    {
-        "id": "snow-socks-stage-but-hells-kitchen-and-british-cast-of-operation-mincemeat-get-warm-goodbyes--broadway-box-office",
-        "title": "Snow Socks Stage But ‘Hell’s Kitchen’ And British Cast Of ‘Operation Mincemeat’ Get Warm Goodbyes – Broadway Box Office",
-        "title_kr": "설원 위로 흐르는 예술의 열기: 브로드웨이가 건네는 ‘뜨거운 안녕’의 미학",
-        "summary_kr": "기습적인 폭설도 막지 못한 무대의 뜨거운 심장, '헬스 키친'의 화려한 피날레와 '오퍼레이션 민스미트'의 세대교체가 남긴 깊은 여운을 기록합니다.",
-        "date": "Tue, 24 Feb 2026 21:06:06 +0000",
-        "image": "https://deadline.com/wp-content/uploads/2026/02/Operation-Mincemeat-OG5-Finale_Emilio-Madrid_2553.jpg",
-        "tier": "major",
-        "source": "Deadline Theater",
-        "link": "https://deadline.com/2026/02/broadway-box-office-february-2026-blizzard-1236734447/",
-        "keywords": [
-            "브로드웨이 박스오피스",
-            "헬스 키친",
-            "오리지널 캐스트"
-        ]
-    },
-    {
-        "id": "broadway-shows-cancel-sunday-evening-performances-amid-massive-winter-storm",
-        "title": "Broadway Shows Cancel Sunday Evening Performances Amid Massive Winter Storm",
-        "title_kr": "눈보라 전야, 브로드웨이 무대에 드리운 침묵",
-        "summary_kr": "뉴욕을 강타할 것으로 예고된 강력한 눈보라로 인해 브로드웨이 극장들이 일요일 저녁 공연을 전격 취소했습니다. 주요 인기작들을 포함한 대부분의 작품들이 밤 무대를 접었으며, 특히 오리지널 캐스트의 마지막 공연을 앞두고 있던 'Operation Mincemeat'는 온라인 스트리밍 콘서트로 아쉬움을 달랬습니다. 시민 안전을 최우선으로 한 결정으로, 거리는 이른 침묵에 잠기게 되었습니다.",
-        "date": "Sun, 22 Feb 2026 17:40:40 +0000",
-        "image": "https://variety.com/wp-content/uploads/2025/11/3_CHESS_BROADWAY_S_0357_PJZEDIT_v001-1.jpg",
-        "tier": "major",
-        "source": "Variety Theater"
     }
 ]
