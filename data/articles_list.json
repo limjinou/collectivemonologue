@@ -1,5 +1,16 @@
 [
     {
+        "id": "the-deeply-unnerving-1994-indie-what-happened-was-reminds-you-dating-has-always-been-hell",
+        "title": "The Deeply Unnerving 1994 Indie ‘What Happened Was’ Reminds You Dating Has Always Been Hell",
+        "title_kr": "식어버린 홍차와 날 선 진실: 'What Happened Was...'가 소환한 연애의 심연",
+        "summary_kr": "1994년 선댄스를 매료시킨 톰 누넌의 잔혹한 로맨스가 30년의 세월을 넘어 오프-브로드웨이 무대 위, 우리 시대의 가장 서늘한 거울로 다시 태어났습니다.",
+        "date": "Sat, 02 May 2026 03:59:00 +0000",
+        "image": "https://www.indiewire.com/wp-content/uploads/2026/05/What-Happened-Was.png?w=650",
+        "tier": "major",
+        "source": "IndieWire",
+        "link": "https://www.indiewire.com/features/best-of/what-happened-was-1994-tom-noonan-cult-film-1235191951/"
+    },
+    {
         "id": "cedric-the-entertainer-finds-his-song-lost-boys-raises-the-stakes",
         "title": "Cedric the Entertainer Finds His Song, ‘Lost Boys’ Raises the Stakes",
         "title_kr": "시대의 선율을 찾는 여정: 오거스트 윌슨의 영혼과 브로드웨이의 새로운 야심",
@@ -1087,21 +1098,5 @@
         "tier": "major",
         "source": "Deadline Theater",
         "link": "https://deadline.com/2026/02/sondra-lee-dead-1236735665/"
-    },
-    {
-        "id": "when-beck-did-beckett-the-last-days-of-a-living-theater-cofounder",
-        "title": "When Beck Did Beckett: The Last Days of a Living Theater Cofounder",
-        "title_kr": "무대라는 제단 위에서 불꽃으로 사그라들다: 줄리언 벡의 고결한 마지막 연대기",
-        "summary_kr": "아방가르드의 전설 '리빙 씨어터'의 설립자 줄리언 벡이 생의 마지막 순간, 사무엘 베케트의 침묵 속에서 완성한 가장 처절하고도 아름다운 작별 인사를 추적합니다.",
-        "date": "Tue, 24 Feb 2026 12:24:16 +0000",
-        "image": "https://www.americantheatre.org/wp-content/uploads/julian-beck_living-theatre.jpg",
-        "tier": "indie",
-        "source": "American Theatre",
-        "link": "https://www.americantheatre.org/2026/02/24/when-beck-did-beckett-the-last-days-of-a-living-theater-cofounder/",
-        "keywords": [
-            "줄리언 벡",
-            "사무엘 베케트",
-            "리빙 씨어터"
-        ]
     }
 ]
