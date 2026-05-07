@@ -1,5 +1,27 @@
 [
     {
+        "id": "mamas-turn-my-mother-me-and-2-musical-bookends",
+        "title": "Mama’s Turn: My Mother, Me, and 2 Musical Bookends",
+        "title_kr": "Mama’s Turn: My Mother, Me, and 2 Musical Bookends",
+        "summary_kr": "AI 모델 일시적 과부하로 정보를 불러오지 못했습니다.",
+        "date": "Wed, 06 May 2026 19:01:27 +0000",
+        "image": "https://www.americantheatre.org/wp-content/uploads/dorothy-fortenberry-and-mom1-1.jpg",
+        "tier": "indie",
+        "source": "American Theatre",
+        "link": "https://www.americantheatre.org/2026/05/06/mamas-turn-my-mother-me-and-2-musical-bookends/"
+    },
+    {
+        "id": "sundance-2026-movies-sold-so-far-mubi-buys-grand-jury-prize-winner-nuisance-bear",
+        "title": "Sundance 2026 Movies Sold So Far: Mubi Buys Grand Jury Prize Winner ‘Nuisance Bear’",
+        "title_kr": "차가운 북극의 눈동자가 건네는 뜨거운 질문: 2026 선댄스의 미학적 성찰",
+        "summary_kr": "단순한 영화적 매매 기록을 넘어, 인간의 경계와 실존의 딜레마를 포착한 선댄스 화제작들을 통해 예술이 우리 시대의 '골칫거리'를 어떻게 포용하는지 분석합니다.",
+        "date": "Wed, 06 May 2026 21:06:40 +0000",
+        "image": "https://www.indiewire.com/wp-content/uploads/2026/01/Nuisance_Bear-Still_1_e9c037.jpg?w=650",
+        "tier": "major",
+        "source": "IndieWire",
+        "link": "https://www.indiewire.com/news/festivals/sundance-2026-movies-sold-so-far-1235174095/"
+    },
+    {
         "id": "this-month-in-theatre-history-1778030931",
         "title": "This Month in Theatre History",
         "title_kr": "[Stage-Is Editorial] 상업주의의 파고를 넘어, 예술의 시대를 연 ‘선택받은 자들’의 태동",
@@ -1076,27 +1098,5 @@
         "tier": "major",
         "source": "IndieWire",
         "link": "https://www.indiewire.com/news/events/clint-bentley-adolpho-veloso-interview-train-dreams-images-1235182193/"
-    },
-    {
-        "id": "sinners-scores-big-actor-awards-wins-will-oscar-votes-follow",
-        "title": "‘Sinners’ Scores Big Actor Awards Wins. Will Oscar Votes Follow?",
-        "title_kr": "페르소나의 향연, '시너스(Sinners)'가 던진 오스카의 마지막 승부수",
-        "summary_kr": "배우 조합상의 압도적 승리로 반전을 꾀하는 '시너스'와 제작자 조합상의 견고한 지지를 받는 '원 배틀 애프터 어나더', 두 거장의 미학이 충돌하는 오스카의 정점을 탐구합니다.",
-        "date": "Mon, 02 Mar 2026 05:36:41 +0000",
-        "image": "https://www.indiewire.com/wp-content/uploads/2026/03/P104EXNU.jpg?w=650",
-        "tier": "major",
-        "source": "IndieWire",
-        "link": "https://www.indiewire.com/awards/predictions/sinners-wins-actor-awards-oscars-analysis-1235182094/"
-    },
-    {
-        "id": "luke-macfarlane--cooper-koch-set-for-private-industry-presentation-of-broadwaybound-the-little-dog-laughed-revival-billy-porter-costars",
-        "title": "Luke Macfarlane & Cooper Koch Set For Private Industry Presentation Of Broadway-Bound ‘The Little Dog Laughed’ Revival; Billy Porter Co-Stars",
-        "title_kr": "할리우드의 화려한 침묵, 그 가면을 벗기는 브로드웨이의 날카로운 유머: <더 리틀 독 래프드>의 귀환",
-        "summary_kr": "성공을 위해 자아를 지워야 했던 이들의 고통을 유쾌한 냉소로 풀어낸 수작, <더 리틀 독 래프드>가 빌리 포터와 쿠퍼 코치라는 파격적인 라인업으로 다시 무대에 오를 준비를 마쳤습니다.",
-        "date": "Fri, 27 Feb 2026 16:01:02 +0000",
-        "image": "https://deadline.com/wp-content/uploads/2026/02/Screenshot-2026-02-27-at-10.30.33 AM.png",
-        "tier": "major",
-        "source": "Deadline Theater",
-        "link": "https://deadline.com/2026/02/luke-macfarlane-cooper-koch-broadway-little-dog-laughed-1236738568/"
     }
 ]
