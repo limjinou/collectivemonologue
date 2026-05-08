@@ -1,5 +1,27 @@
 [
     {
+        "id": "rabbits-rats-and-ants-oh-my-the-alliances-underground-rep",
+        "title": "Rabbits, Rats, and Ants, Oh My: The Alliance’s Underground Rep",
+        "title_kr": "토끼와 쥐, 그리고 개미가 안내하는 무대의 심연: '언더그라운드 렙'이 던지는 예술적 승부수",
+        "summary_kr": "단순한 어린이 연극을 넘어, 고갈되지 않는 수요와 예술적 밀도를 동시에 붙잡은 얼라이언스 시어터의 혁신적인 '레퍼토리' 실험을 조명합니다.",
+        "date": "Thu, 07 May 2026 15:03:36 +0000",
+        "image": "https://www.americantheatre.org/wp-content/uploads/Z066760-1024x681.jpg",
+        "tier": "indie",
+        "source": "American Theatre",
+        "link": "https://www.americantheatre.org/2026/05/07/rabbits-rats-ants-oh-my-the-alliances-underground-rep/"
+    },
+    {
+        "id": "remarkably-bright-creatures-review-sally-field-bonds-with-an-octopus-but-the-human-drama-works-too",
+        "title": "‘Remarkably Bright Creatures’ Review: Sally Field Bonds with an Octopus, but the Human Drama Works Too",
+        "title_kr": "심해의 촉수가 건넨 따스한 위로, 살리 필드가 빚어낸 고요한 기적",
+        "summary_kr": "베스트셀러의 단순한 재현을 넘어, 스크린 위에서 새롭게 호흡하는 인간의 고독과 연대에 관한 가장 영리한 변주곡.",
+        "date": "Thu, 07 May 2026 23:00:00 +0000",
+        "image": "https://www.indiewire.com/wp-content/uploads/2026/04/RBC_227_E006C005_250415_R36R_2.38.1_Graded_R_NJ.jpg?w=650",
+        "tier": "major",
+        "source": "IndieWire",
+        "link": "https://www.indiewire.com/criticism/movies/remarkably-bright-creatures-film-review-sally-field-octopus-1235191813/"
+    },
+    {
         "id": "mamas-turn-my-mother-me-and-2-musical-bookends",
         "title": "Mama’s Turn: My Mother, Me, and 2 Musical Bookends",
         "title_kr": "Mama’s Turn: My Mother, Me, and 2 Musical Bookends",
@@ -1076,27 +1098,5 @@
         "tier": "major",
         "source": "IndieWire",
         "link": "https://www.indiewire.com/features/commentary/dropout-the-rookie-crossover-controversy-explained-1235182321/"
-    },
-    {
-        "id": "jonathan-nortons-moments-of-change",
-        "title": "Jonathan Norton’s Moments of Change",
-        "title_kr": "조나단 노튼의 변주곡: 댈러스의 골목에서 역사의 무대로 흐르는 선율",
-        "summary_kr": "댈러스의 정체성을 연극적 미학으로 승화시켜 온 극작가 조나단 노튼. 그가 낡은 연극 팜플렛에서 꺼내 올린 추억과 역사의 빈틈을 메우는 지적 상상력을 탐구합니다.",
-        "date": "Fri, 27 Feb 2026 22:15:27 +0000",
-        "image": "https://www.americantheatre.org/wp-content/uploads/jonathan-norton_higher-res_photo-by-Kent-Barker-989x1024.jpg",
-        "tier": "indie",
-        "source": "American Theatre",
-        "link": "https://www.americantheatre.org/2026/02/27/jonathan-nortons-moments-of-change/"
-    },
-    {
-        "id": "oscar-nominees-clint-bentley-and-adolpho-veloso-narrate-a-train-dreams-visual-journey",
-        "title": "Oscar Nominees Clint Bentley and Adolpho Veloso Narrate a ‘Train Dreams’ Visual Journey",
-        "title_kr": "빛과 침묵으로 엮어낸 기억의 앙상블: '트레인 드림즈'가 머문 찰나의 기록",
-        "summary_kr": "영화적 서사를 정지된 이미지의 미학으로 치환한 '트레인 드림즈'. 클린트 벤틀리와 아돌포 벨로소가 빛의 층위로 재구성한 삶의 고고학을 스테이지사이드의 시선으로 분석합니다.",
-        "date": "Tue, 03 Mar 2026 01:00:00 +0000",
-        "image": "https://www.indiewire.com/wp-content/uploads/2026/03/GettyImages-2263694806.jpg?w=650",
-        "tier": "major",
-        "source": "IndieWire",
-        "link": "https://www.indiewire.com/news/events/clint-bentley-adolpho-veloso-interview-train-dreams-images-1235182193/"
     }
 ]
