@@ -1,5 +1,27 @@
 [
     {
+        "id": "book-restoration-in-flower-drum-song-and-brigadoon",
+        "title": "Book Restoration in ‘Flower Drum Song’ and ‘Brigadoon’",
+        "title_kr": "선율의 화려함 뒤에 숨은 고독한 건축, '뮤지컬 북'의 복원과 미학",
+        "summary_kr": "화려한 넘버 뒤에서 극의 뼈대를 지탱하는 '북(Book)'의 가치를 재조명하고, 시대의 흐름에 발맞춰 고전을 현대적 감각으로 복원해내는 예술적 연금술을 탐구합니다.",
+        "date": "Fri, 08 May 2026 19:23:17 +0000",
+        "image": "https://www.americantheatre.org/wp-content/uploads/goes-to-show_may-2026.jpg",
+        "tier": "indie",
+        "source": "American Theatre",
+        "link": "https://www.americantheatre.org/2026/05/08/book-restoration-in-flower-drum-song-and-brigadoon/"
+    },
+    {
+        "id": "judd-apatow-on-how-he-dug-into-the-funniest-man-in-the-world-mel-brooks",
+        "title": "Judd Apatow on How He Dug Into the Funniest Man in the World, Mel Brooks",
+        "title_kr": "웃음의 계보학: 주드 애퍼토우가 발굴한 멜 브룩스라는 희극의 성전",
+        "summary_kr": "시대의 유머를 정의한 거장 멜 브룩스의 내면을 현대 코미디의 기수 주드 애퍼토우의 시선으로 해부하며, 희극이 지닌 예술적 숭고함과 그 이면의 인간적 고뇌를 탐구합니다.",
+        "date": "Fri, 08 May 2026 22:30:00 +0000",
+        "image": "https://www.indiewire.com/wp-content/uploads/2026/01/Mel-Brooks-99-Year-Old-Man-HBO-documentary-release-date.jpg?w=650",
+        "tier": "major",
+        "source": "IndieWire",
+        "link": "https://www.indiewire.com/features/podcast/judd-apatow-mel-brooks-interview-screen-talk-1235192841/"
+    },
+    {
         "id": "rabbits-rats-and-ants-oh-my-the-alliances-underground-rep",
         "title": "Rabbits, Rats, and Ants, Oh My: The Alliance’s Underground Rep",
         "title_kr": "토끼와 쥐, 그리고 개미가 안내하는 무대의 심연: '언더그라운드 렙'이 던지는 예술적 승부수",
@@ -1076,27 +1098,5 @@
         "tier": "major",
         "source": "IndieWire",
         "link": "https://www.indiewire.com/features/interviews/young-sherlock-hero-fiennes-tiffin-joseph-fiennes-spoilers-1235182460/"
-    },
-    {
-        "id": "this-month-in-theatre-history",
-        "title": "This Month in Theatre History",
-        "title_kr": "3월의 무대, 평범한 삶이 거장이 되는 숭고한 순간들",
-        "summary_kr": "호튼 푸트의 고요한 관조부터 퓰리처상의 치열한 예술적 정체성 논쟁까지, 미국 연극의 뿌리를 이루는 결정적 순간들을 'Stage-Is'의 시선으로 조명합니다.",
-        "date": "Tue, 03 Mar 2026 17:42:39 +0000",
-        "image": "https://www.americantheatre.org/wp-content/uploads/2666_10-2.jpg",
-        "tier": "indie",
-        "source": "American Theatre",
-        "link": "https://www.americantheatre.org/2026/03/03/this-month-in-theatre-history-133/"
-    },
-    {
-        "id": "why-did-dropout-a-progressive-proqueer-indie-streaming-service-risk-a-cameo-on-the-rookie",
-        "title": "Why Did Dropout (a Progressive, Pro-Queer Indie Streaming Service) Risk a Cameo on ‘The Rookie’?",
-        "title_kr": "경계를 허무는 실험인가, 신념의 훼손인가: Dropout이 '더 루키'라는 거대 서사에 던진 승부수",
-        "summary_kr": "진보적 인디 스트리밍의 상징 Dropout이 보수적 색채의 지상파 드라마와 조우하며 발생한 불협화음을 통해, 현대 관객이 스트리밍 플랫폼에 투사하는 '이데올로기적 피난처'로서의 열망을 심층 분석합니다.",
-        "date": "Tue, 03 Mar 2026 23:30:00 +0000",
-        "image": "https://www.indiewire.com/wp-content/uploads/2026/03/Screenshot-2026-03-03-at-2.11.29-PM.png?w=650",
-        "tier": "major",
-        "source": "IndieWire",
-        "link": "https://www.indiewire.com/features/commentary/dropout-the-rookie-crossover-controversy-explained-1235182321/"
     }
 ]
