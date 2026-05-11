@@ -1,5 +1,16 @@
 [
     {
+        "id": "adolescence-makes-bafta-history-with-recordbreaking-four-tv-award-wins",
+        "title": "‘Adolescence’ Makes BAFTA History with Record-Breaking Four TV Award Wins",
+        "title_kr": "잔혹한 계절의 찬가: '애돌레센스(Adolescence)'가 증명한 연기 예술의 숭고함",
+        "summary_kr": "영국 TV 예술의 정점, BAFTA의 역사를 새로 쓴 잭 손과 스테판 그레이엄의 걸작 '애돌레센스'가 남긴 미학적 파장과 시대적 함의를 탐구합니다.",
+        "date": "Sun, 10 May 2026 20:06:59 +0000",
+        "image": "https://www.indiewire.com/wp-content/uploads/2025/08/Adolescence-Owen-Cooper-Best-Supporting-Actor-Emmy-2025.jpg?w=650",
+        "tier": "major",
+        "source": "IndieWire",
+        "link": "https://www.indiewire.com/awards/results/2026-bafta-tv-awards-winners-list-adolescence-1235193034/"
+    },
+    {
         "id": "book-restoration-in-flower-drum-song-and-brigadoon",
         "title": "Book Restoration in ‘Flower Drum Song’ and ‘Brigadoon’",
         "title_kr": "선율의 화려함 뒤에 숨은 고독한 건축, '뮤지컬 북'의 복원과 미학",
@@ -1087,16 +1098,5 @@
         "tier": "indie",
         "source": "American Theatre",
         "link": "https://www.americantheatre.org/2026/03/04/bernard-weiner-san-francisco-theatres-chronicler/"
-    },
-    {
-        "id": "young-sherlock-stars-hero-fiennes-tiffin-and-joseph-fiennes-crack-the-case-on-big-spoilers-and-real-chemistry",
-        "title": "‘Young Sherlock’ Stars Hero Fiennes Tiffin and Joseph Fiennes Crack the Case on Big Spoilers and Real Chemistry",
-        "title_kr": "혈육이라는 이름의 거울: '영 셜록'이 그려낸 피네스 가문의 예술적 조우",
-        "summary_kr": "배우 히어로 피네스 티핀과 그의 실제 삼촌 조셉 피네스가 빚어내는 연기적 앙상블, 그 뜨거운 혈통의 서사가 전설적인 탐정의 기원을 어떻게 완성했는지 심층 분석합니다.",
-        "date": "Wed, 04 Mar 2026 22:00:00 +0000",
-        "image": "https://www.indiewire.com/wp-content/uploads/2026/03/GettyImages-2263382304.jpg?w=650",
-        "tier": "major",
-        "source": "IndieWire",
-        "link": "https://www.indiewire.com/features/interviews/young-sherlock-hero-fiennes-tiffin-joseph-fiennes-spoilers-1235182460/"
     }
 ]
