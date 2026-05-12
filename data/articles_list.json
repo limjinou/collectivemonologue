@@ -1,5 +1,27 @@
 [
     {
+        "id": "state-of-play",
+        "title": "State of Play",
+        "title_kr": "터놓지 못한 진실: 무대 위의 문장이 생존의 언어로 바뀌기까지",
+        "summary_kr": "17년 전 발표된 연구 ‘Outrageous Fortune’이 던진 화두를 통해, 예술적 열망과 자본의 냉혹함 사이에서 표류하는 희곡 작가들의 삶과 연극 생태계의 구조적 균열을 심도 있게 고찰합니다.",
+        "date": "Mon, 11 May 2026 14:07:09 +0000",
+        "image": "https://www.americantheatre.org/wp-content/uploads/writers-compensation_deb-lims.jpg",
+        "tier": "indie",
+        "source": "American Theatre",
+        "link": "https://www.americantheatre.org/2026/05/11/state-of-play/"
+    },
+    {
+        "id": "neons-i-love-boosters-is-giving-la-drivers-free-gas- with-keke-palmer-and-lakeith-stanfield",
+        "title": "Neon’s ‘I Love Boosters’ Is Giving L.A. Drivers Free Gas — with Keke Palmer and LaKeith Stanfield!",
+        "title_kr": "[Stage-Is 에디토리얼] 주유기 끝에서 시작된 전위적 연극: '아이 러브 부스터스'가 건네는 시대적 위로",
+        "summary_kr": "부츠 라일리 감독의 신작 '아이 러브 부스터스'가 LA 한복판에서 펼친 파격적인 무료 주유 이벤트는, 영화적 서사가 어떻게 현실의 모순과 맞닿아 예술적 연대로 승화되는지를 보여주는 강렬한 퍼포먼스입니다.",
+        "date": "Mon, 11 May 2026 22:01:09 +0000",
+        "image": "https://www.indiewire.com/wp-content/uploads/2026/03/I-LOVE-BOOSTERS_Still_03_Cropped_Courtesy-of-NEON.jpg?w=650",
+        "tier": "major",
+        "source": "IndieWire",
+        "link": "https://www.indiewire.com/news/breaking-news/i-love-boosters-free-gas-giveaway-1235193329/"
+    },
+    {
         "id": "adolescence-makes-bafta-history-with-recordbreaking-four-tv-award-wins",
         "title": "‘Adolescence’ Makes BAFTA History with Record-Breaking Four TV Award Wins",
         "title_kr": "잔혹한 계절의 찬가: '애돌레센스(Adolescence)'가 증명한 연기 예술의 숭고함",
@@ -1076,27 +1098,5 @@
         "tier": "indie",
         "source": "American Theatre",
         "link": "https://www.americantheatre.org/2026/03/05/a-curtain-call-for-the-life-and-legacy-of-othell-j-miller/"
-    },
-    {
-        "id": "the-stars-of-deli-boys-explain-the-different-types-of-excitement-they-felt-before-filming-seasons-1-and-2",
-        "title": "The Stars of ‘Deli Boys’ Explain the Different Types of Excitement They Felt Before Filming Seasons 1 and 2",
-        "title_kr": "미지의 설렘에서 예술적 안식으로: ‘델리 보이즈’가 증명한 관계의 미학",
-        "summary_kr": "불확실한 기대를 안고 출발했던 시즌 1을 지나, 집과 같은 편안한 유대감으로 회귀하는 배우들의 고백을 통해 공연 예술이 선사하는 진정한 연대의 가치를 조명합니다.",
-        "date": "Fri, 06 Mar 2026 00:30:00 +0000",
-        "image": "https://www.indiewire.com/wp-content/uploads/2026/02/P10441VE.jpg?w=650",
-        "tier": "major",
-        "source": "IndieWire",
-        "link": "https://www.indiewire.com/news/events/deli-boys-independent-spirit-awards-lavazza-coffee-break-1235180832/"
-    },
-    {
-        "id": "bernard-weiner-san-francisco-theatres-chronicler",
-        "title": "Bernard Weiner: San Francisco Theatre’s Chronicler",
-        "title_kr": "시대의 파동을 활자로 새기다: 샌프란시스코의 영원한 연대기 작가, 버나드 와이너",
-        "summary_kr": "전통의 격식을 벗어던지고 반문화의 격랑 속으로 뛰어든 비평가, 버나드 와이너가 남긴 샌프란시스코 연극의 찬란한 유산과 그 지적 통찰을 조명합니다.",
-        "date": "Wed, 04 Mar 2026 15:54:43 +0000",
-        "image": "https://www.americantheatre.org/wp-includes/images/media/default.svg",
-        "tier": "indie",
-        "source": "American Theatre",
-        "link": "https://www.americantheatre.org/2026/03/04/bernard-weiner-san-francisco-theatres-chronicler/"
     }
 ]
