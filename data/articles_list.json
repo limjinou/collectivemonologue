@@ -1,5 +1,27 @@
 [
     {
+        "id": "how-is-god-is-set-aleshea-harris-free",
+        "title": "How ‘Is God Is’ Set Aleshea Harris Free",
+        "title_kr": "복수의 선혈로 빚어낸 시적 해방, 얼리샤 해리스가 소환한 유령의 목소리",
+        "summary_kr": "무대 위 활자의 리듬을 스크린의 조형미로 치환하며, 고통과 분노를 예술적 숭고함으로 승화시킨 얼리샤 해리스의 파격적인 미학적 여정을 탐구합니다.",
+        "date": "Tue, 12 May 2026 12:00:54 +0000",
+        "image": "https://www.americantheatre.org/wp-content/uploads/is-god-is_film2.jpg",
+        "tier": "indie",
+        "source": "American Theatre",
+        "link": "https://www.americantheatre.org/2026/05/12/how-is-god-is-set-aleshea-harris-free/"
+    },
+    {
+        "id": "drivers-ed-review-sam-nivola-stars-in-bobby-farrellys-generic-throwback-to-the-days-of-road-trip-and-american-pie",
+        "title": "‘Driver’s Ed’ Review: Sam Nivola Stars in Bobby Farrelly’s Generic Throwback to the Days of ‘Road Trip’ and ‘American Pie’",
+        "title_kr": "낡은 지도로 떠나는 익숙한 여행, '드라이버스 에드'가 놓친 예술적 변곡점",
+        "summary_kr": "90년대 코미디의 향수와 현대적 감각이 충돌하는 지점에서, 영화 '드라이버스 에드'가 보여준 평범함의 미학과 그 한계를 예리한 시선으로 해부합니다.",
+        "date": "Tue, 12 May 2026 21:00:00 +0000",
+        "image": "https://www.indiewire.com/wp-content/uploads/2025/09/Screen-Shot-2025-09-11-at-10.05.08-AM.png?w=650",
+        "tier": "major",
+        "source": "IndieWire",
+        "link": "https://www.indiewire.com/criticism/movies/drivers-ed-movie-review-bobby-farrelly-sam-nivola-1235150449/"
+    },
+    {
         "id": "state-of-play",
         "title": "State of Play",
         "title_kr": "터놓지 못한 진실: 무대 위의 문장이 생존의 언어로 바뀌기까지",
@@ -1076,27 +1098,5 @@
         "tier": "major",
         "source": "IndieWire",
         "link": "https://www.indiewire.com/features/commentary/hoppers-watch-we-bare-bears-1235182951/"
-    },
-    {
-        "id": "quentin-tarantino-is-developing-an-old-fashioned-british-farce-play-as-his-next-project",
-        "title": "Quentin Tarantino Is Developing an ‘Old Fashioned British Farce’ Play as His Next Project",
-        "title_kr": "타란티노의 화려한 외도: 피의 미학에서 런던 웨스트엔드의 '파스(Farce)'로",
-        "summary_kr": "스크린의 거친 무법자 쿠엔틴 타란티노가 10번째 영화 대신 런던의 고전적 소극(Farce)을 선택했습니다. 2027년, 그가 설계한 정교한 웃음의 메커니즘이 무대 위에서 어떤 지각변동을 일으킬지 탐구합니다.",
-        "date": "Fri, 06 Mar 2026 23:56:09 +0000",
-        "image": "https://www.indiewire.com/wp-content/uploads/2025/05/GettyImages-2214900368.jpg?w=650",
-        "tier": "major",
-        "source": "IndieWire",
-        "link": "https://www.indiewire.com/news/general-news/quentin-tarantino-old-fashioned-british-farce-play-1235182961/"
-    },
-    {
-        "id": "a-curtain-call-for-the-life-and-legacy-of-othell-j-miller",
-        "title": "A Curtain Call for the Life and Legacy of Othell J. Miller",
-        "title_kr": "무대 위의 인문학자, 오델 J. 밀러가 남긴 생애 가장 아름다운 ‘미장센’",
-        "summary_kr": "예술가이자 스승으로서 시대를 호흡하며 현대 미국의 시대정신을 무대로 옮겼던 ‘미스터 시어터’, 오델 J. 밀러의 고결한 예술적 궤적을 추모하다.",
-        "date": "Thu, 05 Mar 2026 21:40:34 +0000",
-        "image": "https://www.americantheatre.org/wp-content/uploads/Tylie-Shider_Othell-Miller_Premiere-Stages.jpg",
-        "tier": "indie",
-        "source": "American Theatre",
-        "link": "https://www.americantheatre.org/2026/03/05/a-curtain-call-for-the-life-and-legacy-of-othell-j-miller/"
     }
 ]
