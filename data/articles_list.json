@@ -1,5 +1,27 @@
 [
     {
+        "id": "featured-contributors",
+        "title": "Featured Contributors",
+        "title_kr": "미완의 무대가 건네는 위로, 그리고 색채 너머의 치열한 내면",
+        "summary_kr": "불확실한 시대 속에서도 극단을 세우는 이들의 낙관적인 용기와 푸에르토리코 예술가들이 지닌 내밀한 엄격함을 통해 미국 연극계의 살아있는 박동을 전합니다.",
+        "date": "Wed, 13 May 2026 18:59:20 +0000",
+        "image": "https://www.americantheatre.org/wp-content/uploads/Untitled-design-5-3.png",
+        "tier": "indie",
+        "source": "American Theatre",
+        "link": "https://www.americantheatre.org/2026/05/13/featured-contributors-8/"
+    },
+    {
+        "id": "is-god-is-review-filmmaker-aleshea-harris-fulfills-her-destiny-in-this-fizzy-and-fiery-revenge-debut",
+        "title": "‘Is God Is’ Review: Filmmaker Aleshea Harris Fulfills Her Destiny in This Fizzy and Fiery Revenge Debut",
+        "title_kr": "잔혹한 신성이 빚어낸 핏빛 복수의 전례, 'Is God Is'가 선사하는 전율",
+        "summary_kr": "무대 위의 강렬한 에너지를 스크린으로 전이시킨 알레시아 해리스는, 고통의 연대기와 신성(神性)의 파괴적 본질을 다루며 현대 복수극의 새로운 지평을 엽니다.",
+        "date": "Thu, 14 May 2026 01:39:47 +0000",
+        "image": "https://www.indiewire.com/wp-content/uploads/2026/05/MCDISGO_MG003.jpg?w=650",
+        "tier": "major",
+        "source": "IndieWire",
+        "link": "https://www.indiewire.com/criticism/movies/is-god-is-film-review-1235193878/"
+    },
+    {
         "id": "how-is-god-is-set-aleshea-harris-free",
         "title": "How ‘Is God Is’ Set Aleshea Harris Free",
         "title_kr": "복수의 선혈로 빚어낸 시적 해방, 얼리샤 해리스가 소환한 유령의 목소리",
@@ -1076,27 +1098,5 @@
         "tier": "major",
         "source": "IndieWire",
         "link": "https://www.indiewire.com/features/best-of/pixar-movies-ranked-best-worst-96815/"
-    },
-    {
-        "id": "one-battle-after-another-and-sinners-win-top-prizes-at-2026-wga-awards-full-winners-list",
-        "title": "‘One Battle After Another’ and ‘Sinners’ Win Top Prizes at 2026 WGA Awards (Full Winners List)",
-        "title_kr": "펜의 궤적이 그리는 시대의 초상: 2026 WGA 어워즈가 남긴 예술적 기록",
-        "summary_kr": "오스카를 향한 마지막 관문에서 울려 퍼진 '문장의 승리'를 통해, 현대 극작의 정점과 창작자들의 실존적 고뇌를 심층 조명합니다.",
-        "date": "Mon, 09 Mar 2026 00:09:41 +0000",
-        "image": "https://www.indiewire.com/wp-content/uploads/2026/02/MCDSINN_WB051.jpg?w=650",
-        "tier": "major",
-        "source": "IndieWire",
-        "link": "https://www.indiewire.com/awards/results/2026-wga-awards-winners-full-list-1235182975/"
-    },
-    {
-        "id": "love-hoppers-check-out-the-directors-brilliant-cartoon-network-series",
-        "title": "Love ‘Hoppers’? Check Out the Director’s Brilliant Cartoon Network Series",
-        "title_kr": "껍질을 벗고 비버가 된 인간: 다니엘 정이 설계한 ‘타자성’의 무대",
-        "summary_kr": "픽사의 신작 ‘호퍼스’를 통해 들여다본 감독 다니엘 정의 독창적 세계관과, 그 뿌리가 된 ‘위 베어 베어스’ 속 유쾌한 사회적 페르소나를 탐구합니다.",
-        "date": "Sat, 07 Mar 2026 18:00:00 +0000",
-        "image": "https://www.indiewire.com/wp-content/uploads/2026/03/TCDWEBA_EC049.jpg?w=650",
-        "tier": "major",
-        "source": "IndieWire",
-        "link": "https://www.indiewire.com/features/commentary/hoppers-watch-we-bare-bears-1235182951/"
     }
 ]
