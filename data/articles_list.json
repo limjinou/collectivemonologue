@@ -1,5 +1,27 @@
 [
     {
+        "id": "21-practical-tips-for-new-artistic-directors",
+        "title": "21 Practical Tips for New Artistic Directors",
+        "title_kr": "무대 위의 조타수, 예술과 경영의 파도를 넘는 21개의 나침반",
+        "summary_kr": "세대교체의 물결 속에서 극장의 영혼을 책임지게 된 신임 예술감독들에게 건네는, 30년 현장의 지혜가 응축된 미학적 실천 강령.",
+        "date": "Thu, 14 May 2026 12:00:00 +0000",
+        "image": "https://www.americantheatre.org/wp-includes/images/media/default.svg",
+        "tier": "indie",
+        "source": "American Theatre",
+        "link": "https://www.americantheatre.org/2026/05/14/21-practical-tips-for-new-artistic-directors/"
+    },
+    {
+        "id": "regular-show-the-lost-tapes-and-the-tricky-science-of-a-tv-revival",
+        "title": "‘Regular Show: The Lost Tapes’ and the Tricky Science of a TV Revival",
+        "title_kr": "박제된 시간의 소환, 혹은 살아있는 예술의 재건: '레귤러 쇼'와 TV 부활의 미학",
+        "summary_kr": "무대 위에서 사라졌던 유령들이 다시 조명을 받을 때, 우리는 그것이 진정한 예술적 갈망인지 혹은 단순한 산업적 박제인지를 엄중히 물어야 합니다.",
+        "date": "Thu, 14 May 2026 23:30:00 +0000",
+        "image": "https://www.indiewire.com/wp-content/uploads/2026/05/LAND_16_9-1.jpg?w=650",
+        "tier": "major",
+        "source": "IndieWire",
+        "link": "https://www.indiewire.com/features/commentary/regular-show-the-lost-tapes-tv-revivals-1235194188/"
+    },
+    {
         "id": "featured-contributors",
         "title": "Featured Contributors",
         "title_kr": "미완의 무대가 건네는 위로, 그리고 색채 너머의 치열한 내면",
@@ -1076,27 +1098,5 @@
         "tier": "major",
         "source": "IndieWire",
         "link": "https://www.indiewire.com/features/commentary/pixar-lgbtq-character-controversy-explained-1235183350/"
-    },
-    {
-        "id": "theatre-leaders-in-milwaukee-what-we-do-counts",
-        "title": "Theatre Leaders in Milwaukee: ‘What We Do Counts’",
-        "title_kr": "벼랑 끝에서 부르는 무대의 노래: 밀워키가 증명한 지역 극장의 존재 가치",
-        "summary_kr": "도시의 혼란과 위기 속에서도 공연을 멈추지 않았던 거장들의 목소리를 통해, 현대 연극이 지닌 치유와 저항의 생명력을 고찰합니다.",
-        "date": "Mon, 09 Mar 2026 20:48:04 +0000",
-        "image": "https://www.americantheatre.org/wp-content/uploads/milwaukee-rep-convening1-1024x682.jpg",
-        "tier": "indie",
-        "source": "American Theatre",
-        "link": "https://www.americantheatre.org/2026/03/09/theatre-leaders-in-milwaukee-what-we-do-counts/"
-    },
-    {
-        "id": "all-30-pixar-movies-ranked-from-toy-story-to-elio",
-        "title": "All 30 Pixar Movies Ranked, from ‘Toy Story’ to ‘Elio’",
-        "title_kr": "픽사라는 거대한 무대: 장난감의 속삭임에서 영혼의 울림까지",
-        "summary_kr": "단순한 애니메이션의 경계를 넘어, 인간 존재의 근원적 진실을 무대 위에 올리는 픽사의 30년 궤적을 심층적인 연극적 관점으로 조명합니다.",
-        "date": "Mon, 09 Mar 2026 23:00:00 +0000",
-        "image": "https://www.indiewire.com/wp-content/uploads/2023/06/Pixar-Ranking.png?w=650",
-        "tier": "major",
-        "source": "IndieWire",
-        "link": "https://www.indiewire.com/features/best-of/pixar-movies-ranked-best-worst-96815/"
     }
 ]
