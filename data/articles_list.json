@@ -1,5 +1,27 @@
 [
     {
+        "id": "leadership-changes-at-renaissance-theaterworks-old-globe-and-more",
+        "title": "Leadership Changes at Renaissance Theaterworks, Old Globe, and More",
+        "title_kr": "막이 내린 뒤의 조용한 혁명: 리더십의 세대교체가 그리는 미국 연극의 새로운 지도",
+        "summary_kr": "반세기에 가까운 헌신이 일궈낸 토양 위에, 새로운 예술적 비전이 뿌리내립니다. 르네상스 시어터워크스와 올드 글로브가 선택한 새로운 리더들을 통해 미국 연극계의 내일과 조우합니다.",
+        "date": "Fri, 15 May 2026 19:49:33 +0000",
+        "image": "https://www.americantheatre.org/wp-content/uploads/Untitled-design-9.png",
+        "tier": "indie",
+        "source": "American Theatre",
+        "link": "https://www.americantheatre.org/2026/05/15/leadership-changes-at-renaissance-theaterworks-old-globe-and-more/"
+    },
+    {
+        "id": "outlander-stars-caitríona-balfe-and-sam-heughan-bid-an-emotional-farewell-to-the-series--and-react-to-the-finale",
+        "title": "‘Outlander’ Stars Caitríona Balfe and Sam Heughan Bid an Emotional Farewell to the Series — and React to the Finale",
+        "title_kr": "시간이라는 무대 위에 새긴 영원한 입맞춤: '아웃랜더'의 대서사시를 보내며",
+        "summary_kr": "10년의 세월을 관통하며 클래식한 멜로드라마의 정점을 보여준 두 배우가 전하는 마지막 인사이자, 카메라 뒤에서 피어난 예술적 성장에 대한 고찰.",
+        "date": "Fri, 15 May 2026 23:30:00 +0000",
+        "image": "https://www.indiewire.com/wp-content/uploads/2026/05/GettyImages-2264599344.jpg?w=650",
+        "tier": "major",
+        "source": "IndieWire",
+        "link": "https://www.indiewire.com/features/interviews/outlander-caitriona-balfe-sam-heughan-farewell-react-finale-1235194297/"
+    },
+    {
         "id": "21-practical-tips-for-new-artistic-directors",
         "title": "21 Practical Tips for New Artistic Directors",
         "title_kr": "무대 위의 조타수, 예술과 경영의 파도를 넘는 21개의 나침반",
@@ -1076,27 +1098,5 @@
         "tier": "major",
         "source": "IndieWire",
         "link": "https://www.indiewire.com/features/commentary/youtube-independent-film-hollywood-1235183718/"
-    },
-    {
-        "id": "soho-rep-announces-ambitious-3play-hunger-cycle",
-        "title": "Soho Rep Announces Ambitious 3-Play Hunger Cycle",
-        "title_kr": "[에디토리얼] 무대 위에 차려진 실존의 성찬: 소호 렙(Soho Rep)이 던지는 '허기'라는 화두",
-        "summary_kr": "오프-브로드웨이의 혁신을 상징하는 소호 렙이 현대인의 다층적 결핍을 탐구하는 3부작 '허기 사이클'을 통해 위축된 공연계에 경종을 울리는 거대한 예술적 모험을 시작합니다.",
-        "date": "Mon, 09 Mar 2026 19:00:00 +0000",
-        "image": "https://www.americantheatre.org/wp-content/uploads/Cesar-Alvarez-by-Maria-Baranova-Baranova-1024x683.jpg",
-        "tier": "indie",
-        "source": "American Theatre",
-        "link": "https://www.americantheatre.org/2026/03/09/soho-rep-announces-hunger-cycle/"
-    },
-    {
-        "id": "the-brief-history-of-pixar-lgbtq-characters-and-controversy-explained",
-        "title": "The (Brief) History of Pixar LGBTQ Characters and Controversy, Explained",
-        "title_kr": "픽사라는 거울: '보편성'의 가면 뒤에 숨은 예술적 딜레마",
-        "summary_kr": "개인적인 고백이 상업적 논리에 밀려날 때, 우리는 무엇을 잃게 되는가. 픽사의 수장 피트 닥터의 발언을 통해 본 애니메이션과 공연 예술의 교차점을 고찰합니다.",
-        "date": "Tue, 10 Mar 2026 19:00:00 +0000",
-        "image": "https://www.indiewire.com/wp-content/uploads/2025/05/Elio-ONLINE-USE-e330_523a_tk121_000409.pub16.jpeg?w=650",
-        "tier": "major",
-        "source": "IndieWire",
-        "link": "https://www.indiewire.com/features/commentary/pixar-lgbtq-character-controversy-explained-1235183350/"
     }
 ]
