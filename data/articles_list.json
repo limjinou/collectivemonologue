@@ -1,5 +1,16 @@
 [
     {
+        "id": "jim-queen-review-raunchy-animated-movie-about-a-disease-that-turns-gay-men-heterosexual-plays-straight-to-its-core-audience",
+        "title": "‘Jim Queen’ Review: Raunchy Animated Movie About a Disease That Turns Gay Men Heterosexual Plays Straight to Its Core Audience",
+        "title_kr": "정체성의 전복, '이성애'라는 역병이 선사하는 발칙한 거울 치료: <짐 퀸(Jim Queen)>론",
+        "summary_kr": "에이즈 담론을 이성애라는 역병으로 치환한 발칙한 상상력, 그 기저에 흐르는 현대 퀴어 문화의 자조적 초상과 성적 계급론에 대한 심층적 응시.",
+        "date": "Sun, 17 May 2026 23:55:00 +0000",
+        "image": "https://www.indiewire.com/wp-content/uploads/2026/05/Jim-Queen.webp?w=650",
+        "tier": "major",
+        "source": "IndieWire",
+        "link": "https://www.indiewire.com/criticism/movies/jim-queen-review-gay-animated-movie-1235194505/"
+    },
+    {
         "id": "paper-tiger-review-adam-driver-gives-a-careerbest-performance-in-james-grays-devastating-tragedy",
         "title": "‘Paper Tiger’ Review: Adam Driver Gives a Career-Best Performance in James Gray’s Devastating Tragedy",
         "title_kr": "80년대 뉴욕의 신기루, 그 비극적 위엄을 마주하다: ‘페이퍼 타이거(Paper Tiger)’",
@@ -1087,16 +1098,5 @@
         "tier": "major",
         "source": "IndieWire",
         "link": "https://www.indiewire.com/criticism/movies/i-love-boosters-review-boots-riley-1235183563/"
-    },
-    {
-        "id": "woolly-mammoth-expands-connectivity-with-howard-university-and-smyal",
-        "title": "Woolly Mammoth Expands Connectivity With Howard University and SMYAL",
-        "title_kr": "[Stage-Is Editor’s Pick] 무대를 넘어 공동체의 맥박으로: 울리 매머드가 일구는 예술적 연대의 지형도",
-        "summary_kr": "단순한 공연 제작을 넘어 사회적 정의와 세대 간의 가교를 자처한 울리 매머드 극단의 행보를 통해, 21세기 연극이 지향해야 할 진정한 '연결성'의 가치를 탐구합니다.",
-        "date": "Wed, 11 Mar 2026 15:08:48 +0000",
-        "image": "https://www.americantheatre.org/wp-content/uploads/WoollyMammothEntry.jpg",
-        "tier": "indie",
-        "source": "American Theatre",
-        "link": "https://www.americantheatre.org/2026/03/11/woolly-mammoth-expands-connectivity-with-howard-university-and-smyal/"
     }
 ]
