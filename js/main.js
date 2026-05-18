@@ -34,8 +34,15 @@ function setupHeaderDate() {
   const formattedDate = `${year}.${month}.${day}`;
 
   dateElements.forEach(el => {
-    el.innerHTML = `<a href="index.html" style="text-decoration:none; color:inherit;">${formattedDate}</a>`;
+    el.innerHTML = `<a href="${sitePath('/index.html')}" style="text-decoration:none; color:inherit;">${formattedDate}</a>`;
   });
+}
+
+function sitePath(path) {
+  const cleanPath = path.startsWith('/') ? path : `/${path}`;
+  return window.location.pathname.includes('/collectivemonologue')
+    ? `/collectivemonologue${cleanPath}`
+    : cleanPath;
 }
 
 const EDITORIAL_CATEGORIES = {
@@ -93,7 +100,7 @@ function renderEditorialFrames(articles) {
     <div class="eyebrow">This Week on Stage-Is</div>
     <div class="weekly-list">
       ${recent.slice(0, 5).map(article => `
-        <a href="article.html?id=${encodeURIComponent(article.id)}">
+        <a href="${sitePath(`article.html?id=${encodeURIComponent(article.id)}`)}">
           <span>${escapeHtml(categoryLabel(article))}</span>
           <strong>${escapeHtml(article.title_kr || article.title)}</strong>
         </a>
@@ -127,7 +134,7 @@ async function loadArticles() {
     articles.forEach((article) => {
       const item = document.createElement('a');
       // 인덱스 대신 고유 ID(slug)를 사용한 링크 생성
-      item.href = `article.html?id=${article.id}`;
+      item.href = sitePath(`article.html?id=${encodeURIComponent(article.id)}`);
       item.className = 'grid-item';
 
       const imageHtml = article.image
@@ -299,7 +306,7 @@ async function renderCategoryArticles() {
 
     filtered.forEach((article) => {
       const item = document.createElement('a');
-      item.href = `article.html?id=${article.id}`;
+      item.href = sitePath(`article.html?id=${encodeURIComponent(article.id)}`);
       item.className = 'grid-item';
 
       const imageHtml = article.image
