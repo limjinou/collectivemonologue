@@ -335,6 +335,12 @@ def translate_and_summarize(text, title, reddit_comments=""):
     {{
         "title_kr": "기사의 본질과 에디터의 미학이 담긴 매력적인 제목",
         "summary_kr": "독자의 지적 호기심을 자극하는 1-2문장의 고품격 요약",
+        "why_it_matters_kr": "이 기사를 지금 읽어야 하는 이유를 한국 독자에게 1문장으로 설명",
+        "editorial_category": "criticism | industry | voices | queer_lens | stage_to_screen | cultural_signal 중 하나",
+        "editorial_category_label": "Criticism | Industry | Voices | Queer Lens | Stage to Screen | Cultural Signal 중 하나",
+        "context_kr": "인물, 극장, 작품, 산업 배경 중 한국 독자가 이해하면 좋은 맥락 1-2문장",
+        "korean_reader_note_kr": "한국 독자가 이 기사를 자기 문화권의 공연/영화 감각과 연결해 읽을 수 있는 짧은 노트",
+        "signal_keywords": ["이번 기사에서 읽히는 문화적 징후1", "징후2", "징후3"],
         "content_kr": "HTML tags 활용: 기사 인트로 -> <h3>[동적 소제목]</h3><p>...심층 분석...</p> -> <blockquote>...핵심 통찰 또는 인용...</blockquote> -> <h3>[동적 소제목]</h3><p>...현지 반응 분석...</p> -> <h3>[용어 한 스푼]</h3><p>...아름다운 용어 설명...</p>",
         "keywords": ["키워드1", "키워드2", "키워드3"]
     }}
@@ -668,6 +674,12 @@ def process_entry(entry, source, tier):
         "content_kr": ai_result.get('content_kr', '내용 없음'),
         "reddit_reaction_kr": ai_result.get('reddit_reaction_kr', ''),
         "keywords": ai_result.get('keywords', []),
+        "why_it_matters_kr": ai_result.get('why_it_matters_kr', ''),
+        "editorial_category": ai_result.get('editorial_category', ''),
+        "editorial_category_label": ai_result.get('editorial_category_label', ''),
+        "context_kr": ai_result.get('context_kr', ''),
+        "korean_reader_note_kr": ai_result.get('korean_reader_note_kr', ''),
+        "signal_keywords": ai_result.get('signal_keywords', []),
         "date": published,
         "scraped_at": datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S") # Changed to timezone.utc
     }
@@ -703,6 +715,35 @@ def slugify(text):
     text = "".join(c if c.isalnum() or c.isspace() else "" for c in text).strip()
     return text.replace(" ", "-").lower()
 
+def normalize_editorial_fields(article):
+    """Ensure each article has Stage-Is editorial framing fields without extra API calls."""
+    title = f"{article.get('original_title', '')} {article.get('title_kr', '')}".lower()
+    keywords = [str(k).lower() for k in article.get('keywords', [])]
+    text = " ".join([title] + keywords)
+
+    if not article.get('editorial_category'):
+        if any(word in text for word in ['queer', 'gay', 'trans', 'lgbt', '퀴어']):
+            category, label = 'queer_lens', 'Queer Lens'
+        elif any(word in text for word in ['interview', 'stars', 'director', 'actor', 'contributors', 'voices']):
+            category, label = 'voices', 'Voices'
+        elif any(word in text for word in ['leadership', 'director', 'foundation', 'theatre', 'theater', 'industry', 'box office']):
+            category, label = 'industry', 'Industry'
+        elif any(word in text for word in ['adaptation', 'screen', 'film', 'movie', 'tv', 'stage']):
+            category, label = 'stage_to_screen', 'Stage to Screen'
+        elif any(word in text for word in ['review', 'criticism', '비평', '리뷰']):
+            category, label = 'criticism', 'Criticism'
+        else:
+            category, label = 'cultural_signal', 'Cultural Signal'
+        article['editorial_category'] = category
+        article['editorial_category_label'] = label
+
+    article.setdefault('editorial_category_label', article.get('editorial_category', 'cultural_signal').replace('_', ' ').title())
+    article.setdefault('why_it_matters_kr', article.get('summary_kr', ''))
+    article.setdefault('context_kr', '')
+    article.setdefault('korean_reader_note_kr', '')
+    article.setdefault('signal_keywords', article.get('keywords', [])[:3])
+    return article
+
 def save_to_json(major_articles, indie_articles):
     list_path = 'data/articles_list.json'
     detail_dir = 'data/articles'
@@ -730,6 +771,7 @@ def save_to_json(major_articles, indie_articles):
     
     actually_new = []
     for item in new_articles:
+        item = normalize_editorial_fields(item)
         link = item.get('link')
         if link and link not in existing_links:
             # 고유 ID 생성
@@ -756,7 +798,13 @@ def save_to_json(major_articles, indie_articles):
                 "image": item.get('image', ''),
                 "tier": item.get('tier', 'major'),
                 "source": item.get('source', ''),
-                "link": link # 중복 체크용
+                "link": link, # 중복 체크용
+                "why_it_matters_kr": item.get('why_it_matters_kr', ''),
+                "editorial_category": item.get('editorial_category', 'cultural_signal'),
+                "editorial_category_label": item.get('editorial_category_label', 'Cultural Signal'),
+                "context_kr": item.get('context_kr', ''),
+                "korean_reader_note_kr": item.get('korean_reader_note_kr', ''),
+                "signal_keywords": item.get('signal_keywords', item.get('keywords', [])[:3])
             }
             
             existing_list.insert(0, list_item) # 최신순

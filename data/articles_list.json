@@ -8,7 +8,18 @@
         "image": "https://www.indiewire.com/wp-content/uploads/2026/05/Jim-Queen.webp?w=650",
         "tier": "major",
         "source": "IndieWire",
-        "link": "https://www.indiewire.com/criticism/movies/jim-queen-review-gay-animated-movie-1235194505/"
+        "link": "https://www.indiewire.com/criticism/movies/jim-queen-review-gay-animated-movie-1235194505/",
+        "editorial_category": "queer_lens",
+        "editorial_category_label": "Queer Lens",
+        "why_it_matters_kr": "이 기사는 퀴어 서사가 자기풍자, 질병 은유, 몸의 계급성을 어떻게 한꺼번에 다룰 수 있는지 보여주는 오늘의 문화적 징후다.",
+        "context_kr": "〈짐 퀸〉은 에이즈의 역사적 기억을 뒤집어, 이성애가 전염병처럼 퍼지는 세계를 상상한다. 이 설정은 퀴어 공동체 내부의 욕망, 몸, 정상성의 기준을 풍자적으로 비추는 장치다.",
+        "korean_reader_note_kr": "한국 독자에게는 이 작품을 단순한 퀴어 코미디보다 \"소수자 커뮤니티 내부의 규범도 비평 대상이 될 수 있는가\"라는 질문으로 읽는 편이 더 생산적이다.",
+        "signal_keywords": [
+            "퀴어 풍자",
+            "질병 은유",
+            "몸의 계급성"
+        ],
+        "content_version": "stage-is-editorial-v2"
     },
     {
         "id": "paper-tiger-review-adam-driver-gives-a-careerbest-performance-in-james-grays-devastating-tragedy",
@@ -19,7 +30,13 @@
         "image": "https://www.indiewire.com/wp-content/uploads/2026/05/Screenshot-2026-05-11-at-1.56.37 PM.png?w=650",
         "tier": "major",
         "source": "IndieWire",
-        "link": "https://www.indiewire.com/criticism/movies/paper-tiger-movie-review-james-gray-1235194211/"
+        "link": "https://www.indiewire.com/criticism/movies/paper-tiger-movie-review-james-gray-1235194211/",
+        "editorial_category": "criticism",
+        "editorial_category_label": "Criticism",
+        "why_it_matters_kr": "1986년 퀸즈의 뜨거운 공기 속에 흐르는 욕망과 소외를 통해, 제임스 그레이가 빚어낸 현대판 그리스 비극이자 아담 드라이버 연기 인생의 정점을 탐구합니다.",
+        "signal_keywords": [
+            "Criticism"
+        ]
     },
     {
         "id": "leadership-changes-at-renaissance-theaterworks-old-globe-and-more",
@@ -30,7 +47,13 @@
         "image": "https://www.americantheatre.org/wp-content/uploads/Untitled-design-9.png",
         "tier": "indie",
         "source": "American Theatre",
-        "link": "https://www.americantheatre.org/2026/05/15/leadership-changes-at-renaissance-theaterworks-old-globe-and-more/"
+        "link": "https://www.americantheatre.org/2026/05/15/leadership-changes-at-renaissance-theaterworks-old-globe-and-more/",
+        "editorial_category": "industry",
+        "editorial_category_label": "Industry",
+        "why_it_matters_kr": "반세기에 가까운 헌신이 일궈낸 토양 위에, 새로운 예술적 비전이 뿌리내립니다. 르네상스 시어터워크스와 올드 글로브가 선택한 새로운 리더들을 통해 미국 연극계의 내일과 조우합니다.",
+        "signal_keywords": [
+            "Industry"
+        ]
     },
     {
         "id": "outlander-stars-caitríona-balfe-and-sam-heughan-bid-an-emotional-farewell-to-the-series--and-react-to-the-finale",
@@ -41,7 +64,13 @@
         "image": "https://www.indiewire.com/wp-content/uploads/2026/05/GettyImages-2264599344.jpg?w=650",
         "tier": "major",
         "source": "IndieWire",
-        "link": "https://www.indiewire.com/features/interviews/outlander-caitriona-balfe-sam-heughan-farewell-react-finale-1235194297/"
+        "link": "https://www.indiewire.com/features/interviews/outlander-caitriona-balfe-sam-heughan-farewell-react-finale-1235194297/",
+        "editorial_category": "voices",
+        "editorial_category_label": "Voices",
+        "why_it_matters_kr": "10년의 세월을 관통하며 클래식한 멜로드라마의 정점을 보여준 두 배우가 전하는 마지막 인사이자, 카메라 뒤에서 피어난 예술적 성장에 대한 고찰.",
+        "signal_keywords": [
+            "Voices"
+        ]
     },
     {
         "id": "21-practical-tips-for-new-artistic-directors",
@@ -52,7 +81,13 @@
         "image": "https://www.americantheatre.org/wp-includes/images/media/default.svg",
         "tier": "indie",
         "source": "American Theatre",
-        "link": "https://www.americantheatre.org/2026/05/14/21-practical-tips-for-new-artistic-directors/"
+        "link": "https://www.americantheatre.org/2026/05/14/21-practical-tips-for-new-artistic-directors/",
+        "editorial_category": "voices",
+        "editorial_category_label": "Voices",
+        "why_it_matters_kr": "세대교체의 물결 속에서 극장의 영혼을 책임지게 된 신임 예술감독들에게 건네는, 30년 현장의 지혜가 응축된 미학적 실천 강령.",
+        "signal_keywords": [
+            "Voices"
+        ]
     },
     {
         "id": "regular-show-the-lost-tapes-and-the-tricky-science-of-a-tv-revival",
@@ -63,7 +98,13 @@
         "image": "https://www.indiewire.com/wp-content/uploads/2026/05/LAND_16_9-1.jpg?w=650",
         "tier": "major",
         "source": "IndieWire",
-        "link": "https://www.indiewire.com/features/commentary/regular-show-the-lost-tapes-tv-revivals-1235194188/"
+        "link": "https://www.indiewire.com/features/commentary/regular-show-the-lost-tapes-tv-revivals-1235194188/",
+        "editorial_category": "stage_to_screen",
+        "editorial_category_label": "Stage to Screen",
+        "why_it_matters_kr": "무대 위에서 사라졌던 유령들이 다시 조명을 받을 때, 우리는 그것이 진정한 예술적 갈망인지 혹은 단순한 산업적 박제인지를 엄중히 물어야 합니다.",
+        "signal_keywords": [
+            "Stage to Screen"
+        ]
     },
     {
         "id": "featured-contributors",
@@ -74,7 +115,13 @@
         "image": "https://www.americantheatre.org/wp-content/uploads/Untitled-design-5-3.png",
         "tier": "indie",
         "source": "American Theatre",
-        "link": "https://www.americantheatre.org/2026/05/13/featured-contributors-8/"
+        "link": "https://www.americantheatre.org/2026/05/13/featured-contributors-8/",
+        "editorial_category": "voices",
+        "editorial_category_label": "Voices",
+        "why_it_matters_kr": "불확실한 시대 속에서도 극단을 세우는 이들의 낙관적인 용기와 푸에르토리코 예술가들이 지닌 내밀한 엄격함을 통해 미국 연극계의 살아있는 박동을 전합니다.",
+        "signal_keywords": [
+            "Voices"
+        ]
     },
     {
         "id": "is-god-is-review-filmmaker-aleshea-harris-fulfills-her-destiny-in-this-fizzy-and-fiery-revenge-debut",
@@ -85,7 +132,13 @@
         "image": "https://www.indiewire.com/wp-content/uploads/2026/05/MCDISGO_MG003.jpg?w=650",
         "tier": "major",
         "source": "IndieWire",
-        "link": "https://www.indiewire.com/criticism/movies/is-god-is-film-review-1235193878/"
+        "link": "https://www.indiewire.com/criticism/movies/is-god-is-film-review-1235193878/",
+        "editorial_category": "stage_to_screen",
+        "editorial_category_label": "Stage to Screen",
+        "why_it_matters_kr": "무대 위의 강렬한 에너지를 스크린으로 전이시킨 알레시아 해리스는, 고통의 연대기와 신성(神性)의 파괴적 본질을 다루며 현대 복수극의 새로운 지평을 엽니다.",
+        "signal_keywords": [
+            "Stage to Screen"
+        ]
     },
     {
         "id": "how-is-god-is-set-aleshea-harris-free",
@@ -96,7 +149,13 @@
         "image": "https://www.americantheatre.org/wp-content/uploads/is-god-is_film2.jpg",
         "tier": "indie",
         "source": "American Theatre",
-        "link": "https://www.americantheatre.org/2026/05/12/how-is-god-is-set-aleshea-harris-free/"
+        "link": "https://www.americantheatre.org/2026/05/12/how-is-god-is-set-aleshea-harris-free/",
+        "editorial_category": "cultural_signal",
+        "editorial_category_label": "Cultural Signal",
+        "why_it_matters_kr": "무대 위 활자의 리듬을 스크린의 조형미로 치환하며, 고통과 분노를 예술적 숭고함으로 승화시킨 얼리샤 해리스의 파격적인 미학적 여정을 탐구합니다.",
+        "signal_keywords": [
+            "Cultural Signal"
+        ]
     },
     {
         "id": "drivers-ed-review-sam-nivola-stars-in-bobby-farrellys-generic-throwback-to-the-days-of-road-trip-and-american-pie",
@@ -107,7 +166,13 @@
         "image": "https://www.indiewire.com/wp-content/uploads/2025/09/Screen-Shot-2025-09-11-at-10.05.08-AM.png?w=650",
         "tier": "major",
         "source": "IndieWire",
-        "link": "https://www.indiewire.com/criticism/movies/drivers-ed-movie-review-bobby-farrelly-sam-nivola-1235150449/"
+        "link": "https://www.indiewire.com/criticism/movies/drivers-ed-movie-review-bobby-farrelly-sam-nivola-1235150449/",
+        "editorial_category": "voices",
+        "editorial_category_label": "Voices",
+        "why_it_matters_kr": "90년대 코미디의 향수와 현대적 감각이 충돌하는 지점에서, 영화 '드라이버스 에드'가 보여준 평범함의 미학과 그 한계를 예리한 시선으로 해부합니다.",
+        "signal_keywords": [
+            "Voices"
+        ]
     },
     {
         "id": "state-of-play",
@@ -118,7 +183,13 @@
         "image": "https://www.americantheatre.org/wp-content/uploads/writers-compensation_deb-lims.jpg",
         "tier": "indie",
         "source": "American Theatre",
-        "link": "https://www.americantheatre.org/2026/05/11/state-of-play/"
+        "link": "https://www.americantheatre.org/2026/05/11/state-of-play/",
+        "editorial_category": "cultural_signal",
+        "editorial_category_label": "Cultural Signal",
+        "why_it_matters_kr": "17년 전 발표된 연구 ‘Outrageous Fortune’이 던진 화두를 통해, 예술적 열망과 자본의 냉혹함 사이에서 표류하는 희곡 작가들의 삶과 연극 생태계의 구조적 균열을 심도 있게 고찰합니다.",
+        "signal_keywords": [
+            "Cultural Signal"
+        ]
     },
     {
         "id": "neons-i-love-boosters-is-giving-la-drivers-free-gas- with-keke-palmer-and-lakeith-stanfield",
@@ -129,7 +200,13 @@
         "image": "https://www.indiewire.com/wp-content/uploads/2026/03/I-LOVE-BOOSTERS_Still_03_Cropped_Courtesy-of-NEON.jpg?w=650",
         "tier": "major",
         "source": "IndieWire",
-        "link": "https://www.indiewire.com/news/breaking-news/i-love-boosters-free-gas-giveaway-1235193329/"
+        "link": "https://www.indiewire.com/news/breaking-news/i-love-boosters-free-gas-giveaway-1235193329/",
+        "editorial_category": "cultural_signal",
+        "editorial_category_label": "Cultural Signal",
+        "why_it_matters_kr": "부츠 라일리 감독의 신작 '아이 러브 부스터스'가 LA 한복판에서 펼친 파격적인 무료 주유 이벤트는, 영화적 서사가 어떻게 현실의 모순과 맞닿아 예술적 연대로 승화되는지를 보여주는 강렬한 퍼포먼스입니다.",
+        "signal_keywords": [
+            "Cultural Signal"
+        ]
     },
     {
         "id": "adolescence-makes-bafta-history-with-recordbreaking-four-tv-award-wins",
@@ -140,7 +217,13 @@
         "image": "https://www.indiewire.com/wp-content/uploads/2025/08/Adolescence-Owen-Cooper-Best-Supporting-Actor-Emmy-2025.jpg?w=650",
         "tier": "major",
         "source": "IndieWire",
-        "link": "https://www.indiewire.com/awards/results/2026-bafta-tv-awards-winners-list-adolescence-1235193034/"
+        "link": "https://www.indiewire.com/awards/results/2026-bafta-tv-awards-winners-list-adolescence-1235193034/",
+        "editorial_category": "stage_to_screen",
+        "editorial_category_label": "Stage to Screen",
+        "why_it_matters_kr": "영국 TV 예술의 정점, BAFTA의 역사를 새로 쓴 잭 손과 스테판 그레이엄의 걸작 '애돌레센스'가 남긴 미학적 파장과 시대적 함의를 탐구합니다.",
+        "signal_keywords": [
+            "Stage to Screen"
+        ]
     },
     {
         "id": "book-restoration-in-flower-drum-song-and-brigadoon",
@@ -151,7 +234,13 @@
         "image": "https://www.americantheatre.org/wp-content/uploads/goes-to-show_may-2026.jpg",
         "tier": "indie",
         "source": "American Theatre",
-        "link": "https://www.americantheatre.org/2026/05/08/book-restoration-in-flower-drum-song-and-brigadoon/"
+        "link": "https://www.americantheatre.org/2026/05/08/book-restoration-in-flower-drum-song-and-brigadoon/",
+        "editorial_category": "cultural_signal",
+        "editorial_category_label": "Cultural Signal",
+        "why_it_matters_kr": "화려한 넘버 뒤에서 극의 뼈대를 지탱하는 '북(Book)'의 가치를 재조명하고, 시대의 흐름에 발맞춰 고전을 현대적 감각으로 복원해내는 예술적 연금술을 탐구합니다.",
+        "signal_keywords": [
+            "Cultural Signal"
+        ]
     },
     {
         "id": "judd-apatow-on-how-he-dug-into-the-funniest-man-in-the-world-mel-brooks",
@@ -162,7 +251,13 @@
         "image": "https://www.indiewire.com/wp-content/uploads/2026/01/Mel-Brooks-99-Year-Old-Man-HBO-documentary-release-date.jpg?w=650",
         "tier": "major",
         "source": "IndieWire",
-        "link": "https://www.indiewire.com/features/podcast/judd-apatow-mel-brooks-interview-screen-talk-1235192841/"
+        "link": "https://www.indiewire.com/features/podcast/judd-apatow-mel-brooks-interview-screen-talk-1235192841/",
+        "editorial_category": "cultural_signal",
+        "editorial_category_label": "Cultural Signal",
+        "why_it_matters_kr": "시대의 유머를 정의한 거장 멜 브룩스의 내면을 현대 코미디의 기수 주드 애퍼토우의 시선으로 해부하며, 희극이 지닌 예술적 숭고함과 그 이면의 인간적 고뇌를 탐구합니다.",
+        "signal_keywords": [
+            "Cultural Signal"
+        ]
     },
     {
         "id": "rabbits-rats-and-ants-oh-my-the-alliances-underground-rep",
@@ -173,7 +268,13 @@
         "image": "https://www.americantheatre.org/wp-content/uploads/Z066760-1024x681.jpg",
         "tier": "indie",
         "source": "American Theatre",
-        "link": "https://www.americantheatre.org/2026/05/07/rabbits-rats-ants-oh-my-the-alliances-underground-rep/"
+        "link": "https://www.americantheatre.org/2026/05/07/rabbits-rats-ants-oh-my-the-alliances-underground-rep/",
+        "editorial_category": "cultural_signal",
+        "editorial_category_label": "Cultural Signal",
+        "why_it_matters_kr": "단순한 어린이 연극을 넘어, 고갈되지 않는 수요와 예술적 밀도를 동시에 붙잡은 얼라이언스 시어터의 혁신적인 '레퍼토리' 실험을 조명합니다.",
+        "signal_keywords": [
+            "Cultural Signal"
+        ]
     },
     {
         "id": "remarkably-bright-creatures-review-sally-field-bonds-with-an-octopus-but-the-human-drama-works-too",
@@ -184,7 +285,13 @@
         "image": "https://www.indiewire.com/wp-content/uploads/2026/04/RBC_227_E006C005_250415_R36R_2.38.1_Graded_R_NJ.jpg?w=650",
         "tier": "major",
         "source": "IndieWire",
-        "link": "https://www.indiewire.com/criticism/movies/remarkably-bright-creatures-film-review-sally-field-octopus-1235191813/"
+        "link": "https://www.indiewire.com/criticism/movies/remarkably-bright-creatures-film-review-sally-field-octopus-1235191813/",
+        "editorial_category": "criticism",
+        "editorial_category_label": "Criticism",
+        "why_it_matters_kr": "베스트셀러의 단순한 재현을 넘어, 스크린 위에서 새롭게 호흡하는 인간의 고독과 연대에 관한 가장 영리한 변주곡.",
+        "signal_keywords": [
+            "Criticism"
+        ]
     },
     {
         "id": "mamas-turn-my-mother-me-and-2-musical-bookends",
@@ -195,7 +302,13 @@
         "image": "https://www.americantheatre.org/wp-content/uploads/dorothy-fortenberry-and-mom1-1.jpg",
         "tier": "indie",
         "source": "American Theatre",
-        "link": "https://www.americantheatre.org/2026/05/06/mamas-turn-my-mother-me-and-2-musical-bookends/"
+        "link": "https://www.americantheatre.org/2026/05/06/mamas-turn-my-mother-me-and-2-musical-bookends/",
+        "editorial_category": "cultural_signal",
+        "editorial_category_label": "Cultural Signal",
+        "why_it_matters_kr": "AI 모델 일시적 과부하로 정보를 불러오지 못했습니다.",
+        "signal_keywords": [
+            "Cultural Signal"
+        ]
     },
     {
         "id": "sundance-2026-movies-sold-so-far-mubi-buys-grand-jury-prize-winner-nuisance-bear",
@@ -206,7 +319,13 @@
         "image": "https://www.indiewire.com/wp-content/uploads/2026/01/Nuisance_Bear-Still_1_e9c037.jpg?w=650",
         "tier": "major",
         "source": "IndieWire",
-        "link": "https://www.indiewire.com/news/festivals/sundance-2026-movies-sold-so-far-1235174095/"
+        "link": "https://www.indiewire.com/news/festivals/sundance-2026-movies-sold-so-far-1235174095/",
+        "editorial_category": "stage_to_screen",
+        "editorial_category_label": "Stage to Screen",
+        "why_it_matters_kr": "단순한 영화적 매매 기록을 넘어, 인간의 경계와 실존의 딜레마를 포착한 선댄스 화제작들을 통해 예술이 우리 시대의 '골칫거리'를 어떻게 포용하는지 분석합니다.",
+        "signal_keywords": [
+            "Stage to Screen"
+        ]
     },
     {
         "id": "this-month-in-theatre-history-1778030931",
@@ -217,7 +336,13 @@
         "image": "https://www.americantheatre.org/wp-content/uploads/service-pnp-ggbain-23300-23360v-AT.jpg",
         "tier": "indie",
         "source": "American Theatre",
-        "link": "https://www.americantheatre.org/2026/05/05/this-month-in-theatre-history-135/"
+        "link": "https://www.americantheatre.org/2026/05/05/this-month-in-theatre-history-135/",
+        "editorial_category": "industry",
+        "editorial_category_label": "Industry",
+        "why_it_matters_kr": "자본의 논리를 거부하고 오직 예술적 순수성만으로 무대를 채웠던 선구자들의 집념, 그리고 거장 아서 밀러의 풋풋한 시작이 남긴 연극사적 궤적을 심층 조명합니다.",
+        "signal_keywords": [
+            "Industry"
+        ]
     },
     {
         "id": "fantasia-fest-2026-announces-ai-noir-teen-nazi-hunters-and-more-genre-fuel-in firstwave-lineup",
@@ -228,7 +353,13 @@
         "image": "https://www.indiewire.com/wp-content/uploads/2026/05/7551956e-d20f-cb9c-616f-f4d5095f981e.jpg?w=650",
         "tier": "major",
         "source": "IndieWire",
-        "link": "https://www.indiewire.com/news/festivals/fantasia-fest-2026-first-wave-programming-lineup-1235192483/"
+        "link": "https://www.indiewire.com/news/festivals/fantasia-fest-2026-first-wave-programming-lineup-1235192483/",
+        "editorial_category": "cultural_signal",
+        "editorial_category_label": "Cultural Signal",
+        "why_it_matters_kr": "인공지능의 서늘한 고찰부터 맥시멀리즘적 폭력의 미학까지, 30주년을 맞은 판타지아 국제 영화제가 제안하는 장르 영화의 새로운 지평을 탐구합니다.",
+        "signal_keywords": [
+            "Cultural Signal"
+        ]
     },
     {
         "id": "at-the-understudy-pocket-theatrics-announce-reworking-roundtable-series",
@@ -239,7 +370,13 @@
         "image": "https://www.americantheatre.org/wp-content/uploads/Screenshot-2026-04-29-at-1.26.59-PM.png",
         "tier": "indie",
         "source": "American Theatre",
-        "link": "https://www.americantheatre.org/2026/05/04/at-the-understudy-pocket-theatrics-announce-reworking-roundtable-series/"
+        "link": "https://www.americantheatre.org/2026/05/04/at-the-understudy-pocket-theatrics-announce-reworking-roundtable-series/",
+        "editorial_category": "cultural_signal",
+        "editorial_category_label": "Cultural Signal",
+        "why_it_matters_kr": "팬데믹 이후의 상흔 위에서 시카고의 연극인들이 모여 예술의 생존과 윤리, 그리고 기술적 변화를 논하는 'Re:working' 라운드테이블의 여정이 시작됩니다.",
+        "signal_keywords": [
+            "Cultural Signal"
+        ]
     },
     {
         "id": "it-ends-with-this-justin-baldoni-and-blake-lively-settle-lawsuit",
@@ -250,7 +387,13 @@
         "image": "https://www.indiewire.com/wp-content/uploads/2024/12/Untitled-design-6.jpg?w=650",
         "tier": "major",
         "source": "IndieWire",
-        "link": "https://www.indiewire.com/news/breaking-news/justin-baldoni-blake-lively-settle-lawsuit-it-ends-with-us-1235192332/"
+        "link": "https://www.indiewire.com/news/breaking-news/justin-baldoni-blake-lively-settle-lawsuit-it-ends-with-us-1235192332/",
+        "editorial_category": "cultural_signal",
+        "editorial_category_label": "Cultural Signal",
+        "why_it_matters_kr": "화려한 은막의 조명 뒤에 가려졌던 창작자들의 치열한 공방과 갈등, 그 끝에 도달한 위태로운 평화와 '쇼 비즈니스'의 명암을 심층 조명합니다.",
+        "signal_keywords": [
+            "Cultural Signal"
+        ]
     },
     {
         "id": "the-deeply-unnerving-1994-indie-what-happened-was-reminds-you-dating-has-always-been-hell",
@@ -261,7 +404,13 @@
         "image": "https://www.indiewire.com/wp-content/uploads/2026/05/What-Happened-Was.png?w=650",
         "tier": "major",
         "source": "IndieWire",
-        "link": "https://www.indiewire.com/features/best-of/what-happened-was-1994-tom-noonan-cult-film-1235191951/"
+        "link": "https://www.indiewire.com/features/best-of/what-happened-was-1994-tom-noonan-cult-film-1235191951/",
+        "editorial_category": "cultural_signal",
+        "editorial_category_label": "Cultural Signal",
+        "why_it_matters_kr": "1994년 선댄스를 매료시킨 톰 누넌의 잔혹한 로맨스가 30년의 세월을 넘어 오프-브로드웨이 무대 위, 우리 시대의 가장 서늘한 거울로 다시 태어났습니다.",
+        "signal_keywords": [
+            "Cultural Signal"
+        ]
     },
     {
         "id": "cedric-the-entertainer-finds-his-song-lost-boys-raises-the-stakes",
@@ -272,7 +421,13 @@
         "image": "https://www.americantheatre.org/wp-content/uploads/offscript-may-2026_cedric-the-entertainer_dane-laffrey-michael-arden.jpg",
         "tier": "indie",
         "source": "American Theatre",
-        "link": "https://www.americantheatre.org/2026/05/01/cedric-the-entertainer-finds-his-song-lost-boys-raises-the-stakes/"
+        "link": "https://www.americantheatre.org/2026/05/01/cedric-the-entertainer-finds-his-song-lost-boys-raises-the-stakes/",
+        "editorial_category": "cultural_signal",
+        "editorial_category_label": "Cultural Signal",
+        "why_it_matters_kr": "고전의 운율을 체화한 세드릭 더 엔터테이너의 통찰부터, 80년대 컬트 영화를 화려한 스펙터클로 재탄생시킨 제작진의 도전까지, 현대 연극의 역동적인 조류를 짚어봅니다.",
+        "signal_keywords": [
+            "Cultural Signal"
+        ]
     },
     {
         "id": "greta-gerwigs-narnia-is-aiming-for-more-than-awards-glory",
@@ -283,7 +438,13 @@
         "image": "https://www.indiewire.com/wp-content/uploads/2026/05/P115W9O9.jpg?w=650",
         "tier": "major",
         "source": "IndieWire",
-        "link": "https://www.indiewire.com/news/analysis/greta-gerwig-narnia-imax-success-awards-1235191937/"
+        "link": "https://www.indiewire.com/news/analysis/greta-gerwig-narnia-imax-success-awards-1235191937/",
+        "editorial_category": "cultural_signal",
+        "editorial_category_label": "Cultural Signal",
+        "why_it_matters_kr": "아카데미의 계절을 뒤로하고 2월의 IMAX로 향하는 그레타 거윅의 선택, 이는 단순한 개봉 연기가 아닌 예술적 완성을 향한 거장의 숭고한 기다림입니다.",
+        "signal_keywords": [
+            "Cultural Signal"
+        ]
     },
     {
         "id": "animal-farm-review-his-serkis-his-monkeys",
@@ -294,7 +455,13 @@
         "image": "https://www.indiewire.com/wp-content/uploads/2026/04/MCDANFA_EC017_d403c3.jpg?w=650",
         "tier": "major",
         "source": "IndieWire",
-        "link": "https://www.indiewire.com/criticism/movies/animal-farm-review-andy-serkis-1235190927/"
+        "link": "https://www.indiewire.com/criticism/movies/animal-farm-review-andy-serkis-1235190927/",
+        "editorial_category": "criticism",
+        "editorial_category_label": "Criticism",
+        "why_it_matters_kr": "조지 오웰의 날카로운 풍자와 앤디 서키스의 집착에 가까운 열망이 빚어낸 낯선 불협화음, 그 속에 숨겨진 예술적 딜레마를 심층 분석합니다.",
+        "signal_keywords": [
+            "Criticism"
+        ]
     },
     {
         "id": "lou-tyrrell-trusted-playwrights-and-got-audiences-to-do-the-same",
@@ -305,7 +472,13 @@
         "image": "https://www.americantheatre.org/wp-content/uploads/lou-tyrrell.jpg",
         "tier": "indie",
         "source": "American Theatre",
-        "link": "https://www.americantheatre.org/2026/04/29/lou-tyrrell-trusted-playwrights-and-got-audiences-to-do-the-same/"
+        "link": "https://www.americantheatre.org/2026/04/29/lou-tyrrell-trusted-playwrights-and-got-audiences-to-do-the-same/",
+        "editorial_category": "cultural_signal",
+        "editorial_category_label": "Cultural Signal",
+        "why_it_matters_kr": "단 한 줄의 대본에서 무대의 마법을 발견했던 거장 루 티렐. 신작 희곡만을 고집하며 관객과 창작자 사이의 견고한 신뢰를 구축했던 그의 예술적 헌신을 조명합니다.",
+        "signal_keywords": [
+            "Cultural Signal"
+        ]
     },
     {
         "id": "entire-tv-genres-can-live-and-die-by-their-emmys-potential",
@@ -316,7 +489,13 @@
         "image": "https://www.indiewire.com/wp-content/uploads/2026/04/3202256_0275_d4a374.jpg?w=650",
         "tier": "major",
         "source": "IndieWire",
-        "link": "https://www.indiewire.com/awards/predictions/tv-genres-live-die-by-emmys-potential-1235191407/"
+        "link": "https://www.indiewire.com/awards/predictions/tv-genres-live-die-by-emmys-potential-1235191407/",
+        "editorial_category": "stage_to_screen",
+        "editorial_category_label": "Stage to Screen",
+        "why_it_matters_kr": "시상식의 영광은 단순한 트로피의 무게를 넘어, 한 장르의 생태계를 살리기도 하고 서서히 고사시키기도 하는 결정적인 동력이 됩니다. 에미상이 지닌 이 거대한 영향력의 메커니즘을 심층 분석합니다.",
+        "signal_keywords": [
+            "Stage to Screen"
+        ]
     },
     {
         "id": "theres-some-new-work-out-here",
@@ -327,7 +506,13 @@
         "image": "https://www.americantheatre.org/wp-content/uploads/Photo-of-Amanda-Pulcini-Z-Mowry-and-Ellie-Duffey-by-Michael-BrosilowAT.jpg",
         "tier": "indie",
         "source": "American Theatre",
-        "link": "https://www.americantheatre.org/2026/04/28/theres-some-new-work-out-here/"
+        "link": "https://www.americantheatre.org/2026/04/28/theres-some-new-work-out-here/",
+        "editorial_category": "cultural_signal",
+        "editorial_category_label": "Cultural Signal",
+        "why_it_matters_kr": "위기의 시대 속에서 새로운 예술적 서사가 어떻게 잉태되고 지지받아야 하는가. 시카고 코트 씨어터가 주최한 'America@250' 컨비닝을 통해 공연예술의 지속가능한 미래를 위한 연대의 힘을 고찰합니다.",
+        "signal_keywords": [
+            "Cultural Signal"
+        ]
     },
     {
         "id": "join-indiewire-and-national-geographic-to-celebrate-ocean-with-david-attenborough-at-vidiots",
@@ -338,7 +523,13 @@
         "image": "https://www.indiewire.com/wp-content/uploads/2026/04/Screen-Shot-2026-04-28-at-1.48.03-PM.png?w=650",
         "tier": "major",
         "source": "IndieWire",
-        "link": "https://www.indiewire.com/news/events/indiewire-pass-the-remote-ocean-david-attenborough-1235191147/"
+        "link": "https://www.indiewire.com/news/events/indiewire-pass-the-remote-ocean-david-attenborough-1235191147/",
+        "editorial_category": "cultural_signal",
+        "editorial_category_label": "Cultural Signal",
+        "why_it_matters_kr": "스크린을 넘어 대자연이라는 거대한 극장으로 우리를 초대하는 데이비드 애튼버러의 심연 탐사, 그 미학적 조우와 로컬 커뮤니티가 빚어낸 찬란한 밤을 기록합니다.",
+        "signal_keywords": [
+            "Cultural Signal"
+        ]
     },
     {
         "id": "aguardiente-a-sensory-experience",
@@ -349,7 +540,13 @@
         "image": "https://www.americantheatre.org/wp-content/uploads/image-3-1.png",
         "tier": "indie",
         "source": "American Theatre",
-        "link": "https://www.americantheatre.org/2026/04/27/aguardiente-a-sensory-experience/"
+        "link": "https://www.americantheatre.org/2026/04/27/aguardiente-a-sensory-experience/",
+        "editorial_category": "cultural_signal",
+        "editorial_category_label": "Cultural Signal",
+        "why_it_matters_kr": "15년의 우정과 라틴의 영혼이 빚어낸 이 다국어 뮤지컬은 언어의 국경을 넘어 오감을 자극하는 마법 같은 연극적 체험을 선사합니다.",
+        "signal_keywords": [
+            "Cultural Signal"
+        ]
     },
     {
         "id": "verity-trailer-anne-hathaway-bites-dakota-johnson-until-she-bleeds-in-surreal-colleen-hoover-adaptation",
@@ -360,7 +557,13 @@
         "image": "https://www.indiewire.com/wp-content/uploads/2026/04/V_05529_R.jpg?w=650",
         "tier": "major",
         "source": "IndieWire",
-        "link": "https://www.indiewire.com/news/trailers/verity-trailer-anne-hathaway-colleen-hoover-1235190912/"
+        "link": "https://www.indiewire.com/news/trailers/verity-trailer-anne-hathaway-colleen-hoover-1235190912/",
+        "editorial_category": "stage_to_screen",
+        "editorial_category_label": "Stage to Screen",
+        "why_it_matters_kr": "콜린 후버의 멜로적 문법을 전복시키며, 앤 해서웨이의 서늘한 변신과 다코타 존슨의 미묘한 불안이 교차하는 초현실적 심리극의 정수를 분석합니다.",
+        "signal_keywords": [
+            "Stage to Screen"
+        ]
     },
     {
         "id": "silent-friend-director-ildikó-enyedi-leads-sloan-science-awards-at-sffilm",
@@ -371,7 +574,13 @@
         "image": "https://www.indiewire.com/wp-content/uploads/2025/12/silent-friend-1.webp?w=650",
         "tier": "major",
         "source": "IndieWire",
-        "link": "https://www.indiewire.com/news/festivals/silent-friend-sffilm-sloan-science-award-1235190710/"
+        "link": "https://www.indiewire.com/news/festivals/silent-friend-sffilm-sloan-science-award-1235190710/",
+        "editorial_category": "voices",
+        "editorial_category_label": "Voices",
+        "why_it_matters_kr": "한 세기를 가로지르는 영혼들의 교감을 과학적 통찰과 미학적 서사로 엮어낸 일디코 엔예디의 수상을 기념하며, 우리 시대 예술이 과학이라는 차가운 진실을 어떻게 따뜻한 위로로 승화시키는지 고찰합니다.",
+        "signal_keywords": [
+            "Voices"
+        ]
     },
     {
         "id": "vineyard-theatre-and-iatse-workers-reach-bargaining-agreement",
@@ -382,7 +591,13 @@
         "image": "https://www.americantheatre.org/wp-content/uploads/Off-Broadway-workers_IATSE.jpg",
         "tier": "indie",
         "source": "American Theatre",
-        "link": "https://www.americantheatre.org/2026/04/24/vineyard-theatre-and-iatse-workers-reach-bargaining-agreement/"
+        "link": "https://www.americantheatre.org/2026/04/24/vineyard-theatre-and-iatse-workers-reach-bargaining-agreement/",
+        "editorial_category": "industry",
+        "editorial_category_label": "Industry",
+        "why_it_matters_kr": "오프-브로드웨이의 예술적 자존심 비니어드 시어터와 IATSE의 역사적 합의는, 무대 뒤 노동의 가치를 예술의 정점으로 끌어올린 고귀한 선언입니다.",
+        "signal_keywords": [
+            "Industry"
+        ]
     },
     {
         "id": "pete-ohs-wants-filmmaking-to-be-fun--and-for-you-to-edit-his-movies",
@@ -393,7 +608,13 @@
         "image": "https://www.indiewire.com/wp-content/uploads/2026/04/Erupcja.jpeg?w=650",
         "tier": "major",
         "source": "IndieWire",
-        "link": "https://www.indiewire.com/features/interviews/pete-ohs-director-interview-erupcja-charli-xcx-1235189495/"
+        "link": "https://www.indiewire.com/features/interviews/pete-ohs-director-interview-erupcja-charli-xcx-1235189495/",
+        "editorial_category": "stage_to_screen",
+        "editorial_category_label": "Stage to Screen",
+        "why_it_matters_kr": "영화의 권위를 해체하고 관객을 창작의 파트너로 초대한 피트 오스의 파격적 실험, 그 속에 담긴 해방의 서사를 깊이 있게 들여다봅니다.",
+        "signal_keywords": [
+            "Stage to Screen"
+        ]
     },
     {
         "id": "ak-payne-on-furloughs-paradise-rupture-and-ritual",
@@ -404,7 +625,13 @@
         "image": "https://www.americantheatre.org/wp-content/uploads/ak-payne.jpg",
         "tier": "indie",
         "source": "American Theatre",
-        "link": "https://www.americantheatre.org/2026/04/23/a-k-payne-on-furloughs-paradise-rupture-and-ritual/"
+        "link": "https://www.americantheatre.org/2026/04/23/a-k-payne-on-furloughs-paradise-rupture-and-ritual/",
+        "editorial_category": "cultural_signal",
+        "editorial_category_label": "Cultural Signal",
+        "why_it_matters_kr": "개인적 슬픔의 파편들이 어떻게 사회적 해방의 서사로 확장되는가? 에이미 허조그와의 대담을 통해 들여다본 a.k. 페인의 연극적 정수와 '슬픔의 프랙탈'에 관한 고찰.",
+        "signal_keywords": [
+            "Cultural Signal"
+        ]
     },
     {
         "id": "apex-review-woman-is-the-most-dangerous-game-in-charlize-therons-threadbare-netflix-thriller",
@@ -415,7 +642,13 @@
         "image": "https://www.indiewire.com/wp-content/uploads/2026/04/MCDAPEX_ZX001.jpg?w=650",
         "tier": "major",
         "source": "IndieWire",
-        "link": "https://www.indiewire.com/criticism/movies/apex-movie-review-charlize-theron-taron-egerton-netflix-1235189224/"
+        "link": "https://www.indiewire.com/criticism/movies/apex-movie-review-charlize-theron-taron-egerton-netflix-1235189224/",
+        "editorial_category": "criticism",
+        "editorial_category_label": "Criticism",
+        "why_it_matters_kr": "거대한 자연의 침묵 속에 던져진 인간이 ‘사냥감’이 되었을 때 마주하는 원초적 공포, 그리고 샤를리즈 테론이라는 압도적 피사체가 완성한 고독한 생존의 무대.",
+        "signal_keywords": [
+            "Criticism"
+        ]
     },
     {
         "id": "can-dallas-film-festival-industry-conference-do-for-texas-what-toronto-does-for-canada",
@@ -426,7 +659,13 @@
         "image": "https://www.indiewire.com/wp-content/uploads/2026/04/P104S2DU.jpg?w=650",
         "tier": "major",
         "source": "IndieWire",
-        "link": "https://www.indiewire.com/news/festivals/dallas-international-film-festival-industry-2026-1235190212/"
+        "link": "https://www.indiewire.com/news/festivals/dallas-international-film-festival-industry-2026-1235190212/",
+        "editorial_category": "industry",
+        "editorial_category_label": "Industry",
+        "why_it_matters_kr": "단순한 지역 영화제를 넘어, 산업의 심장부로 도약하려는 댈러스의 야심 찬 시도와 그 이면에 숨겨진 예술적 자생력에 관한 통찰적 고찰.",
+        "signal_keywords": [
+            "Industry"
+        ]
     },
     {
         "id": "spring-school-musicals-and-educator-impact",
@@ -437,7 +676,13 @@
         "image": "https://www.americantheatre.org/wp-content/uploads/at_jan17_Brent_Wagner_AugustWilsonTheatre.jpg",
         "tier": "indie",
         "source": "American Theatre",
-        "link": "https://www.americantheatre.org/2026/04/21/spring-school-musicals-and-educator-impact/"
+        "link": "https://www.americantheatre.org/2026/04/21/spring-school-musicals-and-educator-impact/",
+        "editorial_category": "cultural_signal",
+        "editorial_category_label": "Cultural Signal",
+        "why_it_matters_kr": "고등학교 무대라는 작은 우주 속에서 발견한 사제간의 깊은 유대와, 단순한 공연을 넘어 삶의 용기를 일깨우는 예술 교육의 진정한 가치를 조명합니다.",
+        "signal_keywords": [
+            "Cultural Signal"
+        ]
     },
     {
         "id": "fuze-review-david-mackenzies-literal-ticking-time-bomb-thriller-isnt-sure-what-to-do-after-detonating",
@@ -448,7 +693,13 @@
         "image": "https://www.indiewire.com/wp-content/uploads/2025/09/Screen-Shot-2025-09-04-at-9.28.31-PM.png?w=650",
         "tier": "major",
         "source": "IndieWire",
-        "link": "https://www.indiewire.com/criticism/movies/fuze-review-david-mackenzie-aaron-taylor-johnson-1235149275/"
+        "link": "https://www.indiewire.com/criticism/movies/fuze-review-david-mackenzie-aaron-taylor-johnson-1235149275/",
+        "editorial_category": "criticism",
+        "editorial_category_label": "Criticism",
+        "why_it_matters_kr": "'시한폭탄'이라는 고전적 서스펜스를 문자 그대로의 리얼리티로 치환하여, 통제된 공간 속 인간의 내면을 현미경처럼 들여다보는 데이비드 매켄지식 스릴러의 정수.",
+        "signal_keywords": [
+            "Criticism"
+        ]
     },
     {
         "id": "why-magnolia-took-its-biggest-swing-yet-on-bob-odenkirks-normal",
@@ -459,7 +710,13 @@
         "image": "https://www.indiewire.com/wp-content/uploads/2025/07/Normal-TIFF-Key-Still.webp?w=650",
         "tier": "major",
         "source": "IndieWire",
-        "link": "https://www.indiewire.com/news/box-office/magnolia-normal-bob-odenkirk-box-office-analysis-1235189948/"
+        "link": "https://www.indiewire.com/news/box-office/magnolia-normal-bob-odenkirk-box-office-analysis-1235189948/",
+        "editorial_category": "cultural_signal",
+        "editorial_category_label": "Cultural Signal",
+        "why_it_matters_kr": "전형적인 액션 장르의 틀 안에 인간적 고뇌를 심으려는 밥 오덴커크의 예술적 야심과, 이를 주류 시장의 중심으로 밀어 올리려 했던 마그놀리아의 파격적인 실험을 심층 분석합니다.",
+        "signal_keywords": [
+            "Cultural Signal"
+        ]
     },
     {
         "id": "the-65mm-show-to-watch-is-beef-season-2",
@@ -470,7 +727,13 @@
         "image": "https://www.indiewire.com/wp-content/uploads/2026/04/BEEF_n_S2_E3_00_14_10_13.jpg?w=650",
         "tier": "major",
         "source": "IndieWire",
-        "link": "https://www.indiewire.com/features/craft/beef-season-2-finale-cinematography-james-laxton-interview-1235189845/"
+        "link": "https://www.indiewire.com/features/craft/beef-season-2-finale-cinematography-james-laxton-interview-1235189845/",
+        "editorial_category": "cultural_signal",
+        "editorial_category_label": "Cultural Signal",
+        "why_it_matters_kr": "넷플릭스 ‘성난 사람들(Beef)’ 시즌 2가 선택한 65mm 대형 포맷의 미학을 통해, 화려한 컨트리클럽 뒤에 숨겨진 인물들의 서글픈 권력 관계와 지독한 친밀감을 심층 조망합니다.",
+        "signal_keywords": [
+            "Cultural Signal"
+        ]
     },
     {
         "id": "roommates-review-sadie-sandler-navigates-the-highs-and-lows-of-freshman-year-in-chandler-levacks-formulaic-netflix-comedy",
@@ -481,7 +744,13 @@
         "image": "https://www.indiewire.com/wp-content/uploads/2026/04/Screen-Shot-2026-04-17-at-12.28.46-PM.png?w=650",
         "tier": "major",
         "source": "IndieWire",
-        "link": "https://www.indiewire.com/criticism/movies/roommates-review-sadie-sandler-netflix-movie-1235189781/"
+        "link": "https://www.indiewire.com/criticism/movies/roommates-review-sadie-sandler-netflix-movie-1235189781/",
+        "editorial_category": "criticism",
+        "editorial_category_label": "Criticism",
+        "why_it_matters_kr": "대학이라는 새로운 막이 오르기 전, 우리는 모두 다른 사람이 되기를 꿈꾼다. 챈들러 레백의 신작 <룸메이트>는 그 찬란한 오해와 처절한 현실 사이의 간극을 날카로우면서도 따뜻한 시선으로 포착해낸다.",
+        "signal_keywords": [
+            "Criticism"
+        ]
     },
     {
         "id": "family-cuts-inside-sengs-hair-salon",
@@ -492,7 +761,13 @@
         "image": "https://www.americantheatre.org/wp-content/uploads/Untitled-design-2-1.png",
         "tier": "indie",
         "source": "American Theatre",
-        "link": "https://www.americantheatre.org/2026/04/16/family-cuts-inside-sengs-hair-salon/"
+        "link": "https://www.americantheatre.org/2026/04/16/family-cuts-inside-sengs-hair-salon/",
+        "editorial_category": "criticism",
+        "editorial_category_label": "Criticism",
+        "why_it_matters_kr": "필라델피아의 한 작은 미용실이 어떻게 공동체의 성소이자 역사의 증언대가 되었는가. 세대를 가로지르는 가위질 속에 담긴 동남아시아 이민자들의 회복과 연대의 미학을 탐구합니다.",
+        "signal_keywords": [
+            "Criticism"
+        ]
     },
     {
         "id": "the-dog-stars-trailer-jacob-elordi-and-his-dog-survive-postapocalyptic-colorado-in-ridley-scotts-latest",
@@ -503,7 +778,13 @@
         "image": "https://www.indiewire.com/wp-content/uploads/2026/04/Screen-Shot-2026-04-16-at-4.48.50-PM.png?w=650",
         "tier": "major",
         "source": "IndieWire",
-        "link": "https://www.indiewire.com/news/trailers/the-dog-stars-trailer-ridley-scott-jacob-elordi-1235189654/"
+        "link": "https://www.indiewire.com/news/trailers/the-dog-stars-trailer-ridley-scott-jacob-elordi-1235189654/",
+        "editorial_category": "voices",
+        "editorial_category_label": "Voices",
+        "why_it_matters_kr": "88세 거장 리들리 스코트가 포스트 아포칼립스의 황무지 위에서 인간성의 본질을 묻습니다. 제이콥 엘로디의 깊은 눈빛과 콜로라도의 적막한 하늘이 교차하며 탄생한 새로운 고전의 예감을 전합니다.",
+        "signal_keywords": [
+            "Voices"
+        ]
     },
     {
         "id": "leadership-changes-at-trinity-rep-raven-yale-rep-and-more",
@@ -514,7 +795,13 @@
         "image": "https://www.americantheatre.org/wp-content/uploads/April-EE.png",
         "tier": "indie",
         "source": "American Theatre",
-        "link": "https://www.americantheatre.org/2026/04/15/leadership-changes-at-trinity-rep-raven-yale-rep-and-more/"
+        "link": "https://www.americantheatre.org/2026/04/15/leadership-changes-at-trinity-rep-raven-yale-rep-and-more/",
+        "editorial_category": "industry",
+        "editorial_category_label": "Industry",
+        "why_it_matters_kr": "트리니티 랩과 레이븐 시어터 등 북미 주요 극단들이 새로운 수장을 맞이하며 예술적 정체성의 대전환을 예고하고 있습니다. 여성 리더십의 부상과 신작 중심의 생태계 변화를 심층 조명합니다.",
+        "signal_keywords": [
+            "Industry"
+        ]
     },
     {
         "id": "christopher-nolan-tells-cinemacon-the-odyssey-was-a-nightmare-to-filmbut-in-all-the-right-ways",
@@ -525,7 +812,13 @@
         "image": "https://www.indiewire.com/wp-content/uploads/2025/06/2033565331.jpg?w=650",
         "tier": "major",
         "source": "IndieWire",
-        "link": "https://www.indiewire.com/news/breaking-news/universal-cinemacon-day-3-the-odyssey-christopher-nolan-1235189226/"
+        "link": "https://www.indiewire.com/news/breaking-news/universal-cinemacon-day-3-the-odyssey-christopher-nolan-1235189226/",
+        "editorial_category": "stage_to_screen",
+        "editorial_category_label": "Stage to Screen",
+        "why_it_matters_kr": "인류 최고(最古)의 서사시 '오디세이'를 향한 거장 크리스토퍼 놀란의 집요한 도전, 그 고통스러운 창작의 이면과 현대 시네마가 마주한 거대한 운명에 대하여.",
+        "signal_keywords": [
+            "Stage to Screen"
+        ]
     },
     {
         "id": "terry-schreiber-helped-artists-grow-but-not-with-any-single-method",
@@ -536,7 +829,13 @@
         "image": "https://www.americantheatre.org/wp-content/uploads/terry-schreiber-teaching.jpg",
         "tier": "indie",
         "source": "American Theatre",
-        "link": "https://www.americantheatre.org/2026/04/14/terry-schreiber-helped-artists-grow-but-not-with-any-single-method/"
+        "link": "https://www.americantheatre.org/2026/04/14/terry-schreiber-helped-artists-grow-but-not-with-any-single-method/",
+        "editorial_category": "cultural_signal",
+        "editorial_category_label": "Cultural Signal",
+        "why_it_matters_kr": "특정 연기론의 도그마에 매몰되지 않고 배우 개개인의 고유한 진실을 탐구했던 테리 슈라이버. 50여 년간 뉴욕 연극의 심장부를 지켜온 그의 철학적 유산과 '안전한 안식처'로서의 예술 정신을 조명합니다.",
+        "signal_keywords": [
+            "Cultural Signal"
+        ]
     },
     {
         "id": "sean-bakers-next-film-ti-amo-lands-at-new-warner-bros-specialized-label-now-called-clockwork",
@@ -547,7 +846,13 @@
         "image": "https://www.indiewire.com/wp-content/uploads/2025/06/2202958863.jpg?w=650",
         "tier": "major",
         "source": "IndieWire",
-        "link": "https://www.indiewire.com/news/breaking-news/sean-bakers-next-film-ti-amo-warner-bros-clockwork-1235189100/"
+        "link": "https://www.indiewire.com/news/breaking-news/sean-bakers-next-film-ti-amo-warner-bros-clockwork-1235189100/",
+        "editorial_category": "stage_to_screen",
+        "editorial_category_label": "Stage to Screen",
+        "why_it_matters_kr": "오스카를 정복한 리얼리즘의 거장 숀 베이커가 워너 브라더스의 새로운 예술 영화 레이블 ‘클락워크’와 손잡고 차기작 ‘Ti Amo!’로 귀환하며, 자본과 예술의 가장 이상적인 협주를 예고합니다.",
+        "signal_keywords": [
+            "Stage to Screen"
+        ]
     },
     {
         "id": "this-month-in-theatre-history-1776129625",
@@ -558,7 +863,13 @@
         "image": "https://www.americantheatre.org/wp-content/uploads/April-Theatre-History-AT.jpg",
         "tier": "indie",
         "source": "American Theatre",
-        "link": "https://www.americantheatre.org/2026/04/13/this-month-in-theatre-history-134/"
+        "link": "https://www.americantheatre.org/2026/04/13/this-month-in-theatre-history-134/",
+        "editorial_category": "industry",
+        "editorial_category_label": "Industry",
+        "why_it_matters_kr": "19세기 클라이드 핏치의 우정부터 현대극의 기수 애니 베이커까지, 시대의 경계를 허물며 연극사를 구축한 거장들의 결정적 순간을 조명합니다.",
+        "signal_keywords": [
+            "Industry"
+        ]
     },
     {
         "id": "paddington-danny-boyle-and-george-washington-are-the-stars-of-cinemacon-in-studiocanal-angel-and-sony-pictures-classics-presentations",
@@ -569,7 +880,13 @@
         "image": "https://www.indiewire.com/wp-content/uploads/2024/10/Paddington-In-Peru-Header-StudioCanal.jpg?w=650",
         "tier": "major",
         "source": "IndieWire",
-        "link": "https://www.indiewire.com/news/breaking-news/cinemacon-day-1-studiocanal-angel-sony-pictures-classics-1235188794/"
+        "link": "https://www.indiewire.com/news/breaking-news/cinemacon-day-1-studiocanal-angel-sony-pictures-classics-1235188794/",
+        "editorial_category": "voices",
+        "editorial_category_label": "Voices",
+        "why_it_matters_kr": "거대 자본의 틈바구니에서 시네마콘의 무대를 압도한 독립 배급사들의 기개와, 대니 보일이 포착한 미디어의 원형적 드라마를 에디터의 시선으로 분석합니다.",
+        "signal_keywords": [
+            "Voices"
+        ]
     },
     {
         "id": "dtf-st-louis-review-a-sensational-finale-reveals-far-more-than-who-dun-it--spoilers",
@@ -580,7 +897,13 @@
         "image": "https://www.indiewire.com/wp-content/uploads/2026/04/DTF-St-Louis-Episode-7-Jason-Bateman-as-Clark.jpg?w=650",
         "tier": "major",
         "source": "IndieWire",
-        "link": "https://www.indiewire.com/criticism/shows/dtf-st-louis-episode-7-review-finale-explained-spoilers-1235188434/"
+        "link": "https://www.indiewire.com/criticism/shows/dtf-st-louis-episode-7-review-finale-explained-spoilers-1235188434/",
+        "editorial_category": "criticism",
+        "editorial_category_label": "Criticism",
+        "why_it_matters_kr": "수사극의 문법을 뒤틀어 인간의 불완전한 내면을 심도 있게 파고든 'DTF St. Louis'가 남긴 파격적이고도 서정적인 마침표를 분석합니다.",
+        "signal_keywords": [
+            "Criticism"
+        ]
     },
     {
         "id": "bowling-alleys-premium-formats-more-films-which-fixes-can-save-movie-theaters",
@@ -591,7 +914,13 @@
         "image": "https://www.indiewire.com/wp-content/uploads/2024/06/ADH-movie-parties_Credit-Heather-Kennedy.jpg?w=650",
         "tier": "major",
         "source": "IndieWire",
-        "link": "https://www.indiewire.com/features/commentary/which-fixes-can-save-movie-theaters-box-office-cinemacon-1235187403/"
+        "link": "https://www.indiewire.com/features/commentary/which-fixes-can-save-movie-theaters-box-office-cinemacon-1235187403/",
+        "editorial_category": "industry",
+        "editorial_category_label": "Industry",
+        "why_it_matters_kr": "붕괴하는 홀드백의 경계 위에서, 단순한 상영관을 넘어 '체험의 제단'으로 진화하려는 현대 극장가의 실존적 투쟁과 문화적 변이를 깊숙이 들여다봅니다.",
+        "signal_keywords": [
+            "Industry"
+        ]
     },
     {
         "id": "patrick-gabridge-plays-in-place",
@@ -602,7 +931,13 @@
         "image": "https://www.americantheatre.org/wp-content/uploads/Screenshot-2026-04-09-at-5.14.57-PM.png",
         "tier": "indie",
         "source": "American Theatre",
-        "link": "https://www.americantheatre.org/2026/04/10/patrick-gabridge-plays-in-place/"
+        "link": "https://www.americantheatre.org/2026/04/10/patrick-gabridge-plays-in-place/",
+        "editorial_category": "cultural_signal",
+        "editorial_category_label": "Cultural Signal",
+        "why_it_matters_kr": "역사적 현장과 박물관을 살아있는 무대로 탈바꿈시키며, 극작가의 고립된 창작 활동을 연대의 공동체로 확장한 혁신적 예술가 패트릭 개브리지의 미학적 여정을 탐구합니다.",
+        "signal_keywords": [
+            "Cultural Signal"
+        ]
     },
     {
         "id": "inside-the-new-film-stock-kodak-created-for-euphoria-season-3",
@@ -613,7 +948,13 @@
         "image": "https://www.indiewire.com/wp-content/uploads/2026/04/sydney-sweeney.jpg?w=640",
         "tier": "major",
         "source": "IndieWire",
-        "link": "https://www.indiewire.com/news/breaking-news/euphoria-season-3-kodak-new-film-stock-1235188424/"
+        "link": "https://www.indiewire.com/news/breaking-news/euphoria-season-3-kodak-new-film-stock-1235188424/",
+        "editorial_category": "stage_to_screen",
+        "editorial_category_label": "Stage to Screen",
+        "why_it_matters_kr": "디지털의 매끈한 해상도가 놓쳐버린 인간적 온기를 복원하기 위해, 드라마 '유포리아'는 새로운 필름 'VERITA 200D'를 통해 다시 한번 아날로그적 숭고미를 탐닉합니다.",
+        "signal_keywords": [
+            "Stage to Screen"
+        ]
     },
     {
         "id": "la-drama-critics-circle-awards-bechdel-project-residency-and-more",
@@ -624,7 +965,13 @@
         "image": "https://www.americantheatre.org/wp-content/uploads/Cambodian-Rock-Band.jpg",
         "tier": "indie",
         "source": "American Theatre",
-        "link": "https://www.americantheatre.org/2026/04/09/l-a-drama-critics-circle-awards-bechdel-project-residency-and-more/"
+        "link": "https://www.americantheatre.org/2026/04/09/l-a-drama-critics-circle-awards-bechdel-project-residency-and-more/",
+        "editorial_category": "cultural_signal",
+        "editorial_category_label": "Cultural Signal",
+        "why_it_matters_kr": "서부 연극계의 심장부, 로스앤젤레스 비평가 협회가 선택한 2025년의 걸작들을 통해 동시대 공연 예술이 지향하는 다양성과 기술적 혁신의 정점을 탐미해 봅니다.",
+        "signal_keywords": [
+            "Cultural Signal"
+        ]
     },
     {
         "id": "the-pitt-production-team-tracks-every-sock-every-empty-drawer-and-its-why-the-show-feels-so-real",
@@ -635,7 +982,13 @@
         "image": "https://www.indiewire.com/wp-content/uploads/2026/04/the-pitt-still-featuring-monica-and-dana-behind-the-desk.jpeg?w=650",
         "tier": "major",
         "source": "IndieWire",
-        "link": "https://www.indiewire.com/features/craft/the-pitt-season-2-production-design-interview-1235187974/"
+        "link": "https://www.indiewire.com/features/craft/the-pitt-season-2-production-design-interview-1235187974/",
+        "editorial_category": "cultural_signal",
+        "editorial_category_label": "Cultural Signal",
+        "why_it_matters_kr": "단 한 번의 병원 교대 근무 시간을 15시간의 대서사로 풀어내기 위해, 양말 한 켤레와 혈흔의 위치까지 추적하는 어느 제작진의 경이로운 집요함에 대하여.",
+        "signal_keywords": [
+            "Cultural Signal"
+        ]
     },
     {
         "id": "can-victory-gardens-bloom-again",
@@ -646,7 +999,13 @@
         "image": "https://www.americantheatre.org/wp-content/uploads/Victory-Gardens-Theater-Venue.jpg",
         "tier": "indie",
         "source": "American Theatre",
-        "link": "https://www.americantheatre.org/2026/04/08/can-victory-gardens-bloom-again/"
+        "link": "https://www.americantheatre.org/2026/04/08/can-victory-gardens-bloom-again/",
+        "editorial_category": "cultural_signal",
+        "editorial_category_label": "Cultural Signal",
+        "why_it_matters_kr": "내홍의 상처로 침묵에 잠겼던 시카고 연극계의 심장, 빅토리 가든스가 새로운 리더십과 함께 지역 공동체를 향한 치유의 첫걸음을 뗐습니다.",
+        "signal_keywords": [
+            "Cultural Signal"
+        ]
     },
     {
         "id": "steal-this-story-please-review-journalist-amy-goodman-is-the-subject-of-a-glowing-doc-that-should-rally-the-converted",
@@ -657,7 +1016,13 @@
         "image": "https://www.indiewire.com/wp-content/uploads/2026/04/SSP2_AG-Reporting-from-Standing-Rock-1.jpg?w=650",
         "tier": "major",
         "source": "IndieWire",
-        "link": "https://www.indiewire.com/criticism/movies/steal-this-story-please-review-amy-goodman-documentary-1235188032/"
+        "link": "https://www.indiewire.com/criticism/movies/steal-this-story-please-review-amy-goodman-documentary-1235188032/",
+        "editorial_category": "criticism",
+        "editorial_category_label": "Criticism",
+        "why_it_matters_kr": "권력의 견고한 무대 뒤편을 비추어온 저널리스트 에이미 굿맨의 생애를 다룬 다큐멘터리, 신념의 관객들을 결집시키는 웅장한 연대의 기록을 탐구하다.",
+        "signal_keywords": [
+            "Criticism"
+        ]
     },
     {
         "id": "bad-bunny-and-latinx-theatre-commons-start-storytelling-from-the-beginning",
@@ -668,7 +1033,13 @@
         "image": "https://www.americantheatre.org/wp-content/uploads/bad-bunny_super-bowl.jpg",
         "tier": "indie",
         "source": "American Theatre",
-        "link": "https://www.americantheatre.org/2026/04/07/bad-bunny-and-latinx-theatre-commons-start-storytelling-from-the-beginning/"
+        "link": "https://www.americantheatre.org/2026/04/07/bad-bunny-and-latinx-theatre-commons-start-storytelling-from-the-beginning/",
+        "editorial_category": "industry",
+        "editorial_category_label": "Industry",
+        "why_it_matters_kr": "AI 모델 일시적 과부하로 정보를 불러오지 못했습니다.",
+        "signal_keywords": [
+            "Industry"
+        ]
     },
     {
         "id": "the-oscars-are-sticking-with-march--and-that-wont-change-for-years",
@@ -679,7 +1050,13 @@
         "image": "https://www.indiewire.com/wp-content/uploads/2026/03/P104S54C.jpg?w=650",
         "tier": "major",
         "source": "IndieWire",
-        "link": "https://www.indiewire.com/awards/industry/oscars-2027-2028-dates-abc-1235187801/"
+        "link": "https://www.indiewire.com/awards/industry/oscars-2027-2028-dates-abc-1235187801/",
+        "editorial_category": "cultural_signal",
+        "editorial_category_label": "Cultural Signal",
+        "why_it_matters_kr": "AI 모델 일시적 과부하로 정보를 불러오지 못했습니다.",
+        "signal_keywords": [
+            "Cultural Signal"
+        ]
     },
     {
         "id": "the-drama-has-one-big-idea-but-its-edit-is-designed-to-have-10-per-minute",
@@ -690,7 +1067,13 @@
         "image": "https://www.indiewire.com/wp-content/uploads/2026/04/MCDDRAM_EC051.jpg?w=650",
         "tier": "major",
         "source": "IndieWire",
-        "link": "https://www.indiewire.com/features/craft/the-drama-movie-making-of-interview-editing-1235187555/"
+        "link": "https://www.indiewire.com/features/craft/the-drama-movie-making-of-interview-editing-1235187555/",
+        "editorial_category": "cultural_signal",
+        "editorial_category_label": "Cultural Signal",
+        "why_it_matters_kr": "AI 모델 일시적 과부하로 정보를 불러오지 못했습니다.",
+        "signal_keywords": [
+            "Cultural Signal"
+        ]
     },
     {
         "id": "video-game-movies were way-more-fun when-they-were as-weird-as-1993s-super-mario-bros",
@@ -701,7 +1084,13 @@
         "image": "https://www.indiewire.com/wp-content/uploads/2026/04/M8DSUMA_EC006.jpg?w=650",
         "tier": "major",
         "source": "IndieWire",
-        "link": "https://www.indiewire.com/features/best-of/super-mario-bros-1993-cult-movie-bob-hoskins-1235187409/"
+        "link": "https://www.indiewire.com/features/best-of/super-mario-bros-1993-cult-movie-bob-hoskins-1235187409/",
+        "editorial_category": "stage_to_screen",
+        "editorial_category_label": "Stage to Screen",
+        "why_it_matters_kr": "AI 모델 일시적 과부하로 정보를 불러오지 못했습니다.",
+        "signal_keywords": [
+            "Stage to Screen"
+        ]
     },
     {
         "id": "sorrygrateful-2-new-books-show-the-many-sides-of-sondheim",
@@ -712,7 +1101,13 @@
         "image": "https://www.americantheatre.org/wp-content/uploads/Stephen_Sondheim_1976_0.jpg",
         "tier": "indie",
         "source": "American Theatre",
-        "link": "https://www.americantheatre.org/2026/04/03/sorry-grateful-2-new-books-show-the-many-sides-of-sondheim/"
+        "link": "https://www.americantheatre.org/2026/04/03/sorry-grateful-2-new-books-show-the-many-sides-of-sondheim/",
+        "editorial_category": "cultural_signal",
+        "editorial_category_label": "Cultural Signal",
+        "why_it_matters_kr": "현대 뮤지컬의 지형도를 바꾼 거장 스티븐 손드하임의 다층적인 면모를 다룬 두 권의 신간을 통해, 지독한 완벽주의와 따스한 인간미 사이를 오갔던 그의 예술적 궤적을 심층 조명합니다.",
+        "signal_keywords": [
+            "Cultural Signal"
+        ]
     },
     {
         "id": "5-anime-series-to-check-out-this-spring",
@@ -723,7 +1118,13 @@
         "image": "https://www.indiewire.com/wp-content/uploads/2026/04/witchhatatelier.jpeg?w=650",
         "tier": "major",
         "source": "IndieWire",
-        "link": "https://www.indiewire.com/features/commentary/anime-spring-2026-shows-watch-1235187391/"
+        "link": "https://www.indiewire.com/features/commentary/anime-spring-2026-shows-watch-1235187391/",
+        "editorial_category": "cultural_signal",
+        "editorial_category_label": "Cultural Signal",
+        "why_it_matters_kr": "분기별로 반복되는 일본 애니메이션 산업의 거대한 흐름 속에서, 찰나의 미학을 포착해내는 고품격 큐레이션과 예술적 고찰.",
+        "signal_keywords": [
+            "Cultural Signal"
+        ]
     },
     {
         "id": "synchronicity-theatre-to-seek-new-home",
@@ -734,7 +1135,13 @@
         "image": "https://www.americantheatre.org/wp-content/uploads/peachtree-pointe.jpg",
         "tier": "indie",
         "source": "American Theatre",
-        "link": "https://www.americantheatre.org/2026/04/02/synchronicity-theatre-seeks-new-home/"
+        "link": "https://www.americantheatre.org/2026/04/02/synchronicity-theatre-seeks-new-home/",
+        "editorial_category": "industry",
+        "editorial_category_label": "Industry",
+        "why_it_matters_kr": "12년의 미드타운 시대를 뒤로하고 새로운 예술적 도약을 준비하는 싱크로니시티 시어터, 공간의 상실을 공동체의 확장으로 전환하려는 그들의 용기 있는 여정을 조명합니다.",
+        "signal_keywords": [
+            "Industry"
+        ]
     },
     {
         "id": "let-jon-hamm-steal-your-friends-and-neighbors-for-you",
@@ -745,7 +1152,13 @@
         "image": "https://www.indiewire.com/wp-content/uploads/2026/04/Your-Friends-and-Neighbors-Season-2-Jon-Hamm-Apple-show.jpg?w=650",
         "tier": "major",
         "source": "IndieWire",
-        "link": "https://www.indiewire.com/criticism/shows/jon-hamm-your-friends-and-neighbors-season-2-review-1235187059/"
+        "link": "https://www.indiewire.com/criticism/shows/jon-hamm-your-friends-and-neighbors-season-2-review-1235187059/",
+        "editorial_category": "cultural_signal",
+        "editorial_category_label": "Cultural Signal",
+        "why_it_matters_kr": "드라마 ‘Your Friends and Neighbors’ 속 존 햄의 연기를 통해, 부유한 위선자들 사이에서 ‘당신의 사람’이라는 단 한 마디로 도덕적 경계선을 긋는 고도의 캐릭터 연출과 현대적 피카레스크의 정수를 분석합니다.",
+        "signal_keywords": [
+            "Cultural Signal"
+        ]
     },
     {
         "id": "terrence-mcnallys-name-to-grace-nycs-rattlestick-theater",
@@ -756,7 +1169,13 @@
         "image": "https://www.americantheatre.org/wp-content/uploads/terrence-mcnally-theatre_rattlestick.jpg",
         "tier": "indie",
         "source": "American Theatre",
-        "link": "https://www.americantheatre.org/2026/04/01/terrence-mcnallys-name-to-grace-nycs-rattlestick-theater/"
+        "link": "https://www.americantheatre.org/2026/04/01/terrence-mcnallys-name-to-grace-nycs-rattlestick-theater/",
+        "editorial_category": "industry",
+        "editorial_category_label": "Industry",
+        "why_it_matters_kr": "뉴욕 오프 브로드웨이의 심장부, 래틀스틱 극장이 전설적인 극작가 테렌스 맥널리의 이름을 입고 현대적 감각의 예술 성소로 재탄생합니다.",
+        "signal_keywords": [
+            "Industry"
+        ]
     },
     {
         "id": "wagner-moura-replacing-oscar-isaac-in-mandy-directors-flesh-of-the-gods-with-kristen-stewart",
@@ -767,7 +1186,13 @@
         "image": "https://www.indiewire.com/wp-content/uploads/2026/04/Screen-Shot-2026-04-01-at-1.05.36-PM.png?w=650",
         "tier": "major",
         "source": "IndieWire",
-        "link": "https://www.indiewire.com/news/breaking-news/wagner-moura-flesh-of-the-gods-kristen-stewart-a24-1235187037/"
+        "link": "https://www.indiewire.com/news/breaking-news/wagner-moura-flesh-of-the-gods-kristen-stewart-a24-1235187037/",
+        "editorial_category": "voices",
+        "editorial_category_label": "Voices",
+        "why_it_matters_kr": "AI 모델 일시적 과부하로 정보를 불러오지 못했습니다.",
+        "signal_keywords": [
+            "Voices"
+        ]
     },
     {
         "id": "you-cant-make-a-cult-classic-with-marketing--opinion",
@@ -778,7 +1203,13 @@
         "image": "https://www.indiewire.com/wp-content/uploads/2026/03/MCDFOFR_IF010.jpg?w=650",
         "tier": "major",
         "source": "IndieWire",
-        "link": "https://www.indiewire.com/features/commentary/cult-classic-forbidden-fruits-opinion-1235186594/"
+        "link": "https://www.indiewire.com/features/commentary/cult-classic-forbidden-fruits-opinion-1235186594/",
+        "editorial_category": "cultural_signal",
+        "editorial_category_label": "Cultural Signal",
+        "why_it_matters_kr": "AI 모델 일시적 과부하로 정보를 불러오지 못했습니다.",
+        "signal_keywords": [
+            "Cultural Signal"
+        ]
     },
     {
         "id": "company-retreat-required-real-hot-sauce-and-spicier-production-design",
@@ -789,7 +1220,13 @@
         "image": "https://www.indiewire.com/wp-content/uploads/2026/03/Jury_Duty_Company_Retreat_S1_FG_103_00171920_Still229_3000.jpg?w=650",
         "tier": "major",
         "source": "IndieWire",
-        "link": "https://www.indiewire.com/features/craft/company-retreat-rockin-grandmas-hot-sauce-making-of-1235186470/"
+        "link": "https://www.indiewire.com/features/craft/company-retreat-rockin-grandmas-hot-sauce-making-of-1235186470/",
+        "editorial_category": "cultural_signal",
+        "editorial_category_label": "Cultural Signal",
+        "why_it_matters_kr": "가짜를 진짜로 믿게 만드는 힘은 화려한 스펙터클이 아닌 '사소한 물성'에 있습니다. 무대와 현실의 경계를 허문 <컴퍼니 리트릿>의 치밀한 프로덕션 디자인 세계를 탐구합니다.",
+        "signal_keywords": [
+            "Cultural Signal"
+        ]
     },
     {
         "id": "steven-soderberghs-the-christophers-wins-narrative-audience-award-at-sonoma-international-film-festival-2026",
@@ -800,7 +1237,13 @@
         "image": "https://www.indiewire.com/wp-content/uploads/2025/12/THE-CHRISTOPHERS_STILL-1.webp?w=650",
         "tier": "major",
         "source": "IndieWire",
-        "link": "https://www.indiewire.com/awards/industry/the-christophers-audience-award-sonoma-film-festival-2026-1235186476/"
+        "link": "https://www.indiewire.com/awards/industry/the-christophers-audience-award-sonoma-film-festival-2026-1235186476/",
+        "editorial_category": "stage_to_screen",
+        "editorial_category_label": "Stage to Screen",
+        "why_it_matters_kr": "제29회 소노마 국제 영화제가 스티븐 소더버그의 신작 '더 크리스토퍼스'를 통해 예술과 현실의 경계를 허무는 관객의 찬사를 이끌어내며, 공연 예술의 본질적인 힘을 스크린 위에 재현했습니다.",
+        "signal_keywords": [
+            "Stage to Screen"
+        ]
     },
     {
         "id": "inside-that-bloody-something-very-bad-is-going-to-happen-wedding-day-finale",
@@ -811,7 +1254,13 @@
         "image": "https://www.indiewire.com/wp-content/uploads/2026/03/Something_Very_Bad_Is_Going_to_Happen_n_S1_E8_00_00_42_01R.jpg?w=650",
         "tier": "major",
         "source": "IndieWire",
-        "link": "https://www.indiewire.com/features/interviews/something-very-bad-is-going-to-happen-finale-spoilers-dies-1235185845/"
+        "link": "https://www.indiewire.com/features/interviews/something-very-bad-is-going-to-happen-finale-spoilers-dies-1235185845/",
+        "editorial_category": "cultural_signal",
+        "editorial_category_label": "Cultural Signal",
+        "why_it_matters_kr": "결혼이라는 지극히 개인적인 신화가 무너지는 찰나를 포착한 이 시리즈는, 예정된 파국을 향해 달리는 잔혹하고도 아름다운 현대적 비극의 정수를 보여줍니다.",
+        "signal_keywords": [
+            "Cultural Signal"
+        ]
     },
     {
         "id": "willem-dafoe-moisés-kaufman-banna-desta-deliver-world-theatre-day-messages",
@@ -822,7 +1271,13 @@
         "image": "https://www.americantheatre.org/wp-content/uploads/World-Theatre-Day.png",
         "tier": "indie",
         "source": "American Theatre",
-        "link": "https://www.americantheatre.org/2026/03/27/willem-dafoe-moises-kaufman-banna-desta-deliver-world-theatre-day-messages/"
+        "link": "https://www.americantheatre.org/2026/03/27/willem-dafoe-moises-kaufman-banna-desta-deliver-world-theatre-day-messages/",
+        "editorial_category": "industry",
+        "editorial_category_label": "Industry",
+        "why_it_matters_kr": "분절된 세계를 잇는 연극의 시원적 힘을 되새기며, 윌렘 대포와 거장들이 제안하는 '공감의 훈련'과 '존엄의 연대'를 고품격 에디토리얼로 조명합니다.",
+        "signal_keywords": [
+            "Industry"
+        ]
     },
     {
         "id": "project-hail-mary-proves-the-world-hungers-for-cozy-sweaters",
@@ -833,7 +1288,13 @@
         "image": "https://www.indiewire.com/wp-content/uploads/2026/03/MCDPRHA_MG031.jpg?w=650",
         "tier": "major",
         "source": "IndieWire",
-        "link": "https://www.indiewire.com/features/craft/project-hail-mary-sweaters-ryan-gosling-costume-design-1235186417/"
+        "link": "https://www.indiewire.com/features/craft/project-hail-mary-sweaters-ryan-gosling-costume-design-1235186417/",
+        "editorial_category": "cultural_signal",
+        "editorial_category_label": "Cultural Signal",
+        "why_it_matters_kr": "광활한 성간 공간에서 우리를 지탱하는 것은 영웅적 투지보다 익숙한 스웨터의 포근함일지도 모릅니다. 라이언 고슬링의 의상을 통해 본 무대적 진실과 휴머니즘에 관한 고찰.",
+        "signal_keywords": [
+            "Cultural Signal"
+        ]
     },
     {
         "id": "italys-1990s-answer-to-cruising-the-forgotten-giallo-the-final-scoop",
@@ -844,7 +1305,13 @@
         "image": "https://www.indiewire.com/wp-content/uploads/2026/03/Buge_1.1.15_2048x.jpg.webp?w=650",
         "tier": "major",
         "source": "IndieWire",
-        "link": "https://www.indiewire.com/features/commentary/the-final-scoop-italian-giallo-cruising-1235185993/"
+        "link": "https://www.indiewire.com/features/commentary/the-final-scoop-italian-giallo-cruising-1235185993/",
+        "editorial_category": "cultural_signal",
+        "editorial_category_label": "Cultural Signal",
+        "why_it_matters_kr": "장르의 황혼기라 치부되던 1990년대 이탈리아 지알로 영화들이 비네거 신드롬의 복원을 통해 재조명되며, 인간의 이중성과 잠입이라는 위태로운 경계를 미학적으로 다시 묻습니다.",
+        "signal_keywords": [
+            "Cultural Signal"
+        ]
     },
     {
         "id": "eric-overmyer-made-language-sit-up-and-bark",
@@ -855,7 +1322,13 @@
         "image": "https://www.americantheatre.org/wp-content/uploads/eric-overmyer.jpg",
         "tier": "indie",
         "source": "American Theatre",
-        "link": "https://www.americantheatre.org/2026/03/25/eric-overmyer-made-language-sit-up-and-bark/"
+        "link": "https://www.americantheatre.org/2026/03/25/eric-overmyer-made-language-sit-up-and-bark/",
+        "editorial_category": "cultural_signal",
+        "editorial_category_label": "Cultural Signal",
+        "why_it_matters_kr": "언어를 다루는 독보적인 감각으로 무대와 스크린을 넘나들었던 거장 에릭 오버마이어, 그가 남긴 언어적 유산과 찰나의 미학을 기리는 헌사.",
+        "signal_keywords": [
+            "Cultural Signal"
+        ]
     },
     {
         "id": "forbidden-fruits-review-witchy-lili-reinhart-leads-a-juicy-disaster-thats-hard-to-resist",
@@ -866,7 +1339,13 @@
         "image": "https://www.indiewire.com/wp-content/uploads/2026/03/MCDFOFR_IF013.jpg?w=650",
         "tier": "major",
         "source": "IndieWire",
-        "link": "https://www.indiewire.com/criticism/movies/forbidden-fruits-review-1235186119/"
+        "link": "https://www.indiewire.com/criticism/movies/forbidden-fruits-review-1235186119/",
+        "editorial_category": "criticism",
+        "editorial_category_label": "Criticism",
+        "why_it_matters_kr": "무대적 상상력이 스크린의 과잉된 미학과 만났을 때 벌어지는 매혹적인 대혼란, 릴리 라인하트가 선사하는 '맛있는 재앙' 속으로 독자 여러분을 초대합니다.",
+        "signal_keywords": [
+            "Criticism"
+        ]
     },
     {
         "id": "trans-rights-rising-2-shows-revisit-the-comptons-cafeteria-riots",
@@ -877,7 +1356,13 @@
         "image": "https://www.americantheatre.org/wp-content/uploads/riot-queens_fuse-ensemble4-1024x512.jpg",
         "tier": "indie",
         "source": "American Theatre",
-        "link": "https://www.americantheatre.org/2026/03/24/trans-rights-rising-2-shows-revisit-the-comptons-cafeteria-riots/"
+        "link": "https://www.americantheatre.org/2026/03/24/trans-rights-rising-2-shows-revisit-the-comptons-cafeteria-riots/",
+        "editorial_category": "queer_lens",
+        "editorial_category_label": "Queer Lens",
+        "why_it_matters_kr": "과거의 안식처가 무대 위에서 재창조될 때, 우리는 잊혔던 트랜스젠더 인권 투쟁의 뜨거운 숨결과 마주하게 됩니다. 공간의 미학을 통해 본 공연 예술의 사회적 책무에 대하여.",
+        "signal_keywords": [
+            "Queer Lens"
+        ]
     },
     {
         "id": "sora-is-dead-at-openai-and-so-is-its-deal-with-disney-but-the-ai-video-battle-is-just-beginning",
@@ -888,7 +1373,13 @@
         "image": "https://www.indiewire.com/wp-content/uploads/2024/02/Screen-Shot-2024-02-23-at-8.54.34-AM.png?w=650",
         "tier": "major",
         "source": "IndieWire",
-        "link": "https://www.indiewire.com/news/breaking-news/openai-shut-down-sora-generative-ai-video-app-1235185950/"
+        "link": "https://www.indiewire.com/news/breaking-news/openai-shut-down-sora-generative-ai-video-app-1235185950/",
+        "editorial_category": "cultural_signal",
+        "editorial_category_label": "Cultural Signal",
+        "why_it_matters_kr": "생성형 AI의 정점으로 추앙받던 소라(Sora)의 폐쇄와 디즈니의 거액 투자 철회는, 기술적 마술이 인간적 서사의 견고한 벽 앞에서 겪은 가장 화려한 좌절이자 새로운 예술적 해방의 서막입니다.",
+        "signal_keywords": [
+            "Cultural Signal"
+        ]
     },
     {
         "id": "golden-threads-nabra-nelson-we-can-just-do-things",
@@ -899,7 +1390,13 @@
         "image": "https://www.americantheatre.org/wp-content/uploads/Nabra-Nelson_golden-thread_Photo-by-Hana-Mattar.jpg",
         "tier": "indie",
         "source": "American Theatre",
-        "link": "https://www.americantheatre.org/2026/03/23/golden-threads-nabra-nelson-we-can-just-do-things/"
+        "link": "https://www.americantheatre.org/2026/03/23/golden-threads-nabra-nelson-we-can-just-do-things/",
+        "editorial_category": "cultural_signal",
+        "editorial_category_label": "Cultural Signal",
+        "why_it_matters_kr": "고향이라는 실체 없는 경계를 넘어, 사라진 마을의 기억을 무대 위로 소환하는 나브라 넬슨의 예술적 여정을 통해 현대 연극이 지향해야 할 진정한 연대의 가치를 조명합니다.",
+        "signal_keywords": [
+            "Cultural Signal"
+        ]
     },
     {
         "id": "the-academy-announces-its-20252026-nicholl-fellowship-recipients",
@@ -910,7 +1407,13 @@
         "image": "https://www.indiewire.com/wp-content/uploads/2026/01/P11636S9.jpg?w=650",
         "tier": "major",
         "source": "IndieWire",
-        "link": "https://www.indiewire.com/news/general-news/academy-2025-2026-nicholl-fellowship-recipients-1235185802/"
+        "link": "https://www.indiewire.com/news/general-news/academy-2025-2026-nicholl-fellowship-recipients-1235185802/",
+        "editorial_category": "cultural_signal",
+        "editorial_category_label": "Cultural Signal",
+        "why_it_matters_kr": "전 세계 창작 생태계를 연결하는 새로운 파트너십을 통해 선발된 니콜 펠로우십 수상자들은, 경계를 넘어선 인간의 보편적 가치를 스크린과 무대 위로 불러내고 있습니다.",
+        "signal_keywords": [
+            "Cultural Signal"
+        ]
     },
     {
         "id": "from-festivals-to-streamers-political-documentaries-are-getting-shut-out",
@@ -921,7 +1424,13 @@
         "image": "https://www.indiewire.com/wp-content/uploads/2026/01/The-Oligarch-and-the-Art-Dealer-Sundance-2026-documentary-series.jpg?w=650",
         "tier": "major",
         "source": "IndieWire",
-        "link": "https://www.indiewire.com/news/festivals/political-documentaries-festivals-us-distribution-struggles-1235185643/"
+        "link": "https://www.indiewire.com/news/festivals/political-documentaries-festivals-us-distribution-struggles-1235185643/",
+        "editorial_category": "cultural_signal",
+        "editorial_category_label": "Cultural Signal",
+        "why_it_matters_kr": "자본과 정치의 거대 파고 속에서 설 자리를 잃어가는 정치 다큐멘터리의 현실을 통해, 우리 시대가 상실한 '무대 위 진실'의 가치를 탐구합니다.",
+        "signal_keywords": [
+            "Cultural Signal"
+        ]
     },
     {
         "id": "say-goodbye-to-awards-season-with-a-rewatch-of-david-cronenbergs-deeply-bleak-maps-to-the-stars",
@@ -932,7 +1441,13 @@
         "image": "https://www.indiewire.com/wp-content/uploads/2026/03/MCDMATO_EC037.jpg?w=650",
         "tier": "major",
         "source": "IndieWire",
-        "link": "https://www.indiewire.com/features/best-of/maps-to-the-stars-cronenberg-oscars-rewatch-1235185451/"
+        "link": "https://www.indiewire.com/features/best-of/maps-to-the-stars-cronenberg-oscars-rewatch-1235185451/",
+        "editorial_category": "voices",
+        "editorial_category_label": "Voices",
+        "why_it_matters_kr": "찬란한 시상식 시즌의 끝에서, 할리우드라는 거대한 영묘의 민낯을 해부하는 데이비드 크로넨버그의 잔혹하고도 우아한 블랙 코미디를 다시 조명합니다.",
+        "signal_keywords": [
+            "Voices"
+        ]
     },
     {
         "id": "new-leaders-at-classical-theatre-of-harlem-childsplay-and-more",
@@ -943,7 +1458,13 @@
         "image": "https://www.americantheatre.org/wp-content/uploads/EE-4-headshot-template.jpg",
         "tier": "indie",
         "source": "American Theatre",
-        "link": "https://www.americantheatre.org/2026/03/20/new-leaders-at-classical-theatre-of-harlem-childsplay-and-more/"
+        "link": "https://www.americantheatre.org/2026/03/20/new-leaders-at-classical-theatre-of-harlem-childsplay-and-more/",
+        "editorial_category": "industry",
+        "editorial_category_label": "Industry",
+        "why_it_matters_kr": "전통의 토양 위에 새로운 감각을 덧입히는 연극계의 리더십 교체를 통해, 동시대 공연예술이 지향해야 할 공동체적 가치와 예술적 지속 가능성을 조명한다.",
+        "signal_keywords": [
+            "Industry"
+        ]
     },
     {
         "id": "what-happens-when-new-allegations-change-a-documentary-after-it-premieres",
@@ -954,7 +1475,13 @@
         "image": "https://www.indiewire.com/wp-content/uploads/2026/01/american-pachuco.jpg?w=650",
         "tier": "major",
         "source": "IndieWire",
-        "link": "https://www.indiewire.com/news/general-news/american-pachuco-filmmakers-respond-cesar-chavez-1235185486/"
+        "link": "https://www.indiewire.com/news/general-news/american-pachuco-filmmakers-respond-cesar-chavez-1235185486/",
+        "editorial_category": "cultural_signal",
+        "editorial_category_label": "Cultural Signal",
+        "why_it_matters_kr": "선댄스가 열광했던 치카노 연극의 전설 루이스 발데스의 기록이 세자르 차베스의 충격적인 성추문 폭로로 인해 거대한 윤리적 시험대에 올랐습니다.",
+        "signal_keywords": [
+            "Cultural Signal"
+        ]
     },
     {
         "id": "sondheim-foundation-to-support-mental-health-clinic-and-arts-orgs",
@@ -965,7 +1492,13 @@
         "image": "https://www.americantheatre.org/wp-content/uploads/sondheim-portrait.jpg",
         "tier": "indie",
         "source": "American Theatre",
-        "link": "https://www.americantheatre.org/2026/03/19/sondheim-foundation-to-support-mental-health-clinic-and-arts-institutions/"
+        "link": "https://www.americantheatre.org/2026/03/19/sondheim-foundation-to-support-mental-health-clinic-and-arts-institutions/",
+        "editorial_category": "industry",
+        "editorial_category_label": "Industry",
+        "why_it_matters_kr": "무대 위 언어의 연금술사 손다임이 남긴 유산이 창작자들의 내면적 고통을 어루만지는 클리닉과 예술 단체 지원으로 구체화되며, 브로드웨이의 지속 가능한 미래를 예고합니다.",
+        "signal_keywords": [
+            "Industry"
+        ]
     },
     {
         "id": "the-hardest-scene-to-craft-in-ready-or-not-2-here-i-come-didnt-involve-any-blood-at-all",
@@ -976,7 +1509,13 @@
         "image": "https://www.indiewire.com/wp-content/uploads/2026/01/Ready-or-Not-2.png?w=650",
         "tier": "major",
         "source": "IndieWire",
-        "link": "https://www.indiewire.com/features/podcast/radio-silence-on-ready-or-not-2-here-i-come-1235183347/"
+        "link": "https://www.indiewire.com/features/podcast/radio-silence-on-ready-or-not-2-here-i-come-1235183347/",
+        "editorial_category": "cultural_signal",
+        "editorial_category_label": "Cultural Signal",
+        "why_it_matters_kr": "가장 잔혹한 공포는 날카로운 칼날이 아닌, 정교하게 설계된 언어의 그물망에서 시작됩니다. 14인의 배우가 빚어낸 밀도 높은 앙상블의 막전막후를 들여다봅니다.",
+        "signal_keywords": [
+            "Cultural Signal"
+        ]
     },
     {
         "id": "2-pittsburgh-theatres-formalize-merger",
@@ -987,7 +1526,13 @@
         "image": "https://www.americantheatre.org/wp-content/uploads/Cast-of-PPTs-An-Enemy-of-the-People-2-1024x682.webp",
         "tier": "indie",
         "source": "American Theatre",
-        "link": "https://www.americantheatre.org/2026/03/18/2-pittsburgh-theatres-formalize-merger/"
+        "link": "https://www.americantheatre.org/2026/03/18/2-pittsburgh-theatres-formalize-merger/",
+        "editorial_category": "industry",
+        "editorial_category_label": "Industry",
+        "why_it_matters_kr": "피츠버그를 대표하는 두 연극적 기둥인 CLO와 퍼블릭 시어터가 단일 조직으로의 통합을 선언하며, 북미 공연 예술계에 새로운 공생의 모델을 제시합니다.",
+        "signal_keywords": [
+            "Industry"
+        ]
     },
     {
         "id": "prediction-markets-claimed-an-oscar-victory-the-reality-was-messier",
@@ -998,7 +1543,13 @@
         "image": "https://www.indiewire.com/wp-content/uploads/2026/03/GettyImages-2264301577.jpg?w=650",
         "tier": "major",
         "source": "IndieWire",
-        "link": "https://www.indiewire.com/features/commentary/oscars-prediction-markets-kalshi-accurate-1235184957/"
+        "link": "https://www.indiewire.com/features/commentary/oscars-prediction-markets-kalshi-accurate-1235184957/",
+        "editorial_category": "cultural_signal",
+        "editorial_category_label": "Cultural Signal",
+        "why_it_matters_kr": "데이터와 알고리즘이 예술적 성취의 '가격'을 매기는 시대, 핀테크가 침공한 오스카 무대 이면의 서늘한 통찰과 인간적 진실을 탐구합니다.",
+        "signal_keywords": [
+            "Cultural Signal"
+        ]
     },
     {
         "id": "don-nigros-prolific-imagination",
@@ -1009,7 +1560,13 @@
         "image": "https://www.americantheatre.org/wp-includes/images/media/default.svg",
         "tier": "indie",
         "source": "American Theatre",
-        "link": "https://www.americantheatre.org/2026/03/17/don-nigros-prolific-imagination/"
+        "link": "https://www.americantheatre.org/2026/03/17/don-nigros-prolific-imagination/",
+        "editorial_category": "cultural_signal",
+        "editorial_category_label": "Cultural Signal",
+        "why_it_matters_kr": "무명(無名)의 상자 속에서 발견된 25권의 희곡, 현대 연극사의 가장 경이로운 수수께끼인 돈 니그로의 예술적 궤적을 추적합니다.",
+        "signal_keywords": [
+            "Cultural Signal"
+        ]
     },
     {
         "id": "oscars-2026-ratings-fall-9-percent-to-179-million-viewers-lowest-since-2022",
@@ -1020,7 +1577,13 @@
         "image": "https://www.indiewire.com/wp-content/uploads/2026/03/Oscars-2026-Conan-OBrien-Sterlking-K-Brown.jpg?w=650",
         "tier": "major",
         "source": "IndieWire",
-        "link": "https://www.indiewire.com/news/breaking-news/oscars-2026-ratings-fall-9-percent-lowest-since-2022-1235184819/"
+        "link": "https://www.indiewire.com/news/breaking-news/oscars-2026-ratings-fall-9-percent-lowest-since-2022-1235184819/",
+        "editorial_category": "cultural_signal",
+        "editorial_category_label": "Cultural Signal",
+        "why_it_matters_kr": "전통적 시상식의 권위가 디지털 시대의 파도 속에서 변곡점을 맞이한 지금, 2026 오스카 시청률 하락이 시사하는 예술적 가치와 대중의 거리감을 심층 분석합니다.",
+        "signal_keywords": [
+            "Cultural Signal"
+        ]
     },
     {
         "id": "why-sinners-never-caught-up-with-one-battle-after-another",
@@ -1031,7 +1594,13 @@
         "image": "https://www.indiewire.com/wp-content/uploads/2026/03/Ryan-Coogler-Oscar-winner-Sinners-2026.jpg?w=650",
         "tier": "major",
         "source": "IndieWire",
-        "link": "https://www.indiewire.com/awards/industry/why-sinners-could-not-beat-one-battle-after-another-oscars-1235184798/"
+        "link": "https://www.indiewire.com/awards/industry/why-sinners-could-not-beat-one-battle-after-another-oscars-1235184798/",
+        "editorial_category": "cultural_signal",
+        "editorial_category_label": "Cultural Signal",
+        "why_it_matters_kr": "예고된 거장의 대관식과 시대의 파도를 탄 언더독의 격돌, 그 이면의 서사적 긴장감을 분석합니다.",
+        "signal_keywords": [
+            "Cultural Signal"
+        ]
     },
     {
         "id": "ryan-coogler-wins-best-original-screenplay-oscar-for-sinners",
@@ -1042,7 +1611,13 @@
         "image": "https://www.indiewire.com/wp-content/uploads/2026/03/MCDSINN_WB006.jpg?w=650",
         "tier": "major",
         "source": "IndieWire",
-        "link": "https://www.indiewire.com/awards/results/2026-academy-awards-ryan-coogler-best-original-screenplay-1235183459/"
+        "link": "https://www.indiewire.com/awards/results/2026-academy-awards-ryan-coogler-best-original-screenplay-1235183459/",
+        "editorial_category": "stage_to_screen",
+        "editorial_category_label": "Stage to Screen",
+        "why_it_matters_kr": "거대 IP와 실화의 변주를 넘어, 자신의 뿌리인 '델타 블루스'와 장르적 상상력을 결합해 '오리지널리티'의 정점에 선 라이언 쿠글러의 예술적 승리를 조명한다.",
+        "signal_keywords": [
+            "Stage to Screen"
+        ]
     },
     {
         "id": "meet-the-punkrock-projectionist-showing-his-own-films-in-a-tiny-theater-on-wheels",
@@ -1053,7 +1628,13 @@
         "image": "https://www.indiewire.com/wp-content/uploads/2026/03/ka_riley_00015.jpg?w=650",
         "tier": "major",
         "source": "IndieWire",
-        "link": "https://www.indiewire.com/features/interviews/meet-davey-b-gravey-film-projectionist-tiny-cinema-1235178475/"
+        "link": "https://www.indiewire.com/features/interviews/meet-davey-b-gravey-film-projectionist-tiny-cinema-1235178475/",
+        "editorial_category": "industry",
+        "editorial_category_label": "Industry",
+        "why_it_matters_kr": "LA 실버 레이크의 밤거리를 밝히는 네 좌석의 태양광 영화관, 본질만 남긴 이 최소주의 극장이 현대 예술에 던지는 묵직한 질문을 탐색합니다.",
+        "signal_keywords": [
+            "Industry"
+        ]
     },
     {
         "id": "gonna-sing-it-again-the-art-of-musicianactors-in-hades-and-above",
@@ -1064,7 +1645,13 @@
         "image": "https://www.americantheatre.org/wp-content/uploads/gaby-moreno_hadestown2.jpg",
         "tier": "indie",
         "source": "American Theatre",
-        "link": "https://www.americantheatre.org/2026/03/13/gonna-sing-it-again-the-art-of-musician-actors-in-hades-and-above/"
+        "link": "https://www.americantheatre.org/2026/03/13/gonna-sing-it-again-the-art-of-musician-actors-in-hades-and-above/",
+        "editorial_category": "voices",
+        "editorial_category_label": "Voices",
+        "why_it_matters_kr": "악기를 든 배우들이 무대 위로 올라올 때, 정형화된 뮤지컬은 비로소 살아 숨 쉬는 음악적 맥박을 되찾습니다. 레이첼 챠브킨이 그려내는 '밴드-지컬(Bands-icals)'의 미학을 탐구합니다.",
+        "signal_keywords": [
+            "Voices"
+        ]
     },
     {
         "id": "no-pixar-doesnt-need-to-give-up-autobiographical-stories",
@@ -1075,7 +1662,13 @@
         "image": "https://www.indiewire.com/wp-content/uploads/2026/03/insideout.jpg?w=650",
         "tier": "major",
         "source": "IndieWire",
-        "link": "https://www.indiewire.com/features/commentary/pixar-doesnt-need-give-up-autobiographical-movies-1235184346/"
+        "link": "https://www.indiewire.com/features/commentary/pixar-doesnt-need-give-up-autobiographical-movies-1235184346/",
+        "editorial_category": "cultural_signal",
+        "editorial_category_label": "Cultural Signal",
+        "why_it_matters_kr": "상업적 성공이라는 이름 아래 '보편성' 뒤로 숨으려는 픽사의 행보를 통해, 예술의 진정성과 개인적 서사가 지닌 연극적 힘의 가치를 심층적으로 고찰합니다.",
+        "signal_keywords": [
+            "Cultural Signal"
+        ]
     },
     {
         "id": "theatre-philadelphia-announces-9th-annual-philly-theatre-week",
@@ -1086,7 +1679,13 @@
         "image": "https://www.americantheatre.org/wp-content/uploads/Good-Bones-1024x683.webp",
         "tier": "indie",
         "source": "American Theatre",
-        "link": "https://www.americantheatre.org/2026/03/12/theatre-philadelphia-announces-9th-annual-philly-theatre-week/"
+        "link": "https://www.americantheatre.org/2026/03/12/theatre-philadelphia-announces-9th-annual-philly-theatre-week/",
+        "editorial_category": "industry",
+        "editorial_category_label": "Industry",
+        "why_it_matters_kr": "아홉 번째를 맞이한 ‘필리 씨어터 위크’가 예술의 문턱을 낮추고 도시 전체를 연극적 영감으로 물들입니다. 다넬 래드포드의 새로운 리더십과 함께 펼쳐지는 이번 축제는 연극이 어떻게 지역사회의 심장박동이 되는지 여실히 보여줍니다.",
+        "signal_keywords": [
+            "Industry"
+        ]
     },
     {
         "id": "i-love-boosters-review-boots-rileys-crazy-fashion-heist-comedy-is-both-stoner-movie-and-anticapitalist-protest-art",
@@ -1097,6 +1696,12 @@
         "image": "https://www.indiewire.com/wp-content/uploads/2026/01/MCDILOV_EC191_25a5f1.jpg?w=650",
         "tier": "major",
         "source": "IndieWire",
-        "link": "https://www.indiewire.com/criticism/movies/i-love-boosters-review-boots-riley-1235183563/"
+        "link": "https://www.indiewire.com/criticism/movies/i-love-boosters-review-boots-riley-1235183563/",
+        "editorial_category": "stage_to_screen",
+        "editorial_category_label": "Stage to Screen",
+        "why_it_matters_kr": "초현실주의적 미학과 자본주의 비판이 뒤섞인 부츠 라일리의 기묘한 패션 헤이스트물, 그 이면에 숨겨진 현대 예술의 저항적 리듬을 탐구합니다.",
+        "signal_keywords": [
+            "Stage to Screen"
+        ]
     }
 ]

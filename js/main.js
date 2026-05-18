@@ -38,6 +38,73 @@ function setupHeaderDate() {
   });
 }
 
+const EDITORIAL_CATEGORIES = {
+  criticism: 'Criticism',
+  industry: 'Industry',
+  voices: 'Voices',
+  queer_lens: 'Queer Lens',
+  stage_to_screen: 'Stage to Screen',
+  cultural_signal: 'Cultural Signal'
+};
+
+function escapeHtml(value = '') {
+  return String(value)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
+function categoryLabel(article) {
+  return article.editorial_category_label || EDITORIAL_CATEGORIES[article.editorial_category] || 'Cultural Signal';
+}
+
+function normalizeCategory(value = '') {
+  return value.toLowerCase().replace(/-/g, '_');
+}
+
+function inferSignal(article) {
+  const signals = article.signal_keywords || article.keywords || [];
+  return signals.slice(0, 3).map(escapeHtml).join(' / ');
+}
+
+function renderEditorialFrames(articles) {
+  const grid = document.getElementById('article-grid');
+  if (!grid || !articles.length) return;
+
+  const latest = articles[0];
+  const recent = articles.slice(0, 7);
+  const labels = [...new Set(recent.map(categoryLabel))].slice(0, 4);
+  const note = latest.why_it_matters_kr || latest.summary_kr || latest.title;
+
+  const daily = document.createElement('section');
+  daily.className = 'editorial-note';
+  daily.innerHTML = `
+    <div class="eyebrow">Today’s Note</div>
+    <h2>${escapeHtml(categoryLabel(latest))}</h2>
+    <p>${escapeHtml(note)}</p>
+    <div class="note-signals">${labels.map(label => `<span>${escapeHtml(label)}</span>`).join('')}</div>
+  `;
+
+  const weekly = document.createElement('section');
+  weekly.className = 'weekly-signal';
+  weekly.innerHTML = `
+    <div class="eyebrow">This Week on Stage-Is</div>
+    <div class="weekly-list">
+      ${recent.slice(0, 5).map(article => `
+        <a href="article.html?id=${encodeURIComponent(article.id)}">
+          <span>${escapeHtml(categoryLabel(article))}</span>
+          <strong>${escapeHtml(article.title_kr || article.title)}</strong>
+        </a>
+      `).join('')}
+    </div>
+  `;
+
+  grid.parentNode.insertBefore(daily, grid);
+  grid.parentNode.insertBefore(weekly, grid);
+}
+
 /* --- Data Loading & Rendering for Grid --- */
 /**
  * 홈 화면의 기사 그리드를 렌더링합니다.
@@ -55,6 +122,7 @@ async function loadArticles() {
     const articles = await response.json();
 
     grid.innerHTML = ''; // Loading 상태 제거
+    renderEditorialFrames(articles);
 
     articles.forEach((article) => {
       const item = document.createElement('a');
@@ -63,7 +131,7 @@ async function loadArticles() {
       item.className = 'grid-item';
 
       const imageHtml = article.image
-        ? `<img src="${article.image}" alt="${article.title}" class="grid-item-image">`
+        ? `<img src="${escapeHtml(article.image)}" alt="${escapeHtml(article.title)}" class="grid-item-image">`
         : `<div class="grid-item-image" style="background:#f4f4f4;"></div>`;
 
       let summary = article.summary_kr || article.title;
@@ -71,8 +139,10 @@ async function loadArticles() {
 
       item.innerHTML = `
               <div class="grid-item-image-wrapper">${imageHtml}</div>
-              <div class="grid-item-title">${article.title_kr || article.title}</div>
-              <div class="grid-item-summary">${summary}</div>
+              <div class="grid-item-kicker">${escapeHtml(categoryLabel(article))}</div>
+              <div class="grid-item-title">${escapeHtml(article.title_kr || article.title)}</div>
+              <div class="grid-item-summary">${escapeHtml(summary)}</div>
+              ${article.why_it_matters_kr ? `<div class="grid-item-why">${escapeHtml(article.why_it_matters_kr)}</div>` : ''}
           `;
       grid.appendChild(item);
     });
@@ -144,7 +214,10 @@ async function renderSingleArticle() {
       formattedDate = `${d.getFullYear()}.${String(d.getMonth() + 1).padStart(2, '0')}.${String(d.getDate()).padStart(2, '0')}.${days[d.getDay()]}`;
     } catch (e) { /* keep string */ }
 
-    document.querySelector('.article-meta').innerHTML = `<span>${formattedDate}</span>`;
+    document.querySelector('.article-meta').innerHTML = `
+      <span>${formattedDate}</span>
+      <span>${escapeHtml(categoryLabel(article))}</span>
+    `;
 
     // 이미지 처리
     const heroContainer = document.querySelector('.article-hero-image-wrapper');
@@ -157,8 +230,36 @@ async function renderSingleArticle() {
 
     // 본문 렌더링
     const contentHtml = article.content_kr || article.summary_kr || "<p>본문 내용이 없습니다.</p>";
+    const editorialContextHtml = `
+      <section class="article-editorial-brief">
+        ${article.why_it_matters_kr ? `
+          <div>
+            <span>Why it matters</span>
+            <p>${escapeHtml(article.why_it_matters_kr)}</p>
+          </div>
+        ` : ''}
+        ${article.context_kr ? `
+          <div>
+            <span>Context</span>
+            <p>${escapeHtml(article.context_kr)}</p>
+          </div>
+        ` : ''}
+        ${article.korean_reader_note_kr ? `
+          <div>
+            <span>Korean Reader Note</span>
+            <p>${escapeHtml(article.korean_reader_note_kr)}</p>
+          </div>
+        ` : ''}
+        ${inferSignal(article) ? `
+          <div>
+            <span>Signal Keywords</span>
+            <p>${inferSignal(article)}</p>
+          </div>
+        ` : ''}
+      </section>
+    `;
     const attributionHtml = `<p style="margin-top: 80px; font-size: 12px; font-weight: 500; color: #666; text-transform: none; text-align: center;">스테이지이즈 편집부에 의해 작성된 글입니다.</p>`;
-    document.querySelector('.article-body').innerHTML = contentHtml + attributionHtml;
+    document.querySelector('.article-body').innerHTML = editorialContextHtml + contentHtml + attributionHtml;
 
   } catch (error) {
     console.error('Error rendering article:', error);
@@ -169,7 +270,7 @@ async function renderSingleArticle() {
 /* --- Category Page Rendering (Slight variant of Grid) --- */
 async function renderCategoryArticles() {
   const urlParams = new URLSearchParams(window.location.search);
-  const targetCategory = urlParams.get('cat');
+  const targetCategory = normalizeCategory(urlParams.get('cat') || 'all');
   const grid = document.getElementById('category-grid');
 
   if (!grid || !targetCategory) return;
@@ -177,20 +278,18 @@ async function renderCategoryArticles() {
   // Update header context
   const catTitle = document.getElementById('category-title');
   if (catTitle) {
-    catTitle.textContent = targetCategory.toUpperCase();
+    catTitle.textContent = targetCategory === 'all' ? 'ALL SIGNALS' : (EDITORIAL_CATEGORIES[targetCategory] || targetCategory).toUpperCase();
   }
 
   try {
     const basePath = window.location.pathname.includes('/collectivemonologue') ? '/collectivemonologue/' : '/';
-    const response = await fetch(`${basePath}data/articles.json?t=${new Date().getTime()}`);
+    const response = await fetch(`${basePath}data/articles_list.json?t=${new Date().getTime()}`);
     if (!response.ok) throw new Error('Data fetch failed');
     const articles = await response.json();
 
-    const filtered = articles.filter(a => {
-      // 모든 기사는 기본적으로 연극 관련이라고 간주하고 노출 (또는 필요시 theater 파라미터 체크)
-      if (targetCategory === 'theater') return true;
-      return false;
-    });
+    const filtered = targetCategory === 'all'
+      ? articles
+      : articles.filter(a => normalizeCategory(a.editorial_category || '') === targetCategory);
 
     grid.innerHTML = '';
     if (filtered.length === 0) {
@@ -199,14 +298,12 @@ async function renderCategoryArticles() {
     }
 
     filtered.forEach((article) => {
-      // find original index for link
-      const index = articles.indexOf(article);
       const item = document.createElement('a');
-      item.href = `article.html?id=${index}`;
+      item.href = `article.html?id=${article.id}`;
       item.className = 'grid-item';
 
       const imageHtml = article.image
-        ? `<img src="${article.image}" class="grid-item-image">`
+        ? `<img src="${escapeHtml(article.image)}" alt="${escapeHtml(article.title || '')}" class="grid-item-image">`
         : `<div class="grid-item-image" style="background:#f4f4f4;"></div>`;
 
       let summary = article.summary_kr || article.title;
@@ -214,7 +311,10 @@ async function renderCategoryArticles() {
 
       item.innerHTML = `
               <div class="grid-item-image-wrapper">${imageHtml}</div>
-              <div class="grid-item-summary">${summary}</div>
+              <div class="grid-item-kicker">${escapeHtml(categoryLabel(article))}</div>
+              <div class="grid-item-title">${escapeHtml(article.title_kr || article.title)}</div>
+              <div class="grid-item-summary">${escapeHtml(summary)}</div>
+              ${article.why_it_matters_kr ? `<div class="grid-item-why">${escapeHtml(article.why_it_matters_kr)}</div>` : ''}
           `;
       grid.appendChild(item);
     });
@@ -245,11 +345,6 @@ function initCookieBanner() {
     banner.style.display = 'none';
   });
 }
-
-// Add init function to DOMContentLoaded (needs to be patched at top usually, but we can just call it here)
-document.addEventListener('DOMContentLoaded', () => {
-  initCookieBanner();
-});
 
 /* --- SEO Helpers --- */
 function updateMeta(attr, value, content) {
