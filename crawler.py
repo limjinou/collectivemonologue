@@ -2,6 +2,7 @@ import feedparser
 import smtplib
 from email.mime.text import MIMEText
 import os
+import sys
 from google import genai
 from datetime import datetime, timezone
 from dotenv import load_dotenv
@@ -11,6 +12,113 @@ import concurrent.futures
 import time
 import requests
 import bs4
+
+FAILED_QUEUE_PATH = 'data/failed_queue.json'
+COST_LOG_PATH = 'data/cost_log.json'
+RUN_LOG_DIR = 'data/run_logs'
+MAX_RETRY = 3
+
+RUN_STATS = {
+    "started_at": datetime.now(timezone.utc).isoformat(),
+    "finished_at": "",
+    "feeds_checked": 0,
+    "entries_found": 0,
+    "entries_selected": 0,
+    "processed": 0,
+    "added": 0,
+    "skipped_duplicate": 0,
+    "failed": 0,
+    "failures_by_reason": {}
+}
+
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8")
+if hasattr(sys.stderr, "reconfigure"):
+    sys.stderr.reconfigure(encoding="utf-8")
+
+def today_key():
+    return datetime.now(timezone.utc).strftime("%Y-%m-%d")
+
+def now_iso():
+    return datetime.now(timezone.utc).isoformat()
+
+def load_json_file(path, default):
+    try:
+        if os.path.exists(path):
+            with open(path, 'r', encoding='utf-8') as f:
+                return json.load(f)
+    except Exception as e:
+        print(f"⚠️ JSON load failed ({path}): {e}")
+    return default
+
+def write_json_file(path, data):
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    with open(path, 'w', encoding='utf-8') as f:
+        json.dump(data, f, ensure_ascii=False, indent=4)
+
+def increment_failure_stat(reason):
+    RUN_STATS["failed"] += 1
+    failures = RUN_STATS["failures_by_reason"]
+    failures[reason] = failures.get(reason, 0) + 1
+
+def is_quota_error(error):
+    message = str(error).lower()
+    return "429" in message or "quota" in message or "resource_exhausted" in message
+
+def log_api_call(model, success, quota_error=False, estimated_input_chars=0):
+    log = load_json_file(COST_LOG_PATH, {})
+    key = today_key()
+    day = log.setdefault(key, {
+        "total_calls": 0,
+        "success": 0,
+        "failed": 0,
+        "quota_errors": 0,
+        "models_used": {},
+        "estimated_input_chars": 0
+    })
+    day["total_calls"] += 1
+    day["success" if success else "failed"] += 1
+    if quota_error:
+        day["quota_errors"] += 1
+    day["models_used"][model] = day["models_used"].get(model, 0) + 1
+    day["estimated_input_chars"] = day.get("estimated_input_chars", 0) + int(estimated_input_chars or 0)
+    write_json_file(COST_LOG_PATH, log)
+
+def record_failure(entry, reason, source="", tier="", last_error=""):
+    if hasattr(entry, "get"):
+        title = getattr(entry, "title", "") or entry.get("title", "")
+        link = getattr(entry, "link", "") or entry.get("link", "")
+        published = entry.get('published', datetime.now().strftime("%Y-%m-%d"))
+    else:
+        title = getattr(entry, "title", "")
+        link = getattr(entry, "link", "")
+        published = datetime.now().strftime("%Y-%m-%d")
+    queue = load_json_file(FAILED_QUEUE_PATH, [])
+    existing = next((item for item in queue if item.get("link") == link and link), None)
+    payload = {
+        "failed_at": now_iso(),
+        "reason": reason,
+        "source": source,
+        "tier": tier,
+        "title": title,
+        "link": link,
+        "published": published,
+        "last_error": str(last_error)[:1000],
+        "attempt_count": 1,
+        "max_retry": MAX_RETRY
+    }
+    if existing:
+        existing.update(payload)
+        existing["attempt_count"] = int(existing.get("attempt_count", 0)) + 1
+    else:
+        queue.append(payload)
+    write_json_file(FAILED_QUEUE_PATH, queue)
+    increment_failure_stat(reason)
+
+def write_run_log():
+    RUN_STATS["finished_at"] = now_iso()
+    os.makedirs(RUN_LOG_DIR, exist_ok=True)
+    write_json_file(os.path.join(RUN_LOG_DIR, f"{today_key()}.json"), RUN_STATS)
 
 # 1. 환경 변수 로드
 load_dotenv()
@@ -279,6 +387,89 @@ def translate_and_summarize(text, title, reddit_comments=""):
             "keywords": []
         }
 
+_legacy_translate_and_summarize = translate_and_summarize
+
+def translate_and_summarize(text, title, reddit_comments=""):
+    """Wrap the existing translator with API usage logging and failure signals."""
+    if not GEMINI_API_KEY:
+        return {
+            "_error_reason": "missing_api_key",
+            "_error_message": "GEMINI_API_KEY is missing.",
+            "title_en": title,
+            "summary_en": "No API Key provided.",
+            "keywords": []
+        }
+
+    if not text or len(text) < 50:
+        return {
+            "_error_reason": "content_too_short",
+            "_error_message": "Content too short or extraction failed.",
+            "title_en": title,
+            "summary_en": "Content too short or extraction failed.",
+            "keywords": []
+        }
+
+    if not client:
+        return {
+            "_error_reason": "model_error",
+            "_error_message": "Gemini client is not initialized.",
+            "title_kr": title,
+            "summary_kr": "AI 모델 처리 중 오류가 발생했습니다.",
+            "content_kr": "본문 처리 중 오류가 발생했습니다. 잠시 후 다시 시도해 주세요.",
+            "keywords": []
+        }
+
+    original_generate_content = client.models.generate_content
+    call_state = {"last_reason": "", "last_error": ""}
+
+    def generate_content_with_logging(*args, **kwargs):
+        model = kwargs.get("model") or (args[0] if args else "unknown")
+        contents = kwargs.get("contents", "")
+        estimated_chars = len(str(contents))
+        try:
+            response = original_generate_content(*args, **kwargs)
+            log_api_call(model, True, estimated_input_chars=estimated_chars)
+            return response
+        except Exception as e:
+            quota_error = is_quota_error(e)
+            log_api_call(model, False, quota_error=quota_error, estimated_input_chars=estimated_chars)
+            call_state["last_reason"] = "quota_exceeded" if quota_error else "model_error"
+            call_state["last_error"] = str(e)
+            raise
+
+    client.models.generate_content = generate_content_with_logging
+    try:
+        result = _legacy_translate_and_summarize(text, title, reddit_comments)
+    except json.JSONDecodeError as e:
+        return {
+            "_error_reason": "json_parse_error",
+            "_error_message": str(e),
+            "title_kr": title,
+            "summary_kr": "AI 응답 파싱 중 오류가 발생했습니다.",
+            "content_kr": "본문 처리 중 오류가 발생했습니다. 잠시 후 다시 시도해 주세요.",
+            "keywords": []
+        }
+    finally:
+        client.models.generate_content = original_generate_content
+
+    if isinstance(result, dict) and call_state["last_reason"]:
+        summary = str(result.get("summary_kr", ""))
+        content = str(result.get("content_kr", ""))
+        looks_like_error = (
+            "오류" in summary
+            or "오류" in content
+            or "과부하" in summary
+            or "error" in summary.lower()
+            or "failed" in summary.lower()
+        )
+    else:
+        looks_like_error = False
+
+    if looks_like_error:
+        result["_error_reason"] = call_state["last_reason"]
+        result["_error_message"] = call_state["last_error"]
+    return result
+
 def fetch_broadway_grosses():
     """Playbill.com에서 이번 주 브로드웨이 박스오피스 데이터를 가져옵니다."""
     url = "https://www.playbill.com/grosses"
@@ -411,6 +602,15 @@ def process_entry(entry, source, tier):
     
     # 3. AI Summary with Reddit context
     ai_result = translate_and_summarize(full_text, title, reddit_comments)
+    if ai_result.get("_error_reason"):
+        record_failure(
+            entry,
+            ai_result.get("_error_reason", "model_error"),
+            source,
+            tier,
+            ai_result.get("_error_message", "")
+        )
+        return None
 
     # Extract image: RSS metadata 우선, 없으면 HTML 파싱 (og:image)
     image_url = ""
@@ -444,6 +644,7 @@ def process_entry(entry, source, tier):
     summary_kr = ai_result.get('summary_kr', '내용 없음').strip()
     if not summary_kr or "내용 없음" in summary_kr or len(summary_kr) < 20:
         print(f"   ⚠️ 유효하지 않은 기사 내용 제외: {title[:30]}")
+        record_failure(entry, "invalid_summary", source, tier, "Summary is missing, placeholder, or too short.")
         return None
         
     # 엄격한 이미지 보장: Wikipedia 폴백까지 실패하면 기사를 버립니다 (선택적)
@@ -453,6 +654,7 @@ def process_entry(entry, source, tier):
     # 사용자가 "사진도 있지 않음"이라고 했으므로 사진이 None이면 버리도록 수정합니다.
     if not image_url:
          print(f"   ⚠️ 이미지 확보 실패 기사 제외: {title[:30]}")
+         record_failure(entry, "missing_image", source, tier, "No usable image found from RSS, HTML, or Wikipedia.")
          return None
 
     return {
@@ -559,6 +761,10 @@ def save_to_json(major_articles, indie_articles):
             
             existing_list.insert(0, list_item) # 최신순
             actually_new.append(item)
+        else:
+            RUN_STATS["skipped_duplicate"] += 1
+
+    RUN_STATS["added"] = len(actually_new)
 
     # 전체 갯수 제한 (예: 100개까지 목록 유지)
     final_list = existing_list[:100]
@@ -576,7 +782,7 @@ def generate_sitemap(articles):
     저장된 기사 데이터를 바탕으로 구글 검색용 sitemap.xml을 생성합니다.
     """
     import urllib.parse
-    base_url = "https://collectivemonologue.pages.dev"
+    base_url = os.getenv("SITE_BASE_URL", "https://stage-is.com").rstrip("/")
     today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     
     xml_content = '<?xml version="1.0" encoding="UTF-8"?>\n'
@@ -593,9 +799,12 @@ def generate_sitemap(articles):
         xml_content += '  </url>\n'
 
     # 동적 기사 페이지들 (article.html?id=...)
+    seen_article_ids = set()
     for article in articles:
         article_id = article.get('id')
         if not article_id: continue
+        if article_id in seen_article_ids: continue
+        seen_article_ids.add(article_id)
         
         encoded_id = urllib.parse.quote(article_id)
         
@@ -618,14 +827,18 @@ def crawl_rss():
     def fetch_from_feeds(feeds_dict, tier):
         entries = []
         for source, url in feeds_dict.items():
+            RUN_STATS["feeds_checked"] += 1
             print(f"📡 [{tier.upper()}] {source} 검색 중...")
             try:
                 feed = feedparser.parse(url)
+                selected_entries = feed.entries[:2]
+                RUN_STATS["entries_found"] += len(selected_entries)
                 # 각 소스별 최신 2개씩 수집 (버퍼 확보: 1개 실패 시 다음 것으로 대체)
-                for entry in feed.entries[:2]:
+                for entry in selected_entries:
                     entries.append((entry, source, tier))
             except Exception as e:
                 print(f"⚠️ {source} 피드 오류: {e}")
+                record_failure({"title": source, "link": url}, "feed_error", source, tier, e)
         return entries
 
     major_entries = fetch_from_feeds(MAJOR_FEEDS, 'major')
@@ -636,11 +849,13 @@ def crawl_rss():
     # 기사 퀄리티를 위해 전체 중 상위 2개만 처리 (메이저 우선순위 등 고려 가능하나 일단 각 1개씩 총 2개 권장)
     # 여기서는 병렬 처리 전 리스트를 슬라이싱하여 제미나이 리소스 집중
     all_entries = major_entries[:1] + indie_entries[:1] # 각각 가장 최신 1개씩 총 2개만 선별
+    RUN_STATS["entries_selected"] = len(all_entries)
 
     # 기사 퀄리티 및 쿼터 준수를 위해 1개씩 순차 처리 (Zero-Failure)
     # 한 기사 처리가 끝날 때마다 충분한 휴식 시간을 둡니다.
     for entry, source, tier in all_entries:
         try:
+            RUN_STATS["processed"] += 1
             data = process_entry(entry, source, tier)
             if data:
                 if data['tier'] == 'major':
@@ -653,10 +868,13 @@ def crawl_rss():
             time.sleep(60)
         except Exception as exc:
             print(f"❌ 기사 처리 중 에러 발생: {exc}")
+            record_failure(entry, "unexpected_error", source, tier, exc)
 
     return major_results, indie_results
 
 if __name__ == "__main__":
+    import atexit
+    atexit.register(write_run_log)
     major_data, indie_data = crawl_rss()
     if major_data or indie_data:
         new_added = save_to_json(major_data, indie_data)

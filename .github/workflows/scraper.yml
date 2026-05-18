@@ -32,6 +32,7 @@ jobs:
       - name: Run Crawler
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          SITE_BASE_URL: https://stage-is.com
         run: python crawler.py
 
       - name: Commit and Push changes
@@ -39,18 +40,25 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
           
-          # Check if there are any changes (e.g. articles_list.json was updated)
-          if git diff --quiet data/articles_list.json; then
-            echo "No new articles found. Skipping commit."
-          else
-            git add data/articles_list.json data/articles/*.json sitemap.xml
-            
+          # Bump cache only when public article data changed.
+          if ! git diff --quiet data/articles_list.json; then
             # Use timestamp to force CSS cache busting on daily updates
             NEW_VERSION=$(date +"%Y%m%d%H%M")
             sed -i "s/?v=[0-9a-zA-Z]*/?v=$NEW_VERSION/g" index.html
             sed -i "s/?v=[0-9a-zA-Z]*/?v=$NEW_VERSION/g" article.html
             git add index.html article.html
-            
-            git commit -m "Automated update: crawler fetched new articles [skip ci]"
+          fi
+
+          git add data/articles_list.json data/articles/*.json sitemap.xml
+          [ -f data/failed_queue.json ] && git add data/failed_queue.json
+          [ -f data/cost_log.json ] && git add data/cost_log.json
+          if compgen -G "data/run_logs/*.json" > /dev/null; then
+            git add data/run_logs/*.json
+          fi
+
+          if git diff --cached --quiet; then
+            echo "No crawler or operational log changes. Skipping commit."
+          else
+            git commit -m "Operational crawler update [skip ci]"
             git push origin main
           fi
