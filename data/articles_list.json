@@ -1,5 +1,47 @@
 [
     {
+        "id": "whats-next-something-revealing",
+        "title": "What’s Next? Something Revealing!",
+        "title_kr": "앙코르의 환호 뒤에 숨은 우아한 중압감: '다음'을 향한 무대의 숙명",
+        "summary_kr": "막이 내리는 순간 시작되는 다음 시즌에 대한 갈망과, 고교 연극 현장의 치열한 예술적 고뇌를 통해 본 공연 예술의 연속성을 조명합니다.",
+        "date": "Mon, 18 May 2026 19:55:40 +0000",
+        "image": "https://www.americantheatre.org/wp-content/uploads/Screenshot-2026-05-18-at-11.36.19-AM.png",
+        "tier": "indie",
+        "source": "American Theatre",
+        "link": "https://www.americantheatre.org/2026/05/18/whats-next-something-revealing/",
+        "why_it_matters_kr": "작품의 성공이 끝이 아니라 새로운 시작의 압박으로 이어지는 예술계의 생리를 통해 창작자의 책임감을 되새기게 합니다.",
+        "editorial_category": "voices",
+        "editorial_category_label": "Voices",
+        "context_kr": "미국 고교 연극계의 권위 있는 '지미 어워즈(Jimmy Awards)' 시즌과 맞물려, 차기작 발표가 하나의 거대한 이벤트가 된 현지 문화를 배경으로 합니다.",
+        "korean_reader_note_kr": "한국의 입시 위주 연극 교육과 달리, 축제이자 지역 사회의 이벤트로 기능하는 미국 학교 연극의 역동적인 에너지를 느껴보시기 바랍니다.",
+        "signal_keywords": [
+            "시즌 발표의 이벤트화",
+            "예술 교육자의 번아웃",
+            "커뮤니티와 무대의 유대"
+        ]
+    },
+    {
+        "id": "cannes-2026-movies-sold-so-far-netflix-buys-critics-week-animated-feature-in-waves",
+        "title": "Cannes 2026 Movies Sold So Far: Netflix Buys Critics Week Animated Feature ‘In Waves’",
+        "title_kr": "파도의 리듬으로 쓴 상실의 시학: 칸 2026, 넷플릭스와 A24가 포착한 ‘감정의 파고’",
+        "summary_kr": "칸 영화제의 화려한 레드카펫 이면에서 펼쳐진 치열한 구매 경쟁 속, 넷플릭스와 A24는 단순한 오락을 넘어선 인간의 실존적 고뇌와 위트를 담은 서사를 선택했습니다.",
+        "date": "Tue, 19 May 2026 00:50:16 +0000",
+        "image": "https://www.indiewire.com/wp-content/uploads/2026/05/IN-WAVES_-photo-01-PRINCIPALE-┬-Silex-Films-2026.jpg?w=650",
+        "tier": "major",
+        "source": "IndieWire",
+        "link": "https://www.indiewire.com/news/festivals/cannes-2026-movies-sold-so-far-paper-tiger-minotaur-1235191174/",
+        "why_it_matters_kr": "글로벌 거대 자본이 선택한 작품들의 면면을 통해 현재 세계가 갈망하는 위로와 웃음의 본질이 무엇인지 가늠해 볼 수 있습니다.",
+        "editorial_category": "industry",
+        "editorial_category_label": "Industry",
+        "context_kr": "전통적으로 칸의 마켓은 예술적 가치와 상업적 잠재력이 충돌하고 화해하는 장입니다. 올해는 넷플릭스와 A24라는 두 거대 플레이어가 각각 서정적인 애니메이션과 날카로운 코미디를 선점하며 시장의 방향성을 제시했습니다.",
+        "korean_reader_note_kr": "한국 관객들이 '기생충' 이후 칸의 선택에 민감하게 반응하듯, 이번에 매각된 작품들은 향후 국내 OTT와 극장가에서 '예술적 취향의 기준점'이 될 가능성이 높습니다.",
+        "signal_keywords": [
+            "그래픽 노블의 시각적 확장",
+            "코미디를 통한 비극적 실존의 탐구",
+            "스트리밍 거물들의 예술 영화 선점"
+        ]
+    },
+    {
         "id": "jim-queen-review-raunchy-animated-movie-about-a-disease-that-turns-gay-men-heterosexual-plays-straight-to-its-core-audience",
         "title": "‘Jim Queen’ Review: Raunchy Animated Movie About a Disease That Turns Gay Men Heterosexual Plays Straight to Its Core Audience",
         "title_kr": "정체성의 전복, '이성애'라는 역병이 선사하는 발칙한 거울 치료: <짐 퀸(Jim Queen)>론",
@@ -1668,40 +1710,6 @@
         "why_it_matters_kr": "상업적 성공이라는 이름 아래 '보편성' 뒤로 숨으려는 픽사의 행보를 통해, 예술의 진정성과 개인적 서사가 지닌 연극적 힘의 가치를 심층적으로 고찰합니다.",
         "signal_keywords": [
             "Cultural Signal"
-        ]
-    },
-    {
-        "id": "theatre-philadelphia-announces-9th-annual-philly-theatre-week",
-        "title": "Theatre Philadelphia Announces 9th Annual Philly Theatre Week",
-        "title_kr": "필라델피아의 봄, 무대라는 캔버스 위에 그려지는 10일간의 파노라마",
-        "summary_kr": "아홉 번째를 맞이한 ‘필리 씨어터 위크’가 예술의 문턱을 낮추고 도시 전체를 연극적 영감으로 물들입니다. 다넬 래드포드의 새로운 리더십과 함께 펼쳐지는 이번 축제는 연극이 어떻게 지역사회의 심장박동이 되는지 여실히 보여줍니다.",
-        "date": "Thu, 12 Mar 2026 15:13:36 +0000",
-        "image": "https://www.americantheatre.org/wp-content/uploads/Good-Bones-1024x683.webp",
-        "tier": "indie",
-        "source": "American Theatre",
-        "link": "https://www.americantheatre.org/2026/03/12/theatre-philadelphia-announces-9th-annual-philly-theatre-week/",
-        "editorial_category": "industry",
-        "editorial_category_label": "Industry",
-        "why_it_matters_kr": "아홉 번째를 맞이한 ‘필리 씨어터 위크’가 예술의 문턱을 낮추고 도시 전체를 연극적 영감으로 물들입니다. 다넬 래드포드의 새로운 리더십과 함께 펼쳐지는 이번 축제는 연극이 어떻게 지역사회의 심장박동이 되는지 여실히 보여줍니다.",
-        "signal_keywords": [
-            "Industry"
-        ]
-    },
-    {
-        "id": "i-love-boosters-review-boots-rileys-crazy-fashion-heist-comedy-is-both-stoner-movie-and-anticapitalist-protest-art",
-        "title": "‘I Love Boosters’ Review: Boots Riley’s Crazy Fashion Heist Comedy Is Both Stoner Movie and Anti-Capitalist Protest Art",
-        "title_kr": "[Stage-Is] 기울어진 세계에서 쏘아 올린 패션의 해방구: 부츠 라일리의 ‘아이 러브 부스터스’",
-        "summary_kr": "초현실주의적 미학과 자본주의 비판이 뒤섞인 부츠 라일리의 기묘한 패션 헤이스트물, 그 이면에 숨겨진 현대 예술의 저항적 리듬을 탐구합니다.",
-        "date": "Fri, 13 Mar 2026 00:00:00 +0000",
-        "image": "https://www.indiewire.com/wp-content/uploads/2026/01/MCDILOV_EC191_25a5f1.jpg?w=650",
-        "tier": "major",
-        "source": "IndieWire",
-        "link": "https://www.indiewire.com/criticism/movies/i-love-boosters-review-boots-riley-1235183563/",
-        "editorial_category": "stage_to_screen",
-        "editorial_category_label": "Stage to Screen",
-        "why_it_matters_kr": "초현실주의적 미학과 자본주의 비판이 뒤섞인 부츠 라일리의 기묘한 패션 헤이스트물, 그 이면에 숨겨진 현대 예술의 저항적 리듬을 탐구합니다.",
-        "signal_keywords": [
-            "Stage to Screen"
         ]
     }
 ]
