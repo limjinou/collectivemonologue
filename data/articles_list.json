@@ -1,5 +1,43 @@
 [
     {
+        "id": "carolina-performing-arts-announces-new-festival",
+        "title": "Carolina Performing Arts Announces New Festival",
+        "title_kr": "Carolina Performing Arts Announces New Festival",
+        "summary_kr": "AI 모델 일시적 과부하로 정보를 불러오지 못했습니다.",
+        "date": "Wed, 20 May 2026 18:44:08 +0000",
+        "image": "https://www.americantheatre.org/wp-content/uploads/IMG_4968-1024x576.gif",
+        "tier": "indie",
+        "source": "American Theatre",
+        "link": "https://www.americantheatre.org/2026/05/20/carolina-performing-arts-announces-new-festival/",
+        "why_it_matters_kr": "",
+        "editorial_category": "cultural_signal",
+        "editorial_category_label": "Cultural Signal",
+        "context_kr": "",
+        "korean_reader_note_kr": "",
+        "signal_keywords": []
+    },
+    {
+        "id": "watch-four-of-the-most-important-film-festival-directors-discuss-the-future-of-the-circuit-at-cannes",
+        "title": "Watch Four of the Most Important Film Festival Directors Discuss the Future of the Circuit at Cannes",
+        "title_kr": "스크린을 넘어 광장으로: 칸에서 포착한 '극장'의 회복력과 공동체의 미래",
+        "summary_kr": "세계 최고 권위의 영화제 수장들이 칸에 모여 나눈 대담을 통해, 알고리즘 시대에 인간적 '큐레이션'과 물리적 '공간'이 지니는 대체 불가능한 예술적 가치를 조명하고 공연 예술과의 미학적 연대를 모색합니다.",
+        "date": "Wed, 20 May 2026 23:30:00 +0000",
+        "image": "https://www.indiewire.com/wp-content/uploads/2026/05/DSC_8452.jpg?w=650",
+        "tier": "major",
+        "source": "IndieWire",
+        "link": "https://www.indiewire.com/news/events/film-festival-directors-discuss-future-cannes-1235195002/",
+        "why_it_matters_kr": "스마트폰과 OTT 플랫폼의 범람 속에서 왜 젊은 관객들이 다시 오프라인 축제와 물리적 극장 공간으로 발걸음을 옮기고 있는지 그 본질적 원동력을 짚어내기 때문입니다.",
+        "editorial_category": "cultural_signal",
+        "editorial_category_label": "Cultural Signal",
+        "context_kr": "선댄스, 베를린, 텔루라이드, 뉴욕 영화제를 이끄는 거장들이 칸 영화제에서 모여 독립 예술 영화와 오프라인 플랫폼의 생존 전략을 논의한 역사적인 패널 토론을 배경으로 합니다.",
+        "korean_reader_note_kr": "한국의 전주국제영화제나 부산국제영화제, 혹은 대학로의 소극장 운동이 겪고 있는 관객 세대교체 흐름과 맞물려, '물리적 공간의 연대'가 지닌 힘을 한국적 맥락에서 되짚어보게 합니다.",
+        "signal_keywords": [
+            "알고리즘에서 큐레이션으로의 회귀",
+            "물리적 공간의 의례(Ritual)성",
+            "Z세대의 오프라인 예술 소비 비상"
+        ]
+    },
+    {
         "id": "clockwork-is-cooking-wb-specialized-division-acquires-park-chanwooks-next-film-with-matthew-mcconaughey-austin-butler-and-pedro-pascal",
         "title": "Clockwork Is Cooking: WB Specialized Division Acquires Park Chan-wook’s Next Film with Matthew McConaughey, Austin Butler, and Pedro Pascal",
         "title_kr": "황야의 무대 위로 번지는 피와 광기: 박찬욱과 클락워크가 빚어낼 새로운 서부극의 연극성",
@@ -1680,40 +1718,6 @@
         "why_it_matters_kr": "거대 IP와 실화의 변주를 넘어, 자신의 뿌리인 '델타 블루스'와 장르적 상상력을 결합해 '오리지널리티'의 정점에 선 라이언 쿠글러의 예술적 승리를 조명한다.",
         "signal_keywords": [
             "Stage to Screen"
-        ]
-    },
-    {
-        "id": "meet-the-punkrock-projectionist-showing-his-own-films-in-a-tiny-theater-on-wheels",
-        "title": "Meet the Punk-Rock Projectionist Showing His Own Films in a Tiny Theater on Wheels",
-        "title_kr": "0.5평의 트레일러가 실어 나르는 거대한 은막: 데이비 B. 그레이비의 마법적 리얼리즘",
-        "summary_kr": "LA 실버 레이크의 밤거리를 밝히는 네 좌석의 태양광 영화관, 본질만 남긴 이 최소주의 극장이 현대 예술에 던지는 묵직한 질문을 탐색합니다.",
-        "date": "Sat, 14 Mar 2026 19:00:00 +0000",
-        "image": "https://www.indiewire.com/wp-content/uploads/2026/03/ka_riley_00015.jpg?w=650",
-        "tier": "major",
-        "source": "IndieWire",
-        "link": "https://www.indiewire.com/features/interviews/meet-davey-b-gravey-film-projectionist-tiny-cinema-1235178475/",
-        "editorial_category": "industry",
-        "editorial_category_label": "Industry",
-        "why_it_matters_kr": "LA 실버 레이크의 밤거리를 밝히는 네 좌석의 태양광 영화관, 본질만 남긴 이 최소주의 극장이 현대 예술에 던지는 묵직한 질문을 탐색합니다.",
-        "signal_keywords": [
-            "Industry"
-        ]
-    },
-    {
-        "id": "gonna-sing-it-again-the-art-of-musicianactors-in-hades-and-above",
-        "title": "Gonna Sing It Again: The Art of Musician-Actors, in Hades and Above",
-        "title_kr": "지옥도에서 피어난 현의 울림: 뮤지션-배우가 선사하는 무대 위의 즉각성",
-        "summary_kr": "악기를 든 배우들이 무대 위로 올라올 때, 정형화된 뮤지컬은 비로소 살아 숨 쉬는 음악적 맥박을 되찾습니다. 레이첼 챠브킨이 그려내는 '밴드-지컬(Bands-icals)'의 미학을 탐구합니다.",
-        "date": "Fri, 13 Mar 2026 11:14:40 +0000",
-        "image": "https://www.americantheatre.org/wp-content/uploads/gaby-moreno_hadestown2.jpg",
-        "tier": "indie",
-        "source": "American Theatre",
-        "link": "https://www.americantheatre.org/2026/03/13/gonna-sing-it-again-the-art-of-musician-actors-in-hades-and-above/",
-        "editorial_category": "voices",
-        "editorial_category_label": "Voices",
-        "why_it_matters_kr": "악기를 든 배우들이 무대 위로 올라올 때, 정형화된 뮤지컬은 비로소 살아 숨 쉬는 음악적 맥박을 되찾습니다. 레이첼 챠브킨이 그려내는 '밴드-지컬(Bands-icals)'의 미학을 탐구합니다.",
-        "signal_keywords": [
-            "Voices"
         ]
     }
 ]
