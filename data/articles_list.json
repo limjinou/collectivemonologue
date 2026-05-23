@@ -1,5 +1,47 @@
 [
     {
+        "id": "native-theatre-movement-launches-with-open-letter",
+        "title": "Native Theatre Movement Launches With Open Letter",
+        "title_kr": "불이 꺼진 뒤의 공허한 선언을 넘어: '네이티브 시어터 무브먼트'가 던진 정직한 질문",
+        "summary_kr": "미국 극장가에서 유행처럼 번진 형식적인 '토지 영토 인정 선언'의 모순을 꼬집으며, 원주민 예술가들의 실질적인 참여와 주체성을 요구하는 '네이티브 시어터 무브먼트(NTM)'의 출범과 그들의 뜨거운 외침을 다룹니다.",
+        "date": "Fri, 22 May 2026 14:38:26 +0000",
+        "image": "https://www.americantheatre.org/wp-content/uploads/native-theatre-movement-letter-banner.jpg",
+        "tier": "indie",
+        "source": "American Theatre",
+        "link": "https://www.americantheatre.org/2026/05/22/native-theatre-movement-launches-with-open-letter/",
+        "why_it_matters_kr": "예술계가 외치는 '올바름의 선언(Statement)'이 어떻게 허구적 제스처를 넘어 실질적인 '실천(Action)'으로 전환되어야 하는지, 그 준엄한 이정표를 제시하기 때문입니다.",
+        "editorial_category": "voices",
+        "editorial_category_label": "Voices",
+        "context_kr": "미국 극장가에서는 공연 시작 전 해당 극장이 위치한 땅의 원래 주인인 원주민 부족을 기리는 '토지 승인 선언(Land Acknowledgment)'을 낭독하는 것이 관례화되어 있으나, 정작 라인업에서는 원주민 창작자들의 작품을 찾아보기 힘들다는 모순이 지속되어 왔습니다.",
+        "korean_reader_note_kr": "우리 아동/청소년극, 장애인 연극, 혹은 지역 연극을 대하는 한국 연극계 또한 일회성 '다양성 체크박스 채우기'식의 기획에 머물러 있지는 않은지 성찰하게 만드는 거울 같은 기사입니다.",
+        "signal_keywords": [
+            "수행적 연대(Performative Allyship)의 종말",
+            "무대의 탈식민주의(Decolonizing the Stage)",
+            "제스처를 넘어선 실천"
+        ]
+    },
+    {
+        "id": "the-birthday-party-review-a-dazzlingly-melancholy-monica-bellucci-powers-léa-mysius-predictable-but-superbly-directed-home-invasion-thriller",
+        "title": "‘The Birthday Party’ Review: A Dazzlingly Melancholy Monica Bellucci Powers Léa Mysius’ Predictable but Superbly Directed Home Invasion Thriller",
+        "title_kr": "폐쇄된 무대 위의 침입자들, 그리고 모니카 벨루치의 찬란한 우울",
+        "summary_kr": "레아 미시우스 감독의 신작 <더 버스데이 파티>는 친숙한 홈 인베이전 스릴러의 문법 속에서도, 밀도 높은 연극적 긴장감과 모니카 벨루치의 압도적인 페르소나를 통해 인간 내면의 연약한 심연을 무대화합니다.",
+        "date": "Fri, 22 May 2026 23:21:33 +0000",
+        "image": "https://www.indiewire.com/wp-content/uploads/2026/05/Screenshot-2026-05-09-at-10.04.30 PM.png?w=650",
+        "tier": "major",
+        "source": "IndieWire",
+        "link": "https://www.indiewire.com/criticism/movies/the-birthday-party-review-lea-mysius-1235195813/",
+        "why_it_matters_kr": "한정된 공간이 자아내는 압도적인 미장센과 배우의 신체적 존재감이 어떻게 평범한 플롯을 격조 높은 극예술로 끌어올리는지 보여주는 정교한 사례이기 때문입니다.",
+        "editorial_category": "stage_to_screen",
+        "editorial_category_label": "Stage to Screen",
+        "context_kr": "프랑스의 저명한 소설가 로랑 모비니에의 동명 소설을 원작으로 한 이 작품은, <아바>와 <다섯 개의 악마>로 감각적 연출력을 인정받은 레아 미시우스 감독의 세 번째 장편 영화입니다.",
+        "korean_reader_note_kr": "한국 관객들에게 친숙한 연극 <포쉬>나 밀실 스릴러의 긴장감을 떠올리며, 무대 위 배치된 일상적인 오브제들이 어떻게 인물들의 심리적 목을 죄어오는 전조로 기능하는지 분석해 보시길 권합니다.",
+        "signal_keywords": [
+            "연극적 밀실 공포(Kammerspiel)",
+            "일상의 불안화(Defamiliarization)",
+            "침묵의 미학"
+        ]
+    },
+    {
         "id": "václav-havel-would-want-us-to-fightand-hope",
         "title": "Václav Havel Would Want Us to Fight—and Hope",
         "title_kr": "절망의 무대 위에서 피어나는 집요한 동반자, 바츨라프 하벨이 남긴 '영혼의 정방향'",
@@ -1690,40 +1732,6 @@
         "editorial_category": "cultural_signal",
         "editorial_category_label": "Cultural Signal",
         "why_it_matters_kr": "데이터와 알고리즘이 예술적 성취의 '가격'을 매기는 시대, 핀테크가 침공한 오스카 무대 이면의 서늘한 통찰과 인간적 진실을 탐구합니다.",
-        "signal_keywords": [
-            "Cultural Signal"
-        ]
-    },
-    {
-        "id": "don-nigros-prolific-imagination",
-        "title": "Don Nigro’s Prolific Imagination",
-        "title_kr": "다작(多作)의 숲에서 길어 올린 거대한 우주: 돈 니그로의 멈추지 않는 상상력",
-        "summary_kr": "무명(無名)의 상자 속에서 발견된 25권의 희곡, 현대 연극사의 가장 경이로운 수수께끼인 돈 니그로의 예술적 궤적을 추적합니다.",
-        "date": "Tue, 17 Mar 2026 14:19:34 +0000",
-        "image": "https://www.americantheatre.org/wp-includes/images/media/default.svg",
-        "tier": "indie",
-        "source": "American Theatre",
-        "link": "https://www.americantheatre.org/2026/03/17/don-nigros-prolific-imagination/",
-        "editorial_category": "cultural_signal",
-        "editorial_category_label": "Cultural Signal",
-        "why_it_matters_kr": "무명(無名)의 상자 속에서 발견된 25권의 희곡, 현대 연극사의 가장 경이로운 수수께끼인 돈 니그로의 예술적 궤적을 추적합니다.",
-        "signal_keywords": [
-            "Cultural Signal"
-        ]
-    },
-    {
-        "id": "oscars-2026-ratings-fall-9-percent-to-179-million-viewers-lowest-since-2022",
-        "title": "Oscars 2026 Ratings Fall 9 Percent to 17.9 Million Viewers, Lowest Since 2022",
-        "title_kr": "숫자가 담지 못한 무대의 여운, 2026 오스카가 마주한 거울",
-        "summary_kr": "전통적 시상식의 권위가 디지털 시대의 파도 속에서 변곡점을 맞이한 지금, 2026 오스카 시청률 하락이 시사하는 예술적 가치와 대중의 거리감을 심층 분석합니다.",
-        "date": "Tue, 17 Mar 2026 23:52:54 +0000",
-        "image": "https://www.indiewire.com/wp-content/uploads/2026/03/Oscars-2026-Conan-OBrien-Sterlking-K-Brown.jpg?w=650",
-        "tier": "major",
-        "source": "IndieWire",
-        "link": "https://www.indiewire.com/news/breaking-news/oscars-2026-ratings-fall-9-percent-lowest-since-2022-1235184819/",
-        "editorial_category": "cultural_signal",
-        "editorial_category_label": "Cultural Signal",
-        "why_it_matters_kr": "전통적 시상식의 권위가 디지털 시대의 파도 속에서 변곡점을 맞이한 지금, 2026 오스카 시청률 하락이 시사하는 예술적 가치와 대중의 거리감을 심층 분석합니다.",
         "signal_keywords": [
             "Cultural Signal"
         ]
