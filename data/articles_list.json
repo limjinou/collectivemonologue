@@ -1,5 +1,26 @@
 [
     {
+        "id": "the-cannes-awards-reveal-likely-2027-oscar-contenders",
+        "title": "The Cannes Awards Reveal Likely 2027 Oscar Contenders",
+        "title_kr": "스크린에 불어오는 뜨거운 연극적 숨결: 2027 오스카를 예고하는 칸의 침묵과 외침",
+        "summary_kr": "할리우드 대작의 공백 속에서 인간의 날 선 감정과 정치적 본질을 극대화한 비영어권 영화들이 칸을 휩쓸며, 향후 아카데미 시상식의 흐름을 바꿀 거대한 지각변동을 예고합니다.",
+        "date": "Sat, 23 May 2026 21:31:07 +0000",
+        "image": "https://www.indiewire.com/wp-content/uploads/2026/05/GettyImages-2277872993.jpg?w=650",
+        "tier": "major",
+        "source": "IndieWire",
+        "link": "https://www.indiewire.com/awards/industry/cannes-award-winners-reveal-2027-oscar-contenders-1235196043/",
+        "why_it_matters_kr": "화려한 볼거리 대신 무대 위 독백처럼 깊은 정서적 울림을 주는 작품들이 세계 영화계의 중심에 서는 지금, 우리의 심미안도 새로워져야 하기 때문입니다.",
+        "editorial_category": "cultural_signal",
+        "editorial_category_label": "Cultural Signal",
+        "context_kr": "칸 영화제 집행위원장 티에리 프레모의 고뇌 속에서, 할리우드 스튜디오 영화들이 불참한 빈자리를 유럽 및 비영어권 예술 영화의 거장들이 깊은 감정적 텍스트로 채워낸 배경을 다룹니다.",
+        "korean_reader_note_kr": "봉준호의 <기생충> 이후 비영어권 영화에 대한 세계적 감각이 열린 한국 관객들에게, 이번 칸의 선택은 연극적 정서와 텍스트의 힘이 어떻게 세계 스크린을 지배하는지 보여주는 흥미로운 지표가 될 것입니다.",
+        "signal_keywords": [
+            "비영어권 시네마의 영토 확장",
+            "연극적 텍스트의 귀환",
+            "감정적 앙상블의 승리"
+        ]
+    },
+    {
         "id": "native-theatre-movement-launches-with-open-letter",
         "title": "Native Theatre Movement Launches With Open Letter",
         "title_kr": "불이 꺼진 뒤의 공허한 선언을 넘어: '네이티브 시어터 무브먼트'가 던진 정직한 질문",
@@ -1717,23 +1738,6 @@
         "why_it_matters_kr": "피츠버그를 대표하는 두 연극적 기둥인 CLO와 퍼블릭 시어터가 단일 조직으로의 통합을 선언하며, 북미 공연 예술계에 새로운 공생의 모델을 제시합니다.",
         "signal_keywords": [
             "Industry"
-        ]
-    },
-    {
-        "id": "prediction-markets-claimed-an-oscar-victory-the-reality-was-messier",
-        "title": "Prediction Markets Claimed an Oscar Victory. The Reality Was Messier.",
-        "title_kr": "예술의 영혼을 숫자로 저울질하는 시대: 오스카와 예측 시장의 기묘한 동거",
-        "summary_kr": "데이터와 알고리즘이 예술적 성취의 '가격'을 매기는 시대, 핀테크가 침공한 오스카 무대 이면의 서늘한 통찰과 인간적 진실을 탐구합니다.",
-        "date": "Wed, 18 Mar 2026 23:54:38 +0000",
-        "image": "https://www.indiewire.com/wp-content/uploads/2026/03/GettyImages-2264301577.jpg?w=650",
-        "tier": "major",
-        "source": "IndieWire",
-        "link": "https://www.indiewire.com/features/commentary/oscars-prediction-markets-kalshi-accurate-1235184957/",
-        "editorial_category": "cultural_signal",
-        "editorial_category_label": "Cultural Signal",
-        "why_it_matters_kr": "데이터와 알고리즘이 예술적 성취의 '가격'을 매기는 시대, 핀테크가 침공한 오스카 무대 이면의 서늘한 통찰과 인간적 진실을 탐구합니다.",
-        "signal_keywords": [
-            "Cultural Signal"
         ]
     }
 ]
