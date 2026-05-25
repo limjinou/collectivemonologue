@@ -1,5 +1,26 @@
 [
     {
+        "id": "clint-eastwood-gave-luke-grimes-his-big-break--with-marshals-the-actor-pays-tribute-to-eastwoods-unforgiven",
+        "title": "Clint Eastwood Gave Luke Grimes His Big Break — with ‘Marshals,’ the Actor Pays Tribute to Eastwood’s ‘Unforgiven’",
+        "title_kr": "등 뒤로 흐르는 서부의 비극: 클린트 이스트우드가 품고 룩 그라임스가 이어받은 ‘용서받지 못한 자’의 묵직한 그림자",
+        "summary_kr": "배우 룩 그라임스가 신작 <마샬즈>의 포스터를 통해 거장 클린트 이스트우드의 걸작 <용서받지 못한 자>에 헌사를 보낸 배경을 짚어보며, 한 명의 거장이 심어놓은 연기적 유산이 어떻게 한 배우의 연대기를 관통하며 폭력의 비극을 연기하는 자양분이 되었는지를 조명합니다.",
+        "date": "Mon, 25 May 2026 01:00:00 +0000",
+        "image": "https://www.indiewire.com/wp-content/uploads/2026/05/GettyImages-2263405503.jpg?w=650",
+        "tier": "major",
+        "source": "IndieWire",
+        "link": "https://www.indiewire.com/features/interviews/luke-grimes-marshals-interview-clint-eastwood-1235194701/",
+        "why_it_matters_kr": "단순한 비주얼적 오마주를 넘어, 영웅주의가 해체된 시대의 비극적 아키타입(원형)이 세대를 건너 예술가들에게 어떻게 전수되고 확장되는지 보여주는 흥미로운 지표입니다.",
+        "editorial_category": "stage_to_screen",
+        "editorial_category_label": "Stage to Screen",
+        "context_kr": "테일러 쉐리던의 서부 극화 <옐로우스톤> 시리즈와 그 스핀오프 <마샬즈>의 핵심 인물 케이시 더튼(룩 그라임스 분)이 지닌 고뇌는, 서부극의 신화를 전복시켰던 클린트 이스트우드의 명작 <용서받지 못한 자>의 윌리엄 머니와 정서적으로 깊이 맞닿아 있습니다.",
+        "korean_reader_note_kr": "한국 관객에게 익숙한 영화 <달콤한 인생>의 '되돌아갈 수 없는 길'이나 한국 정통 사극 속 은퇴한 무사의 고뇌처럼, '돌이킬 수 없는 과거를 짊어진 남자의 등'이 선사하는 연극적 침묵과 미장센의 미학을 음미할 수 있는 기사입니다.",
+        "signal_keywords": [
+            "영웅주의의 해체",
+            "비극적 미장센",
+            "세대 간의 예술적 상속"
+        ]
+    },
+    {
         "id": "the-cannes-awards-reveal-likely-2027-oscar-contenders",
         "title": "The Cannes Awards Reveal Likely 2027 Oscar Contenders",
         "title_kr": "스크린에 불어오는 뜨거운 연극적 숨결: 2027 오스카를 예고하는 칸의 침묵과 외침",
@@ -1721,23 +1742,6 @@
         "why_it_matters_kr": "가장 잔혹한 공포는 날카로운 칼날이 아닌, 정교하게 설계된 언어의 그물망에서 시작됩니다. 14인의 배우가 빚어낸 밀도 높은 앙상블의 막전막후를 들여다봅니다.",
         "signal_keywords": [
             "Cultural Signal"
-        ]
-    },
-    {
-        "id": "2-pittsburgh-theatres-formalize-merger",
-        "title": "2 Pittsburgh Theatres Formalize Merger",
-        "title_kr": "피츠버그, 두 거물급 극단의 조우: 전통이라는 토양 위에 피어날 '새로운 무대'",
-        "summary_kr": "피츠버그를 대표하는 두 연극적 기둥인 CLO와 퍼블릭 시어터가 단일 조직으로의 통합을 선언하며, 북미 공연 예술계에 새로운 공생의 모델을 제시합니다.",
-        "date": "Wed, 18 Mar 2026 17:05:18 +0000",
-        "image": "https://www.americantheatre.org/wp-content/uploads/Cast-of-PPTs-An-Enemy-of-the-People-2-1024x682.webp",
-        "tier": "indie",
-        "source": "American Theatre",
-        "link": "https://www.americantheatre.org/2026/03/18/2-pittsburgh-theatres-formalize-merger/",
-        "editorial_category": "industry",
-        "editorial_category_label": "Industry",
-        "why_it_matters_kr": "피츠버그를 대표하는 두 연극적 기둥인 CLO와 퍼블릭 시어터가 단일 조직으로의 통합을 선언하며, 북미 공연 예술계에 새로운 공생의 모델을 제시합니다.",
-        "signal_keywords": [
-            "Industry"
         ]
     }
 ]
