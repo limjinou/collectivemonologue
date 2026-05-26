@@ -1,5 +1,26 @@
 [
     {
+        "id": "the-18-best-movies-we-saw-at-the-2026-cannes-film-festival",
+        "title": "The 18 Best Movies We Saw at the 2026 Cannes Film Festival",
+        "title_kr": "스크린 위로 흐르는 연극적 숨결: 2026 칸 영화제가 남긴 예술적 잔향",
+        "summary_kr": "영화적 리얼리즘의 극단에서 아방가르드 연극의 숨결을 발견하다. 2026년 칸 영화제를 뒤흔든 마스터피스들을 통해 현대 스크린 예술이 연극적 문법을 흡수하고 변주하는 방식을 심도 있게 조명합니다.",
+        "date": "Mon, 25 May 2026 23:06:18 +0000",
+        "image": "https://www.indiewire.com/wp-content/uploads/2026/05/P106EXYA.jpg?w=650",
+        "tier": "major",
+        "source": "IndieWire",
+        "link": "https://www.indiewire.com/features/best-of/cannes-film-festival-2026-best-movies-1235196248/",
+        "why_it_matters_kr": "영화와 무대의 경계가 무너지는 통섭의 시대, 세계 최고 권위의 칸 영화제 수상작들이 던지는 동시대적 질문에 귀를 기울여야 할 때입니다.",
+        "editorial_category": "stage_to_screen",
+        "editorial_category_label": "Stage to Screen",
+        "context_kr": "하마구치 류스케 감독의 '올 오브 어 서든(All of a Sudden)'을 비롯해 2026년 칸 영화제에서 주목받은 작품들은 아방가르드 연극 연출안과 다큐멘터리적 대화 방식을 적극 차용하며 영상 예술의 지평을 넓히고 있습니다.",
+        "korean_reader_note_kr": "하마구치 감독의 전작 '드라이브 마이 카'가 연극 '바냐 아저씨'를 매개로 상실을 치유했듯, 이번 칸의 문제작들 역시 무대 예술의 현장성과 치유의 미학을 영화적 언어로 재해석해 냅니다. 한국의 연극 및 영화 관객들에게 깊은 영감을 줄 것입니다.",
+        "signal_keywords": [
+            "연극적 문법의 스크린 전이",
+            "고통 속의 연대와 치유",
+            "아방가르드 무대 예술의 영화화"
+        ]
+    },
+    {
         "id": "clint-eastwood-gave-luke-grimes-his-big-break--with-marshals-the-actor-pays-tribute-to-eastwoods-unforgiven",
         "title": "Clint Eastwood Gave Luke Grimes His Big Break — with ‘Marshals,’ the Actor Pays Tribute to Eastwood’s ‘Unforgiven’",
         "title_kr": "등 뒤로 흐르는 서부의 비극: 클린트 이스트우드가 품고 룩 그라임스가 이어받은 ‘용서받지 못한 자’의 묵직한 그림자",
@@ -1725,23 +1746,6 @@
         "why_it_matters_kr": "무대 위 언어의 연금술사 손다임이 남긴 유산이 창작자들의 내면적 고통을 어루만지는 클리닉과 예술 단체 지원으로 구체화되며, 브로드웨이의 지속 가능한 미래를 예고합니다.",
         "signal_keywords": [
             "Industry"
-        ]
-    },
-    {
-        "id": "the-hardest-scene-to-craft-in-ready-or-not-2-here-i-come-didnt-involve-any-blood-at-all",
-        "title": "The Hardest Scene to Craft in ‘Ready or Not 2: Here I Come’ Didn’t Involve Any Blood at All",
-        "title_kr": "[에디토리얼] 비산하는 선혈보다 뜨거운 언어의 앙상블: '레디 오어 낫 2'의 보이지 않는 사투",
-        "summary_kr": "가장 잔혹한 공포는 날카로운 칼날이 아닌, 정교하게 설계된 언어의 그물망에서 시작됩니다. 14인의 배우가 빚어낸 밀도 높은 앙상블의 막전막후를 들여다봅니다.",
-        "date": "Thu, 19 Mar 2026 22:00:00 +0000",
-        "image": "https://www.indiewire.com/wp-content/uploads/2026/01/Ready-or-Not-2.png?w=650",
-        "tier": "major",
-        "source": "IndieWire",
-        "link": "https://www.indiewire.com/features/podcast/radio-silence-on-ready-or-not-2-here-i-come-1235183347/",
-        "editorial_category": "cultural_signal",
-        "editorial_category_label": "Cultural Signal",
-        "why_it_matters_kr": "가장 잔혹한 공포는 날카로운 칼날이 아닌, 정교하게 설계된 언어의 그물망에서 시작됩니다. 14인의 배우가 빚어낸 밀도 높은 앙상블의 막전막후를 들여다봅니다.",
-        "signal_keywords": [
-            "Cultural Signal"
         ]
     }
 ]
