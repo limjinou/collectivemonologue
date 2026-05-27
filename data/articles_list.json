@@ -1,5 +1,47 @@
 [
     {
+        "id": "black-swan-brings-the-music-and-the-mirror",
+        "title": "‘Black Swan’ Brings the Music and the Mirror",
+        "title_kr": "거울 너머의 심연이 노래가 될 때: 은막을 깨고 무대로 날아오른 <블랙 스완>",
+        "summary_kr": "대런 아로노프스키의 시네마틱 걸작 <블랙 스완>이 데이브 몰로이의 음악과 젠 실버맨의 대본을 통해 무대 위 심리 스릴러 뮤지컬로 재탄생한다. 영화적 특수효과를 넘어, 인간의 잠재의식을 흔드는 음악과 물리적 신체성으로 예술적 집착의 파멸을 연출해내는 창작진의 위대한 도전을 조명한다.",
+        "date": "Tue, 26 May 2026 12:00:20 +0000",
+        "image": "https://www.americantheatre.org/wp-content/uploads/06-AT.jpg",
+        "tier": "indie",
+        "source": "American Theatre",
+        "link": "https://www.americantheatre.org/2026/05/26/black-swan-brings-the-music-and-the-mirror/",
+        "why_it_matters_kr": "영화의 잔혹하고 정교한 시각적 스펙터클을 라이브 연극이라는 살아있는 유기체의 언어로 번역해내는 '무대화(Stage Adaptation)'의 가장 전위적인 전형을 제시하기 때문이다.",
+        "editorial_category": "stage_to_screen",
+        "editorial_category_label": "Stage to Screen",
+        "context_kr": "미국 연극계에서 가장 혁신적인 시도가 이루어지는 아메리칸 레퍼토리 시어터(ART)에서 펼쳐지는 신작으로, <그레이트 코멧>의 작곡가 데이브 몰로이와 안무가 소냐 타예 등 브로드웨이 최고의 모던 크리에이터들이 참여해 기대를 모으고 있다.",
+        "korean_reader_note_kr": "한국 관객들에게 <블랙 스완>은 나탈리 포트만의 압도적인 연기와 자아 분열의 스릴러로 익숙합니다. 스크린의 전유물이라 여겨졌던 심리적 기괴함을 라이브 무대 위 배우들의 호흡과 상징적인 음악으로 마주할 때, 우리가 느낄 예술적 전율의 크기를 미리 가늠해볼 수 있는 글입니다.",
+        "signal_keywords": [
+            "스크린의 연극적 등가물 찾기",
+            "음악을 통한 청각적 무의식 통제",
+            "예술적 집착과 신체성의 미학"
+        ]
+    },
+    {
+        "id": "pressure-review-brendan-frasers-general-eisenhower-drowns-in-dull-dday-weather-drama",
+        "title": "‘Pressure’ Review: Brendan Fraser’s General Eisenhower Drowns in Dull D-Day Weather Drama",
+        "title_kr": "날씨라는 보이지 않는 전쟁터, 연극적 긴장감이 스크린의 폭풍 속에서 길을 잃을 때",
+        "summary_kr": "무대 위의 정교한 지적 대결을 스크린으로 이식하는 과정에서 발생한 불협화음, 그리고 역사적 거인의 고뇌를 담아내기엔 다소 평평했던 야심작 '프레셔(Pressure)'에 대한 깊이 있는 미학적 성찰.",
+        "date": "Wed, 27 May 2026 00:40:00 +0000",
+        "image": "https://www.indiewire.com/wp-content/uploads/2026/05/MCDPRES_UC002.jpg?w=650",
+        "tier": "major",
+        "source": "IndieWire",
+        "link": "https://www.indiewire.com/criticism/movies/pressure-review-brendan-fraser-eisenhower-1235195324/",
+        "why_it_matters_kr": "연극 원작 영화(Stage-to-Screen)가 지닌 치밀한 말의 성찬이 어떻게 거대한 시각적 스펙터클 사이에서 그 특유의 밀도를 잃어버리는지 보여주는 뼈아픈 교사(敎師) 같은 작품입니다.",
+        "editorial_category": "stage_to_screen",
+        "editorial_category_label": "Stage to Screen",
+        "context_kr": "데이비드 헤이그의 2014년 동명 연극을 바탕으로 한 이 작품은 제2차 세계대전의 운명을 가른 노르망디 상륙작전 전야의 긴박한 기상 예측 과정을 다룹니다. 오스카 수상자인 브렌든 프레이저와 연기파 배우 앤드류 스콧의 만남으로 큰 기대를 모았습니다.",
+        "korean_reader_note_kr": "한국 관객들에게 '셜록'과 '플리백'으로 친숙한 앤드류 스콧의 예리한 연기와, 오스카 수상 이후 뜨거운 관심을 받는 브렌든 프레이저의 어긋난 변신을 비교하며, 무대 언어가 영상 언어로 번역될 때 발생하는 마찰력을 음미해 보시기 바랍니다.",
+        "signal_keywords": [
+            "웰메이드 연극의 스크린 이식법",
+            "역사적 실존 인물의 연극적 재해석",
+            "앙상블 캐스팅의 불협화음"
+        ]
+    },
+    {
         "id": "the-18-best-movies-we-saw-at-the-2026-cannes-film-festival",
         "title": "The 18 Best Movies We Saw at the 2026 Cannes Film Festival",
         "title_kr": "스크린 위로 흐르는 연극적 숨결: 2026 칸 영화제가 남긴 예술적 잔향",
@@ -1710,40 +1752,6 @@
         "editorial_category": "industry",
         "editorial_category_label": "Industry",
         "why_it_matters_kr": "전통의 토양 위에 새로운 감각을 덧입히는 연극계의 리더십 교체를 통해, 동시대 공연예술이 지향해야 할 공동체적 가치와 예술적 지속 가능성을 조명한다.",
-        "signal_keywords": [
-            "Industry"
-        ]
-    },
-    {
-        "id": "what-happens-when-new-allegations-change-a-documentary-after-it-premieres",
-        "title": "What Happens When New Allegations Change a Documentary After It Premieres?",
-        "title_kr": "영웅의 그림자가 무대를 덮칠 때: '루이스 발데스'의 다큐멘터리가 마주한 진실의 무게",
-        "summary_kr": "선댄스가 열광했던 치카노 연극의 전설 루이스 발데스의 기록이 세자르 차베스의 충격적인 성추문 폭로로 인해 거대한 윤리적 시험대에 올랐습니다.",
-        "date": "Sat, 21 Mar 2026 00:02:46 +0000",
-        "image": "https://www.indiewire.com/wp-content/uploads/2026/01/american-pachuco.jpg?w=650",
-        "tier": "major",
-        "source": "IndieWire",
-        "link": "https://www.indiewire.com/news/general-news/american-pachuco-filmmakers-respond-cesar-chavez-1235185486/",
-        "editorial_category": "cultural_signal",
-        "editorial_category_label": "Cultural Signal",
-        "why_it_matters_kr": "선댄스가 열광했던 치카노 연극의 전설 루이스 발데스의 기록이 세자르 차베스의 충격적인 성추문 폭로로 인해 거대한 윤리적 시험대에 올랐습니다.",
-        "signal_keywords": [
-            "Cultural Signal"
-        ]
-    },
-    {
-        "id": "sondheim-foundation-to-support-mental-health-clinic-and-arts-orgs",
-        "title": "Sondheim Foundation to Support Mental Health Clinic and Arts Orgs",
-        "title_kr": "스티븐 손다임의 마지막 변주곡: 예술가의 영혼을 지탱하는 '치유'의 유산",
-        "summary_kr": "무대 위 언어의 연금술사 손다임이 남긴 유산이 창작자들의 내면적 고통을 어루만지는 클리닉과 예술 단체 지원으로 구체화되며, 브로드웨이의 지속 가능한 미래를 예고합니다.",
-        "date": "Thu, 19 Mar 2026 18:00:00 +0000",
-        "image": "https://www.americantheatre.org/wp-content/uploads/sondheim-portrait.jpg",
-        "tier": "indie",
-        "source": "American Theatre",
-        "link": "https://www.americantheatre.org/2026/03/19/sondheim-foundation-to-support-mental-health-clinic-and-arts-institutions/",
-        "editorial_category": "industry",
-        "editorial_category_label": "Industry",
-        "why_it_matters_kr": "무대 위 언어의 연금술사 손다임이 남긴 유산이 창작자들의 내면적 고통을 어루만지는 클리닉과 예술 단체 지원으로 구체화되며, 브로드웨이의 지속 가능한 미래를 예고합니다.",
         "signal_keywords": [
             "Industry"
         ]
