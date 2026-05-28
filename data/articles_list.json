@@ -1,5 +1,47 @@
 [
     {
+        "id": "broadway-league-actors-equity-create-new-audition-initiative",
+        "title": "Broadway League, Actors’ Equity Create New Audition Initiative",
+        "title_kr": "작품이 아닌 인간을 먼저 발견하는 법: 브로드웨이 ‘LEAP’가 쏘아 올린 신뢰의 연대기",
+        "summary_kr": "브로드웨이 리그와 배우 조합이 특정 배역을 넘어서 창작자와 연기자가 장기적인 동반자적 관계를 맺을 수 있도록 돕는 혁신적인 파일럿 오디션 프로그램 'LEAP'를 공동 출범했습니다.",
+        "date": "Wed, 27 May 2026 15:56:03 +0000",
+        "image": "https://www.americantheatre.org/wp-content/uploads/Equity-Building-Audition-Room.jpg",
+        "tier": "indie",
+        "source": "American Theatre",
+        "link": "https://www.americantheatre.org/2026/05/27/broadway-league-actors-equity-create-new-audition-initiative/",
+        "why_it_matters_kr": "이 기사는 단순한 '고용'을 넘어 창작자와 배우가 장기적인 파트너로서 함께 작품의 뼈대를 만들어가는 성찰적 생태계로의 회귀를 보여줍니다.",
+        "editorial_category": "industry",
+        "editorial_category_label": "Industry",
+        "context_kr": "브로드웨이는 전통적으로 정식 공연에 앞서 다년간의 리딩과 워크숍을 통해 대본과 음악을 수정·발전시키는 '개발(Development)' 단계를 거치며, 이 과정에서 맺어진 배우와의 신뢰가 작품의 성패를 결정짓는 핵심 동력이 됩니다.",
+        "korean_reader_note_kr": "배우의 티켓 파워나 정형화된 이미지 위주로 빠르게 캐스팅이 이루어지는 한국 공연 시장에, 창작자와 배우가 정서적·예술적 깊이를 교감하며 인재를 선발하는 긴 호흡의 오디션 시스템이 왜 필요한지 묵직한 화두를 던집니다.",
+        "signal_keywords": [
+            "관계 기반 캐스팅의 부활",
+            "창작 개발 생태계의 민주화",
+            "제작사와 조합의 상생 모델"
+        ]
+    },
+    {
+        "id": "strung-director-malcolm-d-lee-talks-changes-since-the-last-time-he-opened-abff-with-girls-trip",
+        "title": "‘Strung’ Director Malcolm D. Lee Talks Changes Since the Last Time He Opened ABFF with ‘Girls Trip’",
+        "title_kr": "익숙한 환호의 광장을 벗어나, 팽팽한 심리의 현(絃)을 당기다: 말콤 D. 리의 예술적 전회(轉回)",
+        "summary_kr": "코미디의 거장 말콤 D. 리 감독이 아메리칸 블랙 영화제(ABFF)의 서른 번째 ‘홈커밍’ 무대에서 선보인 신작 <스트렁(Strung)>을 통해, 웃음의 미학을 넘어 인간 내면의 심연을 파고드는 스릴러로의 대담한 장르적 확장을 시도한다.",
+        "date": "Wed, 27 May 2026 22:30:00 +0000",
+        "image": "https://www.indiewire.com/wp-content/uploads/2026/05/696231904.jpg?w=650",
+        "tier": "major",
+        "source": "IndieWire",
+        "link": "https://www.indiewire.com/features/interviews/malcolm-d-lee-strung-interview-abff-girls-trip-1235196702/",
+        "why_it_matters_kr": "한 분야에서 정상에 오른 창작자가 자신의 안전지대(Comedy)를 벗어나 낯선 장르(Psychological Thriller)의 근육을 단련하는 과정은, 관습과 타성에 젖기 쉬운 한국 공연 및 영상 예술계에 신선한 자극과 통찰을 선사한다.",
+        "editorial_category": "cultural_signal",
+        "editorial_category_label": "Cultural Signal",
+        "context_kr": "아메리칸 블랙 영화제(ABFF)는 흑인 영화인들의 가장 권위 있는 등용문이자 예술적 고향이다. 과거 히트작 <걸즈 트립>으로 축제의 정점을 찍었던 말콤 D. 리 감독이 이번에는 전혀 다른 결의 심리 스릴러 <스트렁>을 들고 귀환했다.",
+        "korean_reader_note_kr": "국내 천만 관객을 동원한 희극 감독이 돌연 서스펜스 가득한 스릴러 연극을 대학로 무대에 올렸을 때 느낄 법한 낯섦과 경이로움, 그 예술적 해방감을 이 기사를 통해 함께 호흡해 보시길 권한다.",
+        "signal_keywords": [
+            "장르적 탈피와 모험",
+            "크리에이터의 예술적 헤리티지",
+            "블랙 시네마의 질적 다변화"
+        ]
+    },
+    {
         "id": "black-swan-brings-the-music-and-the-mirror",
         "title": "‘Black Swan’ Brings the Music and the Mirror",
         "title_kr": "거울 너머의 심연이 노래가 될 때: 은막을 깨고 무대로 날아오른 <블랙 스완>",
@@ -1720,40 +1762,6 @@
         "why_it_matters_kr": "자본과 정치의 거대 파고 속에서 설 자리를 잃어가는 정치 다큐멘터리의 현실을 통해, 우리 시대가 상실한 '무대 위 진실'의 가치를 탐구합니다.",
         "signal_keywords": [
             "Cultural Signal"
-        ]
-    },
-    {
-        "id": "say-goodbye-to-awards-season-with-a-rewatch-of-david-cronenbergs-deeply-bleak-maps-to-the-stars",
-        "title": "Say Goodbye to Awards Season with a Rewatch of David Cronenberg’s Deeply Bleak ‘Maps to the Stars’",
-        "title_kr": "화려한 오스카의 커튼 뒤, 우리가 마주해야 할 비릿한 진실: <맵 투 더 스타>",
-        "summary_kr": "찬란한 시상식 시즌의 끝에서, 할리우드라는 거대한 영묘의 민낯을 해부하는 데이비드 크로넨버그의 잔혹하고도 우아한 블랙 코미디를 다시 조명합니다.",
-        "date": "Sat, 21 Mar 2026 03:59:00 +0000",
-        "image": "https://www.indiewire.com/wp-content/uploads/2026/03/MCDMATO_EC037.jpg?w=650",
-        "tier": "major",
-        "source": "IndieWire",
-        "link": "https://www.indiewire.com/features/best-of/maps-to-the-stars-cronenberg-oscars-rewatch-1235185451/",
-        "editorial_category": "voices",
-        "editorial_category_label": "Voices",
-        "why_it_matters_kr": "찬란한 시상식 시즌의 끝에서, 할리우드라는 거대한 영묘의 민낯을 해부하는 데이비드 크로넨버그의 잔혹하고도 우아한 블랙 코미디를 다시 조명합니다.",
-        "signal_keywords": [
-            "Voices"
-        ]
-    },
-    {
-        "id": "new-leaders-at-classical-theatre-of-harlem-childsplay-and-more",
-        "title": "New Leaders at Classical Theatre of Harlem, Childsplay, and More",
-        "title_kr": "무대의 중력을 바꾸는 이름들: 할렘에서 피닉스까지, 새로운 리더십이 그리는 지형도",
-        "summary_kr": "전통의 토양 위에 새로운 감각을 덧입히는 연극계의 리더십 교체를 통해, 동시대 공연예술이 지향해야 할 공동체적 가치와 예술적 지속 가능성을 조명한다.",
-        "date": "Fri, 20 Mar 2026 21:04:59 +0000",
-        "image": "https://www.americantheatre.org/wp-content/uploads/EE-4-headshot-template.jpg",
-        "tier": "indie",
-        "source": "American Theatre",
-        "link": "https://www.americantheatre.org/2026/03/20/new-leaders-at-classical-theatre-of-harlem-childsplay-and-more/",
-        "editorial_category": "industry",
-        "editorial_category_label": "Industry",
-        "why_it_matters_kr": "전통의 토양 위에 새로운 감각을 덧입히는 연극계의 리더십 교체를 통해, 동시대 공연예술이 지향해야 할 공동체적 가치와 예술적 지속 가능성을 조명한다.",
-        "signal_keywords": [
-            "Industry"
         ]
     }
 ]
