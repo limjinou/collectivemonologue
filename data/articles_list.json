@@ -1,5 +1,48 @@
 [
     {
+        "id": "art--soul-consulting-defines-hair-leads-with-texture-ready",
+        "title": "Art & Soul Consulting Defines Hair Leads With Texture Ready",
+        "title_kr": "무대 위 가장 소외되었던 '결(Texture)'을 위하여: '텍스처 레디'가 선언한 무대 예술의 완전성",
+        "summary_kr": "흑인 및 유색인종 배우들의 모발(Textured Hair) 관리를 개인의 몫으로 남겨두던 공연계의 고질적인 소외에 맞서, 아트 앤 소울 컨설팅이 최초의 프로덕션 표준 '텍스처 레디(Texture Ready)'를 출범하며 진정한 다양성과 무대 위 존엄의 기준을 재정의합니다.",
+        "date": "Fri, 29 May 2026 15:53:50 +0000",
+        "image": "https://www.americantheatre.org/wp-content/uploads/TextureReadyCaseStudy.jpg",
+        "tier": "indie",
+        "source": "American Theatre",
+        "link": "https://www.americantheatre.org/2026/05/29/art-soul-consulting-defines-hair-leads-with-texture-ready/",
+        "why_it_matters_kr": "백스테이지의 미시적인 차별과 방임을 거시적인 프로덕션 시스템의 책임으로 격상시키며, 다양성(EDI) 담론이 단순한 구호를 넘어 구체적인 노동 환경의 변화로 실현되는 이정표를 제시하기 때문입니다.",
+        "editorial_category": "industry",
+        "editorial_category_label": "Industry",
+        "context_kr": "2023년 미국 배우·방송인 노동조합(SAG-AFTRA) 합의안에 '자격을 갖춘 헤어 서비스 지원' 조항이 명시되었으나 그 구체적인 기준이 없었던 상황에서, 창립자 키라 트로일로가 이끄는 '아트 앤 소울 컨설팅'이 업계 최초의 표준을 정립했습니다.",
+        "korean_reader_note_kr": "한국 공연계 역시 창작 뮤지컬의 해외 진출과 다인종 앙상블 캐스팅이 늘어나는 변화를 맞이하고 있는 만큼, 무대 분장과 헤어라는 영역이 배우의 예술적 존엄 및 시스템의 전문성과 어떻게 직결되는지 깊이 고찰해볼 수 있는 계기입니다.",
+        "signal_keywords": [
+            "텍스처 레디",
+            "백스테이지의 다양성",
+            "프로덕션 리더십",
+            "공연 노동 환경"
+        ]
+    },
+    {
+        "id": "whats-getting-nominated-and-what-should-be-nominated-for-animated-series-at-the-2026-emmy-awards",
+        "title": "What’s Getting Nominated (and What Should Be Nominated) for Animated Series at the 2026 Emmy Awards",
+        "title_kr": "움직이는 프레임, 멈춰 선 트로피: 에미상 애니메이션 부문이 마주한 미학적 관성과 혁신의 무대",
+        "summary_kr": "매년 반복되는 수상의 관성 속에서 에미상 애니메이션 부문은 전통적 코미디의 안위와 '푸른 눈의 사무라이', '아케인' 같은 연극적 미장센을 지닌 신진 걸작들 사이의 치열한 영토 분쟁을 보여줍니다.",
+        "date": "Fri, 29 May 2026 23:00:00 +0000",
+        "image": "https://www.indiewire.com/wp-content/uploads/2026/05/TCDLOST_ZX010.jpg?w=650",
+        "tier": "major",
+        "source": "IndieWire",
+        "link": "https://www.indiewire.com/features/commentary/2026-emmys-animated-series-predictions-sketch-to-screen-1235197164/",
+        "why_it_matters_kr": "예술적 혁신보다 제도의 관성이 강하게 작동하는 에미상의 생리는 창작의 최전선에 서 있는 한국의 문화 예술 기획자들에게도 장기적인 브랜드 구축에 관한 뼈아픈 시사점을 던집니다.",
+        "editorial_category": "stage_to_screen",
+        "editorial_category_label": "Stage to Screen",
+        "context_kr": "미국 방송계의 가장 권위 있는 시상식인 에미상(Emmy Awards)은 보수적인 투표 성향으로 유명하며, 특히 애니메이션 부문은 <심슨 가족> 등 수십 년간 방영된 장수 프로그램들이 노미네이션을 독점하는 양상을 보여왔습니다.",
+        "korean_reader_note_kr": "K-콘텐츠가 세계 무대에서 강력한 '오리지널리티'로 평가받는 지금, 해외 주요 시상식의 보수적 진입 장벽과 그 틈새를 뚫고 들어간 신진 시각 예술의 성취를 분석하는 것은 매우 유의미한 작업입니다.",
+        "signal_keywords": [
+            "제도적 관성과 미학적 혁신의 충돌",
+            "애니메이션의 연극적 미장센화",
+            "보수적 투표 생태계의 균열"
+        ]
+    },
+    {
         "id": "nick-kroll-explains-why-mating-season-is-not-just-big-mouth-with-animals",
         "title": "Nick Kroll Explains Why ‘Mating Season’ Is Not Just ‘Big Mouth with Animals’",
         "title_kr": "야생의 본능으로 인간의 가면을 벗기다: '메이팅 시즌'이 던지는 동물 우화의 극적 미학",
@@ -1730,40 +1773,6 @@
         "editorial_category": "cultural_signal",
         "editorial_category_label": "Cultural Signal",
         "why_it_matters_kr": "생성형 AI의 정점으로 추앙받던 소라(Sora)의 폐쇄와 디즈니의 거액 투자 철회는, 기술적 마술이 인간적 서사의 견고한 벽 앞에서 겪은 가장 화려한 좌절이자 새로운 예술적 해방의 서막입니다.",
-        "signal_keywords": [
-            "Cultural Signal"
-        ]
-    },
-    {
-        "id": "golden-threads-nabra-nelson-we-can-just-do-things",
-        "title": "Golden Thread’s Nabra Nelson: ‘We Can Just Do Things’",
-        "title_kr": "지워진 지도 위에서 피어난 예술의 뿌리: 나브라 넬슨과 골든 스레드의 새로운 항해",
-        "summary_kr": "고향이라는 실체 없는 경계를 넘어, 사라진 마을의 기억을 무대 위로 소환하는 나브라 넬슨의 예술적 여정을 통해 현대 연극이 지향해야 할 진정한 연대의 가치를 조명합니다.",
-        "date": "Mon, 23 Mar 2026 21:00:39 +0000",
-        "image": "https://www.americantheatre.org/wp-content/uploads/Nabra-Nelson_golden-thread_Photo-by-Hana-Mattar.jpg",
-        "tier": "indie",
-        "source": "American Theatre",
-        "link": "https://www.americantheatre.org/2026/03/23/golden-threads-nabra-nelson-we-can-just-do-things/",
-        "editorial_category": "cultural_signal",
-        "editorial_category_label": "Cultural Signal",
-        "why_it_matters_kr": "고향이라는 실체 없는 경계를 넘어, 사라진 마을의 기억을 무대 위로 소환하는 나브라 넬슨의 예술적 여정을 통해 현대 연극이 지향해야 할 진정한 연대의 가치를 조명합니다.",
-        "signal_keywords": [
-            "Cultural Signal"
-        ]
-    },
-    {
-        "id": "the-academy-announces-its-20252026-nicholl-fellowship-recipients",
-        "title": "The Academy Announces Its 2025-2026 Nicholl Fellowship Recipients",
-        "title_kr": "펜 끝에서 빚어낸 시대의 초상: 2025-2026 니콜 펠로우십이 예고한 스토리텔링의 미래",
-        "summary_kr": "전 세계 창작 생태계를 연결하는 새로운 파트너십을 통해 선발된 니콜 펠로우십 수상자들은, 경계를 넘어선 인간의 보편적 가치를 스크린과 무대 위로 불러내고 있습니다.",
-        "date": "Mon, 23 Mar 2026 22:15:00 +0000",
-        "image": "https://www.indiewire.com/wp-content/uploads/2026/01/P11636S9.jpg?w=650",
-        "tier": "major",
-        "source": "IndieWire",
-        "link": "https://www.indiewire.com/news/general-news/academy-2025-2026-nicholl-fellowship-recipients-1235185802/",
-        "editorial_category": "cultural_signal",
-        "editorial_category_label": "Cultural Signal",
-        "why_it_matters_kr": "전 세계 창작 생태계를 연결하는 새로운 파트너십을 통해 선발된 니콜 펠로우십 수상자들은, 경계를 넘어선 인간의 보편적 가치를 스크린과 무대 위로 불러내고 있습니다.",
         "signal_keywords": [
             "Cultural Signal"
         ]
