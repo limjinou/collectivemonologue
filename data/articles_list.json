@@ -1,5 +1,26 @@
 [
     {
+        "id": "neons-tom-quinn-worries-about-lack-of-competition-in-a-merged-hollywood",
+        "title": "Neon’s Tom Quinn Worries About ‘Lack of Competition’ in a Merged Hollywood",
+        "title_kr": "거인들의 합병과 영혼의 축소: 톰 퀸의 경고가 대학로에 던지는 질문",
+        "summary_kr": "할리우드 거대 기업의 무분별한 합병 속에서 창작의 모험이 어떻게 말살되는지 꼬집은 네온(Neon) CEO 톰 퀸의 경고를 통해, 자본 권력화되어 가는 공연 예술계의 위기를 성찰합니다.",
+        "date": "Sat, 30 May 2026 19:55:57 +0000",
+        "image": "https://www.indiewire.com/wp-content/uploads/2026/05/P1044ZGB.jpg?w=650",
+        "tier": "major",
+        "source": "IndieWire",
+        "link": "https://www.indiewire.com/news/business/neon-tom-quinn-lack-competition-merged-hollywood-1235197307/",
+        "why_it_matters_kr": "거대 자본의 독과점이 예술적 다양성을 어떻게 위협하는지 분석하며, 한국 공연 생태계가 잃지 말아야 할 독립적 영토의 가치를 조명합니다.",
+        "editorial_category": "industry",
+        "editorial_category_label": "Industry",
+        "context_kr": "칸 영화제 황금종려상을 잇달아 거머쥐며 독보적인 예술적 안목을 증명해 온 독립 배급사 네온의 CEO 톰 퀸이, 거대 기업의 관료주의와 합병 트렌드가 예술적 리스크 테이킹을 가로막는 원흉이라고 일갈했습니다.",
+        "korean_reader_note_kr": "이 논의는 단순히 미국 영화 산업의 비극에 머물지 않습니다. 대형 기획사와 플랫폼 중심으로 재편되며 소극장 연극과 실험적 무대가 설 자리를 잃어가는 한국 대학로의 생태계에도 뼈아픈 시사점을 제공합니다.",
+        "signal_keywords": [
+            "거대 자본의 획일성",
+            "독립 예술의 영토 보존",
+            "리스크 테이킹의 미학"
+        ]
+    },
+    {
         "id": "art--soul-consulting-defines-hair-leads-with-texture-ready",
         "title": "Art & Soul Consulting Defines Hair Leads With Texture Ready",
         "title_kr": "무대 위 가장 소외되었던 '결(Texture)'을 위하여: '텍스처 레디'가 선언한 무대 예술의 완전성",
@@ -1758,23 +1779,6 @@
         "why_it_matters_kr": "과거의 안식처가 무대 위에서 재창조될 때, 우리는 잊혔던 트랜스젠더 인권 투쟁의 뜨거운 숨결과 마주하게 됩니다. 공간의 미학을 통해 본 공연 예술의 사회적 책무에 대하여.",
         "signal_keywords": [
             "Queer Lens"
-        ]
-    },
-    {
-        "id": "sora-is-dead-at-openai-and-so-is-its-deal-with-disney-but-the-ai-video-battle-is-just-beginning",
-        "title": "Sora Is Dead at OpenAI, and So Is Its Deal with Disney, but the AI Video Battle Is Just Beginning",
-        "title_kr": "신(神)이 되려던 그림자의 퇴장: 소라(Sora)의 종언과 무대 위로 귀환한 인간성",
-        "summary_kr": "생성형 AI의 정점으로 추앙받던 소라(Sora)의 폐쇄와 디즈니의 거액 투자 철회는, 기술적 마술이 인간적 서사의 견고한 벽 앞에서 겪은 가장 화려한 좌절이자 새로운 예술적 해방의 서막입니다.",
-        "date": "Tue, 24 Mar 2026 20:58:49 +0000",
-        "image": "https://www.indiewire.com/wp-content/uploads/2024/02/Screen-Shot-2024-02-23-at-8.54.34-AM.png?w=650",
-        "tier": "major",
-        "source": "IndieWire",
-        "link": "https://www.indiewire.com/news/breaking-news/openai-shut-down-sora-generative-ai-video-app-1235185950/",
-        "editorial_category": "cultural_signal",
-        "editorial_category_label": "Cultural Signal",
-        "why_it_matters_kr": "생성형 AI의 정점으로 추앙받던 소라(Sora)의 폐쇄와 디즈니의 거액 투자 철회는, 기술적 마술이 인간적 서사의 견고한 벽 앞에서 겪은 가장 화려한 좌절이자 새로운 예술적 해방의 서막입니다.",
-        "signal_keywords": [
-            "Cultural Signal"
         ]
     }
 ]
