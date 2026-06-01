@@ -1,1 +1,26 @@
-[]
+[
+    {
+        "failed_at": "2026-06-01T02:12:41.172431+00:00",
+        "reason": "model_error",
+        "source": "IndieWire",
+        "tier": "major",
+        "title": "‘Three Colors: Pan-African,’ ‘Girl Dad,’ and ‘Spilled Milk’ Win Big at the Best of ABFF Awards 2026",
+        "link": "https://www.indiewire.com/news/festivals/best-of-abff-awards-2026-winners-girl-dad-spilled-milk-1235197352/",
+        "published": "Sun, 31 May 2026 19:30:00 +0000",
+        "last_error": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
+        "attempt_count": 1,
+        "max_retry": 3
+    },
+    {
+        "failed_at": "2026-06-01T02:13:46.534974+00:00",
+        "reason": "model_error",
+        "source": "American Theatre",
+        "tier": "indie",
+        "title": "Art & Soul Consulting Defines Hair Leads With Texture Ready",
+        "link": "https://www.americantheatre.org/2026/05/29/art-soul-consulting-defines-hair-leads-with-texture-ready/",
+        "published": "Fri, 29 May 2026 15:53:50 +0000",
+        "last_error": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
+        "attempt_count": 1,
+        "max_retry": 3
+    }
+]
