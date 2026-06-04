@@ -1,5 +1,47 @@
 [
     {
+        "id": "this-month-in-theatre-history",
+        "title": "This Month in Theatre History",
+        "title_kr": "무대라는 이름의 저항군, 국가라는 이름의 후원자: 6월의 연극사가 던지는 영원한 화두",
+        "summary_kr": "아더 밀러와 아우구스토 보알의 역사적 만남이 남긴 예술적 저항의 유산부터, 국가 지원의 패러다임을 바꾼 레이건 행정부의 문화 정책까지. 무대 위 권력과 자유의 역학 관계를 입체적으로 조명합니다.",
+        "date": "Wed, 03 Jun 2026 18:32:46 +0000",
+        "image": "https://www.americantheatre.org/wp-content/uploads/Mark-Finley-Michael-Michelle-Lynch-Rollerena-Chris-Andersson-Doric-Wilson-at-performance-of-Street-Theater-2002-2048x1536-1-e1780511534311.webp",
+        "tier": "indie",
+        "source": "American Theatre",
+        "link": "https://www.americantheatre.org/2026/06/03/this-month-in-theatre-history-136/",
+        "why_it_matters_kr": "예술이 검열과 억압에 맞서는 무기인 동시에, 제도의 지원 속에서 어떻게 자생력을 길러왔는지 그 복잡다단한 공존의 역사를 보여주기 때문입니다.",
+        "editorial_category": "cultural_signal",
+        "editorial_category_label": "Cultural Signal",
+        "context_kr": "1970년대 브라질 군사독재에 맞서 '피억압자 연극'을 개척한 아우구스토 보알의 석방 운동과, 1980년대 미국의 문화예술 공적 지원 체계를 재편한 레이건 행정부의 결단이라는 두 가지 역사적 이정표를 배경으로 합니다.",
+        "korean_reader_note_kr": "70~80년대 한국 연극사의 검열과 저항, 그리고 국립단체나 문화예술위원회의 지원금 제도를 둘러싼 대학로의 오랜 고민을 뉴욕과 브라질, 워싱턴의 과거와 연결해 볼 수 있습니다.",
+        "signal_keywords": [
+            "예술의 정치적 저항권",
+            "검열과 연대",
+            "문화 정책과 민간 재원"
+        ]
+    },
+    {
+        "id": "amazon-prime-video-is-publishing-its-own-netflixstyle-weekly-top-10-lists-just-without-any-numbers",
+        "title": "Amazon Prime Video Is Publishing Its Own Netflix-Style Weekly Top 10 Lists, Just Without Any Numbers",
+        "title_kr": "숫자가 사라진 무대, 장막 뒤의 관객들: 아마존의 '보이지 않는 톱 10'이 남긴 질문",
+        "summary_kr": "아마존 프라임 비디오가 넷플릭스를 모방해 매주 흥행 순위를 발표하기 시작했으나, 구체적인 시청 지표(숫자)는 베일에 가려두었습니다. 수치적 투명성이 거세된 이 '보이지 않는 흥행'이 대중문화와 예술 생태계에 던지는 화두를 심층적으로 짚어봅니다.",
+        "date": "Wed, 03 Jun 2026 23:07:35 +0000",
+        "image": "https://www.indiewire.com/wp-content/uploads/2026/06/JR106167-SOP.jpeg?w=650",
+        "tier": "major",
+        "source": "IndieWire",
+        "link": "https://www.indiewire.com/news/general-news/amazon-prime-video-weekly-top-10-lists-without-numbers-1235198040/",
+        "why_it_matters_kr": "데이터를 독점한 거대 플랫폼이 정량적 수치 없이 순위만을 발표하는 것은, 예술의 가치 평가와 흥행의 기준을 플랫폼이 완전히 사유화하겠다는 신호탄이기 때문입니다.",
+        "editorial_category": "cultural_signal",
+        "editorial_category_label": "Cultural Signal",
+        "context_kr": "스트리밍 업계의 공룡 넷플릭스는 상세한 시청 시간 데이터를 공개하며 투명한 '흥행 스탠더드'를 구축해 왔습니다. 반면 아마존의 이번 순위 발표는 순위 자체만 나열하고 실제 시청 데이터는 철저히 숨기는 방식을 취해, 업계의 불투명성 논란을 다시 점화시켰습니다.",
+        "korean_reader_note_kr": "한국 공연 시장에서 유료 관객 수나 좌석 점유율을 가린 채 '예매율 1위', '전석 매진 육박'이라는 수식어만으로 흥행을 포장하는 일부 제작사의 마케팅 관행을 연상시킵니다. 데이터가 투명하지 않을 때 관객의 선택권은 어떻게 왜곡되는지 성찰하게 만듭니다.",
+        "signal_keywords": [
+            "정량 데이터의 거세",
+            "흥행의 큐레이션화",
+            "투명성의 비대칭성"
+        ]
+    },
+    {
         "id": "jessica-stone-ready-for-a-long-conversation-at-la-jolla-playhouse",
         "title": "Jessica Stone: Ready for a Long Conversation at La Jolla Playhouse",
         "title_kr": "배우의 예리한 시선에서 극장의 지휘봉으로: 제시카 스톤, 라호야 플레이하우스와 시작할 ‘가장 따뜻한 대화’",
@@ -1751,40 +1793,6 @@
         "editorial_category": "cultural_signal",
         "editorial_category_label": "Cultural Signal",
         "why_it_matters_kr": "광활한 성간 공간에서 우리를 지탱하는 것은 영웅적 투지보다 익숙한 스웨터의 포근함일지도 모릅니다. 라이언 고슬링의 의상을 통해 본 무대적 진실과 휴머니즘에 관한 고찰.",
-        "signal_keywords": [
-            "Cultural Signal"
-        ]
-    },
-    {
-        "id": "italys-1990s-answer-to-cruising-the-forgotten-giallo-the-final-scoop",
-        "title": "Italy’s 1990s Answer to ‘Cruising’? The Forgotten Giallo ‘The Final Scoop’",
-        "title_kr": "핏빛 거짓말이 빚어낸 90년대 지알로의 잔상: '파이널 스쿠프'와 크루징의 대화",
-        "summary_kr": "장르의 황혼기라 치부되던 1990년대 이탈리아 지알로 영화들이 비네거 신드롬의 복원을 통해 재조명되며, 인간의 이중성과 잠입이라는 위태로운 경계를 미학적으로 다시 묻습니다.",
-        "date": "Thu, 26 Mar 2026 22:00:00 +0000",
-        "image": "https://www.indiewire.com/wp-content/uploads/2026/03/Buge_1.1.15_2048x.jpg.webp?w=650",
-        "tier": "major",
-        "source": "IndieWire",
-        "link": "https://www.indiewire.com/features/commentary/the-final-scoop-italian-giallo-cruising-1235185993/",
-        "editorial_category": "cultural_signal",
-        "editorial_category_label": "Cultural Signal",
-        "why_it_matters_kr": "장르의 황혼기라 치부되던 1990년대 이탈리아 지알로 영화들이 비네거 신드롬의 복원을 통해 재조명되며, 인간의 이중성과 잠입이라는 위태로운 경계를 미학적으로 다시 묻습니다.",
-        "signal_keywords": [
-            "Cultural Signal"
-        ]
-    },
-    {
-        "id": "eric-overmyer-made-language-sit-up-and-bark",
-        "title": "Eric Overmyer Made Language Sit Up and Bark",
-        "title_kr": "언어의 조련사, 에릭 오버마이어: 박제된 낱말을 깨워 무대 위를 달리게 하다",
-        "summary_kr": "언어를 다루는 독보적인 감각으로 무대와 스크린을 넘나들었던 거장 에릭 오버마이어, 그가 남긴 언어적 유산과 찰나의 미학을 기리는 헌사.",
-        "date": "Wed, 25 Mar 2026 21:29:46 +0000",
-        "image": "https://www.americantheatre.org/wp-content/uploads/eric-overmyer.jpg",
-        "tier": "indie",
-        "source": "American Theatre",
-        "link": "https://www.americantheatre.org/2026/03/25/eric-overmyer-made-language-sit-up-and-bark/",
-        "editorial_category": "cultural_signal",
-        "editorial_category_label": "Cultural Signal",
-        "why_it_matters_kr": "언어를 다루는 독보적인 감각으로 무대와 스크린을 넘나들었던 거장 에릭 오버마이어, 그가 남긴 언어적 유산과 찰나의 미학을 기리는 헌사.",
         "signal_keywords": [
             "Cultural Signal"
         ]
