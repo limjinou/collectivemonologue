@@ -1,5 +1,47 @@
 [
     {
+        "id": "zazafest-to-honor-the-life-of-diana-oh",
+        "title": "ZazaFest to Honor the Life of Diana Oh",
+        "title_kr": "상실의 심연에서 피어난 해방의 축제, 디아나 오의 영혼을 기리는 ‘자자페스트(ZazaFest)’",
+        "summary_kr": "세상을 떠난 전설적인 퀴어 아티스트 디아나 오(Diana Oh)의 1주기를 맞아, 뉴욕 전역에서 펼쳐지는 공동체 중심의 예술 축제 ‘자자페스트’를 통해 상실을 연대와 해방의 에너지로 승화시키는 예술의 초월적 힘을 조명합니다.",
+        "date": "Thu, 04 Jun 2026 16:36:57 +0000",
+        "image": "https://www.americantheatre.org/wp-content/uploads/diana-oh.png",
+        "tier": "indie",
+        "source": "American Theatre",
+        "link": "https://www.americantheatre.org/2026/06/04/zazafest-to-honor-the-life-of-diana-oh/",
+        "why_it_matters_kr": "슬픔을 박제하는 애도가 아닌, 예술가의 유산을 온몸으로 살아내며 미래의 해방을 도모하는 ‘액티브 아카이빙(Active Archiving)’의 위대한 선례를 보여주기 때문입니다.",
+        "editorial_category": "queer_lens",
+        "editorial_category_label": "Queer Lens",
+        "context_kr": "디아나 오(활동명 자자)는 성별, 장르, 무대와 객석의 경계를 허물며 뉴욕 연극계에 강렬한 파장을 일으킨 한국계 미국인 다원예술가이자 성소수자 인권 운동가입니다.",
+        "korean_reader_note_kr": "이 기사는 최근 한국 대학로와 대안 공간에서 활발히 논의되는 ‘안전한 창작 환경’, ‘공동체적 돌봄’, 그리고 ‘소수자 서사의 아카이빙’이 어떻게 축제의 형태로 실현될 수 있는지 훌륭한 이정표를 제시합니다.",
+        "signal_keywords": [
+            "공동체적 돌봄(Collective Care)",
+            "퀴어 아카이빙(Queer Archiving)",
+            "슬픔의 축제화"
+        ]
+    },
+    {
+        "id": "office-romance-review-jennifer-lopez-and-brett-goldstein-commit-a-million-hr-violations-in-a-glossy-netflix-romcom",
+        "title": "‘Office Romance’ Review: Jennifer Lopez and Brett Goldstein Commit a Million HR Violations in a Glossy Netflix Rom-Com",
+        "title_kr": "규율의 무대 위에서 피어나는 불온한 스파크: <오피스 로맨스>가 폭로하는 권력과 욕망의 연극성",
+        "summary_kr": "현대 자본주의가 설계한 가장 완벽한 통제 공간인 ‘오피스’를 무대로, 제니퍼 로페즈와 브레트 골드스타인이 펼치는 아슬아슬한 케미스트리를 통해 여성의 권력 수행성과 성적 주체성의 충돌을 예리하게 분석합니다.",
+        "date": "Fri, 05 Jun 2026 01:00:00 +0000",
+        "image": "https://www.indiewire.com/wp-content/uploads/2026/06/AAAAQaTZriU2LCV619WgtxxYcyS_cHhZcwFfzldlDR_9NOMdCCERKTPd6LkOgw_73LVDWSCOTnWG1CpbazDbhjMiRLcR2w322832_kN1ZhaiupaA4vUtjys1k13vkY0Y-a96Y4CF5xidtyoEJuG3MZyuc1Qpd90.jpg?w=650",
+        "tier": "major",
+        "source": "IndieWire",
+        "link": "https://www.indiewire.com/criticism/movies/office-romance-movie-review-jennifer-lopez-netflix-1235197964/",
+        "why_it_matters_kr": "매끈하게 박제된 알고리즘 영화의 외피 속에서, 현대의 엄격한 HR 규율을 뚫고 나오는 인간 신체의 날것 그대로의 중력과 연극적 충돌을 목격할 수 있기 때문입니다.",
+        "editorial_category": "stage_to_screen",
+        "editorial_category_label": "Stage to Screen",
+        "context_kr": "수십 년간 글로벌 미디어의 중심에서 ‘섹시 아이콘’이자 ‘라틴계 성공 신화’로 군림해 온 제니퍼 로페즈의 실제 위상과, 영국의 거친 연극적 베이스를 지닌 브레트 골드스타인의 연기 톤이 만났을 때 발생하는 텍스트 외적 시너지를 다룹니다.",
+        "korean_reader_note_kr": "사내 연애를 주로 감정적 절제와 위계질서의 로맨틱한 전복으로 풀어내는 한국형 오피스 멜로와 달리, 이 서구식 코미디가 ‘인사 규정(HR Rules)’이라는 자본주의적 금기를 신체적 에너지로 돌파하는 방식은 매우 이색적인 문화적 자극을 선사할 것입니다.",
+        "signal_keywords": [
+            "사내 규율의 연극화",
+            "여성 최고경영자의 퍼포머티비티",
+            "알고리즘적 장르의 균열"
+        ]
+    },
+    {
         "id": "this-month-in-theatre-history",
         "title": "This Month in Theatre History",
         "title_kr": "무대라는 이름의 저항군, 국가라는 이름의 후원자: 6월의 연극사가 던지는 영원한 화두",
@@ -1759,40 +1801,6 @@
         "editorial_category": "cultural_signal",
         "editorial_category_label": "Cultural Signal",
         "why_it_matters_kr": "결혼이라는 지극히 개인적인 신화가 무너지는 찰나를 포착한 이 시리즈는, 예정된 파국을 향해 달리는 잔혹하고도 아름다운 현대적 비극의 정수를 보여줍니다.",
-        "signal_keywords": [
-            "Cultural Signal"
-        ]
-    },
-    {
-        "id": "willem-dafoe-moisés-kaufman-banna-desta-deliver-world-theatre-day-messages",
-        "title": "Willem Dafoe, Moisés Kaufman, Banna Desta Deliver World Theatre Day Messages",
-        "title_kr": "찰나의 마주침, 영원한 울림: 2024 세계 연극의 날이 건네는 세 가지 존재론적 화두",
-        "summary_kr": "분절된 세계를 잇는 연극의 시원적 힘을 되새기며, 윌렘 대포와 거장들이 제안하는 '공감의 훈련'과 '존엄의 연대'를 고품격 에디토리얼로 조명합니다.",
-        "date": "Fri, 27 Mar 2026 17:47:52 +0000",
-        "image": "https://www.americantheatre.org/wp-content/uploads/World-Theatre-Day.png",
-        "tier": "indie",
-        "source": "American Theatre",
-        "link": "https://www.americantheatre.org/2026/03/27/willem-dafoe-moises-kaufman-banna-desta-deliver-world-theatre-day-messages/",
-        "editorial_category": "industry",
-        "editorial_category_label": "Industry",
-        "why_it_matters_kr": "분절된 세계를 잇는 연극의 시원적 힘을 되새기며, 윌렘 대포와 거장들이 제안하는 '공감의 훈련'과 '존엄의 연대'를 고품격 에디토리얼로 조명합니다.",
-        "signal_keywords": [
-            "Industry"
-        ]
-    },
-    {
-        "id": "project-hail-mary-proves-the-world-hungers-for-cozy-sweaters",
-        "title": "‘Project Hail Mary’ Proves the World Hungers for Cozy Sweaters",
-        "title_kr": "우주적 고독을 감싸는 인간성의 직조: ‘프로젝트 헤일메리’가 증명한 온기의 미학",
-        "summary_kr": "광활한 성간 공간에서 우리를 지탱하는 것은 영웅적 투지보다 익숙한 스웨터의 포근함일지도 모릅니다. 라이언 고슬링의 의상을 통해 본 무대적 진실과 휴머니즘에 관한 고찰.",
-        "date": "Fri, 27 Mar 2026 20:00:00 +0000",
-        "image": "https://www.indiewire.com/wp-content/uploads/2026/03/MCDPRHA_MG031.jpg?w=650",
-        "tier": "major",
-        "source": "IndieWire",
-        "link": "https://www.indiewire.com/features/craft/project-hail-mary-sweaters-ryan-gosling-costume-design-1235186417/",
-        "editorial_category": "cultural_signal",
-        "editorial_category_label": "Cultural Signal",
-        "why_it_matters_kr": "광활한 성간 공간에서 우리를 지탱하는 것은 영웅적 투지보다 익숙한 스웨터의 포근함일지도 모릅니다. 라이언 고슬링의 의상을 통해 본 무대적 진실과 휴머니즘에 관한 고찰.",
         "signal_keywords": [
             "Cultural Signal"
         ]
