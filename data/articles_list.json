@@ -1,5 +1,43 @@
 [
     {
+        "id": "a-neon-nostalgia-kaboom-for-the-end-of-the-world",
+        "title": "A Neon Nostalgia Kaboom for the End of the World",
+        "title_kr": "A Neon Nostalgia Kaboom for the End of the World",
+        "summary_kr": "AI 모델 일시적 과부하로 정보를 불러오지 못했습니다.",
+        "date": "Fri, 05 Jun 2026 17:59:17 +0000",
+        "image": "https://www.americantheatre.org/wp-content/uploads/the-lost-boys_broadway.jpg",
+        "tier": "indie",
+        "source": "American Theatre",
+        "link": "https://www.americantheatre.org/2026/06/05/a-neon-nostalgia-kaboom-for-the-end-of-the-world/",
+        "why_it_matters_kr": "",
+        "editorial_category": "cultural_signal",
+        "editorial_category_label": "Cultural Signal",
+        "context_kr": "",
+        "korean_reader_note_kr": "",
+        "signal_keywords": []
+    },
+    {
+        "id": "inside-a-night-of-jokes-and-gems-about-the-changing-tv-landscape-at-indiewire-honors",
+        "title": "Inside a Night of Jokes and Gems About the Changing TV Landscape at IndieWire Honors",
+        "title_kr": "무대 위의 불경한 농담들: '인디와이어 아너스'가 증명한 스크린의 연극적 저항",
+        "summary_kr": "전형적인 권위를 조롱하며 새로운 미디어 영토를 개척하는 창작자들의 유쾌한 반란, 2026 봄 인디와이어 아너스 시상식의 연극적 찰나를 포착하다.",
+        "date": "Fri, 05 Jun 2026 22:30:00 +0000",
+        "image": "https://www.indiewire.com/wp-content/uploads/2026/06/GF1_8839_4d207e.jpg?w=650",
+        "tier": "major",
+        "source": "IndieWire",
+        "link": "https://www.indiewire.com/features/general/indiewire-honors-tv-2026-recap-jokes-gems-1235198560/",
+        "why_it_matters_kr": "거대 헐리우드의 문법이 흔들리는 전환기, 시상식이라는 정형화된 공간을 해학과 신체성으로 전복시킨 창작자들의 연극적 태도에서 미디어의 미래를 엿볼 수 있습니다.",
+        "editorial_category": "cultural_signal",
+        "editorial_category_label": "Cultural Signal",
+        "context_kr": "인디와이어 아너스(IndieWire Honors)는 독창적인 인디펜던트 감각을 지닌 TV 및 영화 예술가들을 조명하는 시상식으로, 이번 시즌에는 기성의 권위에 도전하는 코미디 창작자들의 해학이 스포트라이트를 받았습니다.",
+        "korean_reader_note_kr": "엄숙한 시상식 공간을 단숨에 저항과 축제의 무대로 바꾸는 서구 창작자들의 신체적 유희는, 최근 국내 스탠드업 코미디와 유튜브 대안 예능 씬이 보여주는 '기성 미디어 전복'의 흐름과 흥미로운 평행이론을 이룹니다.",
+        "signal_keywords": [
+            "시상식의 즉흥 연극화",
+            "희극을 통한 권위 전복",
+            "플랫폼 과도기의 서바이벌 미학"
+        ]
+    },
+    {
         "id": "zazafest-to-honor-the-life-of-diana-oh",
         "title": "ZazaFest to Honor the Life of Diana Oh",
         "title_kr": "상실의 심연에서 피어난 해방의 축제, 디아나 오의 영혼을 기리는 ‘자자페스트(ZazaFest)’",
@@ -1767,40 +1805,6 @@
         "editorial_category": "cultural_signal",
         "editorial_category_label": "Cultural Signal",
         "why_it_matters_kr": "가짜를 진짜로 믿게 만드는 힘은 화려한 스펙터클이 아닌 '사소한 물성'에 있습니다. 무대와 현실의 경계를 허문 <컴퍼니 리트릿>의 치밀한 프로덕션 디자인 세계를 탐구합니다.",
-        "signal_keywords": [
-            "Cultural Signal"
-        ]
-    },
-    {
-        "id": "steven-soderberghs-the-christophers-wins-narrative-audience-award-at-sonoma-international-film-festival-2026",
-        "title": "Steven Soderbergh’s ‘The Christophers’ Wins Narrative Audience Award at Sonoma International Film Festival 2026",
-        "title_kr": "소노마의 빈티지 속에 피어난 예술적 변증법: 스티븐 소더버그가 증명한 ‘드라마’의 본질",
-        "summary_kr": "제29회 소노마 국제 영화제가 스티븐 소더버그의 신작 '더 크리스토퍼스'를 통해 예술과 현실의 경계를 허무는 관객의 찬사를 이끌어내며, 공연 예술의 본질적인 힘을 스크린 위에 재현했습니다.",
-        "date": "Sun, 29 Mar 2026 19:30:00 +0000",
-        "image": "https://www.indiewire.com/wp-content/uploads/2025/12/THE-CHRISTOPHERS_STILL-1.webp?w=650",
-        "tier": "major",
-        "source": "IndieWire",
-        "link": "https://www.indiewire.com/awards/industry/the-christophers-audience-award-sonoma-film-festival-2026-1235186476/",
-        "editorial_category": "stage_to_screen",
-        "editorial_category_label": "Stage to Screen",
-        "why_it_matters_kr": "제29회 소노마 국제 영화제가 스티븐 소더버그의 신작 '더 크리스토퍼스'를 통해 예술과 현실의 경계를 허무는 관객의 찬사를 이끌어내며, 공연 예술의 본질적인 힘을 스크린 위에 재현했습니다.",
-        "signal_keywords": [
-            "Stage to Screen"
-        ]
-    },
-    {
-        "id": "inside-that-bloody-something-very-bad-is-going-to-happen-wedding-day-finale",
-        "title": "Inside That Bloody ‘Something Very Bad Is Going to Happen’ Wedding Day Finale",
-        "title_kr": "핏빛 베일 아래 감춰진 현대적 비극: ‘Something Very Bad Is Going to Happen’이 던지는 서늘한 질문",
-        "summary_kr": "결혼이라는 지극히 개인적인 신화가 무너지는 찰나를 포착한 이 시리즈는, 예정된 파국을 향해 달리는 잔혹하고도 아름다운 현대적 비극의 정수를 보여줍니다.",
-        "date": "Sat, 28 Mar 2026 16:00:00 +0000",
-        "image": "https://www.indiewire.com/wp-content/uploads/2026/03/Something_Very_Bad_Is_Going_to_Happen_n_S1_E8_00_00_42_01R.jpg?w=650",
-        "tier": "major",
-        "source": "IndieWire",
-        "link": "https://www.indiewire.com/features/interviews/something-very-bad-is-going-to-happen-finale-spoilers-dies-1235185845/",
-        "editorial_category": "cultural_signal",
-        "editorial_category_label": "Cultural Signal",
-        "why_it_matters_kr": "결혼이라는 지극히 개인적인 신화가 무너지는 찰나를 포착한 이 시리즈는, 예정된 파국을 향해 달리는 잔혹하고도 아름다운 현대적 비극의 정수를 보여줍니다.",
         "signal_keywords": [
             "Cultural Signal"
         ]
