@@ -1,5 +1,26 @@
 [
     {
+        "id": "rebecca-miller-pays-tribute-to-martin-scorsese-for-his-immense-honesty-and-fearlessness",
+        "title": "Rebecca Miller Pays Tribute to Martin Scorsese for His ‘Immense Honesty and Fearlessness’",
+        "title_kr": "거장의 내면이라는 무대, 레베카 밀러가 투사한 마틴 스코세이지의 ‘두려움 없는 정직함’",
+        "summary_kr": "연극적 유산을 품은 감독 레베카 밀러가 5년간의 집요한 탐색 끝에 마틴 스코세이지의 삶과 예술을 집대성한 5부작 다큐멘터리로 인디와이어 인디펜던트 아너스를 거머쥐었습니다.",
+        "date": "Sun, 07 Jun 2026 20:00:00 +0000",
+        "image": "https://www.indiewire.com/wp-content/uploads/2026/06/GF2_8980.jpg?w=650",
+        "tier": "major",
+        "source": "IndieWire",
+        "link": "https://www.indiewire.com/news/events/rebecca-miller-tribute-martin-scorsese-speech-honors-1235198170/",
+        "why_it_matters_kr": "미국 현대 연극의 거장 아서 밀러의 딸이자 독창적 연출가인 레베카 밀러가 영화사상 가장 뜨거운 인물의 내면적 극장을 어떻게 스크린 위에 재구성했는지 목격할 기회입니다.",
+        "editorial_category": "stage_to_screen",
+        "editorial_category_label": "Stage to Screen",
+        "context_kr": "미국 연극계의 전설 아서 밀러의 DNA를 이어받은 레베카 밀러 감독이 애플 TV+의 5부작 다큐멘터리 '미스터 스코세이지(Mr. Scorsese)'를 통해 거장 마틴 스코세이지의 예술적 영혼을 깊이 있게 해부했습니다.",
+        "korean_reader_note_kr": "박찬욱, 봉준호 등 한국의 거장 감독들을 향한 다큐멘터리적 시선이 늘어나는 지금, 대상과의 극적인 거리두기와 밀착을 동시에 성취해낸 이 마스터클래스급 다큐멘터리의 작가주의적 접근법을 주목해 보시기 바랍니다.",
+        "signal_keywords": [
+            "예술가 가문의 서사적 유산",
+            "거장을 응시하는 심층적 시선",
+            "다큐멘터리의 연극적 무대화"
+        ]
+    },
+    {
         "id": "the-last-day-review-alicia-vikander-leads-this-mrs-dalloway-interpretation-but-victoria-pedrettis-performance-steals-the-show",
         "title": "‘The Last Day’ Review: Alicia Vikander Leads This ‘Mrs. Dalloway’ Interpretation, but Victoria Pedretti’s Performance Steals the Show",
         "title_kr": "델러웨이 부인의 하룻밤, 소음의 도시에서 피어나는 불안의 이중주",
@@ -1794,23 +1815,6 @@
         "why_it_matters_kr": "AI 모델 일시적 과부하로 정보를 불러오지 못했습니다.",
         "signal_keywords": [
             "Voices"
-        ]
-    },
-    {
-        "id": "you-cant-make-a-cult-classic-with-marketing--opinion",
-        "title": "You Can’t Make a ‘Cult Classic’ with Marketing — Opinion",
-        "title_kr": "You Can’t Make a ‘Cult Classic’ with Marketing — Opinion",
-        "summary_kr": "AI 모델 일시적 과부하로 정보를 불러오지 못했습니다.",
-        "date": "Tue, 31 Mar 2026 22:00:00 +0000",
-        "image": "https://www.indiewire.com/wp-content/uploads/2026/03/MCDFOFR_IF010.jpg?w=650",
-        "tier": "major",
-        "source": "IndieWire",
-        "link": "https://www.indiewire.com/features/commentary/cult-classic-forbidden-fruits-opinion-1235186594/",
-        "editorial_category": "cultural_signal",
-        "editorial_category_label": "Cultural Signal",
-        "why_it_matters_kr": "AI 모델 일시적 과부하로 정보를 불러오지 못했습니다.",
-        "signal_keywords": [
-            "Cultural Signal"
         ]
     }
 ]
