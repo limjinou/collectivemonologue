@@ -1,5 +1,47 @@
 [
     {
+        "id": "theatre-during-wartime-a-report-from-ukraine",
+        "title": "Theatre During Wartime: A Report From Ukraine",
+        "title_kr": "포화 속에서 피어난 신체의 서사시: 동정을 넘어 '이해'의 영토로",
+        "summary_kr": "전쟁의 상흔을 안고 무대에 선 우크라이나 참전 용사들의 연극 《에네이디(Eneida)》 리허설 현장을 통해, 예술이 어떻게 단순한 치유를 넘어 한 사회의 미래를 재구성하는 공동체의 허브가 되는지 조명합니다.",
+        "date": "Tue, 09 Jun 2026 14:37:46 +0000",
+        "image": "https://www.americantheatre.org/wp-content/uploads/Gaia_ACT-II-Arkan-Photo-Valeryia-Landar.jpg",
+        "tier": "indie",
+        "source": "American Theatre",
+        "link": "https://www.americantheatre.org/2026/06/09/theatre-during-wartime-a-report-from-ukraine/",
+        "why_it_matters_kr": "비극 앞에서도 예술적 존엄을 잃지 않는 우크라이나 연극의 생생한 현장은, 우리에게 극장이 존재해야 하는 가장 근원적인 이유를 일깨워줍니다.",
+        "editorial_category": "voices",
+        "editorial_category_label": "Voices",
+        "context_kr": "2025년 11월 키이우에서 열린 'GRA 연극 페스티벌'의 일환으로 소개된 '참전용사 극단(Veterans’ Theatre)'의 사례로, 우크라이나 문학의 정수인 고전 서사시 《에네이디》를 현대적 신체극으로 재해석하는 여정을 담고 있습니다.",
+        "korean_reader_note_kr": "한국 역시 분단과 전쟁의 역사적 아픔을 지닌 만큼, 상처 입은 몸을 예술적으로 승화시켜 사회적 연대를 모색하는 이들의 눈물겨운 발버둥은 우리에게도 깊은 공감대를 형성할 것입니다.",
+        "signal_keywords": [
+            "예술을 통한 사회 재통합",
+            "전쟁의 신체적 기억",
+            "고전 서사시의 동시대적 재해석"
+        ]
+    },
+    {
+        "id": "3d-printers-and-a-wig-archive-help-the-snl-hair-and-makeup-team-go-wilder-than-ever",
+        "title": "3D Printers and a Wig Archive Help the ‘SNL’ Hair and Makeup Team Go Wilder Than Ever",
+        "title_kr": "찰나의 무대를 위한 영원의 기술: SNL의 분장실이 가르쳐주는 시간 예술의 미래",
+        "summary_kr": "매주 생방송이라는 극단적인 시공간의 제약 속에서, 3D 프린팅 기술과 방대한 아카이브를 통해 한계를 뛰어넘는 SNL 분장 및 헤어 팀의 파괴적 혁신과 장인정신을 조명합니다.",
+        "date": "Tue, 09 Jun 2026 21:00:00 +0000",
+        "image": "https://www.indiewire.com/wp-content/uploads/2026/06/NUP_208846_00026.jpg?w=650",
+        "tier": "major",
+        "source": "IndieWire",
+        "link": "https://www.indiewire.com/features/craft/saturday-night-live-hair-makeup-interview-3d-printers-1235199049/",
+        "why_it_matters_kr": "무대 예술과 테크놀로지의 결합이 단순한 시각 효과의 확장을 넘어, 창작자의 노동 방식과 예술적 야심을 어떻게 시간의 제약으로부터 해방시키는가에 대한 생생한 증거입니다.",
+        "editorial_category": "industry",
+        "editorial_category_label": "Industry",
+        "context_kr": "미국 대중문화의 자존심이자 50년 가까이 라이브 스케치 쇼의 정점을 지켜온 'Saturday Night Live(SNL)'는 무대 뒤 숨은 예술가들의 초인적인 헌신과 기술적 진화로 유지되는 거대한 유기체입니다.",
+        "korean_reader_note_kr": "고질적인 제작 시간 부족과 예산 제약에 시달리는 한국의 대학로 연극계와 방송 제작 현장에, 기술 도입이 어떻게 스태프의 '밤샘'을 줄이고 표현의 한계를 넓힐 수 있는지 구체적인 실마리를 제공합니다.",
+        "signal_keywords": [
+            "시간의 한계 극복",
+            "기술과 전통의 공존",
+            "크리에이티브 워크플로우의 해방"
+        ]
+    },
+    {
         "id": "in-pittsburgh-a-partnership-leads-to-layoffs",
         "title": "In Pittsburgh, a Partnership Leads to Layoffs",
         "title_kr": "효율이라는 메스가 도려낸 무대 뒤의 영혼들: 피츠버그 퍼블릭 시어터의 해고가 던진 질문",
@@ -1787,40 +1829,6 @@
         "editorial_category": "cultural_signal",
         "editorial_category_label": "Cultural Signal",
         "why_it_matters_kr": "분기별로 반복되는 일본 애니메이션 산업의 거대한 흐름 속에서, 찰나의 미학을 포착해내는 고품격 큐레이션과 예술적 고찰.",
-        "signal_keywords": [
-            "Cultural Signal"
-        ]
-    },
-    {
-        "id": "synchronicity-theatre-to-seek-new-home",
-        "title": "Synchronicity Theatre to Seek New Home",
-        "title_kr": "무대의 뿌리를 옮기는 용기: 싱크로니시티 시어터가 그리는 새로운 지평",
-        "summary_kr": "12년의 미드타운 시대를 뒤로하고 새로운 예술적 도약을 준비하는 싱크로니시티 시어터, 공간의 상실을 공동체의 확장으로 전환하려는 그들의 용기 있는 여정을 조명합니다.",
-        "date": "Thu, 02 Apr 2026 19:26:40 +0000",
-        "image": "https://www.americantheatre.org/wp-content/uploads/peachtree-pointe.jpg",
-        "tier": "indie",
-        "source": "American Theatre",
-        "link": "https://www.americantheatre.org/2026/04/02/synchronicity-theatre-seeks-new-home/",
-        "editorial_category": "industry",
-        "editorial_category_label": "Industry",
-        "why_it_matters_kr": "12년의 미드타운 시대를 뒤로하고 새로운 예술적 도약을 준비하는 싱크로니시티 시어터, 공간의 상실을 공동체의 확장으로 전환하려는 그들의 용기 있는 여정을 조명합니다.",
-        "signal_keywords": [
-            "Industry"
-        ]
-    },
-    {
-        "id": "let-jon-hamm-steal-your-friends-and-neighbors-for-you",
-        "title": "Let Jon Hamm Steal ‘Your Friends and Neighbors’ for You",
-        "title_kr": "존 햄이 설계한 ‘가면 무도회’: 상류사회의 증기 속에서 발견한 타자성의 미학",
-        "summary_kr": "드라마 ‘Your Friends and Neighbors’ 속 존 햄의 연기를 통해, 부유한 위선자들 사이에서 ‘당신의 사람’이라는 단 한 마디로 도덕적 경계선을 긋는 고도의 캐릭터 연출과 현대적 피카레스크의 정수를 분석합니다.",
-        "date": "Fri, 03 Apr 2026 01:00:00 +0000",
-        "image": "https://www.indiewire.com/wp-content/uploads/2026/04/Your-Friends-and-Neighbors-Season-2-Jon-Hamm-Apple-show.jpg?w=650",
-        "tier": "major",
-        "source": "IndieWire",
-        "link": "https://www.indiewire.com/criticism/shows/jon-hamm-your-friends-and-neighbors-season-2-review-1235187059/",
-        "editorial_category": "cultural_signal",
-        "editorial_category_label": "Cultural Signal",
-        "why_it_matters_kr": "드라마 ‘Your Friends and Neighbors’ 속 존 햄의 연기를 통해, 부유한 위선자들 사이에서 ‘당신의 사람’이라는 단 한 마디로 도덕적 경계선을 긋는 고도의 캐릭터 연출과 현대적 피카레스크의 정수를 분석합니다.",
         "signal_keywords": [
             "Cultural Signal"
         ]
