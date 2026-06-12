@@ -1,5 +1,47 @@
 [
     {
+        "id": "all-stars-project-launches-artistic-advisory-council",
+        "title": "All Stars Project Launches Artistic Advisory Council",
+        "title_kr": "무대의 불이 꺼지는 시대, 올스타즈 프로젝트가 쏘아 올린 연극적 저항의 신호탄",
+        "summary_kr": "뉴욕의 비영리 연극계가 전례 없는 위기를 맞이한 지금, 올스타즈 프로젝트(ASP)가 '예술자문위원회'를 출범하며 무대를 통한 사회적 연대와 청년 성장의 새로운 돌파구를 모색합니다.",
+        "date": "Thu, 11 Jun 2026 17:17:14 +0000",
+        "image": "https://www.americantheatre.org/wp-content/uploads/5.-Group-photo-from-the-Untitled-workshop-held-in-May-2026-where-Crossroads-1932-by-Michele-Gilliam-was-read-and-discussed-1.jpg",
+        "tier": "indie",
+        "source": "American Theatre",
+        "link": "https://www.americantheatre.org/2026/06/11/all-stars-project-launches-artistic-advisory-council/",
+        "why_it_matters_kr": "전 세계적인 문화예술 지원 축소 흐름 속에서, 무대를 오락이 아닌 사회적 치유와 공동체 복원의 강력한 촉매제로 재정의하는 뉴욕 연극계의 최전선을 보여주기 때문입니다.",
+        "editorial_category": "industry",
+        "editorial_category_label": "Industry",
+        "context_kr": "올스타즈 프로젝트(ASP)는 뉴욕 42번가를 기반으로 소외계층 청소년들에게 무상 예술 교육을 제공해 온 독보적인 비영리 단체로, 이번 자문위 출범은 그들의 예술적 깊이를 한 단계 끌어올리기 위한 전략적 행보입니다.",
+        "korean_reader_note_kr": "한국 대학로의 소극장 폐관 러시와 공공 지원금 삭감 논란 속에서, 예술가들이 자발적으로 연대해 '인큐베이팅 플랫폼'을 지켜내고 사회적 가치를 증명해 나가는 뉴욕의 사례는 우리에게 깊은 영감을 줍니다.",
+        "signal_keywords": [
+            "비영리 연극 생태계의 붕괴와 저항",
+            "예술을 통한 사회적 처방(Social Prescribing)",
+            "청년 예술가 다각적 지원 모델"
+        ]
+    },
+    {
+        "id": "watch-stranger-things-vfx-supervisor-betsy-paterson-explain-when-storyboards-are-and-arent-helpful",
+        "title": "Watch ‘Stranger Things’ VFX Supervisor Betsy Paterson Explain When Storyboards Are (and Aren’t) Helpful",
+        "title_kr": "약속된 카오스 속에 피어나는 즉흥의 미학: <기묘한 이야기>의 시각효과가 무대에 건네는 질문",
+        "summary_kr": "넷플릭스 <기묘한 이야기>의 VFX 슈퍼바이저 벳시 패터슨이 밝힌 스토리보드의 명암을 통해, 치밀한 설계와 현장의 즉흥성이 공존하는 무대 예술의 본질적인 '안무(Choreography)'를 탐색합니다.",
+        "date": "Fri, 12 Jun 2026 00:30:00 +0000",
+        "image": "https://www.indiewire.com/wp-content/uploads/2025/12/Stranger-Things-Season-5-finale-ending-explosion.jpg?w=650",
+        "tier": "major",
+        "source": "IndieWire",
+        "link": "https://www.indiewire.com/features/craft/stranger-things-vfx-interview-craft-roundtables-1235199731/",
+        "why_it_matters_kr": "기술적 정교함이 극에 달한 현대 공연 예술계에서 '설계'와 '자유'라는 오래된 이중주를 어떻게 조율할 것인가에 대한 깊은 예술적 통찰을 제공합니다.",
+        "editorial_category": "stage_to_screen",
+        "editorial_category_label": "Stage to Screen",
+        "context_kr": "세계적인 메가 히트작 <기묘한 이야기>의 시각효과(VFX)를 지휘한 벳시 패터슨은 특수효과와 실사 액션이 결합하는 정교한 시퀀스에서 스토리보드가 갖는 절대적 가치와, 반대로 공기감을 연출할 때 필요한 유연함의 공존을 역설합니다.",
+        "korean_reader_note_kr": "최근 한국 극장가에서도 홀로그램, 미디어아트, 무대 자동화 장치를 결합한 융복합 공연이 늘어나고 있습니다. 이 기사를 통해 완벽하게 제어된 기술적 프레임 안에서 배우의 라이브한 에너지가 어떻게 숨 쉴 틈을 찾는지 비교해 감상해 보시기 바랍니다.",
+        "signal_keywords": [
+            "정교한 시각 연출",
+            "통제와 즉흥의 균형",
+            "공연의 안무적 조화"
+        ]
+    },
+    {
         "id": "theatre-during-wartime-a-report-from-ukraine",
         "title": "Theatre During Wartime: A Report From Ukraine",
         "title_kr": "포화 속에서 피어난 신체의 서사시: 동정을 넘어 '이해'의 영토로",
@@ -1797,40 +1839,6 @@
         "why_it_matters_kr": "AI 모델 일시적 과부하로 정보를 불러오지 못했습니다.",
         "signal_keywords": [
             "Stage to Screen"
-        ]
-    },
-    {
-        "id": "sorrygrateful-2-new-books-show-the-many-sides-of-sondheim",
-        "title": "Sorry-Grateful: 2 New Books Show the Many Sides of Sondheim",
-        "title_kr": "천재의 이면, 그 '미안하고도 고마운' 불협화음의 미학: 스티븐 손드하임을 읽는 두 가지 시선",
-        "summary_kr": "현대 뮤지컬의 지형도를 바꾼 거장 스티븐 손드하임의 다층적인 면모를 다룬 두 권의 신간을 통해, 지독한 완벽주의와 따스한 인간미 사이를 오갔던 그의 예술적 궤적을 심층 조명합니다.",
-        "date": "Fri, 03 Apr 2026 20:30:36 +0000",
-        "image": "https://www.americantheatre.org/wp-content/uploads/Stephen_Sondheim_1976_0.jpg",
-        "tier": "indie",
-        "source": "American Theatre",
-        "link": "https://www.americantheatre.org/2026/04/03/sorry-grateful-2-new-books-show-the-many-sides-of-sondheim/",
-        "editorial_category": "cultural_signal",
-        "editorial_category_label": "Cultural Signal",
-        "why_it_matters_kr": "현대 뮤지컬의 지형도를 바꾼 거장 스티븐 손드하임의 다층적인 면모를 다룬 두 권의 신간을 통해, 지독한 완벽주의와 따스한 인간미 사이를 오갔던 그의 예술적 궤적을 심층 조명합니다.",
-        "signal_keywords": [
-            "Cultural Signal"
-        ]
-    },
-    {
-        "id": "5-anime-series-to-check-out-this-spring",
-        "title": "5 Anime Series to Check Out This Spring",
-        "title_kr": "무대 위의 캔버스: 사계절의 전령들이 건네는 봄의 미장센",
-        "summary_kr": "분기별로 반복되는 일본 애니메이션 산업의 거대한 흐름 속에서, 찰나의 미학을 포착해내는 고품격 큐레이션과 예술적 고찰.",
-        "date": "Fri, 03 Apr 2026 22:00:00 +0000",
-        "image": "https://www.indiewire.com/wp-content/uploads/2026/04/witchhatatelier.jpeg?w=650",
-        "tier": "major",
-        "source": "IndieWire",
-        "link": "https://www.indiewire.com/features/commentary/anime-spring-2026-shows-watch-1235187391/",
-        "editorial_category": "cultural_signal",
-        "editorial_category_label": "Cultural Signal",
-        "why_it_matters_kr": "분기별로 반복되는 일본 애니메이션 산업의 거대한 흐름 속에서, 찰나의 미학을 포착해내는 고품격 큐레이션과 예술적 고찰.",
-        "signal_keywords": [
-            "Cultural Signal"
         ]
     }
 ]
