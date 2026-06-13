@@ -1,5 +1,47 @@
 [
     {
+        "id": "solo-acts-of-comic-commemoration-in-the-peculiar-patriot-and-greef",
+        "title": "Solo Acts of Comic Commemoration in ‘The Peculiar Patriot’ and ‘Greef’",
+        "title_kr": "성조기를 깁는 잔혹한 낙관주의: '더 피큘리어 패트리어트'가 외치는 국가를 향한 가혹한 사랑",
+        "summary_kr": "미국 건국 250주년을 앞두고, 수감 제도의 모순과 흑인 잔혹사를 고발하는 1인극 '더 피큘리어 패트리어트'를 통해 국가에 대한 맹목적 충성이 아닌 '가혹한 사랑(Tough Love)'으로서의 새로운 애국심을 탐색합니다.",
+        "date": "Fri, 12 Jun 2026 12:00:17 +0000",
+        "image": "https://www.americantheatre.org/wp-content/uploads/goes-to-show_june-2026-1.jpg",
+        "tier": "indie",
+        "source": "American Theatre",
+        "link": "https://www.americantheatre.org/2026/06/12/solo-acts-of-comic-commemoration-in-the-peculiar-patriot-and-greef/",
+        "why_it_matters_kr": "국가 권력의 모순을 바느질과 해학으로 치유하려는 한 여성의 투쟁은, 사법 불신과 사회적 소외를 겪는 한국 사회에도 깊은 예술적 통찰을 선사합니다.",
+        "editorial_category": "criticism",
+        "editorial_category_label": "Criticism",
+        "context_kr": "라이자 제시 피터슨(Liza Jessie Peterson)의 이 기념비적인 1인극은 뉴욕 라이커스 섬 교도소에서의 예술 강사 경험을 바탕으로 탄생했으며, 극장 무대에 오르기 전 35개 교도소를 순회하며 수감자들과 먼저 교감했습니다.",
+        "korean_reader_note_kr": "한국의 마당극이나 판소리 1인극이 지닌 해학과 날카로운 사회 고발 정신을 떠올리며 이 작품을 읽는다면, 무대 위 홀로 선 배우의 에너지가 어떻게 거대한 시스템을 흔드는지 생생히 느낄 수 있을 것입니다.",
+        "signal_keywords": [
+            "가혹한 사랑으로서의 애국심",
+            "교도소-산업 복합체",
+            "바느질의 전복적 미학"
+        ]
+    },
+    {
+        "id": "doj-will-not-challenge-paramountwarner-bros-merger-deal-will-increase-competition-and-benefit-american-consumers-and-workers",
+        "title": "DOJ Will Not Challenge Paramount-Warner Bros. Merger: Deal Will ‘Increase Competition’ and ‘Benefit American Consumers and Workers’",
+        "title_kr": "거인의 결합, 무대와 스크린의 경계를 흔들다: 파라마운트-워너 브라더스 합병 승인이 던진 문화적 화두",
+        "summary_kr": "미 법무부의 파라마운트-워너 브라더스 합병 승인이 단순한 미디어 공룡의 탄생을 넘어, 브로드웨이와 할리우드를 잇는 스토리텔링 생태계에 가져올 거대한 지각변동을 깊이 있게 통찰합니다.",
+        "date": "Fri, 12 Jun 2026 22:54:52 +0000",
+        "image": "https://www.indiewire.com/wp-content/uploads/2026/06/GettyImages-2276427449.jpg?w=650",
+        "tier": "major",
+        "source": "IndieWire",
+        "link": "https://www.indiewire.com/news/breaking-news/doj-will-not-challenge-paramount-warner-bros-merger-1235200065/",
+        "why_it_matters_kr": "할리우드 거대 스튜디오의 결합이 극장 예술의 스크린 전이(Stage-to-Screen)와 무대 창작자들의 권리에 미칠 장기적 파급력을 이해하기 위해 이 기사를 주목해야 합니다.",
+        "editorial_category": "stage_to_screen",
+        "editorial_category_label": "Stage to Screen",
+        "context_kr": "워너 브라더스와 파라마운트는 수많은 뮤지컬 영화와 연극 기반 IP를 보유한 미디어 거인들로, 이들의 결합은 공연 예술 IP의 영상화 및 글로벌 유통 경로에 직접적인 영향을 미칩니다.",
+        "korean_reader_note_kr": "한국의 창작 뮤지컬이 글로벌 OTT 및 스크린으로 진출하려는 시점에서, 거대 플랫폼들의 통폐합이 독점적 장벽이 될지 혹은 글로벌 유통망의 확장이 될지 예측해보는 중요한 이정표가 될 것입니다.",
+        "signal_keywords": [
+            "플랫폼 통폐합과 예술 다양성",
+            "공연 IP의 스크린 영토 확장",
+            "자본의 독점과 창작자 권리"
+        ]
+    },
+    {
         "id": "all-stars-project-launches-artistic-advisory-council",
         "title": "All Stars Project Launches Artistic Advisory Council",
         "title_kr": "무대의 불이 꺼지는 시대, 올스타즈 프로젝트가 쏘아 올린 연극적 저항의 신호탄",
@@ -1805,40 +1847,6 @@
         "why_it_matters_kr": "AI 모델 일시적 과부하로 정보를 불러오지 못했습니다.",
         "signal_keywords": [
             "Cultural Signal"
-        ]
-    },
-    {
-        "id": "the-drama-has-one-big-idea-but-its-edit-is-designed-to-have-10-per-minute",
-        "title": "‘The Drama’ Has One Big Idea, but Its Edit Is Designed to Have 10 Per Minute",
-        "title_kr": "‘The Drama’ Has One Big Idea, but Its Edit Is Designed to Have 10 Per Minute",
-        "summary_kr": "AI 모델 일시적 과부하로 정보를 불러오지 못했습니다.",
-        "date": "Mon, 06 Apr 2026 21:00:00 +0000",
-        "image": "https://www.indiewire.com/wp-content/uploads/2026/04/MCDDRAM_EC051.jpg?w=650",
-        "tier": "major",
-        "source": "IndieWire",
-        "link": "https://www.indiewire.com/features/craft/the-drama-movie-making-of-interview-editing-1235187555/",
-        "editorial_category": "cultural_signal",
-        "editorial_category_label": "Cultural Signal",
-        "why_it_matters_kr": "AI 모델 일시적 과부하로 정보를 불러오지 못했습니다.",
-        "signal_keywords": [
-            "Cultural Signal"
-        ]
-    },
-    {
-        "id": "video-game-movies were way-more-fun when-they-were as-weird-as-1993s-super-mario-bros",
-        "title": "Video Game Movies Were Way More Fun When They Were as Weird as 1993’s ‘Super Mario Bros.’",
-        "title_kr": "Video Game Movies Were Way More Fun When They Were as Weird as 1993’s ‘Super Mario Bros.’",
-        "summary_kr": "AI 모델 일시적 과부하로 정보를 불러오지 못했습니다.",
-        "date": "Sat, 04 Apr 2026 03:59:00 +0000",
-        "image": "https://www.indiewire.com/wp-content/uploads/2026/04/M8DSUMA_EC006.jpg?w=650",
-        "tier": "major",
-        "source": "IndieWire",
-        "link": "https://www.indiewire.com/features/best-of/super-mario-bros-1993-cult-movie-bob-hoskins-1235187409/",
-        "editorial_category": "stage_to_screen",
-        "editorial_category_label": "Stage to Screen",
-        "why_it_matters_kr": "AI 모델 일시적 과부하로 정보를 불러오지 못했습니다.",
-        "signal_keywords": [
-            "Stage to Screen"
         ]
     }
 ]

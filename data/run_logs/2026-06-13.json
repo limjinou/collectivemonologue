@@ -1,0 +1,12 @@
+{
+    "started_at": "2026-06-13T02:02:14.844256+00:00",
+    "finished_at": "2026-06-13T02:05:01.956516+00:00",
+    "feeds_checked": 9,
+    "entries_found": 14,
+    "entries_selected": 2,
+    "processed": 2,
+    "added": 2,
+    "skipped_duplicate": 0,
+    "failed": 0,
+    "failures_by_reason": {}
+}
