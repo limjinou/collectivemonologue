@@ -1,5 +1,43 @@
 [
     {
+        "id": "beautiful-nonviolent-anarchist-revolution-where-are-you",
+        "title": "Beautiful Non-Violent Anarchist Revolution, Where Are You?",
+        "title_kr": "Beautiful Non-Violent Anarchist Revolution, Where Are You?",
+        "summary_kr": "AI 모델 일시적 과부하로 정보를 불러오지 못했습니다.",
+        "date": "Mon, 15 Jun 2026 19:01:30 +0000",
+        "image": "https://www.americantheatre.org/wp-content/uploads/2015/04/judith-malina.jpg",
+        "tier": "indie",
+        "source": "American Theatre",
+        "link": "https://www.americantheatre.org/2026/06/15/beautiful-non-violent-anarchist-revolution-where-are-you/",
+        "why_it_matters_kr": "",
+        "editorial_category": "cultural_signal",
+        "editorial_category_label": "Cultural Signal",
+        "context_kr": "",
+        "korean_reader_note_kr": "",
+        "signal_keywords": []
+    },
+    {
+        "id": "watch-costume-designers-talk-balancing-creativity-and-logistics-at-indiewires-craft-roundtables",
+        "title": "Watch Costume Designers Talk Balancing Creativity and Logistics at IndieWire’s Craft Roundtables",
+        "title_kr": "보이지 않는 실로 짜인 예술: 의상 디자이너가 조율하는 상상력과 예산의 미학",
+        "summary_kr": "화려한 스크린과 무대 뒤편, 세계적 의상 디자이너들이 맞닥뜨리는 예술적 영감과 냉혹한 현실(예산과 노동) 사이의 팽팽한 긴장감을 조명하며, 창조성과 행정력이라는 이중주가 어떻게 위대한 캐릭터를 탄생시키는지 탐구합니다.",
+        "date": "Tue, 16 Jun 2026 01:25:40 +0000",
+        "image": "https://www.indiewire.com/wp-content/uploads/2026/06/JCO14664_4a526e.jpg?w=650",
+        "tier": "major",
+        "source": "IndieWire",
+        "link": "https://www.indiewire.com/features/craft/craft-roundtables-costume-design-panel-watch-1235200454/",
+        "why_it_matters_kr": "우리가 매혹되는 캐릭터의 실루엣이 단순한 예술적 직관이 아닌, 철저한 경영과 조율의 산물임을 깨달을 때 비로소 공연과 영상 예술을 바라보는 우리의 시선이 깊어지기 때문입니다.",
+        "editorial_category": "industry",
+        "editorial_category_label": "Industry",
+        "context_kr": "인디와이어(IndieWire)의 크래프트 라운드테이블에 모인 에미상 후보급 디자이너들이 창작자이자 관리자로서 겪는 현실적 고충을 나누며, 창작의 이면에 가려진 진짜 '노동'의 가치를 환기합니다.",
+        "korean_reader_note_kr": "한국의 콘텐츠 산업과 연극·뮤지컬 무대 역시 제작 규모가 급성장하는 과도기에 있습니다. 창작자의 예술적 주권과 자본 관리의 균형이라는 이들의 고민은 오늘날 한국의 제작 현장에도 매우 시의적절한 화두를 던집니다.",
+        "signal_keywords": [
+            "창작과 행정의 하이브리드화",
+            "비하인드 노동의 예술화",
+            "협업가로서의 디자이너 재정의"
+        ]
+    },
+    {
         "id": "pamper-yourself-this-pride-with-1991s vegas-in-space-the-fiercest-drag-film-on-the-planet-clitoris",
         "title": "Pamper Yourself This Pride with 1991’s ‘Vegas in Space,’ the Fiercest Drag Film on the Planet Clitoris",
         "title_kr": "행성 클리토리스에서 온 찬란한 전위: ‘베가스 인 스페이스’와 드랙(Drag)이 맞이한 주류화의 새벽",
@@ -1817,40 +1855,6 @@
         "why_it_matters_kr": "내홍의 상처로 침묵에 잠겼던 시카고 연극계의 심장, 빅토리 가든스가 새로운 리더십과 함께 지역 공동체를 향한 치유의 첫걸음을 뗐습니다.",
         "signal_keywords": [
             "Cultural Signal"
-        ]
-    },
-    {
-        "id": "steal-this-story-please-review-journalist-amy-goodman-is-the-subject-of-a-glowing-doc-that-should-rally-the-converted",
-        "title": "‘Steal This Story, Please!’ Review: Journalist Amy Goodman Is the Subject of a Glowing Doc That Should Rally the Converted",
-        "title_kr": "침묵을 찢는 목소리의 무대화: 에이미 굿맨이라는 독보적인 저널리즘 페르소나",
-        "summary_kr": "권력의 견고한 무대 뒤편을 비추어온 저널리스트 에이미 굿맨의 생애를 다룬 다큐멘터리, 신념의 관객들을 결집시키는 웅장한 연대의 기록을 탐구하다.",
-        "date": "Wed, 08 Apr 2026 21:00:00 +0000",
-        "image": "https://www.indiewire.com/wp-content/uploads/2026/04/SSP2_AG-Reporting-from-Standing-Rock-1.jpg?w=650",
-        "tier": "major",
-        "source": "IndieWire",
-        "link": "https://www.indiewire.com/criticism/movies/steal-this-story-please-review-amy-goodman-documentary-1235188032/",
-        "editorial_category": "criticism",
-        "editorial_category_label": "Criticism",
-        "why_it_matters_kr": "권력의 견고한 무대 뒤편을 비추어온 저널리스트 에이미 굿맨의 생애를 다룬 다큐멘터리, 신념의 관객들을 결집시키는 웅장한 연대의 기록을 탐구하다.",
-        "signal_keywords": [
-            "Criticism"
-        ]
-    },
-    {
-        "id": "bad-bunny-and-latinx-theatre-commons-start-storytelling-from-the-beginning",
-        "title": "Bad Bunny and Latinx Theatre Commons Start Storytelling From the Beginning",
-        "title_kr": "Bad Bunny and Latinx Theatre Commons Start Storytelling From the Beginning",
-        "summary_kr": "AI 모델 일시적 과부하로 정보를 불러오지 못했습니다.",
-        "date": "Tue, 07 Apr 2026 22:38:41 +0000",
-        "image": "https://www.americantheatre.org/wp-content/uploads/bad-bunny_super-bowl.jpg",
-        "tier": "indie",
-        "source": "American Theatre",
-        "link": "https://www.americantheatre.org/2026/04/07/bad-bunny-and-latinx-theatre-commons-start-storytelling-from-the-beginning/",
-        "editorial_category": "industry",
-        "editorial_category_label": "Industry",
-        "why_it_matters_kr": "AI 모델 일시적 과부하로 정보를 불러오지 못했습니다.",
-        "signal_keywords": [
-            "Industry"
         ]
     }
 ]
