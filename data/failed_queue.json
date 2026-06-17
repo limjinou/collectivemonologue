@@ -70,5 +70,29 @@
         "last_error": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
         "attempt_count": 1,
         "max_retry": 3
+    },
+    {
+        "failed_at": "2026-06-17T02:15:38.298145+00:00",
+        "reason": "model_error",
+        "source": "IndieWire",
+        "tier": "major",
+        "title": "‘Monster: The Ed Gein Story’ Composer Mac Quayle Turned a Horror Theme Into a Funeral Song — Watch",
+        "link": "https://www.indiewire.com/features/craft/monster-ed-gein-story-composer-interview-craft-roundtables-1235200470/",
+        "published": "Wed, 17 Jun 2026 00:45:00 +0000",
+        "last_error": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
+        "attempt_count": 1,
+        "max_retry": 3
+    },
+    {
+        "failed_at": "2026-06-17T02:17:30.722711+00:00",
+        "reason": "model_error",
+        "source": "American Theatre",
+        "tier": "indie",
+        "title": "‘Once’ Upon a Time: A Live Concert Doc With the Original New York Cast",
+        "link": "https://www.americantheatre.org/2026/06/16/once-upon-a-time-a-live-concert-doc-with-the-original-new-york-cast/",
+        "published": "Tue, 16 Jun 2026 12:00:58 +0000",
+        "last_error": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
+        "attempt_count": 1,
+        "max_retry": 3
     }
 ]
