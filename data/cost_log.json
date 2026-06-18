@@ -298,5 +298,15 @@
             "gemini-flash-latest": 4
         },
         "estimated_input_chars": 18124
+    },
+    "2026-06-18": {
+        "total_calls": 4,
+        "success": 0,
+        "failed": 4,
+        "quota_errors": 0,
+        "models_used": {
+            "gemini-flash-latest": 4
+        },
+        "estimated_input_chars": 18082
     }
 }

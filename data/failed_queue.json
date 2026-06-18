@@ -94,5 +94,29 @@
         "last_error": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
         "attempt_count": 1,
         "max_retry": 3
+    },
+    {
+        "failed_at": "2026-06-18T02:14:06.213751+00:00",
+        "reason": "model_error",
+        "source": "IndieWire",
+        "tier": "major",
+        "title": "Why ‘Starfleet Academy’ Needed to Ditch Anamorphic Lenses to Take Off — Watch",
+        "link": "https://www.indiewire.com/features/craft/star-trek-starfleet-academy-dp-interview-craft-roundtables-1235201024/",
+        "published": "Wed, 17 Jun 2026 22:30:00 +0000",
+        "last_error": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
+        "attempt_count": 1,
+        "max_retry": 3
+    },
+    {
+        "failed_at": "2026-06-18T02:15:09.594629+00:00",
+        "reason": "model_error",
+        "source": "American Theatre",
+        "tier": "indie",
+        "title": "Know a Theatre: Duke City Repertory Theatre of Albuquerque, New Mexico",
+        "link": "https://www.americantheatre.org/2026/06/17/know-a-theatre-duke-city-repertory-theatre-of-albuquerque-new-mexico/",
+        "published": "Wed, 17 Jun 2026 20:20:11 +0000",
+        "last_error": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
+        "attempt_count": 1,
+        "max_retry": 3
     }
 ]
