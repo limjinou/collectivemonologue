@@ -1,5 +1,47 @@
 [
     {
+        "id": "know-a-theatre-duke-city-repertory-theatre-of-albuquerque-new-mexico",
+        "title": "Know a Theatre: Duke City Repertory Theatre of Albuquerque, New Mexico",
+        "title_kr": "모래바람 속에서 피어난 연극적 연대: 듀크 시티 레퍼토리와 아멜리아 암푸에로의 영토",
+        "summary_kr": "뉴멕시코주 앨버커키의 척박하면서도 풍요로운 대지 위에서, 연극의 높은 장벽을 허물고 '과정'의 가치를 증명해가는 듀크 시티 레퍼토리 시어터(DCRT)의 치열한 예술적 도정.",
+        "date": "Wed, 17 Jun 2026 20:20:11 +0000",
+        "image": "https://www.americantheatre.org/wp-content/uploads/stargazing_duke-city-rep_2019-1024x683.jpg",
+        "tier": "indie",
+        "source": "American Theatre",
+        "link": "https://www.americantheatre.org/2026/06/17/know-a-theatre-duke-city-repertory-theatre-of-albuquerque-new-mexico/",
+        "why_it_matters_kr": "극장이라는 물리적 공간의 한계를 넘어 지역 공동체와 숨 쉬고, 예술가의 성장과 다양성을 최우선으로 삼는 대안적 극장 모델의 가능성을 보여줍니다.",
+        "editorial_category": "industry",
+        "editorial_category_label": "Industry",
+        "context_kr": "미국 뉴멕시코주 앨버커키를 기반으로 한 듀크 시티 레퍼토리 시어터는 '바드 크롤(Bard Crawl)' 등 파격적인 형식과 '지불 가능한 만큼만 내는' 유연한 요금제로 지역 사회와 밀착해 온 소극장입니다.",
+        "korean_reader_note_kr": "대학로의 소극장 운동이나 지역 문화재단 주도의 커뮤니티 아트 활성화 고민을 안고 있는 한국의 연극인과 관객들에게, 지속 가능한 지역 연극 생태계에 대한 신선한 영감을 제공합니다.",
+        "signal_keywords": [
+            "탈경계적 공간 실험",
+            "과정 중심 예술(Process over Product)",
+            "다양성과 포용성의 로컬라이징"
+        ]
+    },
+    {
+        "id": "how-do-you-get-the-la-city-council-to-care-about-your-30k-short-film",
+        "title": "How Do You Get the L.A. City Council to Care About Your $30K Short Film?",
+        "title_kr": "3만 달러의 소란, 극장을 넘어 공동체로 회귀하는 예술의 영토",
+        "summary_kr": "거대 자본과 알고리즘의 지배 속에서, 단돈 3만 달러로 제작된 인디 파일럿 ‘밸리 데이즈’가 LA 시의회까지 움직인 비결을 통해 예술이 발을 디뎌야 할 진짜 영토가 어디인지를 탐색한다.",
+        "date": "Fri, 19 Jun 2026 23:30:00 +0000",
+        "image": "https://www.indiewire.com/wp-content/uploads/2026/06/Copy-of-VD-Still_2.485.1.png?w=650",
+        "tier": "major",
+        "source": "IndieWire",
+        "link": "https://www.indiewire.com/news/general-news/valley-daze-la-city-council-hosts-short-film-screening-1235201397/",
+        "why_it_matters_kr": "글로벌 배급망과 화려한 페스티벌 대신 ‘하이퍼 로컬(Hyper-local)’ 공동체의 밀도 높은 연대를 택한 이들의 실험은, 예술적 자생력을 잃어가는 한국의 독립 예술 씬에도 묵직한 이정표를 제시하기 때문이다.",
+        "editorial_category": "cultural_signal",
+        "editorial_category_label": "Cultural Signal",
+        "context_kr": "샌페르난도 밸리 출신의 청년 100여 명이 십시일반 크라우드 펀딩으로 제작한 로컬 TV 파일럿 '밸리 데이즈'는 기성 배급망을 거부하고 철저히 지역 공동체 상영만을 고집해 매진 사례를 기록하며 LA 시의회의 공식 후원까지 이끌어냈습니다.",
+        "korean_reader_note_kr": "대학로 중심의 연극 지형이나 지역 독립예술 씬이 직면한 관객 감소와 재정난 속에서, 창작자가 지역 주민들과 어떻게 직접적이고 유기적인 관계를 맺으며 자생적 생태계를 구축할 수 있는지에 대한 실천적 힌트를 줍니다.",
+        "signal_keywords": [
+            "하이퍼 로컬리즘",
+            "공동체 창작",
+            "배급의 탈중앙화"
+        ]
+    },
+    {
         "id": "beautiful-nonviolent-anarchist-revolution-where-are-you",
         "title": "Beautiful Non-Violent Anarchist Revolution, Where Are You?",
         "title_kr": "Beautiful Non-Violent Anarchist Revolution, Where Are You?",
@@ -1819,40 +1861,6 @@
         "editorial_category": "cultural_signal",
         "editorial_category_label": "Cultural Signal",
         "why_it_matters_kr": "서부 연극계의 심장부, 로스앤젤레스 비평가 협회가 선택한 2025년의 걸작들을 통해 동시대 공연 예술이 지향하는 다양성과 기술적 혁신의 정점을 탐미해 봅니다.",
-        "signal_keywords": [
-            "Cultural Signal"
-        ]
-    },
-    {
-        "id": "the-pitt-production-team-tracks-every-sock-every-empty-drawer-and-its-why-the-show-feels-so-real",
-        "title": "‘The Pitt’ Production Team Tracks Every Sock, Every Empty Drawer, and It’s Why the Show Feels So Real",
-        "title_kr": "15시간의 숭고한 집착: 'The Pitt'이 증명한 디테일의 리얼리즘",
-        "summary_kr": "단 한 번의 병원 교대 근무 시간을 15시간의 대서사로 풀어내기 위해, 양말 한 켤레와 혈흔의 위치까지 추적하는 어느 제작진의 경이로운 집요함에 대하여.",
-        "date": "Thu, 09 Apr 2026 22:00:00 +0000",
-        "image": "https://www.indiewire.com/wp-content/uploads/2026/04/the-pitt-still-featuring-monica-and-dana-behind-the-desk.jpeg?w=650",
-        "tier": "major",
-        "source": "IndieWire",
-        "link": "https://www.indiewire.com/features/craft/the-pitt-season-2-production-design-interview-1235187974/",
-        "editorial_category": "cultural_signal",
-        "editorial_category_label": "Cultural Signal",
-        "why_it_matters_kr": "단 한 번의 병원 교대 근무 시간을 15시간의 대서사로 풀어내기 위해, 양말 한 켤레와 혈흔의 위치까지 추적하는 어느 제작진의 경이로운 집요함에 대하여.",
-        "signal_keywords": [
-            "Cultural Signal"
-        ]
-    },
-    {
-        "id": "can-victory-gardens-bloom-again",
-        "title": "Can Victory Gardens Bloom Again?",
-        "title_kr": "멈춰버린 시계태엽을 다시 감는 법: 빅토리 가든스의 부활을 향한 서곡",
-        "summary_kr": "내홍의 상처로 침묵에 잠겼던 시카고 연극계의 심장, 빅토리 가든스가 새로운 리더십과 함께 지역 공동체를 향한 치유의 첫걸음을 뗐습니다.",
-        "date": "Wed, 08 Apr 2026 16:15:27 +0000",
-        "image": "https://www.americantheatre.org/wp-content/uploads/Victory-Gardens-Theater-Venue.jpg",
-        "tier": "indie",
-        "source": "American Theatre",
-        "link": "https://www.americantheatre.org/2026/04/08/can-victory-gardens-bloom-again/",
-        "editorial_category": "cultural_signal",
-        "editorial_category_label": "Cultural Signal",
-        "why_it_matters_kr": "내홍의 상처로 침묵에 잠겼던 시카고 연극계의 심장, 빅토리 가든스가 새로운 리더십과 함께 지역 공동체를 향한 치유의 첫걸음을 뗐습니다.",
         "signal_keywords": [
             "Cultural Signal"
         ]
