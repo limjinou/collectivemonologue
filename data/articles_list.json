@@ -1,5 +1,26 @@
 [
     {
+        "id": "fifa-cant-beat-sylvester-stallone-and-michael-caine-challenging-literal-nazis-to-soccer-in-1981s-victory",
+        "title": "FIFA Can’t Beat Sylvester Stallone and Michael Caine Challenging Literal Nazis to Soccer in 1981’s ‘Victory’",
+        "title_kr": "초록 비단 위에서 펼쳐지는 이데올로기의 극장: 1981년작 ‘승리의 탈출’이 남긴 연극적 유산",
+        "summary_kr": "존 휴스턴 감독의 1981년작 영화 ‘승리의 탈출(Victory)’을 통해 스포츠라는 거대한 무대 위에서 펼쳐지는 인간의 신체성과 이데올로기적 연극성을 탐구하며, 고전적 서사가 지닌 낭만적 저항의 힘을 조명합니다.",
+        "date": "Sat, 20 Jun 2026 03:59:00 +0000",
+        "image": "https://www.indiewire.com/wp-content/uploads/2026/06/MCDVICT_EC009.jpg?w=650",
+        "tier": "major",
+        "source": "IndieWire",
+        "link": "https://www.indiewire.com/features/best-of/victory-john-huston-nazi-cult-soccer-movie-world-cup-1235201172/",
+        "why_it_matters_kr": "단순한 스포츠 오락 영화를 넘어, 이데올로기적 대립을 '경기장'이라는 연극적 공간과 '신체'라는 무대 언어로 승화시킨 고전의 드라마투르기를 재발견하는 계기를 제공합니다.",
+        "editorial_category": "stage_to_screen",
+        "editorial_category_label": "Stage to Screen",
+        "context_kr": "헝가리 영화 ‘지옥의 두 전반전’을 원작으로 한 이 작품은 실베스터 스탤론, 마이클 케인, 펠레 등 당대 최고의 배우와 스포츠 스타들이 결합해 전형적인 전쟁 영화의 틀을 넘어선 독특한 신체적 에너지를 연출해 냈습니다.",
+        "korean_reader_note_kr": "한국 관객에게 친숙한 스포츠 드라마 속 비언어적 화해의 모티브가 서구 고전 영화에서 어떻게 '정치적 연극성'으로 구현되었는지 비교해 읽는 재미가 있을 것입니다.",
+        "signal_keywords": [
+            "스포츠의 연극성",
+            "신체적 퍼포먼스",
+            "냉전기 고전 드라마투르기"
+        ]
+    },
+    {
         "id": "know-a-theatre-duke-city-repertory-theatre-of-albuquerque-new-mexico",
         "title": "Know a Theatre: Duke City Repertory Theatre of Albuquerque, New Mexico",
         "title_kr": "모래바람 속에서 피어난 연극적 연대: 듀크 시티 레퍼토리와 아멜리아 암푸에로의 영토",
@@ -1846,23 +1867,6 @@
         "why_it_matters_kr": "디지털의 매끈한 해상도가 놓쳐버린 인간적 온기를 복원하기 위해, 드라마 '유포리아'는 새로운 필름 'VERITA 200D'를 통해 다시 한번 아날로그적 숭고미를 탐닉합니다.",
         "signal_keywords": [
             "Stage to Screen"
-        ]
-    },
-    {
-        "id": "la-drama-critics-circle-awards-bechdel-project-residency-and-more",
-        "title": "L.A. Drama Critics Circle Awards, Bechdel Project Residency, and More",
-        "title_kr": "L.A.의 찬란한 무대, 그 찰나의 영원성을 기록하다: 2025 LADCC 어워즈가 남긴 여운",
-        "summary_kr": "서부 연극계의 심장부, 로스앤젤레스 비평가 협회가 선택한 2025년의 걸작들을 통해 동시대 공연 예술이 지향하는 다양성과 기술적 혁신의 정점을 탐미해 봅니다.",
-        "date": "Thu, 09 Apr 2026 20:24:05 +0000",
-        "image": "https://www.americantheatre.org/wp-content/uploads/Cambodian-Rock-Band.jpg",
-        "tier": "indie",
-        "source": "American Theatre",
-        "link": "https://www.americantheatre.org/2026/04/09/l-a-drama-critics-circle-awards-bechdel-project-residency-and-more/",
-        "editorial_category": "cultural_signal",
-        "editorial_category_label": "Cultural Signal",
-        "why_it_matters_kr": "서부 연극계의 심장부, 로스앤젤레스 비평가 협회가 선택한 2025년의 걸작들을 통해 동시대 공연 예술이 지향하는 다양성과 기술적 혁신의 정점을 탐미해 봅니다.",
-        "signal_keywords": [
-            "Cultural Signal"
         ]
     }
 ]
