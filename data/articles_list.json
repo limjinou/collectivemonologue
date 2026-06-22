@@ -1,5 +1,26 @@
 [
     {
+        "id": "the-death-of-robin-hood-whats-historically-accurate-in-this-violent-revisionist-tale",
+        "title": "‘The Death of Robin Hood’: What’s Historically Accurate in This Violent Revisionist Tale?",
+        "title_kr": "낭만의 박제를 찢고 나온 피비린내 나는 진실: <롭 인 후드의 죽음>이 던지는 신화 해체의 미학",
+        "summary_kr": "A24의 신작 영화 <롭 인 후드의 죽음>을 화두 삼아, 의적 신화의 이면에 감춰진 가혹한 역사적 실제와 구전 전설이 수행적 예술(Performing Arts)로서 지니는 해체와 재정의의 가치를 탐구합니다.",
+        "date": "Sun, 21 Jun 2026 03:00:00 +0000",
+        "image": "https://www.indiewire.com/wp-content/uploads/2026/06/The-Death-of-Robin-Hood-Hugh-Jackman.jpg?w=650",
+        "tier": "major",
+        "source": "IndieWire",
+        "link": "https://www.indiewire.com/features/interviews/the-death-of-robin-hood-real-movie-based-on-1235201336/",
+        "why_it_matters_kr": "우리가 믿어온 영웅적 서사가 어떻게 권력과 시대의 요구에 의해 윤색되었는지, 그리고 이를 무대와 스크린 위에서 해체하는 작업이 왜 현대 예술의 가장 정교한 지적 유희인지를 보여주기 때문입니다.",
+        "editorial_category": "criticism",
+        "editorial_category_label": "Criticism",
+        "context_kr": "영화 <피그>와 <콰이어트 플레이스: 첫째 날>을 연출한 마이클 사노스키 감독이 메가폰을 잡고 휴 잭맨이 주연을 맡은 A24의 신작으로, 익숙한 의적 낭만을 걷어내고 1274년 셀틱 변방의 잔혹한 생존 현실을 밀도 높게 그립니다.",
+        "korean_reader_note_kr": "국내 관객에게 친숙한 임꺽정이나 홍길동 같은 의적 서사 역시 시대적 왜곡과 민중의 염원이 결합된 결과물임을 상기할 때, 이 작품의 '역사적 탈신화화'는 한국 전통 연희나 창작 뮤지컬의 영웅 서사 재해석에도 깊은 영감을 줍니다.",
+        "signal_keywords": [
+            "리비전니스트 역사극(Revisionist History)",
+            "신화의 탈박제화",
+            "A24의 잔혹 미학"
+        ]
+    },
+    {
         "id": "fifa-cant-beat-sylvester-stallone-and-michael-caine-challenging-literal-nazis-to-soccer-in-1981s-victory",
         "title": "FIFA Can’t Beat Sylvester Stallone and Michael Caine Challenging Literal Nazis to Soccer in 1981’s ‘Victory’",
         "title_kr": "초록 비단 위에서 펼쳐지는 이데올로기의 극장: 1981년작 ‘승리의 탈출’이 남긴 연극적 유산",
@@ -1850,23 +1871,6 @@
         "why_it_matters_kr": "역사적 현장과 박물관을 살아있는 무대로 탈바꿈시키며, 극작가의 고립된 창작 활동을 연대의 공동체로 확장한 혁신적 예술가 패트릭 개브리지의 미학적 여정을 탐구합니다.",
         "signal_keywords": [
             "Cultural Signal"
-        ]
-    },
-    {
-        "id": "inside-the-new-film-stock-kodak-created-for-euphoria-season-3",
-        "title": "Inside the New Film Stock Kodak Created for ‘Euphoria’ Season 3",
-        "title_kr": "찰나의 진실을 새기는 빛의 질감: '유포리아' 시즌 3와 코닥이 빚어낸 고전의 귀환",
-        "summary_kr": "디지털의 매끈한 해상도가 놓쳐버린 인간적 온기를 복원하기 위해, 드라마 '유포리아'는 새로운 필름 'VERITA 200D'를 통해 다시 한번 아날로그적 숭고미를 탐닉합니다.",
-        "date": "Fri, 10 Apr 2026 20:30:00 +0000",
-        "image": "https://www.indiewire.com/wp-content/uploads/2026/04/sydney-sweeney.jpg?w=640",
-        "tier": "major",
-        "source": "IndieWire",
-        "link": "https://www.indiewire.com/news/breaking-news/euphoria-season-3-kodak-new-film-stock-1235188424/",
-        "editorial_category": "stage_to_screen",
-        "editorial_category_label": "Stage to Screen",
-        "why_it_matters_kr": "디지털의 매끈한 해상도가 놓쳐버린 인간적 온기를 복원하기 위해, 드라마 '유포리아'는 새로운 필름 'VERITA 200D'를 통해 다시 한번 아날로그적 숭고미를 탐닉합니다.",
-        "signal_keywords": [
-            "Stage to Screen"
         ]
     }
 ]
