@@ -130,5 +130,29 @@
         "last_error": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
         "attempt_count": 1,
         "max_retry": 3
+    },
+    {
+        "failed_at": "2026-06-23T01:56:52.006353+00:00",
+        "reason": "model_error",
+        "source": "IndieWire",
+        "tier": "major",
+        "title": "Every Pixar Movie Ranked, from ‘Toy Story’ to ‘Toy Story 5’",
+        "link": "https://www.indiewire.com/features/best-of/pixar-movies-ranked-best-worst-96815/",
+        "published": "Mon, 22 Jun 2026 22:15:00 +0000",
+        "last_error": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
+        "attempt_count": 1,
+        "max_retry": 3
+    },
+    {
+        "failed_at": "2026-06-23T01:57:56.959526+00:00",
+        "reason": "model_error",
+        "source": "American Theatre",
+        "tier": "indie",
+        "title": "Those Who Learn, Teach",
+        "link": "https://www.americantheatre.org/2026/06/22/those-who-learn-teach/",
+        "published": "Mon, 22 Jun 2026 20:30:00 +0000",
+        "last_error": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
+        "attempt_count": 1,
+        "max_retry": 3
     }
 ]
