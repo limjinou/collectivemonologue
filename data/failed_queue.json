@@ -144,13 +144,25 @@
         "max_retry": 3
     },
     {
-        "failed_at": "2026-06-23T01:57:56.959526+00:00",
+        "failed_at": "2026-06-24T02:00:53.701519+00:00",
         "reason": "model_error",
         "source": "American Theatre",
         "tier": "indie",
         "title": "Those Who Learn, Teach",
         "link": "https://www.americantheatre.org/2026/06/22/those-who-learn-teach/",
         "published": "Mon, 22 Jun 2026 20:30:00 +0000",
+        "last_error": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
+        "attempt_count": 2,
+        "max_retry": 3
+    },
+    {
+        "failed_at": "2026-06-24T01:57:39.619612+00:00",
+        "reason": "model_error",
+        "source": "IndieWire",
+        "tier": "major",
+        "title": "Taylor Swift Is Missing One Ingredient from the Recipe for a Best Original Song Oscar Frontrunner",
+        "link": "https://www.indiewire.com/features/commentary/is-taylor-swift-best-original-song-oscar-2027-frontrunner-1235201799/",
+        "published": "Tue, 23 Jun 2026 21:00:00 +0000",
         "last_error": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
         "attempt_count": 1,
         "max_retry": 3
