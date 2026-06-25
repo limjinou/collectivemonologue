@@ -166,5 +166,29 @@
         "last_error": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
         "attempt_count": 1,
         "max_retry": 3
+    },
+    {
+        "failed_at": "2026-06-25T01:59:53.038796+00:00",
+        "reason": "model_error",
+        "source": "IndieWire",
+        "tier": "major",
+        "title": "Carla Simón Turned Her Family’s Deepest Tragedy Into Her Most Personal Film Yet",
+        "link": "https://www.indiewire.com/features/interviews/romeria-carla-simon-interview-1235201606/",
+        "published": "Wed, 24 Jun 2026 21:00:00 +0000",
+        "last_error": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
+        "attempt_count": 1,
+        "max_retry": 3
+    },
+    {
+        "failed_at": "2026-06-25T02:00:56.962744+00:00",
+        "reason": "model_error",
+        "source": "American Theatre",
+        "tier": "indie",
+        "title": "Paula Vogel Helps Launch New Writers’ Retreat, Bards on the Bay",
+        "link": "https://www.americantheatre.org/2026/06/24/paula-vogel-helps-launch-new-writers-retreat-bards-on-the-bay/",
+        "published": "Wed, 24 Jun 2026 15:30:49 +0000",
+        "last_error": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
+        "attempt_count": 1,
+        "max_retry": 3
     }
 ]
