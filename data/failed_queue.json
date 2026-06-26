@@ -190,5 +190,29 @@
         "last_error": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
         "attempt_count": 1,
         "max_retry": 3
+    },
+    {
+        "failed_at": "2026-06-26T02:01:16.472941+00:00",
+        "reason": "model_error",
+        "source": "IndieWire",
+        "tier": "major",
+        "title": "‘The Odyssey’ to Skip Influencer Screenings Ahead of July Release",
+        "link": "https://www.indiewire.com/news/general-news/the-odyssey-skip-influencer-screenings-1235202439/",
+        "published": "Thu, 25 Jun 2026 23:53:32 +0000",
+        "last_error": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
+        "attempt_count": 1,
+        "max_retry": 3
+    },
+    {
+        "failed_at": "2026-06-26T02:02:21.182710+00:00",
+        "reason": "model_error",
+        "source": "American Theatre",
+        "tier": "indie",
+        "title": "Hansberry-Lilly Fellows, Hermitage/MTC Commissions, and More",
+        "link": "https://www.americantheatre.org/2026/06/25/hansberry-lilly-fellows-hermitage-mtc-commissions-and-more/",
+        "published": "Thu, 25 Jun 2026 17:35:26 +0000",
+        "last_error": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
+        "attempt_count": 1,
+        "max_retry": 3
     }
 ]
