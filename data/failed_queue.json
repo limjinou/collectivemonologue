@@ -204,13 +204,25 @@
         "max_retry": 3
     },
     {
-        "failed_at": "2026-06-26T02:02:21.182710+00:00",
+        "failed_at": "2026-06-27T01:56:33.955696+00:00",
         "reason": "model_error",
         "source": "American Theatre",
         "tier": "indie",
         "title": "Hansberry-Lilly Fellows, Hermitage/MTC Commissions, and More",
         "link": "https://www.americantheatre.org/2026/06/25/hansberry-lilly-fellows-hermitage-mtc-commissions-and-more/",
         "published": "Thu, 25 Jun 2026 17:35:26 +0000",
+        "last_error": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
+        "attempt_count": 2,
+        "max_retry": 3
+    },
+    {
+        "failed_at": "2026-06-27T01:55:30.009393+00:00",
+        "reason": "model_error",
+        "source": "IndieWire",
+        "tier": "major",
+        "title": "‘The Bear’ Finale Is All About the Memories",
+        "link": "https://www.indiewire.com/criticism/shows/the-bear-season-5-episode-8-review-finale-explained-1235202502/",
+        "published": "Fri, 26 Jun 2026 21:30:00 +0000",
         "last_error": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
         "attempt_count": 1,
         "max_retry": 3
