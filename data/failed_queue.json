@@ -204,7 +204,7 @@
         "max_retry": 3
     },
     {
-        "failed_at": "2026-06-27T01:56:33.955696+00:00",
+        "failed_at": "2026-06-28T02:06:40.796356+00:00",
         "reason": "model_error",
         "source": "American Theatre",
         "tier": "indie",
@@ -223,6 +223,18 @@
         "title": "‘The Bear’ Finale Is All About the Memories",
         "link": "https://www.indiewire.com/criticism/shows/the-bear-season-5-episode-8-review-finale-explained-1235202502/",
         "published": "Fri, 26 Jun 2026 21:30:00 +0000",
+        "last_error": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
+        "attempt_count": 1,
+        "max_retry": 3
+    },
+    {
+        "failed_at": "2026-06-28T02:05:36.763583+00:00",
+        "reason": "model_error",
+        "source": "IndieWire",
+        "tier": "major",
+        "title": "‘Jackass’: Why This Time Really Is the End",
+        "link": "https://www.indiewire.com/features/interviews/why-jackass-best-and-last-end-1235202589/",
+        "published": "Sat, 27 Jun 2026 14:00:00 +0000",
         "last_error": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
         "attempt_count": 1,
         "max_retry": 3
