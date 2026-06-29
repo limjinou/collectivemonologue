@@ -204,7 +204,7 @@
         "max_retry": 3
     },
     {
-        "failed_at": "2026-06-28T02:06:40.796356+00:00",
+        "failed_at": "2026-06-29T02:07:37.082556+00:00",
         "reason": "model_error",
         "source": "American Theatre",
         "tier": "indie",
@@ -228,7 +228,7 @@
         "max_retry": 3
     },
     {
-        "failed_at": "2026-06-28T02:05:36.763583+00:00",
+        "failed_at": "2026-06-29T02:06:33.228975+00:00",
         "reason": "model_error",
         "source": "IndieWire",
         "tier": "major",
@@ -236,7 +236,7 @@
         "link": "https://www.indiewire.com/features/interviews/why-jackass-best-and-last-end-1235202589/",
         "published": "Sat, 27 Jun 2026 14:00:00 +0000",
         "last_error": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
-        "attempt_count": 1,
+        "attempt_count": 2,
         "max_retry": 3
     }
 ]
