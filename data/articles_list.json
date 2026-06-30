@@ -1,5 +1,47 @@
 [
     {
+        "id": "palante-reflections-on-the-tcg-national-conference-in-puerto-rico",
+        "title": "Pa’lante: Reflections on the TCG National Conference in Puerto Rico",
+        "title_kr": "위험의 좌표 위에서 피어난 전진의 예술: 푸에르토리코, TCG 콘퍼런스의 '팔란테(Pa’lante)'를 향하여",
+        "summary_kr": "미국 연극계의 상징적 협의체 TCG가 사상 최초로 본토를 벗어나 푸에르토리코 산후안에서 개최한 역사적인 콘퍼런스를 통해, 불안정성과 지리적 위기를 예술적 마법이자 회복력으로 승화시키는 연극의 근원적 힘을 탐색합니다.",
+        "date": "Mon, 29 Jun 2026 14:21:51 +0000",
+        "image": "https://www.americantheatre.org/wp-content/uploads/tcg-conference-2026_29.jpg",
+        "tier": "indie",
+        "source": "American Theatre",
+        "link": "https://www.americantheatre.org/2026/06/29/palante-reflections-on-the-tcg-national-conference-in-puerto-rico/",
+        "why_it_matters_kr": "기후 위기와 사회적 변동성 속에서 연극이 어떻게 경계를 허물고 공동체의 생존과 전진을 위한 탈중앙화의 무대가 될 수 있는지 보여주는 이정표입니다.",
+        "editorial_category": "cultural_signal",
+        "editorial_category_label": "Cultural Signal",
+        "context_kr": "연극통신그룹(TCG)의 제34회 내셔널 콘퍼런스는 사상 최초로 이중언어(Bilingual)로 진행되었으며, 미국 영토 밖이자 버뮤다 삼각지대의 한 축인 푸에르토리코에서 열려 연극계의 탈식민주의적 흐름을 상징적으로 보여주었습니다.",
+        "korean_reader_note_kr": "식민 지배와 전쟁, 급격한 근대화의 폭풍 속에서도 마당극과 연희로 신명과 한을 극복해 온 한국의 연극 독자들에게, 푸에르토리코의 '팔란테(전진)' 정신은 시공간을 초월한 깊은 예술적 공鳴을 자아낼 것입니다.",
+        "signal_keywords": [
+            "연극 영토의 탈중앙화",
+            "이중언어주의(Bilingualism)의 선언",
+            "변동성(Volatility)의 예술적 승화"
+        ]
+    },
+    {
+        "id": "dont-miss-your-chance-to-join-indiewire-in-venice",
+        "title": "Don’t Miss Your Chance to Join IndieWire in Venice",
+        "title_kr": "물 위의 도시가 펼치는 거대한 극장: 베니스에서 찾는 무대와 스크린의 접점",
+        "summary_kr": "인디와이어의 '베니스 인텐시브' 프로그램을 통해 세계에서 가장 오래된 영화제의 예술적 유산과 신진 창작자들을 위한 혁신적 인큐베이팅 현장을 조명합니다.",
+        "date": "Mon, 29 Jun 2026 21:30:00 +0000",
+        "image": "https://www.indiewire.com/wp-content/uploads/2025/06/Venice-Collage.jpg?w=650",
+        "tier": "major",
+        "source": "IndieWire",
+        "link": "https://www.indiewire.com/news/events/indiewire-future-of-filmmaking-venice-intensive-apply-now-1235202464/",
+        "why_it_matters_kr": "스크린과 무대의 경계가 해체되는 오늘날, 글로벌 페스티벌이 젊은 창작자들에게 제공하는 몰입형 교육과 네트워크의 가치를 탐두하기 때문입니다.",
+        "editorial_category": "stage_to_screen",
+        "editorial_category_label": "Stage to Screen",
+        "context_kr": "칸 영화제의 성공적인 학생 프로그램에 이어 기획된 '베니스 인텐시브'는 이탈리아 베니스에서 영화제 스크리닝과 로컬 문화 체험, 글로벌 예술가 네트워크 구축을 결합한 프리미엄 크리에이티브 캠프입니다.",
+        "korean_reader_note_kr": "한국의 국립현대무용단 레지던시나 서울국제공연예술제(SPAF)의 워크숍처럼, 역사적 공간이 주는 압도적인 미장센이 젊은 연출가와 연기자들의 예술적 영감에 어떤 촉매제가 되는지 비교해 보시기 바랍니다.",
+        "signal_keywords": [
+            "페스티벌 인큐베이팅",
+            "공간의 연극성",
+            "글로벌 아티스트 네트워크"
+        ]
+    },
+    {
         "id": "the-death-of-robin-hood-whats-historically-accurate-in-this-violent-revisionist-tale",
         "title": "‘The Death of Robin Hood’: What’s Historically Accurate in This Violent Revisionist Tale?",
         "title_kr": "낭만의 박제를 찢고 나온 피비린내 나는 진실: <롭 인 후드의 죽음>이 던지는 신화 해체의 미학",
@@ -1837,40 +1879,6 @@
         "why_it_matters_kr": "수사극의 문법을 뒤틀어 인간의 불완전한 내면을 심도 있게 파고든 'DTF St. Louis'가 남긴 파격적이고도 서정적인 마침표를 분석합니다.",
         "signal_keywords": [
             "Criticism"
-        ]
-    },
-    {
-        "id": "bowling-alleys-premium-formats-more-films-which-fixes-can-save-movie-theaters",
-        "title": "Bowling Alleys, Premium Formats, More Films: Which Fixes Can Save Movie Theaters?",
-        "title_kr": "스크린의 성소(聖所)는 어떻게 살아남는가: 볼링공과 45일의 마지노선",
-        "summary_kr": "붕괴하는 홀드백의 경계 위에서, 단순한 상영관을 넘어 '체험의 제단'으로 진화하려는 현대 극장가의 실존적 투쟁과 문화적 변이를 깊숙이 들여다봅니다.",
-        "date": "Sat, 11 Apr 2026 16:00:00 +0000",
-        "image": "https://www.indiewire.com/wp-content/uploads/2024/06/ADH-movie-parties_Credit-Heather-Kennedy.jpg?w=650",
-        "tier": "major",
-        "source": "IndieWire",
-        "link": "https://www.indiewire.com/features/commentary/which-fixes-can-save-movie-theaters-box-office-cinemacon-1235187403/",
-        "editorial_category": "industry",
-        "editorial_category_label": "Industry",
-        "why_it_matters_kr": "붕괴하는 홀드백의 경계 위에서, 단순한 상영관을 넘어 '체험의 제단'으로 진화하려는 현대 극장가의 실존적 투쟁과 문화적 변이를 깊숙이 들여다봅니다.",
-        "signal_keywords": [
-            "Industry"
-        ]
-    },
-    {
-        "id": "patrick-gabridge-plays-in-place",
-        "title": "Patrick Gabridge Plays in Place",
-        "title_kr": "[Special] 공간의 영혼을 깨우는 소환술사, 패트릭 개브리지가 그리는 ‘장소의 연극’",
-        "summary_kr": "역사적 현장과 박물관을 살아있는 무대로 탈바꿈시키며, 극작가의 고립된 창작 활동을 연대의 공동체로 확장한 혁신적 예술가 패트릭 개브리지의 미학적 여정을 탐구합니다.",
-        "date": "Fri, 10 Apr 2026 13:41:48 +0000",
-        "image": "https://www.americantheatre.org/wp-content/uploads/Screenshot-2026-04-09-at-5.14.57-PM.png",
-        "tier": "indie",
-        "source": "American Theatre",
-        "link": "https://www.americantheatre.org/2026/04/10/patrick-gabridge-plays-in-place/",
-        "editorial_category": "cultural_signal",
-        "editorial_category_label": "Cultural Signal",
-        "why_it_matters_kr": "역사적 현장과 박물관을 살아있는 무대로 탈바꿈시키며, 극작가의 고립된 창작 활동을 연대의 공동체로 확장한 혁신적 예술가 패트릭 개브리지의 미학적 여정을 탐구합니다.",
-        "signal_keywords": [
-            "Cultural Signal"
         ]
     }
 ]
