@@ -238,5 +238,17 @@
         "last_error": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
         "attempt_count": 2,
         "max_retry": 3
+    },
+    {
+        "failed_at": "2026-07-01T02:07:04.092690+00:00",
+        "reason": "model_error",
+        "source": "IndieWire",
+        "tier": "major",
+        "title": "The Five Performances of 2026 (So Far) That Have Oscar Potential",
+        "link": "https://www.indiewire.com/awards/predictions/performances-2026-so-far-oscar-potential-1235203008/",
+        "published": "Tue, 30 Jun 2026 23:15:00 +0000",
+        "last_error": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
+        "attempt_count": 1,
+        "max_retry": 3
     }
 ]

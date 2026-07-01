@@ -1,5 +1,26 @@
 [
     {
+        "id": "we-the-theatre-people",
+        "title": "We the (Theatre) People",
+        "title_kr": "광장과 무대, 민주주의라는 거대한 연극의 막이 오를 때",
+        "summary_kr": "존 애덤스의 예언부터 토크빌의 통찰까지, 연극과 민주주의가 공유해 온 공동체적 운명과 시민적 공론장으로서의 가치를 깊이 있게 조명합니다.",
+        "date": "Tue, 30 Jun 2026 15:33:32 +0000",
+        "image": "https://www.americantheatre.org/wp-content/uploads/Theatre-History-top-image.png",
+        "tier": "indie",
+        "source": "American Theatre",
+        "link": "https://www.americantheatre.org/2026/06/30/we-the-theatre-people/",
+        "why_it_matters_kr": "예술이 단순한 유희를 넘어 어떻게 시민적 연대를 구축하고 사회를 바꾸는 민주주의적 도구가 될 수 있는지를 일깨워줍니다.",
+        "editorial_category": "criticism",
+        "editorial_category_label": "Criticism",
+        "context_kr": "19세기 초 미국을 탐방하며 초기 민주주의의 역동성을 관찰했던 사상가 알렉시 드 토크빌과 미국 건국의 아버지들이 바라본 초기 미국 연극계의 사회적 위상을 다룹니다.",
+        "korean_reader_note_kr": "한국 현대사에서 대학로 소극장 운동이나 마당극이 민주화와 시민 사회 형성에 기여했던 역사적 맥락과 오버랩하며 읽어보시길 추천합니다.",
+        "signal_keywords": [
+            "예술과 민주주의의 동맹",
+            "시민적 공론장으로서의 극장",
+            "토크빌의 문화 비평"
+        ]
+    },
+    {
         "id": "palante-reflections-on-the-tcg-national-conference-in-puerto-rico",
         "title": "Pa’lante: Reflections on the TCG National Conference in Puerto Rico",
         "title_kr": "위험의 좌표 위에서 피어난 전진의 예술: 푸에르토리코, TCG 콘퍼런스의 '팔란테(Pa’lante)'를 향하여",
@@ -1862,23 +1883,6 @@
         "why_it_matters_kr": "거대 자본의 틈바구니에서 시네마콘의 무대를 압도한 독립 배급사들의 기개와, 대니 보일이 포착한 미디어의 원형적 드라마를 에디터의 시선으로 분석합니다.",
         "signal_keywords": [
             "Voices"
-        ]
-    },
-    {
-        "id": "dtf-st-louis-review-a-sensational-finale-reveals-far-more-than-who-dun-it--spoilers",
-        "title": "‘DTF St. Louis’ Review: A Sensational Finale Reveals Far More Than Who Dun It — Spoilers",
-        "title_kr": "세인트루이스의 그늘 아래, 상식 너머의 우정을 응시하다: 'DTF St. Louis' 피날레 평론",
-        "summary_kr": "수사극의 문법을 뒤틀어 인간의 불완전한 내면을 심도 있게 파고든 'DTF St. Louis'가 남긴 파격적이고도 서정적인 마침표를 분석합니다.",
-        "date": "Mon, 13 Apr 2026 01:00:00 +0000",
-        "image": "https://www.indiewire.com/wp-content/uploads/2026/04/DTF-St-Louis-Episode-7-Jason-Bateman-as-Clark.jpg?w=650",
-        "tier": "major",
-        "source": "IndieWire",
-        "link": "https://www.indiewire.com/criticism/shows/dtf-st-louis-episode-7-review-finale-explained-spoilers-1235188434/",
-        "editorial_category": "criticism",
-        "editorial_category_label": "Criticism",
-        "why_it_matters_kr": "수사극의 문법을 뒤틀어 인간의 불완전한 내면을 심도 있게 파고든 'DTF St. Louis'가 남긴 파격적이고도 서정적인 마침표를 분석합니다.",
-        "signal_keywords": [
-            "Criticism"
         ]
     }
 ]
