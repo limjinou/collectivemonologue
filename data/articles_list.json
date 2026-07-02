@@ -1,5 +1,47 @@
 [
     {
+        "id": "what-else-is-new-from-building-to-fking-strangers",
+        "title": "What Else Is New: From ‘Building’ to ‘F**king Strangers’",
+        "title_kr": "침묵의 계절에 피어나는 미시사(微視史)의 불꽃: 미국 지역 극장이 건네는 뜨거운 초상",
+        "summary_kr": "대극장들이 숨을 고르는 여름의 초입, 미국의 지역 극장들은 거대 역사 뒤에 가려진 소외된 목소리와 공간의 기억을 소환하며 연극의 가장 순수한 본질을 증명해 보이고 있습니다.",
+        "date": "Wed, 01 Jul 2026 12:00:00 +0000",
+        "image": "https://www.americantheatre.org/wp-content/uploads/world-trade-center-construction.jpg",
+        "tier": "indie",
+        "source": "American Theatre",
+        "link": "https://www.americantheatre.org/2026/07/01/what-else-is-new-from-building-to-fking-strangers/",
+        "why_it_matters_kr": "브로드웨이의 화려한 상업주의 이면에서 묵묵히 동시대성을 탐구하는 미시적 초연작들을 통해, 획일화되어 가는 국내 창작 연극 생태계에 신선한 대안적 시각을 제시합니다.",
+        "editorial_category": "cultural_signal",
+        "editorial_category_label": "Cultural Signal",
+        "context_kr": "미국 연극계에서 7월은 전형적인 '오프 시즌(Off-season)'으로 분류되지만, 뉴욕 브루클린의 실험 공간부터 보스턴의 유서 깊은 예배당에 이르기까지 지역 극장들은 장소의 역사성을 극대화한 신작들로 관객을 맞이하고 있습니다.",
+        "korean_reader_note_kr": "서울의 대학로 소극장들이 비수기에도 역사적 실존 인물이나 독특한 콘셉트의 신작 독회, 장소 특정적 공연을 끊임없이 시도하며 한국 연극의 기초 체력을 다지는 모습과 묘하게 닮아 있습니다.",
+        "signal_keywords": [
+            "장소 특정적(Site-Specific) 서사의 진화",
+            "역사적 망각에 저항하는 연극적 연대",
+            "로컬리티(Locality)의 미학적 재발견"
+        ]
+    },
+    {
+        "id": "whats-a-caa-vidcon-cannes-lions-and-hard-questions",
+        "title": "What’s a CAA? VidCon, Cannes Lions, and Hard Questions",
+        "title_kr": "광장의 무질서가 극장을 전복할 때: 'CAA'를 모르는 세대와 팬덤의 주권",
+        "summary_kr": "애너하임의 혼돈스러운 대기열과 칸의 화려한 자본주의가 교차하는 지점에서, 전통적 엔터테인먼트의 거인 CAA가 마주한 낯선 질문을 통해 예술 생태계의 거대한 권력 이동을 추적합니다.",
+        "date": "Wed, 01 Jul 2026 22:30:00 +0000",
+        "image": "https://www.indiewire.com/wp-content/uploads/2026/07/Untitled-design-25.png?w=650",
+        "tier": "major",
+        "source": "IndieWire",
+        "link": "https://www.indiewire.com/news/analysis/vidcon-cannes-lions-indie-film-leverage-caa-1235203252/",
+        "why_it_matters_kr": "거대 대행사와 제작사 중심의 수직적 창작 생태계가 붕괴하고, 팬덤의 직접적인 '주의(Attention)'가 새로운 예술적·산업적 영토를 개척하는 순간을 포착했습니다.",
+        "editorial_category": "cultural_signal",
+        "editorial_category_label": "Cultural Signal",
+        "context_kr": "세계 최대 엔터테인먼트 에이전시인 CAA(Creative Artists Agency)가 크리에이터 생태계를 포섭하기 위해 막대한 자금을 들고 칸 라이언즈에 등장했으나, 뉴 제너레이션 크리에이터들에게 '그게 무엇이냐'는 질문을 받으며 구 권력과 신 권력의 괴리가 극명히 드러났습니다.",
+        "korean_reader_note_kr": "대학로의 소극장 뮤지컬 회전문 관객부터 K-팝의 자발적 팬덤 플랫폼에 이르기까지, 한국의 독자들 역시 수동적 관람객에서 벗어나 능동적인 '창작 파트너'로 진화하는 한국형 팬덤 비즈니스의 미래를 엿볼 수 있습니다.",
+        "signal_keywords": [
+            "탈제도화된 창작자",
+            "팬덤 주권 시대",
+            "엔터테인먼트 권력 이동"
+        ]
+    },
+    {
         "id": "we-the-theatre-people",
         "title": "We the (Theatre) People",
         "title_kr": "광장과 무대, 민주주의라는 거대한 연극의 막이 오를 때",
@@ -1849,40 +1891,6 @@
         "why_it_matters_kr": "오스카를 정복한 리얼리즘의 거장 숀 베이커가 워너 브라더스의 새로운 예술 영화 레이블 ‘클락워크’와 손잡고 차기작 ‘Ti Amo!’로 귀환하며, 자본과 예술의 가장 이상적인 협주를 예고합니다.",
         "signal_keywords": [
             "Stage to Screen"
-        ]
-    },
-    {
-        "id": "this-month-in-theatre-history-1776129625",
-        "title": "This Month in Theatre History",
-        "title_kr": "무대 위에 새겨진 시간의 지층: 거장들의 은밀한 고뇌와 극작의 영속성",
-        "summary_kr": "19세기 클라이드 핏치의 우정부터 현대극의 기수 애니 베이커까지, 시대의 경계를 허물며 연극사를 구축한 거장들의 결정적 순간을 조명합니다.",
-        "date": "Mon, 13 Apr 2026 16:20:01 +0000",
-        "image": "https://www.americantheatre.org/wp-content/uploads/April-Theatre-History-AT.jpg",
-        "tier": "indie",
-        "source": "American Theatre",
-        "link": "https://www.americantheatre.org/2026/04/13/this-month-in-theatre-history-134/",
-        "editorial_category": "industry",
-        "editorial_category_label": "Industry",
-        "why_it_matters_kr": "19세기 클라이드 핏치의 우정부터 현대극의 기수 애니 베이커까지, 시대의 경계를 허물며 연극사를 구축한 거장들의 결정적 순간을 조명합니다.",
-        "signal_keywords": [
-            "Industry"
-        ]
-    },
-    {
-        "id": "paddington-danny-boyle-and-george-washington-are-the-stars-of-cinemacon-in-studiocanal-angel-and-sony-pictures-classics-presentations",
-        "title": "Paddington, Danny Boyle, and George Washington Are the Stars of CinemaCon in Studiocanal, Angel, and Sony Pictures Classics Presentations",
-        "title_kr": "은막 위의 무대, 독립 자본이 그려낸 서사의 미학: 시네마콘을 수놓은 세 가지 풍경",
-        "summary_kr": "거대 자본의 틈바구니에서 시네마콘의 무대를 압도한 독립 배급사들의 기개와, 대니 보일이 포착한 미디어의 원형적 드라마를 에디터의 시선으로 분석합니다.",
-        "date": "Mon, 13 Apr 2026 22:05:55 +0000",
-        "image": "https://www.indiewire.com/wp-content/uploads/2024/10/Paddington-In-Peru-Header-StudioCanal.jpg?w=650",
-        "tier": "major",
-        "source": "IndieWire",
-        "link": "https://www.indiewire.com/news/breaking-news/cinemacon-day-1-studiocanal-angel-sony-pictures-classics-1235188794/",
-        "editorial_category": "voices",
-        "editorial_category_label": "Voices",
-        "why_it_matters_kr": "거대 자본의 틈바구니에서 시네마콘의 무대를 압도한 독립 배급사들의 기개와, 대니 보일이 포착한 미디어의 원형적 드라마를 에디터의 시선으로 분석합니다.",
-        "signal_keywords": [
-            "Voices"
         ]
     }
 ]
