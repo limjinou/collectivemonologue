@@ -1,5 +1,48 @@
 [
     {
+        "id": "girls-confined-interrupted-awakened",
+        "title": "Girls Confined, Interrupted, Awakened",
+        "title_kr": "텐트라는 우주, 격리된 방이 건네는 해방의 언어: 오프브로드웨이를 휩쓴 여성 서사의 신전선",
+        "summary_kr": "오프브로드웨이의 올여름 무대는 남성적 시선에서 완전히 탈피하여 밀폐된 공간 속에서 자아를 확장해 가는 여성들의 내밀한 초상에 주목하며, 연극성 본연의 힘을 재발견하고 있습니다.",
+        "date": "Thu, 02 Jul 2026 12:00:16 +0000",
+        "image": "https://www.americantheatre.org/wp-content/uploads/CAMPING-featuring-Colby-Minifie-and-Alice-Kremelberg-Photo-credit-Maria-Baranova-957-1024x683-1-e1782838288122.jpg",
+        "tier": "indie",
+        "source": "American Theatre",
+        "link": "https://www.americantheatre.org/2026/07/02/girls-confined-interrupted-awakened/",
+        "why_it_matters_kr": "외부 세계의 소음을 완전히 차단한 채 오직 자신들의 목소리로 채워진 공간이 어떻게 가장 보편적인 인간의 존엄과 실존적 해방을 외치는지 그 미학적 성취를 보여줍니다.",
+        "editorial_category": "cultural_signal",
+        "editorial_category_label": "Cultural Signal",
+        "context_kr": "스코틀랜드 출신의 극작가 빅토리아 린 바클레이의 신작 <캠핑(Camping)>을 필두로, 여성 캐릭터들이 한정된 공간 안에서 스스로의 존재를 증명해 내는 뉴욕 오프브로드웨이의 최신 연극적 트렌드를 짚어냅니다.",
+        "korean_reader_note_kr": "최근 한국 대학로 극장가에서도 뜨겁게 사랑받는 '여성 투핸더(Two-hander) 극'의 흐름과 비교해 본다면, 뉴욕 오프브로드웨이가 밀폐 공간을 통해 관객에게 선사하는 해방감의 깊이를 더욱 흥미롭게 감상하실 수 있습니다.",
+        "signal_keywords": [
+            "밀폐 공간의 역설적 해방",
+            "남성 시선(Male Gaze)의 배제",
+            "실존적 자기결정권"
+        ]
+    },
+    {
+        "id": "there-will-never-be-another-cannibal-holocaust--and-now-its-screening-in-its-definitive-edition",
+        "title": "There Will Never Be Another ‘Cannibal Holocaust’ — and Now It’s Screening in Its Definitive Edition",
+        "title_kr": "잔혹함이라는 제단 위에서 피어난 리얼리즘의 초상: <홀로코스트>의 귀환과 재현의 윤리",
+        "summary_kr": "영화 역사상 가장 위험하고 논쟁적인 걸작 <홀로코스트>의 4K 복원판 상영을 계기로, 예술적 허구와 실제적 폭력의 한계를 탐색하고 현대 공연 예술이 마주한 재현의 윤리를 심층적으로 성찰합니다.",
+        "date": "Thu, 02 Jul 2026 22:00:00 +0000",
+        "image": "https://www.indiewire.com/wp-content/uploads/2026/07/MCDCAHO_EC030.jpg?w=650",
+        "tier": "major",
+        "source": "IndieWire",
+        "link": "https://www.indiewire.com/features/interviews/cannibal-holocaust-restoration-interview-1235203588/",
+        "why_it_matters_kr": "가짜와 진짜의 경계가 무너진 디지털 시대에, 40년 전의 잔혹한 문제작이 던지는 윤리적 화두는 오늘날 무대와 스크린의 모든 창작자들에게 '표현의 한계는 어디까지인가'라는 묵직한 질문을 던지기 때문입니다.",
+        "editorial_category": "criticism",
+        "editorial_category_label": "Criticism",
+        "context_kr": "이탈리아의 거장 루제로 데오다토 감독의 1980년작 <홀로코스트(Cannibal Holocaust)>는 파운드 푸티지(Found Footage) 장르의 시초로 평가받는 동시에, 극단적 폭력성과 실제 동물 살해 장면으로 인해 영화 역사상 가장 거대한 도덕적 논쟁을 불러일으킨 작품입니다.",
+        "korean_reader_note_kr": "최근 한국 극장가와 연극계에서도 실제 동물 출연이나 극단적인 신체 훼손 묘사 등 '무대 위 리얼리즘'의 윤리적 가이드라인에 대한 논의가 활발합니다. 이 글을 통해 서구 장르 예술의 극단적 사례가 우리에게 주는 시사점을 발견해 보시기 바랍니다.",
+        "signal_keywords": [
+            "재현의 윤리",
+            "잔혹 아방가르드",
+            "파운드 푸티지",
+            "디지털 복원"
+        ]
+    },
+    {
         "id": "what-else-is-new-from-building-to-fking-strangers",
         "title": "What Else Is New: From ‘Building’ to ‘F**king Strangers’",
         "title_kr": "침묵의 계절에 피어나는 미시사(微視史)의 불꽃: 미국 지역 극장이 건네는 뜨거운 초상",
@@ -1855,40 +1898,6 @@
         "editorial_category": "stage_to_screen",
         "editorial_category_label": "Stage to Screen",
         "why_it_matters_kr": "인류 최고(最古)의 서사시 '오디세이'를 향한 거장 크리스토퍼 놀란의 집요한 도전, 그 고통스러운 창작의 이면과 현대 시네마가 마주한 거대한 운명에 대하여.",
-        "signal_keywords": [
-            "Stage to Screen"
-        ]
-    },
-    {
-        "id": "terry-schreiber-helped-artists-grow-but-not-with-any-single-method",
-        "title": "Terry Schreiber Helped Artists Grow, But Not With Any Single Method",
-        "title_kr": "단 하나의 '메소드'라는 감옥을 부수고, 배우들의 '집'이 된 거인: 테리 슈라이버를 기리며",
-        "summary_kr": "특정 연기론의 도그마에 매몰되지 않고 배우 개개인의 고유한 진실을 탐구했던 테리 슈라이버. 50여 년간 뉴욕 연극의 심장부를 지켜온 그의 철학적 유산과 '안전한 안식처'로서의 예술 정신을 조명합니다.",
-        "date": "Tue, 14 Apr 2026 21:28:53 +0000",
-        "image": "https://www.americantheatre.org/wp-content/uploads/terry-schreiber-teaching.jpg",
-        "tier": "indie",
-        "source": "American Theatre",
-        "link": "https://www.americantheatre.org/2026/04/14/terry-schreiber-helped-artists-grow-but-not-with-any-single-method/",
-        "editorial_category": "cultural_signal",
-        "editorial_category_label": "Cultural Signal",
-        "why_it_matters_kr": "특정 연기론의 도그마에 매몰되지 않고 배우 개개인의 고유한 진실을 탐구했던 테리 슈라이버. 50여 년간 뉴욕 연극의 심장부를 지켜온 그의 철학적 유산과 '안전한 안식처'로서의 예술 정신을 조명합니다.",
-        "signal_keywords": [
-            "Cultural Signal"
-        ]
-    },
-    {
-        "id": "sean-bakers-next-film-ti-amo-lands-at-new-warner-bros-specialized-label-now-called-clockwork",
-        "title": "Sean Baker’s Next Film ‘Ti Amo!’ Lands at New Warner Bros. Specialized Label, Now Called Clockwork",
-        "title_kr": "초침이 멈춘 자리에 피어날 사랑의 시학: 숀 베이커와 ‘클락워크’의 필연적 조우",
-        "summary_kr": "오스카를 정복한 리얼리즘의 거장 숀 베이커가 워너 브라더스의 새로운 예술 영화 레이블 ‘클락워크’와 손잡고 차기작 ‘Ti Amo!’로 귀환하며, 자본과 예술의 가장 이상적인 협주를 예고합니다.",
-        "date": "Tue, 14 Apr 2026 23:58:55 +0000",
-        "image": "https://www.indiewire.com/wp-content/uploads/2025/06/2202958863.jpg?w=650",
-        "tier": "major",
-        "source": "IndieWire",
-        "link": "https://www.indiewire.com/news/breaking-news/sean-bakers-next-film-ti-amo-warner-bros-clockwork-1235189100/",
-        "editorial_category": "stage_to_screen",
-        "editorial_category_label": "Stage to Screen",
-        "why_it_matters_kr": "오스카를 정복한 리얼리즘의 거장 숀 베이커가 워너 브라더스의 새로운 예술 영화 레이블 ‘클락워크’와 손잡고 차기작 ‘Ti Amo!’로 귀환하며, 자본과 예술의 가장 이상적인 협주를 예고합니다.",
         "signal_keywords": [
             "Stage to Screen"
         ]
