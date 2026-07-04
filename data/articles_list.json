@@ -1,5 +1,47 @@
 [
     {
+        "id": "great-pride-also-pain",
+        "title": "Great Pride, Also Pain",
+        "title_kr": "거대한 자부심, 그 이면의 잔혹한 통증: 무대 위에서 다시 쓰는 국가의 정의",
+        "summary_kr": "미국 건국 250주년을 앞두고, 1976년의 순진했던 애국심에서 벗어나 국가의 어두운 역사적 과오와 소외된 자들의 아픔을 치유의 무대로 승화시킨 연극적 성찰을 담았습니다.",
+        "date": "Fri, 03 Jul 2026 12:00:25 +0000",
+        "image": "https://www.americantheatre.org/wp-content/uploads/bicentennial-star.jpg",
+        "tier": "indie",
+        "source": "American Theatre",
+        "link": "https://www.americantheatre.org/2026/07/03/great-pride-also-pain/",
+        "why_it_matters_kr": "국가라는 거대한 신화와 그 이면의 폭력을 폭로하고 치유하는 연극의 사회적 책무를 통해, 오늘날 우리 공동체의 역사와 예술의 역할을 깊이 돌아보게 합니다.",
+        "editorial_category": "cultural_signal",
+        "editorial_category_label": "Cultural Signal",
+        "context_kr": "건국 250주년(2026년)을 맞이하는 미국의 복잡한 사회적 갈등 속에서, 블랙 시어터(Black Theatre)의 거장 라이자 제시 피터슨(Liza Jessie Peterson)의 1인극 <특이한 애국자(The Peculiar Patriot)>를 중심으로 전개되는 무대 위 역사 재조명 운동을 다룹니다.",
+        "korean_reader_note_kr": "국가 권력에 의한 상처와 소외를 무대 위 예술로 극복해 온 한국의 마당극이나 현대 사회참여극(예: 제주 4·3이나 광주 민주화운동을 다룬 작품들)의 감각과 연결해 읽으면, 국가의 정의를 다시 묻는 무대의 저력이 한층 더 뜨겁게 다가올 것입니다.",
+        "signal_keywords": [
+            "애국심의 예술적 해체와 재정의",
+            "수감 시스템과 현대판 인종 격리",
+            "지워진 역사적 빈틈(Lacunae) 메우기"
+        ]
+    },
+    {
+        "id": "why-the-cape-fear-acid-freakout-demanded-a-new-set-of-visual-tools",
+        "title": "Why the ‘Cape Fear’ Acid Freakout Demanded a New Set of Visual Tools",
+        "title_kr": "스크린 위에 재현된 심리적 그로테스크: 10시간의 프레임에 갇힌 인간의 광기",
+        "summary_kr": "마틴 스콜세지의 명작 <케이프 피어>가 애플 TV+의 10부작 시리즈로 재탄생하며 선보인 파격적인 시각적 문법과, 인물의 내면적 파국을 무대 미술적 깊이로 포착해 낸 촬영 감독들의 예술적 집념을 조명합니다.",
+        "date": "Fri, 03 Jul 2026 16:00:00 +0000",
+        "image": "https://www.indiewire.com/wp-content/uploads/2026/06/Cape_Fear_Photo_010604.jpg?w=650",
+        "tier": "major",
+        "source": "IndieWire",
+        "link": "https://www.indiewire.com/features/craft/cape-fear-cinematographer-acid-trip-episode-six-1235202834/",
+        "why_it_matters_kr": "고전의 단순한 복제를 넘어, 장기 러닝 포맷 속에서 인물의 심리적 붕괴를 시각적으로 유지·변주해 나가는 현대적 연출 미학의 정수를 보여주기 때문입니다.",
+        "editorial_category": "stage_to_screen",
+        "editorial_category_label": "Stage to Screen",
+        "context_kr": "1962년 오리지널 스릴러와 1991년 마틴 스콜세지의 기념비적 리메이크를 거쳐, 애플 TV+의 10부작 시리즈로 확장된 <케이프 피어>의 시각적 야심과 촬영 미학을 다룹니다.",
+        "korean_reader_note_kr": "한국 관객들이 연극 <에쿠우스>나 영화 <올드보이> 등에서 경험했던 '인간 광기의 시각적·공간적 번역'이 10시간이라는 긴 호흡 속에서 어떻게 리드미컬하게 유지되는지 비교하며 읽어보시길 권합니다.",
+        "signal_keywords": [
+            "장기 러닝 플랫폼의 시각적 도전",
+            "심리적 그로테스크의 미장센",
+            "카메라의 주관성과 객관성"
+        ]
+    },
+    {
         "id": "girls-confined-interrupted-awakened",
         "title": "Girls Confined, Interrupted, Awakened",
         "title_kr": "텐트라는 우주, 격리된 방이 건네는 해방의 언어: 오프브로드웨이를 휩쓴 여성 서사의 신전선",
@@ -1866,40 +1908,6 @@
         "why_it_matters_kr": "88세 거장 리들리 스코트가 포스트 아포칼립스의 황무지 위에서 인간성의 본질을 묻습니다. 제이콥 엘로디의 깊은 눈빛과 콜로라도의 적막한 하늘이 교차하며 탄생한 새로운 고전의 예감을 전합니다.",
         "signal_keywords": [
             "Voices"
-        ]
-    },
-    {
-        "id": "leadership-changes-at-trinity-rep-raven-yale-rep-and-more",
-        "title": "Leadership Changes at Trinity Rep, Raven, Yale Rep, and More",
-        "title_kr": "변혁의 계절, 북미 연극계를 뒤흔드는 새로운 리더십의 서막",
-        "summary_kr": "트리니티 랩과 레이븐 시어터 등 북미 주요 극단들이 새로운 수장을 맞이하며 예술적 정체성의 대전환을 예고하고 있습니다. 여성 리더십의 부상과 신작 중심의 생태계 변화를 심층 조명합니다.",
-        "date": "Wed, 15 Apr 2026 20:31:49 +0000",
-        "image": "https://www.americantheatre.org/wp-content/uploads/April-EE.png",
-        "tier": "indie",
-        "source": "American Theatre",
-        "link": "https://www.americantheatre.org/2026/04/15/leadership-changes-at-trinity-rep-raven-yale-rep-and-more/",
-        "editorial_category": "industry",
-        "editorial_category_label": "Industry",
-        "why_it_matters_kr": "트리니티 랩과 레이븐 시어터 등 북미 주요 극단들이 새로운 수장을 맞이하며 예술적 정체성의 대전환을 예고하고 있습니다. 여성 리더십의 부상과 신작 중심의 생태계 변화를 심층 조명합니다.",
-        "signal_keywords": [
-            "Industry"
-        ]
-    },
-    {
-        "id": "christopher-nolan-tells-cinemacon-the-odyssey-was-a-nightmare-to-filmbut-in-all-the-right-ways",
-        "title": "Christopher Nolan Tells CinemaCon ‘The Odyssey’ Was a ‘Nightmare to Film…but in All the Right Ways’",
-        "title_kr": "[Editor's Letter] 3,000년의 시간을 70mm 필름에 가두다: 크리스토퍼 놀란의 ‘오디세이’가 던진 전율",
-        "summary_kr": "인류 최고(最古)의 서사시 '오디세이'를 향한 거장 크리스토퍼 놀란의 집요한 도전, 그 고통스러운 창작의 이면과 현대 시네마가 마주한 거대한 운명에 대하여.",
-        "date": "Thu, 16 Apr 2026 01:09:56 +0000",
-        "image": "https://www.indiewire.com/wp-content/uploads/2025/06/2033565331.jpg?w=650",
-        "tier": "major",
-        "source": "IndieWire",
-        "link": "https://www.indiewire.com/news/breaking-news/universal-cinemacon-day-3-the-odyssey-christopher-nolan-1235189226/",
-        "editorial_category": "stage_to_screen",
-        "editorial_category_label": "Stage to Screen",
-        "why_it_matters_kr": "인류 최고(最古)의 서사시 '오디세이'를 향한 거장 크리스토퍼 놀란의 집요한 도전, 그 고통스러운 창작의 이면과 현대 시네마가 마주한 거대한 운명에 대하여.",
-        "signal_keywords": [
-            "Stage to Screen"
         ]
     }
 ]
