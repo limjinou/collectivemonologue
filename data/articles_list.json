@@ -1,5 +1,22 @@
 [
     {
+        "id": "dp-natasha-braier-is-building-the-cinematography-community-she-wanted-to-see",
+        "title": "DP Natasha Braier Is Building the Cinematography Community She Wanted to See",
+        "title_kr": "DP Natasha Braier Is Building the Cinematography Community She Wanted to See",
+        "summary_kr": "AI 모델 일시적 과부하로 정보를 불러오지 못했습니다.",
+        "date": "Sat, 04 Jul 2026 17:00:00 +0000",
+        "image": "https://www.indiewire.com/wp-content/uploads/2026/06/Deep-Light_Bradford_2.png?w=650",
+        "tier": "major",
+        "source": "IndieWire",
+        "link": "https://www.indiewire.com/features/craft/natasha-briaer-interview-deep-light-cinematography-1235203309/",
+        "why_it_matters_kr": "",
+        "editorial_category": "cultural_signal",
+        "editorial_category_label": "Cultural Signal",
+        "context_kr": "",
+        "korean_reader_note_kr": "",
+        "signal_keywords": []
+    },
+    {
         "id": "great-pride-also-pain",
         "title": "Great Pride, Also Pain",
         "title_kr": "거대한 자부심, 그 이면의 잔혹한 통증: 무대 위에서 다시 쓰는 국가의 정의",
@@ -1891,23 +1908,6 @@
         "why_it_matters_kr": "필라델피아의 한 작은 미용실이 어떻게 공동체의 성소이자 역사의 증언대가 되었는가. 세대를 가로지르는 가위질 속에 담긴 동남아시아 이민자들의 회복과 연대의 미학을 탐구합니다.",
         "signal_keywords": [
             "Criticism"
-        ]
-    },
-    {
-        "id": "the-dog-stars-trailer-jacob-elordi-and-his-dog-survive-postapocalyptic-colorado-in-ridley-scotts-latest",
-        "title": "‘The Dog Stars’ Trailer: Jacob Elordi and His Dog Survive Post-Apocalyptic Colorado in Ridley Scott’s Latest",
-        "title_kr": "은빛 날개 아래 흐르는 고독의 선율: 리들리 스코트와 제이콥 엘로디가 빚어낸 ‘더 독 스타즈’",
-        "summary_kr": "88세 거장 리들리 스코트가 포스트 아포칼립스의 황무지 위에서 인간성의 본질을 묻습니다. 제이콥 엘로디의 깊은 눈빛과 콜로라도의 적막한 하늘이 교차하며 탄생한 새로운 고전의 예감을 전합니다.",
-        "date": "Fri, 17 Apr 2026 00:10:16 +0000",
-        "image": "https://www.indiewire.com/wp-content/uploads/2026/04/Screen-Shot-2026-04-16-at-4.48.50-PM.png?w=650",
-        "tier": "major",
-        "source": "IndieWire",
-        "link": "https://www.indiewire.com/news/trailers/the-dog-stars-trailer-ridley-scott-jacob-elordi-1235189654/",
-        "editorial_category": "voices",
-        "editorial_category_label": "Voices",
-        "why_it_matters_kr": "88세 거장 리들리 스코트가 포스트 아포칼립스의 황무지 위에서 인간성의 본질을 묻습니다. 제이콥 엘로디의 깊은 눈빛과 콜로라도의 적막한 하늘이 교차하며 탄생한 새로운 고전의 예감을 전합니다.",
-        "signal_keywords": [
-            "Voices"
         ]
     }
 ]
