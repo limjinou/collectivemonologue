@@ -250,5 +250,29 @@
         "last_error": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
         "attempt_count": 1,
         "max_retry": 3
+    },
+    {
+        "failed_at": "2026-07-06T01:52:27.691846+00:00",
+        "reason": "model_error",
+        "source": "IndieWire",
+        "tier": "major",
+        "title": "DP Natasha Braier Is Building the Cinematography Community She Wanted to See",
+        "link": "https://www.indiewire.com/features/craft/natasha-briaer-interview-deep-light-cinematography-1235203309/",
+        "published": "Sat, 04 Jul 2026 17:00:00 +0000",
+        "last_error": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
+        "attempt_count": 1,
+        "max_retry": 3
+    },
+    {
+        "failed_at": "2026-07-06T01:57:43.581852+00:00",
+        "reason": "model_error",
+        "source": "American Theatre",
+        "tier": "indie",
+        "title": "Great Pride, Also Pain",
+        "link": "https://www.americantheatre.org/2026/07/03/great-pride-also-pain/",
+        "published": "Fri, 03 Jul 2026 12:00:25 +0000",
+        "last_error": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
+        "attempt_count": 1,
+        "max_retry": 3
     }
 ]
