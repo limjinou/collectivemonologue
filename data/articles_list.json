@@ -1,5 +1,47 @@
 [
     {
+        "id": "duke-partners-with-ford-to-fund-performing-arts-tech-innovation",
+        "title": "Duke Partners With Ford to Fund Performing Arts Tech Innovation",
+        "title_kr": "기술이라는 차가운 무대에 심어질 인간성의 온기: 도리스 듀크와 포드 재단이 그리는 기술-예술의 생태학",
+        "summary_kr": "도리스 듀크 재단과 포드 재단이 손잡고 공연 예술계의 기술 혁신과 인프라 구축을 위해 5년간 400만 달러 규모의 펀딩을 개시합니다. 단순한 기술 도입을 넘어, 장애예술가와의 연대, 문화적 정체성이 투영된 AI 등 예술가가 주도하는 윤리적 기술 미래의 청사진을 제시합니다.",
+        "date": "Mon, 06 Jul 2026 17:09:25 +0000",
+        "image": "https://www.americantheatre.org/wp-content/uploads/Kinectic-Light-Doris-Duke-Funding-1024x576.jpg",
+        "tier": "indie",
+        "source": "American Theatre",
+        "link": "https://www.americantheatre.org/2026/07/06/duke-partners-with-ford-to-fund-performing-arts-tech-innovation/",
+        "why_it_matters_kr": "기술이 예술을 대체할지도 모른다는 막연한 공포 속에서, 예술가가 어떻게 기술을 도구 삼아 소외된 이들을 포용하고 창작의 영토를 넓힐 수 있는지 보여주는 실천적 나침반이기 때문입니다.",
+        "editorial_category": "industry",
+        "editorial_category_label": "Industry",
+        "context_kr": "미국 공연 예술계의 양대 거목인 도리스 듀크 재단과 포드 재단은 오랜 기간 예술을 통한 사회 변화를 이끌어왔으며, 이번 협업은 팬데믹 이후 극장의 생존을 위한 디지털 전환(DX)을 한 단계 고도화하는 이정표로 평가받습니다.",
+        "korean_reader_note_kr": "한국에서도 '메타버스 극장'이나 'AI 창작' 등 기술 융합 시도가 활발하지만, 주로 화려한 시각 효과에 치중하는 경향이 있습니다. 이번 기사를 통해 배리어 프리(Barrier-free) 인프라 구축과 문화 정체성 보존을 위해 기술이 어떻게 쓰여야 하는지 그 깊은 본질을 고찰해 볼 수 있습니다.",
+        "signal_keywords": [
+            "예술가 주도의 기술 주권",
+            "배리어 프리의 기술적 고도화",
+            "윤리적 AI와 문화적 아프로퓨처리즘"
+        ]
+    },
+    {
+        "id": "the-emmy-categories-to-keep-an-eye-on-this-nominations-day",
+        "title": "The Emmy Categories to Keep an Eye on This Nominations Day",
+        "title_kr": "반복의 안락함과 변혁의 전율: 에미상(Emmys)이 직면한 서사의 무대 법칙",
+        "summary_kr": "매년 반복되는 수상의 피로감을 넘어, 드라마 부문의 격변 속에서 새로운 시대의 서사적 가능성과 예술적 예측 불가능성을 탐색하다.",
+        "date": "Mon, 06 Jul 2026 22:00:00 +0000",
+        "image": "https://www.indiewire.com/wp-content/uploads/2026/07/MixCollage-06-Jul-2026-05-26-PM-7131.jpg?w=650",
+        "tier": "major",
+        "source": "IndieWire",
+        "link": "https://www.indiewire.com/awards/predictions/unpredictable-emmy-categories-nominations-day-2026-1235203792/",
+        "why_it_matters_kr": "매너리즘에 빠진 시상식 산업의 이면을 통해 우리 시대가 갈망하는 새로운 이야기의 생명력이 어디서 탄생하는지 극적으로 조명합니다.",
+        "editorial_category": "stage_to_screen",
+        "editorial_category_label": "Stage to Screen",
+        "context_kr": "EGOT(에미, 그래미, 오스카, 토니) 중 유일하게 ‘지속되는 시리즈’에 상을 주는 에미상의 독특한 룰과, 이로 인한 매너리즘을 타파하기 위해 드라마 부문이 겪고 있는 격변의 맥락을 다룹니다.",
+        "korean_reader_note_kr": "대학로의 장기 흥행 뮤지컬과 매 시즌 과감하게 올라오는 신작 창작극의 대비를 떠올려 보세요. 익숙함의 편안함과 낯선 전율 사이의 팽팽한 줄다리기가 바로 이 시상식의 본질입니다.",
+        "signal_keywords": [
+            "시즌제 서사의 매너리즘",
+            "예측 불가능성의 미학",
+            "대작 드라마의 생산 주기"
+        ]
+    },
+    {
         "id": "dp-natasha-braier-is-building-the-cinematography-community-she-wanted-to-see",
         "title": "DP Natasha Braier Is Building the Cinematography Community She Wanted to See",
         "title_kr": "DP Natasha Braier Is Building the Cinematography Community She Wanted to See",
@@ -1874,40 +1916,6 @@
         "why_it_matters_kr": "넷플릭스 ‘성난 사람들(Beef)’ 시즌 2가 선택한 65mm 대형 포맷의 미학을 통해, 화려한 컨트리클럽 뒤에 숨겨진 인물들의 서글픈 권력 관계와 지독한 친밀감을 심층 조망합니다.",
         "signal_keywords": [
             "Cultural Signal"
-        ]
-    },
-    {
-        "id": "roommates-review-sadie-sandler-navigates-the-highs-and-lows-of-freshman-year-in-chandler-levacks-formulaic-netflix-comedy",
-        "title": "‘Roommates’ Review: Sadie Sandler Navigates the Highs and Lows of Freshman Year in Chandler Levack’s Formulaic Netflix Comedy",
-        "title_kr": "캠퍼스라는 무대 위, 어설픈 '나'를 연기하는 법: <룸메이트>가 건네는 씁쓸한 성장통",
-        "summary_kr": "대학이라는 새로운 막이 오르기 전, 우리는 모두 다른 사람이 되기를 꿈꾼다. 챈들러 레백의 신작 <룸메이트>는 그 찬란한 오해와 처절한 현실 사이의 간극을 날카로우면서도 따뜻한 시선으로 포착해낸다.",
-        "date": "Fri, 17 Apr 2026 21:00:00 +0000",
-        "image": "https://www.indiewire.com/wp-content/uploads/2026/04/Screen-Shot-2026-04-17-at-12.28.46-PM.png?w=650",
-        "tier": "major",
-        "source": "IndieWire",
-        "link": "https://www.indiewire.com/criticism/movies/roommates-review-sadie-sandler-netflix-movie-1235189781/",
-        "editorial_category": "criticism",
-        "editorial_category_label": "Criticism",
-        "why_it_matters_kr": "대학이라는 새로운 막이 오르기 전, 우리는 모두 다른 사람이 되기를 꿈꾼다. 챈들러 레백의 신작 <룸메이트>는 그 찬란한 오해와 처절한 현실 사이의 간극을 날카로우면서도 따뜻한 시선으로 포착해낸다.",
-        "signal_keywords": [
-            "Criticism"
-        ]
-    },
-    {
-        "id": "family-cuts-inside-sengs-hair-salon",
-        "title": "Family Cuts: Inside ‘Seng’s Hair Salon’",
-        "title_kr": "[Stage-Is Review] 머리카락을 자르며 잇는 기억의 연대기: ‘셍의 헤어살론’이 품은 소우주",
-        "summary_kr": "필라델피아의 한 작은 미용실이 어떻게 공동체의 성소이자 역사의 증언대가 되었는가. 세대를 가로지르는 가위질 속에 담긴 동남아시아 이민자들의 회복과 연대의 미학을 탐구합니다.",
-        "date": "Thu, 16 Apr 2026 15:18:46 +0000",
-        "image": "https://www.americantheatre.org/wp-content/uploads/Untitled-design-2-1.png",
-        "tier": "indie",
-        "source": "American Theatre",
-        "link": "https://www.americantheatre.org/2026/04/16/family-cuts-inside-sengs-hair-salon/",
-        "editorial_category": "criticism",
-        "editorial_category_label": "Criticism",
-        "why_it_matters_kr": "필라델피아의 한 작은 미용실이 어떻게 공동체의 성소이자 역사의 증언대가 되었는가. 세대를 가로지르는 가위질 속에 담긴 동남아시아 이민자들의 회복과 연대의 미학을 탐구합니다.",
-        "signal_keywords": [
-            "Criticism"
         ]
     }
 ]
