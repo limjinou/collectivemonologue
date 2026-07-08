@@ -1,5 +1,47 @@
 [
     {
+        "id": "indiespace-to-open-new-multiuse-space-in-hells-kitchen",
+        "title": "IndieSpace to Open New Multi-Use Space in Hell’s Kitchen",
+        "title_kr": "젠트리피케이션의 폭풍 속, 예술의 대지를 일구는 '인디스페이스'의 저항적 공간학",
+        "summary_kr": "자본의 논리에 밀려나던 뉴욕의 독립 예술가들을 위해 헬스키친에 생존과 연대의 새로운 '협동조합형' 다목적 공간이 들어섭니다. 단순한 연습실을 넘어 식료품 저장고와 동등한 의결권까지 제공하는 이 공간은 도시 예술 생태계의 지속 가능한 미래를 제안합니다.",
+        "date": "Tue, 07 Jul 2026 17:03:14 +0000",
+        "image": "https://www.americantheatre.org/wp-content/uploads/rialto-west_nyc.jpg",
+        "tier": "indie",
+        "source": "American Theatre",
+        "link": "https://www.americantheatre.org/2026/07/07/indiespace-to-open-new-multi-use-space-in-hells-kitchen/",
+        "why_it_matters_kr": "대학로 소극장들의 연쇄 폐관과 예술가들의 탈서울 현상을 겪고 있는 한국 공연계에, 공간의 소유와 거버넌스를 예술가 스스로 획득하는 뉴욕의 혁신적 대안은 강력한 이정표가 되어줍니다.",
+        "editorial_category": "industry",
+        "editorial_category_label": "Industry",
+        "context_kr": "뉴욕 브로드웨이의 살인적인 임대료 속에서 독립 예술가들의 영구적 터전을 마련해주기 위해 설립된 비영리 단체 '인디스페이스(IndieSpace)'가 헬스키친 지역에 약 150평 규모의 혁신적 복합 예술 허브를 구축합니다.",
+        "korean_reader_note_kr": "서울의 대학로와 성수동이 겪은 젠트리피케이션을 떠올려 보세요. 예술가가 동네를 개척하고 나면 치솟은 임대료 때문에 정작 당사자들은 쫓겨나는 비극 속에서, 뉴욕의 '영구적 공간 확보 프로젝트'는 우리가 깊이 연구해야 할 생존 전략입니다.",
+        "signal_keywords": [
+            "공간 민주주의 (Spatial Democracy)",
+            "협동조합형 거버넌스",
+            "인프라적 예술 복지"
+        ]
+    },
+    {
+        "id": "if-netflix-is-the-future-of-video-games-were-all-cooked--opinion",
+        "title": "If Netflix Is the Future of Video Games, We’re All Cooked — Opinion",
+        "title_kr": "사라지는 만질 수 있는 것들: 게임 디스크의 종말이 무대의 유령들에게 건네는 경고",
+        "summary_kr": "콘솔 게임 디스크의 생산 중단과 창작자들의 대량 해고 사태를 통해, 모든 것이 디지털 스트리밍으로 수렴되는 플랫폼 자본주의 시대 속에서 우리 시대 무대 예술이 사수해야 할 ‘실체’와 ‘인간 존엄’의 가치를 엄중히 묻습니다.",
+        "date": "Wed, 08 Jul 2026 00:00:00 +0000",
+        "image": "https://www.indiewire.com/wp-content/uploads/2026/07/AAAAQdMGlsX8P1YDhiiojtjJA-o_eKciJaEQ3cJA91smPCNJxlACyZDnMW3RX60CEiy0u0zDdMekyLKDfHmMhUlEC_zfM4EBxoMwBfkc49nPkOqNlbmT-3Tw0jeZu6_AwOMsV33grmm-GAZR9Y93Kr7zrp4N.jpg?w=650",
+        "tier": "major",
+        "source": "IndieWire",
+        "link": "https://www.indiewire.com/features/commentary/netflix-video-games-flat-entertainment-economy-unhinged-1235203772/",
+        "why_it_matters_kr": "디지털 플랫폼이 인간의 감각과 예술의 영토를 완벽히 장악해 들어오는 지금, 무대 위의 물리적 육체와 손으로 만질 수 있는 예술적 기억이 왜 인류에게 포기할 수 없는 최후의 보루인지를 일깨워주기 때문입니다.",
+        "editorial_category": "cultural_signal",
+        "editorial_category_label": "Cultural Signal",
+        "context_kr": "마이크로소프트의 대규모 인력 감축과 소니의 실물 디스크 생산 중단 선언은 단순히 게임 업계의 악재를 넘어, 문화 콘텐츠 전반이 ‘소유’에서 ‘임대’로 완전히 이행하며 창작자를 부품화하고 있음을 보여주는 거대한 문화적 징후입니다.",
+        "korean_reader_note_kr": "한국의 연극·뮤지컬 관객들이 실물 티켓과 대본집, CD를 고집스럽게 수집하는 행위는 단순한 소장욕을 넘어, 모든 것이 가상화되는 세상에 대항해 ‘내가 그 시간, 그 공간에 존재했음’을 증명하려는 실존적 저항으로 읽어낼 수 있습니다.",
+        "signal_keywords": [
+            "플랫폼 자본주의의 독점",
+            "예술적 소유권의 종말",
+            "창작 노동의 휘발성"
+        ]
+    },
+    {
         "id": "duke-partners-with-ford-to-fund-performing-arts-tech-innovation",
         "title": "Duke Partners With Ford to Fund Performing Arts Tech Innovation",
         "title_kr": "기술이라는 차가운 무대에 심어질 인간성의 온기: 도리스 듀크와 포드 재단이 그리는 기술-예술의 생태학",
@@ -1882,40 +1924,6 @@
         "why_it_matters_kr": "'시한폭탄'이라는 고전적 서스펜스를 문자 그대로의 리얼리티로 치환하여, 통제된 공간 속 인간의 내면을 현미경처럼 들여다보는 데이비드 매켄지식 스릴러의 정수.",
         "signal_keywords": [
             "Criticism"
-        ]
-    },
-    {
-        "id": "why-magnolia-took-its-biggest-swing-yet-on-bob-odenkirks-normal",
-        "title": "Why Magnolia Took Its Biggest Swing Yet on Bob Odenkirk’s ‘Normal’",
-        "title_kr": "평범(Normal)이라는 이름의 비범한 도약: 밥 오덴커크와 마그놀리아가 던진 장르적 승부수",
-        "summary_kr": "전형적인 액션 장르의 틀 안에 인간적 고뇌를 심으려는 밥 오덴커크의 예술적 야심과, 이를 주류 시장의 중심으로 밀어 올리려 했던 마그놀리아의 파격적인 실험을 심층 분석합니다.",
-        "date": "Mon, 20 Apr 2026 22:00:00 +0000",
-        "image": "https://www.indiewire.com/wp-content/uploads/2025/07/Normal-TIFF-Key-Still.webp?w=650",
-        "tier": "major",
-        "source": "IndieWire",
-        "link": "https://www.indiewire.com/news/box-office/magnolia-normal-bob-odenkirk-box-office-analysis-1235189948/",
-        "editorial_category": "cultural_signal",
-        "editorial_category_label": "Cultural Signal",
-        "why_it_matters_kr": "전형적인 액션 장르의 틀 안에 인간적 고뇌를 심으려는 밥 오덴커크의 예술적 야심과, 이를 주류 시장의 중심으로 밀어 올리려 했던 마그놀리아의 파격적인 실험을 심층 분석합니다.",
-        "signal_keywords": [
-            "Cultural Signal"
-        ]
-    },
-    {
-        "id": "the-65mm-show-to-watch-is-beef-season-2",
-        "title": "The 65mm Show to Watch Is ‘Beef’ Season 2",
-        "title_kr": "분노의 해상도, 65mm 캔버스 위에 수놓은 인간 소외의 서사",
-        "summary_kr": "넷플릭스 ‘성난 사람들(Beef)’ 시즌 2가 선택한 65mm 대형 포맷의 미학을 통해, 화려한 컨트리클럽 뒤에 숨겨진 인물들의 서글픈 권력 관계와 지독한 친밀감을 심층 조망합니다.",
-        "date": "Sat, 18 Apr 2026 19:00:00 +0000",
-        "image": "https://www.indiewire.com/wp-content/uploads/2026/04/BEEF_n_S2_E3_00_14_10_13.jpg?w=650",
-        "tier": "major",
-        "source": "IndieWire",
-        "link": "https://www.indiewire.com/features/craft/beef-season-2-finale-cinematography-james-laxton-interview-1235189845/",
-        "editorial_category": "cultural_signal",
-        "editorial_category_label": "Cultural Signal",
-        "why_it_matters_kr": "넷플릭스 ‘성난 사람들(Beef)’ 시즌 2가 선택한 65mm 대형 포맷의 미학을 통해, 화려한 컨트리클럽 뒤에 숨겨진 인물들의 서글픈 권력 관계와 지독한 친밀감을 심층 조망합니다.",
-        "signal_keywords": [
-            "Cultural Signal"
         ]
     }
 ]
