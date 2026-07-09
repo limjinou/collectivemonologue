@@ -215,6 +215,38 @@ img {
   text-transform: uppercase;
 }
 
+.source-note {
+  margin-top: 72px;
+  border-top: 1px solid #000;
+  padding-top: 16px;
+  font-size: 13px;
+  color: #555;
+}
+
+.source-note span {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.source-note p {
+  max-width: 760px;
+  margin: 0 0 8px;
+  font-family: 'Bookk Gothic', 'Inter', sans-serif;
+  font-size: 13px;
+  line-height: 1.75;
+}
+
+.source-note a,
+.article-body a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 .weekly-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr));

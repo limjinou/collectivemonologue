@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
+Disallow: /index_old.html
+Disallow: /article_old.html
+Disallow: /category_old.html
+Disallow: /playbill_raw.html
 
 Sitemap: https://stage-is.com/sitemap.xml

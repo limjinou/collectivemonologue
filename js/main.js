@@ -20,6 +20,10 @@ document.addEventListener('DOMContentLoaded', () => {
   if (typeof initCookieBanner === 'function') {
     initCookieBanner();
   }
+
+  if (localStorage.getItem('cookieConsent') === 'accepted') {
+    loadConsentBasedServices();
+  }
 });
 
 /* --- Header Date Setup --- */
@@ -74,6 +78,35 @@ function normalizeCategory(value = '') {
 function inferSignal(article) {
   const signals = article.signal_keywords || article.keywords || [];
   return signals.slice(0, 3).map(escapeHtml).join(' / ');
+}
+
+function loadScriptOnce(id, src, attrs = {}) {
+  if (document.getElementById(id)) return;
+  const script = document.createElement('script');
+  script.id = id;
+  script.async = true;
+  script.src = src;
+  Object.entries(attrs).forEach(([key, value]) => script.setAttribute(key, value));
+  document.head.appendChild(script);
+}
+
+function loadConsentBasedServices() {
+  loadScriptOnce(
+    'adsense-script',
+    'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7015444869634194',
+    { crossorigin: 'anonymous' }
+  );
+
+  if (!window.dataLayer) window.dataLayer = [];
+  window.gtag = window.gtag || function gtag() { window.dataLayer.push(arguments); };
+  loadScriptOnce('ga4-script', 'https://www.googletagmanager.com/gtag/js?id=G-HYQZ9DQG0Z');
+  window.gtag('js', new Date());
+  window.gtag('config', 'G-HYQZ9DQG0Z');
+
+  if (!window.clarity) {
+    window.clarity = function clarity() { (window.clarity.q = window.clarity.q || []).push(arguments); };
+  }
+  loadScriptOnce('clarity-script', 'https://www.clarity.ms/tag/vkteot8g3h');
 }
 
 function renderEditorialFrames(articles) {
@@ -265,7 +298,18 @@ async function renderSingleArticle() {
         ` : ''}
       </section>
     `;
-    const attributionHtml = `<p style="margin-top: 80px; font-size: 12px; font-weight: 500; color: #666; text-transform: none; text-align: center;">스테이지이즈 편집부에 의해 작성된 글입니다.</p>`;
+    const sourceName = article.source || article.original_source || '공개 원문 보도';
+    const sourceLink = article.link || article.url || '';
+    const sourceHtml = sourceLink
+      ? `<a href="${escapeHtml(sourceLink)}" target="_blank" rel="noopener noreferrer">${escapeHtml(sourceName)}</a>`
+      : escapeHtml(sourceName);
+    const attributionHtml = `
+      <section class="source-note" aria-label="Stage-Is article source and editorial policy">
+        <span>Source and editorial method</span>
+        <p>이 글은 ${sourceHtml}를 바탕으로 Stage-Is 편집부가 한국 독자를 위해 맥락, 쟁점, 창작적 질문을 덧붙여 재구성한 큐레이션 기사입니다.</p>
+        <p><a href="/editorial-policy.html">Stage-Is 편집 원칙 보기</a></p>
+      </section>
+    `;
     document.querySelector('.article-body').innerHTML = editorialContextHtml + contentHtml + attributionHtml;
 
   } catch (error) {
@@ -345,6 +389,7 @@ function initCookieBanner() {
   btnAccept.addEventListener('click', () => {
     localStorage.setItem('cookieConsent', 'accepted');
     banner.style.display = 'none';
+    loadConsentBasedServices();
   });
 
   btnReject.addEventListener('click', () => {

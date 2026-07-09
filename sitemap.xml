@@ -31,6 +31,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://stage-is.com/editorial-policy.html</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://stage-is.com/article.html?id=what-the-success-of-hacks-or-widows-bay-tells-us-about-the-emmys-race</loc>
     <lastmod>2026-07-09</lastmod>
     <changefreq>weekly</changefreq>
