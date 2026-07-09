@@ -1,5 +1,26 @@
 [
     {
+        "id": "what-the-success-of-hacks-or-widows-bay-tells-us-about-the-emmys-race",
+        "title": "What the Success of ‘Hacks’ or Widow’s Bay’ Tells Us About the Emmys Race",
+        "title_kr": "무너지는 영토와 반복되는 무대: 에미상이 던진 ‘프레스티지’의 실종과 극예술의 초상",
+        "summary_kr": "에미상 후보작 선정에서 드러난 대기업의 브랜드 통합과 관성적 반복을 통해, 오늘날 공연 예술계가 마주한 ‘엘리트 프레스티지’와 ‘대중적 보편성’의 경계 해체를 날카롭게 성찰합니다.",
+        "date": "Wed, 08 Jul 2026 22:30:00 +0000",
+        "image": "https://www.indiewire.com/wp-content/uploads/2026/07/Widows_Bay_Photo_010405.jpg?w=650",
+        "tier": "major",
+        "source": "IndieWire",
+        "link": "https://www.indiewire.com/awards/industry/2026-emmy-nominations-takeaways-widows-bay-hbo-max-awards-1235204278/",
+        "why_it_matters_kr": "팬데믹과 파업이 남긴 거대한 무관심(Apathy) 속에서, 최고 권위의 시상식이 선택한 타협과 반복은 한국 공연계가 처한 흥행 안전주의에 뼈아픈 거울을 비춰주기 때문입니다.",
+        "editorial_category": "cultural_signal",
+        "editorial_category_label": "Cultural Signal",
+        "context_kr": "HBO(정통 프리미엄 채널)와 HBO Max(대중적 스트리밍)의 브랜드 통합 과정에서 일어난 잡음과, <헥스(Hacks)> 및 메디컬 드라마 <더 피트(The Pitt)>의 약진은 대중성과 예술성의 경계가 모호해진 미디어 환경을 단적으로 보여줍니다.",
+        "korean_reader_note_kr": "대형 뮤지컬과 스타 캐스팅에 의존하며 신작 개발을 주저하는 한국 뮤지컬·연극 시장 역시 에미상 후보작들의 '관성적 반복'과 유사한 위기를 겪고 있습니다. 이 기사를 통해 창작의 모험과 자본의 안정 사이에서 길을 잃은 우리의 예술 생태계를 되돌아볼 수 있습니다.",
+        "signal_keywords": [
+            "예술적 아파티(무관심)",
+            "프레스티지의 하이브리드화",
+            "시리즈의 관성"
+        ]
+    },
+    {
         "id": "indiespace-to-open-new-multiuse-space-in-hells-kitchen",
         "title": "IndieSpace to Open New Multi-Use Space in Hell’s Kitchen",
         "title_kr": "젠트리피케이션의 폭풍 속, 예술의 대지를 일구는 '인디스페이스'의 저항적 공간학",
@@ -1907,23 +1928,6 @@
         "why_it_matters_kr": "고등학교 무대라는 작은 우주 속에서 발견한 사제간의 깊은 유대와, 단순한 공연을 넘어 삶의 용기를 일깨우는 예술 교육의 진정한 가치를 조명합니다.",
         "signal_keywords": [
             "Cultural Signal"
-        ]
-    },
-    {
-        "id": "fuze-review-david-mackenzies-literal-ticking-time-bomb-thriller-isnt-sure-what-to-do-after-detonating",
-        "title": "‘Fuze’ Review: David Mackenzie’s Literal Ticking Time Bomb Thriller Isn’t Sure What to Do After Detonating",
-        "title_kr": "찰나의 정적, 폭발하는 긴장: '퓨즈(Fuze)'가 펼쳐놓은 은유의 실체화",
-        "summary_kr": "'시한폭탄'이라는 고전적 서스펜스를 문자 그대로의 리얼리티로 치환하여, 통제된 공간 속 인간의 내면을 현미경처럼 들여다보는 데이비드 매켄지식 스릴러의 정수.",
-        "date": "Tue, 21 Apr 2026 21:26:33 +0000",
-        "image": "https://www.indiewire.com/wp-content/uploads/2025/09/Screen-Shot-2025-09-04-at-9.28.31-PM.png?w=650",
-        "tier": "major",
-        "source": "IndieWire",
-        "link": "https://www.indiewire.com/criticism/movies/fuze-review-david-mackenzie-aaron-taylor-johnson-1235149275/",
-        "editorial_category": "criticism",
-        "editorial_category_label": "Criticism",
-        "why_it_matters_kr": "'시한폭탄'이라는 고전적 서스펜스를 문자 그대로의 리얼리티로 치환하여, 통제된 공간 속 인간의 내면을 현미경처럼 들여다보는 데이비드 매켄지식 스릴러의 정수.",
-        "signal_keywords": [
-            "Criticism"
         ]
     }
 ]
