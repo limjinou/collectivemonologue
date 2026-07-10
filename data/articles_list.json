@@ -1,5 +1,43 @@
 [
     {
+        "id": "this-month-in-theatre-history-1783647015",
+        "title": "This Month in Theatre History",
+        "title_kr": "상자의 탈출구에서 역사의 독백까지: 7월, 우리를 구원한 무대 역사론",
+        "summary_kr": "미국 연극사의 여명기를 밝힌 세 가지 결정적 순간을 통해, 자본의 냉혹함 속에서도 피어난 예술의 해방성과 무대를 지켜낸 선구자들의 뜨거운 고군분투를 조명합니다.",
+        "date": "Thu, 09 Jul 2026 14:58:18 +0000",
+        "image": "https://www.americantheatre.org/wp-content/uploads/MixCollage-06-Jul-2026-09-43-AM-651-AT.jpg",
+        "tier": "indie",
+        "source": "American Theatre",
+        "link": "https://www.americantheatre.org/2026/07/09/this-month-in-theatre-history-137/",
+        "why_it_matters_kr": "오늘날 한국 대학로와 글로벌 공연계가 마주하는 '제작비의 한계', '사회적 메시지', '여성 서사의 탄생'이라는 핵심 화두가 이미 수백 년 전 역사 속에서 어떻게 태동했는지를 선명히 보여주기 때문입니다.",
+        "editorial_category": "criticism",
+        "editorial_category_label": "Criticism",
+        "context_kr": "초기 미국 연극을 이끈 올드 아메리칸 컴퍼니의 쓰라린 실패, 노예제 폐지를 온몸으로 외친 헨리 박스 브라운의 파노라마 극, 미국 현대 극문학의 위대한 어머니 수잔 글래스펠의 탄생을 아우르는 이달의 연극사적 순간들입니다.",
+        "korean_reader_note_kr": "초청 공연이나 창작 뮤지컬을 올릴 때 겪는 한국 제작 환경의 고충, 그리고 최근 한국 연극계를 이끄는 페미니즘 및 소극장 운동의 흐름을 수잔 글래스펠의 개척정신과 연결해 한층 깊이 있게 읽어보시기를 권합니다.",
+        "signal_keywords": [
+            "예술과 자본의 영원한 투쟁",
+            "재현을 넘어선 해방의 연극",
+            "독립 극단 운동의 시원"
+        ]
+    },
+    {
+        "id": "gail-daughtry-inside-the-7day-writing-exercise-thats-produced-three-feature-films",
+        "title": "‘Gail Daughtry’: Inside the 7-Day Writing Exercise That’s Produced Three Feature Films",
+        "title_kr": "‘Gail Daughtry’: Inside the 7-Day Writing Exercise That’s Produced Three Feature Films",
+        "summary_kr": "AI 모델 일시적 과부하로 정보를 불러오지 못했습니다.",
+        "date": "Thu, 09 Jul 2026 21:00:00 +0000",
+        "image": "https://www.indiewire.com/wp-content/uploads/2026/07/GettyImages-2283048272.jpg?w=650",
+        "tier": "major",
+        "source": "IndieWire",
+        "link": "https://www.indiewire.com/features/podcast/screenwriting-101-how-to-write-script-week-1235204436/",
+        "why_it_matters_kr": "",
+        "editorial_category": "stage_to_screen",
+        "editorial_category_label": "Stage to Screen",
+        "context_kr": "",
+        "korean_reader_note_kr": "",
+        "signal_keywords": []
+    },
+    {
         "id": "what-the-success-of-hacks-or-widows-bay-tells-us-about-the-emmys-race",
         "title": "What the Success of ‘Hacks’ or Widow’s Bay’ Tells Us About the Emmys Race",
         "title_kr": "무너지는 영토와 반복되는 무대: 에미상이 던진 ‘프레스티지’의 실종과 극예술의 초상",
@@ -1894,40 +1932,6 @@
         "why_it_matters_kr": "거대한 자연의 침묵 속에 던져진 인간이 ‘사냥감’이 되었을 때 마주하는 원초적 공포, 그리고 샤를리즈 테론이라는 압도적 피사체가 완성한 고독한 생존의 무대.",
         "signal_keywords": [
             "Criticism"
-        ]
-    },
-    {
-        "id": "can-dallas-film-festival-industry-conference-do-for-texas-what-toronto-does-for-canada",
-        "title": "Can Dallas’ Film Festival Industry Conference Do for Texas What Toronto Does for Canada?",
-        "title_kr": "텍사스의 붉은 흙 위로 피어오르는 할리우드의 미학: 댈러스, 제2의 토론토를 꿈꾸다",
-        "summary_kr": "단순한 지역 영화제를 넘어, 산업의 심장부로 도약하려는 댈러스의 야심 찬 시도와 그 이면에 숨겨진 예술적 자생력에 관한 통찰적 고찰.",
-        "date": "Wed, 22 Apr 2026 22:00:00 +0000",
-        "image": "https://www.indiewire.com/wp-content/uploads/2026/04/P104S2DU.jpg?w=650",
-        "tier": "major",
-        "source": "IndieWire",
-        "link": "https://www.indiewire.com/news/festivals/dallas-international-film-festival-industry-2026-1235190212/",
-        "editorial_category": "industry",
-        "editorial_category_label": "Industry",
-        "why_it_matters_kr": "단순한 지역 영화제를 넘어, 산업의 심장부로 도약하려는 댈러스의 야심 찬 시도와 그 이면에 숨겨진 예술적 자생력에 관한 통찰적 고찰.",
-        "signal_keywords": [
-            "Industry"
-        ]
-    },
-    {
-        "id": "spring-school-musicals-and-educator-impact",
-        "title": "Spring School Musicals and Educator Impact",
-        "title_kr": "브롱크스의 봄, 조명 아래 피어난 찬란한 ‘성장의 서사’",
-        "summary_kr": "고등학교 무대라는 작은 우주 속에서 발견한 사제간의 깊은 유대와, 단순한 공연을 넘어 삶의 용기를 일깨우는 예술 교육의 진정한 가치를 조명합니다.",
-        "date": "Tue, 21 Apr 2026 14:46:23 +0000",
-        "image": "https://www.americantheatre.org/wp-content/uploads/at_jan17_Brent_Wagner_AugustWilsonTheatre.jpg",
-        "tier": "indie",
-        "source": "American Theatre",
-        "link": "https://www.americantheatre.org/2026/04/21/spring-school-musicals-and-educator-impact/",
-        "editorial_category": "cultural_signal",
-        "editorial_category_label": "Cultural Signal",
-        "why_it_matters_kr": "고등학교 무대라는 작은 우주 속에서 발견한 사제간의 깊은 유대와, 단순한 공연을 넘어 삶의 용기를 일깨우는 예술 교육의 진정한 가치를 조명합니다.",
-        "signal_keywords": [
-            "Cultural Signal"
         ]
     }
 ]
