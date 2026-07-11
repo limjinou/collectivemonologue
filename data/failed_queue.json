@@ -274,5 +274,17 @@
         "last_error": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
         "attempt_count": 1,
         "max_retry": 3
+    },
+    {
+        "failed_at": "2026-07-11T01:22:32.473551+00:00",
+        "reason": "missing_image",
+        "source": "American Theatre",
+        "tier": "indie",
+        "title": "The Caste Is Stacked in ‘The Employee Dharma Handbook’",
+        "link": "https://www.americantheatre.org/2026/07/10/the-caste-is-stacked-in-the-employee-dharma-handbook/",
+        "published": "Fri, 10 Jul 2026 13:53:07 +0000",
+        "last_error": "No usable image found from RSS, HTML, or Wikipedia.",
+        "attempt_count": 1,
+        "max_retry": 3
     }
 ]
