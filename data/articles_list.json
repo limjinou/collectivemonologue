@@ -1,5 +1,26 @@
 [
     {
+        "id": "industry-emmy-snub-prestige-tv-is-a-moniker-series-are-born-with-but-rarely-earn--opinion",
+        "title": "‘Industry’ Emmy Snub: Prestige TV Is a Moniker Series Are Born with but Rarely Earn — Opinion",
+        "title_kr": "왕관을 쓰고 태어난 자들의 축제, 그리고 무대 뒤편의 소외: ‘프레스티지’라는 허울에 대하여",
+        "summary_kr": "HBO의 ‘인더스트리(Industry)’ 에미상 전멸 사태를 통해 본 ‘프레스티지 TV’ 브랜드의 명암과, 시상식이라는 거대한 제도권 연극이 지닌 태생적 한계를 날카롭게 해부합니다.",
+        "date": "Sat, 11 Jul 2026 14:00:00 +0000",
+        "image": "https://www.indiewire.com/wp-content/uploads/2026/07/ken-leung-1.jpg?w=640",
+        "tier": "major",
+        "source": "IndieWire",
+        "link": "https://www.indiewire.com/features/commentary/emmys-why-industry-snubbed-1235204630/",
+        "why_it_matters_kr": "웰메이드 콘텐츠의 기준이 작품 고유의 예술성이 아닌 ‘브랜드 자산’에 의해 규정되는 작금의 문화 산업적 메커니즘을 성찰하기 위함입니다.",
+        "editorial_category": "industry",
+        "editorial_category_label": "Industry",
+        "context_kr": "최근 에미상에서 122개 후보를 배출하며 독점적 지위를 확인한 HBO이지만, 영국의 금융가를 날카롭게 해부한 명작 드라마 '인더스트리'가 단 하나의 후보에도 오르지 못하면서 시상식의 보수성과 브랜드 편향성이 다시금 도마 위에 올랐습니다.",
+        "korean_reader_note_kr": "한국의 백상예술대상이나 대학로의 연극상에서도 대형 기획사나 스타 캐스팅에 쏠리는 '제도적 편향'을 목격하곤 합니다. 이 글을 통해 창작의 야성이 시상식이라는 틀에 갇히는 현상을 우리의 공연 문화와 연결해 읽어보시기 바랍니다.",
+        "signal_keywords": [
+            "프레스티지 브랜드의 권력화",
+            "시상식의 보수성과 편향성",
+            "비주류 서사의 배제"
+        ]
+    },
+    {
         "id": "when-it-comes-to-animation-the-emmys-play-things-too-safe--opinion",
         "title": "When It Comes to Animation, the Emmys Play Things Too Safe — Opinion",
         "title_kr": "When It Comes to Animation, the Emmys Play Things Too Safe — Opinion",
@@ -1915,23 +1936,6 @@
         "why_it_matters_kr": "영화의 권위를 해체하고 관객을 창작의 파트너로 초대한 피트 오스의 파격적 실험, 그 속에 담긴 해방의 서사를 깊이 있게 들여다봅니다.",
         "signal_keywords": [
             "Stage to Screen"
-        ]
-    },
-    {
-        "id": "ak-payne-on-furloughs-paradise-rupture-and-ritual",
-        "title": "a.k. payne on ‘Furlough’s Paradise’: Rupture and Ritual",
-        "title_kr": "단절의 틈새에서 피어난 애도의 예식: a.k. 페인의 ‘퍼로우즈 파라다이스’가 던지는 질문",
-        "summary_kr": "개인적 슬픔의 파편들이 어떻게 사회적 해방의 서사로 확장되는가? 에이미 허조그와의 대담을 통해 들여다본 a.k. 페인의 연극적 정수와 '슬픔의 프랙탈'에 관한 고찰.",
-        "date": "Thu, 23 Apr 2026 16:54:01 +0000",
-        "image": "https://www.americantheatre.org/wp-content/uploads/ak-payne.jpg",
-        "tier": "indie",
-        "source": "American Theatre",
-        "link": "https://www.americantheatre.org/2026/04/23/a-k-payne-on-furloughs-paradise-rupture-and-ritual/",
-        "editorial_category": "cultural_signal",
-        "editorial_category_label": "Cultural Signal",
-        "why_it_matters_kr": "개인적 슬픔의 파편들이 어떻게 사회적 해방의 서사로 확장되는가? 에이미 허조그와의 대담을 통해 들여다본 a.k. 페인의 연극적 정수와 '슬픔의 프랙탈'에 관한 고찰.",
-        "signal_keywords": [
-            "Cultural Signal"
         ]
     }
 ]
