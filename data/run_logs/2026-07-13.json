@@ -1,0 +1,14 @@
+{
+    "started_at": "2026-07-13T01:22:37.585594+00:00",
+    "finished_at": "2026-07-13T01:25:43.978338+00:00",
+    "feeds_checked": 9,
+    "entries_found": 14,
+    "entries_selected": 2,
+    "processed": 2,
+    "added": 0,
+    "skipped_duplicate": 1,
+    "failed": 1,
+    "failures_by_reason": {
+        "missing_image": 1
+    }
+}
