@@ -1,5 +1,47 @@
 [
     {
+        "id": "brave-onstage-quiet-at-home",
+        "title": "Brave Onstage, Quiet at Home",
+        "title_kr": "무대 위의 용기, 침묵의 집으로 돌아오다: 뮤지컬 <더 패밀리 앨범(The Family Album)>이 건네는 가장 보편적인 위로",
+        "summary_kr": "여성 폭력 생존자의 절규에서 워싱턴 여성 행진의 찬가가 된 곡 'Quiet'. 싱어송라이터 밀크(MILCK)가 아시안 이민자 가정의 침묵과 상처를 치유하는 뮤지컬 <더 패밀리 앨범>으로 무대 위에 새로운 고백록을 펼쳐냅니다.",
+        "date": "Mon, 13 Jul 2026 14:00:00 +0000",
+        "image": "https://www.americantheatre.org/wp-content/uploads/The-Family-Album-Rehearsal-1-1024x759.png",
+        "tier": "indie",
+        "source": "American Theatre",
+        "link": "https://www.americantheatre.org/2026/07/13/brave-onstage-quiet-at-home/",
+        "why_it_matters_kr": "'가장 개인적인 것이 가장 세계적이다'라는 예술적 명제를 증명하듯, 메이저 음반사로부터 '보편적이지 않다'며 거절당한 아시안 여성의 서사가 어떻게 무대 위에서 찬란한 연대의 찬가로 피어나는지 목격할 시간입니다.",
+        "editorial_category": "voices",
+        "editorial_category_label": "Voices",
+        "context_kr": "2017년 미국 정가를 뒤흔든 여성 행진의 상징적 송가 'Quiet'를 탄생시킨 밀크(MILCK)가 극작가 샘 찬스, 연출가 제스 매클라우드 등 유색인종 여성 및 비이진성(Non-binary) 창작진과 손잡고 미국 명문 극장 라호야 플레이하우스(La Jolla Playhouse)에서 선보이는 자전적 뮤지컬입니다.",
+        "korean_reader_note_kr": "부모 세대의 유무형의 기대와 개인의 정체성 사이에서 오는 갈등, 그리고 '가족'이라는 가장 가깝고도 두려운 존재 앞에서 입을 닫아버리게 되는 침묵의 정서는 한국의 관객들에게도 깊은 정서적 울림을 자아냅니다.",
+        "signal_keywords": [
+            "마이너리티 서사의 보편성 획득",
+            "이민자 가문의 침묵과 세대 갈등",
+            "예술을 통한 연금술적 치유"
+        ]
+    },
+    {
+        "id": "have-disneys-liveaction-remakes-run-their-course",
+        "title": "Have Disney’s Live-Action Remakes Run Their Course?",
+        "title_kr": "바다를 잃어버린 모아나: 디즈니 실사화의 위기와 무대 예술이 던지는 경고",
+        "summary_kr": "디즈니 실사 영화 '모아나'의 흥행 부진을 통해, 원작의 명성에만 기대어 상상력을 기계적으로 복제하는 노스탤지어 마케팅의 한계와 진정한 재창조의 의미를 짚어봅니다.",
+        "date": "Mon, 13 Jul 2026 21:00:00 +0000",
+        "image": "https://www.indiewire.com/wp-content/uploads/2026/07/MNA-T1_0028.jpg?w=650",
+        "tier": "major",
+        "source": "IndieWire",
+        "link": "https://www.indiewire.com/news/box-office/moana-live-action-remake-box-office-disney-analysis-1235205027/",
+        "why_it_matters_kr": "익숙한 IP의 단순 복제에 의존하는 대중문화 산업의 관성이 어떻게 창작의 아우라를 소멸시키는지 극장 예술의 관점에서 통찰하기 위함입니다.",
+        "editorial_category": "stage_to_screen",
+        "editorial_category_label": "Stage to Screen",
+        "context_kr": "글로벌 미디어 거인 디즈니가 강력한 스트리밍 데이터와 검증된 IP를 바탕으로 '모아나' 실사판을 내놓았으나, 첫 주 성적이 기대치에 크게 못 미치며 실사화 전략 자체에 대한 근본적인 회의론이 대두되고 있습니다.",
+        "korean_reader_note_kr": "성공한 원작 웹툰이나 영화를 무대로 옮기는 작업이 활발한 한국 공연계 역시, 원작의 아우라를 극장만의 언어로 '재창조'하지 못하면 관객의 피로감만을 자아낼 수 있다는 점을 시사합니다.",
+        "signal_keywords": [
+            "IP 복제의 피로감",
+            "스트리밍 펌프의 종말",
+            "상상력의 기술적 잠식"
+        ]
+    },
+    {
         "id": "industry-emmy-snub-prestige-tv-is-a-moniker-series-are-born-with-but-rarely-earn--opinion",
         "title": "‘Industry’ Emmy Snub: Prestige TV Is a Moniker Series Are Born with but Rarely Earn — Opinion",
         "title_kr": "왕관을 쓰고 태어난 자들의 축제, 그리고 무대 뒤편의 소외: ‘프레스티지’라는 허울에 대하여",
@@ -1902,40 +1944,6 @@
         "why_it_matters_kr": "한 세기를 가로지르는 영혼들의 교감을 과학적 통찰과 미학적 서사로 엮어낸 일디코 엔예디의 수상을 기념하며, 우리 시대 예술이 과학이라는 차가운 진실을 어떻게 따뜻한 위로로 승화시키는지 고찰합니다.",
         "signal_keywords": [
             "Voices"
-        ]
-    },
-    {
-        "id": "vineyard-theatre-and-iatse-workers-reach-bargaining-agreement",
-        "title": "Vineyard Theatre and IATSE Workers Reach Bargaining Agreement",
-        "title_kr": "무대 뒤의 보이지 않는 손, 비니어드 시어터가 쏘아 올린 연대의 화음",
-        "summary_kr": "오프-브로드웨이의 예술적 자존심 비니어드 시어터와 IATSE의 역사적 합의는, 무대 뒤 노동의 가치를 예술의 정점으로 끌어올린 고귀한 선언입니다.",
-        "date": "Fri, 24 Apr 2026 17:01:58 +0000",
-        "image": "https://www.americantheatre.org/wp-content/uploads/Off-Broadway-workers_IATSE.jpg",
-        "tier": "indie",
-        "source": "American Theatre",
-        "link": "https://www.americantheatre.org/2026/04/24/vineyard-theatre-and-iatse-workers-reach-bargaining-agreement/",
-        "editorial_category": "industry",
-        "editorial_category_label": "Industry",
-        "why_it_matters_kr": "오프-브로드웨이의 예술적 자존심 비니어드 시어터와 IATSE의 역사적 합의는, 무대 뒤 노동의 가치를 예술의 정점으로 끌어올린 고귀한 선언입니다.",
-        "signal_keywords": [
-            "Industry"
-        ]
-    },
-    {
-        "id": "pete-ohs-wants-filmmaking-to-be-fun--and-for-you-to-edit-his-movies",
-        "title": "Pete Ohs Wants Filmmaking to Be Fun — and for You to Edit His Movies",
-        "title_kr": "스크린의 성벽을 허무는 유쾌한 반란: 피트 오스가 제안하는 ‘함께 만드는 미학’",
-        "summary_kr": "영화의 권위를 해체하고 관객을 창작의 파트너로 초대한 피트 오스의 파격적 실험, 그 속에 담긴 해방의 서사를 깊이 있게 들여다봅니다.",
-        "date": "Fri, 24 Apr 2026 22:00:00 +0000",
-        "image": "https://www.indiewire.com/wp-content/uploads/2026/04/Erupcja.jpeg?w=650",
-        "tier": "major",
-        "source": "IndieWire",
-        "link": "https://www.indiewire.com/features/interviews/pete-ohs-director-interview-erupcja-charli-xcx-1235189495/",
-        "editorial_category": "stage_to_screen",
-        "editorial_category_label": "Stage to Screen",
-        "why_it_matters_kr": "영화의 권위를 해체하고 관객을 창작의 파트너로 초대한 피트 오스의 파격적 실험, 그 속에 담긴 해방의 서사를 깊이 있게 들여다봅니다.",
-        "signal_keywords": [
-            "Stage to Screen"
         ]
     }
 ]
