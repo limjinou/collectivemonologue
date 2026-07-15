@@ -286,5 +286,29 @@
         "last_error": "No usable image found from RSS, HTML, or Wikipedia.",
         "attempt_count": 2,
         "max_retry": 3
+    },
+    {
+        "failed_at": "2026-07-15T01:09:15.909152+00:00",
+        "reason": "model_error",
+        "source": "IndieWire",
+        "tier": "major",
+        "title": "IndieWire Earns Two Daytime Emmy Award Nominations for Inaugural Craft Roundtables Series",
+        "link": "https://www.indiewire.com/awards/results/indiewire-daytime-emmy-nominations-craft-roundtables-series-1235205285/",
+        "published": "Tue, 14 Jul 2026 22:09:27 +0000",
+        "last_error": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
+        "attempt_count": 1,
+        "max_retry": 3
+    },
+    {
+        "failed_at": "2026-07-15T01:11:11.841067+00:00",
+        "reason": "model_error",
+        "source": "American Theatre",
+        "tier": "indie",
+        "title": "Proof of Passage: A Dispatch from Festival TransAmériques",
+        "link": "https://www.americantheatre.org/2026/07/14/proof-of-passage-a-dispatch-from-festival-transameriques/",
+        "published": "Tue, 14 Jul 2026 19:34:56 +0000",
+        "last_error": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
+        "attempt_count": 1,
+        "max_retry": 3
     }
 ]
