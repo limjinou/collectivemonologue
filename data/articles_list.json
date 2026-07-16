@@ -1,5 +1,47 @@
 [
     {
+        "id": "mia-katigbak-actormanager",
+        "title": "Mia Katigbak, Actor-Manager",
+        "title_kr": "무대라는 우주를 개척하는 치밀한 거장, 미아 카틱박의 '행운을 발명하는 법'",
+        "summary_kr": "아시아계 미국인 극단(NAATCO)의 설립자이자 뉴욕 연극계의 독보적인 대배우 미아 카틱박. 고전을 재해석하는 그녀의 철저한 학구열과 '준비된 우연'이 어떻게 무대 위에서 찬란한 실존으로 피어나는지 추적합니다.",
+        "date": "Wed, 15 Jul 2026 16:25:35 +0000",
+        "image": "https://www.americantheatre.org/wp-content/uploads/henry-vi_public-theater-2.jpg",
+        "tier": "indie",
+        "source": "American Theatre",
+        "link": "https://www.americantheatre.org/2026/07/15/mia-katigbak-actor-manager/",
+        "why_it_matters_kr": "서구 고전이라는 견고한 장벽을 아시안 배우들의 지적이고 기술적인 정교함으로 무너뜨린 한 예술가의 삶을 통해, 한국 연극계가 마주한 로컬리티와 보편성의 화두를 재조명합니다.",
+        "editorial_category": "voices",
+        "editorial_category_label": "Voices",
+        "context_kr": "미아 카틱박이 이끄는 NAATCO(국립 아시안 아메리칸 극단)는 백인 중심의 미국 연극계에서 아시아계 연극인들의 예술적 지평을 넓히기 위해 서구 고전 작품을 아시안 캐스팅으로 무대에 올려온 기념비적인 단체입니다.",
+        "korean_reader_note_kr": "최근 한국 연극계에서도 셰익스피어나 체호프 같은 고전을 현대 한국의 맥락으로 재정의하려는 시도가 활발합니다. 카틱박의 철저한 텍스트 분석과 '액터-매니저'로서의 책임감은 한국의 중견 연극인들과 창작자들에게도 깊은 공명을 일으킬 것입니다.",
+        "signal_keywords": [
+            "액터-매니저(Actor-Manager)의 부활",
+            "아시안 캐스팅의 고전 전복",
+            "철저한 텍스트주의"
+        ]
+    },
+    {
+        "id": "dead-meat-youtube-channel-launches-fresh-meat-anthology-competition-for-horror-filmmakers",
+        "title": "Dead Meat YouTube Channel Launches ‘Fresh Meat’ Anthology Competition for Horror Filmmakers",
+        "title_kr": "디지털 광장에서 피어나는 새로운 공포의 무대: '데드 미트(Dead Meat)'가 쏘아 올린 신진 창작자 생태계",
+        "summary_kr": "700만 팬덤을 보유한 호러 전문 유튜브 채널 '데드 미트'가 신진 호러 감독을 발굴하는 공모전 '프레시 미트'를 개최합니다. 제이슨 블룸을 비롯한 거장들이 주목하는 이들의 행보를 통해 디지털 커뮤니티가 현대 장르 예술의 새로운 인큐베이터로 진화하는 현장을 분석합니다.",
+        "date": "Wed, 15 Jul 2026 21:15:00 +0000",
+        "image": "https://www.indiewire.com/wp-content/uploads/2026/07/Dead-Meat-Fresh-Meat.png?w=650",
+        "tier": "major",
+        "source": "IndieWire",
+        "link": "https://www.indiewire.com/news/breaking-news/dead-meat-youtube-channel-horror-shorts-competition-1235205473/",
+        "why_it_matters_kr": "거대 자본과 기성 제작사의 관문 없이도, 팬덤 스스로가 장르의 예술성을 수호하며 대안적 무대를 직접 구축해 나가는 예술 민주화의 기념비적 순간이기 때문입니다.",
+        "editorial_category": "cultural_signal",
+        "editorial_category_label": "Cultural Signal",
+        "context_kr": "할리우드 호러 명가 블룸하우스의 수장 제이슨 블룸이 '호러의 미래'로 지목한 신예 감독들 뒤에는, 10년이 넘는 세월 동안 호러 영화의 해설가이자 비평가로 군러해 온 유튜브 채널 '데드 미트'가 있었습니다. 이들이 직접 개최하는 공모전은 현대 창작 생태계의 판도를 바꾸고 있습니다.",
+        "korean_reader_note_kr": "한국의 웹툰이나 1인 미디어가 기성 방송·영화계의 탯줄이 되는 현상처럼, 이 기사는 관객이 직접 비평가와 제작자로 거듭나는 글로벌 예술 트렌드의 축소판입니다. 무대와 스크린의 경계가 무너지는 오늘날, 새로운 창작자의 탄생 방식을 보여줍니다.",
+        "signal_keywords": [
+            "디지털 인큐베이팅",
+            "팬덤 주도 창작",
+            "대안적 등용문"
+        ]
+    },
+    {
         "id": "brave-onstage-quiet-at-home",
         "title": "Brave Onstage, Quiet at Home",
         "title_kr": "무대 위의 용기, 침묵의 집으로 돌아오다: 뮤지컬 <더 패밀리 앨범(The Family Album)>이 건네는 가장 보편적인 위로",
@@ -1910,40 +1952,6 @@
         "why_it_matters_kr": "15년의 우정과 라틴의 영혼이 빚어낸 이 다국어 뮤지컬은 언어의 국경을 넘어 오감을 자극하는 마법 같은 연극적 체험을 선사합니다.",
         "signal_keywords": [
             "Cultural Signal"
-        ]
-    },
-    {
-        "id": "verity-trailer-anne-hathaway-bites-dakota-johnson-until-she-bleeds-in-surreal-colleen-hoover-adaptation",
-        "title": "‘Verity’ Trailer: Anne Hathaway Bites Dakota Johnson Until She Bleeds in Surreal Colleen Hoover Adaptation",
-        "title_kr": "선혈로 빚어낸 무의식의 무대: 앤 해서웨이와 다코타 존슨이 그리는 잔혹한 서스펜스",
-        "summary_kr": "콜린 후버의 멜로적 문법을 전복시키며, 앤 해서웨이의 서늘한 변신과 다코타 존슨의 미묘한 불안이 교차하는 초현실적 심리극의 정수를 분석합니다.",
-        "date": "Tue, 28 Apr 2026 00:00:00 +0000",
-        "image": "https://www.indiewire.com/wp-content/uploads/2026/04/V_05529_R.jpg?w=650",
-        "tier": "major",
-        "source": "IndieWire",
-        "link": "https://www.indiewire.com/news/trailers/verity-trailer-anne-hathaway-colleen-hoover-1235190912/",
-        "editorial_category": "stage_to_screen",
-        "editorial_category_label": "Stage to Screen",
-        "why_it_matters_kr": "콜린 후버의 멜로적 문법을 전복시키며, 앤 해서웨이의 서늘한 변신과 다코타 존슨의 미묘한 불안이 교차하는 초현실적 심리극의 정수를 분석합니다.",
-        "signal_keywords": [
-            "Stage to Screen"
-        ]
-    },
-    {
-        "id": "silent-friend-director-ildikó-enyedi-leads-sloan-science-awards-at-sffilm",
-        "title": "‘Silent Friend’ Director Ildikó Enyedi Leads Sloan Science Awards at SFFILM",
-        "title_kr": "침묵하는 은행나무 아래, 과학과 예술이 맺은 억겁의 인연: 일디코 엔예디의 '사일런트 프렌드'",
-        "summary_kr": "한 세기를 가로지르는 영혼들의 교감을 과학적 통찰과 미학적 서사로 엮어낸 일디코 엔예디의 수상을 기념하며, 우리 시대 예술이 과학이라는 차가운 진실을 어떻게 따뜻한 위로로 승화시키는지 고찰합니다.",
-        "date": "Sat, 25 Apr 2026 17:00:00 +0000",
-        "image": "https://www.indiewire.com/wp-content/uploads/2025/12/silent-friend-1.webp?w=650",
-        "tier": "major",
-        "source": "IndieWire",
-        "link": "https://www.indiewire.com/news/festivals/silent-friend-sffilm-sloan-science-award-1235190710/",
-        "editorial_category": "voices",
-        "editorial_category_label": "Voices",
-        "why_it_matters_kr": "한 세기를 가로지르는 영혼들의 교감을 과학적 통찰과 미학적 서사로 엮어낸 일디코 엔예디의 수상을 기념하며, 우리 시대 예술이 과학이라는 차가운 진실을 어떻게 따뜻한 위로로 승화시키는지 고찰합니다.",
-        "signal_keywords": [
-            "Voices"
         ]
     }
 ]
