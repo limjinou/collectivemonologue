@@ -1,5 +1,26 @@
 [
     {
+        "id": "netflix-tries-to-ease-worries-about-engagement-season-2-drop-offs-podcasts-and-free-tiers",
+        "title": "Netflix Tries to Ease Worries About Engagement, Season 2 Drop Offs, Podcasts, and Free Tiers",
+        "title_kr": "폭식의 시대가 마주한 '소포모어 징크스': 넷플릭스의 스크린과 대학로의 무대가 만나는 지점",
+        "summary_kr": "콘텐츠 무한 경쟁 시대에 넷플릭스가 직면한 '시즌 2의 위기'와 몰입(Engagement)의 재정의를 통해, 디지털 스트리밍과 라이브 공연 예술이 공유하는 '관객과의 호흡'이라는 본질적 화두를 성찰합니다.",
+        "date": "Thu, 16 Jul 2026 23:54:58 +0000",
+        "image": "https://www.indiewire.com/wp-content/uploads/2026/06/I-Will-Find-You-Netflix-series-Sam-Worthington-Britt-Lower.jpg?w=650",
+        "tier": "major",
+        "source": "IndieWire",
+        "link": "https://www.indiewire.com/news/business/netflix-engagement-season-2-drop-offs-podcasts-free-tiers-1235205830/",
+        "why_it_matters_kr": "매체의 경계가 무너지는 지금, 글로벌 플랫폼의 생존 전략 속에서 우리 연극계가 학습해야 할 '지속 가능한 관객 몰입의 미학'을 발견할 수 있기 때문입니다.",
+        "editorial_category": "stage_to_screen",
+        "editorial_category_label": "Stage to Screen",
+        "context_kr": "넷플릭스는 최근 골든글로브를 휩쓴 '성난 사람들(Beef)' 등의 후속 시즌 관객 이탈 우려에 직면하며, 단순한 조회수를 넘어선 '질적 몰입'의 지표를 고민하고 있습니다. 이는 초연의 흥행을 재연과 삼연으로 이어가야 하는 한국 연극/뮤지컬 제작 환경과 놀랍도록 닮아 있습니다.",
+        "korean_reader_note_kr": "대학로의 수많은 창작 뮤지컬이 '초연 마니아'를 넘어 '재연의 대중화'로 나아갈 때 겪는 진통을 떠올리며 이 글을 읽는다면, 넷플릭스의 고민이 결코 남의 나라 이야기가 아님을 실감하게 될 것입니다.",
+        "signal_keywords": [
+            "소포모어 징크스",
+            "몰입(Engagement)의 재정의",
+            "디지털 스트리밍의 연극성"
+        ]
+    },
+    {
         "id": "mia-katigbak-actormanager",
         "title": "Mia Katigbak, Actor-Manager",
         "title_kr": "무대라는 우주를 개척하는 치밀한 거장, 미아 카틱박의 '행운을 발명하는 법'",
@@ -1933,23 +1954,6 @@
         "editorial_category": "cultural_signal",
         "editorial_category_label": "Cultural Signal",
         "why_it_matters_kr": "스크린을 넘어 대자연이라는 거대한 극장으로 우리를 초대하는 데이비드 애튼버러의 심연 탐사, 그 미학적 조우와 로컬 커뮤니티가 빚어낸 찬란한 밤을 기록합니다.",
-        "signal_keywords": [
-            "Cultural Signal"
-        ]
-    },
-    {
-        "id": "aguardiente-a-sensory-experience",
-        "title": "AGUARDIENTE, a Sensory Experience",
-        "title_kr": "아구아르디엔테: 독주 한 잔에 담긴 마술적 리얼리즘의 감각적 변주",
-        "summary_kr": "15년의 우정과 라틴의 영혼이 빚어낸 이 다국어 뮤지컬은 언어의 국경을 넘어 오감을 자극하는 마법 같은 연극적 체험을 선사합니다.",
-        "date": "Mon, 27 Apr 2026 17:12:47 +0000",
-        "image": "https://www.americantheatre.org/wp-content/uploads/image-3-1.png",
-        "tier": "indie",
-        "source": "American Theatre",
-        "link": "https://www.americantheatre.org/2026/04/27/aguardiente-a-sensory-experience/",
-        "editorial_category": "cultural_signal",
-        "editorial_category_label": "Cultural Signal",
-        "why_it_matters_kr": "15년의 우정과 라틴의 영혼이 빚어낸 이 다국어 뮤지컬은 언어의 국경을 넘어 오감을 자극하는 마법 같은 연극적 체험을 선사합니다.",
         "signal_keywords": [
             "Cultural Signal"
         ]
