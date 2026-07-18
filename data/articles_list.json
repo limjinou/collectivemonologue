@@ -1,5 +1,26 @@
 [
     {
+        "id": "danny-boyles-ink-sells-to-netflix-in-first-big-sale-way-ahead-of-venice-premiere",
+        "title": "Danny Boyle’s ‘Ink’ Sells to Netflix in First Big Sale (Way) Ahead of Venice Premiere",
+        "title_kr": "활자와 스크린, 그 뜨거운 잉크의 경계를 지우다: 대니 보일과 제임스 그레이엄의 '인크(Ink)'가 던지는 연극적 화두",
+        "summary_kr": "올리비에상에 빛나는 제임스 그레이엄의 명작 연극 '인크'가 대니 보일 감독의 미학을 통해 스크린으로 환생합니다. 베네치아 국제영화제 개막 전 넷플릭스가 발 빠르게 판권을 선점한 이번 사건은 '스테이지 투 스크린'의 패러다임 변화를 극적으로 보여줍니다.",
+        "date": "Fri, 17 Jul 2026 22:40:47 +0000",
+        "image": "https://www.indiewire.com/wp-content/uploads/2026/07/Ink-Stills-Press-Photos-First-Look-1920x1280-FINAL-LowRes-png.png?w=650",
+        "tier": "major",
+        "source": "IndieWire",
+        "link": "https://www.indiewire.com/news/breaking-news/danny-boyle-ink-netflix-venice-sale-1235206128/",
+        "why_it_matters_kr": "무대 위의 치열한 물리적 텍스트가 어떻게 현대 영상 언어의 가장 날카로운 무기로 변모하는지, 그리고 글로벌 OTT 플랫폼이 왜 이 연극적 유산에 매료되었는지 그 이면을 짚어내기 때문입니다.",
+        "editorial_category": "stage_to_screen",
+        "editorial_category_label": "Stage to Screen",
+        "context_kr": "2017년 런던 알메이다 극장에서 초연된 연극 '인크'는 미디어 재벌 루퍼트 머독과 편집장 래리 램이 타블로이드 지 '더 선'을 인수하며 영국의 언론 지형을 뒤흔드는 과정을 그린 정치·사회적 드라마입니다.",
+        "korean_reader_note_kr": "연극 '알앤제이', '히스토리 보이즈' 등 서사 중심의 영미권 연극에 매료되었던 한국 관객이라면, 텍스트의 정교한 매력이 대니 보일 특유의 감각적인 카메라 워크와 어떻게 충돌하고 융합하는지 흥미롭게 지켜볼 수 있을 것입니다.",
+        "signal_keywords": [
+            "무대 IP의 글로벌 시네마 쟁탈전",
+            "저널리즘 연극의 스릴러화",
+            "연극적 템포의 스크린 이식"
+        ]
+    },
+    {
         "id": "netflix-tries-to-ease-worries-about-engagement-season-2-drop-offs-podcasts-and-free-tiers",
         "title": "Netflix Tries to Ease Worries About Engagement, Season 2 Drop Offs, Podcasts, and Free Tiers",
         "title_kr": "폭식의 시대가 마주한 '소포모어 징크스': 넷플릭스의 스크린과 대학로의 무대가 만나는 지점",
@@ -1937,23 +1958,6 @@
         "editorial_category": "cultural_signal",
         "editorial_category_label": "Cultural Signal",
         "why_it_matters_kr": "위기의 시대 속에서 새로운 예술적 서사가 어떻게 잉태되고 지지받아야 하는가. 시카고 코트 씨어터가 주최한 'America@250' 컨비닝을 통해 공연예술의 지속가능한 미래를 위한 연대의 힘을 고찰합니다.",
-        "signal_keywords": [
-            "Cultural Signal"
-        ]
-    },
-    {
-        "id": "join-indiewire-and-national-geographic-to-celebrate-ocean-with-david-attenborough-at-vidiots",
-        "title": "Join IndieWire and National Geographic to Celebrate ‘Ocean with David Attenborough’ at Vidiots",
-        "title_kr": "심연의 무대, 침묵의 독백이 울려 퍼질 때: ‘오션 위드 데이비드 애튼버러’가 건네는 예술적 성찰",
-        "summary_kr": "스크린을 넘어 대자연이라는 거대한 극장으로 우리를 초대하는 데이비드 애튼버러의 심연 탐사, 그 미학적 조우와 로컬 커뮤니티가 빚어낸 찬란한 밤을 기록합니다.",
-        "date": "Tue, 28 Apr 2026 22:30:00 +0000",
-        "image": "https://www.indiewire.com/wp-content/uploads/2026/04/Screen-Shot-2026-04-28-at-1.48.03-PM.png?w=650",
-        "tier": "major",
-        "source": "IndieWire",
-        "link": "https://www.indiewire.com/news/events/indiewire-pass-the-remote-ocean-david-attenborough-1235191147/",
-        "editorial_category": "cultural_signal",
-        "editorial_category_label": "Cultural Signal",
-        "why_it_matters_kr": "스크린을 넘어 대자연이라는 거대한 극장으로 우리를 초대하는 데이비드 애튼버러의 심연 탐사, 그 미학적 조우와 로컬 커뮤니티가 빚어낸 찬란한 밤을 기록합니다.",
         "signal_keywords": [
             "Cultural Signal"
         ]
