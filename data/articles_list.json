@@ -1,5 +1,26 @@
 [
     {
+        "id": "1977s-animated-the-hobbit-proves-the-right-heros-journey-can-be-taken-again-and-again",
+        "title": "1977’s Animated ‘The Hobbit’ Proves the Right Hero’s Journey Can Be Taken Again and Again",
+        "title_kr": "영웅의 여정은 어째서 매번 우리의 무대 위에서 다시 태어나는가: 1977년 애니메이션 <호빗>과 연극적 상상력의 본질",
+        "summary_kr": "고전 대서사시 '오디세이아'의 원초적 매력부터 1977년 작 클래식 애니메이션 <호빗>에 이르기까지, 인류가 끊임없이 영웅의 여정을 무대와 스크린으로 소환하는 연극적 생명력을 추적합니다.",
+        "date": "Sat, 18 Jul 2026 03:59:00 +0000",
+        "image": "https://www.indiewire.com/wp-content/uploads/2026/07/TSDHOBB_BI001.jpg?w=650",
+        "tier": "major",
+        "source": "IndieWire",
+        "link": "https://www.indiewire.com/features/best-of/the-hobbit-animated-1977-rankin-and-bass-cult-fil-1235206129/",
+        "why_it_matters_kr": "인공지능과 초고화질 VFX가 스크린을 압도하는 시대에, 관객의 능동적인 상상력을 자극하는 '클래식 스토리텔링'과 '연극적 약속'의 힘이 왜 여전히 유효한지 일깨워줍니다.",
+        "editorial_category": "stage_to_screen",
+        "editorial_category_label": "Stage to Screen",
+        "context_kr": "고전 번역가 에밀리 윌슨이 어린 시절 학예회 연극에서 아테나 역을 맡으며 신화의 마법에 눈뜬 일화는, 위대한 서사가 결국 거창한 기술이 아닌 '우리 마음속 작은 무대'에서 시작된다는 오랜 진리를 상기시킵니다.",
+        "korean_reader_note_kr": "마치 우리 전통 마당놀이나 판소리에서 고수와 관객이 '얼씨구' 한마디로 빈 무대를 천만대군이 밀려오는 전쟁터로 탈바꿈시키듯, 서구 클래식 판타지의 원형 역시 관객과의 보이지 않는 '놀이적 약속' 위에 서 있습니다.",
+        "signal_keywords": [
+            "영웅의 여정(Hero's Journey)",
+            "연극적 약속(Theatrical Convention)",
+            "아날로그의 역습"
+        ]
+    },
+    {
         "id": "danny-boyles-ink-sells-to-netflix-in-first-big-sale-way-ahead-of-venice-premiere",
         "title": "Danny Boyle’s ‘Ink’ Sells to Netflix in First Big Sale (Way) Ahead of Venice Premiere",
         "title_kr": "활자와 스크린, 그 뜨거운 잉크의 경계를 지우다: 대니 보일과 제임스 그레이엄의 '인크(Ink)'가 던지는 연극적 화두",
@@ -1943,23 +1964,6 @@
         "why_it_matters_kr": "시상식의 영광은 단순한 트로피의 무게를 넘어, 한 장르의 생태계를 살리기도 하고 서서히 고사시키기도 하는 결정적인 동력이 됩니다. 에미상이 지닌 이 거대한 영향력의 메커니즘을 심층 분석합니다.",
         "signal_keywords": [
             "Stage to Screen"
-        ]
-    },
-    {
-        "id": "theres-some-new-work-out-here",
-        "title": "There’s Some New Work ‘Out Here’",
-        "title_kr": "시카고 레드라인 너머, 무대의 '내일'을 잉태하는 가장 뜨거운 대화: America@250",
-        "summary_kr": "위기의 시대 속에서 새로운 예술적 서사가 어떻게 잉태되고 지지받아야 하는가. 시카고 코트 씨어터가 주최한 'America@250' 컨비닝을 통해 공연예술의 지속가능한 미래를 위한 연대의 힘을 고찰합니다.",
-        "date": "Tue, 28 Apr 2026 14:25:49 +0000",
-        "image": "https://www.americantheatre.org/wp-content/uploads/Photo-of-Amanda-Pulcini-Z-Mowry-and-Ellie-Duffey-by-Michael-BrosilowAT.jpg",
-        "tier": "indie",
-        "source": "American Theatre",
-        "link": "https://www.americantheatre.org/2026/04/28/theres-some-new-work-out-here/",
-        "editorial_category": "cultural_signal",
-        "editorial_category_label": "Cultural Signal",
-        "why_it_matters_kr": "위기의 시대 속에서 새로운 예술적 서사가 어떻게 잉태되고 지지받아야 하는가. 시카고 코트 씨어터가 주최한 'America@250' 컨비닝을 통해 공연예술의 지속가능한 미래를 위한 연대의 힘을 고찰합니다.",
-        "signal_keywords": [
-            "Cultural Signal"
         ]
     }
 ]
