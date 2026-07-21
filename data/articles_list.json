@@ -1,5 +1,48 @@
 [
     {
+        "id": "writing-with-our-ancestors",
+        "title": "Writing With Our Ancestors",
+        "title_kr": "무대 위의 상상적 불꽃, 글쓰기라는 가장 오래된 제의(祭儀)",
+        "summary_kr": "푸에르토리코 산후안의 호텔 연회장에서 펼쳐진 특별한 워크숍을 통해, 희곡 집필이 고독한 개인의 작업을 넘어 조상들과의 영적 연대이자 공동체적 세레모니임을 아름다운 필치로 풀어냅니다.",
+        "date": "Mon, 20 Jul 2026 20:27:27 +0000",
+        "image": "https://www.americantheatre.org/wp-content/uploads/Kris-Candela-AT.jpg",
+        "tier": "indie",
+        "source": "American Theatre",
+        "link": "https://www.americantheatre.org/2026/07/20/writing-with-our-ancestors/",
+        "why_it_matters_kr": "창작의 고통을 영혼의 소통과 집단적 믿음의 의식으로 승화시키는 무대 예술의 근원적 힘을 보여줍니다.",
+        "editorial_category": "criticism",
+        "editorial_category_label": "Criticism",
+        "context_kr": "미국 연극그룹(TCG) 내셔널 컨퍼런스의 '의식으로서의 글쓰기' 워크숍 현장으로, 카리브해의 문화적 모자이크인 푸에르토리코 산후안을 배경으로 합니다.",
+        "korean_reader_note_kr": "한국 전통 예술의 ‘굿’이나 ‘살풀이’처럼, 보이지 않는 영적인 존재를 무대 위로 불러내어 공동체의 상처를 치유하고 이야기를 완성해 가는 연극의 원초적 제의성을 연상케 합니다.",
+        "signal_keywords": [
+            "제의로서의 창작",
+            "공동체적 상상력",
+            "보이지 않는 연대"
+        ]
+    },
+    {
+        "id": "kurosawas-final-film-madadayo-was-one-of-his-best--so-why-did-it-take-five-years-to-reach-the-us",
+        "title": "Kurosawa’s Final Film ‘Madadayo’ Was One of His Best — So Why Did it Take Five Years to Reach the U.S.?",
+        "title_kr": "거장의 고요한 백조의 노래, 왜 시장은 그의 가장 아름다운 ‘방백(旁白)’을 외면했는가",
+        "summary_kr": "세계 영화사의 거장 구로사와 아키라의 유작 ‘마다다요’가 미국 개봉까지 5년이라는 세월을 견뎌야 했던 배급의 역설을 통해, 화려한 스펙터클에 가려진 노년의 연극적 사유와 예술의 물질적 장벽을 심층 조명합니다.",
+        "date": "Mon, 20 Jul 2026 21:00:00 +0000",
+        "image": "https://www.indiewire.com/wp-content/uploads/2026/07/Madadayo.jpg?w=650",
+        "tier": "major",
+        "source": "IndieWire",
+        "link": "https://www.indiewire.com/features/commentary/akira-kurosawa-final-film-madadayo-bluray-1235206150/",
+        "why_it_matters_kr": "거장의 이름값조차 자본의 논리 앞에서는 무력해지는 문화 산업의 씁쓸한 이면을 폭로하는 동시에, 화려한 액션을 넘어선 고요한 무대예술적 가치를 재발견하게 합니다.",
+        "editorial_category": "stage_to_screen",
+        "editorial_category_label": "Stage to Screen",
+        "context_kr": "1993년 작 ‘마다다요’는 평생 ‘7인의 사무라이’, ‘란’ 등 굵직한 역사극을 연출했던 구로사와 아키라 감독이 평생의 무기를 내려놓고, 은퇴한 학자의 소박한 일상과 노년의 경지를 연극적 문법으로 그려낸 기념비적인 유작입니다.",
+        "korean_reader_note_kr": "한국 독자들에게 스승과 제자의 정서는 매우 친숙하지만, 영화가 보여주는 극도로 절제된 공간미와 반복되는 의식(Ritual)은 마치 국립극장의 정갈한 실내극을 감상하는 듯한 독특한 무대 미학적 경험을 선사할 것입니다.",
+        "signal_keywords": [
+            "구로사와 아키라의 백조의 노래",
+            "시각적 스펙터클의 함정",
+            "예술영화 배급의 장벽",
+            "영화의 연극적 회귀"
+        ]
+    },
+    {
         "id": "1977s-animated-the-hobbit-proves-the-right-heros-journey-can-be-taken-again-and-again",
         "title": "1977’s Animated ‘The Hobbit’ Proves the Right Hero’s Journey Can Be Taken Again and Again",
         "title_kr": "영웅의 여정은 어째서 매번 우리의 무대 위에서 다시 태어나는가: 1977년 애니메이션 <호빗>과 연극적 상상력의 본질",
@@ -1930,40 +1973,6 @@
         "why_it_matters_kr": "조지 오웰의 날카로운 풍자와 앤디 서키스의 집착에 가까운 열망이 빚어낸 낯선 불협화음, 그 속에 숨겨진 예술적 딜레마를 심층 분석합니다.",
         "signal_keywords": [
             "Criticism"
-        ]
-    },
-    {
-        "id": "lou-tyrrell-trusted-playwrights-and-got-audiences-to-do-the-same",
-        "title": "Lou Tyrrell Trusted Playwrights, and Got Audiences to Do the Same",
-        "title_kr": "미완의 문장에 생명을 불어넣는 연금술, 루 티렐이 남긴 '믿음'의 유산",
-        "summary_kr": "단 한 줄의 대본에서 무대의 마법을 발견했던 거장 루 티렐. 신작 희곡만을 고집하며 관객과 창작자 사이의 견고한 신뢰를 구축했던 그의 예술적 헌신을 조명합니다.",
-        "date": "Wed, 29 Apr 2026 19:00:41 +0000",
-        "image": "https://www.americantheatre.org/wp-content/uploads/lou-tyrrell.jpg",
-        "tier": "indie",
-        "source": "American Theatre",
-        "link": "https://www.americantheatre.org/2026/04/29/lou-tyrrell-trusted-playwrights-and-got-audiences-to-do-the-same/",
-        "editorial_category": "cultural_signal",
-        "editorial_category_label": "Cultural Signal",
-        "why_it_matters_kr": "단 한 줄의 대본에서 무대의 마법을 발견했던 거장 루 티렐. 신작 희곡만을 고집하며 관객과 창작자 사이의 견고한 신뢰를 구축했던 그의 예술적 헌신을 조명합니다.",
-        "signal_keywords": [
-            "Cultural Signal"
-        ]
-    },
-    {
-        "id": "entire-tv-genres-can-live-and-die-by-their-emmys-potential",
-        "title": "Entire TV Genres Can Live and Die by Their Emmys Potential",
-        "title_kr": "에미의 저울: 장르의 생존과 죽음을 가르는 시상식의 보이지 않는 손",
-        "summary_kr": "시상식의 영광은 단순한 트로피의 무게를 넘어, 한 장르의 생태계를 살리기도 하고 서서히 고사시키기도 하는 결정적인 동력이 됩니다. 에미상이 지닌 이 거대한 영향력의 메커니즘을 심층 분석합니다.",
-        "date": "Wed, 29 Apr 2026 21:00:00 +0000",
-        "image": "https://www.indiewire.com/wp-content/uploads/2026/04/3202256_0275_d4a374.jpg?w=650",
-        "tier": "major",
-        "source": "IndieWire",
-        "link": "https://www.indiewire.com/awards/predictions/tv-genres-live-die-by-emmys-potential-1235191407/",
-        "editorial_category": "stage_to_screen",
-        "editorial_category_label": "Stage to Screen",
-        "why_it_matters_kr": "시상식의 영광은 단순한 트로피의 무게를 넘어, 한 장르의 생태계를 살리기도 하고 서서히 고사시키기도 하는 결정적인 동력이 됩니다. 에미상이 지닌 이 거대한 영향력의 메커니즘을 심층 분석합니다.",
-        "signal_keywords": [
-            "Stage to Screen"
         ]
     }
 ]
