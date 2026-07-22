@@ -1,5 +1,47 @@
 [
     {
+        "id": "puppet-confidence-in-creede-reps-eureka",
+        "title": "Puppet Confidence in Creede Rep’s ‘Eureka’",
+        "title_kr": "인형이라는 방패 뒤에서 피어난 해방감: 크리드 레퍼토리 극장의 '유레카'",
+        "summary_kr": "콜로라도의 역사 깊은 지역 극장이 청소년들에게 전달한것은 단순한 연기 기술이 아니었습니다. 인형극이라는 매개체를 통해 비판의 두려움을 격리하고 무대 위에서 진정한 창의적 자신감을 발견하게 한 특별한 실험을 소개합니다.",
+        "date": "Tue, 21 Jul 2026 12:00:00 +0000",
+        "image": "https://www.americantheatre.org/wp-content/uploads/FC_Eureka_900x600.jpg",
+        "tier": "indie",
+        "source": "American Theatre",
+        "link": "https://www.americantheatre.org/2026/07/21/puppet-confidence-in-creede-reps-eureka/",
+        "why_it_matters_kr": "자신을 드러내기 두려워하는 현대 청소년들에게 무대 예술이 제공할 수 있는 심리적 안전지대와 예술적 해방의 메시지를 일깨워줍니다.",
+        "editorial_category": "voices",
+        "editorial_category_label": "Voices",
+        "context_kr": "미국 콜로라도주의 크리드 레퍼토리 극장(Creede Repertory Theatre)은 매년 청소년들을 위한 'KID Show'를 기획하며, 올해는 유타 및 미시간 기반의 인형극 단체 '드래곤시요(Dragoncillo)'와 협력해 인형극 제작 및 연행 과정을 제공했습니다.",
+        "korean_reader_note_kr": "한국의 입시와 평가 문화 속에서 위축되기 쉬운 우리 아이들에게, 가면이나 인형 같은 매개체를 통해 마음을 열게 하는 대안적 예술 교육 모델로 읽을 수 있습니다.",
+        "signal_keywords": [
+            "청소년 예술교육",
+            "인형극의 심리적 효과",
+            "지역 극장 커뮤니티"
+        ]
+    },
+    {
+        "id": "big-break-review-sketch-comedy-group-simple-town-just-made-a-killer-observation-about-success",
+        "title": "‘Big Break’ Review: Sketch Comedy Group Simple Town Just Made a Killer Observation About Success",
+        "title_kr": "성공이라는 환영, 야망이 독소로 변할 때: 연극적 희극그룹 '심플 타운'의 <빅 브레이크>",
+        "summary_kr": "성공의 목마름과 소외감이 교차하는 예술가들의 불안을 해학적이고 잔혹하게 조명한 영화 <빅 브레이크>. 스케치 코미디 크루 '심플 타운'의 연극적 자의식과 인간적 번민을 포착한다.",
+        "date": "Tue, 21 Jul 2026 22:00:00 +0000",
+        "image": "https://www.indiewire.com/wp-content/uploads/2026/07/Screenshot-2026-07-21-at-4.40.05-PM.png?w=650",
+        "tier": "major",
+        "source": "IndieWire",
+        "link": "https://www.indiewire.com/criticism/movies/big-break-review-simple-town-1235206501/",
+        "why_it_matters_kr": "무대 위의 찬란한 열망이 냉혹한 상업 논리와 부딪힐 때 생기는 예술가들의 생존 불안과 유대감의 균열을 가장 감각적으로 포착한 비평적 기록이기 때문이다.",
+        "editorial_category": "criticism",
+        "editorial_category_label": "Criticism",
+        "context_kr": "뉴욕과 LA의 오프-오프 브로드웨이 무대와 즉흥극(Improv) 씬을 누비던 실제 스케치 코미디 그룹 '심플 타운(Simple Town)'의 경험이 녹아있는 잔혹 희극 영화이다.",
+        "korean_reader_note_kr": "대학로 소극장이나 희극 크루 출신 배우들이 단 한 번의 기회를 향해 달릴 때 느끼는 야망과 소외감을 한국 예술계의 맥락과 연결하여 감상해 보라.",
+        "signal_keywords": [
+            "성공에 대한 집착과 불안",
+            "인디 스케치 코미디의 잔혹한 진화",
+            "예술가 집단의 번아웃과 동료애의 균열"
+        ]
+    },
+    {
         "id": "writing-with-our-ancestors",
         "title": "Writing With Our Ancestors",
         "title_kr": "무대 위의 상상적 불꽃, 글쓰기라는 가장 오래된 제의(祭儀)",
@@ -1939,40 +1981,6 @@
         "why_it_matters_kr": "고전의 운율을 체화한 세드릭 더 엔터테이너의 통찰부터, 80년대 컬트 영화를 화려한 스펙터클로 재탄생시킨 제작진의 도전까지, 현대 연극의 역동적인 조류를 짚어봅니다.",
         "signal_keywords": [
             "Cultural Signal"
-        ]
-    },
-    {
-        "id": "greta-gerwigs-narnia-is-aiming-for-more-than-awards-glory",
-        "title": "Greta Gerwig’s ‘Narnia’ Is Aiming for More Than Awards Glory",
-        "title_kr": "나니아의 향기: 황금빛 트로피 너머, 그레타 거윅이 응시하는 영원의 시간",
-        "summary_kr": "아카데미의 계절을 뒤로하고 2월의 IMAX로 향하는 그레타 거윅의 선택, 이는 단순한 개봉 연기가 아닌 예술적 완성을 향한 거장의 숭고한 기다림입니다.",
-        "date": "Fri, 01 May 2026 22:56:12 +0000",
-        "image": "https://www.indiewire.com/wp-content/uploads/2026/05/P115W9O9.jpg?w=650",
-        "tier": "major",
-        "source": "IndieWire",
-        "link": "https://www.indiewire.com/news/analysis/greta-gerwig-narnia-imax-success-awards-1235191937/",
-        "editorial_category": "cultural_signal",
-        "editorial_category_label": "Cultural Signal",
-        "why_it_matters_kr": "아카데미의 계절을 뒤로하고 2월의 IMAX로 향하는 그레타 거윅의 선택, 이는 단순한 개봉 연기가 아닌 예술적 완성을 향한 거장의 숭고한 기다림입니다.",
-        "signal_keywords": [
-            "Cultural Signal"
-        ]
-    },
-    {
-        "id": "animal-farm-review-his-serkis-his-monkeys",
-        "title": "‘Animal Farm’ Review: His Serkis, His Monkeys",
-        "title_kr": "혁명이라는 이름의 환상, 그 기괴한 몰락의 풍경: 앤디 서키스의 ‘동물농장’이 남긴 질문",
-        "summary_kr": "조지 오웰의 날카로운 풍자와 앤디 서키스의 집착에 가까운 열망이 빚어낸 낯선 불협화음, 그 속에 숨겨진 예술적 딜레마를 심층 분석합니다.",
-        "date": "Thu, 30 Apr 2026 22:30:00 +0000",
-        "image": "https://www.indiewire.com/wp-content/uploads/2026/04/MCDANFA_EC017_d403c3.jpg?w=650",
-        "tier": "major",
-        "source": "IndieWire",
-        "link": "https://www.indiewire.com/criticism/movies/animal-farm-review-andy-serkis-1235190927/",
-        "editorial_category": "criticism",
-        "editorial_category_label": "Criticism",
-        "why_it_matters_kr": "조지 오웰의 날카로운 풍자와 앤디 서키스의 집착에 가까운 열망이 빚어낸 낯선 불협화음, 그 속에 숨겨진 예술적 딜레마를 심층 분석합니다.",
-        "signal_keywords": [
-            "Criticism"
         ]
     }
 ]
