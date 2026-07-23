@@ -1,5 +1,47 @@
 [
     {
+        "id": "where-do-we-go-from-here",
+        "title": "Where Do We Go From Here?",
+        "title_kr": "역사의 궤적 위에서 무대의 내일을 묻다: 미국 연극 250년과 민주주의의 공간",
+        "summary_kr": "격동하는 시대의 소음 속에서 무대는 어떻게 맥락의 명징함을 찾아내는가. 미합중국 건국 250주년을 앞두고, 역사적 시선으로 미국 라이브 공연의 발자취와 국립예술기금(NEA)의 궤적, 그리고 원주민 아티스트들의 목소리를 심층 조명합니다.",
+        "date": "Wed, 22 Jul 2026 18:16:32 +0000",
+        "image": "https://www.americantheatre.org/wp-content/uploads/Untitled-design-10-1.png",
+        "tier": "indie",
+        "source": "American Theatre",
+        "link": "https://www.americantheatre.org/2026/07/22/where-do-we-go-from-here/",
+        "why_it_matters_kr": "예술 지원금의 위기와 문화적 분열을 겪는 오늘날, 무대가 어떻게 공동체의 역사적 서사를 지켜내는 시대의 거울이 되는지 핵심 통찰을 제공합니다.",
+        "editorial_category": "cultural_signal",
+        "editorial_category_label": "Cultural Signal",
+        "context_kr": "미국 건국 250주년을 맞이해 <아메리칸 시어터(American Theatre)> 매거진이 기획한 여름호 총론으로, 헤더 콕 리처드슨 교수의 역사적 분석 틀을 빌려 미국 연극사, NEA의 수난사, 원주민 연극의 탈식민주의적 서사를 통합적으로 다룹니다.",
+        "korean_reader_note_kr": "한국의 국립극장 역사나 공공 지원금 재편 이슈를 떠올리며, 국가적 대기념비 앞에서 예술이 단일한 자축에 머물지 않고 어떻게 비판적·포용적 담론을 형성하는지 비교해 볼 수 있습니다.",
+        "signal_keywords": [
+            "역사적 맥락화(Grounding Clarity)",
+            "공공 예술 지원(NEA)의 수난사",
+            "탈식민적 원주민 서사"
+        ]
+    },
+    {
+        "id": "someones-daughter-review-françois-arnaud-nauseates-in-striking-raperevenge-thriller",
+        "title": "‘Someone’s Daughter’ Review: François Arnaud Nauseates in Striking Rape-Revenge Thriller",
+        "title_kr": "야생이라는 밀실 무대에서 묻는 도덕의 무게: 스릴러 <누군가의 딸>",
+        "summary_kr": "납치범의 사후, 야생에 남겨진 변호사와 가해자 출신의 의뢰인. 영화 <누군가의 딸>은 선과 악의 이분법을 넘어 생존과 심리적 긴장이 교차하는 2인극 형태의 고품격 스릴러입니다.",
+        "date": "Wed, 22 Jul 2026 22:00:00 +0000",
+        "image": "https://www.indiewire.com/wp-content/uploads/2026/07/Someones-Daughter-Pascale-Bussieres-Francois-Arnaud-FILM-IMG-004_732161.png?w=650",
+        "tier": "major",
+        "source": "IndieWire",
+        "link": "https://www.indiewire.com/criticism/movies/someones-daughter-movie-review-francois-arnaud-1235206592/",
+        "why_it_matters_kr": "복수극이라는 장르적 틀을 깨고 고립된 공간에서의 심리적 대치와 도덕적 딜레마를 연극적 밀도로 그려내었기 때문입니다.",
+        "editorial_category": "stage_to_screen",
+        "editorial_category_label": "Stage to Screen",
+        "context_kr": "캐나다 퀘벡의 웅장한 자연을 배경으로, 법정 드라마의 도덕적 결함이 고립된 야생에서 심리극으로 변모하는 과정을 그린 작품입니다.",
+        "korean_reader_note_kr": "밀폐된 공간에서 두 인물의 심리적 대립을 다룬 고전 연극처럼, 스크린 위에서 펼쳐지는 인물 간의 밀도 높은 팽팽한 호흡을 감상할 수 있습니다.",
+        "signal_keywords": [
+            "장르의 재해석",
+            "윤리적 딜레마",
+            "심리적 2인극"
+        ]
+    },
+    {
         "id": "puppet-confidence-in-creede-reps-eureka",
         "title": "Puppet Confidence in Creede Rep’s ‘Eureka’",
         "title_kr": "인형이라는 방패 뒤에서 피어난 해방감: 크리드 레퍼토리 극장의 '유레카'",
@@ -1945,40 +1987,6 @@
         "editorial_category": "cultural_signal",
         "editorial_category_label": "Cultural Signal",
         "why_it_matters_kr": "화려한 은막의 조명 뒤에 가려졌던 창작자들의 치열한 공방과 갈등, 그 끝에 도달한 위태로운 평화와 '쇼 비즈니스'의 명암을 심층 조명합니다.",
-        "signal_keywords": [
-            "Cultural Signal"
-        ]
-    },
-    {
-        "id": "the-deeply-unnerving-1994-indie-what-happened-was-reminds-you-dating-has-always-been-hell",
-        "title": "The Deeply Unnerving 1994 Indie ‘What Happened Was’ Reminds You Dating Has Always Been Hell",
-        "title_kr": "식어버린 홍차와 날 선 진실: 'What Happened Was...'가 소환한 연애의 심연",
-        "summary_kr": "1994년 선댄스를 매료시킨 톰 누넌의 잔혹한 로맨스가 30년의 세월을 넘어 오프-브로드웨이 무대 위, 우리 시대의 가장 서늘한 거울로 다시 태어났습니다.",
-        "date": "Sat, 02 May 2026 03:59:00 +0000",
-        "image": "https://www.indiewire.com/wp-content/uploads/2026/05/What-Happened-Was.png?w=650",
-        "tier": "major",
-        "source": "IndieWire",
-        "link": "https://www.indiewire.com/features/best-of/what-happened-was-1994-tom-noonan-cult-film-1235191951/",
-        "editorial_category": "cultural_signal",
-        "editorial_category_label": "Cultural Signal",
-        "why_it_matters_kr": "1994년 선댄스를 매료시킨 톰 누넌의 잔혹한 로맨스가 30년의 세월을 넘어 오프-브로드웨이 무대 위, 우리 시대의 가장 서늘한 거울로 다시 태어났습니다.",
-        "signal_keywords": [
-            "Cultural Signal"
-        ]
-    },
-    {
-        "id": "cedric-the-entertainer-finds-his-song-lost-boys-raises-the-stakes",
-        "title": "Cedric the Entertainer Finds His Song, ‘Lost Boys’ Raises the Stakes",
-        "title_kr": "시대의 선율을 찾는 여정: 오거스트 윌슨의 영혼과 브로드웨이의 새로운 야심",
-        "summary_kr": "고전의 운율을 체화한 세드릭 더 엔터테이너의 통찰부터, 80년대 컬트 영화를 화려한 스펙터클로 재탄생시킨 제작진의 도전까지, 현대 연극의 역동적인 조류를 짚어봅니다.",
-        "date": "Fri, 01 May 2026 14:33:33 +0000",
-        "image": "https://www.americantheatre.org/wp-content/uploads/offscript-may-2026_cedric-the-entertainer_dane-laffrey-michael-arden.jpg",
-        "tier": "indie",
-        "source": "American Theatre",
-        "link": "https://www.americantheatre.org/2026/05/01/cedric-the-entertainer-finds-his-song-lost-boys-raises-the-stakes/",
-        "editorial_category": "cultural_signal",
-        "editorial_category_label": "Cultural Signal",
-        "why_it_matters_kr": "고전의 운율을 체화한 세드릭 더 엔터테이너의 통찰부터, 80년대 컬트 영화를 화려한 스펙터클로 재탄생시킨 제작진의 도전까지, 현대 연극의 역동적인 조류를 짚어봅니다.",
         "signal_keywords": [
             "Cultural Signal"
         ]
