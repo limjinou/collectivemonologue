@@ -1,5 +1,26 @@
 [
     {
+        "id": "avatar-seven-havens-releases-first-trailer-and-sets-premiere-date",
+        "title": "‘Avatar: Seven Havens’ Releases First Trailer and Sets Premiere Date",
+        "title_kr": "신화의 순환, 신체의 궤적: <아바타: 일곱 개의 안식처>가 스크린에 새길 서사적 유산",
+        "summary_kr": "20여 년간 스크린과 무대 예술의 경계를 허물며 대서사를 구축해 온 <아바타> 시리즈가 신작 <일곱 개의 안식처>를 확정지으며, 신체극적 연출과 신화적 영속성의 새로운 지평을 예고합니다.",
+        "date": "Thu, 23 Jul 2026 23:08:20 +0000",
+        "image": "https://www.indiewire.com/wp-content/uploads/2026/07/Screenshot-2026-07-23-at-3.30.30-PM.png?w=650",
+        "tier": "major",
+        "source": "IndieWire",
+        "link": "https://www.indiewire.com/news/trailers/avatar-seven-havens-trailer-premiere-date-1235206937/",
+        "why_it_matters_kr": "동양 무술과 원소 철학을 유기적인 신체 언어로 승화시킨 애니메이션 연출 미학이 동시대 메가 프랜차이즈의 세계관을 어떻게 지탱하고 확장하는지 보여주는 결정적 사례입니다.",
+        "editorial_category": "stage_to_screen",
+        "editorial_category_label": "Stage to Screen",
+        "context_kr": "원작 창작자인 브라이언 코니에츠코와 마이클 단테 디마티노가 다시 합작하여 선보이는 세 번째 TV 시리즈로, 4원소 벤딩 세계관의 계보를 잇는 정통 후속작입니다.",
+        "korean_reader_note_kr": "한국의 전통 무용이나 창작 신체극에서 발견되는 율동적 호흡으로 캐릭터들의 '벤딩' 무술을 감상하시면, 2차원 프레임을 넘어서는 무대적 몰입감을 느끼실 수 있습니다.",
+        "signal_keywords": [
+            "신체극적 연출 미학",
+            "순환적 신화 구조",
+            "IP 프랜차이즈의 예술성"
+        ]
+    },
+    {
         "id": "where-do-we-go-from-here",
         "title": "Where Do We Go From Here?",
         "title_kr": "역사의 궤적 위에서 무대의 내일을 묻다: 미국 연극 250년과 민주주의의 공간",
@@ -1970,23 +1991,6 @@
         "editorial_category": "cultural_signal",
         "editorial_category_label": "Cultural Signal",
         "why_it_matters_kr": "팬데믹 이후의 상흔 위에서 시카고의 연극인들이 모여 예술의 생존과 윤리, 그리고 기술적 변화를 논하는 'Re:working' 라운드테이블의 여정이 시작됩니다.",
-        "signal_keywords": [
-            "Cultural Signal"
-        ]
-    },
-    {
-        "id": "it-ends-with-this-justin-baldoni-and-blake-lively-settle-lawsuit",
-        "title": "It Ends with This: Justin Baldoni and Blake Lively Settle Lawsuit",
-        "title_kr": "무대 뒤의 불협화음, 화해라는 이름의 마지막 막을 올리다: '잇 엔즈 위드 어스' 소송 종결의 미학",
-        "summary_kr": "화려한 은막의 조명 뒤에 가려졌던 창작자들의 치열한 공방과 갈등, 그 끝에 도달한 위태로운 평화와 '쇼 비즈니스'의 명암을 심층 조명합니다.",
-        "date": "Mon, 04 May 2026 20:48:38 +0000",
-        "image": "https://www.indiewire.com/wp-content/uploads/2024/12/Untitled-design-6.jpg?w=650",
-        "tier": "major",
-        "source": "IndieWire",
-        "link": "https://www.indiewire.com/news/breaking-news/justin-baldoni-blake-lively-settle-lawsuit-it-ends-with-us-1235192332/",
-        "editorial_category": "cultural_signal",
-        "editorial_category_label": "Cultural Signal",
-        "why_it_matters_kr": "화려한 은막의 조명 뒤에 가려졌던 창작자들의 치열한 공방과 갈등, 그 끝에 도달한 위태로운 평화와 '쇼 비즈니스'의 명암을 심층 조명합니다.",
         "signal_keywords": [
             "Cultural Signal"
         ]
