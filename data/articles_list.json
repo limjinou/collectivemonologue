@@ -1,5 +1,47 @@
 [
     {
+        "id": "new-dramatists-resident-playwrights-namt-musicals-edinburgh-fringe-and-more",
+        "title": "New Dramatists Resident Playwrights, NAMT Musicals, Edinburgh Fringe, and More",
+        "title_kr": "무대 뒤 침묵의 시간과 신화의 재해석: 7년의 레지던시가 쏘아 올린 브로드웨이의 미래",
+        "summary_kr": "뉴욕연극계의 핵심 산실 '뉴 드라마티스트'의 7년 장기 레지던시 작가 발표와 NAMT 신작 뮤지컬 페스티벌의 파격적인 최종작들이 연극계의 새로운 미학적 지평을 제시합니다.",
+        "date": "Fri, 24 Jul 2026 15:58:28 +0000",
+        "image": "https://www.americantheatre.org/wp-content/uploads/new-dramatists-for-awards-july-no-2.png",
+        "tier": "indie",
+        "source": "American Theatre",
+        "link": "https://www.americantheatre.org/2026/07/24/new-dramatists-resident-playwrights-namt-musicals-edinburgh-fringe-and-more/",
+        "why_it_matters_kr": "성급한 단기 성과주의를 넘어 작가에게 7년의 자율성을 부여하는 예술적 기다림과, 고전과 역사를 힙합으로 재해석하는 미국 뮤지컬 생태계의 깊은 내공을 확인할 수 있습니다.",
+        "editorial_category": "industry",
+        "editorial_category_label": "Industry",
+        "context_kr": "뉴 드라마티스트(New Dramatists)는 상업적 압박 없이 극작가의 예술적 실험을 장기 지원하는 뉴욕의 독보적인 비영리 기관이며, NAMT는 전 세계 프로듀서들이 신작 뮤지컬을 발굴하는 최고 권위의 인큐베이팅 페스티벌입니다.",
+        "korean_reader_note_kr": "1년 단위의 단기 지원 사업에 주로 의존하는 한국의 공연 제작 환경과 비교할 때, 작가의 깊이 있는 성장을 기다려주는 7년의 레지던시 시스템은 국내 창작 생태계에도 묵직한 시사점을 전합니다.",
+        "signal_keywords": [
+            "7년 장기 비상업 레지던시",
+            "힙합·R&B로 재해석된 고전 신화",
+            "역사적 은폐 인물의 주체적 재조명"
+        ]
+    },
+    {
+        "id": "lanterns-trailer-green-lantern-gets-the-true-detective-treatment-in-dc-studios-hbo-series",
+        "title": "‘Lanterns’ Trailer: Green Lantern Gets the ‘True Detective’ Treatment in DC Studios HBO Series",
+        "title_kr": "성운의 반지에서 흙먼지 부츠로: <랜턴스>가 던지는 21세기 장르극의 새로운 음영",
+        "summary_kr": "초현실적 우주 경찰의 신화를 미국 중부 네브래스카의 음울한 수사극으로 변주한 HBO <랜턴스>. 히어로물이 네오 노아(Neo-Noir)의 연극적 중력과 만날 때 일어나는 서사적 도약을 탐구한다.",
+        "date": "Fri, 24 Jul 2026 21:08:48 +0000",
+        "image": "https://www.indiewire.com/wp-content/uploads/2026/07/Screen-Shot-2026-07-24-at-2.01.35-PM.png?w=650",
+        "tier": "major",
+        "source": "IndieWire",
+        "link": "https://www.indiewire.com/news/trailers/lanterns-trailer-dc-hbo-show-1235206936/",
+        "why_it_matters_kr": "거대 프랜차이즈 스펙터클이 대중적 볼거리를 넘어서, 팽팽한 2인극 형태의 고전적 인간 탐구로 진화하는 흥미로운 미학적 전환점을 제시하기 때문이다.",
+        "editorial_category": "stage_to_screen",
+        "editorial_category_label": "Stage to Screen",
+        "context_kr": "제임스 건과 피터 사프란이 이끄는 DC 스튜디오의 신작 <랜턴스>는 샌디에이고 코믹콘에서 트레일러를 공개하며 '트루 디텍티브'를 연상시키는 사실주의적 톤앤매너로 큰 반향을 일으켰다.",
+        "korean_reader_note_kr": "한국의 연극 관객들이 소극장 2인극에서 밀도 높은 인물 간 충돌과 서스펜스를 경험하듯, 초능력이라는 가상의 소재가 지극히 사실적인 미국 시골 마을의 분위기와 어떻게 착붙하는지 관전하는 것이 관전 포인트다.",
+        "signal_keywords": [
+            "장르의 서사적 탈착",
+            "네오 노아의 극적 중력",
+            "2인극적 캐릭터 대립"
+        ]
+    },
+    {
         "id": "avatar-seven-havens-releases-first-trailer-and-sets-premiere-date",
         "title": "‘Avatar: Seven Havens’ Releases First Trailer and Sets Premiere Date",
         "title_kr": "신화의 순환, 신체의 궤적: <아바타: 일곱 개의 안식처>가 스크린에 새길 서사적 유산",
@@ -1959,40 +2001,6 @@
         "why_it_matters_kr": "자본의 논리를 거부하고 오직 예술적 순수성만으로 무대를 채웠던 선구자들의 집념, 그리고 거장 아서 밀러의 풋풋한 시작이 남긴 연극사적 궤적을 심층 조명합니다.",
         "signal_keywords": [
             "Industry"
-        ]
-    },
-    {
-        "id": "fantasia-fest-2026-announces-ai-noir-teen-nazi-hunters-and-more-genre-fuel-in firstwave-lineup",
-        "title": "Fantasia Fest 2026 Announces A.I. Noir, Teen Nazi Hunters, and More Genre Fuel in First-Wave Lineup",
-        "title_kr": "몬트리올의 뜨거운 심장, 제30회 판타지아 영화제가 그리는 '광기의 청사진'",
-        "summary_kr": "인공지능의 서늘한 고찰부터 맥시멀리즘적 폭력의 미학까지, 30주년을 맞은 판타지아 국제 영화제가 제안하는 장르 영화의 새로운 지평을 탐구합니다.",
-        "date": "Tue, 05 May 2026 22:40:35 +0000",
-        "image": "https://www.indiewire.com/wp-content/uploads/2026/05/7551956e-d20f-cb9c-616f-f4d5095f981e.jpg?w=650",
-        "tier": "major",
-        "source": "IndieWire",
-        "link": "https://www.indiewire.com/news/festivals/fantasia-fest-2026-first-wave-programming-lineup-1235192483/",
-        "editorial_category": "cultural_signal",
-        "editorial_category_label": "Cultural Signal",
-        "why_it_matters_kr": "인공지능의 서늘한 고찰부터 맥시멀리즘적 폭력의 미학까지, 30주년을 맞은 판타지아 국제 영화제가 제안하는 장르 영화의 새로운 지평을 탐구합니다.",
-        "signal_keywords": [
-            "Cultural Signal"
-        ]
-    },
-    {
-        "id": "at-the-understudy-pocket-theatrics-announce-reworking-roundtable-series",
-        "title": "AT, The Understudy, Pocket Theatrics Announce Re:working Roundtable Series",
-        "title_kr": "유령등(Ghost Light)이 꺼진 뒤의 대화: 시카고 연극계의 자생적 진화를 묻다",
-        "summary_kr": "팬데믹 이후의 상흔 위에서 시카고의 연극인들이 모여 예술의 생존과 윤리, 그리고 기술적 변화를 논하는 'Re:working' 라운드테이블의 여정이 시작됩니다.",
-        "date": "Mon, 04 May 2026 14:44:36 +0000",
-        "image": "https://www.americantheatre.org/wp-content/uploads/Screenshot-2026-04-29-at-1.26.59-PM.png",
-        "tier": "indie",
-        "source": "American Theatre",
-        "link": "https://www.americantheatre.org/2026/05/04/at-the-understudy-pocket-theatrics-announce-reworking-roundtable-series/",
-        "editorial_category": "cultural_signal",
-        "editorial_category_label": "Cultural Signal",
-        "why_it_matters_kr": "팬데믹 이후의 상흔 위에서 시카고의 연극인들이 모여 예술의 생존과 윤리, 그리고 기술적 변화를 논하는 'Re:working' 라운드테이블의 여정이 시작됩니다.",
-        "signal_keywords": [
-            "Cultural Signal"
         ]
     }
 ]
