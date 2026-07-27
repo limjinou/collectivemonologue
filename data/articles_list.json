@@ -1,5 +1,26 @@
 [
     {
+        "id": "ryan-gosling-and-david-jonsson-are-superheroes-now-is-marvel-finally-putting-people-over-ip",
+        "title": "Ryan Gosling and David Jonsson Are Superheroes Now. Is Marvel Finally Putting People Over IP?",
+        "title_kr": "거대한 기계 장치의 붕괴, 그 위로 마침내 걸어 나오는 '인간의 얼굴'",
+        "summary_kr": "마블의 새로운 캐스팅 소식은 무분별한 IP 소비의 피로감을 뚫고, 비로소 배우의 실존적 연기와 인물 고유의 서사에 다시 눈을 돌리기 시작했음을 알리는 정교한 문화적 신호다.",
+        "date": "Sun, 26 Jul 2026 20:00:00 +0000",
+        "image": "https://www.indiewire.com/wp-content/uploads/2026/07/P107CVQ2-e1785093888524.jpg?w=650",
+        "tier": "major",
+        "source": "IndieWire",
+        "link": "https://www.indiewire.com/news/general-news/marvel-comic-con-casting-ryan-gosling-david-jonsson-1235207099/",
+        "why_it_matters_kr": "범람하는 기획형 IP 콘텐츠 속에서 무대와 스크린을 관통하는 '배우 본질주의'가 어떻게 대중문화의 거대한 타성을 구원하는지 짚어준다.",
+        "editorial_category": "cultural_signal",
+        "editorial_category_label": "Cultural Signal",
+        "context_kr": "라이언 고슬링의 '고스트 라이더'와 데이비드 존슨의 '블랙 팬서(T'Challa II)' 합류는 캐릭터라는 '껍데기'보다 배우의 '서사적 중량감'을 우선시하려는 블록버스터 산업의 구조적 전환점을 보여준다.",
+        "korean_reader_note_kr": "웹툰과 기존 인기 IP의 재탕에 의존하는 한국의 거대 미디어 시장이 '캐릭터 상업주의'를 넘어 '배우의 존재감'을 어떻게 결합해야 하는지 깊은 시사점을 던진다.",
+        "signal_keywords": [
+            "IP 피로도 극복",
+            "배우 중심 서사",
+            "캐스팅의 드라마투르기"
+        ]
+    },
+    {
         "id": "youve-never-met-a-horror-host-like-2017s-cryptina-the-luminous-ghost-of-short-films-past",
         "title": "You’ve Never Met a Horror Host Like 2017’s Cryptina: The Luminous Ghost of Short Films Past",
         "title_kr": "심야의 유령이 보낸 레트로 액트: '크립티나'가 되살린 B급 호러 호스트의 극장적 존재감",
@@ -1988,23 +2009,6 @@
         "why_it_matters_kr": "AI 모델 일시적 과부하로 정보를 불러오지 못했습니다.",
         "signal_keywords": [
             "Cultural Signal"
-        ]
-    },
-    {
-        "id": "sundance-2026-movies-sold-so-far-mubi-buys-grand-jury-prize-winner-nuisance-bear",
-        "title": "Sundance 2026 Movies Sold So Far: Mubi Buys Grand Jury Prize Winner ‘Nuisance Bear’",
-        "title_kr": "차가운 북극의 눈동자가 건네는 뜨거운 질문: 2026 선댄스의 미학적 성찰",
-        "summary_kr": "단순한 영화적 매매 기록을 넘어, 인간의 경계와 실존의 딜레마를 포착한 선댄스 화제작들을 통해 예술이 우리 시대의 '골칫거리'를 어떻게 포용하는지 분석합니다.",
-        "date": "Wed, 06 May 2026 21:06:40 +0000",
-        "image": "https://www.indiewire.com/wp-content/uploads/2026/01/Nuisance_Bear-Still_1_e9c037.jpg?w=650",
-        "tier": "major",
-        "source": "IndieWire",
-        "link": "https://www.indiewire.com/news/festivals/sundance-2026-movies-sold-so-far-1235174095/",
-        "editorial_category": "stage_to_screen",
-        "editorial_category_label": "Stage to Screen",
-        "why_it_matters_kr": "단순한 영화적 매매 기록을 넘어, 인간의 경계와 실존의 딜레마를 포착한 선댄스 화제작들을 통해 예술이 우리 시대의 '골칫거리'를 어떻게 포용하는지 분석합니다.",
-        "signal_keywords": [
-            "Stage to Screen"
         ]
     }
 ]
