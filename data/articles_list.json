@@ -1,5 +1,47 @@
 [
     {
+        "id": "5-things-the-pros-can-learn-from-high-school-theatre",
+        "title": "5 Things the Pros Can Learn From High School Theatre",
+        "title_kr": "순수의 무대에서 찾은 미학: 프로 연극계가 잊고 있던 '놀이(Play)'의 생명력",
+        "summary_kr": "5,000여 명의 청소년 연극도들이 펼치는 열정의 장, 국제 테스피안 페스티벌(ITF)의 현장에서 발견한 순수한 용기와, 정형화된 프로 상업 연극계가 회복해야 할 본질적인 유희성에 관한 고찰.",
+        "date": "Mon, 27 Jul 2026 21:18:26 +0000",
+        "image": "https://www.americantheatre.org/wp-content/uploads/International-Thespian-Festival4.jpg",
+        "tier": "indie",
+        "source": "American Theatre",
+        "link": "https://www.americantheatre.org/2026/07/27/5-things-the-pros-can-learn-from-high-school-theatre/",
+        "why_it_matters_kr": "완벽주의와 치밀한 계산에 갇힌 현대 프로 공연 산업에 '연극(Play)'이란 본래 기꺼이 불완전해지고 대담해지는 놀이였음을 일깨워줍니다.",
+        "editorial_category": "criticism",
+        "editorial_category_label": "Criticism",
+        "context_kr": "미국 최대 규모의 청소년 연극 축제인 '국제 테스피안 페스티벌(ITF)'에 심사위원으로 참가한 필자가, 브로드웨이 라이징 스타 자릴 배틀스 주니어(Jaleel Battles Jr.)의 연설을 계기로 프로 무대의 매너리즘을 반성합니다.",
+        "korean_reader_note_kr": "대학로의 거친 청소년/대학 극회 무대에서 느껴지는 날것의 생동감이 어떻게 경색된 프로 뮤지컬 생태계에 새로운 산소를 공급할 수 있는지 비평적 관점으로 감상해보세요.",
+        "signal_keywords": [
+            "청소년 연극제",
+            "연극의 유희성(Play)",
+            "완벽주의 타파"
+        ]
+    },
+    {
+        "id": "sour-minnows-review-a-hypnotic-horror-movie-about-being-human-when-nothing-feels-real",
+        "title": "‘Sour Minnows’ Review: A Hypnotic Horror Movie About Being Human When Nothing Feels Real",
+        "title_kr": "실재가 해체된 시대, 우리는 어떻게 '인간'으로 상연되는가: 영화 <사워 미노스>가 던진 연극적 자각",
+        "summary_kr": "디지털 매체에 침식당한 기억과 정체성의 균열을 초현실적 기호로 풀어낸 영화 <사워 미노스>를 통해, 무대와 스크린 경계에서 해체되는 현대인의 존재론적 슬픔을 심층 탐구합니다.",
+        "date": "Mon, 27 Jul 2026 22:00:00 +0000",
+        "image": "https://www.indiewire.com/wp-content/uploads/2026/07/Screenshot-2026-07-27-at-4.25.15-PM.png?w=650",
+        "tier": "major",
+        "source": "IndieWire",
+        "link": "https://www.indiewire.com/criticism/movies/sour-minnows-review-harrison-atkins-1235207114/",
+        "why_it_matters_kr": "모든 경험이 데이터화되고 감각이 디지털 기계음 속에 평탄화되는 시대에, 예술이 어떻게 '인간성'이라는 희미한 온기를 증명해내는지 명징하게 보여줍니다.",
+        "editorial_category": "stage_to_screen",
+        "editorial_category_label": "Stage to Screen",
+        "context_kr": "해리슨 앳킨스 감독의 신작 <사워 미노스>는 할리우드의 화려한 외피 뒤에 숨겨진 인간 소외와 정체성 상실을 초현실적 호러의 문법으로 재해석한 작품입니다.",
+        "korean_reader_note_kr": "초연결 사회 속에서 오히려 깊어지는 한국 현대인들의 고립감, 그리고 연극 <마우스피스>나 영화 <잠>처럼 가상과 현실의 경계가 허물어질 때 느껴지는 기이한 서스펜스와 깊은 맥이 닿아 있습니다.",
+        "signal_keywords": [
+            "디지털 디스컬렉션",
+            "초현실적 소외",
+            "존재의 데이터화"
+        ]
+    },
+    {
         "id": "ryan-gosling-and-david-jonsson-are-superheroes-now-is-marvel-finally-putting-people-over-ip",
         "title": "Ryan Gosling and David Jonsson Are Superheroes Now. Is Marvel Finally Putting People Over IP?",
         "title_kr": "거대한 기계 장치의 붕괴, 그 위로 마침내 걸어 나오는 '인간의 얼굴'",
@@ -1973,40 +2015,6 @@
         "editorial_category": "cultural_signal",
         "editorial_category_label": "Cultural Signal",
         "why_it_matters_kr": "단순한 어린이 연극을 넘어, 고갈되지 않는 수요와 예술적 밀도를 동시에 붙잡은 얼라이언스 시어터의 혁신적인 '레퍼토리' 실험을 조명합니다.",
-        "signal_keywords": [
-            "Cultural Signal"
-        ]
-    },
-    {
-        "id": "remarkably-bright-creatures-review-sally-field-bonds-with-an-octopus-but-the-human-drama-works-too",
-        "title": "‘Remarkably Bright Creatures’ Review: Sally Field Bonds with an Octopus, but the Human Drama Works Too",
-        "title_kr": "심해의 촉수가 건넨 따스한 위로, 살리 필드가 빚어낸 고요한 기적",
-        "summary_kr": "베스트셀러의 단순한 재현을 넘어, 스크린 위에서 새롭게 호흡하는 인간의 고독과 연대에 관한 가장 영리한 변주곡.",
-        "date": "Thu, 07 May 2026 23:00:00 +0000",
-        "image": "https://www.indiewire.com/wp-content/uploads/2026/04/RBC_227_E006C005_250415_R36R_2.38.1_Graded_R_NJ.jpg?w=650",
-        "tier": "major",
-        "source": "IndieWire",
-        "link": "https://www.indiewire.com/criticism/movies/remarkably-bright-creatures-film-review-sally-field-octopus-1235191813/",
-        "editorial_category": "criticism",
-        "editorial_category_label": "Criticism",
-        "why_it_matters_kr": "베스트셀러의 단순한 재현을 넘어, 스크린 위에서 새롭게 호흡하는 인간의 고독과 연대에 관한 가장 영리한 변주곡.",
-        "signal_keywords": [
-            "Criticism"
-        ]
-    },
-    {
-        "id": "mamas-turn-my-mother-me-and-2-musical-bookends",
-        "title": "Mama’s Turn: My Mother, Me, and 2 Musical Bookends",
-        "title_kr": "Mama’s Turn: My Mother, Me, and 2 Musical Bookends",
-        "summary_kr": "AI 모델 일시적 과부하로 정보를 불러오지 못했습니다.",
-        "date": "Wed, 06 May 2026 19:01:27 +0000",
-        "image": "https://www.americantheatre.org/wp-content/uploads/dorothy-fortenberry-and-mom1-1.jpg",
-        "tier": "indie",
-        "source": "American Theatre",
-        "link": "https://www.americantheatre.org/2026/05/06/mamas-turn-my-mother-me-and-2-musical-bookends/",
-        "editorial_category": "cultural_signal",
-        "editorial_category_label": "Cultural Signal",
-        "why_it_matters_kr": "AI 모델 일시적 과부하로 정보를 불러오지 못했습니다.",
         "signal_keywords": [
             "Cultural Signal"
         ]
