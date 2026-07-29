@@ -1,5 +1,47 @@
 [
     {
+        "id": "people-to-watch-bernardo-cubría",
+        "title": "People to Watch: Bernardo Cubría",
+        "title_kr": "화산재 속에서 쏘아 올린 질문: 극작가 베르나르도 쿠브리아가 묻는 '우리의 집'",
+        "summary_kr": "LA 산불의 트라우마를 폼페이의 신화적 도상으로 번역해낸 극작가 베르나르도 쿠브리아. 그가 도피성 엔터테인먼트를 넘어, 시대를 직시하는 연극의 참된 존재 이유를 고찰합니다.",
+        "date": "Tue, 28 Jul 2026 12:00:37 +0000",
+        "image": "https://www.americantheatre.org/wp-content/uploads/Bernardo-Cubria-1.jpg",
+        "tier": "indie",
+        "source": "American Theatre",
+        "link": "https://www.americantheatre.org/2026/07/28/people-to-watch-bernardo-cubria/",
+        "why_it_matters_kr": "기후 위기와 사회적 불안이 일상화된 오늘날, 연극이 어떻게 개인의 트라우마를 공동체의 고백과 구원으로 승화시키는지 명료하게 보여줍니다.",
+        "editorial_category": "voices",
+        "editorial_category_label": "Voices",
+        "context_kr": "멕시코 출신의 LA 기반 극작가 베르나르도 쿠브리아는 라티노 정체성과 현대 사회의 불안을 위트 있게 풀어내는 인물입니다. 그의 신작 <폼페이의 사람들>은 야외 극장인 토팡가 캐년의 '윌 기어 시아트리쿰 보타니쿰'에서 상연됩니다.",
+        "korean_reader_note_kr": "기후 변화로 인한 기습적 재난과 도시적 불안을 경험해 온 한국 독자들에게도, 재난의 징후를 대하는 쿠브리아의 연극적 은유는 깊은 울림으로 다가갈 것입니다.",
+        "signal_keywords": [
+            "기후 재난과 연극적 승화",
+            "도피냐 도전이냐의 연극적 이분법 해체",
+            "동시대 라티노 극작가의 안티-에스케이피즘"
+        ]
+    },
+    {
+        "id": "the-samurai-and-the-prisoner-review-kiyoshi-kurosawas-samurai-murdermystery-needs-a-sharper-blade",
+        "title": "‘The Samurai and the Prisoner’ Review: Kiyoshi Kurosawa’s Samurai Murder-Mystery Needs a Sharper Blade",
+        "title_kr": "둔탁한 칼날 끝에 걸린 도덕적 아비스: 구로사와 기요시의 <사무라이와 죄수>를 읽는 법",
+        "summary_kr": "현대적 고립과 불안을 서늘하게 그려온 거장 구로사와 기요시가 16세기 시대극의 틀을 빌려 선보인 밀실 미스터리 <사무라이와 죄수>. 무대적 밀실성과 거장의 작가주의가 부딪히는 미학적 지점을 깊이 있게 통찰합니다.",
+        "date": "Tue, 28 Jul 2026 19:06:00 +0000",
+        "image": "https://www.indiewire.com/wp-content/uploads/2026/05/Kokoueojo-The-Samurai-and-the-Prisoner-198491-H-2026.webp?w=650",
+        "tier": "major",
+        "source": "IndieWire",
+        "link": "https://www.indiewire.com/criticism/movies/the-samurai-and-the-prisoner-movie-review-kiyoshi-kurosawa-1235195105/",
+        "why_it_matters_kr": "현대 영화의 가장 서늘한 철학가 구로사와 기요시가 전통적인 시대극 양식 속에서 어떻게 무대적 긴장감과 인간의 도덕적 파멸을 조명하는지 확인할 수 있습니다.",
+        "editorial_category": "stage_to_screen",
+        "editorial_category_label": "Stage to Screen",
+        "context_kr": "<큐어>, <회로>, <도쿄 소나타> 등으로 세계적 명성을 얻은 구로사와 기요시 감독이 오다 노부나가 시대의 성곽을 배경으로 선보이는 묵직한 밀실 미스터리 시대극입니다.",
+        "korean_reader_note_kr": "밀폐된 공간에서 펼쳐지는 정교한 텍스트 중심의 심리극으로, 연극적 장치와 영화적 아포칼립스 세계관이 상충하고 결합하는 매혹적인 순간을 경험할 수 있습니다.",
+        "signal_keywords": [
+            "구로사와 기요시",
+            "시대극의 재해석",
+            "밀실 심리극"
+        ]
+    },
+    {
         "id": "5-things-the-pros-can-learn-from-high-school-theatre",
         "title": "5 Things the Pros Can Learn From High School Theatre",
         "title_kr": "순수의 무대에서 찾은 미학: 프로 연극계가 잊고 있던 '놀이(Play)'의 생명력",
@@ -1981,40 +2023,6 @@
         "editorial_category": "cultural_signal",
         "editorial_category_label": "Cultural Signal",
         "why_it_matters_kr": "화려한 넘버 뒤에서 극의 뼈대를 지탱하는 '북(Book)'의 가치를 재조명하고, 시대의 흐름에 발맞춰 고전을 현대적 감각으로 복원해내는 예술적 연금술을 탐구합니다.",
-        "signal_keywords": [
-            "Cultural Signal"
-        ]
-    },
-    {
-        "id": "judd-apatow-on-how-he-dug-into-the-funniest-man-in-the-world-mel-brooks",
-        "title": "Judd Apatow on How He Dug Into the Funniest Man in the World, Mel Brooks",
-        "title_kr": "웃음의 계보학: 주드 애퍼토우가 발굴한 멜 브룩스라는 희극의 성전",
-        "summary_kr": "시대의 유머를 정의한 거장 멜 브룩스의 내면을 현대 코미디의 기수 주드 애퍼토우의 시선으로 해부하며, 희극이 지닌 예술적 숭고함과 그 이면의 인간적 고뇌를 탐구합니다.",
-        "date": "Fri, 08 May 2026 22:30:00 +0000",
-        "image": "https://www.indiewire.com/wp-content/uploads/2026/01/Mel-Brooks-99-Year-Old-Man-HBO-documentary-release-date.jpg?w=650",
-        "tier": "major",
-        "source": "IndieWire",
-        "link": "https://www.indiewire.com/features/podcast/judd-apatow-mel-brooks-interview-screen-talk-1235192841/",
-        "editorial_category": "cultural_signal",
-        "editorial_category_label": "Cultural Signal",
-        "why_it_matters_kr": "시대의 유머를 정의한 거장 멜 브룩스의 내면을 현대 코미디의 기수 주드 애퍼토우의 시선으로 해부하며, 희극이 지닌 예술적 숭고함과 그 이면의 인간적 고뇌를 탐구합니다.",
-        "signal_keywords": [
-            "Cultural Signal"
-        ]
-    },
-    {
-        "id": "rabbits-rats-and-ants-oh-my-the-alliances-underground-rep",
-        "title": "Rabbits, Rats, and Ants, Oh My: The Alliance’s Underground Rep",
-        "title_kr": "토끼와 쥐, 그리고 개미가 안내하는 무대의 심연: '언더그라운드 렙'이 던지는 예술적 승부수",
-        "summary_kr": "단순한 어린이 연극을 넘어, 고갈되지 않는 수요와 예술적 밀도를 동시에 붙잡은 얼라이언스 시어터의 혁신적인 '레퍼토리' 실험을 조명합니다.",
-        "date": "Thu, 07 May 2026 15:03:36 +0000",
-        "image": "https://www.americantheatre.org/wp-content/uploads/Z066760-1024x681.jpg",
-        "tier": "indie",
-        "source": "American Theatre",
-        "link": "https://www.americantheatre.org/2026/05/07/rabbits-rats-ants-oh-my-the-alliances-underground-rep/",
-        "editorial_category": "cultural_signal",
-        "editorial_category_label": "Cultural Signal",
-        "why_it_matters_kr": "단순한 어린이 연극을 넘어, 고갈되지 않는 수요와 예술적 밀도를 동시에 붙잡은 얼라이언스 시어터의 혁신적인 '레퍼토리' 실험을 조명합니다.",
         "signal_keywords": [
             "Cultural Signal"
         ]
