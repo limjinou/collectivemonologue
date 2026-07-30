@@ -1,5 +1,47 @@
 [
     {
+        "id": "att-center-dallas-theater-center-plan-merger",
+        "title": "AT&T Center, Dallas Theater Center Plan Merger",
+        "title_kr": "공간의 공유에서 무대의 통합으로: 댈러스 연극 생태계가 던진 생존과 확장의 화두",
+        "summary_kr": "재정적 위기에 직면한 댈러스 시어터 센터와 AT&T 퍼포밍 아츠 센터가 2027년 완성을 목표로 대대적인 통합을 추진합니다. 제작 중심 극단과 대관 중심 복합문화공간의 만남이 지역 공연 예술의 지형도를 어떻게 바꿀지 주목됩니다.",
+        "date": "Wed, 29 Jul 2026 21:36:49 +0000",
+        "image": "https://www.americantheatre.org/wp-content/uploads/at_may17_Wyly-exterior.jpg",
+        "tier": "indie",
+        "source": "American Theatre",
+        "link": "https://www.americantheatre.org/2026/07/29/att-center-dallas-theater-center-plan-merger/",
+        "why_it_matters_kr": "세계적인 지역 극장 위기 속에서 '제작(Producing)'과 '기획/대관(Presenting)'의 경계를 허무는 구조 개혁이 한국 공연계의 지속 가능성에도 인상적인 시사점을 던집니다.",
+        "editorial_category": "industry",
+        "editorial_category_label": "Industry",
+        "context_kr": "텍사스주 댈러스의 대표적 연극 제작 단체인 '댈러스 시어터 센터(DTC)'와 거대 복합문화공간 'AT&T 퍼포밍 아츠 센터(AT&T PAC)'는 오랫동안 건물과 공간을 공유해 온 관계였습니다.",
+        "korean_reader_note_kr": "국내의 국공립 극장이나 세종문화회관, 예술의전당과 같은 대형 아트센터에서 전속 제작 단체와 상주 단체, 그리고 센터 자체의 기획 기능이 어떻게 재편될 수 있는가를 상상하며 읽으시면 한층 흥미롭습니다.",
+        "signal_keywords": [
+            "제작과 기획의 구조적 통합",
+            "지역 제작 극장의 재정난과 구조조정",
+            "공연 공간 효율성의 극대화"
+        ]
+    },
+    {
+        "id": "jane-schoenbrun-and-the-teenage-death-and-sex-at-camp-miasma-team-delivered-a-sexy-sapphic-secretary-live-reading",
+        "title": "Jane Schoenbrun and the ‘Teenage Death and Sex at Camp Miasma’ Team Delivered a Sexy, Sapphic ‘Secretary’ Live Reading",
+        "title_kr": "스크린의 욕망이 무대에 오를 때: 영화 <비서>를 해체한 제인 쇼엔브런의 사픽(Sapphic) 낭독극",
+        "summary_kr": "제인 쇼엔브런 감독과 질리언 앤더슨, 한나 아인바인더가 2002년작 컬트 영화 <비서>의 스크립트를 무대 위 라이브 리드로 재해석하며 BDSM 권력 지형을 사픽(Sapphic) 서사로 전복시켰습니다.",
+        "date": "Wed, 29 Jul 2026 21:30:00 +0000",
+        "image": "https://www.indiewire.com/wp-content/uploads/2026/07/Secretaryliveread.jpg?w=650",
+        "tier": "major",
+        "source": "IndieWire",
+        "link": "https://www.indiewire.com/news/general-news/secretary-live-read-gillian-anderson-hannah-einbinder-1235207435/",
+        "why_it_matters_kr": "고전적 영화 텍스트가 극장이라는 공간을 만나 어떻게 젠더와 권력 구도를 전복하고 찰나의 희곡적 에너지를 발산하는지 보여주는 매혹적인 관극 경험입니다.",
+        "editorial_category": "queer_lens",
+        "editorial_category_label": "Queer Lens",
+        "context_kr": "필름 인디펜던트(Film Independent)의 '라이브 리드(Live Read)' 시리즈는 유명 영화 대본을 배우들이 무대 위에서 실시간 낭독극 형태로 연기하는 이벤트로, 텍스트와 연기의 즉흥성을 극대화하는 비버리힐스 웰리스 아넨버그 공연예술센터의 대표 프로그램입니다.",
+        "korean_reader_note_kr": "한국 연극계에서 활발히 시도되는 '낭독공연(Staged Reading)'이나 젠더 프리 캐스팅 연극의 맥락과 연결하여, 기성 상업 영화가 무대 위에서 퀴어 연극으로 탈바꿈하는 순간에 주목해보세요.",
+        "signal_keywords": [
+            "라이브 리드(Live Read)",
+            "사픽 재해석(Sapphic Re-imagining)",
+            "무대와 스크린의 경계 해체"
+        ]
+    },
+    {
         "id": "people-to-watch-bernardo-cubría",
         "title": "People to Watch: Bernardo Cubría",
         "title_kr": "화산재 속에서 쏘아 올린 질문: 극작가 베르나르도 쿠브리아가 묻는 '우리의 집'",
@@ -1989,40 +2031,6 @@
         "editorial_category": "cultural_signal",
         "editorial_category_label": "Cultural Signal",
         "why_it_matters_kr": "부츠 라일리 감독의 신작 '아이 러브 부스터스'가 LA 한복판에서 펼친 파격적인 무료 주유 이벤트는, 영화적 서사가 어떻게 현실의 모순과 맞닿아 예술적 연대로 승화되는지를 보여주는 강렬한 퍼포먼스입니다.",
-        "signal_keywords": [
-            "Cultural Signal"
-        ]
-    },
-    {
-        "id": "adolescence-makes-bafta-history-with-recordbreaking-four-tv-award-wins",
-        "title": "‘Adolescence’ Makes BAFTA History with Record-Breaking Four TV Award Wins",
-        "title_kr": "잔혹한 계절의 찬가: '애돌레센스(Adolescence)'가 증명한 연기 예술의 숭고함",
-        "summary_kr": "영국 TV 예술의 정점, BAFTA의 역사를 새로 쓴 잭 손과 스테판 그레이엄의 걸작 '애돌레센스'가 남긴 미학적 파장과 시대적 함의를 탐구합니다.",
-        "date": "Sun, 10 May 2026 20:06:59 +0000",
-        "image": "https://www.indiewire.com/wp-content/uploads/2025/08/Adolescence-Owen-Cooper-Best-Supporting-Actor-Emmy-2025.jpg?w=650",
-        "tier": "major",
-        "source": "IndieWire",
-        "link": "https://www.indiewire.com/awards/results/2026-bafta-tv-awards-winners-list-adolescence-1235193034/",
-        "editorial_category": "stage_to_screen",
-        "editorial_category_label": "Stage to Screen",
-        "why_it_matters_kr": "영국 TV 예술의 정점, BAFTA의 역사를 새로 쓴 잭 손과 스테판 그레이엄의 걸작 '애돌레센스'가 남긴 미학적 파장과 시대적 함의를 탐구합니다.",
-        "signal_keywords": [
-            "Stage to Screen"
-        ]
-    },
-    {
-        "id": "book-restoration-in-flower-drum-song-and-brigadoon",
-        "title": "Book Restoration in ‘Flower Drum Song’ and ‘Brigadoon’",
-        "title_kr": "선율의 화려함 뒤에 숨은 고독한 건축, '뮤지컬 북'의 복원과 미학",
-        "summary_kr": "화려한 넘버 뒤에서 극의 뼈대를 지탱하는 '북(Book)'의 가치를 재조명하고, 시대의 흐름에 발맞춰 고전을 현대적 감각으로 복원해내는 예술적 연금술을 탐구합니다.",
-        "date": "Fri, 08 May 2026 19:23:17 +0000",
-        "image": "https://www.americantheatre.org/wp-content/uploads/goes-to-show_may-2026.jpg",
-        "tier": "indie",
-        "source": "American Theatre",
-        "link": "https://www.americantheatre.org/2026/05/08/book-restoration-in-flower-drum-song-and-brigadoon/",
-        "editorial_category": "cultural_signal",
-        "editorial_category_label": "Cultural Signal",
-        "why_it_matters_kr": "화려한 넘버 뒤에서 극의 뼈대를 지탱하는 '북(Book)'의 가치를 재조명하고, 시대의 흐름에 발맞춰 고전을 현대적 감각으로 복원해내는 예술적 연금술을 탐구합니다.",
         "signal_keywords": [
             "Cultural Signal"
         ]
