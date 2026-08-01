@@ -1,5 +1,47 @@
 [
     {
+        "id": "what-else-is-new-a-dalloway-prequel-helen-of-troy-in-the-old-west",
+        "title": "What Else Is New: A ‘Dalloway’ Prequel, Helen of Troy in the Old West",
+        "title_kr": "8월, 미국 연극이 던지는 무대 위의 신호들: 흉물스러운 건축물부터 AI의 윤리까지",
+        "summary_kr": "잠시 숨을 고르던 미국 연극계가 8월을 맞아 도심의 건축물, 트루 크라임 열풍, 인공지능 알고리즘의 윤리적 딜레마를 다룬 다채로운 세계 초연작들로 뜨겁게 타오르고 있습니다.",
+        "date": "Fri, 31 Jul 2026 12:00:00 +0000",
+        "image": "https://www.americantheatre.org/wp-content/uploads/isla_wp-theater-1024x683.webp",
+        "tier": "indie",
+        "source": "American Theatre",
+        "link": "https://www.americantheatre.org/2026/07/31/what-else-is-new-a-dalloway-prequel-helen-of-troy-in-the-old-west/",
+        "why_it_matters_kr": "동시대 미국 사회의 균열과 열망을 직시하는 신작 초연의 흐름을 통해, 현대 연극이 어떻게 우리 삶의 최전선을 비추는 거울이 되는지 목격할 수 있습니다.",
+        "editorial_category": "cultural_signal",
+        "editorial_category_label": "Cultural Signal",
+        "context_kr": "미국 지역 극장(Regional Theatre)들은 뉴욕 오프브로드웨이와 지역 거점을 잇는 공동 제작(Co-production) 생태계를 통해 사회적 담론을 담은 신작들을 지속적으로 발굴해내고 있습니다.",
+        "korean_reader_note_kr": "대학로의 소극장 무대가 한국 사회의 재개발이나 청년 세대의 불안을 포착하듯, 8월의 미국 신작들 역시 오늘날 미국이 겪고 있는 기술과 역사, 계급의 혼란을 날카롭게 포착합니다.",
+        "signal_keywords": [
+            "도심 건축과 연극적 비판",
+            "트루 크라임과 십대의 서사",
+            "기술 만능주의에 대한 경고"
+        ]
+    },
+    {
+        "id": "for-rising-stars-good-taste-comes-at-a-cost--superhero-films-are-just-one-way-to-satiate-it",
+        "title": "For Rising Stars, Good Taste Comes at a Cost — Superhero Films Are Just One Way to Satiate It",
+        "title_kr": "왕관과 프랜차이즈 사이: 라이징 스타들이 '슈퍼히어로' 슈트를 입는 진짜 이유",
+        "summary_kr": "토니상과 아카데미를 기웃거리던 무대 위의 정점에 선 배우들이 왜 다시 거대 프랜차이즈로 향할까? 예술적 명성과 마블 유니버스 사이, 현대 배우들이 치르는 '고급스러운 취향'의 대가에 관한 심층적인 비평적 탐구.",
+        "date": "Fri, 31 Jul 2026 22:30:00 +0000",
+        "image": "https://www.indiewire.com/wp-content/uploads/2026/07/GettyImages-2287656029.jpg?w=650",
+        "tier": "major",
+        "source": "IndieWire",
+        "link": "https://www.indiewire.com/awards/industry/superhero-films-brand-deals-bankable-awards-contenders-1235208021/",
+        "why_it_matters_kr": "순수 연극적 진정성과 대중 상업 자본의 경계가 무너진 오늘날, 연기자의 정체성과 예술적 생존 전략을 이해하는 깊은 시선을 제공합니다.",
+        "editorial_category": "stage_to_screen",
+        "editorial_category_label": "Stage to Screen",
+        "context_kr": "마블(MCU)과 같은 거대 블록버스터가 연극상(토니상) 및 비평가상 수상자들을 적극적으로 흡수하는 현실 속에서, 배우의 무대 감각이 상업 영화의 미학 및 평단의 편견과 충돌하는 지점을 조명합니다.",
+        "korean_reader_note_kr": "대학로 무대나 독립영화계에서 연기력을 입증한 배우들이 대형 상업 매체로 이동할 때 겪는 관객의 아쉬움과 배우 본인의 예술적 번민을 떠올리며 읽으시면 더욱 깊은 공감을 느끼실 수 있습니다.",
+        "signal_keywords": [
+            "프랜차이즈 자본주의",
+            "배우의 예술적 정체성",
+            "스테이지 투 스크린"
+        ]
+    },
+    {
         "id": "time-warp-review-young-and-queer-rocky-horror-fans-stage-a-smalltown-drag-production-worthy-of-christopher-guest",
         "title": "‘Time Warp’ Review: Young and Queer ‘Rocky Horror’ Fans Stage a Small-Town Drag Production Worthy of Christopher Guest",
         "title_kr": "억압의 땅에서 피어난 붉은 포효: 영화 '타임 워프'와 변방 무대의 정치학",
@@ -2001,40 +2043,6 @@
         "editorial_category": "cultural_signal",
         "editorial_category_label": "Cultural Signal",
         "why_it_matters_kr": "무대 위 활자의 리듬을 스크린의 조형미로 치환하며, 고통과 분노를 예술적 숭고함으로 승화시킨 얼리샤 해리스의 파격적인 미학적 여정을 탐구합니다.",
-        "signal_keywords": [
-            "Cultural Signal"
-        ]
-    },
-    {
-        "id": "drivers-ed-review-sam-nivola-stars-in-bobby-farrellys-generic-throwback-to-the-days-of-road-trip-and-american-pie",
-        "title": "‘Driver’s Ed’ Review: Sam Nivola Stars in Bobby Farrelly’s Generic Throwback to the Days of ‘Road Trip’ and ‘American Pie’",
-        "title_kr": "낡은 지도로 떠나는 익숙한 여행, '드라이버스 에드'가 놓친 예술적 변곡점",
-        "summary_kr": "90년대 코미디의 향수와 현대적 감각이 충돌하는 지점에서, 영화 '드라이버스 에드'가 보여준 평범함의 미학과 그 한계를 예리한 시선으로 해부합니다.",
-        "date": "Tue, 12 May 2026 21:00:00 +0000",
-        "image": "https://www.indiewire.com/wp-content/uploads/2025/09/Screen-Shot-2025-09-11-at-10.05.08-AM.png?w=650",
-        "tier": "major",
-        "source": "IndieWire",
-        "link": "https://www.indiewire.com/criticism/movies/drivers-ed-movie-review-bobby-farrelly-sam-nivola-1235150449/",
-        "editorial_category": "voices",
-        "editorial_category_label": "Voices",
-        "why_it_matters_kr": "90년대 코미디의 향수와 현대적 감각이 충돌하는 지점에서, 영화 '드라이버스 에드'가 보여준 평범함의 미학과 그 한계를 예리한 시선으로 해부합니다.",
-        "signal_keywords": [
-            "Voices"
-        ]
-    },
-    {
-        "id": "state-of-play",
-        "title": "State of Play",
-        "title_kr": "터놓지 못한 진실: 무대 위의 문장이 생존의 언어로 바뀌기까지",
-        "summary_kr": "17년 전 발표된 연구 ‘Outrageous Fortune’이 던진 화두를 통해, 예술적 열망과 자본의 냉혹함 사이에서 표류하는 희곡 작가들의 삶과 연극 생태계의 구조적 균열을 심도 있게 고찰합니다.",
-        "date": "Mon, 11 May 2026 14:07:09 +0000",
-        "image": "https://www.americantheatre.org/wp-content/uploads/writers-compensation_deb-lims.jpg",
-        "tier": "indie",
-        "source": "American Theatre",
-        "link": "https://www.americantheatre.org/2026/05/11/state-of-play/",
-        "editorial_category": "cultural_signal",
-        "editorial_category_label": "Cultural Signal",
-        "why_it_matters_kr": "17년 전 발표된 연구 ‘Outrageous Fortune’이 던진 화두를 통해, 예술적 열망과 자본의 냉혹함 사이에서 표류하는 희곡 작가들의 삶과 연극 생태계의 구조적 균열을 심도 있게 고찰합니다.",
         "signal_keywords": [
             "Cultural Signal"
         ]
