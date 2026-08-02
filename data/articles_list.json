@@ -1,5 +1,26 @@
 [
     {
+        "id": "butcher-baker-nightmare-maker-is-the-deranged-cult-slasher-every-horror-fan-should-have-on-tap",
+        "title": "‘Butcher, Baker, Nightmare Maker’ Is the Deranged Cult Slasher Every Horror Fan Should Have on Tap",
+        "title_kr": "억압된 욕망과 광기가 무대 위로 오를 때: <부처, 베이커, 나이트메어 메이커>가 던지는 잔혹한 미학",
+        "summary_kr": "1980년대 컬트 슬래셔 <부처, 베이커, 나이트메어 메이커>를 통해 B급 장르 영화가 지닌 그랑기뇰(Grand Guignol)적 무대성과 억압된 심리적 굴절을 깊이 있게 조명합니다.",
+        "date": "Sat, 01 Aug 2026 03:59:00 +0000",
+        "image": "https://www.indiewire.com/wp-content/uploads/2026/07/Screenshot-2026-07-31-at-5.50.14-PM.png?w=650",
+        "tier": "major",
+        "source": "IndieWire",
+        "link": "https://www.indiewire.com/features/best-of/butcher-baker-nightmare-maker-1981-cult-film-1235208050/",
+        "why_it_matters_kr": "스크린의 그늘 속에 은폐되어 있던 잊혀진 컬트작이 어떻게 현대 스트리밍 시대의 미드나잇 무비 문화와 만나 새로운 예술적 시그널로 부활하는지 제시합니다.",
+        "editorial_category": "stage_to_screen",
+        "editorial_category_label": "Stage to Screen",
+        "context_kr": "1981년작 <부처, 베이커, 나이트메어 메이커>(재발매명 '나이트 워닝')는 과잉된 심리적 집착과 금기된 욕망을 다룬 잔혹 스릴러로, 최근 북미 영화계에서 미드나잇 무비 재평가 열풍과 맞물려 미학적으로 재조명받고 있습니다.",
+        "korean_reader_note_kr": "인간 심리의 어두운 굴절을 극단적인 서스펜스로 풀어낸 이 작품은 한국 거장 김기영 감독의 잔혹한 심리 스릴러나 현대 극장의 입체적인 잔혹극과도 흥미로운 미학적 접점을 형성합니다.",
+        "signal_keywords": [
+            "미드나잇 컬트 시네마",
+            "그랑기뇰적 광기",
+            "억압된 욕망의 연극성"
+        ]
+    },
+    {
         "id": "what-else-is-new-a-dalloway-prequel-helen-of-troy-in-the-old-west",
         "title": "What Else Is New: A ‘Dalloway’ Prequel, Helen of Troy in the Old West",
         "title_kr": "8월, 미국 연극이 던지는 무대 위의 신호들: 흉물스러운 건축물부터 AI의 윤리까지",
@@ -2028,23 +2049,6 @@
         "why_it_matters_kr": "무대 위의 강렬한 에너지를 스크린으로 전이시킨 알레시아 해리스는, 고통의 연대기와 신성(神性)의 파괴적 본질을 다루며 현대 복수극의 새로운 지평을 엽니다.",
         "signal_keywords": [
             "Stage to Screen"
-        ]
-    },
-    {
-        "id": "how-is-god-is-set-aleshea-harris-free",
-        "title": "How ‘Is God Is’ Set Aleshea Harris Free",
-        "title_kr": "복수의 선혈로 빚어낸 시적 해방, 얼리샤 해리스가 소환한 유령의 목소리",
-        "summary_kr": "무대 위 활자의 리듬을 스크린의 조형미로 치환하며, 고통과 분노를 예술적 숭고함으로 승화시킨 얼리샤 해리스의 파격적인 미학적 여정을 탐구합니다.",
-        "date": "Tue, 12 May 2026 12:00:54 +0000",
-        "image": "https://www.americantheatre.org/wp-content/uploads/is-god-is_film2.jpg",
-        "tier": "indie",
-        "source": "American Theatre",
-        "link": "https://www.americantheatre.org/2026/05/12/how-is-god-is-set-aleshea-harris-free/",
-        "editorial_category": "cultural_signal",
-        "editorial_category_label": "Cultural Signal",
-        "why_it_matters_kr": "무대 위 활자의 리듬을 스크린의 조형미로 치환하며, 고통과 분노를 예술적 숭고함으로 승화시킨 얼리샤 해리스의 파격적인 미학적 여정을 탐구합니다.",
-        "signal_keywords": [
-            "Cultural Signal"
         ]
     }
 ]
