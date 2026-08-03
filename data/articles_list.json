@@ -1,5 +1,26 @@
 [
     {
+        "id": "batman-caped-crusader-season-2-is-a-masterful-sequel-about-the-heroes-we-need-now",
+        "title": "‘Batman: Caped Crusader’ Season 2 Is a Masterful Sequel About the Heroes We Need Now",
+        "title_kr": "법칙을 지킨 영웅의 패배, 어둠 속에서 피어나는 무대적 비극의 미학",
+        "summary_kr": "절차적 정의와 시스템의 부패가 충돌하는 고담의 잔혹한 극장에서, 원칙을 지키고도 패배한 배트맨의 비극을 통해 이 시대에 필요한 진정한 영웅주의의 의미를 통찰합니다.",
+        "date": "Sun, 02 Aug 2026 17:00:00 +0000",
+        "image": "https://www.indiewire.com/wp-content/uploads/2026/07/Batman-Caped-Crusader-Season-2-Amazon-series-animated.jpg?w=650",
+        "tier": "major",
+        "source": "IndieWire",
+        "link": "https://www.indiewire.com/criticism/shows/batman-caped-crusader-season-2-review-outstanding-sequel-1235207962/",
+        "why_it_matters_kr": "권력에 의해 사법 제도가 무력화된 시대, 이 작품이 그리는 절망과 연대는 현대 사회와 관객에게 가장 서늘하고도 필요한 질문을 던집니다.",
+        "editorial_category": "stage_to_screen",
+        "editorial_category_label": "Stage to Screen",
+        "context_kr": "'배트맨: 케이프드 크루세이더' 시즌 2는 1940년대 클래식 필름 느와르의 시각적·극적 문법을 고전 연극의 비극적 구조와 결합하여 정의의 본질을 비판적으로 다루는 애니메이션 시리즈입니다.",
+        "korean_reader_note_kr": "거대 권력 앞에서 법과 제도가 무력화되는 고담시의 비극은, 한국의 현대 사회극이나 비평적 서사극이 다루어 온 불의와 무력감의 정서와 깊게 공명합니다.",
+        "signal_keywords": [
+            "부패한 시스템과 절차적 비극",
+            "느와르적 연극성",
+            "무력화된 사법 정의"
+        ]
+    },
+    {
         "id": "butcher-baker-nightmare-maker-is-the-deranged-cult-slasher-every-horror-fan-should-have-on-tap",
         "title": "‘Butcher, Baker, Nightmare Maker’ Is the Deranged Cult Slasher Every Horror Fan Should Have on Tap",
         "title_kr": "억압된 욕망과 광기가 무대 위로 오를 때: <부처, 베이커, 나이트메어 메이커>가 던지는 잔혹한 미학",
@@ -2032,23 +2053,6 @@
         "why_it_matters_kr": "불확실한 시대 속에서도 극단을 세우는 이들의 낙관적인 용기와 푸에르토리코 예술가들이 지닌 내밀한 엄격함을 통해 미국 연극계의 살아있는 박동을 전합니다.",
         "signal_keywords": [
             "Voices"
-        ]
-    },
-    {
-        "id": "is-god-is-review-filmmaker-aleshea-harris-fulfills-her-destiny-in-this-fizzy-and-fiery-revenge-debut",
-        "title": "‘Is God Is’ Review: Filmmaker Aleshea Harris Fulfills Her Destiny in This Fizzy and Fiery Revenge Debut",
-        "title_kr": "잔혹한 신성이 빚어낸 핏빛 복수의 전례, 'Is God Is'가 선사하는 전율",
-        "summary_kr": "무대 위의 강렬한 에너지를 스크린으로 전이시킨 알레시아 해리스는, 고통의 연대기와 신성(神性)의 파괴적 본질을 다루며 현대 복수극의 새로운 지평을 엽니다.",
-        "date": "Thu, 14 May 2026 01:39:47 +0000",
-        "image": "https://www.indiewire.com/wp-content/uploads/2026/05/MCDISGO_MG003.jpg?w=650",
-        "tier": "major",
-        "source": "IndieWire",
-        "link": "https://www.indiewire.com/criticism/movies/is-god-is-film-review-1235193878/",
-        "editorial_category": "stage_to_screen",
-        "editorial_category_label": "Stage to Screen",
-        "why_it_matters_kr": "무대 위의 강렬한 에너지를 스크린으로 전이시킨 알레시아 해리스는, 고통의 연대기와 신성(神性)의 파괴적 본질을 다루며 현대 복수극의 새로운 지평을 엽니다.",
-        "signal_keywords": [
-            "Stage to Screen"
         ]
     }
 ]
