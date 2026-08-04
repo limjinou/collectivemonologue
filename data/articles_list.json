@@ -1,5 +1,47 @@
 [
     {
+        "id": "people-to-watch-phanésia-pharel",
+        "title": "People to Watch: Phanésia Pharel",
+        "title_kr": "상처 입은 시대, 우정이 무대 위 미스터리가 될 때: 파네시아 파렐의 희곡론",
+        "summary_kr": "하이티계 미국인 극작가 파네시아 파렐은 Z세대 라티나 소녀들의 유쾌하고도 치밀한 추리극을 통해, 권리를 박탈당한 현실 속에서도 피어나는 여성 연대와 생명력을 무대 위에 펼쳐낸다.",
+        "date": "Mon, 03 Aug 2026 19:35:27 +0000",
+        "image": "https://www.americantheatre.org/wp-content/uploads/Phanesia-Pharel.png",
+        "tier": "indie",
+        "source": "American Theatre",
+        "link": "https://www.americantheatre.org/2026/08/03/people-to-watch-phanesia-pharel/",
+        "why_it_matters_kr": "진부한 정치적 슬로건으로 소비되는 '여성 임파워먼트'를 넘어, 무대라는 생생한 현장에서 우정과 신체적 자율성을 재발견하게 만드는 신진 극작가의 벼려진 감각을 마주하기 위해.",
+        "editorial_category": "voices",
+        "editorial_category_label": "Voices",
+        "context_kr": "마이애미 출신의 극작가 파네시아 파렐(Phanésia Pharel)은 오프-브로드웨이의 대표적 여성 극장인 WP Theater에서 успеш적인 데뷔를 마쳤으며, 굿맨 시어터 등 주요 지역 극장과의 협업을 통해 미국 연극계의 주목받는 젊은 극작가로 부상하고 있다.",
+        "korean_reader_note_kr": "한국 영화나 드라마에서 자주 발견되는 '여자 고등학생들의 미스터리 공조극'의 감각을 떠올려보자. K-드라마의 장르적 재미와 동시대 연극 특유의 깊은 대사들이 교차하는 지점에서 파렐의 감각적인 장르 비틀기를 맛볼 수 있다.",
+        "signal_keywords": [
+            "장르극과 페미니즘의 결합",
+            "신체적 자율성(Bodily Autonomy)",
+            "Z세대 동시대 연극"
+        ]
+    },
+    {
+        "id": "honest-conversations-about-ai-in-film-often-feel-impossible-indiewire-and-andreessen-horowitz-cultural-leadership-fund-tackled-the-challenge",
+        "title": "Honest Conversations About AI in Film Often Feel Impossible. IndieWire and Andreessen Horowitz, Cultural Leadership Fund Tackled the Challenge",
+        "title_kr": "디지털의 실재와 인간의 호흡: AI 시대, 스펙터클을 넘어 '공동 저자'의 무대로",
+        "summary_kr": "칸 영화제에서 열린 인디와이어와 a16z 문화리더십펀드의 대담은 AI를 둘러싼 '찬반'의 흑백논리를 넘어선다. 인간 예술성과 기술이 공존하는 '새로운 스토리텔링 스택'을 모색하며, 동시대 창작 언어를 재정의하는 미학적 담론을 제시한다.",
+        "date": "Mon, 03 Aug 2026 21:00:00 +0000",
+        "image": "https://www.indiewire.com/wp-content/uploads/2026/07/DSC_7794.jpg?w=650",
+        "tier": "major",
+        "source": "IndieWire",
+        "link": "https://www.indiewire.com/news/events/indiewire-andreessen-horowitz-cannes-event-watch-1235207514/",
+        "why_it_matters_kr": "AI에 대한 맹목적 공포나 환상을 벗어나, 무대와 스크린이라는 창작 현장에서 기술을 예술적 '공동 저자'로 맞이할 실용적이고도 철학적인 기준을 제시한다.",
+        "editorial_category": "cultural_signal",
+        "editorial_category_label": "Cultural Signal",
+        "context_kr": "세계 최고 권위의 칸 국제영화제 미국 파빌리온에서 미디어 매체 인디와이어와 실리콘밸리 벤처캐피털 a16z의 문화리더십펀드가 손을 잡고 AI 시대 창작자의 위치와 도구성을 다룬 세션이다.",
+        "korean_reader_note_kr": "대학로와 국립극장을 비롯해 한국 공연계에서도 AI 대본 구성 및 무대 영상 기술 도입이 활발해지는 지금, 기술을 위협이 아닌 새로운 '대화 상대'로 재설정하는 데 유용한 시사점을 준다.",
+        "signal_keywords": [
+            "공동 저자성(Co-Authorship)",
+            "스토리텔링 스택",
+            "탈이분법적 기술 담론"
+        ]
+    },
+    {
         "id": "batman-caped-crusader-season-2-is-a-masterful-sequel-about-the-heroes-we-need-now",
         "title": "‘Batman: Caped Crusader’ Season 2 Is a Masterful Sequel About the Heroes We Need Now",
         "title_kr": "법칙을 지킨 영웅의 패배, 어둠 속에서 피어나는 무대적 비극의 미학",
@@ -2017,40 +2059,6 @@
         "editorial_category": "voices",
         "editorial_category_label": "Voices",
         "why_it_matters_kr": "세대교체의 물결 속에서 극장의 영혼을 책임지게 된 신임 예술감독들에게 건네는, 30년 현장의 지혜가 응축된 미학적 실천 강령.",
-        "signal_keywords": [
-            "Voices"
-        ]
-    },
-    {
-        "id": "regular-show-the-lost-tapes-and-the-tricky-science-of-a-tv-revival",
-        "title": "‘Regular Show: The Lost Tapes’ and the Tricky Science of a TV Revival",
-        "title_kr": "박제된 시간의 소환, 혹은 살아있는 예술의 재건: '레귤러 쇼'와 TV 부활의 미학",
-        "summary_kr": "무대 위에서 사라졌던 유령들이 다시 조명을 받을 때, 우리는 그것이 진정한 예술적 갈망인지 혹은 단순한 산업적 박제인지를 엄중히 물어야 합니다.",
-        "date": "Thu, 14 May 2026 23:30:00 +0000",
-        "image": "https://www.indiewire.com/wp-content/uploads/2026/05/LAND_16_9-1.jpg?w=650",
-        "tier": "major",
-        "source": "IndieWire",
-        "link": "https://www.indiewire.com/features/commentary/regular-show-the-lost-tapes-tv-revivals-1235194188/",
-        "editorial_category": "stage_to_screen",
-        "editorial_category_label": "Stage to Screen",
-        "why_it_matters_kr": "무대 위에서 사라졌던 유령들이 다시 조명을 받을 때, 우리는 그것이 진정한 예술적 갈망인지 혹은 단순한 산업적 박제인지를 엄중히 물어야 합니다.",
-        "signal_keywords": [
-            "Stage to Screen"
-        ]
-    },
-    {
-        "id": "featured-contributors",
-        "title": "Featured Contributors",
-        "title_kr": "미완의 무대가 건네는 위로, 그리고 색채 너머의 치열한 내면",
-        "summary_kr": "불확실한 시대 속에서도 극단을 세우는 이들의 낙관적인 용기와 푸에르토리코 예술가들이 지닌 내밀한 엄격함을 통해 미국 연극계의 살아있는 박동을 전합니다.",
-        "date": "Wed, 13 May 2026 18:59:20 +0000",
-        "image": "https://www.americantheatre.org/wp-content/uploads/Untitled-design-5-3.png",
-        "tier": "indie",
-        "source": "American Theatre",
-        "link": "https://www.americantheatre.org/2026/05/13/featured-contributors-8/",
-        "editorial_category": "voices",
-        "editorial_category_label": "Voices",
-        "why_it_matters_kr": "불확실한 시대 속에서도 극단을 세우는 이들의 낙관적인 용기와 푸에르토리코 예술가들이 지닌 내밀한 엄격함을 통해 미국 연극계의 살아있는 박동을 전합니다.",
         "signal_keywords": [
             "Voices"
         ]
