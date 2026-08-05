@@ -1,5 +1,47 @@
 [
     {
+        "id": "this-month-in-theatre-history-1785892830",
+        "title": "This Month in Theatre History",
+        "title_kr": "금지와 경계를 넘어선 연극의 유령들: 연극사가 증언하는 저항의 미학",
+        "summary_kr": "금지와 국경, 정체성의 억압 속에서도 결코 멈추지 않았던 18세기와 20세기 연극인들의 격렬한 저항과 예술적 도전을 조명합니다.",
+        "date": "Tue, 04 Aug 2026 13:49:33 +0000",
+        "image": "https://www.americantheatre.org/wp-content/uploads/Theatre-History-AT.jpg",
+        "tier": "indie",
+        "source": "American Theatre",
+        "link": "https://www.americantheatre.org/2026/08/04/this-month-in-theatre-history-138/",
+        "why_it_matters_kr": "오늘날 여전히 무대 위 권력과 금기에 맞서는 한국 공연계에 예술적 자율성과 다양성의 근본적 가치를 되새기게 합니다.",
+        "editorial_category": "voices",
+        "editorial_category_label": "Voices",
+        "context_kr": "1761년 뉴포트의 연극 금지령, 1971년 라마마(La MaMa)극단의 냉전기 유럽 투어 차단, 1976년 퀴어 퀴바 망명자들의 '메두사의 복수' 창단 등 연극사의 굵직한 분기점들을 다룹니다.",
+        "korean_reader_note_kr": "검열의 역사와 소극장 운동을 경험했던 한국 연극사(검열제도, 산울림·학전 등 소극장 아방가르드)와 비교하며 읽으면 무대의 생명력을 깊이 있게 체감할 수 있습니다.",
+        "signal_keywords": [
+            "검열과 저항",
+            "아방가르드 연극",
+            "디아스포라 정체성"
+        ]
+    },
+    {
+        "id": "juliette-lewis-recalls-robert-de-niro-on-set-of-scorseses-cape-fear-he-had-an-organ-player-and-was-speaking-in-tongues",
+        "title": "Juliette Lewis Recalls Robert De Niro on Set of Scorsese’s ‘Cape Fear’: ‘He Had an Organ Player and Was Speaking in Tongues’",
+        "title_kr": "광기와 연기의 경계, 줄리엣 루이스가 복기하는 로버트 데 니로와 <케이프 피어>의 잔향",
+        "summary_kr": "1991년 마틴 스콜세지 감독의 영화 <케이프 피어>에서 독보적인 존재감을 발산했던 줄리엣 루이스가 애플 TV 시리즈의 새로운 인물로 돌아와, 오리지널의 압도적인 메소드 연기와 재해석의 미학을 성찰합니다.",
+        "date": "Tue, 04 Aug 2026 23:37:09 +0000",
+        "image": "https://www.indiewire.com/wp-content/uploads/2026/08/P10WTS3.jpg?w=650",
+        "tier": "major",
+        "source": "IndieWire",
+        "link": "https://www.indiewire.com/features/interviews/juliette-lewis-cape-fear-finale-robert-de-niro-scorsese-1235208568/",
+        "why_it_matters_kr": "세대를 건너뛰며 재해석되는 고전 스릴러 속에서 배우가 체화한 광기의 연기적 유산과 서던 고딕(Southern Gothic) 비극이 어떻게 계승되는지 살필 수 있는 매혹적인 계기입니다.",
+        "editorial_category": "stage_to_screen",
+        "editorial_category_label": "Stage to Screen",
+        "context_kr": "1991년 영화 <케이프 피어>에서 10대 소녀 다니 역으로 아카데미 여우조연상 후보에 올랐던 줄리엣 루이스가 최근 애플 TV의 동명 스릴러 시리즈에서 하비에르 바르뎀의 이복누이 역으로 출연하며 완벽한 서사의 원형을 완성했습니다.",
+        "korean_reader_note_kr": "한국의 스릴러 영화나 연극 무대에서 접하는 심리적 잔혹극의 카타르시스와 비교하며, 명배우들이 스크린과 무대 위에서 인간의 어두운 본성을 드러내는 방식을 감상해보시길 권합니다.",
+        "signal_keywords": [
+            "연기적 유산의 계승",
+            "서던 고딕 미학",
+            "메소드 연기의 광기"
+        ]
+    },
+    {
         "id": "people-to-watch-phanésia-pharel",
         "title": "People to Watch: Phanésia Pharel",
         "title_kr": "상처 입은 시대, 우정이 무대 위 미스터리가 될 때: 파네시아 파렐의 희곡론",
@@ -2027,40 +2069,6 @@
         "why_it_matters_kr": "반세기에 가까운 헌신이 일궈낸 토양 위에, 새로운 예술적 비전이 뿌리내립니다. 르네상스 시어터워크스와 올드 글로브가 선택한 새로운 리더들을 통해 미국 연극계의 내일과 조우합니다.",
         "signal_keywords": [
             "Industry"
-        ]
-    },
-    {
-        "id": "outlander-stars-caitríona-balfe-and-sam-heughan-bid-an-emotional-farewell-to-the-series--and-react-to-the-finale",
-        "title": "‘Outlander’ Stars Caitríona Balfe and Sam Heughan Bid an Emotional Farewell to the Series — and React to the Finale",
-        "title_kr": "시간이라는 무대 위에 새긴 영원한 입맞춤: '아웃랜더'의 대서사시를 보내며",
-        "summary_kr": "10년의 세월을 관통하며 클래식한 멜로드라마의 정점을 보여준 두 배우가 전하는 마지막 인사이자, 카메라 뒤에서 피어난 예술적 성장에 대한 고찰.",
-        "date": "Fri, 15 May 2026 23:30:00 +0000",
-        "image": "https://www.indiewire.com/wp-content/uploads/2026/05/GettyImages-2264599344.jpg?w=650",
-        "tier": "major",
-        "source": "IndieWire",
-        "link": "https://www.indiewire.com/features/interviews/outlander-caitriona-balfe-sam-heughan-farewell-react-finale-1235194297/",
-        "editorial_category": "voices",
-        "editorial_category_label": "Voices",
-        "why_it_matters_kr": "10년의 세월을 관통하며 클래식한 멜로드라마의 정점을 보여준 두 배우가 전하는 마지막 인사이자, 카메라 뒤에서 피어난 예술적 성장에 대한 고찰.",
-        "signal_keywords": [
-            "Voices"
-        ]
-    },
-    {
-        "id": "21-practical-tips-for-new-artistic-directors",
-        "title": "21 Practical Tips for New Artistic Directors",
-        "title_kr": "무대 위의 조타수, 예술과 경영의 파도를 넘는 21개의 나침반",
-        "summary_kr": "세대교체의 물결 속에서 극장의 영혼을 책임지게 된 신임 예술감독들에게 건네는, 30년 현장의 지혜가 응축된 미학적 실천 강령.",
-        "date": "Thu, 14 May 2026 12:00:00 +0000",
-        "image": "https://www.americantheatre.org/wp-includes/images/media/default.svg",
-        "tier": "indie",
-        "source": "American Theatre",
-        "link": "https://www.americantheatre.org/2026/05/14/21-practical-tips-for-new-artistic-directors/",
-        "editorial_category": "voices",
-        "editorial_category_label": "Voices",
-        "why_it_matters_kr": "세대교체의 물결 속에서 극장의 영혼을 책임지게 된 신임 예술감독들에게 건네는, 30년 현장의 지혜가 응축된 미학적 실천 강령.",
-        "signal_keywords": [
-            "Voices"
         ]
     }
 ]
