@@ -1,5 +1,26 @@
 [
     {
+        "id": "how-a-grassroots-campaign-helped-bring-back-the-cinerama-dome",
+        "title": "How a Grassroots Campaign Helped Bring Back the Cinerama Dome",
+        "title_kr": "돔(Dome)의 빛을 다시 켜다: 풀뿌리 시민운동이 증명한 공간의 미학과 관객의 위엄",
+        "summary_kr": "팬데믹으로 문을 닫았던 할리우드의 전설적 상징 '시네라마 돔'이 26세 청년의 풀뿌리 운동과 미디어의 연대를 통해 극적으로 부활했습니다. 스트리밍 시대에 오프라인 극장 공간이 지닌 대체 불가능한 가치를 짚어봅니다.",
+        "date": "Sat, 08 Aug 2026 19:53:53 +0000",
+        "image": "https://www.indiewire.com/wp-content/uploads/2026/07/SC2_2443.jpg?w=650",
+        "tier": "major",
+        "source": "IndieWire",
+        "link": "https://www.indiewire.com/features/podcast/how-ben-steinberg-saved-cinerama-dome-1235209487/",
+        "why_it_matters_kr": "거대 자본과 OTT가 주도하는 미디어 지형 속에서도 관객의 집단적 열망이 어떻게 유서 깊은 문화적 공간을 지켜낼 수 있는지 명확한 이정표를 제시하기 때문입니다.",
+        "editorial_category": "stage_to_screen",
+        "editorial_category_label": "Stage to Screen",
+        "context_kr": "1963년 개관한 '시네라마 돔'은 독특한 돔형 건축과 대형 70mm 필름 상영으로 유명한 로스앤젤레스의 대표적 영화·문화 유산입니다. 팬데믹 이후 폐쇄 위기에 처했으나 소니 픽처스의 인수와 알라모 드라프트하우스의 운영 참여로 재개관을 앞두고 있습니다.",
+        "korean_reader_note_kr": "대한극장, 단성사 등 한국의 상징적인 단관 극장들이 사라져간 기억을 지닌 한국 독자들에게, 관객들의 목소리가 역사적 공간을 지켜낸 이번 사례는 깊은 울림과 아쉬움을 동시에 안겨줍니다.",
+        "signal_keywords": [
+            "관객 주도 공간 보존",
+            "오프라인 공간의 미학",
+            "할리우드 유산의 재활생"
+        ]
+    },
+    {
         "id": "the-final-collaborator-why-new-work-needs-audiences",
         "title": "The Final Collaborator: Why New Work Needs Audiences",
         "title_kr": "미완의 대본이 숨을 얻는 순간: 관객이라는 이름의 '마지막 등장인물'",
@@ -2055,27 +2076,6 @@
             "알고리즘에서 큐레이션으로의 회귀",
             "물리적 공간의 의례(Ritual)성",
             "Z세대의 오프라인 예술 소비 비상"
-        ]
-    },
-    {
-        "id": "clockwork-is-cooking-wb-specialized-division-acquires-park-chanwooks-next-film-with-matthew-mcconaughey-austin-butler-and-pedro-pascal",
-        "title": "Clockwork Is Cooking: WB Specialized Division Acquires Park Chan-wook’s Next Film with Matthew McConaughey, Austin Butler, and Pedro Pascal",
-        "title_kr": "황야의 무대 위로 번지는 피와 광기: 박찬욱과 클락워크가 빚어낼 새로운 서부극의 연극성",
-        "summary_kr": "워너 브러더스의 신생 명품 레이블 '클락워크'가 칸 마켓 최고의 화제작인 박찬욱 감독의 차기작 '더 브리건즈 오브 래틀크릭' 북미 판권을 획득했습니다. 매튜 맥코너히, 오스틴 버틀러, 페드로 파스칼, 그리고 탕웨이라는 초호화 캐스팅이 펼칠 황야의 비극은 단순한 장르 영화를 넘어 잔혹한 연극적 미학의 정점을 예고합니다.",
-        "date": "Tue, 19 May 2026 22:20:46 +0000",
-        "image": "https://www.indiewire.com/wp-content/uploads/2025/12/P1032W1G.jpg?w=650",
-        "tier": "major",
-        "source": "IndieWire",
-        "link": "https://www.indiewire.com/news/breaking-news/clockwork-wb-acquires-park-chan-wook-brigands-rattlecreek-1235195060/",
-        "why_it_matters_kr": "세계적인 거장 박찬욱이 서구의 가장 클래식한 영토인 '서부극'을 무대로 삼아, 인간 본연의 광기와 파멸을 어떻게 시각적·연극적 템포로 조율해 낼지 그 산업적·예술적 신호를 포착해야 하기 때문입니다.",
-        "editorial_category": "cultural_signal",
-        "editorial_category_label": "Cultural Signal",
-        "context_kr": "현재 칸 영화제 심사위원장으로 활약 중인 박찬욱 감독과 네온(Neon) 출신의 크리스천 파크스가 이끄는 워너의 신생 배급사 '클락워크'의 만남은 예술성과 대중성의 완벽한 결합을 지향하는 독립 예술 영화 시장의 지각변동을 상징합니다.",
-        "korean_reader_note_kr": "에스 크레이그 자일러의 날 것 그대로의 각본이 박찬욱 특유의 우아하고도 잔혹한 미장센을 만났을 때 생겨날 시너지를 감상하며, 한국적 한(恨)과 서구적 파멸의 정서가 어떻게 스크린이라는 가상의 '무대' 위에서 충돌하는지 주목해 보십시오.",
-        "signal_keywords": [
-            "부티크 배급사의 부상",
-            "서부극의 연극적 변주",
-            "글로벌 앙상블 캐스팅"
         ]
     }
 ]
