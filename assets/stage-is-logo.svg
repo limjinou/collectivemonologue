@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 100">
+  <rect x="8" y="8" width="84" height="84" fill="#ffd60a"/>
+  <rect x="9" y="9" width="82" height="82" fill="none" stroke="#151515" stroke-width="2"/>
+  <text x="50" y="60" fill="#151515" font-family="Arial, sans-serif" font-size="28" font-weight="700" text-anchor="middle">S/I</text>
+  <text x="118" y="65" fill="#151515" font-family="Arial, sans-serif" font-size="44" font-weight="700">STAGE-IS</text>
+</svg>

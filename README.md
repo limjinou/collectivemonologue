@@ -22,5 +22,6 @@ Stage-Is is a static production-planning tool for Korean video creators. It comb
 - Google AdSense publisher: `ca-pub-7015444869634194`
 - The standard Auto ads loader is present on the six main public pages.
 - EEA, UK and Switzerland consent is managed through Google Privacy & messaging using a Google-certified CMP.
+- `assets/stage-is-logo.png` is the 5:1 brand mark registered with the consent message.
 
 The site has no article crawler, generated article archive or scheduled content workflow.
