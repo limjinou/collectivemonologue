@@ -6,6 +6,7 @@
   <meta name="description" content="날짜, 장소, 촬영 조건을 입력하면 자연광, 날씨, 현장 위험과 촬영일 작전표를 계산하는 한국어 제작 도구입니다.">
   <meta name="keywords" content="촬영 계획, 촬영 날씨, 일출 일몰, 골든아워, 콜시트, 영상 제작, 로케이션">
   <meta name="google-adsense-account" content="ca-pub-7015444869634194">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7015444869634194" crossorigin="anonymous"></script>
   <meta name="theme-color" content="#f2f0e8">
   <link rel="canonical" href="https://stage-is.com/">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
@@ -194,6 +195,44 @@
           </div>
         </div>
 
+        <fieldset class="form-section weather-input-section">
+          <legend>현장 기상 입력</legend>
+          <div class="form-grid weather-input-grid">
+            <div>
+              <label for="weather-condition">하늘 상태</label>
+              <select id="weather-condition" name="weatherCondition">
+                <option value="clear">맑음</option>
+                <option value="mixed" selected>구름 조금</option>
+                <option value="overcast">흐림</option>
+                <option value="rain">비</option>
+                <option value="snow">눈</option>
+              </select>
+            </div>
+            <div>
+              <label for="apparent-temperature">체감온도</label>
+              <div class="input-with-unit">
+                <input id="apparent-temperature" name="apparentTemperature" type="number" min="-30" max="45" step="1" value="20" inputmode="decimal">
+                <span aria-hidden="true">℃</span>
+              </div>
+            </div>
+            <div>
+              <label for="rain-chance">강수확률</label>
+              <div class="input-with-unit">
+                <input id="rain-chance" name="rainChance" type="number" min="0" max="100" step="5" value="10" inputmode="numeric">
+                <span aria-hidden="true">%</span>
+              </div>
+            </div>
+            <div>
+              <label for="gust-speed">최대 돌풍</label>
+              <div class="input-with-unit">
+                <input id="gust-speed" name="gustSpeed" type="number" min="0" max="100" step="1" value="10" inputmode="numeric">
+                <span aria-hidden="true">km/h</span>
+              </div>
+            </div>
+          </div>
+          <p class="field-status">촬영 직전 기상청 예보 또는 현장 관측값을 입력하세요.</p>
+        </fieldset>
+
         <div class="form-grid form-section">
           <div>
             <label for="crew-size">현장 인원</label>
@@ -228,6 +267,14 @@
               <small>우천 시 이동할 장소가 있음</small>
             </span>
             <input type="checkbox" name="backupReady">
+            <span class="toggle" aria-hidden="true"></span>
+          </label>
+          <label class="toggle-row">
+            <span>
+              <strong>기상청 특보 확인</strong>
+              <small>출발 전 최신 예보와 특보를 확인함</small>
+            </span>
+            <input type="checkbox" name="weatherChecked">
             <span class="toggle" aria-hidden="true"></span>
           </label>
         </div>
@@ -406,7 +453,7 @@
       <a href="/contact.html">문의</a>
       <a href="/privacy.html">개인정보처리방침</a>
     </div>
-    <p class="data-credit">지도: © OpenStreetMap contributors · 기상: Open-Meteo</p>
+    <p class="data-credit">지도: © OpenStreetMap contributors · 태양 계산: SunCalc · 기상: 사용자 입력</p>
   </footer>
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
@@ -422,7 +469,7 @@
     }
   }
   </script>
-  <script type="module" src="js/scene.js?v=20260809-map1"></script>
-  <script src="js/main.js?v=20260809-map1"></script>
+  <script type="module" src="js/scene.js?v=20260809-ads1"></script>
+  <script src="js/main.js?v=20260809-ads1"></script>
 </body>
 </html>

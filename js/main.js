@@ -17,7 +17,6 @@ const LOCATIONS = [
   { name: '서귀포', aliases: ['서귀포시'], latitude: 33.2541, longitude: 126.5601 }
 ];
 
-const WEATHER_ENDPOINT = 'https://api.open-meteo.com/v1/forecast';
 const STORAGE_KEY = 'stageis-shoot-plan-v1';
 const DAY_MINUTES = 1440;
 
@@ -284,7 +283,7 @@ function applyMapLocation() {
   runSimulation();
 }
 
-async function runSimulation() {
+function runSimulation() {
   const form = document.getElementById('shoot-form');
   const panel = document.getElementById('result-panel');
   if (!form || !panel) return;
@@ -298,11 +297,11 @@ async function runSimulation() {
   }
 
   panel.setAttribute('aria-busy', 'true');
-  updateForecastBadge('날씨 확인 중');
+  updateForecastBadge('입력값 계산 중');
   savePlan(plan);
 
   const solar = calculateSolar(plan);
-  const weather = await fetchWeather(plan).catch(() => null);
+  const weather = buildManualWeather(plan);
   const analysis = analyzePlan(plan, solar, weather);
   renderResult(plan, solar, weather, analysis);
 
@@ -323,8 +322,13 @@ function readPlan(form) {
     endTime: String(data.get('endTime')),
     crewSize: Number(data.get('crewSize')),
     setupMinutes: Number(data.get('setupMinutes')),
+    weatherCondition: String(data.get('weatherCondition')),
+    apparentTemperature: Number(data.get('apparentTemperature')),
+    rainChance: Number(data.get('rainChance')),
+    gustSpeed: Number(data.get('gustSpeed')),
     parkingConfirmed: data.get('parkingConfirmed') === 'on',
-    backupReady: data.get('backupReady') === 'on'
+    backupReady: data.get('backupReady') === 'on',
+    weatherChecked: data.get('weatherChecked') === 'on'
   };
 }
 
@@ -332,6 +336,9 @@ function validatePlan(plan) {
   if (!plan.date) return '촬영일을 선택하세요.';
   if (!plan.startTime || !plan.endTime) return '콜타임과 철수 시간을 입력하세요.';
   if (plan.crewSize < 1) return '현장 인원은 한 명 이상이어야 합니다.';
+  if (plan.apparentTemperature < -30 || plan.apparentTemperature > 45) return '체감온도는 -30℃에서 45℃ 사이로 입력하세요.';
+  if (plan.rainChance < 0 || plan.rainChance > 100) return '강수확률은 0%에서 100% 사이로 입력하세요.';
+  if (plan.gustSpeed < 0 || plan.gustSpeed > 100) return '돌풍은 0km/h에서 100km/h 사이로 입력하세요.';
 
   const duration = durationMinutes(plan.startTime, plan.endTime);
   if (duration < 120) return '촬영 구간은 최소 두 시간 이상으로 잡아주세요.';
@@ -353,74 +360,33 @@ function calculateSolar(plan) {
   };
 }
 
-async function fetchWeather(plan) {
-  const target = startOfDay(new Date(`${plan.date}T00:00:00`));
-  const today = startOfDay(new Date());
-  const distance = daysBetween(today, target);
-
-  if (distance < 0 || distance > 15) {
-    return { unavailable: true, reason: 'range' };
-  }
-
-  const params = new URLSearchParams({
-    latitude: String(plan.latitude),
-    longitude: String(plan.longitude),
-    hourly: [
-      'temperature_2m',
-      'apparent_temperature',
-      'precipitation_probability',
-      'precipitation',
-      'weather_code',
-      'cloud_cover',
-      'wind_speed_10m',
-      'wind_gusts_10m'
-    ].join(','),
-    timezone: 'Asia/Seoul',
-    start_date: plan.date,
-    end_date: plan.date
-  });
-
-  const response = await fetch(`${WEATHER_ENDPOINT}?${params.toString()}`);
-  if (!response.ok) throw new Error(`Weather request failed: ${response.status}`);
-  const payload = await response.json();
-  if (!payload.hourly?.time?.length) throw new Error('Weather data is empty');
-
-  const start = timeToMinutes(plan.startTime);
-  const end = normalizeEndMinutes(plan.startTime, plan.endTime);
-  const indexes = payload.hourly.time.map((value, index) => {
-    const time = value.slice(11, 16);
-    let minute = timeToMinutes(time);
-    if (minute < start && end > DAY_MINUTES) minute += DAY_MINUTES;
-    return minute >= start && minute <= end ? index : -1;
-  }).filter((index) => index >= 0);
-
-  const safeIndexes = indexes.length ? indexes : payload.hourly.time.map((_, index) => index);
-  const collect = (key) => safeIndexes.map((index) => Number(payload.hourly[key]?.[index])).filter(Number.isFinite);
-  const max = (values) => values.length ? Math.max(...values) : null;
-  const min = (values) => values.length ? Math.min(...values) : null;
-
-  const temperatures = collect('temperature_2m');
-  const apparent = collect('apparent_temperature');
-  const rainChance = collect('precipitation_probability');
-  const rainfall = collect('precipitation');
-  const wind = collect('wind_speed_10m');
-  const gust = collect('wind_gusts_10m');
-  const cloud = collect('cloud_cover');
-  const weatherCodes = collect('weather_code');
+function buildManualWeather(plan) {
+  const conditions = {
+    clear: { label: '맑음', cloud: 8, code: 0 },
+    mixed: { label: '구름 조금', cloud: 42, code: 2 },
+    overcast: { label: '흐림', cloud: 88, code: 3 },
+    rain: { label: '비', cloud: 96, code: 61 },
+    snow: { label: '눈', cloud: 96, code: 71 }
+  };
+  const condition = conditions[plan.weatherCondition] || conditions.mixed;
+  const rainChance = clamp(plan.rainChance, 0, 100);
+  const gust = clamp(plan.gustSpeed, 0, 100);
+  const apparent = clamp(plan.apparentTemperature, -30, 45);
 
   return {
     unavailable: false,
-    minTemperature: min(temperatures),
-    maxTemperature: max(temperatures),
-    minApparent: min(apparent),
-    maxApparent: max(apparent),
-    maxRainChance: max(rainChance),
-    totalRain: rainfall.reduce((sum, value) => sum + value, 0),
-    maxWind: max(wind),
-    maxGust: max(gust),
-    averageCloud: cloud.length ? cloud.reduce((sum, value) => sum + value, 0) / cloud.length : null,
-    dominantCode: mode(weatherCodes),
-    label: weatherCodeLabel(mode(weatherCodes))
+    source: 'manual',
+    minTemperature: apparent,
+    maxTemperature: apparent,
+    minApparent: apparent,
+    maxApparent: apparent,
+    maxRainChance: rainChance,
+    totalRain: ['rain', 'snow'].includes(plan.weatherCondition) ? Math.max(0.2, rainChance / 20) : 0,
+    maxWind: Math.round(gust * 0.65),
+    maxGust: gust,
+    averageCloud: condition.cloud,
+    dominantCode: condition.code,
+    label: condition.label
   };
 }
 
@@ -530,12 +496,8 @@ function risk(message, label, severity) {
 }
 
 function createDecisionSummary(decision, risks, weather) {
-  if (weather?.unavailable) {
-    if (decision === 'GO') return '빛과 운영 조건은 진행 가능 범위입니다. 날짜가 가까워지면 날씨를 다시 계산하세요.';
-    return '운영 조건을 먼저 수정하세요. 날씨는 예보 범위에 들어온 뒤 다시 확인해야 합니다.';
-  }
-  if (!weather) return '빛과 운영 조건만 계산했습니다. 날씨 연결 후 최종 판단이 필요합니다.';
-  if (decision === 'GO') return `${weather.label} 기준으로 진행 가능성이 높습니다. 출발 전 현장 확인 항목만 닫으세요.`;
+  if (!weather) return '빛과 운영 조건만 계산했습니다. 기상 입력값을 확인하세요.';
+  if (decision === 'GO') return `${weather.label} 입력값 기준으로 진행 가능성이 높습니다. 출발 전 최신 특보를 확인하세요.`;
   if (decision === 'CHECK') return `진행은 가능하지만 ${risks[0]?.label || '현장 조건'} 변수를 먼저 해결해야 합니다.`;
   return `${risks[0]?.label || '핵심 조건'} 위험이 큽니다. 일정 또는 장소를 바꾸는 편이 안전합니다.`;
 }
@@ -594,13 +556,7 @@ function renderDecision(analysis) {
 }
 
 function renderForecastBadge(weather) {
-  if (!weather) {
-    updateForecastBadge('날씨 연결 실패');
-  } else if (weather.unavailable) {
-    updateForecastBadge('예보 범위 밖');
-  } else {
-    updateForecastBadge('예보 연결됨');
-  }
+  updateForecastBadge(weather ? '수동 기상값' : '기상값 없음');
 }
 
 function updateForecastBadge(message) {
@@ -611,8 +567,8 @@ function updateForecastBadge(message) {
 function renderMetrics(solar, weather) {
   setText('sunrise-value', solar ? formatTime(solar.sunrise) : '확인 불가');
   setText('sunset-value', solar ? formatTime(solar.sunset) : '확인 불가');
-  setText('rain-value', weather && !weather.unavailable && weather.maxRainChance !== null ? `${Math.round(weather.maxRainChance)}%` : '예보 없음');
-  setText('wind-value', weather && !weather.unavailable && weather.maxGust !== null ? `${Math.round(weather.maxGust)} km/h` : '예보 없음');
+  setText('rain-value', weather && weather.maxRainChance !== null ? `${Math.round(weather.maxRainChance)}%` : '미입력');
+  setText('wind-value', weather && weather.maxGust !== null ? `${Math.round(weather.maxGust)} km/h` : '미입력');
 
   const daylight = solar ? dateToMinutes(solar.sunset) - dateToMinutes(solar.sunrise) : null;
   setText('daylight-duration', daylight !== null ? formatDuration(daylight) : '계산 불가');
@@ -756,7 +712,7 @@ function renderChecklist(plan, weather) {
     { label: '출연자 대기·식사 공간 확인', checked: false },
     { label: '우천 대체안 또는 취소 기준 합의', checked: plan.backupReady || plan.environment === 'indoor' },
     { label: '원본 데이터 이중 백업 담당 지정', checked: false },
-    { label: '출발 직전 기상특보 재확인', checked: Boolean(weather && !weather.unavailable) }
+    { label: '출발 직전 기상특보 재확인', checked: plan.weatherChecked }
   ];
 
   grid.innerHTML = '';
@@ -784,9 +740,9 @@ function buildReport(plan, solar, weather, analysis) {
     `일정: ${plan.date} ${plan.startTime}-${plan.endTime}`,
     `환경: ${environmentLabel(plan.environment)} / 현장 ${plan.crewSize}명 / 세팅 ${plan.setupMinutes}분`,
     `빛: 일출 ${solar ? formatTime(solar.sunrise) : '확인 불가'} / 일몰 ${solar ? formatTime(solar.sunset) : '확인 불가'}`,
-    weather && !weather.unavailable
-      ? `날씨: ${weather.label} / 강수확률 최대 ${Math.round(weather.maxRainChance ?? 0)}% / 돌풍 최대 ${Math.round(weather.maxGust ?? 0)}km/h / 기온 ${roundRange(weather.minTemperature, weather.maxTemperature)}℃`
-      : '날씨: 예보 범위 밖 또는 연결되지 않음',
+    weather
+      ? `기상 입력: ${weather.label} / 강수확률 ${Math.round(weather.maxRainChance ?? 0)}% / 돌풍 ${Math.round(weather.maxGust ?? 0)}km/h / 체감 ${Math.round(weather.minApparent ?? 0)}℃`
+      : '기상 입력: 없음',
     '',
     analysis.summary,
     '',
@@ -848,6 +804,10 @@ function resetPlan() {
   document.getElementById('end-time').value = '18:00';
   document.getElementById('crew-size').value = '8';
   document.getElementById('setup-minutes').value = '60';
+  document.getElementById('weather-condition').value = 'mixed';
+  document.getElementById('apparent-temperature').value = '20';
+  document.getElementById('rain-chance').value = '10';
+  document.getElementById('gust-speed').value = '10';
   document.getElementById('shoot-date').value = toDateInput(addDays(startOfDay(new Date()), 1));
   localStorage.removeItem(STORAGE_KEY);
   updateLocationFromInput();
@@ -876,8 +836,13 @@ function restorePlan() {
     if (saved.endTime) document.getElementById('end-time').value = saved.endTime;
     if (saved.crewSize) document.getElementById('crew-size').value = String(saved.crewSize);
     if (saved.setupMinutes) document.getElementById('setup-minutes').value = String(saved.setupMinutes);
+    if (saved.weatherCondition) document.getElementById('weather-condition').value = saved.weatherCondition;
+    if (Number.isFinite(saved.apparentTemperature)) document.getElementById('apparent-temperature').value = String(saved.apparentTemperature);
+    if (Number.isFinite(saved.rainChance)) document.getElementById('rain-chance').value = String(saved.rainChance);
+    if (Number.isFinite(saved.gustSpeed)) document.getElementById('gust-speed').value = String(saved.gustSpeed);
     form.elements.parkingConfirmed.checked = Boolean(saved.parkingConfirmed);
     form.elements.backupReady.checked = Boolean(saved.backupReady);
+    form.elements.weatherChecked.checked = Boolean(saved.weatherChecked);
     const environment = form.querySelector(`input[name="environment"][value="${saved.environment}"]`);
     if (environment) environment.checked = true;
 
@@ -912,30 +877,6 @@ function setText(id, value) {
 
 function environmentLabel(value) {
   return { outdoor: '야외', mixed: '실내·야외 혼합', indoor: '실내' }[value] || value;
-}
-
-function weatherCodeLabel(code) {
-  if (code === null || code === undefined) return '예보 정보';
-  if (code === 0) return '맑음';
-  if ([1, 2].includes(code)) return '대체로 맑음';
-  if (code === 3) return '흐림';
-  if ([45, 48].includes(code)) return '안개';
-  if ([51, 53, 55, 56, 57].includes(code)) return '이슬비';
-  if ([61, 63, 65, 66, 67, 80, 81, 82].includes(code)) return '비';
-  if ([71, 73, 75, 77, 85, 86].includes(code)) return '눈';
-  if ([95, 96, 99].includes(code)) return '뇌우';
-  return '변화 가능';
-}
-
-function mode(values) {
-  if (!values.length) return null;
-  const counts = new Map();
-  let result = values[0];
-  values.forEach((value) => {
-    counts.set(value, (counts.get(value) || 0) + 1);
-    if (counts.get(value) > (counts.get(result) || 0)) result = value;
-  });
-  return result;
 }
 
 function timeToMinutes(value) {
@@ -982,11 +923,6 @@ function formatDuration(minutes) {
   return `${hours}시간 ${remainder}분`;
 }
 
-function roundRange(min, max) {
-  if (!Number.isFinite(min) || !Number.isFinite(max)) return '--';
-  return `${Math.round(min)}~${Math.round(max)}`;
-}
-
 function startOfDay(date) {
   const next = new Date(date);
   next.setHours(0, 0, 0, 0);
@@ -997,10 +933,6 @@ function addDays(date, amount) {
   const next = new Date(date);
   next.setDate(next.getDate() + amount);
   return next;
-}
-
-function daysBetween(start, end) {
-  return Math.round((end - start) / 86400000);
 }
 
 function toDateInput(date) {

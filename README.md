@@ -1,6 +1,6 @@
 # Stage-Is Shoot Day Simulator
 
-Stage-Is is a static production-planning tool for Korean video creators. It combines solar windows, short-term weather, crew and timing constraints into a printable shoot-day operation brief.
+Stage-Is is a static production-planning tool for Korean video creators. It combines solar windows, user-entered field weather, crew and timing constraints into a printable shoot-day operation brief.
 
 ## Product surface
 
@@ -14,7 +14,13 @@ Stage-Is is a static production-planning tool for Korean video creators. It comb
 
 - Solar calculations: SunCalc
 - Exact location selection: Leaflet with OpenStreetMap tiles
-- Initial weather evaluation: Open-Meteo non-commercial public endpoint
-- Before advertising or other monetization is activated, replace the evaluation weather endpoint with the official KMA short-term forecast API or a licensed commercial weather endpoint.
+- Weather risk input: manually entered conditions checked by the user from KMA forecasts or field observations
+- No live weather endpoint is called; exact coordinates stay in the browser except for requested OpenStreetMap tiles.
+
+## Advertising
+
+- Google AdSense publisher: `ca-pub-7015444869634194`
+- The standard Auto ads loader is present on the six main public pages.
+- EEA, UK and Switzerland consent is managed through Google Privacy & messaging using a Google-certified CMP.
 
 The site has no article crawler, generated article archive or scheduled content workflow.
