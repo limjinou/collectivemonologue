@@ -38,7 +38,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=20260809">
+  <link rel="stylesheet" href="css/style.css?v=20260809-3d1">
 </head>
 <body class="app-page">
   <a class="skip-link" href="#simulator">시뮬레이터로 이동</a>
@@ -57,12 +57,65 @@
   </header>
 
   <main>
-    <section class="product-heading" aria-labelledby="page-title">
-      <div>
-        <p class="overline">SHOOT DAY / KOREA</p>
-        <h1 id="page-title">촬영일 작전 시뮬레이터</h1>
+    <section class="field-visual" id="field-visual" aria-labelledby="page-title">
+      <div class="field-canvas-wrap" id="field-canvas-wrap">
+        <canvas id="field-canvas" role="img" aria-label="태양 경로, 그림자, 날씨와 촬영 현장을 보여주는 3D 시뮬레이션"></canvas>
+        <p class="scene-fallback">3D 현장 뷰를 표시할 수 없는 환경입니다.</p>
       </div>
-      <p class="heading-summary">빛이 있을 때 찍고, 변수가 터지기 전에 잡습니다.</p>
+
+      <div class="field-visual-overlay">
+        <div class="scene-title">
+          <p class="overline">LIVE FIELD MODEL / KOREA</p>
+          <h1 id="page-title">촬영일<br>작전 시뮬레이터</h1>
+          <p class="scene-place" id="scene-place">서울 · 현장 계산 중</p>
+        </div>
+
+        <div class="scene-readout" aria-live="polite">
+          <div class="scene-decision">
+            <span>FIELD STATUS</span>
+            <strong id="scene-decision">--</strong>
+          </div>
+          <dl>
+            <div>
+              <dt>태양 고도</dt>
+              <dd id="scene-sun-altitude">--</dd>
+            </div>
+            <div>
+              <dt>강수</dt>
+              <dd id="scene-rain">--%</dd>
+            </div>
+            <div>
+              <dt>돌풍</dt>
+              <dd id="scene-gust">--</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+
+      <div class="scene-console">
+        <button class="scene-icon-button" id="scene-reset-view" type="button" title="3D 시점 초기화" aria-label="3D 시점 초기화">
+          <i data-lucide="focus" aria-hidden="true"></i>
+        </button>
+        <div class="scene-time-control">
+          <div class="scene-time-heading">
+            <label for="scene-time">현장 시간</label>
+            <output id="scene-time-output" for="scene-time">12:00</output>
+          </div>
+          <input id="scene-time" type="range" min="480" max="1080" step="5" value="720">
+          <div class="scene-time-marks" aria-hidden="true">
+            <span id="scene-time-start">08:00</span>
+            <span id="scene-time-end">18:00</span>
+          </div>
+        </div>
+        <div class="scene-key" aria-label="3D 장면 범례">
+          <span><i class="key-sun"></i>태양 경로</span>
+          <span><i class="key-shoot"></i>촬영 구간</span>
+        </div>
+      </div>
+
+      <a class="scene-next" href="#simulator" title="촬영 조건으로 이동" aria-label="촬영 조건으로 이동">
+        <i data-lucide="chevron-down" aria-hidden="true"></i>
+      </a>
     </section>
 
     <section class="simulator-shell" id="simulator">
@@ -302,9 +355,6 @@
       </div>
     </section>
 
-    <figure class="visual-brief" id="visual-brief">
-      <img src="assets/og.png" alt="Stage-Is 촬영일 작전 시뮬레이터">
-    </figure>
   </main>
 
   <footer class="site-footer">
@@ -325,6 +375,15 @@
 
   <script src="https://cdn.jsdelivr.net/npm/suncalc@1.9.0/suncalc.min.js"></script>
   <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.js"></script>
-  <script src="js/main.js?v=20260809"></script>
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/"
+    }
+  }
+  </script>
+  <script type="module" src="js/scene.js?v=20260809-3d1"></script>
+  <script src="js/main.js?v=20260809-3d1"></script>
 </body>
 </html>

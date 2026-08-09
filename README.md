@@ -4,7 +4,8 @@ Stage-Is is a static production-planning tool for Korean video creators. It comb
 
 ## Product surface
 
-- `index.html`: simulator and operation brief
+- `index.html`: simulator, interactive 3D field view and operation brief
+- `js/scene.js`: Three.js field model, solar path, shadows and weather visualization
 - `field-guide.html`: first-party field rules generalized from production records
 - `method.html`: scoring method, data sources and limitations
 - `about.html`, `contact.html`, `privacy.html`: trust and policy pages

@@ -419,7 +419,33 @@ function renderResult(plan, solar, weather, analysis) {
   renderRisks(analysis.risks);
   renderChecklist(plan, weather);
   currentReport = buildReport(plan, solar, weather, analysis);
+  publishSceneState(plan, solar, weather, analysis);
   initializeIcons();
+}
+
+function publishSceneState(plan, solar, weather, analysis) {
+  const solarState = solar ? {
+    dawn: dateToMinutes(solar.dawn),
+    sunrise: dateToMinutes(solar.sunrise),
+    goldenMorningEnd: dateToMinutes(solar.goldenMorningEnd),
+    goldenEveningStart: dateToMinutes(solar.goldenEveningStart),
+    sunset: dateToMinutes(solar.sunset),
+    dusk: dateToMinutes(solar.dusk)
+  } : null;
+
+  const snapshot = {
+    plan: { ...plan },
+    solar: solarState,
+    weather: weather ? { ...weather } : null,
+    analysis: {
+      score: analysis.score,
+      decision: analysis.decision,
+      duration: analysis.duration
+    }
+  };
+
+  window.stageIsSimulation = snapshot;
+  window.dispatchEvent(new CustomEvent('stageis:simulation', { detail: snapshot }));
 }
 
 function renderDecision(analysis) {

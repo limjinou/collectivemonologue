@@ -151,6 +151,292 @@ main {
   margin: 0 auto;
 }
 
+.field-visual {
+  position: relative;
+  width: 100vw;
+  height: clamp(500px, calc(100svh - var(--header-height) - 58px), 760px);
+  margin-left: calc(50% - 50vw);
+  overflow: hidden;
+  border-bottom: 1px solid var(--ink);
+  background: #9bbbd0;
+  color: var(--white);
+  isolation: isolate;
+}
+
+.field-canvas-wrap,
+#field-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#field-canvas {
+  display: block;
+  outline: 0;
+  touch-action: none;
+}
+
+.scene-fallback {
+  position: absolute;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 32px;
+  background: var(--ink) url("../assets/og.png") center / cover no-repeat;
+  color: var(--white);
+  font-size: 14px;
+  text-align: center;
+}
+
+.field-visual.is-fallback .scene-fallback {
+  display: flex;
+}
+
+.field-visual-overlay {
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 40px 40px 0;
+  pointer-events: none;
+}
+
+.scene-title {
+  max-width: 650px;
+  text-shadow: 0 2px 18px rgba(8, 11, 15, 0.34);
+}
+
+.scene-title .overline {
+  margin-bottom: 12px;
+  color: var(--signal);
+}
+
+.scene-title h1 {
+  max-width: 620px;
+  margin: 0;
+  font-size: 54px;
+  font-weight: 800;
+  line-height: 1.08;
+}
+
+.scene-place {
+  margin: 18px 0 0;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.scene-readout {
+  width: min(340px, 36vw);
+  padding: 0 0 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.74);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.48);
+  background: rgba(10, 12, 14, 0.16);
+  backdrop-filter: blur(5px);
+}
+
+.scene-decision {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 24px;
+  min-height: 80px;
+  padding: 12px 0 8px;
+}
+
+.scene-decision span,
+.scene-readout dt,
+.scene-key,
+.scene-time-control label,
+.scene-time-marks,
+.scene-time-control output {
+  font-family: "IBM Plex Mono", monospace;
+}
+
+.scene-decision span {
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.scene-decision strong {
+  color: var(--signal);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 58px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.scene-decision strong.is-check {
+  color: #ff9b4a;
+}
+
+.scene-decision strong.is-hold {
+  color: #ff6559;
+}
+
+.scene-readout dl {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.32);
+}
+
+.scene-readout dl > div {
+  min-width: 0;
+  padding: 10px 9px 0 0;
+}
+
+.scene-readout dl > div + div {
+  padding-left: 10px;
+  border-left: 1px solid rgba(255, 255, 255, 0.32);
+}
+
+.scene-readout dt {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 9px;
+}
+
+.scene-readout dd {
+  margin: 3px 0 0;
+  overflow: hidden;
+  font-size: 15px;
+  font-weight: 700;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.scene-console {
+  position: absolute;
+  z-index: 4;
+  right: 82px;
+  bottom: 24px;
+  left: 32px;
+  display: grid;
+  grid-template-columns: 44px minmax(260px, 560px) auto;
+  align-items: center;
+  gap: 18px;
+  min-height: 78px;
+  padding: 10px 18px 10px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.54);
+  border-radius: var(--radius);
+  background: rgba(12, 14, 16, 0.76);
+  backdrop-filter: blur(14px);
+}
+
+.scene-icon-button,
+.scene-next {
+  display: inline-grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, 0.54);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--white);
+}
+
+.scene-icon-button:hover,
+.scene-icon-button:focus-visible,
+.scene-next:hover,
+.scene-next:focus-visible {
+  border-color: var(--signal);
+  background: var(--signal);
+  color: var(--ink);
+}
+
+.scene-icon-button svg,
+.scene-next svg {
+  width: 18px;
+  height: 18px;
+  stroke-width: 1.8;
+}
+
+.scene-time-control {
+  min-width: 0;
+}
+
+.scene-time-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 4px;
+}
+
+.scene-time-control label,
+.scene-time-control output {
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.scene-time-control output {
+  color: var(--signal);
+  font-size: 13px;
+}
+
+#scene-time {
+  width: 100%;
+  height: 18px;
+  margin: 0;
+  padding: 0;
+  accent-color: var(--signal);
+  cursor: ew-resize;
+}
+
+.scene-time-marks {
+  display: flex;
+  justify-content: space-between;
+  color: rgba(255, 255, 255, 0.64);
+  font-size: 9px;
+}
+
+.scene-key {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 18px;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 9px;
+  white-space: nowrap;
+}
+
+.scene-key span {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.scene-key i {
+  display: inline-block;
+  width: 22px;
+  height: 3px;
+}
+
+.key-sun {
+  background: var(--signal);
+}
+
+.key-shoot {
+  background: #51c9ff;
+}
+
+.scene-next {
+  position: absolute;
+  z-index: 5;
+  right: 24px;
+  bottom: 42px;
+  text-decoration: none;
+}
+
 .product-heading {
   display: flex;
   min-height: 154px;
@@ -1181,6 +1467,14 @@ select:focus {
 }
 
 @media (max-width: 1040px) {
+  .scene-console {
+    grid-template-columns: 44px minmax(0, 1fr);
+  }
+
+  .scene-key {
+    display: none;
+  }
+
   .simulator-shell {
     grid-template-columns: 390px minmax(0, 1fr);
   }
@@ -1222,6 +1516,38 @@ select:focus {
 
   .site-nav a {
     padding: 8px 0 17px;
+  }
+
+  .field-visual {
+    height: clamp(500px, calc(100svh - 126px), 680px);
+  }
+
+  .field-visual-overlay {
+    gap: 24px;
+    padding: 28px 20px 0;
+  }
+
+  .scene-title h1 {
+    font-size: 42px;
+  }
+
+  .scene-readout {
+    width: min(300px, 42vw);
+  }
+
+  .scene-decision strong {
+    font-size: 46px;
+  }
+
+  .scene-console {
+    right: 72px;
+    bottom: 18px;
+    left: 20px;
+  }
+
+  .scene-next {
+    right: 18px;
+    bottom: 36px;
   }
 
   .product-heading {
@@ -1300,6 +1626,70 @@ select:focus {
 
   .site-nav a {
     font-size: 11px;
+  }
+
+  .field-visual {
+    height: clamp(470px, calc(100svh - 150px), 620px);
+  }
+
+  .field-visual-overlay {
+    display: block;
+    padding: 22px 18px 0;
+  }
+
+  .scene-title h1 {
+    max-width: 310px;
+    font-size: 34px;
+  }
+
+  .scene-title .overline {
+    margin-bottom: 8px;
+  }
+
+  .scene-place {
+    margin-top: 10px;
+    font-size: 10px;
+  }
+
+  .scene-readout {
+    width: 100%;
+    margin-top: 16px;
+  }
+
+  .scene-decision {
+    min-height: 52px;
+    padding: 7px 0 5px;
+  }
+
+  .scene-decision strong {
+    font-size: 36px;
+  }
+
+  .scene-readout dl > div {
+    padding-top: 7px;
+  }
+
+  .scene-readout dd {
+    font-size: 12px;
+  }
+
+  .scene-console {
+    right: 14px;
+    bottom: 14px;
+    left: 14px;
+    grid-template-columns: 40px minmax(0, 1fr);
+    gap: 12px;
+    min-height: 72px;
+    padding: 8px 12px 8px 8px;
+  }
+
+  .scene-icon-button {
+    width: 40px;
+    height: 40px;
+  }
+
+  .scene-next {
+    display: none;
   }
 
   .product-heading {
@@ -1421,6 +1811,7 @@ select:focus {
   }
 
   .site-header,
+  .field-visual,
   .product-heading,
   .control-panel,
   .field-band,
