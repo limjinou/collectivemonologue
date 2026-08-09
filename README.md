@@ -1,30 +1,18 @@
-# Stageside
+# Stage-Is Shoot Day Simulator
 
-미국 연극과 영화의 최신 트렌드, 뉴스, 심층 분석을 한국어로 전달하는 매거진 웹사이트입니다.
+Stage-Is is a static production-planning tool for Korean video creators. It combines solar windows, short-term weather, crew and timing constraints into a printable shoot-day operation brief.
 
-## 프로젝트 소개
-- **주제**: 미국 공연/영화 예술 뉴스 및 비평
-- **기술 스택**: HTML5, CSS3, Vanilla JavaScript
-- **주요 기능**:
-  - 반응형 디자인 (데스크탑/모바일)
-  - 뉴스레터 구독 폼
-  - 카테고리별 기사 분류
+## Product surface
 
-## 구조
-- `index.html`: 메인 페이지
-- `article.html`: 기사 상세 페이지
-- `category.html`: 카테고리 페이지
-- `about.html`: 소개 페이지
-- `subscribe.html`: 구독 페이지
+- `index.html`: simulator and operation brief
+- `field-guide.html`: first-party field rules generalized from production records
+- `method.html`: scoring method, data sources and limitations
+- `about.html`, `contact.html`, `privacy.html`: trust and policy pages
 
-## 사용 방법
-- **다크/라이트 모드**: 화면 우측 상단(모바일은 메뉴 안)의 ☀️/🌙 아이콘을 클릭하여 테마를 변경할 수 있습니다.
+## Data
 
-## 배포 방법 (GitHub Pages)
-이 프로젝트는 GitHub Pages를 통해 무료로 호스팅할 수 있습니다.
+- Solar calculations: SunCalc
+- Initial weather evaluation: Open-Meteo non-commercial public endpoint
+- Before advertising or other monetization is activated, replace the evaluation weather endpoint with the official KMA short-term forecast API or a licensed commercial weather endpoint.
 
-1. GitHub 저장소의 **Settings (설정)** 탭으로 이동합니다.
-2. 좌측 메뉴에서 **Pages**를 클릭합니다.
-3. **Build and deployment** 섹션의 **Source**를 `Deploy from a branch`로 설정합니다.
-4. **Branch**를 `main` (또는 `master`) / `/ (root)`로 선택하고 **Save**를 클릭합니다.
-5. 잠시 후 상단에 생성된 사이트 주소가 표시됩니다.
+The site has no article crawler, generated article archive or scheduled content workflow.
