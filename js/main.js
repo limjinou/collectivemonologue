@@ -21,9 +21,12 @@ const WEATHER_ENDPOINT = 'https://api.open-meteo.com/v1/forecast';
 const STORAGE_KEY = 'stageis-shoot-plan-v1';
 const DAY_MINUTES = 1440;
 
-let selectedLocation = { ...LOCATIONS[0] };
+let selectedLocation = { ...LOCATIONS[0], source: 'preset' };
 let currentReport = '';
 let toastTimer;
+let locationMap;
+let locationMarker;
+let pendingMapLocation;
 
 document.addEventListener('DOMContentLoaded', () => {
   initializeIcons();
@@ -88,10 +91,18 @@ function bindEvents() {
   });
 
   document.getElementById('use-location')?.addEventListener('click', useCurrentLocation);
+  document.getElementById('open-location-map')?.addEventListener('click', openLocationMap);
+  document.getElementById('close-location-map')?.addEventListener('click', closeLocationMap);
+  document.getElementById('map-use-current')?.addEventListener('click', useCurrentLocationInMap);
+  document.getElementById('apply-map-location')?.addEventListener('click', applyMapLocation);
   document.getElementById('reset-plan')?.addEventListener('click', resetPlan);
   document.getElementById('copy-report')?.addEventListener('click', copyReport);
   document.getElementById('download-report')?.addEventListener('click', downloadReport);
   document.getElementById('print-report')?.addEventListener('click', () => window.print());
+
+  document.getElementById('location-map-dialog')?.addEventListener('click', (event) => {
+    if (event.target === event.currentTarget) closeLocationMap();
+  });
 }
 
 function updateLocationFromInput() {
@@ -100,13 +111,21 @@ function updateLocationFromInput() {
   if (!input || !status) return;
 
   const query = input.value.trim().toLowerCase();
+  const currentName = String(selectedLocation.name || '').trim().toLowerCase();
+
+  if (query && query === currentName && Number.isFinite(selectedLocation.latitude) && Number.isFinite(selectedLocation.longitude)) {
+    const sourceLabel = selectedLocation.source === 'map' ? '지도 선택 좌표' : selectedLocation.source === 'device' ? '기기 위치' : '선택 좌표';
+    status.textContent = `${selectedLocation.latitude.toFixed(5)}, ${selectedLocation.longitude.toFixed(5)} · ${sourceLabel}`;
+    return;
+  }
+
   const match = LOCATIONS.find((location) => {
     const candidates = [location.name, ...(location.aliases || [])];
     return candidates.some((candidate) => candidate.toLowerCase() === query);
   });
 
   if (match) {
-    selectedLocation = { ...match };
+    selectedLocation = { ...match, source: 'preset' };
     input.value = match.name;
     status.textContent = `${match.name} 중심 좌표 · ${match.latitude.toFixed(3)}, ${match.longitude.toFixed(3)}`;
     return;
@@ -134,7 +153,8 @@ function useCurrentLocation() {
       selectedLocation = {
         name: nearest.distance < 40 ? `${nearest.location.name} 인근` : '현재 위치',
         latitude,
-        longitude
+        longitude,
+        source: 'device'
       };
       if (input) input.value = selectedLocation.name;
       if (status) status.textContent = `${latitude.toFixed(4)}, ${longitude.toFixed(4)} · 기기 위치`;
@@ -153,6 +173,115 @@ function findNearestLocation(latitude, longitude) {
     location,
     distance: haversine(latitude, longitude, location.latitude, location.longitude)
   })).sort((a, b) => a.distance - b.distance)[0];
+}
+
+function openLocationMap() {
+  const dialog = document.getElementById('location-map-dialog');
+  if (!dialog || typeof dialog.showModal !== 'function') {
+    showToast('이 브라우저에서는 지도 선택창을 열 수 없습니다.');
+    return;
+  }
+
+  if (!window.L) {
+    showToast('지도를 불러오지 못했습니다. 잠시 후 다시 시도하세요.');
+    return;
+  }
+
+  pendingMapLocation = {
+    latitude: selectedLocation.latitude,
+    longitude: selectedLocation.longitude
+  };
+
+  dialog.showModal();
+  if (!locationMap) initializeLocationMap();
+
+  window.setTimeout(() => {
+    locationMap.invalidateSize();
+    setPendingMapLocation(pendingMapLocation.latitude, pendingMapLocation.longitude, true, 15);
+  }, 80);
+}
+
+function closeLocationMap() {
+  const dialog = document.getElementById('location-map-dialog');
+  if (dialog?.open) dialog.close();
+}
+
+function initializeLocationMap() {
+  locationMap = window.L.map('location-map', {
+    zoomControl: true,
+    attributionControl: true,
+    preferCanvas: true
+  }).setView([selectedLocation.latitude, selectedLocation.longitude], 15);
+
+  window.L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+  }).addTo(locationMap);
+
+  locationMarker = window.L.circleMarker([selectedLocation.latitude, selectedLocation.longitude], {
+    radius: 9,
+    color: '#151515',
+    weight: 3,
+    fillColor: '#ffd60a',
+    fillOpacity: 1
+  }).addTo(locationMap);
+
+  locationMap.on('click', (event) => {
+    setPendingMapLocation(event.latlng.lat, event.latlng.lng, false);
+  });
+}
+
+function setPendingMapLocation(latitude, longitude, moveMap, zoom) {
+  pendingMapLocation = { latitude, longitude };
+  locationMarker?.setLatLng([latitude, longitude]);
+  setText('map-coordinate-value', `${latitude.toFixed(5)}, ${longitude.toFixed(5)}`);
+
+  if (moveMap && locationMap) {
+    locationMap.setView([latitude, longitude], zoom || locationMap.getZoom(), { animate: false });
+  }
+}
+
+function useCurrentLocationInMap() {
+  if (!navigator.geolocation) {
+    showToast('이 브라우저에서는 현재 위치를 사용할 수 없습니다.');
+    return;
+  }
+
+  const button = document.getElementById('map-use-current');
+  if (button) button.disabled = true;
+
+  navigator.geolocation.getCurrentPosition(
+    (position) => {
+      setPendingMapLocation(position.coords.latitude, position.coords.longitude, true, 17);
+      if (button) button.disabled = false;
+    },
+    () => {
+      if (button) button.disabled = false;
+      showToast('현재 위치를 가져오지 못했습니다.');
+    },
+    { enableHighAccuracy: true, timeout: 12000, maximumAge: 300000 }
+  );
+}
+
+function applyMapLocation() {
+  if (!pendingMapLocation) return;
+
+  const nearest = findNearestLocation(pendingMapLocation.latitude, pendingMapLocation.longitude);
+  const name = nearest.distance < 80 ? `${nearest.location.name} 지도 지점` : '지도 지정 위치';
+  selectedLocation = {
+    name,
+    latitude: pendingMapLocation.latitude,
+    longitude: pendingMapLocation.longitude,
+    source: 'map'
+  };
+
+  const input = document.getElementById('location');
+  const status = document.getElementById('location-status');
+  if (input) input.value = name;
+  if (status) status.textContent = `${selectedLocation.latitude.toFixed(5)}, ${selectedLocation.longitude.toFixed(5)} · 지도 선택 좌표`;
+
+  closeLocationMap();
+  runSimulation();
 }
 
 async function runSimulation() {
@@ -186,6 +315,7 @@ function readPlan(form) {
     location: selectedLocation.name,
     latitude: selectedLocation.latitude,
     longitude: selectedLocation.longitude,
+    locationSource: selectedLocation.source || 'preset',
     date: String(data.get('shootDate')),
     lightGoal: String(data.get('lightGoal')),
     environment: String(data.get('environment')),
@@ -712,7 +842,7 @@ function resetPlan() {
   const form = document.getElementById('shoot-form');
   if (!form) return;
   form.reset();
-  selectedLocation = { ...LOCATIONS[0] };
+  selectedLocation = { ...LOCATIONS[0], source: 'preset' };
   document.getElementById('location').value = '서울';
   document.getElementById('start-time').value = '08:00';
   document.getElementById('end-time').value = '18:00';
@@ -755,7 +885,8 @@ function restorePlan() {
       selectedLocation = {
         name: saved.location || '저장된 위치',
         latitude: saved.latitude,
-        longitude: saved.longitude
+        longitude: saved.longitude,
+        source: saved.locationSource || 'saved'
       };
       const status = document.getElementById('location-status');
       if (status) status.textContent = `${saved.latitude.toFixed(4)}, ${saved.longitude.toFixed(4)} · 저장된 위치`;

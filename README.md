@@ -13,6 +13,7 @@ Stage-Is is a static production-planning tool for Korean video creators. It comb
 ## Data
 
 - Solar calculations: SunCalc
+- Exact location selection: Leaflet with OpenStreetMap tiles
 - Initial weather evaluation: Open-Meteo non-commercial public endpoint
 - Before advertising or other monetization is activated, replace the evaluation weather endpoint with the official KMA short-term forecast API or a licensed commercial weather endpoint.
 

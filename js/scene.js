@@ -57,6 +57,8 @@ function initializeFieldScene() {
     cloudCover: 32,
     rainChance: 0,
     gust: 8,
+    sunBearing: 0,
+    shadowBearing: 180,
     firstFrame: true
   };
 
@@ -76,6 +78,10 @@ function initializeFieldScene() {
       ready: visual.dataset.sceneReady === 'true',
       minute: state.minute,
       decision: state.snapshot?.analysis?.decision || null,
+      latitude: state.snapshot?.plan?.latitude ?? null,
+      longitude: state.snapshot?.plan?.longitude ?? null,
+      sunBearing: state.sunBearing,
+      shadowBearing: state.shadowBearing,
       canvasWidth: canvas.width,
       canvasHeight: canvas.height
     }),
@@ -140,9 +146,6 @@ function initializeFieldScene() {
     state.rainChance = weatherAvailable && Number.isFinite(weather.maxRainChance) ? weather.maxRainChance : 0;
     state.gust = weatherAvailable && Number.isFinite(weather.maxGust) ? weather.maxGust : 8;
 
-    setText('scene-rain', weatherAvailable ? `${Math.round(state.rainChance)}%` : '예보 밖');
-    setText('scene-gust', weatherAvailable ? `${Math.round(state.gust)} km/h` : '--');
-
     updateEnvironment(field, lighting, snapshot.plan.environment);
     updateWeather(atmosphere, state);
     rebuildSolarPaths(solar, snapshot);
@@ -184,7 +187,11 @@ function initializeFieldScene() {
     const sky = skyColorForConditions(sunData.altitudeDegrees, state.cloudCover, environment);
     scene.background.copy(sky);
     scene.fog.color.copy(sky);
+    state.sunBearing = sunData.bearingDegrees;
+    state.shadowBearing = (sunData.bearingDegrees + 180) % 360;
     setText('scene-sun-altitude', `${sunData.altitudeDegrees >= 0 ? '+' : ''}${sunData.altitudeDegrees.toFixed(1)}°`);
+    setText('scene-sun-direction', `${compassDirection(state.sunBearing)} ${Math.round(state.sunBearing)}°`);
+    setText('scene-shadow-direction', `${compassDirection(state.shadowBearing)} ${Math.round(state.shadowBearing)}°`);
   }
 
   function resetCamera() {
@@ -293,6 +300,9 @@ function buildField(scene) {
 
   const horizon = buildHorizon();
   fieldGroup.add(horizon);
+
+  const groundCompass = buildGroundCompass();
+  fieldGroup.add(groundCompass);
 
   const mixedShell = buildMixedShell();
   fieldGroup.add(mixedShell);
@@ -635,6 +645,53 @@ function buildIndoorShell() {
   return group;
 }
 
+function buildGroundCompass() {
+  const group = new THREE.Group();
+  group.position.set(-6.4, 0.1, 4.5);
+
+  const ring = mesh(
+    new THREE.TorusGeometry(0.86, 0.026, 8, 48),
+    new THREE.MeshBasicMaterial({ color: 0xf5f1e6, transparent: true, opacity: 0.82 }),
+    [0, 0, 0],
+    [-Math.PI / 2, 0, 0]
+  );
+  const eastWest = mesh(
+    new THREE.BoxGeometry(1.7, 0.018, 0.035),
+    new THREE.MeshBasicMaterial({ color: 0xf5f1e6, transparent: true, opacity: 0.62 })
+  );
+  const northArrow = mesh(
+    new THREE.ConeGeometry(0.2, 0.92, 3),
+    new THREE.MeshBasicMaterial({ color: 0xe94c3d }),
+    [0, 0.03, -0.34],
+    [-Math.PI / 2, 0, 0]
+  );
+  const southArrow = mesh(
+    new THREE.ConeGeometry(0.16, 0.68, 3),
+    new THREE.MeshBasicMaterial({ color: 0xf5f1e6 }),
+    [0, 0.028, 0.3],
+    [Math.PI / 2, 0, 0]
+  );
+
+  const labelCanvas = document.createElement('canvas');
+  labelCanvas.width = 128;
+  labelCanvas.height = 128;
+  const context = labelCanvas.getContext('2d');
+  context.clearRect(0, 0, 128, 128);
+  context.fillStyle = '#ffffff';
+  context.font = '700 82px IBM Plex Mono, monospace';
+  context.textAlign = 'center';
+  context.textBaseline = 'middle';
+  context.fillText('N', 64, 64);
+  const labelTexture = new THREE.CanvasTexture(labelCanvas);
+  labelTexture.colorSpace = THREE.SRGBColorSpace;
+  const label = new THREE.Sprite(new THREE.SpriteMaterial({ map: labelTexture, transparent: true, depthTest: false }));
+  label.position.set(0, 0.42, -1.1);
+  label.scale.set(0.52, 0.52, 0.52);
+
+  group.add(ring, eastWest, northArrow, southArrow, label);
+  return group;
+}
+
 function addTapeMark(group, x, y, z) {
   const material = new THREE.MeshBasicMaterial({ color: 0xffd60a });
   group.add(mesh(new THREE.BoxGeometry(0.75, 0.015, 0.08), material, [x, y, z], [0, 0.45, 0]));
@@ -664,15 +721,17 @@ function getSunData(plan, minute, radius) {
   const positionData = window.SunCalc?.getPosition(date, plan.latitude, plan.longitude) || { altitude: Math.PI / 4, azimuth: 0 };
   const altitude = positionData.altitude;
   const azimuth = positionData.azimuth;
+  const bearingDegrees = (THREE.MathUtils.radToDeg(azimuth) + 540) % 360;
+  const bearing = THREE.MathUtils.degToRad(bearingDegrees);
   const horizontal = Math.cos(altitude);
   const direction = new THREE.Vector3(
-    Math.sin(azimuth) * horizontal,
+    Math.sin(bearing) * horizontal,
     Math.sin(altitude),
-    Math.cos(azimuth) * horizontal
+    -Math.cos(bearing) * horizontal
   ).normalize();
   const position = direction.clone().multiplyScalar(radius);
   position.y = Math.max(-1.4, position.y);
-  return { position, direction, altitudeDegrees: THREE.MathUtils.radToDeg(altitude) };
+  return { position, direction, altitudeDegrees: THREE.MathUtils.radToDeg(altitude), bearingDegrees };
 }
 
 function skyColorForConditions(altitude, cloudCover, environment) {
@@ -698,6 +757,11 @@ function skyColorForConditions(altitude, cloudCover, environment) {
 function sunColorForAltitude(altitude) {
   const amount = THREE.MathUtils.smoothstep(altitude, 0, 20);
   return new THREE.Color(0xffa35c).lerp(new THREE.Color(0xfff1d2), amount);
+}
+
+function compassDirection(degrees) {
+  const directions = ['북', '북북동', '북동', '동북동', '동', '동남동', '남동', '남남동', '남', '남남서', '남서', '서남서', '서', '서북서', '북서', '북북서'];
+  return directions[Math.round(((degrees % 360) + 360) % 360 / 22.5) % directions.length];
 }
 
 function chooseSceneMinute(snapshot, start, end) {
