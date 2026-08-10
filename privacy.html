@@ -11,19 +11,19 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=20260809">
+  <link rel="stylesheet" href="css/style.css?v=20260810-sun1">
 </head>
 <body class="content-page">
   <header class="site-header">
     <a class="brand" href="/" aria-label="Stage-Is 홈"><span class="brand-mark" aria-hidden="true">S/I</span><span>STAGE-IS</span></a>
-    <nav class="site-nav" aria-label="주요 메뉴"><a href="/">시뮬레이터</a><a href="/field-guide.html">현장 기준</a><a href="/method.html">판단 방식</a><a href="/about.html">정보</a></nav>
+    <nav class="site-nav" aria-label="주요 메뉴"><a href="/">시뮬레이터</a><a href="/field-guide.html">빛 가이드</a><a href="/method.html">계산 방식</a><a href="/about.html">정보</a></nav>
   </header>
 
   <main>
     <section class="content-hero">
       <div class="content-index"><a href="#storage">저장</a><a href="#location">위치</a><a href="#third-party">외부 서비스</a><a href="#ads">광고</a></div>
       <div>
-        <p class="overline">PRIVACY / 2026-08-09</p>
+        <p class="overline">PRIVACY / 2026-08-10</p>
         <h1>개인정보처리방침</h1>
         <p class="content-lead">Stage-Is는 회원 가입을 받지 않으며 촬영 계획을 자체 서버에 저장하지 않습니다. 시뮬레이터에 입력한 정보는 결과 계산과 마지막 계획 복원에 필요한 범위에서만 처리합니다.</p>
       </div>
@@ -34,7 +34,8 @@
         <span class="section-number">01 / STORAGE</span>
         <div>
           <h2>브라우저에 저장되는 정보</h2>
-          <p>장소 이름, 좌표, 촬영일, 촬영 시간, 현장 인원, 세팅 시간과 체크 상태는 사용 중인 브라우저의 로컬 저장소에 저장될 수 있습니다. 이 정보는 다음 방문 때 마지막 촬영 계획을 복원하기 위한 것이며 Stage-Is 서버로 전송되지 않습니다.</p>
+          <p>장소 이름, 좌표, 촬영일과 확인 시간은 사용 중인 브라우저의 로컬 저장소에 저장될 수 있습니다. 이 정보는 다음 방문 때 마지막 설정을 복원하기 위한 것이며 Stage-Is 자체 서버에는 저장되지 않습니다.</p>
+          <p>동일한 위치의 외부 요청을 줄이기 위해 주소 검색 결과와 시간별 기상예보 응답도 브라우저에 임시 저장합니다. 기상 캐시는 제공 서비스가 지정한 만료 시각 이후 갱신되며 주소 캐시는 브라우저 사이트 데이터를 삭제할 때 함께 지워집니다.</p>
           <p>브라우저 사이트 데이터 또는 로컬 저장소를 삭제하면 저장된 계획도 함께 삭제됩니다.</p>
         </div>
       </section>
@@ -44,7 +45,8 @@
         <div>
           <h2>현재 위치 사용</h2>
           <p>사용자가 현재 위치 버튼을 누르고 브라우저 권한을 허용한 경우 위도와 경도를 가져옵니다. 권한을 허용하지 않아도 도시 목록이나 지도에서 지점을 직접 선택해 모든 주요 기능을 사용할 수 있습니다.</p>
-          <p>선택한 좌표는 브라우저 안에서 태양 위치를 계산하는 데 사용됩니다. Stage-Is는 좌표를 기상 서비스에 전송하지 않습니다. 지도 선택창을 열면 선택 지점 주변의 지도 타일을 OpenStreetMap에서 불러오며 지도 제공자는 IP 주소, 요청 시각, 리퍼러와 표시된 지도 영역을 처리할 수 있습니다.</p>
+          <p>선택한 좌표는 브라우저 안에서 태양 위치를 계산하고 시간별 예보를 요청하는 데 사용됩니다. 사용자가 빛과 날씨를 불러오면 소수점 넷째 자리로 줄인 좌표가 MET Norway에 전송됩니다. 주소를 검색하거나 지도 핀·현재 위치를 확정하면 좌표 또는 검색어가 OpenStreetMap Nominatim에 전송되어 상세 주소로 변환됩니다.</p>
+          <p>지도 선택창을 열면 선택 지점 주변의 지도 타일을 OpenStreetMap에서 불러옵니다. MET Norway와 OpenStreetMap은 서비스 운영과 오용 방지를 위해 IP 주소, 요청 시각, 리퍼러, 좌표 또는 표시된 지도 영역을 처리할 수 있습니다.</p>
         </div>
       </section>
 
@@ -54,11 +56,12 @@
           <h2>외부 데이터와 라이브러리</h2>
           <ul>
             <li>SunCalc: 브라우저에서 일출, 일몰과 골든아워 계산</li>
-            <li>OpenStreetMap 및 Leaflet: 지도 표시와 촬영 지점 좌표 선택</li>
+            <li>MET Norway Locationforecast: 선택 좌표의 시간별 기온, 습도, 구름, 강수와 바람 예보</li>
+            <li>OpenStreetMap, Nominatim 및 Leaflet: 지도 표시, 좌표 선택, 주소 검색과 역지오코딩</li>
             <li>Google Fonts: 웹 글꼴 제공</li>
             <li>jsDelivr 및 unpkg: 계산·아이콘 라이브러리 제공</li>
           </ul>
-          <p>외부 서비스는 기술 운영과 오용 방지를 위해 IP 주소, 요청 시각과 좌표 등의 로그를 처리할 수 있습니다. 각 서비스의 개인정보처리방침과 이용 조건이 적용됩니다.</p>
+          <p>기상 원자료는 MET Norway의 CC BY 4.0 조건에 따라 출처를 표시합니다. 주소와 지도 데이터에는 OpenStreetMap의 ODbL 및 서비스 이용 정책이 적용됩니다. 각 외부 서비스는 기술 운영과 오용 방지를 위해 IP 주소, 요청 시각과 좌표 등의 로그를 처리할 수 있습니다.</p>
         </div>
       </section>
 
@@ -83,9 +86,9 @@
   </main>
 
   <footer class="site-footer">
-    <div><strong>STAGE-IS</strong><p>촬영 전에 돈보다 먼저 시간을 잃지 않도록.</p></div>
-    <div class="footer-links"><a href="/">시뮬레이터</a><a href="/field-guide.html">현장 기준</a><a href="/method.html">판단 방식</a><a href="/contact.html">문의</a></div>
-    <p class="data-credit">최종 업데이트: 2026-08-09</p>
+    <div><strong>STAGE-IS</strong><p>장소와 시간 사이에서 실제 화면을 먼저 봅니다.</p></div>
+    <div class="footer-links"><a href="/">시뮬레이터</a><a href="/field-guide.html">빛 가이드</a><a href="/method.html">계산 방식</a><a href="/contact.html">문의</a></div>
+    <p class="data-credit">최종 업데이트: 2026-08-10</p>
   </footer>
 </body>
 </html>

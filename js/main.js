@@ -1,31 +1,41 @@
 const LOCATIONS = [
-  { name: '서울', aliases: ['서울특별시'], latitude: 37.5665, longitude: 126.9780 },
-  { name: '인천', aliases: ['인천광역시'], latitude: 37.4563, longitude: 126.7052 },
-  { name: '수원', aliases: ['수원시'], latitude: 37.2636, longitude: 127.0286 },
-  { name: '고양', aliases: ['고양시', '일산'], latitude: 37.6584, longitude: 126.8320 },
-  { name: '파주', aliases: ['파주시'], latitude: 37.7599, longitude: 126.7800 },
-  { name: '성남', aliases: ['성남시', '분당'], latitude: 37.4200, longitude: 127.1265 },
-  { name: '춘천', aliases: ['춘천시'], latitude: 37.8813, longitude: 127.7298 },
-  { name: '강릉', aliases: ['강릉시'], latitude: 37.7519, longitude: 128.8761 },
-  { name: '대전', aliases: ['대전광역시'], latitude: 36.3504, longitude: 127.3845 },
-  { name: '전주', aliases: ['전주시'], latitude: 35.8242, longitude: 127.1480 },
-  { name: '광주', aliases: ['광주광역시'], latitude: 35.1595, longitude: 126.8526 },
-  { name: '대구', aliases: ['대구광역시'], latitude: 35.8714, longitude: 128.6014 },
-  { name: '부산', aliases: ['부산광역시'], latitude: 35.1796, longitude: 129.0756 },
-  { name: '울산', aliases: ['울산광역시'], latitude: 35.5384, longitude: 129.3114 },
-  { name: '제주', aliases: ['제주시', '제주도'], latitude: 33.4996, longitude: 126.5312 },
-  { name: '서귀포', aliases: ['서귀포시'], latitude: 33.2541, longitude: 126.5601 }
+  { name: '서울', aliases: ['서울특별시'], label: '서울특별시 중구 태평로1가', latitude: 37.5665, longitude: 126.9780 },
+  { name: '인천', aliases: ['인천광역시'], label: '인천광역시 남동구 구월동', latitude: 37.4563, longitude: 126.7052 },
+  { name: '수원', aliases: ['수원시'], label: '경기도 수원시 팔달구', latitude: 37.2636, longitude: 127.0286 },
+  { name: '고양', aliases: ['고양시', '일산'], label: '경기도 고양시 일산동구', latitude: 37.6584, longitude: 126.8320 },
+  { name: '파주', aliases: ['파주시'], label: '경기도 파주시 금촌동', latitude: 37.7599, longitude: 126.7800 },
+  { name: '성남', aliases: ['성남시', '분당'], label: '경기도 성남시 분당구', latitude: 37.4200, longitude: 127.1265 },
+  { name: '춘천', aliases: ['춘천시'], label: '강원특별자치도 춘천시', latitude: 37.8813, longitude: 127.7298 },
+  { name: '강릉', aliases: ['강릉시'], label: '강원특별자치도 강릉시', latitude: 37.7519, longitude: 128.8761 },
+  { name: '대전', aliases: ['대전광역시'], label: '대전광역시 중구', latitude: 36.3504, longitude: 127.3845 },
+  { name: '전주', aliases: ['전주시'], label: '전북특별자치도 전주시 완산구', latitude: 35.8242, longitude: 127.1480 },
+  { name: '광주', aliases: ['광주광역시'], label: '광주광역시 동구', latitude: 35.1595, longitude: 126.8526 },
+  { name: '대구', aliases: ['대구광역시'], label: '대구광역시 중구', latitude: 35.8714, longitude: 128.6014 },
+  { name: '부산', aliases: ['부산광역시'], label: '부산광역시 중구', latitude: 35.1796, longitude: 129.0756 },
+  { name: '울산', aliases: ['울산광역시'], label: '울산광역시 중구', latitude: 35.5384, longitude: 129.3114 },
+  { name: '제주', aliases: ['제주시', '제주도'], label: '제주특별자치도 제주시', latitude: 33.4996, longitude: 126.5312 },
+  { name: '서귀포', aliases: ['서귀포시'], label: '제주특별자치도 서귀포시', latitude: 33.2541, longitude: 126.5601 }
 ];
 
-const STORAGE_KEY = 'stageis-shoot-plan-v1';
+const STORAGE_KEY = 'stageis-sun-weather-plan-v2';
+const WEATHER_CACHE_KEY = 'stageis-weather-cache-v1';
+const GEOCODE_CACHE_KEY = 'stageis-geocode-cache-v1';
 const DAY_MINUTES = 1440;
+const KOREA_TIME_ZONE = 'Asia/Seoul';
+const NOMINATIM_GAP_MS = 1100;
+const WEATHER_URL = 'https://api.met.no/weatherapi/locationforecast/2.0/complete';
 
-let selectedLocation = { ...LOCATIONS[0], source: 'preset' };
+let selectedLocation = { ...LOCATIONS[0], name: LOCATIONS[0].label, source: 'preset' };
+let currentContext = null;
 let currentReport = '';
 let toastTimer;
+let simulationVersion = 0;
+let simulationTimer;
 let locationMap;
 let locationMarker;
 let pendingMapLocation;
+let nominatimQueue = Promise.resolve();
+let lastNominatimAt = 0;
 
 document.addEventListener('DOMContentLoaded', () => {
   initializeIcons();
@@ -33,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initializeDate();
   restorePlan();
   bindEvents();
-  updateLocationFromInput();
+  updateLocationDisplay();
   window.setTimeout(() => runSimulation(), 120);
 });
 
@@ -48,6 +58,7 @@ function populateLocations() {
   LOCATIONS.forEach((location) => {
     const option = document.createElement('option');
     option.value = location.name;
+    option.label = location.label;
     list.appendChild(option);
   });
 }
@@ -55,40 +66,41 @@ function populateLocations() {
 function initializeDate() {
   const input = document.getElementById('shoot-date');
   if (!input) return;
-
   const today = startOfDay(new Date());
-  const tomorrow = addDays(today, 1);
-  const maxDate = addDays(today, 180);
   input.min = toDateInput(today);
-  input.max = toDateInput(maxDate);
-  if (!input.value) input.value = toDateInput(tomorrow);
+  input.max = toDateInput(addDays(today, 180));
+  if (!input.value) input.value = toDateInput(addDays(today, 1));
 }
 
 function bindEvents() {
   const form = document.getElementById('shoot-form');
   const locationInput = document.getElementById('location');
 
-  form?.addEventListener('submit', (event) => {
+  form?.addEventListener('submit', async (event) => {
     event.preventDefault();
-    runSimulation();
+    if (await resolveTypedLocation()) runSimulation();
   });
 
-  locationInput?.addEventListener('change', updateLocationFromInput);
-  locationInput?.addEventListener('blur', updateLocationFromInput);
-
-  document.querySelectorAll('[data-stepper]').forEach((stepper) => {
-    stepper.querySelectorAll('button[data-step]').forEach((button) => {
-      button.addEventListener('click', () => {
-        const input = stepper.querySelector('input[type="number"]');
-        if (!input) return;
-        const step = Number(button.dataset.step || 1);
-        const min = Number(input.min || -Infinity);
-        const max = Number(input.max || Infinity);
-        input.value = String(clamp(Number(input.value || 0) + step, min, max));
+  locationInput?.addEventListener('change', syncPresetLocation);
+  locationInput?.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') {
+      event.preventDefault();
+      resolveTypedLocation().then((resolved) => {
+        if (resolved) runSimulation();
       });
-    });
+    }
   });
 
+  ['shoot-date', 'start-time', 'end-time', 'light-goal'].forEach((id) => {
+    document.getElementById(id)?.addEventListener('change', scheduleSimulation);
+  });
+
+  document.getElementById('scene-time')?.addEventListener('input', (event) => {
+    renderFocusedTime(Number(event.target.value));
+  });
+  document.getElementById('search-location')?.addEventListener('click', async () => {
+    if (await resolveTypedLocation(true)) runSimulation();
+  });
   document.getElementById('use-location')?.addEventListener('click', useCurrentLocation);
   document.getElementById('open-location-map')?.addEventListener('click', openLocationMap);
   document.getElementById('close-location-map')?.addEventListener('click', closeLocationMap);
@@ -104,74 +116,114 @@ function bindEvents() {
   });
 }
 
-function updateLocationFromInput() {
-  const input = document.getElementById('location');
-  const status = document.getElementById('location-status');
-  if (!input || !status) return;
+function scheduleSimulation() {
+  window.clearTimeout(simulationTimer);
+  simulationTimer = window.setTimeout(() => runSimulation(), 180);
+}
 
+function syncPresetLocation() {
+  const input = document.getElementById('location');
+  if (!input) return false;
   const query = input.value.trim().toLowerCase();
   const currentName = String(selectedLocation.name || '').trim().toLowerCase();
-
-  if (query && query === currentName && Number.isFinite(selectedLocation.latitude) && Number.isFinite(selectedLocation.longitude)) {
-    const sourceLabel = selectedLocation.source === 'map' ? '지도 선택 좌표' : selectedLocation.source === 'device' ? '기기 위치' : '선택 좌표';
-    status.textContent = `${selectedLocation.latitude.toFixed(5)}, ${selectedLocation.longitude.toFixed(5)} · ${sourceLabel}`;
-    return;
+  if (query === currentName) {
+    updateLocationDisplay();
+    return true;
   }
 
   const match = LOCATIONS.find((location) => {
-    const candidates = [location.name, ...(location.aliases || [])];
+    const candidates = [location.name, location.label, ...(location.aliases || [])];
     return candidates.some((candidate) => candidate.toLowerCase() === query);
   });
 
-  if (match) {
-    selectedLocation = { ...match, source: 'preset' };
-    input.value = match.name;
-    status.textContent = `${match.name} 중심 좌표 · ${match.latitude.toFixed(3)}, ${match.longitude.toFixed(3)}`;
-    return;
+  if (!match) {
+    setText('location-status', '주소를 입력한 뒤 검색 버튼을 누르거나 지도에 핀을 찍으세요.');
+    return false;
   }
 
-  status.textContent = '목록의 도시를 선택하거나 현재 위치를 사용하세요.';
+  selectedLocation = { ...match, name: match.label, source: 'preset' };
+  input.value = match.label;
+  updateLocationDisplay();
+  return true;
+}
+
+async function resolveTypedLocation(showFailureToast = false) {
+  if (syncPresetLocation()) return true;
+  const input = document.getElementById('location');
+  const query = input?.value.trim();
+  if (!query) return false;
+
+  setText('location-status', '주소를 검색하고 있습니다.');
+  setLocationButtonsDisabled(true);
+  try {
+    const result = await searchAddress(query);
+    if (!result) throw new Error('not-found');
+    selectedLocation = {
+      name: formatAddress(result),
+      latitude: Number(result.lat),
+      longitude: Number(result.lon),
+      source: 'search'
+    };
+    if (input) input.value = selectedLocation.name;
+    updateLocationDisplay();
+    if (locationMap) setPendingMapLocation(selectedLocation.latitude, selectedLocation.longitude, true, 16);
+    return true;
+  } catch {
+    if (input) input.value = selectedLocation.name;
+    setText('location-status', `주소를 찾지 못해 기존 위치를 유지합니다 · ${selectedLocation.name}`);
+    if (showFailureToast) showToast('주소를 찾지 못했습니다. 지도에서 직접 선택해 보세요.');
+    return false;
+  } finally {
+    setLocationButtonsDisabled(false);
+  }
+}
+
+function updateLocationDisplay() {
+  const input = document.getElementById('location');
+  const status = document.getElementById('location-status');
+  if (input) input.value = selectedLocation.name;
+  if (status) {
+    status.textContent = `${selectedLocation.latitude.toFixed(5)}, ${selectedLocation.longitude.toFixed(5)} · ${selectedLocation.name}`;
+  }
+}
+
+function setLocationButtonsDisabled(disabled) {
+  ['search-location', 'use-location', 'open-location-map'].forEach((id) => {
+    const button = document.getElementById(id);
+    if (button) button.disabled = disabled;
+  });
 }
 
 function useCurrentLocation() {
-  const status = document.getElementById('location-status');
-  const input = document.getElementById('location');
-
   if (!navigator.geolocation) {
     showToast('이 브라우저에서는 현재 위치를 사용할 수 없습니다.');
     return;
   }
 
-  if (status) status.textContent = '현재 위치를 확인하고 있습니다.';
-
+  setText('location-status', '현재 위치를 확인하고 있습니다.');
+  setLocationButtonsDisabled(true);
   navigator.geolocation.getCurrentPosition(
-    (position) => {
+    async (position) => {
       const latitude = position.coords.latitude;
       const longitude = position.coords.longitude;
-      const nearest = findNearestLocation(latitude, longitude);
-      selectedLocation = {
-        name: nearest.distance < 40 ? `${nearest.location.name} 인근` : '현재 위치',
-        latitude,
-        longitude,
-        source: 'device'
-      };
-      if (input) input.value = selectedLocation.name;
-      if (status) status.textContent = `${latitude.toFixed(4)}, ${longitude.toFixed(4)} · 기기 위치`;
+      selectedLocation = { name: '현재 위치', latitude, longitude, source: 'device' };
+      try {
+        const address = await reverseAddress(latitude, longitude);
+        if (address) selectedLocation.name = address;
+      } catch {
+        selectedLocation.name = `현재 위치 ${latitude.toFixed(4)}, ${longitude.toFixed(4)}`;
+      }
+      setLocationButtonsDisabled(false);
+      updateLocationDisplay();
       runSimulation();
     },
     () => {
-      if (status) status.textContent = '위치 권한을 확인한 뒤 다시 시도하세요.';
+      setLocationButtonsDisabled(false);
+      setText('location-status', '위치 권한을 확인한 뒤 다시 시도하세요.');
       showToast('현재 위치를 가져오지 못했습니다.');
     },
-    { enableHighAccuracy: false, timeout: 9000, maximumAge: 600000 }
+    { enableHighAccuracy: true, timeout: 12000, maximumAge: 300000 }
   );
-}
-
-function findNearestLocation(latitude, longitude) {
-  return LOCATIONS.map((location) => ({
-    location,
-    distance: haversine(latitude, longitude, location.latitude, location.longitude)
-  })).sort((a, b) => a.distance - b.distance)[0];
 }
 
 function openLocationMap() {
@@ -180,7 +232,6 @@ function openLocationMap() {
     showToast('이 브라우저에서는 지도 선택창을 열 수 없습니다.');
     return;
   }
-
   if (!window.L) {
     showToast('지도를 불러오지 못했습니다. 잠시 후 다시 시도하세요.');
     return;
@@ -190,13 +241,11 @@ function openLocationMap() {
     latitude: selectedLocation.latitude,
     longitude: selectedLocation.longitude
   };
-
   dialog.showModal();
   if (!locationMap) initializeLocationMap();
-
   window.setTimeout(() => {
     locationMap.invalidateSize();
-    setPendingMapLocation(pendingMapLocation.latitude, pendingMapLocation.longitude, true, 15);
+    setPendingMapLocation(pendingMapLocation.latitude, pendingMapLocation.longitude, true, 16);
   }, 80);
 }
 
@@ -210,7 +259,7 @@ function initializeLocationMap() {
     zoomControl: true,
     attributionControl: true,
     preferCanvas: true
-  }).setView([selectedLocation.latitude, selectedLocation.longitude], 15);
+  }).setView([selectedLocation.latitude, selectedLocation.longitude], 16);
 
   window.L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
@@ -234,10 +283,7 @@ function setPendingMapLocation(latitude, longitude, moveMap, zoom) {
   pendingMapLocation = { latitude, longitude };
   locationMarker?.setLatLng([latitude, longitude]);
   setText('map-coordinate-value', `${latitude.toFixed(5)}, ${longitude.toFixed(5)}`);
-
-  if (moveMap && locationMap) {
-    locationMap.setView([latitude, longitude], zoom || locationMap.getZoom(), { animate: false });
-  }
+  if (moveMap && locationMap) locationMap.setView([latitude, longitude], zoom || locationMap.getZoom(), { animate: false });
 }
 
 function useCurrentLocationInMap() {
@@ -245,10 +291,8 @@ function useCurrentLocationInMap() {
     showToast('이 브라우저에서는 현재 위치를 사용할 수 없습니다.');
     return;
   }
-
   const button = document.getElementById('map-use-current');
   if (button) button.disabled = true;
-
   navigator.geolocation.getCurrentPosition(
     (position) => {
       setPendingMapLocation(position.coords.latitude, position.coords.longitude, true, 17);
@@ -262,33 +306,104 @@ function useCurrentLocationInMap() {
   );
 }
 
-function applyMapLocation() {
+async function applyMapLocation() {
   if (!pendingMapLocation) return;
+  const button = document.getElementById('apply-map-location');
+  if (button) button.disabled = true;
+  setText('map-coordinate-value', '상세 주소 확인 중');
 
-  const nearest = findNearestLocation(pendingMapLocation.latitude, pendingMapLocation.longitude);
-  const name = nearest.distance < 80 ? `${nearest.location.name} 지도 지점` : '지도 지정 위치';
+  let name = `지도 위치 ${pendingMapLocation.latitude.toFixed(4)}, ${pendingMapLocation.longitude.toFixed(4)}`;
+  try {
+    name = await reverseAddress(pendingMapLocation.latitude, pendingMapLocation.longitude) || name;
+  } catch {
+    showToast('좌표는 적용했지만 상세 주소는 찾지 못했습니다.');
+  }
+
   selectedLocation = {
     name,
     latitude: pendingMapLocation.latitude,
     longitude: pendingMapLocation.longitude,
     source: 'map'
   };
-
-  const input = document.getElementById('location');
-  const status = document.getElementById('location-status');
-  if (input) input.value = name;
-  if (status) status.textContent = `${selectedLocation.latitude.toFixed(5)}, ${selectedLocation.longitude.toFixed(5)} · 지도 선택 좌표`;
-
+  if (button) button.disabled = false;
   closeLocationMap();
+  updateLocationDisplay();
   runSimulation();
 }
 
-function runSimulation() {
+async function searchAddress(query) {
+  const key = `search:${query.trim().toLowerCase()}`;
+  const cached = readObjectCache(GEOCODE_CACHE_KEY)[key];
+  if (cached) return cached;
+  const url = new URL('https://nominatim.openstreetmap.org/search');
+  url.search = new URLSearchParams({
+    format: 'jsonv2',
+    q: `${query}, 대한민국`,
+    limit: '1',
+    addressdetails: '1',
+    countrycodes: 'kr',
+    'accept-language': 'ko'
+  }).toString();
+  const data = await requestNominatim(url.toString());
+  const result = Array.isArray(data) ? data[0] : null;
+  if (result) writeObjectCache(GEOCODE_CACHE_KEY, key, result, 40);
+  return result;
+}
+
+async function reverseAddress(latitude, longitude) {
+  const key = `reverse:${latitude.toFixed(5)},${longitude.toFixed(5)}`;
+  const cached = readObjectCache(GEOCODE_CACHE_KEY)[key];
+  if (cached) return formatAddress(cached);
+  const url = new URL('https://nominatim.openstreetmap.org/reverse');
+  url.search = new URLSearchParams({
+    format: 'jsonv2',
+    lat: latitude.toFixed(5),
+    lon: longitude.toFixed(5),
+    zoom: '18',
+    addressdetails: '1',
+    'accept-language': 'ko'
+  }).toString();
+  const data = await requestNominatim(url.toString());
+  writeObjectCache(GEOCODE_CACHE_KEY, key, data, 40);
+  return formatAddress(data);
+}
+
+function requestNominatim(url) {
+  const task = nominatimQueue.then(async () => {
+    const waitMs = Math.max(0, NOMINATIM_GAP_MS - (Date.now() - lastNominatimAt));
+    if (waitMs) await delay(waitMs);
+    lastNominatimAt = Date.now();
+    const response = await fetch(url, { headers: { 'Accept-Language': 'ko' } });
+    if (!response.ok) throw new Error(`Geocoding failed: ${response.status}`);
+    return response.json();
+  });
+  nominatimQueue = task.then(() => undefined, () => undefined);
+  return task;
+}
+
+function formatAddress(item) {
+  const address = item?.address || {};
+  const localArea = address.quarter || address.neighbourhood || address.suburb || address.village || address.town || address.municipality;
+  const parts = [
+    address.state,
+    address.city,
+    address.county,
+    address.borough,
+    address.city_district,
+    localArea,
+    address.road,
+    address.house_number
+  ].filter(Boolean);
+  const unique = parts.filter((part, index) => parts.indexOf(part) === index);
+  if (unique.length) return unique.join(' ');
+  return String(item?.display_name || '선택한 위치').split(',').slice(0, 5).join(', ').trim();
+}
+
+async function runSimulation() {
   const form = document.getElementById('shoot-form');
   const panel = document.getElementById('result-panel');
   if (!form || !panel) return;
-
-  updateLocationFromInput();
+  const version = ++simulationVersion;
   const plan = readPlan(form);
   const validation = validatePlan(plan);
   if (validation) {
@@ -297,14 +412,17 @@ function runSimulation() {
   }
 
   panel.setAttribute('aria-busy', 'true');
-  updateForecastBadge('입력값 계산 중');
+  updateForecastBadge('자동 예보 불러오는 중');
+  setText('weather-fetch-status', '시간별 하늘과 기온을 불러오고 있습니다.');
   savePlan(plan);
 
   const solar = calculateSolar(plan);
-  const weather = buildManualWeather(plan);
-  const analysis = analyzePlan(plan, solar, weather);
-  renderResult(plan, solar, weather, analysis);
+  const loadingWeather = { unavailable: true, reason: 'loading', hours: [] };
+  renderSimulation(plan, solar, loadingWeather);
 
+  const weather = await fetchWeather(plan);
+  if (version !== simulationVersion) return;
+  renderSimulation(plan, solar, weather);
   panel.setAttribute('aria-busy', 'false');
 }
 
@@ -317,38 +435,24 @@ function readPlan(form) {
     locationSource: selectedLocation.source || 'preset',
     date: String(data.get('shootDate')),
     lightGoal: String(data.get('lightGoal')),
-    environment: String(data.get('environment')),
     startTime: String(data.get('startTime')),
     endTime: String(data.get('endTime')),
-    crewSize: Number(data.get('crewSize')),
-    setupMinutes: Number(data.get('setupMinutes')),
-    weatherCondition: String(data.get('weatherCondition')),
-    apparentTemperature: Number(data.get('apparentTemperature')),
-    rainChance: Number(data.get('rainChance')),
-    gustSpeed: Number(data.get('gustSpeed')),
-    parkingConfirmed: data.get('parkingConfirmed') === 'on',
-    backupReady: data.get('backupReady') === 'on',
-    weatherChecked: data.get('weatherChecked') === 'on'
+    environment: 'outdoor'
   };
 }
 
 function validatePlan(plan) {
   if (!plan.date) return '촬영일을 선택하세요.';
-  if (!plan.startTime || !plan.endTime) return '콜타임과 철수 시간을 입력하세요.';
-  if (plan.crewSize < 1) return '현장 인원은 한 명 이상이어야 합니다.';
-  if (plan.apparentTemperature < -30 || plan.apparentTemperature > 45) return '체감온도는 -30℃에서 45℃ 사이로 입력하세요.';
-  if (plan.rainChance < 0 || plan.rainChance > 100) return '강수확률은 0%에서 100% 사이로 입력하세요.';
-  if (plan.gustSpeed < 0 || plan.gustSpeed > 100) return '돌풍은 0km/h에서 100km/h 사이로 입력하세요.';
-
+  if (!plan.startTime || !plan.endTime) return '확인 시작과 종료 시간을 입력하세요.';
   const duration = durationMinutes(plan.startTime, plan.endTime);
-  if (duration < 120) return '촬영 구간은 최소 두 시간 이상으로 잡아주세요.';
-  if (plan.setupMinutes >= duration) return '세팅 시간이 전체 촬영 시간보다 깁니다.';
+  if (duration < 60) return '확인 구간은 최소 한 시간 이상으로 잡아주세요.';
+  if (duration > 24 * 60) return '한 번에 확인할 수 있는 범위는 24시간입니다.';
   return '';
 }
 
 function calculateSolar(plan) {
   if (!window.SunCalc) return null;
-  const anchor = new Date(`${plan.date}T12:00:00`);
+  const anchor = new Date(`${plan.date}T12:00:00+09:00`);
   const times = window.SunCalc.getTimes(anchor, plan.latitude, plan.longitude);
   return {
     dawn: times.dawn,
@@ -360,162 +464,165 @@ function calculateSolar(plan) {
   };
 }
 
-function buildManualWeather(plan) {
-  const conditions = {
-    clear: { label: '맑음', cloud: 8, code: 0 },
-    mixed: { label: '구름 조금', cloud: 42, code: 2 },
-    overcast: { label: '흐림', cloud: 88, code: 3 },
-    rain: { label: '비', cloud: 96, code: 61 },
-    snow: { label: '눈', cloud: 96, code: 71 }
-  };
-  const condition = conditions[plan.weatherCondition] || conditions.mixed;
-  const rainChance = clamp(plan.rainChance, 0, 100);
-  const gust = clamp(plan.gustSpeed, 0, 100);
-  const apparent = clamp(plan.apparentTemperature, -30, 45);
+async function fetchWeather(plan) {
+  const lat = Number(plan.latitude.toFixed(4));
+  const lon = Number(plan.longitude.toFixed(4));
+  const key = `${lat},${lon}`;
+  const cache = readObjectCache(WEATHER_CACHE_KEY);
+  const cached = cache[key];
+  let payload;
+  let expiresAt = 0;
 
+  try {
+    if (cached && cached.expiresAt > Date.now() && cached.payload) {
+      payload = cached.payload;
+      expiresAt = cached.expiresAt;
+    } else {
+      const url = `${WEATHER_URL}?lat=${lat}&lon=${lon}`;
+      const response = await fetch(url);
+      if (!response.ok) throw new Error(`Weather failed: ${response.status}`);
+      payload = await response.json();
+      expiresAt = Date.parse(response.headers.get('Expires') || '') || Date.now() + 30 * 60 * 1000;
+      writeObjectCache(WEATHER_CACHE_KEY, key, { payload, expiresAt, savedAt: Date.now() }, 6);
+    }
+    return normalizeWeather(payload, plan, expiresAt);
+  } catch (error) {
+    console.warn('Stage-Is weather fetch failed.', error);
+    return {
+      unavailable: true,
+      reason: 'network',
+      hours: [],
+      label: '예보를 불러오지 못함',
+      source: 'MET Norway'
+    };
+  }
+}
+
+function normalizeWeather(payload, plan, expiresAt) {
+  const timeseries = payload?.properties?.timeseries;
+  if (!Array.isArray(timeseries)) return { unavailable: true, reason: 'format', hours: [] };
+  const [planYear, planMonth, planDay] = plan.date.split('-').map(Number);
+  const planDateOrdinal = Date.UTC(planYear, planMonth - 1, planDay);
+  const start = timeToMinutes(plan.startTime);
+  const end = normalizeEndMinutes(plan.startTime, plan.endTime);
+
+  const allPoints = timeseries.map((entry) => {
+    const date = new Date(entry.time);
+    const parts = koreaDateParts(date);
+    const localDayOrdinal = Date.UTC(parts.year, parts.month - 1, parts.day);
+    const dayOffset = Math.round((localDayOrdinal - planDateOrdinal) / 86400000);
+    const minute = dayOffset * DAY_MINUTES + parts.hour * 60 + parts.minute;
+    const instant = entry.data?.instant?.details || {};
+    const interval = entry.data?.next_1_hours || entry.data?.next_6_hours || entry.data?.next_12_hours || {};
+    const intervalHours = entry.data?.next_1_hours ? 1 : entry.data?.next_6_hours ? 6 : entry.data?.next_12_hours ? 12 : 0;
+    const temperature = numberOrNull(instant.air_temperature);
+    const humidity = numberOrNull(instant.relative_humidity);
+    const windMs = numberOrNull(instant.wind_speed);
+    const wind = windMs === null ? null : windMs * 3.6;
+    const symbol = String(interval.summary?.symbol_code || 'unknown');
+    const precipitation = numberOrNull(interval.details?.precipitation_amount) ?? 0;
+    return {
+      time: date.toISOString(),
+      minute,
+      temperature,
+      apparent: temperature === null ? null : calculateApparentTemperature(temperature, humidity, windMs),
+      humidity,
+      cloud: numberOrNull(instant.cloud_area_fraction),
+      wind,
+      windDirection: numberOrNull(instant.wind_from_direction),
+      precipitation,
+      intervalHours,
+      symbol,
+      label: weatherLabel(symbol, numberOrNull(instant.cloud_area_fraction), precipitation)
+    };
+  }).filter((point) => point.minute >= start - 60 && point.minute <= end + 60);
+
+  const windowPoints = allPoints.filter((point) => point.minute >= start && point.minute <= end);
+  if (!windowPoints.length) {
+    const availableTimes = timeseries.map((entry) => new Date(entry.time).getTime()).filter(Number.isFinite);
+    return {
+      unavailable: true,
+      reason: 'range',
+      hours: [],
+      availableFrom: availableTimes.length ? new Date(Math.min(...availableTimes)) : null,
+      availableTo: availableTimes.length ? new Date(Math.max(...availableTimes)) : null,
+      updatedAt: payload.properties?.meta?.updated_at || null,
+      source: 'MET Norway'
+    };
+  }
+
+  const visibleHours = sampleForecastPoints(windowPoints, 16);
   return {
     unavailable: false,
-    source: 'manual',
-    minTemperature: apparent,
-    maxTemperature: apparent,
-    minApparent: apparent,
-    maxApparent: apparent,
-    maxRainChance: rainChance,
-    totalRain: ['rain', 'snow'].includes(plan.weatherCondition) ? Math.max(0.2, rainChance / 20) : 0,
-    maxWind: Math.round(gust * 0.65),
-    maxGust: gust,
-    averageCloud: condition.cloud,
-    dominantCode: condition.code,
-    label: condition.label
+    source: 'MET Norway',
+    updatedAt: payload.properties?.meta?.updated_at || null,
+    expiresAt,
+    hours: visibleHours,
+    allHours: windowPoints,
+    averageCloud: average(windowPoints.map((point) => point.cloud)),
+    minTemperature: minimum(windowPoints.map((point) => point.temperature)),
+    maxTemperature: maximum(windowPoints.map((point) => point.temperature)),
+    minApparent: minimum(windowPoints.map((point) => point.apparent)),
+    maxApparent: maximum(windowPoints.map((point) => point.apparent)),
+    totalRain: sumPrecipitation(windowPoints),
+    maxWind: maximum(windowPoints.map((point) => point.wind)),
+    label: dominantWeatherLabel(windowPoints)
   };
 }
 
-function analyzePlan(plan, solar, weather) {
-  let score = 100;
-  const risks = [];
-  const duration = durationMinutes(plan.startTime, plan.endTime);
-  const weatherSensitive = plan.environment !== 'indoor';
-
-  if (weather && !weather.unavailable && weatherSensitive) {
-    if (weather.maxRainChance >= 70) {
-      score -= 34;
-      risks.push(risk('비 또는 눈 가능성이 매우 높습니다.', '강수', 'critical'));
-    } else if (weather.maxRainChance >= 40) {
-      score -= 20;
-      risks.push(risk('우천 전환 기준과 장비 방수 계획이 필요합니다.', '강수', 'warning'));
-    } else if (weather.maxRainChance >= 20) {
-      score -= 8;
-      risks.push(risk('짧은 강수 가능성을 현장에서 다시 확인하세요.', '강수', 'warning'));
-    }
-
-    if (weather.maxGust >= 45) {
-      score -= 25;
-      risks.push(risk('돌풍이 조명과 스탠드 안전에 위험한 수준입니다.', '바람', 'critical'));
-    } else if (weather.maxGust >= 30) {
-      score -= 14;
-      risks.push(risk('대형 확산판과 조명 스탠드 고정 인력을 확보하세요.', '바람', 'warning'));
-    } else if (weather.maxGust >= 20) {
-      score -= 6;
-      risks.push(risk('핀 마이크와 반사판의 바람 영향을 점검하세요.', '바람', 'warning'));
-    }
-
-    if (weather.minApparent <= 0 || weather.maxApparent >= 34) {
-      score -= 14;
-      risks.push(risk('체감온도로 인한 출연자·스태프 컨디션 저하가 큽니다.', '체감', 'critical'));
-    } else if (weather.minApparent <= 5 || weather.maxApparent >= 30) {
-      score -= 7;
-      risks.push(risk('보온·냉방과 휴식 시간을 별도로 잡으세요.', '체감', 'warning'));
-    }
-  }
-
-  if (solar && plan.environment !== 'indoor') {
-    const start = timeToMinutes(plan.startTime);
-    const end = normalizeEndMinutes(plan.startTime, plan.endTime);
-    const sunrise = dateToMinutes(solar.sunrise);
-    const sunset = dateToMinutes(solar.sunset);
-    const overlap = intervalOverlap(start, end, sunrise, sunset);
-    const shootingAfterSetup = Math.max(1, duration - plan.setupMinutes);
-
-    if (plan.lightGoal === 'daylight' && overlap < shootingAfterSetup * 0.7) {
-      score -= 18;
-      risks.push(risk('주요 촬영 시간의 30% 이상이 자연광 밖에 있습니다.', '빛', 'critical'));
-    }
-
-    if (plan.lightGoal === 'golden') {
-      const morning = dateToMinutes(solar.goldenMorningEnd);
-      const evening = dateToMinutes(solar.goldenEveningStart);
-      const goldenOverlap = intervalOverlap(start, end, sunrise, morning)
-        + intervalOverlap(start, end, evening, sunset);
-      if (goldenOverlap < 20) {
-        score -= 22;
-        risks.push(risk('현재 시간표는 골든아워와 거의 겹치지 않습니다.', '빛', 'critical'));
-      }
-    }
-  }
-
-  if (duration > 720) {
-    score -= 12;
-    risks.push(risk('12시간을 넘는 현장은 후반 집중력과 철수 안전이 떨어집니다.', '시간', 'critical'));
-  } else if (duration > 600) {
-    score -= 6;
-    risks.push(risk('10시간 이상 현장입니다. 식사와 교대 시간을 고정하세요.', '시간', 'warning'));
-  }
-
-  if (plan.crewSize >= 16) {
-    score -= 9;
-    risks.push(risk('16명 이상이면 장소 수용 인원과 추가 인원비를 다시 확인하세요.', '인원', 'warning'));
-  } else if (plan.crewSize >= 10 && plan.setupMinutes < 60) {
-    score -= 7;
-    risks.push(risk('현재 인원 대비 세팅 시간이 짧습니다.', '인원', 'warning'));
-  }
-
-  if (!plan.parkingConfirmed && plan.crewSize >= 6) {
-    score -= 9;
-    risks.push(risk('주차·상하차 동선이 아직 확인되지 않았습니다.', '이동', 'warning'));
-  }
-
-  if (!plan.backupReady && weatherSensitive && weather && !weather.unavailable && weather.maxRainChance >= 30) {
-    score -= 8;
-    risks.push(risk('강수 가능성은 있는데 실내 대체안이 없습니다.', '대체안', 'critical'));
-  }
-
-  if (plan.setupMinutes < 30 && plan.crewSize > 4) {
-    score -= 8;
-    risks.push(risk('30분 미만 세팅은 장비와 인원 배치에 부족합니다.', '세팅', 'warning'));
-  }
-
-  score = clamp(Math.round(score), 0, 100);
-  const decision = score >= 80 ? 'GO' : score >= 60 ? 'CHECK' : 'HOLD';
-  const summary = createDecisionSummary(decision, risks, weather);
-
-  return { score, decision, summary, risks, duration };
+function sampleForecastPoints(points, limit) {
+  if (points.length <= limit) return points;
+  const sampled = [];
+  const step = (points.length - 1) / (limit - 1);
+  for (let index = 0; index < limit; index += 1) sampled.push(points[Math.round(index * step)]);
+  return sampled.filter((point, index) => sampled.indexOf(point) === index);
 }
 
-function risk(message, label, severity) {
-  return { message, label, severity };
+function calculateApparentTemperature(temperature, humidity, windMs) {
+  const relativeHumidity = Number.isFinite(humidity) ? humidity : 50;
+  const wind = Number.isFinite(windMs) ? windMs : 1;
+  if (temperature <= 10 && wind * 3.6 >= 4.8) {
+    const windKmh = wind * 3.6;
+    return 13.12 + 0.6215 * temperature - 11.37 * windKmh ** 0.16 + 0.3965 * temperature * windKmh ** 0.16;
+  }
+  const vaporPressure = relativeHumidity / 100 * 6.105 * Math.exp(17.27 * temperature / (237.7 + temperature));
+  return temperature + 0.33 * vaporPressure - 0.70 * wind - 4.0;
 }
 
-function createDecisionSummary(decision, risks, weather) {
-  if (!weather) return '빛과 운영 조건만 계산했습니다. 기상 입력값을 확인하세요.';
-  if (decision === 'GO') return `${weather.label} 입력값 기준으로 진행 가능성이 높습니다. 출발 전 최신 특보를 확인하세요.`;
-  if (decision === 'CHECK') return `진행은 가능하지만 ${risks[0]?.label || '현장 조건'} 변수를 먼저 해결해야 합니다.`;
-  return `${risks[0]?.label || '핵심 조건'} 위험이 큽니다. 일정 또는 장소를 바꾸는 편이 안전합니다.`;
-}
+function renderSimulation(plan, solar, weather) {
+  const start = timeToMinutes(plan.startTime);
+  const end = normalizeEndMinutes(plan.startTime, plan.endTime);
+  const focusMinute = chooseFocusMinute(plan, solar, start, end);
+  currentContext = { plan, solar, weather, focusMinute };
 
-function renderResult(plan, solar, weather, analysis) {
-  renderDecision(analysis);
   renderForecastBadge(weather);
-  renderMetrics(solar, weather);
+  renderMetrics(solar, weather, focusMinute);
   renderLightTrack(plan, solar);
-  renderTimeline(plan, solar, analysis.duration);
-  renderRisks(analysis.risks);
-  renderChecklist(plan, weather);
-  currentReport = buildReport(plan, solar, weather, analysis);
-  publishSceneState(plan, solar, weather, analysis);
+  renderHourlyForecast(weather, focusMinute);
+  renderWeatherTimeline(plan, solar, weather);
+  publishSceneState(plan, solar, weather, focusMinute);
+
+  const slider = document.getElementById('scene-time');
+  if (slider) {
+    slider.min = String(start);
+    slider.max = String(Math.max(start + 5, end));
+    slider.value = String(focusMinute);
+  }
+  renderFocusedTime(focusMinute);
   initializeIcons();
 }
 
-function publishSceneState(plan, solar, weather, analysis) {
+function chooseFocusMinute(plan, solar, start, end) {
+  if (solar && plan.lightGoal === 'golden') {
+    const evening = dateToMinutes(solar.goldenEveningStart);
+    if (evening >= start && evening <= end) return evening;
+    const morning = dateToMinutes(solar.sunrise) + 20;
+    if (morning >= start && morning <= end) return morning;
+  }
+  return Math.round((start + end) / 2 / 5) * 5;
+}
+
+function publishSceneState(plan, solar, weather, focusMinute) {
   const solarState = solar ? {
     dawn: dateToMinutes(solar.dawn),
     sunrise: dateToMinutes(solar.sunrise),
@@ -524,75 +631,140 @@ function publishSceneState(plan, solar, weather, analysis) {
     sunset: dateToMinutes(solar.sunset),
     dusk: dateToMinutes(solar.dusk)
   } : null;
-
+  const focusPoint = nearestWeatherPoint(weather, focusMinute);
+  const reading = createReading(plan, focusMinute, focusPoint);
   const snapshot = {
     plan: { ...plan },
     solar: solarState,
-    weather: weather ? { ...weather } : null,
+    weather: weather ? { ...weather, allHours: undefined } : null,
     analysis: {
-      score: analysis.score,
-      decision: analysis.decision,
-      duration: analysis.duration
+      decision: reading.code,
+      label: reading.label,
+      tone: reading.tone,
+      focusMinute
     }
   };
-
   window.stageIsSimulation = snapshot;
   window.dispatchEvent(new CustomEvent('stageis:simulation', { detail: snapshot }));
 }
 
-function renderDecision(analysis) {
-  const code = document.getElementById('decision-code');
-  const score = document.getElementById('score-value');
-  const summary = document.getElementById('decision-summary');
-  const bar = document.getElementById('score-bar');
-  if (!code || !score || !summary || !bar) return;
-
-  code.textContent = analysis.decision;
-  code.className = `decision-code ${analysis.decision === 'CHECK' ? 'is-check' : analysis.decision === 'HOLD' ? 'is-hold' : ''}`;
-  score.textContent = String(analysis.score);
-  summary.textContent = analysis.summary;
-  bar.style.width = `${analysis.score}%`;
-  bar.style.background = analysis.decision === 'GO' ? 'var(--signal)' : analysis.decision === 'CHECK' ? 'var(--orange)' : 'var(--red)';
-}
-
 function renderForecastBadge(weather) {
-  updateForecastBadge(weather ? '수동 기상값' : '기상값 없음');
+  if (weather?.reason === 'loading') {
+    updateForecastBadge('자동 예보 불러오는 중');
+    return;
+  }
+  if (weather?.unavailable) {
+    const message = weather.reason === 'range' ? '예보 범위 밖 · 태양만 계산' : '예보 연결 실패 · 태양만 계산';
+    updateForecastBadge(message);
+    setText('weather-fetch-status', weather.reason === 'range'
+      ? '선택일은 현재 시간별 예보 범위 밖입니다. 태양 위치는 계속 계산됩니다.'
+      : '기상 데이터를 불러오지 못했습니다. 잠시 후 다시 시도하세요.');
+    return;
+  }
+  updateForecastBadge(`자동 예보 · ${formatUpdatedTime(weather.updatedAt)}`);
+  setText('weather-fetch-status', `MET Norway 시간별 예보 · 갱신 ${formatUpdatedTime(weather.updatedAt)} · 체감온도는 Stage-Is 계산값`);
 }
 
 function updateForecastBadge(message) {
-  const badge = document.getElementById('forecast-badge');
-  if (badge) badge.textContent = message;
+  setText('forecast-badge', message);
 }
 
-function renderMetrics(solar, weather) {
+function renderMetrics(solar, weather, focusMinute) {
   setText('sunrise-value', solar ? formatTime(solar.sunrise) : '확인 불가');
   setText('sunset-value', solar ? formatTime(solar.sunset) : '확인 불가');
-  setText('rain-value', weather && weather.maxRainChance !== null ? `${Math.round(weather.maxRainChance)}%` : '미입력');
-  setText('wind-value', weather && weather.maxGust !== null ? `${Math.round(weather.maxGust)} km/h` : '미입력');
-
+  const point = nearestWeatherPoint(weather, focusMinute);
+  setText('cloud-value', point?.cloud === null || point?.cloud === undefined ? '--' : `${Math.round(point.cloud)}%`);
+  setText('feels-value', point?.apparent === null || point?.apparent === undefined ? '--' : `${Math.round(point.apparent)}℃`);
   const daylight = solar ? dateToMinutes(solar.sunset) - dateToMinutes(solar.sunrise) : null;
   setText('daylight-duration', daylight !== null ? formatDuration(daylight) : '계산 불가');
+}
+
+function renderFocusedTime(minute) {
+  if (!currentContext) return;
+  const { plan, solar, weather } = currentContext;
+  currentContext.focusMinute = minute;
+  const point = nearestWeatherPoint(weather, minute);
+  const reading = createReading(plan, minute, point);
+  const sun = solarPosition(plan, minute);
+
+  setText('focus-time', minutesToClock(minute));
+  setText('focus-condition', reading.label);
+  setText('decision-summary', reading.summary);
+  setText('cloud-value', point?.cloud === null || point?.cloud === undefined ? '--' : `${Math.round(point.cloud)}%`);
+  setText('feels-value', point?.apparent === null || point?.apparent === undefined ? '--' : `${Math.round(point.apparent)}℃`);
+  setText('sun-bearing-value', `${compassDirection(sun.bearing)} ${Math.round(sun.bearing)}°`);
+  setText('shadow-bearing-value', `${compassDirection((sun.bearing + 180) % 360)} ${Math.round((sun.bearing + 180) % 360)}°`);
+  setText('sun-altitude-value', `${sun.altitude >= 0 ? '+' : ''}${sun.altitude.toFixed(1)}°`);
+  rotateArrow('sun-arrow', sun.bearing);
+  rotateArrow('shadow-arrow', (sun.bearing + 180) % 360);
+  updateActiveHour(minute);
+  currentReport = buildReport(plan, solar, weather, minute, reading, sun);
+}
+
+function createReading(plan, minute, point) {
+  const sun = solarPosition(plan, minute);
+  if (!point) {
+    const night = sun.altitude < -6;
+    return {
+      code: night ? 'NIGHT' : 'SUN',
+      label: night ? '야간' : '태양 경로 계산',
+      tone: night ? 'night' : 'clear',
+      summary: night
+        ? '자동 기상예보 범위 밖입니다. 선택 시각의 태양은 지평선 아래에 있습니다.'
+        : `자동 기상예보 범위 밖입니다. 태양은 ${compassDirection(sun.bearing)} ${Math.round(sun.bearing)}° 방향, 고도 ${sun.altitude.toFixed(1)}°입니다.`
+    };
+  }
+
+  const isWet = point.precipitation >= 0.2 || /(rain|sleet|snow|thunder)/.test(point.symbol);
+  const isNight = sun.altitude < -6 || /night/.test(point.symbol);
+  let code = 'SOFT';
+  let label = '부드러운 확산광';
+  let tone = 'soft';
+  if (isNight) {
+    code = 'NIGHT';
+    label = point.label.includes('비') ? '비 오는 야간' : '야간';
+    tone = 'night';
+  } else if (isWet) {
+    code = 'WET';
+    label = point.label;
+    tone = 'wet';
+  } else if ((point.cloud ?? 50) < 20) {
+    code = 'DIRECT';
+    label = '강한 직사광';
+    tone = 'clear';
+  } else if ((point.cloud ?? 50) < 60) {
+    code = 'VARIABLE';
+    label = '변화하는 혼합광';
+    tone = 'variable';
+  } else if ((point.cloud ?? 50) >= 90) {
+    code = 'FLAT';
+    label = '평평한 흐린빛';
+    tone = 'overcast';
+  }
+
+  const detail = [
+    `구름 ${Math.round(point.cloud ?? 0)}%`,
+    `체감 ${Math.round(point.apparent ?? point.temperature ?? 0)}℃`,
+    point.precipitation > 0 ? `강수 ${formatMillimeters(point.precipitation, point.intervalHours)}` : '강수 없음',
+    `바람 ${Math.round(point.wind ?? 0)}km/h`
+  ].join(' · ');
+  return { code, label, tone, summary: `${detail}. 태양 ${compassDirection(sun.bearing)} ${Math.round(sun.bearing)}°, 그림자 ${compassDirection((sun.bearing + 180) % 360)} 방향입니다.` };
 }
 
 function renderLightTrack(plan, solar) {
   const track = document.getElementById('light-track');
   if (!track) return;
   track.innerHTML = '';
-
   if (solar) {
     addTrackBlock(track, 'dawn', dateToMinutes(solar.dawn), dateToMinutes(solar.sunrise));
     addTrackBlock(track, 'day', dateToMinutes(solar.sunrise), dateToMinutes(solar.sunset));
     addTrackBlock(track, 'dawn', dateToMinutes(solar.sunset), dateToMinutes(solar.dusk));
     addTrackBlock(track, 'golden', dateToMinutes(solar.sunrise), dateToMinutes(solar.goldenMorningEnd));
     addTrackBlock(track, 'golden', dateToMinutes(solar.goldenEveningStart), dateToMinutes(solar.sunset));
-
     addTrackLabel(track, dateToMinutes(solar.sunrise), formatTime(solar.sunrise));
     addTrackLabel(track, dateToMinutes(solar.sunset), formatTime(solar.sunset));
   }
-
-  const start = timeToMinutes(plan.startTime);
-  const end = normalizeEndMinutes(plan.startTime, plan.endTime);
-  addShootWindows(track, start, end);
+  addShootWindows(track, timeToMinutes(plan.startTime), normalizeEndMinutes(plan.startTime, plan.endTime));
 }
 
 function addTrackBlock(track, className, start, end) {
@@ -604,10 +776,7 @@ function addTrackBlock(track, className, start, end) {
 }
 
 function addShootWindows(track, start, end) {
-  const windows = end <= DAY_MINUTES
-    ? [[start, end]]
-    : [[start, DAY_MINUTES], [0, end - DAY_MINUTES]];
-
+  const windows = end <= DAY_MINUTES ? [[start, end]] : [[start, DAY_MINUTES], [0, end - DAY_MINUTES]];
   windows.forEach(([windowStart, windowEnd]) => {
     const block = document.createElement('span');
     block.className = 'shoot-window';
@@ -625,36 +794,87 @@ function addTrackLabel(track, minute, label) {
   track.appendChild(marker);
 }
 
-function renderTimeline(plan, solar, duration) {
-  const list = document.getElementById('operation-timeline');
-  if (!list) return;
+function renderHourlyForecast(weather, focusMinute) {
+  const container = document.getElementById('hourly-forecast');
+  if (!container) return;
+  container.innerHTML = '';
+  if (!weather || weather.unavailable || !weather.hours?.length) {
+    const empty = document.createElement('p');
+    empty.className = 'forecast-empty';
+    empty.textContent = weather?.reason === 'loading' ? '시간별 예보를 불러오고 있습니다.' : '이 날짜에는 시간별 예보가 없습니다. 태양 방향은 계속 확인할 수 있습니다.';
+    container.appendChild(empty);
+    setText('hourly-range', '태양 계산만');
+    return;
+  }
 
+  setText('hourly-range', `${minutesToClock(weather.hours[0].minute)}–${minutesToClock(weather.hours.at(-1).minute)}`);
+  weather.hours.forEach((point) => {
+    const card = document.createElement('button');
+    card.type = 'button';
+    card.className = 'weather-hour';
+    card.dataset.minute = String(point.minute);
+    card.setAttribute('aria-label', `${minutesToClock(point.minute)} ${point.label}, 체감 ${Math.round(point.apparent ?? point.temperature ?? 0)}도`);
+    const time = document.createElement('time');
+    time.textContent = minutesToClock(point.minute);
+    const icon = document.createElement('i');
+    icon.setAttribute('data-lucide', weatherIcon(point.symbol, point.cloud));
+    icon.setAttribute('aria-hidden', 'true');
+    const condition = document.createElement('strong');
+    condition.textContent = point.label;
+    const temperature = document.createElement('span');
+    temperature.textContent = `${Math.round(point.temperature ?? 0)}° / 체감 ${Math.round(point.apparent ?? point.temperature ?? 0)}°`;
+    const details = document.createElement('small');
+    details.textContent = `구름 ${Math.round(point.cloud ?? 0)}% · ${point.precipitation > 0 ? formatMillimeters(point.precipitation, point.intervalHours) : '강수 없음'}`;
+    card.append(time, icon, condition, temperature, details);
+    card.addEventListener('click', () => {
+      const slider = document.getElementById('scene-time');
+      if (slider) {
+        slider.value = String(point.minute);
+        slider.dispatchEvent(new Event('input', { bubbles: true }));
+      }
+      document.getElementById('field-visual')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+    container.appendChild(card);
+  });
+  updateActiveHour(focusMinute);
+}
+
+function updateActiveHour(minute) {
+  const cards = [...document.querySelectorAll('.weather-hour')];
+  if (!cards.length) return;
+  const nearest = cards.reduce((best, card) => {
+    const distance = Math.abs(Number(card.dataset.minute) - minute);
+    return !best || distance < best.distance ? { card, distance } : best;
+  }, null);
+  cards.forEach((card) => card.classList.toggle('is-active', card === nearest?.card));
+}
+
+function renderWeatherTimeline(plan, solar, weather) {
+  const list = document.getElementById('weather-timeline');
+  if (!list) return;
   const start = timeToMinutes(plan.startTime);
   const end = normalizeEndMinutes(plan.startTime, plan.endTime);
-  const setupEnd = start + plan.setupMinutes;
-  const events = [
-    { time: start, title: '집결·장비 반입', detail: '콜타임' },
-    { time: setupEnd, title: '세팅 완료·첫 테이크', detail: `${plan.setupMinutes}분 세팅` }
-  ];
-
-  if (solar && plan.lightGoal === 'golden') {
-    const eveningGolden = dateToMinutes(solar.goldenEveningStart);
-    if (eveningGolden >= start && eveningGolden <= end) {
-      events.push({ time: eveningGolden, title: '골든아워 핵심 장면', detail: '빛 우선' });
-    }
+  const events = [];
+  if (solar) {
+    addTimelineEvent(events, dateToMinutes(solar.sunrise), '일출', '태양이 지평선 위로 올라옵니다.', start, end);
+    addTimelineEvent(events, dateToMinutes(solar.goldenMorningEnd), '아침 골든아워 종료', '직사광 대비가 빠르게 강해집니다.', start, end);
+    addTimelineEvent(events, dateToMinutes(solar.goldenEveningStart), '저녁 골든아워 시작', '낮은 각도의 따뜻한 빛이 시작됩니다.', start, end);
+    addTimelineEvent(events, dateToMinutes(solar.sunset), '일몰', '태양 직사광이 사라집니다.', start, end);
   }
-
-  if (duration >= 390) {
-    const meal = Math.min(end - 90, Math.max(setupEnd + 150, start + 300));
-    events.push({ time: meal, title: '식사·배터리·메모리 교체', detail: '30~60분' });
+  if (weather && !weather.unavailable) {
+    let previousBucket = null;
+    weather.allHours.forEach((point) => {
+      const bucket = weatherBucket(point);
+      if (bucket !== previousBucket) {
+        events.push({ time: point.minute, title: point.label, detail: `구름 ${Math.round(point.cloud ?? 0)}% · 체감 ${Math.round(point.apparent ?? point.temperature ?? 0)}℃` });
+        previousBucket = bucket;
+      }
+    });
   }
-
-  events.push({ time: Math.max(setupEnd, end - 60), title: '마지막 테이크·데이터 확인', detail: '철수 전' });
-  events.push({ time: end, title: '철수 완료', detail: formatDuration(duration) });
   events.sort((a, b) => a.time - b.time);
-
+  const visible = events.slice(0, 10);
   list.innerHTML = '';
-  events.forEach((event) => {
+  visible.forEach((event) => {
     const item = document.createElement('li');
     const time = document.createElement('time');
     const title = document.createElement('strong');
@@ -665,99 +885,107 @@ function renderTimeline(plan, solar, duration) {
     item.append(time, title, detail);
     list.appendChild(item);
   });
-
-  setText('shoot-duration', formatDuration(duration));
-}
-
-function renderRisks(risks) {
-  const list = document.getElementById('risk-list');
-  if (!list) return;
-  list.innerHTML = '';
-
-  const visible = risks.slice(0, 6);
-  setText('risk-count', `${risks.length}개`);
-
   if (!visible.length) {
-    visible.push({
-      message: '현재 입력값에서 즉시 중단할 운영 변수는 없습니다.',
-      label: 'CLEAR',
-      severity: 'clear'
-    });
+    const item = document.createElement('li');
+    item.innerHTML = '<time>--:--</time><strong>변화 데이터 없음</strong><span>선택 구간을 넓혀 보세요.</span>';
+    list.appendChild(item);
   }
-
-  visible.forEach((item) => {
-    const li = document.createElement('li');
-    li.className = item.severity === 'critical' ? 'is-critical' : item.severity === 'clear' ? 'is-clear' : '';
-    const icon = document.createElement('i');
-    icon.setAttribute('data-lucide', item.severity === 'clear' ? 'circle-check' : item.severity === 'critical' ? 'octagon-alert' : 'triangle-alert');
-    icon.setAttribute('aria-hidden', 'true');
-    const text = document.createElement('span');
-    const label = document.createElement('small');
-    text.textContent = item.message;
-    label.textContent = item.label;
-    li.append(icon, text, label);
-    list.appendChild(li);
-  });
+  setText('change-count', `${visible.length}개 구간`);
 }
 
-function renderChecklist(plan, weather) {
-  const grid = document.getElementById('check-grid');
-  if (!grid) return;
-
-  const items = [
-    { label: '실제 현장 인원과 예약 인원 대조', checked: plan.crewSize < 10 },
-    { label: '주차·상하차·엘리베이터 확인', checked: plan.parkingConfirmed },
-    { label: '최종 결정자와 연락망 고정', checked: false },
-    { label: '장비 전력·배터리·메모리 확인', checked: false },
-    { label: '출연자 대기·식사 공간 확인', checked: false },
-    { label: '우천 대체안 또는 취소 기준 합의', checked: plan.backupReady || plan.environment === 'indoor' },
-    { label: '원본 데이터 이중 백업 담당 지정', checked: false },
-    { label: '출발 직전 기상특보 재확인', checked: plan.weatherChecked }
-  ];
-
-  grid.innerHTML = '';
-  items.forEach((item, index) => {
-    const label = document.createElement('label');
-    label.className = 'check-item';
-    const input = document.createElement('input');
-    input.type = 'checkbox';
-    input.checked = item.checked;
-    input.setAttribute('aria-label', item.label);
-    const span = document.createElement('span');
-    span.textContent = item.label;
-    label.append(input, span);
-    grid.appendChild(label);
-    if (index === 0 && plan.crewSize >= 10) input.checked = false;
-  });
+function addTimelineEvent(events, time, title, detail, start, end) {
+  if (time >= start && time <= end) events.push({ time, title, detail });
 }
 
-function buildReport(plan, solar, weather, analysis) {
+function weatherBucket(point) {
+  if (point.precipitation >= 0.2 || /(rain|sleet|snow|thunder)/.test(point.symbol)) return `wet:${point.label}`;
+  if ((point.cloud ?? 0) < 20) return 'clear';
+  if ((point.cloud ?? 0) < 60) return 'mixed';
+  if ((point.cloud ?? 0) < 90) return 'cloudy';
+  return 'overcast';
+}
+
+function nearestWeatherPoint(weather, minute) {
+  const points = weather?.allHours || weather?.hours;
+  if (!Array.isArray(points) || !points.length) return null;
+  return points.reduce((nearest, point) => Math.abs(point.minute - minute) < Math.abs(nearest.minute - minute) ? point : nearest, points[0]);
+}
+
+function weatherLabel(symbol, cloud, precipitation) {
+  if (/thunder/.test(symbol)) return '천둥·번개';
+  if (/heavyrain/.test(symbol)) return '강한 비';
+  if (/rain|sleet/.test(symbol) || precipitation >= 0.2) return /snow|sleet/.test(symbol) ? '진눈깨비' : '비';
+  if (/snow/.test(symbol)) return '눈';
+  if (/fog/.test(symbol)) return '안개';
+  if (/partlycloudy/.test(symbol)) return '구름 사이 햇빛';
+  if (/cloudy/.test(symbol) || (cloud ?? 0) >= 85) return '흐림';
+  if (/fair/.test(symbol) || (cloud ?? 0) >= 20) return '구름 조금';
+  return '맑음';
+}
+
+function weatherIcon(symbol, cloud) {
+  if (/thunder/.test(symbol)) return 'cloud-lightning';
+  if (/snow|sleet/.test(symbol)) return 'cloud-snow';
+  if (/rain/.test(symbol)) return 'cloud-rain';
+  if (/fog/.test(symbol)) return 'cloud-fog';
+  if (/night/.test(symbol)) return (cloud ?? 0) > 40 ? 'cloud-moon' : 'moon';
+  if (/cloudy/.test(symbol) || (cloud ?? 0) > 75) return 'cloud';
+  if (/partlycloudy|fair/.test(symbol) || (cloud ?? 0) > 20) return 'cloud-sun';
+  return 'sun';
+}
+
+function dominantWeatherLabel(points) {
+  const wet = points.find((point) => point.precipitation >= 0.2 || /(rain|sleet|snow|thunder)/.test(point.symbol));
+  if (wet) return wet.label;
+  const cloud = average(points.map((point) => point.cloud)) ?? 0;
+  return weatherLabel('', cloud, 0);
+}
+
+function sumPrecipitation(points) {
+  return points.reduce((total, point) => total + (Number.isFinite(point.precipitation) ? point.precipitation : 0), 0);
+}
+
+function solarPosition(plan, minute) {
+  if (!window.SunCalc) return { bearing: 0, altitude: 0 };
+  const date = new Date(Date.parse(`${plan.date}T00:00:00+09:00`) + minute * 60000);
+  const position = window.SunCalc.getPosition(date, plan.latitude, plan.longitude);
+  return {
+    bearing: (position.azimuth * 180 / Math.PI + 180 + 360) % 360,
+    altitude: position.altitude * 180 / Math.PI
+  };
+}
+
+function compassDirection(bearing) {
+  const directions = ['N', 'NE', 'E', 'SE', 'S', 'SW', 'W', 'NW'];
+  return directions[Math.round(((bearing % 360) + 360) % 360 / 45) % 8];
+}
+
+function rotateArrow(id, bearing) {
+  const arrow = document.getElementById(id);
+  if (arrow) arrow.style.transform = `translateX(-50%) rotate(${bearing}deg)`;
+}
+
+function buildReport(plan, solar, weather, minute, reading, sun) {
+  const point = nearestWeatherPoint(weather, minute);
   const lines = [
-    'STAGE-IS / 촬영일 작전표',
+    'STAGE-IS / 촬영 빛과 날씨 리포트',
     '',
-    `판단: ${analysis.decision} (${analysis.score}/100)`,
-    `장소: ${plan.location} (${plan.latitude.toFixed(4)}, ${plan.longitude.toFixed(4)})`,
-    `일정: ${plan.date} ${plan.startTime}-${plan.endTime}`,
-    `환경: ${environmentLabel(plan.environment)} / 현장 ${plan.crewSize}명 / 세팅 ${plan.setupMinutes}분`,
-    `빛: 일출 ${solar ? formatTime(solar.sunrise) : '확인 불가'} / 일몰 ${solar ? formatTime(solar.sunset) : '확인 불가'}`,
-    weather
-      ? `기상 입력: ${weather.label} / 강수확률 ${Math.round(weather.maxRainChance ?? 0)}% / 돌풍 ${Math.round(weather.maxGust ?? 0)}km/h / 체감 ${Math.round(weather.minApparent ?? 0)}℃`
-      : '기상 입력: 없음',
+    `장소: ${plan.location}`,
+    `좌표: ${plan.latitude.toFixed(5)}, ${plan.longitude.toFixed(5)}`,
+    `날짜와 시간: ${plan.date} ${minutesToClock(minute)}`,
+    `하늘 판독: ${reading.label}`,
+    `태양: ${compassDirection(sun.bearing)} ${Math.round(sun.bearing)}° / 고도 ${sun.altitude.toFixed(1)}°`,
+    `그림자: ${compassDirection((sun.bearing + 180) % 360)} ${Math.round((sun.bearing + 180) % 360)}°`,
+    solar ? `일출 ${formatTime(solar.sunrise)} / 일몰 ${formatTime(solar.sunset)}` : '일출·일몰 계산 불가',
+    point
+      ? `기상: ${point.label} / ${Math.round(point.temperature ?? 0)}℃ / 체감 ${Math.round(point.apparent ?? point.temperature ?? 0)}℃ / 구름 ${Math.round(point.cloud ?? 0)}% / 강수 ${formatMillimeters(point.precipitation, point.intervalHours)} / 바람 ${Math.round(point.wind ?? 0)}km/h`
+      : '기상: 현재 예보 범위 밖',
     '',
-    analysis.summary,
+    reading.summary,
     '',
-    '먼저 막을 것',
-    ...(analysis.risks.length ? analysis.risks.map((item, index) => `${index + 1}. ${item.message}`) : ['1. 즉시 중단할 운영 변수 없음']),
-    '',
-    '필수 확인',
-    '- 실제 현장 인원과 예약 인원 대조',
-    '- 주차·상하차·엘리베이터 확인',
-    '- 최종 결정자와 연락망 고정',
-    '- 장비 전력·배터리·메모리 확인',
-    '- 우천 대체안 또는 취소 기준 합의',
-    '- 원본 데이터 이중 백업 담당 지정',
-    '',
-    '본 결과는 제작 판단을 보조하며 현장 안전과 최종 결정은 사용자 책임입니다.',
+    '기상 원자료: MET Norway (CC BY 4.0)',
+    '태양 계산: SunCalc / 체감온도와 촬영광 판독: Stage-Is',
+    '예보는 실제 현장 관측과 다를 수 있으며 건물·산·수목에 의한 차폐는 계산하지 않습니다.',
     'https://stage-is.com/'
   ];
   return lines.join('\n');
@@ -767,7 +995,7 @@ async function copyReport() {
   if (!currentReport) return;
   try {
     await navigator.clipboard.writeText(currentReport);
-    showToast('작전표를 복사했습니다.');
+    showToast('빛과 날씨 리포트를 복사했습니다.');
   } catch {
     const area = document.createElement('textarea');
     area.value = currentReport;
@@ -775,7 +1003,7 @@ async function copyReport() {
     area.select();
     document.execCommand('copy');
     area.remove();
-    showToast('작전표를 복사했습니다.');
+    showToast('빛과 날씨 리포트를 복사했습니다.');
   }
 }
 
@@ -786,31 +1014,25 @@ function downloadReport() {
   const url = URL.createObjectURL(blob);
   const anchor = document.createElement('a');
   anchor.href = url;
-  anchor.download = `stage-is-shoot-plan-${date}.txt`;
+  anchor.download = `stage-is-light-weather-${date}.txt`;
   document.body.appendChild(anchor);
   anchor.click();
   anchor.remove();
   URL.revokeObjectURL(url);
-  showToast('작전표 파일을 저장했습니다.');
+  showToast('리포트 파일을 저장했습니다.');
 }
 
 function resetPlan() {
   const form = document.getElementById('shoot-form');
   if (!form) return;
   form.reset();
-  selectedLocation = { ...LOCATIONS[0], source: 'preset' };
-  document.getElementById('location').value = '서울';
+  selectedLocation = { ...LOCATIONS[0], name: LOCATIONS[0].label, source: 'preset' };
+  document.getElementById('location').value = selectedLocation.name;
   document.getElementById('start-time').value = '08:00';
   document.getElementById('end-time').value = '18:00';
-  document.getElementById('crew-size').value = '8';
-  document.getElementById('setup-minutes').value = '60';
-  document.getElementById('weather-condition').value = 'mixed';
-  document.getElementById('apparent-temperature').value = '20';
-  document.getElementById('rain-chance').value = '10';
-  document.getElementById('gust-speed').value = '10';
   document.getElementById('shoot-date').value = toDateInput(addDays(startOfDay(new Date()), 1));
   localStorage.removeItem(STORAGE_KEY);
-  updateLocationFromInput();
+  updateLocationDisplay();
   runSimulation();
 }
 
@@ -818,7 +1040,7 @@ function savePlan(plan) {
   try {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(plan));
   } catch {
-    // The simulator still works when storage is unavailable.
+    // The simulator still works when browser storage is unavailable.
   }
 }
 
@@ -828,24 +1050,10 @@ function restorePlan() {
     if (!saved) return;
     const form = document.getElementById('shoot-form');
     if (!form) return;
-
-    if (saved.location) document.getElementById('location').value = saved.location;
     if (saved.date && new Date(`${saved.date}T00:00:00`) >= startOfDay(new Date())) document.getElementById('shoot-date').value = saved.date;
     if (saved.lightGoal) document.getElementById('light-goal').value = saved.lightGoal;
     if (saved.startTime) document.getElementById('start-time').value = saved.startTime;
     if (saved.endTime) document.getElementById('end-time').value = saved.endTime;
-    if (saved.crewSize) document.getElementById('crew-size').value = String(saved.crewSize);
-    if (saved.setupMinutes) document.getElementById('setup-minutes').value = String(saved.setupMinutes);
-    if (saved.weatherCondition) document.getElementById('weather-condition').value = saved.weatherCondition;
-    if (Number.isFinite(saved.apparentTemperature)) document.getElementById('apparent-temperature').value = String(saved.apparentTemperature);
-    if (Number.isFinite(saved.rainChance)) document.getElementById('rain-chance').value = String(saved.rainChance);
-    if (Number.isFinite(saved.gustSpeed)) document.getElementById('gust-speed').value = String(saved.gustSpeed);
-    form.elements.parkingConfirmed.checked = Boolean(saved.parkingConfirmed);
-    form.elements.backupReady.checked = Boolean(saved.backupReady);
-    form.elements.weatherChecked.checked = Boolean(saved.weatherChecked);
-    const environment = form.querySelector(`input[name="environment"][value="${saved.environment}"]`);
-    if (environment) environment.checked = true;
-
     if (Number.isFinite(saved.latitude) && Number.isFinite(saved.longitude)) {
       selectedLocation = {
         name: saved.location || '저장된 위치',
@@ -853,11 +1061,31 @@ function restorePlan() {
         longitude: saved.longitude,
         source: saved.locationSource || 'saved'
       };
-      const status = document.getElementById('location-status');
-      if (status) status.textContent = `${saved.latitude.toFixed(4)}, ${saved.longitude.toFixed(4)} · 저장된 위치`;
     }
   } catch {
     localStorage.removeItem(STORAGE_KEY);
+  }
+}
+
+function readObjectCache(key) {
+  try {
+    return JSON.parse(localStorage.getItem(key)) || {};
+  } catch {
+    return {};
+  }
+}
+
+function writeObjectCache(storageKey, key, value, limit) {
+  try {
+    const cache = readObjectCache(storageKey);
+    cache[key] = value;
+    const entries = Object.entries(cache);
+    if (entries.length > limit) {
+      entries.slice(0, entries.length - limit).forEach(([oldKey]) => delete cache[oldKey]);
+    }
+    localStorage.setItem(storageKey, JSON.stringify(cache));
+  } catch {
+    // Cache failure must not stop the simulator.
   }
 }
 
@@ -867,16 +1095,12 @@ function showToast(message) {
   window.clearTimeout(toastTimer);
   toast.textContent = message;
   toast.classList.add('is-visible');
-  toastTimer = window.setTimeout(() => toast.classList.remove('is-visible'), 2200);
+  toastTimer = window.setTimeout(() => toast.classList.remove('is-visible'), 2400);
 }
 
 function setText(id, value) {
   const element = document.getElementById(id);
   if (element) element.textContent = value;
-}
-
-function environmentLabel(value) {
-  return { outdoor: '야외', mixed: '실내·야외 혼합', indoor: '실내' }[value] || value;
 }
 
 function timeToMinutes(value) {
@@ -896,23 +1120,21 @@ function durationMinutes(startTime, endTime) {
 }
 
 function minutesToClock(totalMinutes) {
-  const normalized = ((totalMinutes % DAY_MINUTES) + DAY_MINUTES) % DAY_MINUTES;
+  const normalized = ((Math.round(totalMinutes) % DAY_MINUTES) + DAY_MINUTES) % DAY_MINUTES;
   const hour = Math.floor(normalized / 60);
   const minute = normalized % 60;
   return `${String(hour).padStart(2, '0')}:${String(minute).padStart(2, '0')}`;
 }
 
 function dateToMinutes(date) {
-  return date.getHours() * 60 + date.getMinutes();
-}
-
-function intervalOverlap(startA, endA, startB, endB) {
-  return Math.max(0, Math.min(endA, endB) - Math.max(startA, startB));
+  const parts = koreaDateParts(date);
+  return parts.hour * 60 + parts.minute;
 }
 
 function formatTime(date) {
   if (!(date instanceof Date) || Number.isNaN(date.getTime())) return '확인 불가';
-  return `${String(date.getHours()).padStart(2, '0')}:${String(date.getMinutes()).padStart(2, '0')}`;
+  const parts = koreaDateParts(date);
+  return `${String(parts.hour).padStart(2, '0')}:${String(parts.minute).padStart(2, '0')}`;
 }
 
 function formatDuration(minutes) {
@@ -921,6 +1143,55 @@ function formatDuration(minutes) {
   if (!remainder) return `${hours}시간`;
   if (!hours) return `${remainder}분`;
   return `${hours}시간 ${remainder}분`;
+}
+
+function formatUpdatedTime(value) {
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return '최근 갱신';
+  const parts = koreaDateParts(date);
+  return `${String(parts.month).padStart(2, '0')}.${String(parts.day).padStart(2, '0')} ${String(parts.hour).padStart(2, '0')}:${String(parts.minute).padStart(2, '0')}`;
+}
+
+function koreaDateParts(date) {
+  const values = {};
+  new Intl.DateTimeFormat('en-CA', {
+    timeZone: KOREA_TIME_ZONE,
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+    hour: '2-digit',
+    minute: '2-digit',
+    hourCycle: 'h23'
+  }).formatToParts(date).forEach((part) => {
+    if (part.type !== 'literal') values[part.type] = Number(part.value);
+  });
+  return values;
+}
+
+function formatMillimeters(amount, intervalHours) {
+  if (!Number.isFinite(amount) || amount <= 0) return '0mm';
+  const interval = intervalHours > 1 ? `/${intervalHours}h` : '';
+  return `${amount < 0.1 ? '<0.1' : amount.toFixed(amount < 10 ? 1 : 0)}mm${interval}`;
+}
+
+function numberOrNull(value) {
+  const number = Number(value);
+  return Number.isFinite(number) ? number : null;
+}
+
+function average(values) {
+  const valid = values.filter(Number.isFinite);
+  return valid.length ? valid.reduce((sum, value) => sum + value, 0) / valid.length : null;
+}
+
+function minimum(values) {
+  const valid = values.filter(Number.isFinite);
+  return valid.length ? Math.min(...valid) : null;
+}
+
+function maximum(values) {
+  const valid = values.filter(Number.isFinite);
+  return valid.length ? Math.max(...valid) : null;
 }
 
 function startOfDay(date) {
@@ -946,12 +1217,6 @@ function clamp(value, min, max) {
   return Math.min(max, Math.max(min, value));
 }
 
-function haversine(lat1, lon1, lat2, lon2) {
-  const toRadians = (value) => value * Math.PI / 180;
-  const radius = 6371;
-  const dLat = toRadians(lat2 - lat1);
-  const dLon = toRadians(lon2 - lon1);
-  const a = Math.sin(dLat / 2) ** 2
-    + Math.cos(toRadians(lat1)) * Math.cos(toRadians(lat2)) * Math.sin(dLon / 2) ** 2;
-  return radius * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+function delay(milliseconds) {
+  return new Promise((resolve) => window.setTimeout(resolve, milliseconds));
 }

@@ -55,7 +55,7 @@ function initializeFieldScene() {
     snapshot: null,
     minute: 720,
     cloudCover: 32,
-    rainChance: 0,
+    rainSignal: 0,
     gust: 8,
     sunBearing: 0,
     shadowBearing: 180,
@@ -106,7 +106,7 @@ function initializeFieldScene() {
       },
       solar: { dawn: 320, sunrise: 350, goldenMorningEnd: 410, goldenEveningStart: 1050, sunset: 1110, dusk: 1140 },
       weather: null,
-      analysis: { decision: '--', score: 0, duration: 600 }
+      analysis: { decision: 'SUN', label: '태양 계산', tone: 'clear', focusMinute: 720 }
     });
   }
 
@@ -132,24 +132,20 @@ function initializeFieldScene() {
 
     const decision = document.getElementById('scene-decision');
     if (decision) {
-      decision.textContent = snapshot.analysis?.decision || '--';
-      decision.className = snapshot.analysis?.decision === 'CHECK'
-        ? 'is-check'
-        : snapshot.analysis?.decision === 'HOLD'
-          ? 'is-hold'
-          : '';
+      decision.textContent = snapshot.analysis?.label || snapshot.analysis?.decision || '--';
+      decision.className = snapshot.analysis?.tone ? `is-${snapshot.analysis.tone}` : '';
     }
 
     const weather = snapshot.weather;
     const weatherAvailable = weather && !weather.unavailable;
     state.cloudCover = weatherAvailable && Number.isFinite(weather.averageCloud) ? weather.averageCloud : 30;
-    state.rainChance = weatherAvailable && Number.isFinite(weather.maxRainChance) ? weather.maxRainChance : 0;
-    state.gust = weatherAvailable && Number.isFinite(weather.maxGust) ? weather.maxGust : 8;
+    state.rainSignal = weatherAvailable && Number.isFinite(weather.totalRain) ? Math.min(100, weather.totalRain * 24) : 0;
+    state.gust = weatherAvailable && Number.isFinite(weather.maxWind) ? weather.maxWind : 8;
 
-    updateEnvironment(field, lighting, snapshot.plan.environment);
+    updateEnvironment(field, lighting, 'outdoor');
     updateWeather(atmosphere, state);
     rebuildSolarPaths(solar, snapshot);
-    updateDecisionBeacon(field, snapshot.analysis?.decision);
+    updateDecisionBeacon(field, snapshot.analysis?.tone);
     updateSceneTime();
   }
 
@@ -166,7 +162,27 @@ function initializeFieldScene() {
     if (!state.snapshot) return;
     setText('scene-time-output', formatClock(state.minute));
 
+    const weatherPoint = nearestWeatherPoint(state.snapshot.weather, state.minute);
+    if (weatherPoint) {
+      state.cloudCover = Number.isFinite(weatherPoint.cloud) ? weatherPoint.cloud : state.cloudCover;
+      state.rainSignal = precipitationSignal(weatherPoint);
+      state.gust = Number.isFinite(weatherPoint.wind) ? weatherPoint.wind : state.gust;
+      setText('scene-weather', weatherPoint.label || '--');
+      setText('scene-feels', Number.isFinite(weatherPoint.apparent) ? `${Math.round(weatherPoint.apparent)}°` : '--');
+    } else {
+      setText('scene-weather', state.snapshot.weather?.reason === 'loading' ? '불러오는 중' : '예보 범위 밖');
+      setText('scene-feels', '--');
+    }
+    updateWeather(atmosphere, state);
+
     const sunData = getSunData(state.snapshot.plan, state.minute, solar.radius);
+    const reading = sceneReading(weatherPoint, sunData.altitudeDegrees);
+    const decision = document.getElementById('scene-decision');
+    if (decision) {
+      decision.textContent = reading.label;
+      decision.className = `is-${reading.tone}`;
+    }
+    updateDecisionBeacon(field, reading.tone);
     solar.sun.position.copy(sunData.position);
     solar.sunRing.position.copy(sunData.position);
     solar.sunRing.lookAt(camera.position);
@@ -175,16 +191,16 @@ function initializeFieldScene() {
     lightPosition.y = Math.max(2.4, lightPosition.y);
     lighting.sun.position.copy(lightPosition);
 
-    const environment = state.snapshot.plan.environment;
     const daylightStrength = THREE.MathUtils.smoothstep(sunData.altitudeDegrees, -5, 28);
-    lighting.sun.intensity = environment === 'indoor' ? 0.35 : 1.2 + daylightStrength * 3.3;
-    lighting.hemisphere.intensity = environment === 'indoor' ? 1.15 : 1.3 + daylightStrength * 1.6;
+    const cloudAttenuation = THREE.MathUtils.lerp(1, 0.34, THREE.MathUtils.clamp(state.cloudCover / 100, 0, 1));
+    lighting.sun.intensity = (1.2 + daylightStrength * 3.3) * cloudAttenuation;
+    lighting.hemisphere.intensity = 1.3 + daylightStrength * 1.6;
     lighting.sun.color.copy(sunColorForAltitude(sunData.altitudeDegrees));
 
-    solar.sun.visible = sunData.altitudeDegrees > -8 && environment !== 'indoor';
+    solar.sun.visible = sunData.altitudeDegrees > -8;
     solar.sunRing.visible = solar.sun.visible;
 
-    const sky = skyColorForConditions(sunData.altitudeDegrees, state.cloudCover, environment);
+    const sky = skyColorForConditions(sunData.altitudeDegrees, state.cloudCover, 'outdoor');
     scene.background.copy(sky);
     scene.fog.color.copy(sky);
     state.sunBearing = sunData.bearingDegrees;
@@ -216,7 +232,7 @@ function initializeFieldScene() {
 
     if (!reducedMotion) {
       animateClouds(atmosphere, delta, state.gust);
-      animateRain(atmosphere, delta, state.rainChance);
+      animateRain(atmosphere, delta, state.rainSignal);
       field.beacon.rotation.z += delta * 0.16;
       solar.sunRing.rotation.z = elapsed * 0.08;
     }
@@ -458,14 +474,17 @@ function updateWeather(atmosphere, state) {
     });
   });
 
-  const drops = Math.round(THREE.MathUtils.clamp((state.rainChance - 15) / 85, 0, 1) * atmosphere.rainCount);
+  const drops = Math.round(THREE.MathUtils.clamp(state.rainSignal / 100, 0, 1) * atmosphere.rainCount);
   atmosphere.rain.geometry.setDrawRange(0, drops);
   atmosphere.rain.visible = drops > 0;
 }
 
-function updateDecisionBeacon(field, decision) {
-  const color = decision === 'HOLD' ? 0xe95749 : decision === 'CHECK' ? 0xff9a44 : 0x32ce84;
-  const emissive = decision === 'HOLD' ? 0x6e1712 : decision === 'CHECK' ? 0x713309 : 0x11633f;
+function updateDecisionBeacon(field, tone) {
+  const wet = tone === 'wet';
+  const variable = ['variable', 'overcast', 'soft'].includes(tone);
+  const night = tone === 'night';
+  const color = wet ? 0x52a9ff : night ? 0x7679c8 : variable ? 0xffc84a : 0x32ce84;
+  const emissive = wet ? 0x124a72 : night ? 0x24275f : variable ? 0x713309 : 0x11633f;
   field.beacon.material.color.setHex(color);
   field.beacon.material.emissive.setHex(emissive);
 }
@@ -519,6 +538,30 @@ function animateRain(atmosphere, delta, rainChance) {
     if (positions.getX(index) > 12) positions.setX(index, -12);
   }
   positions.needsUpdate = true;
+}
+
+function nearestWeatherPoint(weather, minute) {
+  const points = weather?.hours;
+  if (!Array.isArray(points) || !points.length) return null;
+  return points.reduce((nearest, point) => Math.abs(point.minute - minute) < Math.abs(nearest.minute - minute) ? point : nearest, points[0]);
+}
+
+function precipitationSignal(point) {
+  const wetSymbol = /(rain|sleet|snow|thunder)/.test(String(point.symbol || ''));
+  const amount = Number.isFinite(point.precipitation) ? point.precipitation : 0;
+  return THREE.MathUtils.clamp((wetSymbol ? 42 : 0) + amount * 28, 0, 100);
+}
+
+function sceneReading(point, altitude) {
+  if (altitude < -6) return { label: point?.label?.includes('비') ? '비 오는 야간' : '야간', tone: 'night' };
+  if (!point) return { label: '태양 경로 계산', tone: 'clear' };
+  if (point.precipitation >= 0.2 || /(rain|sleet|snow|thunder)/.test(String(point.symbol || ''))) {
+    return { label: point.label || '강수', tone: 'wet' };
+  }
+  if ((point.cloud ?? 50) < 20) return { label: '강한 직사광', tone: 'clear' };
+  if ((point.cloud ?? 50) < 60) return { label: '변화하는 혼합광', tone: 'variable' };
+  if ((point.cloud ?? 50) >= 90) return { label: '평평한 흐린빛', tone: 'overcast' };
+  return { label: '부드러운 확산광', tone: 'soft' };
 }
 
 function buildPerson(color, scale = 1) {
@@ -716,8 +759,7 @@ function sampleSunPath(plan, start, end, samples, radius) {
 }
 
 function getSunData(plan, minute, radius) {
-  const date = new Date(`${plan.date}T00:00:00`);
-  date.setMinutes(minute);
+  const date = new Date(Date.parse(`${plan.date}T00:00:00+09:00`) + minute * 60000);
   const positionData = window.SunCalc?.getPosition(date, plan.latitude, plan.longitude) || { altitude: Math.PI / 4, azimuth: 0 };
   const altitude = positionData.altitude;
   const azimuth = positionData.azimuth;
@@ -820,9 +862,9 @@ function formatClock(minutes) {
 }
 
 function formatKoreanDate(value) {
-  const date = new Date(`${value}T00:00:00`);
+  const date = new Date(`${value}T12:00:00+09:00`);
   if (Number.isNaN(date.getTime())) return value;
-  return new Intl.DateTimeFormat('ko-KR', { month: 'long', day: 'numeric', weekday: 'short' }).format(date);
+  return new Intl.DateTimeFormat('ko-KR', { timeZone: 'Asia/Seoul', month: 'long', day: 'numeric', weekday: 'short' }).format(date);
 }
 
 function toDateInput(date) {

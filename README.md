@@ -1,21 +1,23 @@
-# Stage-Is Shoot Day Simulator
+# Stage-Is Sun + Weather Simulator
 
-Stage-Is is a static production-planning tool for Korean video creators. It combines solar windows, user-entered field weather, crew and timing constraints into a printable shoot-day operation brief.
+Stage-Is is a static location-light tool for Korean video creators. It combines exact map coordinates, solar direction, shadows and automatic hourly weather into an interactive 3D view and a printable light-and-weather brief.
 
 ## Product surface
 
-- `index.html`: simulator, interactive 3D field view and operation brief
+- `index.html`: simulator, interactive 3D field view and hourly forecast
 - `js/scene.js`: Three.js field model, solar path, shadows and weather visualization
-- `field-guide.html`: first-party field rules generalized from production records
-- `method.html`: scoring method, data sources and limitations
+- `field-guide.html`: practical guidance for sun direction, shadows, cloud cover and weather
+- `method.html`: location, solar and weather calculation sources and limitations
 - `about.html`, `contact.html`, `privacy.html`: trust and policy pages
 
 ## Data
 
 - Solar calculations: SunCalc
 - Exact location selection: Leaflet with OpenStreetMap tiles
-- Weather risk input: manually entered conditions checked by the user from KMA forecasts or field observations
-- No live weather endpoint is called; exact coordinates stay in the browser except for requested OpenStreetMap tiles.
+- Address search and reverse geocoding: OpenStreetMap Nominatim, user-triggered and browser-cached
+- Hourly weather: MET Norway Locationforecast 2.0 under CC BY 4.0
+- Apparent temperature and production-light labels: calculated in the browser by Stage-Is
+- Solar direction: calculated in the browser from the full-precision pin; weather requests use coordinates rounded to four decimals.
 
 ## Advertising
 
